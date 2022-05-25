@@ -1,0 +1,39 @@
+{
+    'name': 'Combobox',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/combobox.jpg',
+    'description': 'Savvion Combobox widget.',
+    'category': 'Combobox',
+    'args': [
+		{'size':{'label':'Size', 'type':'NUMBER', 'defaultValue': '20'}},
+		{'readonly':{'label':'Read Only', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'disabled':{'label':'Disabled', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'swapped':{'label':'Use values for choices (for Map dataslot binding only)', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+        {'cascade':{'label':'Cascade', 'type':'BOOLEAN', 'defaultValue': 'false'}},	
+        {'level':{'label':'Level', 'type':'NUMBER', 'defaultValue': '0'}},
+		{'required':{'label':'Required', 'type':'BOOLEAN', 'defaultValue': 'false'}}	            	
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/combobox/onChange',
+					'/sbm/combobox/onFocus',
+					'/sbm/combobox/onBlur']
+    },
+   'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+          'options':['validateOn', 'isRequired', 'invalidValue']
+        }
+    ]
+
+}

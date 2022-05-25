@@ -1,0 +1,12 @@
+application std
+import 
+       util,
+       std_tensor_lib,
+       std_map_lib,
+       db_core,
+       class_lib,
+       event_lib,
+       xml_adaptor_dom,
+       compatibility_support
+       ;
+

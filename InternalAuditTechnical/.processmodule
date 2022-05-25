@@ -1,0 +1,13 @@
+#Thu Sep 09 15:17:06 IST 2021
+publishing.type=Copy_Files_Only
+application.name=InternalAuditTechnical
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=InternalAuditTechnical_process
+module.id=c1f6511a-8ca7-4e38-b40c-9b7e470b245a
+module.version=8
+application.mainappfile=processtemplates/InternalAuditTechnical_process.spt
+module.name=InternalAuditTechnical_process
+application.root=InternalAuditTechnical_process

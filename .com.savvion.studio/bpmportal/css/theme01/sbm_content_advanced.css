@@ -1,0 +1,1685 @@
+/*Global CSS*/
+a.SbmSelectedLink {
+	padding: 1px;
+	color: #004994;
+	text-decoration: none;
+	font-weight: bold;
+	border: 1px solid #004994;
+	_display: block;
+	white-space: nowrap;
+	_width: 10%;
+	background: #DEF1FF
+}
+
+table {
+}
+
+img {
+	border-style: none
+}
+
+em {
+	font-style: normal
+}
+
+hr {
+	border-right: #CCCCCC 0px solid;
+	border-top: #CCCCCC 0px solid;
+	margin: 0px 0px;
+	border-left: #CCCCCC 0px solid;
+	border-bottom: #CCCCCC 1px solid;
+	height: 1px
+}
+
+cite {
+	display: block;
+	font: 77% verdana;
+	color: #636363
+}
+
+spacer {
+	display: block;
+	font: 77% verdana
+}
+
+OL {
+	margin: 0px;
+	display: block;
+	font: 77%
+}
+
+select {
+	border: #A2AAC0 1px solid;
+	font-size: 8pt;
+	color: #000000;
+	position: relative;
+	vertical-align: middle;
+}
+
+input {
+	vertical-align: middle;
+}
+
+textarea {
+	border: #A2AAC0 1px solid;
+	font-size: 8pt
+}
+
+/*Text Styles*/	
+.SbmLabelTextGroup {
+	font-size: 8pt;
+	color: #425A93
+}
+
+.SbmContentSeparatorLine {
+	display: block;
+	height: 1px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #CCCCCC
+}
+
+.SbmGeneralLabelText {
+	padding: 4px 0px
+}
+
+/*sbm top banner*/
+.SbmBannerDiv img{ }
+
+.SbmBannerDiv TD{
+	font-size: 8pt;
+	vertical-align: middle;
+	white-space: nowrap
+}
+
+.SbmBannerDiv A {
+	color: #242E53;
+	text-decoration: none
+}
+
+.SbmBannerDiv A:hover {
+	font-size: 8pt;
+	color: #465A9F
+}
+
+.SbmBannerDiv A:visited { }
+
+.SbmBannerDiv span {
+	font-size: 8pt;
+	color: #C3D2F1
+}
+
+.SbmBannerBackground {
+	padding: 0px;
+	border: 0px solid #7C87A3;
+	background: #E7EBF7 url(../../css_70/theme01/images/sbm_logo_bg.gif) no-repeat
+}
+
+.SbmWelcomeRow {
+	padding: 0px 4px;
+	line-height: 20px;
+	height: 20px;
+	background: #BAC3CF
+}
+
+.SbmWelcomeRowLine {
+	padding: 0px;
+	line-height: 2px;
+	height: 2px;
+	background: #7987AB
+}
+
+.SbmConfirmationMessageDiv {
+	padding: 0px 4px;
+	margin: 0;
+	float: right;
+	border: 0px solid #BAC3D0;
+	font-size: 7pt;
+	-moz-border-radius: 5px 5px 5px 5px;
+	background: #FFDE00
+}
+
+/* Classes for details/tab view screens */
+A.SbmDetailsTableLink:visited { }
+
+.SbmTabDiv {
+	font-size: 8pt;
+	background: #FFFFFF repeat-x 50% bottom;
+	float: left;
+	width: 100%;
+	line-height: normal;
+	width: 100%;
+	border-top: 0px solid #909BB7;
+	border-right: 1px solid #909BB7;
+	border-bottom: 1px solid #909BB7;
+	border-left: 0px solid #909BB7;
+	_border-right: 0px solid #909BB7;
+	white-space: nowrap
+}
+
+A.SbmTabLink:hover {
+	text-decoration: none
+}
+
+A.SbmTabLink:visited { }
+
+A.SbmTabLinkSelected:hover {
+	color: #494F8F;
+	text-decoration: none
+}
+
+A.SbmTabLinkSelected:visited { }
+
+.SbmTabDiv td{
+	font-size: 8pt;
+	text-align: center;
+	white-space: nowrap;
+	padding: 2px 6px
+}
+
+TD.SbmTabBlankBackground {
+	width: 100%;
+	border-top: 0px solid #909BB7;
+	border-right: 0px solid #909BB7;
+	border-bottom: 1px solid #909BB7;
+	border-left: 0px solid #909BB7;
+	background: #FFFFFF
+}
+
+TD.SbmTabBackground {
+	border-top: 1px solid #909BB7;
+	border-right: 1px solid #909BB7;
+	border-bottom: 1px solid #909BB7;
+	border-left: 0px solid #909BB7;
+	cursor: hand;
+	background: #B3D1E7
+}
+
+TD.SbmTabBackgroundSelected {
+	cursor: hand;
+	border-top: 1px solid #7B86A5;
+	border-right: 1px solid #7B86A5;
+	border-bottom: 0px solid #7B86A5;
+	border-left: 0px solid #7B86A5;
+	background: #FFFFFF
+}
+
+TD.SbmTabBackgroundHover {
+	border-top: 1px solid #909BB7;
+	border-right: 1px solid #909BB7;
+	border-bottom: 1px solid #909BB7;
+	border-left: 0px solid #909BB7;
+	cursor: hand;
+	background: #D6E8F3
+}
+
+TD.SbmTabBackgroundSelectedHover {
+	border-top: 1px solid #7B86A5;
+	border-right: 1px solid #7B86A5;
+	border-bottom: 0px solid #7B86A5;
+	border-left: 0px solid #7B86A5;
+	cursor: hand;
+	background: #F2F4FD
+}
+
+.SbmSelectMultilineTextField {
+	font-size: 8pt;
+	overflow: auto;
+	border: 1px solid #B3B5B9;
+	background: #EFF7FF repeat-x
+}
+
+a.SbmImageChart, a.SbmImageTable{
+	padding: 1px;
+	margin: 0px 2px;
+	color: #004994;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	display: block;
+	width: 1%
+}
+
+a.SbmImageChartSelected, a.SbmImageTableSelected{
+	padding: 1px;
+	margin: 0px 2px;
+	color: #004994;
+	text-decoration: none;
+	font-weight: bold;
+	border: 1px solid #004994;
+	display: block;
+	background: #DEF1FF
+}
+
+.SbmImageOverdue {
+	padding: 0px 2px
+}
+
+/* filter bar*/
+.SbmFilterTable {
+	padding: 2px;
+	width: 100%;
+	border-top: 0px solid #FFFFFF;
+	border-right: 0px solid #7B86A5;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 0px solid #7B86A5;
+	background: #FFFFFF
+}
+
+.SbmFilterTable b {
+	margin: 0px;
+	padding: 0px 4px;
+	font-weight: bold;
+	white-space: nowrap;
+	left: 4px
+}
+
+.SbmFilterTable a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #00509F;
+	white-space: nowrap;
+	display: block;
+	border: 1px solid #FFFFFF;
+	background: #FFFFFF;
+	padding: 0px 2px
+}
+
+.SbmFilterTable a:visited{ }
+
+.SbmFilterTable .SbmButtonSeparator {
+	width: 4px;
+	padding: 0px;
+	padding-right: 1px;
+	padding-left: 1px
+}
+
+a.SbmFilterTableButton:visited{ }
+
+/*start buttons css for big screens */
+.SbmButtonTable {
+	border-top: 0px solid #ECF6FF;
+	border-right: 0px solid #7B86A5;
+	border-bottom: 1px solid #AED5FB;
+	border-left: 0px solid #7B86A5;
+	padding: 3px;
+	width: 100%;
+	background: #ECF6FF
+}
+
+.SbmButtonTable  a {
+	cursor: pointer;
+	border: 1px solid #ECF6FF;
+	text-decoration: none;
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	background: #ECF6FF;
+	padding: 0px 2px
+}
+
+.SbmButtonTable a:visited{ }
+
+.SbmButtonDropdownDivTaskAvailableButton{
+	left: 183px;
+	top: 39px;
+	width: 184px;
+	_left: 195px /*height:139px;*/
+}
+
+.SbmButtonDropdownDiv  a.Option {
+	cursor: pointer;
+	border: 1px solid #FFFFFF;
+	text-decoration: none;
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	background: #FFFFFF;
+	padding: 1px 2px
+}
+
+.SbmButtonDropdownDiv a.Option:hover {
+	cursor: hand;
+	text-decoration: none;
+	color: #3E9CDE;
+	background: #EFF7FF
+}
+
+.SbmButtonDropdownDiv a.Option:active { }
+
+.SbmButtonDropdownDiv a.Option:visited{ }
+
+.SbmButtonDropdownDivReassignButton{
+	left: 87px;
+	top: 39px;
+	width: 250px;
+	_left: 93px;
+	_width: 200px /*height:139px;*/
+}
+
+.SbmButtonDropdownDivReassignButton, .SbmButtonDropdownDivReassignButtonForTaskDetails a.Help{
+	float: right;
+	display: inline
+}
+
+.SbmButtonDropdownDivReassignButtonForTaskDetails{
+	left: 206px;
+	top: 300px;
+	width: 180px;
+	_left: 93px;
+	_width: 130px /*height:139px;*/
+}
+
+.SbmInsideMenuButtonTable {
+	padding: 3px;
+	background: #FFFFFF
+}
+
+.SbmInsideMenuButtonTable a:hover {
+	cursor: hand;
+	border-top: 1px solid #5AB2EF;
+	border-right: 1px solid #5AB2EF;
+	border-bottom: 1px solid #5AB2EF;
+	border-left: 1px solid #5AB2EF;
+	text-decoration: none;
+	color: #000000;
+	background: #FFFFFF
+}
+
+.SbmInsideMenuButtonTable a:active {
+	border-top: 1px solid #5AB2EF;
+	border-right: 1px solid #5AB2EF;
+	border-bottom: 1px solid #5AB2EF;
+	border-left: 1px solid #5AB2EF;
+	color: #FFFFFF;
+	background: #5AB2EF
+}
+
+.SbmInsideMenuButtonTable a:visited{ }
+
+.SbmViewDropdownDivViewTasks{
+	left: 92px;
+	top: 62px;
+	width: 184px;
+	_left: 98px /*height:139px;*/
+}
+
+.SbmViewDropdownDivViewTasks div.List{
+	height: 150px;
+	overflow: auto;
+	border-bottom: #7B86A5 solid 1px
+}
+
+.SbmViewDropdownDivViewTasks div.List a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #00519C;
+	white-space: nowrap;
+	display: block;
+	padding: 2px;
+	width: 94%;
+	background: #FFFFFF
+}
+
+.SbmViewDropdownDivViewTasks div.List a:hover {
+	cursor: hand;
+	text-decoration: underline;
+	color: #000000;
+	background: #FFFFFF
+}
+
+.SbmViewDropdownDivViewTasks div.List a:active { color: #009AFF }
+
+.SbmViewDropdownDivViewTasks div.List a:visited{ }
+
+/*inside buttons styles*/
+.SbmInsideButtonTableContainerCell {
+	font-size: 8pt;
+	color: #000000;
+	font-weight: bold;
+	padding: 2px;
+	border-top: 0px solid #C3D1DF;
+	border-right: 1px solid #C3D1DF;
+	border-bottom: 1px solid #C3D1DF;
+	border-left: 1px solid #C3D1DF;
+	background: #FFFFFF
+}
+
+.SbmInsideButtonTable {
+	border-top: 0px solid #FFFFFF;
+	border-right: 0px solid #FFFFFF;
+	border-bottom: 0px solid #FFFFFF;
+	border-left: 0px solid #FFFFFF;
+	padding: 3px;
+	width: 100%;
+	background: #FFFFFF
+}
+
+.SbmInsideButtonTableSeparator {
+	color: #000000;
+	width: 4px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0px 1px
+}
+
+.SbmInsideButtonTable b{
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px
+}
+
+.SbmInsideButtonTable a:visited{ }
+
+a.SbmInsideButton1 {
+	cursor: pointer;
+	text-decoration: none;
+	color: #000000;
+	white-space: nowrap;
+	padding: 2px;
+	border: 1px solid #FFFFFF;
+	background: #FFFFFF
+}
+
+a.SbmInsideButton1:visited{ }
+
+/*Component table styles*/
+.SbmComponentTableButtonSeparator {
+	color: #7B86A5;
+	width: 4px;
+	vertical-align: middle;
+	text-align: center;
+	float: right;
+	display: block;
+	padding: 0px 1px
+}
+
+a.SbmComponentTableButton:visited{ }
+
+a.SbmImageSummaryHelp { cursor: help }
+
+/*Summary Styles*/
+.SbmSummaryDiv {
+	font-weight: normal;
+	_position: absolute;
+	display: block;
+	_width: 100%;
+	overflow: auto;
+	padding: 8px;
+	font-size: 8pt;
+	background: #FFFFFF
+}
+
+.SbmSummaryDiv .Title1 {
+	margin: 0px;
+	font-weight: normal;
+	display: block;
+	font-weight: bold;
+	padding: 4px 0px
+}
+
+.SbmSummaryDiv .Title {
+	margin: 0px;
+	font-weight: normal;
+	display: block;
+	font-weight: bold;
+	padding: 12px 0px 4px
+}
+
+.SbmSummaryDiv .Zero{
+	display: block;
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+	_width: 100%;
+	background: #FFFFFF;
+	padding: 1px 0px 1px 10px
+}
+
+.SbmSummaryDiv A {
+	display: block;
+	color: #004994;
+	text-decoration: none;
+	font-weight: normal;
+	_width: 100%;
+	background: #FFFFFF;
+	padding: 2px 0px 2px 10px
+}
+
+.SbmSummaryDiv A:hover {
+	color: #004994;
+	text-decoration: underline
+}
+
+.SbmSummaryDiv a.Selected {
+	font-weight: bold;
+	border: 1px solid #52519C;
+	_width: 100%;
+	background: #DFF1FF
+}
+
+.SbmSummaryHide {
+	height: 18px;
+	width: 16px;
+	text-align: left;
+	vertical-align: middle;
+	background: #CDD2DF
+}
+
+.SbmSummaryHide a{
+	width: 16px;
+	height: 18px
+}
+
+.SbmSummaryContentVisible {
+	width: 139px;
+	border-top: 1px solid #7B86A5
+}
+
+.SbmSummaryContentMouseHover {
+	top: 63;
+	right: 16;
+	width: 139px;
+	bottom: 6px;
+	height: expression(document.body.clientHeight- (62 + 6 + 0) + "px");
+	z-index: 9999999;
+	position: absolute;
+	border: 1px solid #5AB2EF; /*background-color:#FFFFFF;*/
+	overflow: auto
+}
+
+.SbmSummaryVisible {
+	height: 17px;
+	width: 139px;
+	text-align: left;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	background: #A5C7E7
+}
+
+a.SbmSummaryVisible {
+	display: block;
+	height: 17px;
+	margin: 0;
+	padding: 0;
+	background: #A5C7E7
+}
+
+a.SbmSummaryVisible:hover {
+	display: block;
+	height: 17px;
+	margin: 0;
+	padding: 0;
+	background: #B8D4ED
+}
+
+/*Navigation Menu Style*/
+.SbmNavigationMenuDiv {
+	overflow: auto;
+	padding: 0px;
+	border: 0px solid #7C86A9;
+	_position: absolute;
+	margin: 0px;
+	display: block;
+	background: #F1F5F6
+}
+
+.SbmNavigationMenuDiv .CascadedOption {
+	background: url(../../css_70/theme01/images/sbm_nav_menu_casc.gif) no-repeat 100%
+}
+
+.SbmNavigationMenuDiv a {
+	display: block;
+	padding: 1px;
+	border: 1px solid #F1F5F6;
+	margin: 0px 2px 0px 22px;
+	color: #004194;
+	text-decoration: none;
+	_width: 100%;
+	background: #F1F5F6
+}
+
+.SbmNavigationMenuDiv a:hover {
+	display: block;
+	padding: 1px;
+	border: 1px solid #FFFFFF;
+	margin: 0px 2px 0px 22px;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF
+}
+
+.SbmNavigationMenuDiv a.SbmMenuSelectedOption {
+	display: block;
+	padding: 1px;
+	border: 1px solid #004994;
+	margin: 0px 2px 0px 22px;
+	color: #004994;
+	text-decoration: none;
+	font-weight: bold;
+	_width: 100%;
+	background: #DEF1FF
+}
+
+.SbmNavigationMenuHideCell{ width: 16px }
+
+.SbmNavigationMenuContentMouseHover {
+	top: 62;
+	left: 16px;
+	width: 160px;
+	bottom: 6px;
+	height: expression(document.body.clientHeight- (62 + 6 + 0) + "px");
+	z-index: 9999999;
+	position: absolute;
+	overflow: auto
+}
+
+.SbmNavigationMenuContentMouseHover	.SbmNavigationMenuDiv {
+	border: #A5AAC0 1px solid
+}
+
+.SbmNavigationMenuVisible {
+	height: 17px;
+	text-align: right;
+	vertical-align: middle;
+	background: #C8D1D9
+}
+
+a.SbmNavigationMenuVisible {
+	display: block;
+	height: 17px;
+	background: #C8D1D9
+}
+
+a.SbmNavigationMenuVisible:hover {
+	display: block;
+	height: 17px;
+	background: #D9E0E5
+}
+
+.SbmNavigationMenuLinkBackground	{
+	margin: 0px;
+	padding: 0px;
+	background: #B0BBCE
+}
+
+.SbmNavigationMenuLinkBackgroundDark	{
+	height: 0px;
+	margin: 0px;
+	background: #F1F5F6
+}
+
+.SbmNavigationMenuLinkSeparatorBig {
+	height: 4px;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	background: #F1F5F6
+}
+
+.SbmNavigationMenuLinkSeparatorSmall {
+	height: 1px;
+	display: block;
+	background: #E9EBF4
+}
+
+.SbmNavigationMenuMainSectionOpened {
+	border: solid 0px #009999;
+	white-space: nowrap;
+	border-collapse: collapse;
+	table-layout: auto;
+	border-spacing: inherit;
+	empty-cells: show;
+	display: block;
+	font-weight: bold;
+	background: #B2BECA
+}
+
+.SbmNavigationMenuMainSectionOpenedHover {
+	border: solid 0px #009999;
+	white-space: nowrap;
+	border-collapse: collapse;
+	table-layout: auto;
+	border-spacing: inherit;
+	empty-cells: show;
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	background: #A0B2BD
+}
+
+.SbmNavigationMenuMainSectionClosed {
+	border: solid 0px #009999;
+	white-space: nowrap;
+	border-collapse: collapse;
+	table-layout: auto;
+	border-spacing: inherit;
+	empty-cells: show;
+	cursor: pointer;
+	font-weight: normal;
+	background: #B0BBCE
+}
+
+	
+.SbmNavigationMenuMainSectionLeftImage
+	{
+	width: 16;
+	padding: 2px;
+	margin-left: 4px
+}
+
+.SbmNavigationMenuMainSectionLabel	{
+	padding: 2px;
+	white-space: nowrap;
+	vertical-align: middle;
+	width: 100%
+}
+
+	
+.SbmNavigationMenuMainSectionRightImageHide, .SbmNavigationMenuMainSectionRightImageShow {
+	margin: 0px;
+	padding: 0px
+}
+
+	
+.SbmNavigationMenuCascadeDivCommon{
+	left: 160px;
+	top: 134px /*height:139px;*/
+}
+
+.SbmNavigationMenuCascadeDiv  a.Option {
+	cursor: pointer;
+	border: 1px solid #EFEBF7;
+	text-decoration: none;
+	color: #004194;
+	white-space: nowrap;
+	display: block;
+	width: auto;
+	background: #EFEBF7;
+	padding: 1px 2px
+}
+
+.SbmNavigationMenuCascadeDiv a.Option:hover {
+	cursor: hand;
+	text-decoration: none;
+	color: #000000;
+	background: #FFFFFF
+}
+
+.SbmNavigationMenuCascadeDiv a.Option:active { }
+
+.SbmNavigationMenuCascadeDiv a.Option:visited{ }
+
+/* Sbm Table CSS*/
+.SbmPageTitle {
+	border-right: 0px solid #7D86A3;
+	border-top: 0px solid #7D86A3;
+	border-left: 0px solid #7D86A3;
+	border-bottom: 1px solid #7D86A3;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	text-indent: 4px;
+	height: 18px;
+	width: 100%;
+	color: #000000;
+	white-space: nowrap;
+	background: #A6C5E1
+}
+
+/*Data Table class*/
+/*list table css*/
+.SbmListTable {
+	border-right: 0px solid #C3D1DF;
+	border-top: 1px solid #C3D1DF;
+	border-left: 1px solid #C3D1DF;
+	border-bottom: 1px solid #C3D1DF
+}
+
+.SbmListTable caption.Heading{
+	border-right: 1px solid #C3D1DF;
+	border-top: 1px solid #C3D1DF;
+	border-left: 1px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF;
+	text-align: left;
+	font-weight: bold;
+	padding: 2px
+}
+
+.SbmListTable td {
+	border-right: 1px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF;
+	padding: 2px
+}
+
+.SbmListTable th{
+	font-size: 8pt;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	padding: 2px;
+	border-top: 0px solid #C3D1DF;
+	border-right: 1px solid #C3D1DF;
+	border-bottom: 1px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	background: #E7ECF4
+}
+
+.SbmListTable th.SbmNarrowColumnHeader { width: 1% }
+
+.SbmListTable th.SbmSortableColumnHeader {
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #C3D1DF;
+	border-right-color: #C3D1DF;
+	border-bottom-color: #C3D1DF;
+	border-left-color: #C3D1DF;
+	background: #4D8BC6
+}
+
+/* column header link class*/
+.SbmListTable th A {
+	font-size: 8pt;
+	color: #003399;
+	font-weight: bold;
+	text-decoration: none
+}
+
+.SbmListTable th A:visited { }
+
+.SbmListTable th A.SbmSortableColumnHeaderLink {
+	font-size: 8pt;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none
+}
+
+.SbmListTable th A.SbmSortableColumnHeaderLink:visited { }
+
+.SbmListTable th A.SbmSortableColumnHeaderLink:hover {
+	text-decoration: underline;
+	color: #FFFFFF
+}
+
+.SbmListTable A:visited { }
+
+.SbmTableMediumPadding td{ padding: 4px }
+
+/* Data Table Critical Task row class*/
+#SbmListTableCriticalTaskRow a { color: #990000 }
+
+.SbmSelectedTask {
+	font-weight: bold;
+	border: 1px solid #C3D1DF;
+	background: #F5C795
+}
+
+/* Data Table link class*/
+/* Button class*/
+.SbmButton {
+	font-size: 8pt;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #C3D1DF;
+	border-right: 2px solid #C3D1DF;
+	border-bottom: 2px solid #C3D1DF;
+	border-left: 1px solid #C3D1DF;
+	padding: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	white-space: nowrap;
+	background: #FFFFFF url(../../css_70/theme01/images/sbm_button.gif)
+}
+
+/* Separator filter table and list table class (for span)*/
+/* Pagination Section table class*/
+.SbmPaginationDiv {
+	border-top: 1px solid #7D86A3;
+	border-right: 0px solid #7D86A3;
+	border-bottom: 1px solid #7D86A3;
+	border-left: 0px solid #7D86A3;
+	padding: 1px;
+	margin: 0px;
+	text-align: center;
+	background: #ECF6FF
+}
+
+.SbmPaginationDiv td {
+	font-size: 8pt;
+	padding: 2px 4px 2px 2px
+}
+
+.SbmPaginationDiv  A {
+	color: #0051A5;
+	text-decoration: none;
+	border: 0px none #CCCCCC
+}
+
+.SbmPaginationDiv A:hover {
+	color: #0051A5;
+	text-decoration: underline
+}
+
+.SbmPaginationDiv  .Sep { color: #A5C7E7 }
+
+/*details table border*/
+.SbmDetailsTableHeader {
+	border: 1px solid #A7BACB
+}
+
+.SbmDetailsTableHeader A:visited { }
+
+.SbmDetailsTableHeader td.SbmLabel {
+	border-right: 0px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF;
+	padding: 4px;
+	padding-left: 16px;
+	text-align: right;
+	font-weight: bold;
+	background: #F0FAFF
+}
+
+.SbmDetailsTableHeader td.SbmValue {
+	border-right: 0px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF;
+	padding: 4px;
+	background: #F0FAFF
+}
+
+.SbmDetailsTable{
+	border-right: 0px solid #C3D1DF;
+	border-top: 1px solid #C3D1DF;
+	border-left: 1px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF
+}
+
+.SbmDetailsTable A:visited { }
+
+.SbmLabel {
+	border-right: 1px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 1px solid #C3D1DF;
+	padding: 4px;
+	padding-left: 16px;
+	text-align: right;
+	font-weight: bold
+}
+
+.SbmDetailsTitleTable {
+	border-right: 0px solid #7D86A3;
+	border-top: 1px solid #7D86A3;
+	border-left: 0px solid #7D86A3;
+	border-bottom: 0px solid #7D86A3;
+	height: 18px;
+	white-space: nowrap;
+	background: #A6C5E1
+}
+
+.SbmDetailsTitle b {
+	padding-left: 4px
+}
+
+a.SbmDetailsTitleMaximizeImage {
+	display: block;
+	background: #A6C5E1
+}
+
+a.SbmDetailsTitleMaximizeImage:hover { display: block }
+
+.SbmDetailsTabTableMediumPadding {
+	border-right: 0px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF;
+	padding: 4px;
+	background: #FFFFFF
+}
+
+/* small table*/
+.SbmFilterTableComponent {
+	margin: 0px;
+	text-align: left;
+	vertical-align: top;
+	border-top: 0px solid #EFEFEF;
+	border-right: 0px solid #EFEFEF;
+	border-bottom: 1px solid #EFEFEF;
+	border-left: 0px solid #EFEFEF;
+	padding: 0px 0px 2px
+}
+
+.SbmFilterTableComponent b {
+	margin: 0px 4px 0px 0px;
+	padding: 0px 4px 0px 0px;
+	font-weight: bold;
+	white-space: nowrap
+}
+
+.SbmFilterTableComponent a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #00509F;
+	white-space: nowrap;
+	display: block;
+	border: 1px solid #FFFFFF;
+	margin: 0px 4px 0px 0px;
+	padding: 0px 4px 0px 0px;
+	background: #FFFFFF
+}
+
+.SbmFilterTableComponent a:visited{ }
+
+a.SbmComponentTableHideImage:visited{ }
+
+.SbmTableThickPadding {
+	margin: 0px;
+	padding: 0px;
+	background: #FFFFFF
+}
+
+.SbmComponentSeparatorHorizontal {
+	display: block;
+	height: 8px
+}
+
+.SbmComponentVerticalLeftColumn {
+	margin: 0px;
+	padding: 8px 4px 8px 8px;
+	text-align: left;
+	vertical-align: top
+}
+
+.SbmComponentVerticalRightColumn {
+	margin: 0px;
+	padding: 8px 8px 8px 4px;
+	text-align: left;
+	vertical-align: top
+}
+
+.SbmComponentVerticalCenterColumn {
+	margin: 0px;
+	padding: 8px 4px 8px 4px;
+	text-align: left;
+	vertical-align: top
+}
+
+.SbmComponentTable { }
+
+.SbmComponentTableContainerCell {
+	border: 1px solid #7B86A5;
+	background: #CAE3FF;
+	padding: 2px 2px 2px 4px
+}
+
+.SbmComponentTableTitleCell {
+	white-space: nowrap;
+	padding: 2px 4px
+}
+
+.SbmComponentTableContentCell {
+	border-top: 0px solid #7B86A5;
+	border-right: 1px solid #7B86A5;
+	border-bottom: 1px solid #7B86A5;
+	border-left: 1px solid #7B86A5;
+	background: #FFFFFF;
+	padding: 4px
+}
+
+/* free table end*/
+.SbmFreeDataDiv td {
+	padding: 2px 4px 4px 2px
+}
+
+.SbmFreeDataDiv A{
+	padding: 0px 4px 0px 2px;
+	text-decoration: none;
+	color: #00309C
+}
+
+.SbmFreeDataDiv A:hover{
+	padding: 0px 4px 0px 0px;
+	text-decoration: underline
+}
+
+.SbmFreeDataDiv A:visited{
+	padding: 0px 4px 0px 0px;
+	text-decoration: none
+}
+
+/* popup div*/
+.SbmPopupDataDiv {
+	text-align: left;
+	vertical-align: top
+}
+
+.SbmPopupDataDiv Td{ padding: 3px }
+
+.SbmPopDivContainer {
+	width: 80%;
+	display: block;
+	padding: 4px
+}
+
+.SbmPopupTitleDiv {
+	width: 100%;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #7B86A5;
+	border-right-color: #7B86A5;
+	border-bottom-color: #7B86A5;
+	border-left-color: #7B86A5;
+	background: #FFFFFF url(../../css_70/theme01/images/sbm_pop_div_title.gif)
+}
+
+.SbmPopupTitleDiv td{
+	padding: 3px;
+	margin: 3px
+}
+
+.SbmPopupTitleCell {
+	color: #000000;
+	font-size: 8.5pt;
+	font-weight: bold;
+	white-space: nowrap
+}
+
+.SbmPopupDivContent {
+	color: #000000;
+	border: 1px solid #7B86A5;
+	padding: 0px;
+	background: #FFFFFF
+}
+
+.SbmPopupDivContentButton {
+	padding: 0px;
+	width: 100%
+}
+
+.SbmPopupTitleCloseImage{ }
+
+/*popup div end*/
+/*tabular view*/
+.SbmTabularTaskTitleCell {
+	white-space: nowrap;
+	padding: 0px;
+	margin: 0px;
+	width: 100%
+}
+
+	
+.SbmTabularTaskTitleDiv a {
+	margin: 0px;
+	padding: 0px;
+	height: 15px;
+	width: 15px;
+	border: 1px solid #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #00519C;
+	text-decoration: none;
+	background: #FFFFFF
+}
+
+.SbmTabularTaskTitleDiv a:hover {
+	border: 1px solid #CCCCCC;
+	text-decoration: none
+}
+
+/*start report page classes*/
+.SbmReportProcessListDiv {
+	overflow: auto;
+	border: solid 0px #999999
+}
+
+.SbmReportProcessListDiv span {
+	display: block;
+	color: #000000;
+	font-weight: normal;
+	background: #FFFFFF;
+	padding: 1px 1px 2px 10px
+}
+
+/* scorecards style*/
+.SbmScorecardTabDiv {
+	border-bottom: 1px solid #FFFFFF
+}
+
+.SbmScorecardBottomBorder{
+	border-bottom: 1px solid #7B86A5;
+	background: #FFFFFF
+}
+
+.SbmScorecardTreeBackground {
+	height: 100%;
+	background: url(../../css_70/theme01/images/sbm_scorecard_tree_background.gif) repeat 0px 0px
+}
+
+.SbmScorecardTree { }
+
+.SbmScorecardCell {
+	background: #FFFFFF
+}
+
+#SbmScorecardCellSelected {
+	background: #BBD7FF
+}
+
+.SbmScorecardCellAlternate {
+	background: #EFF3F7
+}
+
+.SbmScorecardDeleteCell { }
+
+.SbmScorecardDeleteCell:hover { }
+
+.SbmScorecardDiv {
+	padding: 0px;
+	margin: 0px;
+	width: 100%
+}
+
+ /*for edit history or general link*/
+.SbmScorecardDiv a {
+	text-decoration: none;
+	color: #00509F;
+	white-space: nowrap;
+	border: 0px solid #FFFFFF;
+	margin: 0px 4px 0px 0px;
+	padding: 0px 4px 0px 0px
+}
+
+.SbmScorecardDiv a:hover {
+	cursor: hand;
+	text-decoration: underline;
+	color: #000000;
+	border: 0px solid #FFFFFF
+}
+
+.SbmScorecardTitleCell {
+	padding: 2px;
+	border: 1px solid #6788BA;
+	background: #7EA2D7
+}
+
+.SbmScorecardTitleCell td{ color: #FFFFFF }
+
+.SbmScorecardTitleCell a.EditHistory{ color: #DEEFFF }
+
+	
+.SbmScorecardTitleCell a.Edit{
+	color: #DEEFFF;
+	white-space: nowrap;
+	display: block;
+	border: 1px solid #7EA2D7;
+	text-decoration: none;
+	background: #7EA2D7;
+	padding: 0px 2px
+}
+
+.SbmScorecardTitleCell a.Edit:hover {
+	border: 1px solid #6788BA;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF
+}
+
+.SbmScorecardTitleCell a.Edit:visited{ }
+
+.SbmScorecardContentCell {
+	padding: 4px;
+	border-top: 0px solid #6788BA;
+	border-right: 1px solid #6788BA;
+	border-bottom: 1px solid #6788BA;
+	border-left: 1px solid #6788BA;
+	background: #FFFFFF
+}
+
+.SbmScorecardContentCell a.Edit:visited{ }
+
+.SbmPerspectiveDiv { width: 100% }
+
+.SbmPerspectiveDivMinimized { }
+
+.SbmPerspectiveTitleCellMinimized {
+	padding: 2px;
+	border: 1px solid #999999;
+	background: #CCCCCC
+}
+
+.SbmPerspectiveTitleCellMinimized a.Hide{
+	border: 1px solid #CCCCCC;
+	color: #000000;
+	text-decoration: none;
+	padding: 0px;
+	background: #CCCCCC
+}
+
+.SbmPerspectiveTitleCellMinimized a.Hide:hover {
+	border: 1px solid #999999;
+	color: #000000;
+	text-decoration: none;
+	padding: 0px;
+	background: #FFFFFF
+}
+
+.SbmPerspectiveTitleCellMinimized a.Hide:active {
+	border: 1px solid #999999;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 0px;
+	background: #999999
+}
+
+.SbmPerspectiveTitleCellMinimized a.Hide:visited{ }
+
+.SbmPerspectiveTitleCell {
+	padding: 2px;
+	border: 1px solid #6A9FFF;
+	background: #B5D4FF
+}
+
+.SbmPerspectiveTitleCell a.Hide{
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	padding: 1px;
+	border: 1px solid #B5D7FF;
+	text-decoration: none;
+	background: #B5D7FF
+}
+
+.SbmPerspectiveTitleCell a.Hide:hover {
+	;
+	border: 1px solid #5AB2EF;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF
+}
+
+.SbmPerspectiveTitleCell a.Hide:visited{ }
+
+.SbmPerspectiveContentCell {
+	padding: 4px;
+	margin: 4px;
+	border-top: 0px solid #6A9FFF;
+	border-right: 1px solid #6A9FFF;
+	border-bottom: 1px solid #6A9FFF;
+	border-left: 1px solid #6A9FFF;
+	_border-right: 5px solid #6A9FFF;
+	background: #FFFFFF
+}
+
+	
+.SbmPerspectiveContentCell a.Edit:visited{ }
+
+.SbmKpiMainTitleCell {
+	padding: 2px;
+	border: 1px solid #ACD0FF;
+	background: #DFEDFF
+}
+
+.SbmKpiMainTitleCell a.Hide{
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	padding: 1px;
+	border: 1px solid #DEEFFF;
+	text-decoration: none;
+	background: #DEEFFF
+}
+
+.SbmKpiMainTitleCell a.Hide:hover {
+	;
+	border: 1px solid #ADD3FF;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF
+}
+
+.SbmKpiMainTitleCell a.Hide:visited{ }
+
+.SbmKpiMainContentCell {
+	padding: 4px;
+	border: 0px solid #ACD0FF;
+	background: #FFFFFF
+}
+
+.SbmKpiSmallTableDiv { }
+
+.SbmKpiTitleCell {
+	padding: 2px;
+	border: 1px solid #D1E5FF;
+	background: #F3F9FF
+}
+
+.SbmKpiContentCell {
+	padding: 4px;
+	border-top: 0px solid #D1E5FF;
+	border-right: 1px solid #D1E5FF;
+	border-bottom: 1px solid #D1E5FF;
+	border-left: 1px solid #D1E5FF;
+	background: #FFFFFF
+}
+
+.SbmKpiContentCell td{
+	padding: 2px;
+	background: #FFFFFF
+}
+
+.SbmScorecardTreeDetailsColumn {
+	border-top: 1px solid #7B86A5;
+	border-right: 1px solid #7B86A5;
+	border-bottom: 1px solid #7B86A5;
+	border-left: 1px solid #7B86A5;
+	width: 80%;
+	vertical-align: top
+}
+
+.SbmScorecardTreeColumn {
+	border-top: 1px solid #7B86A5;
+	border-right: 1px solid #7B86A5;
+	border-bottom: 1px solid #7B86A5;
+	border-left: 0px solid #7B86A5;
+	width: 20%;
+	vertical-align: top;
+	height: 100%
+}
+
+.SbmScorecardTreeSeparatorColumn {
+	width: 2px;
+	vertical-align: top;
+	background: #E7EBEF
+}
+
+P, H1, H2, H3, H4, H5, FORM, UL { margin: 0px }
+
+.SbmGeneralLabelTable, .SbmTableMediumPadding table { padding: 0px }
+
+.SbmBannerDiv, TD, TR, caption, .SbmLabelText { font-size: 8pt }
+
+A.SbmDetailsTableLink:hover, a, a:visited {
+	font-size: 8pt;
+	text-decoration: none
+}
+
+A.SbmTabLinkSelected, A.SbmDetailsTableLink, A.SbmTabLink {
+	font-size: 8pt;
+	text-decoration: none;
+	color: #000000
+}
+
+.SbmFilterTable a:hover, .SbmFilterTableComponent a:hover {
+	cursor: hand;
+	text-decoration: underline;
+	color: #000000;
+	border: 1px solid #FFFFFF;
+	background: #FFFFFF
+}
+
+.SbmFilterTable a:active, .SbmFilterTableComponent a:active {
+	color: #0099FF;
+	border: 1px solid #FFFFFF;
+	text-decoration: underline;
+	background: #FFFFFF
+}
+
+.SbmButtonTable .SbmButtonSeparator, .SbmInsideMenuButtonTable .SbmButtonSeparator {
+	color: #52B2E7;
+	width: 4px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0px 1px
+}
+
+.SbmInsideButtonTable a, a.SbmFilterTableButton, .SbmInsideMenuButtonTable  a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	border: 1px solid #FFFFFF;
+	background: #FFFFFF;
+	padding: 0px 2px
+}
+
+.SbmInsideButtonTable a:hover, a.SbmInsideButton1:hover {
+	cursor: hand;
+	text-decoration: none;
+	color: #000000;
+	border: 1px solid #CCCCCC;
+	background: #FFFFFF
+}
+
+.SbmInsideButtonTable a:active, a.SbmInsideButton1:active {
+	color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	background: #CCCCCC
+}
+
+a.SbmComponentTableButton, a.SbmComponentTableHideImage {
+	cursor: pointer;
+	border: 1px solid #CAE3FF;
+	text-decoration: none;
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	background: #CAE3FF;
+	padding: 0px 2px
+}
+
+.SbmSummaryContentHide, .SbmNavigationMenuHideCellContent { display: none }
+
+.SbmNavigationMenuVisibleCell, .SbmNavigationMenuVisibleCellContent { width: 160px }
+
+.SbmNavigationMenuCascadeDiv, .SbmButtonDropdownDiv, .SbmViewDropdownDiv {
+	position: absolute;
+	z-index: 111;
+	border: 1px solid #7B86A5;
+	background: #FFFFFF
+}
+
+.SbmListInsideTable table, .SbmListInsideTable td, .SbmListInsideTable tr {
+	border: 0px solid;
+	padding: 0;
+	margin: 0
+}
+
+.SbmDetailsTable A, .SbmListTable A, .SbmDetailsTableHeader A {
+	font-size: 8pt;
+	color: #003399;
+	text-decoration: none
+}
+
+.SbmValue, .SbmDetailsTableHeader TD.SbmDetailsTableRequiredCell, .SbmDetailsTable TD.SbmDetailsTableRequiredCell {
+	border-right: 1px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 1px solid #C3D1DF;
+	padding: 4px
+}
+
+.SbmFreeDataDiv, .SbmKpiDiv { padding: 2px }
+
+.SbmTabularTaskTitleDiv, .SbmTabularTaskContentDiv, .SbmTabularTaskTitleDiv td {
+	padding: 1px;
+	margin: 1px;
+	border: 1px solid #FFFFFF
+}
+
+.SbmScorecardCell:hover, .SbmScorecardCellAlternate:hover {
+	background: #D6E7FF
+}
+
+.SbmScorecardDeleteCell a, .SbmFilterTable td, .SbmScorecardTree a {
+	white-space: nowrap
+}
+
+.SbmScorecardContentCell a.Edit, .SbmPerspectiveContentCell a.Edit {
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	border: 1px solid #FFFFFF;
+	text-decoration: none;
+	background: #FFFFFF;
+	padding: 0px 2px
+}
+
+.SbmScorecardContentCell a.Edit:hover, .SbmPerspectiveContentCell a.Edit:hover {
+	border: 1px solid #5AB2EF;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF
+}
+
+a.SbmFilterTableButton:hover, .SbmButtonTable a:hover, a.SbmComponentTableButton:hover, a.SbmComponentTableHideImage:hover {
+	cursor: hand;
+	border: 1px solid #5AB2EF;
+	text-decoration: none;
+	color: #000000;
+	background: #FFFFFF
+}
+
+a.SbmFilterTableButton:active, .SbmButtonTable a:active, a.SbmComponentTableButton:active, a.SbmComponentTableHideImage:active {
+	border: 1px solid #5AB2EF;
+	color: #FFFFFF;
+	background: #5AB2EF
+}
+
+.SbmSummaryDiv b, .SbmPageTitle b, #SbmScorecardCellSelected a, .SbmScorecardDeleteCell a.active {
+	font-weight: bold
+}
+
+#SbmListTableCriticalTaskRow, .SbmDetailsTableHeader span.RequiredAsterisk, .SbmDetailsTable span.RequiredAsterisk, .SbmFreeDataDiv A:active { color: #FF0000 }
+
+.SbmDetailsTable A:hover, a.SbmSelectedLink:hover, a:hover, .SbmSummaryDiv a.Selected:hover, .SbmListTable th A:hover, .SbmListTable A:hover, .SbmDetailsTableHeader A:hover {
+	text-decoration: underline
+}
+
+.SbmPerspectiveTitleCell a.Hide:active, .SbmPerspectiveContentCell a.Edit:active, .SbmKpiMainTitleCell a.Hide:active, .SbmScorecardTitleCell a.Edit:active, .SbmScorecardContentCell a.Edit:active {
+	border: 1px solid #5AB2EF;
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #5AB2EF
+}

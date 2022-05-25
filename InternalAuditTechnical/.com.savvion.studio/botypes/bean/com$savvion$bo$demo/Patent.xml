@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="com.savvion.bo.demo.Patent">
+    <property name="name" value="Patent"/>
+    <property name="id" value="-1"/>
+    <property name="category" value="demo"/>
+    <property name="creator" value="ebms"/>
+    <property name="createdDate" value="1247014340946"/>
+    <property name="lastModifiedBy" value="ebms"/>
+    <property name="lastModifiedDate" value="1247014535937"/>
+    <property name="persistence" value="Internal"/>
+    <property name="isUsed" value="false"/>
+    <property name="dataSourceRef"></property>
+    <property name="description"></property>
+    <attributes>
+        <attribute name="patentId" label="patentId" isKey="false" isReadOnly="false" isMandatory="false" size="32" isCol="false" isPrimitive="true">
+            <property name="typeClassName" value="java.lang.String"/>
+            <property name="typeName" value="String"/>
+            <property name="defaultValue"></property>
+            <property name="description"></property>
+        </attribute>
+        <attribute name="submitters" label="submitters" isKey="false" isReadOnly="false" isMandatory="false" size="-1" isCol="true" isPrimitive="false">
+            <property name="typeCategory" value="demo"/>
+            <property name="typeClassName" value="com.savvion.bo.demo.Submitter"/>
+            <property name="typeName" value="Submitter"/>
+            <property name="defaultValue"></property>
+            <property name="description"></property>
+        </attribute>
+        <attribute name="accepted" label="accepted" isKey="false" isReadOnly="false" isMandatory="false" size="-1" isCol="false" isPrimitive="true">
+            <property name="typeClassName" value="java.lang.Boolean"/>
+            <property name="typeName" value="Boolean"/>
+            <property name="defaultValue">false</property>
+            <property name="description"></property>
+        </attribute>
+        <attribute name="patentDate" label="patentDate" isKey="false" isReadOnly="false" isMandatory="false" size="-1" isCol="false" isPrimitive="true">
+            <property name="typeClassName" value="java.sql.Timestamp"/>
+            <property name="typeName" value="Timestamp"/>
+            <property name="defaultValue">2009-07-07 17:55:20.999</property>
+            <property name="description"></property>
+        </attribute>
+    </attributes>
+</class>

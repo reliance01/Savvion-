@@ -1,0 +1,22 @@
+{'name': 'Dynamic Container',
+         'type': 'jmaki',
+         'version' : '1.0',
+         'jmakiVersion' : '1.0',
+         'author' : 'Greg Murray',
+         'url' : 'https://ajax.dev.java.net',         
+         'image' : 'images/jmaki-dcontainer.jpg',
+         'modelURL' : 'http://wiki.java.net/bin/view/Projects/jMakiTabbedViewDataModel',
+         'description': 'This widget is that will go up and retrieve a Delicious bookmarks for a given topic directly from the client. No proxy configuration necessary.',
+         'category': 'Search',
+         'args': [
+         	{'include':{'type':'STRING', 'description': 'The url containing the contents you want to include.'}},
+         {'content':{'type':'STRING', 'description': 'The  static content you want to include.'}}
+         	],
+    'topicInfo': {
+	'type':'subscribe',
+	'topicName':'/jmaki/dcontainer',
+	'description':'subscribe to /jmaki/menu so when menu item is clicked dcontainer loads url for that item'
+    }
+ }
+ 
+ 

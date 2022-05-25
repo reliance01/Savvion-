@@ -1,0 +1,3062 @@
+/*bm-all.css contains the following CSS files:
+    /text.css
+    /bsc_psv.css
+    /calendar_popup.css
+    /common.css
+    /details_view.css
+    /global.css
+    /input_tags.css
+    /list_view.css
+    /pop_ups.css
+    /reports.css
+    /jscalendar.css
+    /menus.css
+ This files needs to be regenerated when individual styles change */
+ /* -------------------global.css ----------------------*/
+/* Global CSS Classes (Applicable for All Application Pages) */
+body {
+    background-color:#f7fbff;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    border:0px none;
+    overflow-y:hidden;
+}
+pre {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    line-height: 22px
+}
+/* -------------------text.css ----------------------*/
+/* Classes for different types of textual information */
+.RedTxt { color: #990000 }
+.RedTxtNoWrap {
+    font-size: 11px;
+    color: #990000;
+    white-space: nowrap;
+}
+.Error {
+    color: #B30000;
+    font-size: 11px
+}
+.ErrorTblBg {
+    border: 1px solid;
+    border-color: #FF6600 #C60000 #C60000 #FF6600;
+    background: #FFFFFF
+}
+.Info {
+    color: #00287D;
+    font-size: 11px
+}
+.InformationTitle {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #003399;
+    padding-top: 2px;
+    padding-bottom: 2px
+}
+.InfoTblBg {
+    border:1px solid #0066CC;
+    padding:10px;
+    background: #FFFFFF
+}
+.InfoTbl { white-space: nowrap }
+.Confirmation {
+    color: #222;
+    font-size: 11px
+}
+.ConfirmationTitle {
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom:4px;
+}
+.ConfirmationMsg {
+    font-size: 11px;
+    font-weight: normal;
+    padding: 2px 5px 2px 15px
+}
+.ConfirmationMsgBox {
+    padding: 8px;
+    color: #000;
+}
+.ConfirmationTblBg, .ExtConfirmationTblBg {
+    border: 1px solid #a3bae9;
+    background: #dfe8f6;
+    width:500px;
+    border-collapse: collapse;
+    margin-top:10px;
+}
+.ConfirmationTblBg td { padding:4px; }
+.ConfirmationTblPlain {
+    border: 1px solid #99BBE8;
+    background: #C5D3E5;
+    border-collapse: collapse;
+}
+.Wrnng {
+    color: #000000;
+    font-size: 11px
+}
+.WarningTitle {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    padding-top: 2px;
+    padding-bottom: 2px
+}
+.WarningTblBg {
+    border: 1px solid #900;
+    padding:10px;
+    background: #FBFBFB
+}
+.SmlTxt {
+    font-size: 11px;
+    color: #333333
+}
+.SmlTxtNoWrap {
+    font-size: 11px;
+    color: #333333;
+    white-space: nowrap;
+}
+.SmlTxtBld {
+    font-size: 11px;
+    font-weight: bold
+}
+.SmlTxtDis {
+    font-size: 11px;
+    color: #999999;
+    text-decoration: none
+}
+.SmlTxtEditPerformer {
+    font-size: 11px;
+    color: #000000;
+    white-space: nowrap
+}
+.Reloaded {
+    font-size: 11px;
+    font-weight: bold;
+    color: #009900
+}
+.Required {
+    font-size: 11px;
+    color: #FF0000
+}
+A.CopyLnk {
+    font-size: 11px;
+    color: #999999;
+    text-decoration: none
+}
+A.CopyLnk:hover { text-decoration: underline }
+A.CopyLnk:visited { }
+.CopyTxt {
+    font-size: 11px;
+    color: #999999
+}
+div.auto_complete {
+    width: 350px;
+    background: #FFFFFF
+}
+div.auto_complete ul {
+    border: 1px solid #888888;
+    margin :0;
+    padding :0;
+    width :100%;
+    list-style-type :none;
+    line-height: 9pt
+}
+div.auto_complete ul li {
+    margin: 0;
+    padding: 3px;
+    font-size: 11px
+}
+div.auto_complete ul li.selected { background: #FFFFBB }
+div.auto_complete ul strong.highlight {
+    color: #880000;
+    margin: 0;
+    padding: 0
+}
+/* login page styles*/
+.SbmLoginMainDiv {
+    font: normal 12px tahoma, arial, helvetica, sans-serif;
+    margin: 0;
+    vertical-align: middle;
+    padding: 8px;
+    background: url(images/lognscreen-background.gif) no-repeat;
+}
+.SbmLoginMainDiv div, .SbmLoginMainDiv span { }
+.ImageDiv {
+    position:relative;
+    vertical-align:middle;
+    z-index:4;
+    width:50%
+}
+.SbmInfoMessage {
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    color: #FFFFFF;
+    vertical-align: middle;
+    text-align: middle
+}
+.InputTable { font:normal 12px tahoma, arial, helvetica, sans-serif; }
+.InputTable td { padding: 3px }
+.WarningDiv {
+    font: normal 10px tahoma, verdana, helvetica;
+    text-align:left;
+    color: #FF0000
+}
+.SbmSupport {
+    white-space:nowrap;
+    text-align: right;
+    font-size: 11px;
+    color: #15428B;
+    z-index: 50
+}
+.SbmSupport a { text-decoration: none }
+.SbmSupport a:hover { text-decoration: underline }
+.SbmCopyright {
+    white-space:nowrap;
+    text-align:left;
+    font-size: 11px;
+    color: #15428B;
+}
+.SbmVersion {
+    position: absolute;
+    top:84px;
+    left:124px;
+    white-space:nowrap;
+    width: 262px;
+    text-align:left;
+    color: #1846A3
+}
+.LoginBackground {
+    position:absolute;
+    width:100%;
+    height:115px;
+    z-index:1;
+    left: 0;
+    top: 95px;
+    background: #FFFFFF
+}
+/*-----------------------------bsc_psv.css-----------------------------*/
+/* Classes for "Balanced Scorecard" and "Process Status Viewer" screens */
+.BalScorMainTitle {
+    font-weight: bold;
+    font-size: 9pt;
+    color: #224466;
+    clip: rect( );
+    border-top: 1px solid #336699;
+    border-right: 2px solid #336699;
+    border-bottom: 0px solid #336699;
+    border-left: 1px solid #336699;
+    background: #B7CAE7;
+    padding: 2px
+}
+.BalScorSubTitle {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #224466;
+    clip: rect( );
+    border-top: 1px solid #336699;
+    border-right: 2px solid #336699;
+    border-bottom: 0px solid #336699;
+    border-left: 1px solid #336699;
+    background: #B7CAE7;
+    padding: 2px
+}
+.BalSmlTxt {
+    color: #224466;
+    font-size: 8pt
+}
+.BalSmlTxtBld {
+    color: #224466;
+    font-size: 8pt;
+    font-weight: bold
+}
+.BalScorTblEmboss {
+    border-top: 1px solid #336699;
+    border-right: 2px solid #336699;
+    border-bottom: 2px solid #336699;
+    border-left: 1px solid #336699;
+    background: #FFFFFF;
+    padding: 2px
+}
+.NoteButton {
+    font-size: 8pt;
+    cursor: hand;
+    color: #663300;
+    font-weight: bold;
+    border-top: 1px solid #990000;
+    border-right: 2px solid #990000;
+    border-bottom: 2px solid #990000;
+    border-left: 1px solid #990000;
+    background: #FFFFFF
+}
+.NoteButtonHover {
+    font-size: 8pt;
+    cursor: hand;
+    color: #CC9900;
+    font-weight: bold;
+    border-top: 1px solid #770000;
+    border-right: 2px solid #770000;
+    border-bottom: 2px solid #770000;
+    border-left: 1px solid #770000;
+    background: #FFFFFF
+}
+.BalScorChildTitle {
+    font-size: 8pt;
+    color: #224466;
+    clip: rect( );
+    border-top: 1px solid #336699;
+    border-right: 2px solid #336699;
+    border-bottom: 1px solid #336699;
+    border-left: 1px solid #336699;
+    background: #F1F1FF;
+    padding: 3px 2px
+}
+.BalScorChartMainTbl {
+    padding: 2px;
+    border: 2px solid #FFFFFF
+}
+.BalScorInbetweenTd { border: 4px solid #FFFFFF }
+.BalTargetBlnk {
+    text-align: right;
+    width: 100%;
+    font-size: 8pt
+}
+.PsvTitle {
+    font: normal 13px tahoma, arial, verdana, helvetica;
+    font-weight: bold;
+    color: #15428B;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+.PsvTblEmboss {
+    border: 1px #003399 solid;
+    background: #FFFFFF;
+    padding: 2px
+}
+.PsvTitleTxt {
+    font-size: 10pt;
+    color: #000066;
+    clip: rect( )
+}
+.PsvHdr {
+    font: bold 11px arial, tahoma, helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #8091A9;
+    border-bottom-color: #8091A9;
+    border-left-color: #FFFFFF;
+    background: #F5F8F9 url(images/psv_hdr.gif)
+}
+.PsvTblBg {
+    border:1px solid #8091A9;
+    background: #8091A9
+}
+.PsvWorkStepActivated, .PsvWorkStepSkipped, .PsvWorkStepLghtBg, .PsvWorkStepInactive, .PsvWorkStepSaved, .PsvWorkStepNotSaved, .PsvWorkStepEventActivationWait {
+    text-align: left;
+    font: bold 11px arial, tahoma, helvetica, sans-serif;
+    color: #000000;
+    padding:3px;
+}
+.PsvWorkStepActivated {
+    border:1px solid #A84D00;
+    background: #FFC08A/* url(images/psv_work_step_activated.gif)*/
+}
+.PsvWorkStepEventActivationWait {
+    border:1px solid #29655C;
+    background: #62C1B1
+}
+.PsvWorkStepSkipped {
+    border:1px solid #0050a8;
+    background: #c0e0ff
+}
+.PsvWorkStepLghtBg { background: #E8E8E8; }
+.PsvBlnkFieldCntr { background: #FFFFFF }
+.PsvWorkStepActivatedTr {
+    text-align: center;
+    background: #FF0000
+}
+.PsvWorkStepSaved {
+    border: 1px solid #29655c;
+    background: #62c1b1
+}
+.PsvWorkStepNotSaved {
+    border: 1px solid #666666;
+    background: #808080
+}
+.PsvWorkStepAverage, .PsvWorkStepLessAverage, .PsvWorkStepActivatedNote, .PsvWorkStepCompleted, .PsvWorkStepCompletedNote, .PsvWorkStepSuspended, .PsvWorkStepSuspendedNote {
+    text-align: left;
+    font: bold 11px arial, tahoma, helvetica, sans-serif;
+    color: #000000;
+    padding:3px;
+}
+.PsvWorkStepAverage {
+    border: 1px solid #CCCCCC;
+    background: #FFFFFF
+}
+.PsvWorkStepLessAverage {
+    border: 1px solid #000099;
+    background: #0000FF
+}
+.PsvWorkStepActivatedNote {
+    border:1px solid #FFFFFF;
+    background: #FFFFCC url(images/psv_work_step_activated_note.gif)
+}
+.PsvWorkStepNoteBorder { border: 1px solid #000000 }
+.PsvInbetweenTbl, .CnslInbetweenTbl { border: 4px #FFFFFF solid }
+.PsvWorkStepCompleted, .PsvWorkStepCompletedNote {
+    background: #d7ff6b;
+    border:1px solid #678F00;
+}
+.PsvWorkStepSuspended, .PsvWorkStepSuspendedNote {
+    background: #ff7070;
+    border:1px solid #8a2400;
+}
+.PsvWorkStepInactive, .PsvWorkStepInactiveNote {
+    background: #c0c0c0;
+    border:1px solid #666666;
+}
+.PsvTitleAlt {
+    font-size: 11px;
+    color: #000066;
+    clip: rect( );
+    border: 1px solid #003399;
+    border-bottom-size: 0px;
+    background: #ededed;
+    padding: 4px 2px
+}
+.PsvTitleTxtAlt {
+    font-size: 11px;
+    color: #000066;
+    clip: rect( )
+}
+A.PsvTitleLnk {
+    color: #0378D2;
+    text-decoration: none;
+    font: bold 11px tahoma, arial, helvetica, sans-serif;
+}
+A.PsvTitleLnk:hover {
+    color: #0378D2;
+    text-decoration: underline
+}
+A.PsvTitleLnk:visited { }
+.PsvTblInBg { background: #E6E6E6;
+    margin:4px; }
+table.PsvTblInBg {
+    display: table;
+    border-collapse: separate;
+}
+table.PsvTblInBg [cellspacing=0] {
+border-spacing: 0px;
+-webkit-border-horizontal-spacing: 0px;
+-webkit-border-vertical-spacing: 0px;
+}
+table.PsvTblInBg {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 11px;
+    font-variant: normal;
+    font-style: normal;
+    color: -webkit-text;
+    text-align: -webkit-auto;
+}
+
+.CnslCompTitle {
+    color: #15428B;
+    font: bold 11px tahoma, arial, helvetica, sans-serif;
+    padding: 4px 3px 3px 5px;
+    border: 1px solid #99BBE8;
+    border-bottom: 0px solid #99BBE8;
+    line-height: 15px;
+    background: url(../../javascript/ext4x/resources/themes/images/default/panel-header/panel-header-default-top-bg.gif) repeat-x 0 -1px
+}
+.CnslMainDataTbl {
+    border: 1px #000099 solid;
+    background: #FFFFFF
+}
+.CnslMainDataTd {
+    vertical-align: text-top;
+    background: #FFFFFF;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    padding: 4px
+}
+.CnslCompTblEmboss {
+    font-size:11px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    border: 1px solid #99BBE8;
+    background: #FFFFFF;
+    padding: 2px
+}
+.CnslInbetweenTd {
+    text-align: center;
+    vertical-align: top
+}
+.BalScorMainTitleText, .BalScorSubTitleText {
+    font-size: 9pt;
+    color: #224466;
+    clip: rect( )
+}
+/*----------------------calendar_popup.css------------------*/
+/* Classes for Calendar Pop-up */
+A.CalDayLnk {
+    font-size: 8pt;
+    color: #000000;
+    text-decoration: none
+}
+A.CalDayLnk:hover {
+    text-decoration: underline;
+    color: #006699
+}
+A.CalDayLnk:visited { }
+A.CalDayLnkSlct {
+    font-size: 8pt;
+    color: #990000;
+    text-decoration: none;
+    font-weight: bold
+}
+A.CalDayLnkSlct:hover {
+    text-decoration: underline;
+    color: #FF3300
+}
+A.CalDayLnkSlct:visited { }
+A.CalMnthLnk {
+    font-size: 8pt;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center
+}
+A.CalMnthLnk:visited { }
+A.CalMnthLnkSlct {
+    font-size: 8pt;
+    color: #FFFFEC;
+    text-decoration: none;
+    text-align: center
+}
+A.CalMnthLnkSlct:visited { }
+.CalDay {
+    font-size: 8pt;
+    text-align: right;
+    border-color: #FFFFFF #DFDFDF #DFDFDF #EFEFEF;
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    background: #FFFFFF
+}
+.CalTimeLabel {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #FFFFFF
+}
+.CalDaySlct {
+    font-size: 8pt;
+    text-align: right;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-color: #FDFFDF;
+    border-bottom-color: #FDFFDF;
+    border-top-color: #CCCCCC;
+    border-left-color: #CCCCCC;
+    background: #FDFFDF
+}
+.CalMnthBg {
+    text-align: center;
+    width: 22px;
+    font: bold 8pt Arial, Helvetica, sans-serif;
+    background: #B5C4EE
+}
+.CalMnthBgSlct {
+    text-align: center;
+    font: bold 8pt Arial, Helvetica, sans-serif;
+    background: #8CA0E2
+}
+.CalTblLightBg { background: #6B7DCE }
+.CalWeek {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #52619C;
+    text-align: center;
+    border-top: 1px solid #F7F7FF;
+    border-right: 0px solid #F7F7FF;
+    border-bottom: 0px solid #F7F7FF;
+    border-left: 1px solid #F7F7FF;
+    background: #CED7E7
+}
+.CalYear {
+    color: #FFFFFF;
+    font: bold 12pt Arial, Helvetica, sans-serif
+}
+A.CalDayLnkcurrentDate {
+    font-size: 8pt;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold
+}
+A.CalDayLnkcurrentDate:hover {
+    text-decoration: underline;
+    color: #000000
+}
+A.CalDayLnkcurrentDate:visited { }
+.CalInptMainBtn {
+    font-size: 8pt;
+    color: #000066;
+    border-top: 1px solid #9FA7C6;
+    border-right: 1px solid #717CAA;
+    border-bottom: 1px solid #717CAA;
+    border-left: 1px solid #9FA7C6;
+    background: #FFFFFF
+}
+.CalInptMainBtnHover {
+    font-size: 8pt;
+    color: #000066;
+    border: 1px solid #828EC5;
+    background: #F7F7FF
+}
+.CalMainBtnBg {
+    text-align: center;
+    font: 8pt Arial, Helvetica, sans-serif;
+    background: #CED7E7
+}
+.CalDayCurrentDate {
+    font-size: 8pt;
+    text-align: right;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-color: #FDFFDF;
+    border-bottom-color: #FDFFDF;
+    border-top-color: #CCCCCC;
+    border-left-color: #CCCCCC;
+    font-weight: bold;
+    color: #996633;
+    background: #FDFFDF
+}
+.CalYearCombo {
+    font-size: 8pt;
+    border: 1px solid #6B7DCE;
+    background: #F7F7FF
+}
+A.CalMnthLnk:hover, A.CalMnthLnkSlct:hover {
+    font-size: 8pt;
+    text-decoration: underline;
+    color: #FFFFFF
+}
+.CalDateBgGrp, .CalYearBg {
+    text-align: center;
+    font: bold 8pt Arial, Helvetica, sans-serif;
+    background: #9CAEE7
+}
+.CalInptTxtHhMm, .CalInptSelectAmPm {
+    font-size: 8pt;
+    color: #000066;
+    border: 1px solid #6B7DCE;
+    background: #F7F7FF
+}
+/*----------------------common.css------------------*/
+/* Common classes for all screens */
+A.CmnLnk {
+    font-size: 11px;
+    color: #000099;
+    text-decoration: none
+}
+A.CmnLnk:visited { }
+.CmnTblEmboss {
+    border: 1px solid #8BA6DD;
+    background: #FFFFFF
+}
+.CmnTitle {
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid #8BA6DD;
+    color: #000066;
+    background: #D2DCF9;
+    padding: 4px 2px
+}
+.CmnValRt {
+    font-size: 11px;
+    color: #000000;
+    text-align: right;
+    font-weight: bold;
+    background: #FFFFFF
+}
+.ShowHideDetails {
+    font-size: 11px;
+    cursor: hand;
+    cursor: pointer;
+    height: 18px;
+    border: 1px solid #8CA6DE;
+    background: #FFFFFF;
+    padding: 2px 4px
+}
+.ShowHideDetailsHover {
+    border: solid;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 8pt;
+    border-width: 1px 1px 1px 1px;
+    border-color: #003399 #00246F #00246F #003399;
+    background: #E4E8F9;
+    padding: 2px 4px
+}
+.LegendBar {
+    font-size: 11px;
+    color: #202020;
+    text-align: right;
+    background: #FFFFFF
+}
+.PageBar, .PageBarUp, .PageBarDown, .PageBarTp, .PageBarBtm {
+    font-size: 11px;
+    color: #000000;
+    width: 100%;
+    height: 22px;
+    vertical-align: middle;
+    border: 1px solid #99bce8;
+    background:#D0DEF0 url(../../javascript/ext4x/resources/themes/images/default/toolbar/bg.gif)  repeat-x top left;
+}
+.PageBar { }
+.PageBarUp td, .PageBarDown td {
+    border-bottom-width: 0px;
+    padding:0 5px 0 5px;
+}
+.PageBarTp { border-width: 1px 0 0 0 }
+.PageBarBtm { border-width: 0 0 1px 0 }
+.PageBarIn {
+    white-space: nowrap;
+    padding-left: 5px;
+    padding-right:5px;
+}
+.TitleLine { background: #00CC66 }
+A.ActionLnk {
+    font-size: 8pt;
+    color: #0378D2;
+    text-decoration: none
+}
+A.ActionLnk:visited { }
+.ListTitle {
+    font: normal 13px tahoma, verdana, helvetica;
+    font-weight: bold;
+    color: #15428B;
+    padding-top: 2px;
+    padding-bottom: 2px
+}
+.LinkTrailTbl { font: normal 11px tahoma, arial, helvetica, sans-serif }
+.LinkTrailTd {
+    vertical-align: middle;
+    padding: 4px;
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    color: #444444
+}
+.SmlTxtLog {
+    font-size: 8pt;
+    color: #000000
+}
+.DisabledTxt { color: #999999 }
+.HeadLine {
+    font-size: 12pt;
+    color: #FFFFFF;
+    font-weight: bold
+}
+.CmnTblInBg { background: #BCCBD6 }
+.LogoBgAbout { 
+    background: #005D94 url(images/about_logo.png) no-repeat center;    
+}
+.LogoBg { background: #005D94 }
+.AboutLines { background: url(images/about_lines.gif) repeat-x }
+.ThumbAppThemeTbl {
+    border-top: 1px solid #EFEFEF;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #EFEFEF
+}
+.ThumbAppThemeTblSlct {
+    border-top: 1px solid #999999;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #999999
+}
+.ThumbAppThemeTblHover {
+    border-top: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    border-left: 1px solid #999999
+}
+.NavLnk {
+    font-size: 8pt;
+    cursor: hand;
+    cursor: pointer;
+    color: #0378D2;
+    border: none;
+    background: #FFFFFF
+}
+.NavLnkHover {
+    font-size: 8pt;
+    cursor: hand;
+    cursor: pointer;
+    text-decoration: underline;
+    border: none;
+    color: #0378D2;
+    background: #FFFFFF
+}
+.NavLnkDis {
+    font-size: 8pt;
+    cursor: text;
+    color: #B4B4B4;
+    border: none;
+    background: #FFFFFF
+}
+.Spacer {
+    padding: 0px 5px 0px 5px;
+    height: 20px
+}
+.IconCell {
+    padding-left: 3px;
+    padding-right: 3px
+}
+A.CmnLnk:hover, A.ActionLnk:hover { text-decoration: underline }
+/*----------------------details_view.css------------------*/
+/* Classes for details/tab view screens */
+A.SegTblLnk:visited { }
+A.SegTabLnk:visited { }
+A.SegTabLnkSlct {
+    text-decoration: none;
+    color: #000000;
+    font: 11px tahoma, Arial, Verdana, Helvetica, sans-serif
+}
+A.SegTabLnkSlct:hover {
+    color: #494F8F;
+    text-decoration: none
+}
+A.SegTabLnkSlct:visited { }
+TD.SegBgTabBlnk {
+    border: 1px solid #FFFFFF;
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    padding: 2px 6px
+}
+TD.SegBgTab {
+    text-align: center;
+    border: 1px solid #7889CA;
+    cursor: hand;
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    background: #CAD4F4;
+    padding: 2px 6px
+}
+TD.SegBgTabSlct {
+    text-align: center;
+    border: 1px solid #90A1D8;
+    cursor: hand;
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    background: #FFFFFF;
+    padding: 2px 6px
+}
+TD.SegBgTabHover {
+    text-align: center;
+    border: 1px solid #6172BC;
+    cursor: hand;
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    background: #B5C3EF;
+    padding: 2px 6px
+}
+TD.SegBgTabSlctHover {
+    text-align: center;
+    border: 1px solid #BBC5E8;
+    cursor: hand;
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    background: #F2F4FD;
+    padding: 2px 6px
+}
+.SegBg {
+    text-align: center;
+    border: 1px #330066 solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #330066 #330066 #330066 #330066;
+    color: #FFFFFF;
+    font: bold 8pt Arial, Helvetica, sans-serif;
+    background: #8C98A6;
+    padding: 1px 2px
+}
+.SegColHdr, .SegColHdrSrNo, .SegChkBoxSlctAll {
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    font-weight: bold;
+    height: 15px;
+    vertical-align: middle;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #D0D0D0;
+    color: #000000;
+    text-align: center;
+    padding: 4px 5px 4px 5px;
+    background: #F9F9F9 url(../../javascript/ext4x/resources/themes/images/default/grid/grid3-hrow.gif) repeat-x 0 bottom;
+    cursor: default;
+    zoom: 1
+}
+.SegColHdrSrNo { width: 1%; }
+.SegColHdrTitle {
+    font-size: 11px;
+    font-weight: bold;
+    color: #000066;
+    border: 0px solid #000000;
+    border-color: #99CCFF #000000 #000000 #99CCFF;
+    background: #FFFFFF
+}
+.SegRowSubHdrLft {
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    border:1px solid #FFFFFF;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    background: #E6F2FF
+}
+.SegColSubHdr {
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border: 0px solid #9CC4E4;
+    background: #3585C6
+}
+.SegDivPad {
+    color: #000000;
+    border: 1px solid #006699;
+    padding: 8px
+}
+.SegFieldCntr, .SegFieldLft, .SegFieldRt {
+    font-size: 11px;
+    color: #333333;
+    border: 1px solid #ededed;
+    border-right-color: #ededed;
+    font: bold 11px arial, tahoma, helvetica, sans-serif;
+    padding:3px;
+    background: #FFFFFF
+}
+.SegFieldCntrAlt, .SegFieldLftAlt, .SegFieldRtAlt {
+    color: #333333;
+    border: 1px solid #ededed;
+    border-right: 1px solid #E6E6E6;
+    font: bold 11px arial, tahoma, helvetica, sans-serif;
+    padding:3px;
+    background: #FAFAFA
+}
+.SegFieldCntrSlct, .SegFieldLftSlct, .SegFieldRtSlct, .SegFieldCntrAltSlct, .SegFieldLftAltSlct, .SegFieldRtAltSlct {
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    color: #333333;
+    text-align: center;
+    font: bold 11px tahoma, arial, verdana, helvetica;
+    border: 1px solid #C5DAF5;
+    border-right: 1px solid #E6E6E6;
+    padding:3px;
+    background: #C5DAF5
+}
+.SegValCntr, .SegValLft, .SegValRt {
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    color: #333333;
+    text-align: center;
+    padding:3px;
+    border: 1px solid #ededed;
+    background: #FFFFFF
+}
+.SegValCntrAlt, .SegValLftAlt, .SegValRtAlt {
+    color: #333333;
+    text-align: center;
+    border: 1px solid #ededed;
+    padding:3px;
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    background: #FAFAFA
+}
+.SegValCntrSlct, .SegValLftSlct, .SegValRtSlct {
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    color: #333333;
+    text-align: center;
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    padding:3px;
+    border: 1px dotted #A3BAE9;
+    border-right: 1px solid #C5DAF5;
+    border-left: 1px solid #C5DAF5;
+    background: #C5DAF5
+}
+.SegFieldCntr, .SegFieldCntrAlt, .SegFieldCntrSlct, .SegValCntr, .SegValCntrAlt, .SegValCntrSlct, .SegCntr { text-align: center; }
+.SegFieldLft, .SegFieldLftAlt, .SegFieldLftSlct, .SegFieldLftAltSlct, .SegValLft, .SegValLftAlt, .SegValLftSlct, .SegLft { text-align: left; }
+.SegFieldRt, .SegFieldRtAlt, .SegFieldRtSlct, .SegValRt, .SegValRtAlt, .SegValRtSlct, .SegRt { text-align: right; }
+.SegValCntr .Red, .SegValCntrAlt .Red, .SegValLft .Red, .SegValLftAlt .Red, .SegValRt .Red, .SegValRtAlt .Red { color:#990000 }
+.SegLineBg {
+    height: 2px;
+    background: #d4d4d4
+}
+.SegTblBg { background: #FFFFFF }
+.SegTblBgPad {
+    border: 1px #999999 solid;
+    background: #EEEEEE;
+    padding: 4px
+}
+.SegTblEmboss {
+    border: 1px solid #99bce8;
+    padding: 4px;
+    background: #E5ECF9
+}
+.SegTblBg {
+    padding: 4px;
+    background: #E5ECF9
+}
+.SegTblInBg { background: #fff }
+.SegTitle {
+    overflow: hidden;
+    zoom: 1;
+    color: #15428B;
+    font: bold 11px tahoma, arial, helvetica, sans-serif;
+    padding: 4px 3px 3px 5px;
+    border-top: 1px solid #99BBE8;
+    border-bottom: 1px solid #99BBE8;
+    line-height: 15px;
+    background: url(../../javascript/ext4x/resources/themes/images/default/panel-header/panel-header-default-top-bg.gif) repeat-x 0 -1px
+}
+.SegTitleWB {
+    text-align:left;
+    color: #15428B;
+    font: bold 11px tahoma, arial, helvetica, sans-serif;
+    padding: 4px 3px 3px 5px;
+    border: 1px solid #99BBE8;
+    line-height: 15px;
+    background: url(../../javascript/ext4x/resources/themes/images/default/panel-header/panel-header-default-top-bg.gif) repeat-x 0 -1px
+}
+.NoBorders { border:0px; }
+.SegTitleLabel {
+    color: #000066;
+    font: bold 12px arial, tahoma, helvetica, sans-serif;
+    padding: 3px;
+}
+.SegDataTbl { }
+.SegInbetweenTbl { }
+.SegTblBgDark {
+    border: 1px solid #99bce8;
+    background: #f7f7f7
+}
+.SegChkBox, .SegChkBoxAlt, .SegChkBoxSlct, .SegChkBoxAltSlct {
+    color: #000000;
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid #ededed;
+    border-right: 1px solid #E6E6E6;
+}
+.SegChkBox { background: #FFFFFF }
+.SegChkBoxSlct, .SegChkBoxAltSlct {
+    border: 1px solid #C5DAF5;
+    border-right: 1px solid #E6E6E6;
+    background: #C5DAF5
+}
+.SegChkBoxSlctAll { width: 1%; }
+.SegChkBoxAlt {
+    text-align: center;
+    border: 1px solid #ededed;
+    border-right: 1px solid #E6E6E6;
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    background: #ededed
+}
+.SegValRtHdr {
+    font-size: 8pt;
+    color: #434387;
+    text-align: right;
+    font-weight: bold;
+    border: 1px solid #FFFFFF;
+    border-right-color: #ECECFF;
+    border-bottom-color: #ECECFF;
+    background: #ECECFF
+}
+.SegFieldLftHdr {
+    font-size: 8pt;
+    color: #434387;
+    text-align: left;
+    border: 1px solid #FFFFFF;
+    border-right-color: #ECECFF;
+    border-bottom-color: #ECECFF;
+    background: #ECECFF
+}
+.SegColHdrSort {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border:1px solid #ededed;
+    border-right-color: #8091A9;
+    border-bottom-color: #8091A9;
+    background: #D3E1E5
+}
+.ValCntrHdrSlct {
+    color: #000000;
+    text-align: center;
+    border-top: 1px solid #FFFFFF;
+    border-right: 0px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 0px solid #FFFFFF;
+    font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+    background: #FFFFFF
+}
+.ValCntrHdrSlctSlct {
+    color: #000000;
+    text-align: center;
+    border-top: 1px solid #B8DEDC;
+    border-right: 0px solid #B8DEDC;
+    border-bottom: 1px solid #B8DEDC;
+    border-left: 0px solid #B8DEDC;
+    font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+    background: #B8DEDC
+}
+.ChkBoxHdrSlct {
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 1px solid #FFFFFF;
+    border-right: 0px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 0px solid #FFFFFF;
+    font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+    background: #FFFFFF
+}
+.ChkBoxHdrSlctSlct {
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 1px solid #B8DEDC;
+    border-right: 0px solid #B8DEDC;
+    border-bottom: 1px solid #B8DEDC;
+    border-left: 0px solid #B8DEDC;
+    font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+    background: #B8DEDC
+}
+.SegColHdrSecTitle {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #FFFFFF;
+    border:1px solid #99CCFF;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    background: #005AA6;
+    padding: 4px
+}
+.TblBgLight {
+    border: 1px solid #deecfd;
+    background: #deecfd;/*#DFE8F6;*/
+    padding: 2px
+}
+.TblBgLightPlain {
+    border: 1px solid #99bce8;
+    background: #deecfd;/*#DFE8F6;*/
+    padding: 0px;
+}
+.BlnkTdSep {
+    color: #FFFFFF;
+    text-align: center;
+    border: 1px solid #8492AD;
+    border-left: 0px solid #8492AD;
+    font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+    background: #FFFFFF
+}
+.SbmAuditHistoryNotesRow td {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-bottom: 1px dashed #DADADA;
+    _border-bottom: 1px dotted #DADADA
+}
+a.SbmShowHide, a.SbmShowHide:visited {
+    height: 1px;
+    text-decoration: none;
+    background: #FFFFFF
+}
+a.SbmShowHide:hover {
+    height: 1px;
+    background: #EFEFFF
+}
+.SbmShowHideAuditHistoryRow td.SbmShowHideAuditHistoryCell {
+    padding: 6px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    background: #FFFFFF
+}
+A.SegTblLnk, A.SegTabLnk {
+    font-size: 8pt;
+    color: #000099;
+    text-decoration: none
+}
+A.SegTblLnk:hover, A.SegTabLnk:hover {
+    font-size: 8pt;
+    text-decoration: none
+}
+.SegTblEmbossLog, .SegTblEmbossTopLine {
+    border-top: 1px solid #003399;
+    border-right: 2px solid #003399;
+    border-bottom: 2px solid #003399;
+    border-left: 1px solid #003399;
+    background: #FFFFFF;
+    padding: 2px
+}
+/*----------------------input_tags.css------------------*/
+/* Classes for Form Element Tags */
+.FormTable {
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    border: 1px solid #99bce8;
+    background: #F7F7F7;
+    font-size: 11px;
+    margin: 0px
+}
+td.DataLabel { padding: 3px 5px 3px 5px }
+.DataLabel, .DataLabelLft, .DataValue {
+    color: #333333;
+    font-size: 11px;
+    white-space: nowrap;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle
+}
+.DataLabel {
+    padding: 3px 3px 2px 10px;
+    text-align: right;
+    font-weight: bold
+}
+.DataLabelLft {
+    padding: 3px 10px 2px 3px;
+    text-align: left;
+    font-weight: bold
+}
+.DataValue {
+    font-weight: normal;
+    padding: 3px 10px 2px 2px;
+    text-align: left;
+    white-space: nowrap
+}
+.DataValueRt {
+    font-weight: normal;
+    padding: 3px 2px 2px 10px;
+    text-align: left;
+    white-space: nowrap
+}
+.InptTxt, .InptTxtRt, .InptTxtDis {
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    background:#FFFFFF  url(../../javascript/ext4x/resources/themes/images/default/form/text-bg.gif) repeat-x 0 0;
+    height: 18px;
+    vertical-align: middle;
+    color: #333333;
+    padding: 2px 3px 0px 3px;
+    border: 1px solid #B5B8C8
+}
+.InptTxtRt { text-align: right }
+.InptTxtGrp, .InptTxtGrpDis, .InptSelectGrp {
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    height: 18px;
+    vertical-align: middle;
+    padding: 2px 3px 0px 3px;
+    border: 1px solid #B5B8C8;
+    background:  #FFFFFF url(../../javascript/ext4x/resources/themes/images/default/form/text-bg.gif) repeat-x 0 0;
+    color: #003399
+}
+.InptTxtArea, .InptTxtAreaDis {
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    padding: 1px 3px;
+    border: 1px solid #B5B8C8;
+    line-height: 16px;
+    color: #333333;
+    background:#FFFFFF url(../../javascript/ext4x/resources/themes/images/default/form/text-bg.gif)  repeat-x 0 0
+}
+.InptSelect, .InptSelectDis {
+    border: 1px solid #B5B8C8;
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    vertical-align: middle
+}
+.InptSelect {
+    color: #333333;
+    background: #FFFFFF url(../../javascript/ext4x/resources/themes/images/default/form/text-bg.gif) repeat-x 0 0
+}
+.InptSelectDis, .InptTxtDis, .InptTxtGrpDis, .InptTxtAreaDis {
+    color: #666666;
+    background: #EAEAEA
+}
+.SmlTxtGrp {
+    font-size: 11px;
+    color: #003399
+}
+.SmlTxtShortNote {
+    text-align:left;
+    font-size: 11px;
+    color: #763107;
+    background: #FFFFFF;
+    padding:4px;
+    display:block;
+}
+.SmlTxtShortNoteNoBg {
+    font-size: 11px;
+    color: #763107;
+}
+.InptChkBox, .InptRadio { }
+.SmlTxtGrpScrnBtn {
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    color: #003399
+}
+.BtnSpace {
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #CCCCCC
+}
+.ButtonBar { padding: 4px }
+.ButtonBarLabel {
+    color:#000;
+    font-size: 11px;
+    font-weight: bold;
+}
+.ButtonDarkBg {
+    border-top:1px solid #C9E0FF;
+    font-weight: bold;
+    background: #76a5d1;/*#82ade2;*/
+    color: #FFFFFF;
+    padding: 5px 10px 5px 10px;
+}
+.OthrButtonTblTtl {
+    font-size: 10pt;
+    color: #000000
+}
+.ResultBtn, .ResultBtnHover, .OthrButton, .OthrButtonHover, .OthrButtonDis, .ScrnButton, .ScrnButtonHover, .ScrnButtonDis, .PopButton, .PopButtonHover, .PopButtonDis {
+    font: normal 11px tahoma, verdana, helvetica;
+    padding:2px 5px 2px 5px;
+    vertical-align: middle;
+    line-height: 1.3em;
+    cursor: hand;
+    color: #333333;
+    border: 1px solid #d1d1d1;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.ResultBtn, .OthrButton, .ScrnButton, .PopButton { background:#e2e2e2 url(images/scrn_button.gif) repeat-x left center }
+.ResultBtnHover, .OthrButtonHover, .ScrnButtonHover, .PopButtonHover {
+    background:#d2e8ff url(images/scrn_button_hvr.gif) repeat-x left center;
+    border-color:#81a4d0;
+}
+.OthrButtonDis, .ScrnButtonDis, .PopButtonDis {
+    color: #666666;
+    background: #EAEAEA
+}
+/*----------------------list_view.css------------------*/
+/* Classes for list view screens */
+.ColHdr, .ColHdrSrNo, .ChkBoxSlctAll {
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #D0D0D0;
+    color: #000000;
+    text-align: center;
+    padding: 4px 5px 4px 5px;
+    background:#F9F9F9 url(../../javascript/ext4x/resources/themes/images/default/grid/grid3-hrow.gif)  repeat-x 0 bottom;
+    cursor: default
+}
+.ColHdrSrNo, .ChkBoxSlctAll { width: 1% }
+.ColHdrSort {
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #D0D0D0;
+    color: #000000;
+    text-align: center;
+    background: #EBF3FD url(../../javascript/ext4x/resources/themes/images/default/grid/grid3-hrow-over.gif) repeat-x left bottom;
+    padding: 4px 5px 4px 5px
+}
+A.ColHdrLnk {
+    font-size: 11px; /*color: #1C417C;/*#003399;*/
+    font-weight: bold;
+    text-decoration: none
+}
+A.ColHdrLnk:hover { text-decoration: underline }
+A.ColHdrLnk:visited { }
+.ChkBoxNone { border-style: none }
+.ChkBox, .ChkBoxLft {
+    color: #000000;
+    font-size: 11px;
+    padding: 3px;
+    background: #FFFFFF;
+    border: 1px solid #ededed;
+    border-right-color:#c5c5c5;
+}
+.ChkBox { text-align: center; }
+.ChkBoxLft { text-align: left }
+.ChkBoxAlt, .ChkAlt {
+    text-align: center;
+    border: 1px solid #ededed;
+    border-right: 1px solid #FAFAFA;
+    border-left: 1px solid #FAFAFA;
+    font-size: 11px;
+    padding: 3px;
+    background: #FAFAFA;
+    border-right-color:#c5c5c5;
+}
+.ChkBoxSlct, .ChkBoxAltSlct, .ChkSlct {
+    font-size: 11px;
+    text-align: center;
+    border-top: 1px dotted #A3BAE9;
+    border-bottom: 1px dotted #A3BAE9;
+    border-right: 1px solid #DFE8F6;
+    padding: 3px;
+    background: #DFE8F6;
+    border-right-color:#c5c5c5;
+}
+A.TblLnk {
+    font-size: 8pt;
+    color: #000099;
+    text-decoration: none
+}
+A.TblLnk:hover {
+    font-size: 8pt;
+    text-decoration: underline
+}
+A.TblLnk:visited { }
+.FilterTblEmboss {
+    border: 1px solid #99bce8;
+    background: #ebf1f9
+}
+.ListDivPad {
+    visibility: visible;
+    color: #000000;
+    overflow: auto;
+    layer-background-color: #FFFFFF; /*#E2E2E2;*/
+    border: 1px solid #6F86A1;
+    width: 100%;
+    position: absolute;
+    padding: 8px
+}
+.ListLineBg { height: 2px }
+/* Use this for number column in a table*/
+.ValCntrSpecialCol {
+    color: #333333;
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    text-align: center;
+    border-width: 1px;
+    border: 1px solid #FFFFFF;
+    border-right-color: #99bce8;
+    padding: 2px;
+    background: transparent url(../../javascript/ext4x/resources/themes/images/default/grid/grid3-special-col-bg.gif) repeat-y right
+}
+.ValCntr, .ValAlt, .ValCAlt, .ValCntrAlt, .ValCntrSlct, .ValCSlct, .ValCntrAltSlct, .ValLft, .ValLftAlt, .ValSlct, .ValLftSlct, .ValLftAltSlct, .ValRt, .ValRtAlt, .ValRtSlct, .ValRtAltSlct {
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #ededed;
+    background: #FFFFFF;
+    border-right-color:#FFF;
+}
+.ValCntr { }
+.ValInternalApp { color: #000000; }
+.ValExternalApp { color: #0066cc; }
+.ValCntrSlct, .ValCSlct, .ValCntrAltSlct {
+    border: 1px dotted #A3BAE9;
+    border-right: 1px solid #DFE8F6;
+    border-left: 1px solid #DFE8F6;
+    background: #DFE8F6
+}
+.ValLft { text-align: left }
+.ValAlt, .ValLftAlt {
+    text-align: left;
+    border-top: 1px solid #ededed; /*#ededed;*/
+    border-bottom: 1px solid #ededed; /*#ededed;*/
+    border-right: 1px solid #FAFAFA;
+    border-left: 1px solid #FAFAFA;
+    background: #FAFAFA
+}
+.ValLftSlct, .ValSlct {
+    text-align: left;
+    border: 1px dotted #A3BAE9;
+    border-right: 1px solid #DFE8F6;
+    border-left: 1px solid #DFE8F6;
+    background: #DFE8F6
+}
+.ValLftAltSlct {
+    text-align: left;
+    border-top: 1px dotted #A3BAE9;
+    border-bottom: 1px dotted #A3BAE9;
+    border-left: 1px solid #DFE8F6;
+    border-right: 1px solid #DFE8F6;
+    background: #DFE8F6
+}
+.ValRt, .ValRtAlt { text-align: right }
+.ValCntrAlt, .ValCAlt, .ValRtAlt {
+    border-top: 1px solid #EDEDED; /*#ededed;*/
+    border-bottom: 1px solid #EDEDED; /*#ededed;*/
+    border-right: 1px solid #FAFAFA;
+    border-left: 1px solid #FAFAFA;
+    background: #FAFAFA
+}
+.ValRtSlct, .ValRtAltSlct {
+    text-align: right;
+    border-top: 1px dotted #A3BAE9;
+    border-bottom: 1px dotted #A3BAE9;
+    border-right: 1px solid #DFE8F6;
+    background: #DFE8F6
+}
+.NoRecFound, .CreateInfo {
+    color:#15428B;
+    font-weight: bold;
+    font-size:11px;
+    text-align: left;
+    background: url(images/icon_info.png) no-repeat scroll top left !important;
+    padding-left: 18px;
+    padding-bottom: 3px;
+    padding-top:1px;
+    vertical-align: middle;
+    height: 22px;
+}
+.CreateInfo{
+    display:block;
+    width:16px;
+    height:16px;
+    border:0px;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.ListTableCellPad { }
+.MainTable { }
+.SegTableCellPad { }
+.SepBarTbl { }
+.FilterBarTbl { padding: 4px }
+.TblBgDark {
+    border: 1px solid #99bce8;
+    background: #99bce8
+}
+.ListTblHdng {
+    width: 100%;
+    white-space: nowrap;
+    color: #3C6B8F;
+    padding: 4px 5px 4px 5px;
+    border: 1px solid #99bce8;
+    border-bottom-width: 0px;
+    font-size: 11px;
+    background: #ebf1f8
+}
+.ListTblHdngNP {
+    width: 100%;
+    white-space: nowrap;
+    border: 1px solid #99bce8;
+    border-bottom-width: 0px;
+    font-size: 11px;
+    background: #ebf1f8
+}
+.RowSecSep {
+    background: #e1e1e1;
+    height: 7px;
+    padding:1px;
+}
+#SbmRow { background: #FFFFFF }
+#SbmRow TD {
+    font-size: 8pt;
+    border-left: #FFFFFF 0px solid;
+    padding: 3px
+}
+#SbmRowAlt { background: #ededed }
+#SbmRowAlt TD {
+    font-size: 8pt;
+    border-left: #ededed 0px solid;
+    padding: 3px
+}
+#SbmRowSlct { 
+    background: none repeat scroll 0 0 #DFE8F6;
+    border-color: #A3BAE9 #DFE8F6;
+    border-style: dotted solid;
+    border-width: 1px;
+}
+#SbmRowSlct TD {
+    font-size: 11px;
+    color: #000000
+}
+DIV.vBoxClass {
+    font-size:11px;
+    color: #990000;
+    border: 1px solid #cc0000;
+    margin: 5px 5px 0px 5px;
+    line-height: 18px;
+    padding: 5px 5px 5px 15px;
+    font: 11px;
+    background: #ffffe5
+}
+.errHilite {
+    color: #FF0033;
+    background: #F5F8F9
+}
+.ListTblBgPad { border: 1px #999999 solid }
+/*----------------------pop_ups.css------------------*/
+/* Classes for Pop-ups */
+.PopFieldRt {
+    font-size: 8pt;
+    color: #000000;
+    text-align: right;
+    background: #FFFFFF
+}
+.PopTblEmboss {
+    border: 1px solid #99BBE8;
+    border-top: 0 none;
+    overflow: hidden;
+    background: #FFFFFF;
+    position: relative
+}
+.PopTitle {
+    overflow: hidden;
+    zoom: 1;
+    color: #15428B;
+    text-align: left;
+    font: bold 11px tahoma, arial, verdana, sans-serif;
+    padding: 3px 3px 2px 5px;
+    border-top: 1px solid #99BBE8;
+    border-bottom: 1px solid #99BBE8;
+    line-height: 15px;
+    background: url(../../javascript/ext4x/resources/themes/images/default/panel-header/panel-header-default-top-bg.gif) repeat-x 0 -1px
+}
+/*  font-weight: bold;
+    font-size: 13px;
+    border: 1px solid #003399;
+    color: #003399;
+    background: url(../../javascript/ext4x/resources/themes/images/default/panel-header/panel-header-default-top-bg.gif) #EBF3FD repeat-x left bottom;
+    padding: 4px 5px 4px 5px;
+}*/
+.PopValRt {
+    font-size: 8pt;
+    color: #000000;
+    text-align: right;
+    font-weight: bold;
+    background: #FFFFFF
+}
+.PopNoteTblEmboss {
+    border: solid;
+    border-width: 1px 2px 2px 1px;
+    border-color: #AE7200 #710000 #710000 #AE7200;
+    background: #EFEFEF
+}
+.PopNoteSmlTxt {
+    font-size: 8pt;
+    line-height: 16pt;
+    list-style-type: square;
+    background: #FFFFFF
+}
+.PopNoteTitle {
+    font-weight: bold;
+    font-size: 10pt;
+    border: solid;
+    border-color: #B35900 #934900 #934900 #B35900;
+    color: #712D00;
+    border-width: 1px 2px 0px 1px;
+    background: #FFFFDD;
+    padding: 4px 2px
+}
+.PopNoteTblInBg { background: #D8D0BA }
+.PopTblEmbossList {
+    border: solid;
+    border-width: 1px 2px 2px 1px;
+    border-color: #330066 #330066 #330033;
+    background: #FFFFFF
+}
+.PopMainTblPad { border: 2px solid #FFFFFF }
+.PopBtnSpace {
+    padding-right: 4px;
+    padding-left: 4px
+}
+.PopDataTbl { }
+.FilterTblEmboss1 {
+    font-weight: bold;
+    font-size: 8pt;
+    color: #FFFFFF;
+    height: 20px;
+    border-top: 1px solid #5992E6;
+    border-right: 1px solid #5076B6;
+    border-bottom: 1px solid #5076B6;
+    border-left: 1px solid #5992E6;
+    background: #90B6EE;
+    padding: 2px
+}
+.SegDivPadNew1 {
+    visibility: visible;
+    overflow: auto;
+    layer-background-color: #E7F2FE;
+    border: 1px solid;
+    border-color: #006699 #000064 #000064 #006699;
+    background: url() #EEEEEE repeat-x fixed;
+    padding: 4px
+}
+.SegDivPadNew2 {
+    visibility: visible;
+    overflow: auto;
+    layer-background-color: #DBF7EC;
+    border: 1px solid;
+    border-color: #006699 #000064 #000064 #006699;
+    background: url() #EEEEEE repeat-x fixed;
+    padding: 4px
+}
+.ViewSlctHdrBg1 {
+    font-weight: bold;
+    font-size: 8pt;
+    color: #FFFFFF;
+    height: 20px;
+    border: 1px solid #84AAAA;
+    background: #A2BFBF;
+    padding: 2px
+}
+.ViewUnSlctHdrBg1 {
+    font-weight: bold;
+    font-size: 8pt;
+    color: #FFFFFF;
+    height: 20px;
+    border: 1px solid #669AE8;
+    background: #90B6EE;
+    padding: 2px
+}
+.ViewTblEmbossUnSlctBg1 { }
+.ViewTblEmbossSlctBg2 { }
+.PopFieldCntr, .PopValCntr {
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    color: #000000;
+    text-align: center;
+    background: #FFFFFF
+}
+.PopFieldLft, .PopValLft {
+    font: normal 11px tahoma, arial, verdana, helvetica;
+    color: #000000;
+    text-align: left;
+    background: #FFFFFF
+}
+/*----------------------reports.css------------------*/
+/* Classes for Reports Pages */
+
+.ReportPrintTitle {
+    font: normal 12px tahoma, arial, verdana, helvetica;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.ViewSlctHdrBg {
+    font-weight: bold;
+    font-size: 8pt;
+    color: #FFFFFF;
+    height: 26px;
+    border-top: 1px solid #84AAAA;
+    border-right: 1px solid #628E8E;
+    border-bottom: 1px solid #628E8E;
+    border-left: 1px solid #84AAAA;
+    background: #A2BFBF;
+    padding: 2px
+}
+.ViewUnSlctHdrBg {
+    font-weight: bold;
+    font-size: 8pt;
+    color: #FFFFFF;
+    height: 26px;
+    border-top: 1px solid #669AE8;
+    border-right: 1px solid #5080C7;
+    border-bottom: 1px solid #5080C7;
+    border-left: 1px solid #669AE8;
+    background: #90B6EE;
+    padding: 2px
+}
+.ViewSlctBtn, .ViewSlctBtnHover, .ViewSlctBtnDis, .ViewUnSlctBtn, .ViewUnSlctBtnHover, .ViewUnSlctBtnDis {
+    font: normal 11px tahoma, verdana, helvetica;
+    padding:2px 5px 2px 5px;
+    vertical-align: middle;
+    cursor: hand;
+    color: #333333;
+    border: 1px solid #15428B
+}
+.ViewSlctBtn, .ViewUnSlctBtn { background: url(images/scrn_button.gif) repeat-x 0px 0px }
+.ViewSlctBtnHover, .ViewUnSlctBtnHover { background: url(images/scrn_button_hvr.gif) repeat-x 0px 0px }
+.ViewSlctBtnDis, .ViewUnSlctBtnDis {
+    color: #FFFFFF;
+    border-color: #B6CEF3;
+    background: #CDDEF8
+}
+.ViewSlctTxtField {
+    font-size: 8pt;
+    overflow: auto;
+    background: #DBF7EC
+}
+.ViewUnSlctTxtField {
+    font-size: 8pt;
+    overflow: auto;
+    background: #E7F2FE repeat-x
+}
+.ViewTblEmbossUnSlctBg {
+    border-top: 1px solid #0099CC;
+    border-right: 2px solid #0099CC;
+    border-bottom: 2px solid #0099CC;
+    border-left: 1px solid #0099CC;
+    background: #FFFFFF
+}
+.ViewTblEmbossSlctBg {
+    border-top: 1px solid #009900;
+    border-right: 2px solid #009900;
+    border-bottom: 2px solid #009900;
+    border-left: 1px solid #009900;
+    background: #FFFFFF
+}
+.ReportIFrame {
+    scrollbar-face-color: #DEF0FD;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-shadow-color: #003366;
+    scrollbar-3dlight-color: #0099CC;
+    scrollbar-arrow-color: #003333;
+    scrollbar-darkshadow-color: #4583D3;
+    scrollbar-base-color: #DEF0FD;
+    scrollbar-track-color: #BBE1FB;
+    layer-background-color: #B1C0D1;
+    border: 1px solid;
+    border-color: #006699 #000064 #000064 #006699;
+    background: #D4D4D4
+}
+.InptSelectGrpOthrBtn, .InptSelectGrpScrnBtn {
+    border: 1px solid #B5B8C8;
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+    height: 18px;
+    line-height: 16px;
+ vertical-align: middle color: #000000;
+    background:#FFFFFF url(../../javascript/ext4x/resources/themes/images/default/form/text-bg.gif) repeat-x 0 0;
+}
+/*----------------------jscalendar.css------------------*/
+DIV.calendar { POSITION: relative }
+.calendar {
+    FONT-SIZE: 11px;
+    BACKGROUND: #8492AD;
+    CURSOR: default;
+    COLOR: #000;
+    FONT-FAMILY: tahoma, verdana, sans-serif;
+    border-top: 1px solid #E1E4EB;
+    border-right: 1px solid #8492AD;
+    border-bottom: 1px solid #8492AD;
+    border-left: 1px solid #E1E4EB;
+}
+.calendar TABLE {
+    FONT-SIZE: 11px;
+    BACKGROUND: #F4F7FA;
+    CURSOR: default;
+    COLOR: #000;
+    FONT-FAMILY: tahoma, verdana, sans-serif;
+    border-top: 1px solid #8492AD;
+    border-right: 1px solid #BCC5D4;
+    border-bottom: 1px solid #BCC5D4;
+    border-left: 1px solid #8492AD;
+}
+.calendar .button {
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: center
+}
+.calendar .nav { BACKGROUND:#E7EDF3  url(images/menuarrow.gif) no-repeat 100% 100% }
+.calendar THEAD .title {
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    BACKGROUND: #fff;
+    PADDING-BOTTOM: 2px;
+    COLOR: #000;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: center
+}
+.calendar THEAD .headrow {
+    BACKGROUND: #E7EDF3;
+    COLOR: #000000
+}
+.calendar THEAD .daynames { BACKGROUND: #E9ECFA }
+.calendar THEAD .name {
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 2px;
+    COLOR: #000;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #556 1px solid;
+    TEXT-ALIGN: center
+}
+.calendar THEAD .weekend { COLOR: #a66 }
+.calendar THEAD .hilite {
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    COLOR: #000;
+    PADDING-TOP: 1px;
+    BACKGROUND-COLOR: #FFFFFF;
+    border: 1px solid #CAD2DE;
+}
+.calendar THEAD .active {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 2px;
+    BACKGROUND-COLOR: #C6D2DE
+}
+.calendar TBODY .day {
+    PADDING-RIGHT: 4px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 2px;
+    WIDTH: 2em;
+    COLOR: #456;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: right
+}
+.calendar TBODY .othermonth {
+    FONT-SIZE: 80%;
+    COLOR: #bbb
+}
+.calendar TBODY .oweekend { COLOR: #fbb }
+.calendar TABLE .wn {
+    BORDER-RIGHT: 1px solid #9396A5;
+    PADDING-RIGHT: 3px;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #DEE3F7;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px;
+    color: #9396A5;
+}
+.calendar TBODY .rowhilite TD { BACKGROUND: #FFFFFF }
+.calendar TBODY .rowhilite TD.wn { BACKGROUND: #eef }
+.calendar TBODY TD.hilite {
+    PADDING-RIGHT: 3px;
+    PADDING-LEFT: 1px;
+    BACKGROUND: #FFFFFF;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    border: 1px solid #CAD2DE;
+}
+.calendar TBODY TD.active {
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #FFFFFF;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 2px
+}
+.calendar TBODY TD.selected {
+    BORDER-RIGHT: 1px solid #00ADED;
+    PADDING-RIGHT: 3px;
+    BORDER-TOP: 1px solid #80D6F6;
+    PADDING-LEFT: 1px;
+    FONT-WEIGHT: bold;
+    BACKGROUND: #fff;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: 1px solid #80D6F6;
+    COLOR: #000;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: 1px solid #00ADED
+}
+.calendar TBODY TD.weekend { COLOR: #D13F3F }
+.calendar TBODY TD.today {
+    FONT-WEIGHT: bold;
+    COLOR: #0079D6
+}
+.calendar TBODY .disabled { COLOR: #CCCCCC }
+.calendar TBODY .emptycell { VISIBILITY: hidden }
+.calendar TBODY .emptyrow { DISPLAY: none }
+.calendar TFOOT .footrow {
+    BACKGROUND: #556;
+    COLOR: #fff;
+    TEXT-ALIGN: center
+}
+.calendar TFOOT .ttip {
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: 1px solid #DAE0E8;
+    PADDING-LEFT: 1px;
+    BACKGROUND: #fff;
+    PADDING-BOTTOM: 1px;
+    COLOR: #445;
+    PADDING-TOP: 1px
+}
+.calendar TFOOT .hilite {
+    BORDER-RIGHT: #04f 1px solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #04f 1px solid;
+    PADDING-LEFT: 1px;
+    BACKGROUND: #aaf;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #04f 1px solid;
+    COLOR: #000;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #04f 1px solid
+}
+.calendar TFOOT .active {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #77c;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 2px
+}
+.calendar .combo {
+    DISPLAY: none;
+    FONT-SIZE: 90%;
+    Z-INDEX: 100;
+    BACKGROUND: #FFFFFF;
+    LEFT: 0px;
+    WIDTH: 4em;
+    CURSOR: default;
+    COLOR: #000;
+    POSITION: absolute;
+    TOP: 0px;
+    border-top: 1px solid #BCC5D4;
+    border-right: 1px solid #8492AD;
+    border-bottom: 1px solid #8492AD;
+    border-left: 1px solid #BCC5D4;
+}
+.calendar .combo .label {
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    TEXT-ALIGN: center
+}
+.calendar .combo .label-IEfix {
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    TEXT-ALIGN: center
+}
+.calendar .combo .label-IEfix { WIDTH: 4em }
+.calendar .combo .hilite { BACKGROUND: #C8F0FF }
+.calendar .combo .active {
+    BORDER-TOP: 1px solid #00ADED;
+    FONT-WEIGHT: bold;
+    BACKGROUND: #EBF9FE;
+    BORDER-BOTTOM: 1px solid #00ADED
+}
+.calendar TD.time {
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: 1px solid #DAE0E8;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    BACKGROUND-COLOR: #EFF3F7;
+    TEXT-ALIGN: center
+}
+.calendar TD.time .hour {
+    PADDING-RIGHT: 3px;
+    PADDING-LEFT: 4px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    BACKGROUND-COLOR: #fff;
+    border-top: 1px solid #C6C5CE;
+    border-right: 1px solid #8C8A9C;
+    border-bottom: 1px solid #C6C5CE;
+    border-left: 1px solid #8C8A9C;
+}
+.calendar TD.time .minute {
+    BORDER-RIGHT: #889 1px solid;
+    PADDING-RIGHT: 3px;
+    BORDER-TOP: #889 1px solid;
+    PADDING-LEFT: 4px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: #889 1px solid;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #889 1px solid;
+    BACKGROUND-COLOR: #fff
+}
+.calendar TD.time .ampm {
+    BORDER-RIGHT: 1px solid #8A909C;
+    PADDING-RIGHT: 3px;
+    BORDER-TOP: 1px solid #C6C5CE;
+    PADDING-LEFT: 4px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: 1px solid #C6C5CE;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: 1px solid #8A909C;
+    BACKGROUND-COLOR: #fff
+}
+.calendar TD.time .ampm { TEXT-ALIGN: center }
+.calendar TD.time .colon {
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+.calendar TD.time SPAN.hilite {
+    BORDER-LEFT-COLOR: #8492AD;
+    BORDER-BOTTOM-COLOR: #8492AD;
+    COLOR: #fff;
+    BORDER-TOP-COLOR: #8492AD;
+    BACKGROUND-COLOR: #8492AD;
+    BORDER-RIGHT-COLOR: #8492AD
+}
+.calendar TD.time SPAN.active {
+    BORDER-LEFT-COLOR: #000000;
+    BORDER-BOTTOM-COLOR: #000000;
+    COLOR: #80D6F6;
+    BORDER-TOP-COLOR: #000000;
+    BACKGROUND-COLOR: #8492AD;
+    BORDER-RIGHT-COLOR: #000000
+}
+.calendar table {
+    display: table;
+    border-collapse: separate;
+}
+ .calendar table [cellspacing=0] {
+border-spacing: 0px;
+-webkit-border-horizontal-spacing: 0px;
+-webkit-border-vertical-spacing: 0px;
+}
+.calendar table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 11px;
+    font-variant: normal;
+    font-style: normal;
+    color: -webkit-text;
+    text-align: -webkit-auto;
+}
+/*----------------------menus.css------------------*/
+/* Ext-JS style overwrites */
+.x-tab-panel-body .x-panel-body {
+    padding: 0px;
+    background: #DEECFD;
+    border: 1px solid #8DB2E3;
+    border-top: 0px
+}
+.x-btn-text { color: #15428B }
+.x-tab-panel-header {
+    border: 0px solid #8DB2E3;
+    padding-bottom: 0px
+}
+.x-tab-panel-footer {
+    border: 1px solid #8DB2E3;
+    padding-top: 2px
+}
+.x-tab-panel-body {
+    border: 0px solid #8DB2E3;
+    background: #FFFFFF
+}
+ul.x-tab-strip-top { width: auto }
+.x-grid3-cell-inner, .wrapText { white-space: normal }
+.x-border-layout-ct { background: #F7FBFF }
+.x-grid3-hd-row td {
+    font-weight: bold;
+    color: #1C417C;
+    text-align: center
+}
+/* This is required to avoid width overflow to 10000px */
+/*.x-panel-body {width: 100%;}*/
+.x-grid3-header-offset { width: 100% }
+#topPanelContainer {
+    height: 42px;
+    background: #2f7ead url('images/pct-header-background.gif') 0 0 repeat-x;
+}
+#tabsContainer {
+    color: #15428B;
+    background:  #1F74A6
+}
+#breadcrumb {
+    vertical-align: middle;
+    font: 11px tahoma, arial, helvetica, sans-serif;
+    color: #444444;
+    margin: 2px 6px 2px 6px;
+}
+.breadcrumbSec {
+    font: 11px tahoma, arial, helvetica, sans-serif;
+    background: #EEEEF1;
+    border-bottom: 1px solid #DDDDE1
+}
+.welcomeTitle { color: #D6D6D6 }
+a:link, a:visited, a:active {
+    color: #0464BB;
+    text-decoration: none
+}
+a:hover {
+    color: #1C417C;
+    text-decoration: underline
+}
+.headerLink{
+    vertical-align: top;
+    text-align: right;
+}
+.cmdLinks {
+    padding: 4px;
+    color: #D4E9F7; /*#DEECFD; */
+    font: 11px Tahoma, Arial
+}
+.cmdLinks a:link, .cmdLinks a:visited, .cmdLinks a:active {
+    color: #D4E9F7; /*#DEECFD; */
+    text-decoration: none
+}
+.cmdLinks a:hover {
+    color: #E8BA17;
+    text-decoration: underline
+}
+.homeIcon { background: url(images/house_16_hot.gif) no-repeat center left !important }
+.mgmtIcon { background: url(images/statistic_16.gif) no-repeat center left !important }
+.adminIcon { background: url(images/monitor_16.gif) no-repeat center left !important }
+.BRMSPortalIcon {
+    background: url(images/brmsportal.gif) no-repeat scroll top left !important;
+    padding-left: 18px;
+    padding-bottom: 3px;
+    padding-top: 1px;
+    /*vertical-align: middle;*/
+    height: 18px;
+    font-size: 11px;
+    /*position: relative*/
+}
+.supportIcon {
+    background: url(images/environment.png) no-repeat scroll !important;
+    /*padding-left: 18px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+    height: 18px;
+    font-size: 11px;
+    position: relative*/
+}
+.helpIcon {
+    background: url(images/help2.png) no-repeat scroll !important;
+    /*padding-left: 18px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+    height: 18px;
+    font-size: 11px;
+    position: relative*/
+}
+.aboutIcon {
+    background: url(images/information2.png) no-repeat scroll !important;
+    /*padding-left: 18px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+    height: 18px;
+    font-size: 11px;
+    position: relative*/
+}
+.logoutIcon {
+    background: url(images/icon_logout.png) no-repeat scroll top left !important;
+    padding-left: 18px;
+    padding-bottom: 3px;
+    /*vertical-align: middle;*/
+    height: 18px;
+    font-size: 11px;
+    /*position: relative*/
+}
+.logoImage {
+    background: transparent url(images/bpmportal_header_logo.png) no-repeat scroll top left;
+    float: left;
+    width: 197px;
+    height: 45px;
+    padding-top: 20px
+}
+.pamLogoImage {
+    background: transparent url(images/pamportal-header-logo.png) no-repeat scroll top left;
+    float: left;
+    width: 276px;
+    height: 45px;
+    position: relative;
+    padding-top: 20px
+}
+.makeAvailableIcon {
+    background: transparent url(images/available_asign_colhdr.gif) no-repeat scroll top left;
+    padding-left: 16px
+}
+.collaborativeIcon {
+    background: transparent url(images/icon_collaborative_task.gif) no-repeat scroll top left;
+    padding-left: 16px
+}
+.infoIcon {
+    background: transparent url(images/icon_info_small.gif) no-repeat scroll top left;
+    padding-left: 18px;
+    height: 20px
+}
+.bcSepIcon {
+    background: url(images/c-sep.gif) no-repeat scroll 3px 7px !important;
+    padding-left: 11px;
+    vertical-align: middle;
+    height: 18px
+}
+.cmdSepPlainIcon {
+    background: url(../../javascript/ext4x/resources/themes/images/default/grid/grid-split.gif) no-repeat scroll 3px center !important;
+    padding-left: 11px;
+    vertical-align: middle;
+    height: 18px
+}
+.cmdSepIcon {
+    background: url(../../javascript/ext4x/resources/themes/images/default/grid/grid-blue-split.gif) no-repeat scroll 3px center !important;
+    padding-left: 11px;
+    vertical-align: middle;
+    height: 18px
+}
+.printIcon, .printIcon:hover {
+    background: url(images/icons_custom_stripes.gif) no-repeat left top;
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+    text-decoration: none;
+    height: 15px;
+    width:15px;
+    font-size: 11px
+}
+.printIcon:hover { background-position: -15px top; }
+.tabularViewIcon {
+    background: url(images/icon_psv_tabular.gif) no-repeat scroll left center !important;
+    display: block;
+    padding-left: 20px;
+    text-decoration: none;
+    height: 16px;
+    vertical-align: bottom;
+}
+.psvIcon {
+    background: url(images/icon_chart.gif) no-repeat scroll left center !important;
+    display: block;
+    padding-left: 20px;
+    text-decoration: none;
+    height: 16px;
+    vertical-align: bottom;
+}
+.auditHistoryIcon {
+    background: url(images/audit_history.gif) no-repeat scroll left center !important;
+    display: block;
+    padding-left: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+    height: 16px;
+}
+.editIcon {
+    background: transparent url(images/icon_edit_user.gif) no-repeat scroll top left;
+    padding-left: 16px;
+}
+.editIconDashboard {
+    background: url(images/bm-icons-sprites1.png) no-repeat scroll -43px -2px !important;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.deleteIcon {
+    background: transparent url(images/icon_delete.gif) no-repeat scroll top left;
+    padding-left: 16px;
+}
+.fltrSep { 
+    background-image: url(images/tfltr-sep.gif); background-repeat: repeat-y float: right;
+    padding-left: 1px;
+}
+.pagePrev {
+    background: url(../../javascript/ext4x/resources/themes/images/default/grid/page-prev.gif) no-repeat scroll center left;
+    padding-left: 8px;
+    vertical-align: middle;
+    padding-bottom: 3px
+}
+.pagePrevDis {
+    background: url(../../javascript/ext4x/resources/themes/images/default/grid/page-prev-disabled.gif) no-repeat scroll center left;
+    padding-left: 8px;
+    vertical-align: middle;
+    padding-bottom: 3px
+}
+.pageNext {
+    background: url(../../javascript/ext4x/resources/themes/images/default/grid/page-next.gif) no-repeat scroll center right;
+    padding-left: 12px;
+    vertical-align: middle;
+    padding-bottom: 3px
+}
+.pageNextDis {
+    background: url(../../javascript/ext4x/resources/themes/images/default/grid/page-next-disabled.gif) no-repeat scroll center right;
+    padding-right: 12px;
+    vertical-align: middle;
+    padding-bottom: 3px
+}
+.StoppedIcon {
+    background: url(images/trafficlight_red.png) no-repeat scroll left center !important;
+    display: block;
+    padding-left: 20px;
+    padding-right: 5px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #990000;
+    height: 18px;
+    font-size: 11px
+}
+.RunningIcon {
+    background: url(images/trafficlight_green.png) no-repeat scroll left center !important;
+    display: block;
+    padding-left: 20px;
+    padding-right: 5px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #008000;
+    height: 18px;
+    font-size: 11px
+}
+.SuspendedIcon {
+    background: url(images/trafficlight_yellow.png) no-repeat scroll left center !important;
+    display: block;
+    padding-left: 20px;
+    padding-right: 5px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #B8860B;
+    height: 18px;
+    font-size: 11px
+}
+/* Follwoing styles are added to display form button as hyperlink */
+.button-ActionLnk {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 8pt;
+    color: #0378D2;
+    height: 1.5em;
+    width: 7em;
+    text-decoration: none
+}
+.buttonLink-over {
+    border: none;
+    background-color: transparent;
+    font-size: 8pt;
+    color: #0378D2;
+    cursor: hand;
+    cursor: pointer;
+    height: 1.5em;
+    width: 7em;
+    text-decoration: underline
+}
+.passwordWarning {
+    background: #F4FFBC;
+    color: #FF3333
+}
+.bpm-portal-login-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size:10px;
+    margin: 20px 0 0 45px;
+}
+.bpm-portal-login-footer-support,.bpm-portal-login-expired-footer-support {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #004B85;
+    font-size:10px;
+    display:block !important;
+    margin:0 30px 0 0;
+}
+.bpm-portal-login-expired-footer-support {
+    margin:0 8px 0 0;
+}
+.bpm-portal-login-logo, .pam-portal-login-logo{
+    margin: 39px 5px 0 45px;
+    background: url(images/bpm-portal-login-logo.png) no-repeat;
+    width:252px;
+    height:172px;
+    display:block;
+}
+.pam-portal-login-logo {
+    background: url(images/pam-portal-login-logo.png) no-repeat;
+}
+.bpm-portal-login-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size:12px;
+    font-weight:800
+}
+.pam-portal-logo-image-prog-savv {
+    padding-left: 20px;
+    background: url(images/progress_savvion_ie6.gif) no-repeat;
+    width:186px;
+    height:44px;
+}
+.pam-portal-logo-image-proAssetMgr {
+    padding-left: 20px;
+    background: url(images/prg_savv_pam_ie6.gif) no-repeat;
+    width:135px;
+    height:101px;
+}
+.pam-portal-logo-image-progsw {
+    padding-left: 20px;
+    background: url(images/progresssoftware-logo.png) no-repeat;
+    width:172px;
+    height:47px;
+}
+.pageHelpIcon, .pageHelpIcon:hover {
+    background: url(images/icons_custom_stripes.gif) no-repeat 0 -15px;
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+    text-decoration: none;
+    height: 15px;
+    width:15px;
+    font-size: 11px;
+}
+.pageHelpIcon:hover { background-position:-15px -15px }
+.bmAdd {
+    background-image: url(images/add.gif) !important;
+    background-repeat: no-repeat;
+}
+.bmDelete {
+    background-image: url(images/delete.gif) !important;
+    background-repeat: no-repeat;
+}
+.bmSearchUser {
+    background-image: url(images/icon_edit_user_search_single.gif) !important;
+    background-repeat: no-repeat;
+}
+.bmBottomPanelBg { background: #76A5D1; }
+span.BmFilterHiliteTxt {
+    font:bold 13px tahoma, arial, verdana, sans-serif;
+    color:#15428B;
+}
+.exportWidgetIcon {
+    background: transparent url(images/export_psv.gif) no-repeat scroll top left;
+    padding-left: 16px
+}
+.BmIconPsvTable {
+    border-collapse:collapse;
+    text-align:center;
+    margin:0 auto 0 auto
+}
+.BmIconFilter, .BmIconSearch, .BmIconSmallInfo, .informationIndication {
+    display:block;
+    width:16px;
+    height:16px;
+    overflow:hidden;
+    background:url(images/bm-icons-sprites-non-clickable.png) no-repeat left top;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.BmIconSearch { background-position:0 -16px; }
+.BmIconSmallInfo , .informationIndication{ background-position:0 -32px; }
+a.BmIconCalendar, a.BmIconCalendarDis, a.BmIconSelectCreator,a.BmIconSelectCreatorDis, a.BmIconTabularView, a.BmIconChartView, a.BmIconAuditHistory, a.BmIconSearchCreator, a.BmIconHideData, a.BmIconShowData, a.BmIconForwardAlert, a.BmIconSendEmail, a.BmIconBroadcast, a.BmIconEditReport, a.BmIconExportWidgetforPCT {
+    display:block;
+    width:19px;
+    height:16px;
+    overflow:hidden;
+    cursor:pointer;
+    background:url(images/bm-icons-sprites.gif) no-repeat left top;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+a.BmIconCalendar { background-position:0 0; }
+a.BmIconCalendar:hover { background-position:0 -16px; }
+a.BmIconTabularView { background-position:-19px 0; }
+a.BmIconTabularView:hover { background-position:-19px -16px; }
+a.BmIconChartView { background-position:-38px 0; }
+a.BmIconChartView:hover { background-position:-38px -16px; }
+a.BmIconAuditHistory { background-position:-57px 0; }
+a.BmIconAuditHistory:hover { background-position:-57px -16px; }
+a.BmIconSelectCreator ,a.BmIconSelectCreatorDis{ background-position:-76px 0; }
+a.BmIconSelectCreator:hover { background-position:-76px -16px; }
+a.BmIconSearchCreator { background-position:-95px 0; }
+a.BmIconSearchCreator:hover { background-position:-95px -16px; }
+a.BmIconHideData { background-position:-133px 0; }
+a.BmIconHideData:hover { background-position:-133px -16px; }
+a.BmIconShowData { background-position:-114px 0; }
+a.BmIconShowData:hover { background-position:-114px -16px; }
+a.BmIconCalendarDis {
+    background-position:-152px 0;
+    cursor: default;
+}
+a.BmIconCalendarDis:hover {
+    background-position:-152px -16px;
+    cursor: default;
+}
+a.BmIconForwardAlert { background-position:-190px 0; }
+a.BmIconForwardAlert:hover { background-position:-190px -16px; }
+a.BmIconSendEmail { background-position:-171px 0; }
+a.BmIconSendEmail:hover { background-position:-171px -16px; }
+a.BmIconBroadcast { background:url(images/icon_broadcast_report.gif) no-repeat left top;}
+a.BmIconChartViewLabel, a.BmIconTabularViewLabel {
+    background:url(images/bm-icons-sprites-label.gif) no-repeat left top;
+    display: block;
+    padding-left: 22px;
+    text-decoration: none;
+    height: 16px;
+    vertical-align: bottom;
+    font: bold 11px tahoma, arial, helvetica, sans-serif;
+}
+a.BmIconChartViewLabel:hover, a.BmIconTabularViewLabel:hover { text-decoration:underline; }
+a.BmIconTabularViewLabel:hover { background-position:0 -16px; }
+a.BmIconChartViewLabel { background-position:0 -32px; }
+a.BmIconChartViewLabel:hover { background-position:0 -48px; }
+a.BmIconEditReport { background-position:-247px 0; }
+a.BmIconEditReport:hover { background-position:-247px -16px; }
+a.BmIconExportWidgetforPCT { background-position:-266px 0; }
+a.BmIconExportWidgetforPCT:hover { background-position:-266px -16px; }
+.BmIconOverdueImg {
+    display:block;
+    width:16px;
+    height:12px;
+    overflow:hidden;
+    background:url(images/icon_overdue.gif) no-repeat left top;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.RowEditImage {
+    display:block;
+    overflow:hidden;
+    background:url(images/row_edit.png) no-repeat center top;
+    width:16px;
+    height:16px;
+    vertical-align: center;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.DeleteImage {
+    display:block;
+    overflow:hidden;
+    background:url(images/delete.gif) no-repeat center top;
+    width:16px;
+    height:16px;
+    vertical-align: center;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.docInptTxt {
+    margin :0px 0px 0px 0px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #CCCCCC #666666 #000000 #999999;
+    background-color: #FFFFFF;
+}
+.BmIconDecimal {
+    display:block;
+    width:16px;
+    height:16px;
+    border:0px;
+    overflow:hidden;
+    background:url(images/icon_edit_decimal_dataslot.gif) no-repeat left top;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.DivBgLight {
+    border: 0px solid #99bce8;
+    background: #deecfd;/*#DFE8F6;*/
+    padding: 5px;
+    float:left;
+    width: 100%;
+    overflow: hidden;
+}
+.groupSearchIcon {
+    display:block;
+    width:16px;
+    height:16px;
+    border:0px;
+    overflow:hidden;
+    background:url(images/icon_edit_group_search_single.gif) no-repeat left top;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.BlankImage {
+    display:block;
+    width:1px;
+    height:2px;
+    float:left;
+    border:0px;
+    overflow:hidden;
+    background:url(images/blank.gif) no-repeat left top;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.confirmationIcon {
+    display:block;
+    width:16px;
+    height:16px;
+    border:0px;
+    overflow:hidden;
+    background:url(images/icon_confirmation_small.gif) no-repeat left top;
+    vertical-align: center;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.emptyTextConfig {
+    font-size:9pt;
+    font-weight:normal;
+    text-align:center;
+}
+.preTagPsvTable {
+    white-space:pre-line;
+    width:250px;
+    word-wrap:break-word;
+}
+.x-column-header {
+    color:#1C417C;
+    text-align:center;
+    align:center;
+    font-size:11px;
+    font-weight: bold;
+}
+.x-form-field { font-size:11px; }
+.x-form-item-label { font-size:11px; }
+.x-boundlist-item { font-size:11px; }
+.x-grid-cell-inner { font-size:11px; }
+.x-grid-cell-inner { padding: 2px 5px !important; }
+/* FIXME: Grid Cell Text Wrap - Need to make consistant 
+.x-grid-cell-inner, .x-grid-hd-inner { white-space:normal !important; }*/
+.x-ie .x-grid-cell-special { border-right-width: 1px !important; }
+.BmGridCellWrap .x-grid-cell-inner {
+    white-space:normal !important;
+}
+.BmColHdrLnkSort,a.BmColHdrLnkSort {
+}
+.BmColHdrLnkSortAsc,a.BmColHdrLnkSortAsc {
+    background:url(images/sort_up.gif) right no-repeat !important;
+    padding:0 12px 0 0;
+}
+.BmColHdrLnkSortDesc,a.BmColHdrLnkSortDesc {
+    background:url(images/sort_down.gif) right no-repeat !important;
+    padding:0 12px 0 0;
+}
+.BmApplicationComboWidth{
+    width:150px;
+}
+.AutoGenApBody {
+    overflow-y: visible !important;
+}
+td a img { }
+td a img:hover { background:#b6e2fb url(images/scrn_button_img_focus.gif) no-repeat 0px bottom; }
+td.ColHdrSort img, td.ColHdrSort img:hover {
+    background:none !important;
+    padding:0 !important;
+}
+/* FIXME: MyTasks:Disabled combo box is displayed as an active link
+ * This issue is fixed in ExtJS 4.1. Can remove this line when we go for ExtJS 4.1.
+ *  */
+.x-item-disabled .x-trigger-noedit, .x-item-disabled .x-form-trigger {
+    cursor: auto;
+}
+.calWeekendIcon{
+    display:block;
+    width:19px;
+    height:17px;
+    border:0px;
+    overflow:hidden;
+    background:url(images/legend_weekend.gif) no-repeat left top !important;
+    vertical-align: center;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.calHolidayIcon{
+    display:block;
+    width:19px;
+    height:17px;
+    border:0px;
+    overflow:hidden;
+    background:url(images/legend_holiday.gif) no-repeat left top !important;
+    vertical-align: center;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+.calHalfHolidayIcon{
+    display:block;
+    width:19px;
+    height:17px;
+    border:0px;
+    overflow:hidden;
+    background:url(images/legend_half_holiday.gif) no-repeat left top !important;
+    vertical-align: center;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+ *display:inline;
+}
+/* FIXME: CR#RPM00036851 - Textarea will not be resized.
+*/
+textArea{
+    resize: none;
+}
+.attrDisabled{
+    opacity: 0.4;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    cursor:text;
+}
+.attrDisabled a{
+    cursor:text !important;
+}
+.leftAlign, .instanceSearchBtn{
+    text-align:left
+}
+.bottomAlign, .instanceSearchBtn{
+    vertical-align: bottom
+}
+.instanceSearchBtn{
+    padding-left: 3px;
+    padding-bottom: 3px;    
+}
+.filterBg{
+    background-color:#D2E4FE;
+}
+.favoriteNameLnk {    
+    color: #0464BB;
+    text-decoration: none
+}
+.favoriteNameLnk:hover { 
+    text-decoration: underline;
+    cursor:pointer;
+}
+.favorite-form-item-field-disabled {
+    color: grey
+}
+.favoriteDel{
+    height: 13px;
+}
+.bmWindowCls{
+    background-color: #FFFFFF;
+}
+.localsearch-match {
+    font-weight: bold;
+    background-color: yellow;
+}
+.dashboardDescFieldset{
+    width:90%;
+    margin: 0px 0px 3px 5px;    
+}
+.dashboardDescLegend{
+    margin: 0px 0px 0px 5px; 
+}
+.dashboardDesc{
+    height:45px;
+    width:100%;
+}
+.a-form-num-field-right {
+    text-align: right;
+    color: black;
+    font: 12px tahoma,arial,verdana,sans-serif;
+    margin: 0;
+}
+.a-form-num-field-left {
+    text-align: left;
+    color: black;
+    font: 12px tahoma,arial,verdana,sans-serif;
+    margin: 0;
+}
+.refreshLogo, .refreshLogo:hover, a.publishIcon, a.publishIcon:hover, a.unpublishIcon, a.unpublishIcon:hover, .successIcon, .failureIcon, .partialSuccessIcon, .htmlExport, .xmlExport, .excelExport{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat 0px -44px !important;
+    display:block;
+    width:20px;
+    height:20px;
+    overflow:hidden;
+    margin-right: 10px;
+    cursor:pointer;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+.htmlExport{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -263px !important;
+    margin-right: 0px;
+}
+.htmlExport:hover{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -286px !important;
+    margin-right: 0px;
+}
+.xmlExport{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -219px !important;
+    margin-right: 0px;
+}
+.xmlExport:hover{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -242px !important;
+    margin-right: 0px;
+}
+.excelExport{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -175px !important;
+    margin-right: 0px;
+}
+.excelExport:hover{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -198px !important;
+    margin-right: 0px;
+}
+.refreshLogo:hover{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -66px !important;
+}
+a.publishIcon{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px 0px !important;
+}
+a.publishIcon:hover{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -22px !important;
+}
+a.unpublishIcon{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -88px !important;
+}
+a.unpublishIcon:hover{
+    background: url(images/bm-icons-sprites1-20.png) no-repeat  0px -110px !important;
+}
+.successIcon, .partialSuccessIcon, .failureIcon{
+    background: url(images/bm-icons-sprites1.png) no-repeat scroll -100px -2px !important;
+    cursor: default;
+}
+.partialSuccessIcon{
+    background: url(images/bm-icons-sprites1.png) no-repeat scroll -120px -2px !important;
+}
+.failureIcon{
+    background: url(images/bm-icons-sprites1.png) no-repeat scroll -140px -2px !important;    
+}
+.authDeny, .viewMember{
+    background: url(images/authDeny.png) no-repeat !important;
+    display:block;
+    width:19px;
+    height:16px;
+    overflow:hidden;
+    vertical-align: top;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+.viewMember{
+    background: url(images/icon_view_member.gif) no-repeat !important;
+    width:16px;
+    height:16px;
+}
+.ux-grid-export-to-excel-icon {
+    background: url(images/bm-icons-sprites1.png) no-repeat scroll -22px -2px !important;
+}
+input:disabled{
+    opacity: 0.6;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    cursor:text;
+}
+.radioBtnlabelStyle {
+    color: #1C417C !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+}
+.cnfLabelCls{
+    font-weight: normal!important;
+}
+
+.ux-grid-print-icon {
+    background: url(images/bm-icons-sprites1.png) no-repeat scroll -2px -2px !important;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.redirectLink{
+	font-size: 11 px;
+	font-weight: bold;
+	color: #EFE254 !important;
+}
+.vAlignTop{
+    vertical-align: top !important;
+    white-space: nowrap !important;
+}
+
+.bmTableData{
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    color: #000000;
+    padding: 3px 5px 3px 5px;
+    border: 2px solid #ededed;
+    background: #DFE9F6;
+}
+
+.bmTableHeader {
+    font: normal 11px arial, tahoma, helvetica, sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+	border: 2px solid #ededed;
+    color: #1C417C;
+    text-align: center;
+    padding: 4px 5px 4px 5px;
+    background:#CBDDF3 url(../../javascript/ext4x/resources/themes/images/default/panel-header/panel-header-default-framed-top-bg.gif)  repeat-x 0 bottom;
+}
+.bmPanel .x-panel-header {
+	padding-top: 0; 
+	padding-bottom: 0;
+}
+
+.bmPanelDisabled  .x-mask{
+	background-color: #E9F0F9;
+}
+.editRoleIcon {
+    background: url(images/icon_edit_role.gif) no-repeat center left !important;
+    vertical-align: middle;
+    display:block;
+    width:16px;
+    height:16px;
+    overflow:hidden;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+.bm-dropdown-toolbar-default {	
+	background-color: none;
+	background-image: none;
+	border: none;
+}
+.bm-dropdown-button-pressed td {
+	background-image: none;
+	border: none;
+}
+.profileIcon {    
+	background: url(images/user-icon.png) no-repeat scroll top left !important;
+	background-size: 100% 100% !important;
+}
+.x-btn-widearrow {
+    background: url(../../javascript/ext4x/resources/themes/images/default/button/arrow.gif);
+    background-size: 15px;
+    display: block;    
+}
+.SbmSummaryHelpHover div {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #335480 !important;
+}
+.SbmSummaryHelp A, .SbmSummaryHelpHover A {
+	background: url(images/bm-icons-sprites1-20.png) no-repeat 0px -132px !important;
+	vertical-align: middle;
+	display: block;
+	width: 20px !important;
+	height: 20px !important;
+	overflow: hidden;
+	display: inline-block;
+	zoom: 1;
+ *display:inline;
+}
+.SbmSummaryHelpHover A:hover {
+background: url(images/bm-icons-sprites1-20.png) no-repeat 0px -154px !important;
+}
+td.x-grid-cell div.x-grid-cell-inner-info {
+	background: url(images/message_information_light.png) left no-repeat !important;
+	padding-left: 20px !important;
+}
+td.x-grid-cell div.x-grid-cell-inner-info:hover {
+	background: url(images/message_information.png) left no-repeat !important;
+	padding-left: 20px !important;
+}
+.lowPriorityTextIcon {
+	background: url(images/bm-icons-sprites-priority-small.png) no-repeat 0px -0px !important;
+	padding-left:12px
+}

@@ -1,0 +1,209 @@
+/* Classes for Calendar Pop-up */
+A.CalDayLnk {  
+	font-size: 8pt; 
+	color: #000000; 
+	text-decoration: none
+}
+A.CalDayLnk:hover {  
+	text-decoration: underline; 
+	color: #006699
+}
+A.CalDayLnk:visited { 
+}
+A.CalDayLnkSlct {  
+	font-size: 8pt; 
+	color: #990000; 
+	text-decoration: none; 
+	font-weight: bold
+}
+A.CalDayLnkSlct:hover {  
+	text-decoration: underline; 
+	color: #FF3300
+}
+A.CalDayLnkSlct:visited { 
+}
+A.CalMnthLnk {  
+	font-size: 8pt; 
+	color: #FFFFFF; 
+	text-decoration: none; 
+	text-align: center
+}
+A.CalMnthLnk:hover {  
+	font-size: 8pt; 
+	text-decoration: underline; 
+	color: #FFFFFF
+}
+A.CalMnthLnk:visited { 
+}
+A.CalMnthLnkSlct {  
+	font-size: 8pt; 
+	color: #FFFFEC; 
+	text-decoration: none; 
+	text-align: center
+}
+A.CalMnthLnkSlct:hover {  
+	font-size: 8pt; 
+	text-decoration: underline; 
+	color: #FFFFFF
+}
+A.CalMnthLnkSlct:visited { 
+}
+.CalDateBgGrp {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	font-weight: bold; 
+	background-color: #7B7DA3; 
+	text-align: center
+}
+.CalDay {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	background-color: #FFFFFF; 
+	text-align: right; 
+	border-color: #FFFFFF #DFDFDF #DFDFDF #efefef; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+.CalTimeLabel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.CalInptTxtHhMm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	background-color: #F7F7FF;
+	border: 1px solid #7B7DA3;
+}
+.CalInptSelectAmPm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	background-color: #F7F7FF;
+	border: 1px solid #7B7DA3;
+}
+.CalDaySlct {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FDFFDF;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.CalMnthBg {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #8F91C4;
+	text-align: center;
+	width: 22px;
+	font-weight: bold;
+}
+.CalMnthBgSlct {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #B7BBDE;
+	text-align: center;
+	font-weight: bold;
+}
+.CalTblLightBg { 
+	background-color: #333668
+}
+.CalWeek {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #52619C;
+	background-color: #DEDEDF;
+	text-align: center;
+	border-top: 1px solid #EBEBEB;
+	border-right: 0px solid #EBEBEB;
+	border-bottom: 0px solid #EBEBEB;
+	border-left: 1px solid #EBEBEB;
+}
+.CalYear {  
+	font-size: 12pt; 
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-family: Arial, Helvetica, sans-serif
+}
+.CalYearBg {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	font-weight: bold; 
+	background-color: #6E7195; 
+	text-align: center
+}
+A.CalDayLnkcurrentDate {  font-size: 8pt; 
+	color: #000000; 
+	text-decoration: none; 
+	font-weight: bold
+}
+A.CalDayLnkcurrentDate:hover {  
+	text-decoration: underline; 
+	color: #000000
+}
+A.CalDayLnkcurrentDate:visited { 
+}
+.CalInptMainBtn {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #1F489A;
+	background-color: #FFFFFF;
+	border: 1px solid #7B7DA3;
+
+
+}
+.CalInptMainBtnHover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	background-color: #F2F2FF;
+	border: 1px solid #505272;
+}
+.CalMainBtnBg {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	background-color: #D8D8D9; 
+	text-align: center
+}
+.CalDayCurrentDate {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FDFFDF;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	font-weight: bold;
+	color: #996633;
+}
+.CalYearCombo {  
+	font-size: 8pt; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	background-color: #FFFCFF; 
+	border: 1px solid #7B7DA3
+}

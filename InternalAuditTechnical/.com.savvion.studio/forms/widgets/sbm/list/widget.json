@@ -1,0 +1,36 @@
+{
+    'name': 'List',
+	'label': '%widget.list.label',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/list.jpg',
+    'description': '%widget.list.description',
+    'category': 'List',
+    'args': [
+		{'size':{'label':'%widget.arg.size.label', 'type':'NUMBER', 'defaultValue': '5'}},		
+		{'visible':{'label':'%widget.arg.visible.label', 'type':'BOOLEAN', 'defaultValue': 'true'}},
+		{'disabled':{'label':'%widget.arg.disabled.label', 'type':'BOOLEAN', 'defaultValue': 'false'}}					
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/list/onChange',
+					'/sbm/list/onFocus',
+					'/sbm/list/onBlur']
+    },
+   'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+          'options':['validateOn', 'isRequired', 'invalidValue']
+    }
+    ]
+
+}

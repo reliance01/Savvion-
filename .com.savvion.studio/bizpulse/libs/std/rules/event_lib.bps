@@ -1,0 +1,164 @@
+application std
+module event_lib
+import class_lib;
+
+// index_info_table should be manually deleted from from DB. it is no longer used..
+/*
+type IndexInfo = cell{
+     type_id: string
+     };
+
+val index_info_table = new persistent array<IndexInfo>[]("index_info_table");
+
+fun remove_index_info(type_id: string) {
+    var sz = index_info_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = index_info_table[i];
+	if (info.type_id = type_id) {
+	   index_info_table.remove(i);
+	   __unregister_index_info(type_id);
+	   break;
+        }
+    }
+}
+
+fun set_index_info(type_id: string): void {
+    remove_index_info(type_id);
+    val info = IndexInfo{type_id: type_id};
+    index_info_table.add(info);
+    __register_index_info(type_id);
+}
+*/
+
+type EventArgType = object{};
+
+// this should be abstract class with no extension
+class Event {
+/*
+      public fun get_oid(): string { 
+	     return this.__getOid(); 
+      }
+*/
+      public fun get_group_id(): int { return default_group_id; }
+      public fun get_root_group_id(): int { 
+	     return default_root_group_id; 
+      }
+}
+
+type JavaEventArgType = object{
+      JOBJ: JObject
+};
+
+// abstract class, neet provide _save
+class JavaEvent extends Event {
+      private var _jobj: JObject;
+      public fun JavaEvent(o: JavaEventArgType): void {
+	     this._jobj := o.JOBJ;
+      }
+      public fun JavaEvent(jobj: JObject): void {
+	     this._jobj := jobj;
+      }
+      protected fun modified(): void {
+	     this._jobj := _jobj;
+      }
+      public fun read_jobj(): JObject {
+	     return _jobj;
+      }
+      public fun write_jobj(): JObject {
+	     modified();
+	     return _jobj;
+      }
+      // abstract class
+      /*
+      public fun _save(): JavaEventArgType {
+	     return JavaEventArgType{
+		  JOBJ: _jobj
+	     };
+      }
+      */
+}
+
+type XMLEventArgType = object{
+      PACKAGE:string,
+      XML: string
+};
+
+class XMLEvent extends JavaEvent {
+      public var _package: string;
+      public var _xml_adaptor_name: string;
+      public fun XMLEvent(o: XMLEventArgType, xml_adaptor_name: string): void {
+	     JavaEvent(JavaEventArgType{JOBJ: ~com.savvion.sbm.bizpulse.xml.XMLFactory::unmarshal(o.PACKAGE, o.XML, xml_adaptor_name)});
+	     this._package := o.PACKAGE;
+	     this._xml_adaptor_name := xml_adaptor_name;
+      }
+      public fun XMLEvent(jobj: JObject, package: string, xml_adaptor_name: string): void {
+	     JavaEvent(jobj);
+	     this._package := package;
+	     this._xml_adaptor_name := xml_adaptor_name;
+      }
+      // for upper compatibility
+      public fun XMLEvent(o: XMLEventArgType): void {
+	     JavaEvent(JavaEventArgType{JOBJ: ~com.savvion.sbm.bizpulse.xml.XMLFactory::unmarshal(o.PACKAGE, o.XML, "castor")});
+	     this._package := o.PACKAGE;
+	     this._xml_adaptor_name := "castor";
+      }
+      // for upper compatibility
+      public fun XMLEvent(jobj: JObject, package: string): void {
+	     JavaEvent(jobj);
+	     this._package := package;
+	     this._xml_adaptor_name := "castor";
+      }
+      public fun asXML(): string {
+	     return ~com.savvion.sbm.bizpulse.xml.XMLFactory::marshal(_jobj, _xml_adaptor_name);
+      }
+      public fun _save(): XMLEventArgType {
+	     return XMLEventArgType{
+		  PACKAGE: _package,
+		  XML: asXML()
+	     };
+      }
+}
+type JMap = ~java.util.Map;
+type JMSEventArgType = XMLEventArgType@object{
+      PROPERTIES: JMap
+};
+type XMLAdaptor = ~com.savvion.sbm.bizpulse.common.intf.BSValue$XMLAdaptor;
+type XMLFactory = ~com.savvion.sbm.bizpulse.xml.XMLFactory;
+
+class JMSEvent extends XMLEvent {
+      public var properties: JMap;
+      private static val castor_name: string = "castor";
+      private static val adaptor: XMLAdaptor = ~com.savvion.sbm.bizpulse.xml.XMLFactory::find("castor");
+      public static fun getText(xmlObj: JObject): string { return adaptor.getText(xmlObj); }
+
+      public fun JMSEvent(o: JMSEventArgType): void {
+	     XMLEvent(o, castor_name);
+	     this.properties := o.PROPERTIES;
+     }
+      public fun JMSEvent(jobj: JObject, package: string, props: JMap): void {
+	     XMLEvent(jobj, package, castor_name);
+	     this.properties := props;
+      }
+      public fun _save(): JMSEventArgType {
+	     return JMSEventArgType{}@super._save()@object{
+		  PROPERTIES: properties
+	     };
+      }
+}
+/*
+initialize {
+    set_index_info("BizLogic");
+}
+
+reinitialize {
+    val sz = index_info_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = index_info_table[i];
+	__register_index_info(info.type_id);
+    }
+}
+
+finalize {
+    discard(index_info_table); // may be dangerous..  TBI..
+}
+*/

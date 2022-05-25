@@ -1,0 +1,41 @@
+.blue_shade_reliance_blue tr td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: bold 8pt tahoma, arial, sans-serif;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 1px solid #3375B7;
+		color: #3375B7;
+		background: #E4F0F6;
+}		
+.blue_shade_reliance_blue_tr_td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: normal 8pt tahoma;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 1px solid #3375B7;
+		color: #3375B7;
+		background: #E4F0F6;
+}	
+.blue_shade_reliance_red tr td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: bold 8pt tahoma, arial, sans-serif;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 1px solid #E4F0F6;
+		color: #FFFFFF;
+		background: #DC241F;
+}		
+.blue_shade_reliance_red_tr_td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: normal 11pt tahoma;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 0px solid #E4F0F6;
+		color: #FFFFFF;
+		background: #DC241F;
+}		
+		

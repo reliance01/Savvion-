@@ -1,0 +1,16 @@
+{
+    'name': 'GoogleMaps',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/googlemaps.png',
+    'description': 'Google Maps widget.',
+    'category': 'googlemaps',
+    'args': [
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }
+}

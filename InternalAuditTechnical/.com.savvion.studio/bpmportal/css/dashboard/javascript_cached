@@ -1,0 +1,205 @@
+var mainPath = "/c";
+function submitFormAlert() {
+alert("\u0054\u0068\u0069\u0073\u0020\u0066\u006f\u0072\u006d\u0020\u0068\u0061\u0073\u0020\u0061\u006c\u0072\u0065\u0061\u0064\u0079\u0020\u0062\u0065\u0065\u006e\u0020\u0073\u0075\u0062\u006d\u0069\u0074\u0074\u0065\u0064\u002e");
+}
+Calendar._DN = new Array(
+"Sunday",
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday",
+"Sunday"
+);
+Calendar._SDN = new Array(
+"Sun",
+"Mon",
+"Tue",
+"Wed",
+"Thu",
+"Fri",
+"Sat",
+"Sun"
+);
+Calendar._MN = new Array(
+"January",
+"February",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"December"
+);
+Calendar._SMN = new Array(
+"Jan",
+"Feb",
+"Mar",
+"Apr",
+"May",
+"Jun",
+"Jul",
+"Aug",
+"Sep",
+"Oct",
+"Nov",
+"Dec"
+);
+Calendar._TT = {};
+Calendar._TT["ABOUT"] = "Use the \xab and \xbb buttons to select the year. Use the {0} and {1} buttons to select the month. Hold the mouse button on any of the above buttons for faster selection.";
+Calendar._TT["ABOUT"] = Calendar._TT["ABOUT"].replace("{0}", String.fromCharCode(0x2039));
+Calendar._TT["ABOUT"] = Calendar._TT["ABOUT"].replace("{1}", String.fromCharCode(0x203a));
+Calendar._TT["ABOUT_TIME"] = "";
+Calendar._TT["CLOSE"] = "Close";
+Calendar._TT["DAY_FIRST"] = "Display %s First";
+Calendar._TT["DRAG_TO_MOVE"] = "";
+Calendar._TT["GO_TODAY"] = "Today";
+Calendar._TT["INFO"] = "Help";
+Calendar._TT["NEXT_MONTH"] = "Next Month";
+Calendar._TT["NEXT_YEAR"] = "Next Year";
+Calendar._TT["PART_TODAY"] = "";
+Calendar._TT["PREV_MONTH"] = "Previous Month";
+Calendar._TT["PREV_YEAR"] = "Previous Year";
+Calendar._TT["SEL_DATE"] = "Select Date";
+Calendar._TT["SUN_FIRST"] = "";
+Calendar._TT["TIME_PART"] = "";
+Calendar._TT["TODAY"] = "Today";
+Calendar._TT["WK"] = "";
+Calendar._TT["DEF_DATE_FORMAT"] = "%Y-%m-%d";
+Calendar._TT["TT_DATE_FORMAT"] = "%a, %b %e";
+Calendar._TT["WEEKEND"] = "0,6";
+var loadingAnimation = new Image();
+loadingAnimation.src =  "/html/themes/classic/images/progress_bar/loading_animation.gif";
+var themeDisplay = {
+getPathThemeRoot : function() {
+return("/html/themes/classic");
+},
+getPathThemeImage : function() {
+return("/");
+},
+getPathMain : function() {
+return("/c");
+}
+};
+function addPortlet(plid, portletId) {
+var refreshPortletList = "";
+if (refreshPortletList.match("," + portletId + ",")) {
+self.location = "/c/portal/update_layout?p_l_id=" + plid + "&p_p_id=" + portletId + "&cmd=add&referer=" + encodeURIComponent("/c/portal/layout?p_l_id=" + plid + "&#p_" + portletId) + "&refresh=1";
+}
+else {
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&cmd=add&referer=" + encodeURIComponent("/c/portal/layout?p_l_id=" + plid + "&#p_" + portletId), addPortletReturn);
+var loadingDiv = document.createElement("div");
+var container = document.getElementById("layout-column_column-1");
+if (container == null) {
+return;
+}
+loadingDiv.className = "portlet-loading";
+loadingDiv.id = "portlet-loading-placeholder";
+container.insertBefore(loadingDiv, container.endPlaceholder);
+}
+}
+function addPortletReturn(xmlHttpReq) {
+var addDiv = document.createElement("div");
+var loadingDiv = document.getElementById("portlet-loading-placeholder");
+addDiv.style.display = "none";
+addDiv.innerHTML = xmlHttpReq.responseText;
+var portletBound = getElementByClassName(addDiv, "portlet-boundary");
+var container = document.getElementById("layout-column_column-1");
+if (container == null) {
+return;
+}
+portletBound.parentNode.removeChild(portletBound);
+var portletId = portletBound.id;
+portletId = portletId.replace(/^p_p_id_/,"");
+portletId = portletId.replace(/_$/,"");
+portletBound.portletId = portletId;
+container.removeChild(loadingDiv);
+container.insertBefore(portletBound, container.endPlaceholder);
+var handle = DragDrop.findHandle(portletBound);
+DragDrop.makeItemDragable(portletBound, handle);
+if (window.location.hash) {
+window.location.hash = "p_" + portletId;
+}
+var scripts = portletBound.getElementsByTagName("script");
+for (var i = 0; i < scripts.length; i++) {
+if (scripts[i].src) {
+var head = document.getElementsByTagName("head")[0];
+var scriptObj = document.createElement("script");
+scriptObj.setAttribute("type", "text/javascript");
+scriptObj.setAttribute("src", scripts[i].src);
+head.appendChild(scriptObj);
+}
+else {
+try {
+eval(scripts[i].textContent);
+}
+catch (e) {
+//alert(e);
+}
+}
+}
+}
+function closePortlet(plid, portletId) {
+if (confirm('\u0041\u0072\u0065\u0020\u0079\u006f\u0075\u0020\u0073\u0075\u0072\u0065\u0020\u0079\u006f\u0075\u0020\u0077\u0061\u006e\u0074\u0020\u0074\u006f\u0020\u0072\u0065\u006d\u006f\u0076\u0065\u0020\u0074\u0068\u0069\u0073\u0020\u0063\u006f\u006d\u0070\u006f\u006e\u0065\u006e\u0074\u003f')) {
+var curItem = document.getElementById("p_p_id_" + portletId + "_");
+var parent = curItem.parentNode;
+parent.removeChild(curItem);
+if (curItem = document.getElementById(portletId)) {
+parent = curItem.parentNode;
+parent.removeChild(curItem);
+}
+if (LayoutConfiguration) {
+LayoutConfiguration.initialized = false;
+}
+if (DragDrop.layoutMaximized) {
+self.location = "/c/portal/update_layout?p_l_id=" + plid + "&p_p_id=" + portletId + "&cmd=delete&referer=" + encodeURIComponent("/c/portal/layout?p_l_id=" + plid) + "&refresh=1";
+}
+else {
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&cmd=delete");
+}
+}
+else {
+self.focus();
+}
+}
+function minimizePortlet(plid, portletId, restore) {
+if (DragDrop.layoutMaximized) {
+self.location = "/c/portal/update_layout?p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_restore=" + restore + "&cmd=minimize&referer=" + encodeURIComponent("/c/portal/layout?p_l_id=" + plid) + "&refresh=1";
+}
+else {
+if (restore) {
+var portletEl = document.getElementById("p_p_body_" + portletId);
+portletEl.style.display = "block";
+portletEl.style.overflow = "hidden";
+portletEl.style.height = "1px";
+var buttonsEl = document.getElementById("p_p_body_" + portletId + "_min_buttons");
+var html = buttonsEl.innerHTML;
+html = html.replace(", true", ", false");
+html = html.replace("restore.gif", "minimize.gif");
+html = html.replace("Restore", "Minimize");
+buttonsEl.innerHTML = html;
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_restore=" + restore + "&cmd=minimize");
+slideMaximize("p_p_body_" + portletId, 1, 20);
+}
+else {
+var portletEl = document.getElementById("p_p_body_" + portletId);
+portletEl.style.overflow = "hidden";
+slideMinimize("p_p_body_" + portletId, portletEl.offsetHeight, 20);
+var buttonsEl = document.getElementById("p_p_body_" + portletId + "_min_buttons");
+var html = buttonsEl.innerHTML;
+html = html.replace(", false", ", true");
+html = html.replace("minimize.gif", "restore.gif");
+html = html.replace("Minimize", "Restore");
+buttonsEl.innerHTML = html;
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_restore=" + restore + "&cmd=minimize");
+}
+}
+}
+function movePortlet(plid, portletId, columnId, columnPos) {
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_col_id=" + columnId + "&p_p_col_pos=" + columnPos + "&cmd=move");
+}

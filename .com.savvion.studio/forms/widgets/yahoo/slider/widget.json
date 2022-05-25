@@ -1,0 +1,55 @@
+{
+    'name': 'Slider',
+	'label': 'Slider',
+    'type': 'yahoo',
+    'version': '1.0',
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-slider.jpg',
+    'description': 'A slider widget that enables the user to adjust values in a finite range over horizontal or vertical axis.',
+    'category': 'Slider',
+    'args': [
+            {'topic':{'label':'Topic', 'type':'STRING', 'defaultValue': '/yahoo/slider', 'description': 'The topic published to'}},
+            {'sliderType':{'label':'Slider Type', 'type':'STRING', 'defaultValue': 'H', 'values': [
+              {'name' : 'Horizontal', 'value' : 'H', 'description' : 'Horizontal slider.'},
+              {'name' : 'Vertical', 'value' : 'V', 'description' : 'Vertical slider.'}
+             ],
+            'description': 'The orientation of the slider.'}},
+	    {'animate':{'label':'Animate', 'type':'BOOLEAN', 'defaultValue': 'true', 'description': 'Animation flag', 'values': [{'name':'true', 'value':'true'},{'name':'false', 'value':'false'}]}},
+	    {'scaleFactor':{'label':'Scale Factor', 'type':'NUMBER', 'defaultValue': 0.5, 'description': 'Custom scale factor for converting pixel offset into a real value'}},
+	    {'tickSize':{'label':'Tick Size', 'type':'NUMBER', 'defaultValue': 25, 'description': 'Tick size'}},
+	    {'sliderLeft':{'label':'Slider Left', 'type':'NUMBER', 'defaultValue': 0, 'description': 'The number of pixels the element can move left'}},
+	    {'sliderRight':{'label':'Slider Right', 'type':'NUMBER', 'defaultValue': 100, 'description': 'The number of pixels the element can move right'}},
+	    {'initialValue':{'label':'Initial Value', 'type':'NUMBER', 'defaultValue': 50, 'description': 'The number of pixels from the start point'}}
+    ],
+    'value': {
+         'required':'true',
+         'type': 'NUMBER',
+         'defaultValue':50    	
+    },
+    'config' : {
+    	'type': {
+		'id' : 'yahoo.slider',
+	        'libs': [
+			'../resources/libs/yahoo/v2.4.0/yahoo-dom-event/yahoo-dom-event.js',
+			'../resources/libs/yahoo/v2.4.0/animation/animation-min.js',
+			'../resources/libs/yahoo/v2.4.0/dragdrop/dragdrop-min.js',
+			'../resources/libs/yahoo/v2.4.0/slider/slider-min.js',
+                        '../resources/libs/yahoo/v2.4.0/element/element-beta-min.js',
+                        '../resources/libs/yahoo/v2.4.0/container/container_core-min.js',
+                        '../resources/libs/yahoo/v2.4.0/button/button-min.js'
+			 ],
+                 'styles': [
+                     '../resources/libs/yahoo/v2.4.0/fonts/fonts-min.css',
+                     '../resources/libs/yahoo/v2.4.0/button/assets/skins/sam/button.css'],
+                'resources': [
+                    '../resources/libs/yahoo/v2.4.0/assets',
+                    '../resources/libs/yahoo/v2.4.0/button/assets']        
+	    }
+     },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/yahoo/slider/onChange'],
+       'description':'onChange publishes to its topicName when the slider is changed. It publishes an object with id and value. The value is the slider\'s value.'
+    }
+     
+}

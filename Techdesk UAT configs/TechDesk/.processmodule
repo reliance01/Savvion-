@@ -1,0 +1,13 @@
+#Wed Jul 06 09:56:34 IST 2016
+publishing.type=Copy_Files_Only
+application.name=TechDesk
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=TechDesk
+module.id=df2772ad-dfb5-42bb-9613-8beab6d26c24
+module.version=8
+application.mainappfile=processtemplates/TechDesk.spt
+module.name=TechDesk
+application.root=TechDesk

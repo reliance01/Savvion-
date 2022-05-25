@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="Rules" path="rules" icon="fldr_obj.gif"/>
+  <category label="Monitoring Rules" path="rules/rules" icon="fldr_obj.gif"/>
+  <category label="Conditions" path="rules/conditions" icon="fldr_obj.gif"/>
+  <category label="Actions" path="rules/actions" icon="fldr_obj.gif"/>
+</palette>

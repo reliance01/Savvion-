@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+  <allow>
+  	<!--convert converter="bean" match="com.savvion.sbm.bizmanage.*"-->
+	<create creator="new" javascript="pwr">
+		<param name="class" value="com.savvion.sbm.bizmanage.api.BizManageBean" />
+		<include method="getProcessTemplateWorksteps"/>
+		<include method="getProcessInstanceList" />
+	</create>  	
+	
+	<create creator="new" javascript="GrpValidator">
+		<param name="class" value="com.savvion.sbm.bpmportal.service.UserManagementService" />
+		<include method="isValidGroup"/>
+	</create>  	
+	
+	<create creator="new" javascript="GenericValidator">
+		<param name="class" value="org.apache.commons.validator.GenericValidator" />
+		<include method="isCreditCard" />
+		<include method="isEmail" />
+		<include method="isFloat" />
+		<include method="isInRange" />
+		<include method="isUrl" />
+		<include method="matchRegexp" />
+		<include method="maxLength" />
+		<include method="minLength" />
+	</create>
+	<create creator="new" javascript="Util">
+		<param name="class" value="com.savvion.sbm.bizmanage.util.Util" />
+		<include method="getProcessList"/>
+	</create>
+	<create creator="new" javascript="QueryManager">
+		<param name="class" value="com.savvion.sbm.bizmanage.util.QueryManager" />
+		<include method="isDuplicateFavorite"/>
+	</create>
+	<create creator="new" javascript="PAKBizSoloBean">
+		<param name="class" value="com.savvion.BizSolo.beans.PAKBizSoloBean" />
+		<include method="removePAKBizSoloBeanFromCache"/>
+	</create>
+	  <create creator="new" javascript="list">
+	  	<param name="class" value="java.util.List" />
+	  </create>
+	   <create creator="new" javascript="map">
+	   	<param name="class" value="java.util.HashMap" />
+	   </create>
+	  <create creator="new" javascript="adapterDWR" scope="application">
+	   	<param name="class" value="com.savvion.sbm.bpmportal.util.AdapterDWR" />
+  		<include method="executeAdapter"/>
+		<include method="renderChart"/>
+  	</create>
+  </allow>
+</dwr>

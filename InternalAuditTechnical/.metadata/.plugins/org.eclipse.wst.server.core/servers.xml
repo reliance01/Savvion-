@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="1" hostname="RGISAVPPROD" id="Aurea SBM Server for RGISAVPPROD" id-set="true" name="Aurea SBM Server for RGISAVPPROD" runtime-id="Aurea SBM Server 10.0.1" savvion.server.host="RGISAVPPROD" savvion.server.password="rgicl" savvion.server.port="18793" savvion.server.url="http://RGISAVPPROD:18793/sbm/deployment" savvion.server.user="rgicl" server-type="com.savvion.bpmstudio.savvion.server" server-type-id="com.savvion.bpmstudio.savvion.server" start-timeout="600" stop-timeout="120" timestamp="0"/>
+</servers>

@@ -1,0 +1,13 @@
+#Sat Jul 16 12:05:47 IST 2016
+publishing.type=Copy_Files_Only
+application.name=MotorUWGuidelines
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=MotorUWGuidelines
+module.id=a7d303af-c1d4-425e-b873-76a7d584024c
+module.version=8
+application.mainappfile=processtemplates/MotorUWGuidelines.spt
+module.name=MotorUWGuidelines
+application.root=MotorUWGuidelines

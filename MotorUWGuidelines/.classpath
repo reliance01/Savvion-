@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sdms.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/blclient.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/j2ee.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmclasspath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/webservice.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/axis.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-lang.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmutil.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jsr173_api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xalan.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xml-apis.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/activation.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jaxrpc.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/BPM Studio Library"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

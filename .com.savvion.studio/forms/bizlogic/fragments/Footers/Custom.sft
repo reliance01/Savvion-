@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Form SYSTEM "form.dtd">
+<Form version="8.1">
+  <DataSources/>
+  <Validation/>
+  <head>
+    <link rel="stylesheet" type="bizsolo"/>
+  </head>
+  <body class="apbody">
+    <table align="center" cellpadding="0" cellspacing="0" width="100%">
+      <colgroup>
+        <col width="50%"/>
+        <col width="50%"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <div align="left">
+              <div align="center">
+                <control dateOnly="false" format="complete" id="button_complete" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+                <control dateOnly="false" format="save" id="button_save" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+                <control dateOnly="false" format="reset" id="button_reset" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+                <control dateOnly="false" format="cancel" id="button_cancel" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+                <control args="{'type':'text', 'size':30, 'maxlength':256, 'readonly':false, 'visible':true, 'disabled':false, 'validationType':'none', 'validation':{}, 'toolTip':'', 'tabOrder':'0'}" dateOnly="false" editable="true" height="18" id="bizsite_assigneeName" image="forms/widgets/sbm/textfield/images/textfield.png" password="false" required="false" tabindex="0" type="sbm.textfield" version="1" visible="true" widgetSource="{type:'STATIC'}" widgetTarget="{type:'DATASLOT', dataSlotName:'', dataSlotType:''}" widgetType="advanced" width="135">
+                  <widgetjson>{"adapletDataSource":{"selected":false},"bindingController":{"target":"","enableTargetBinding":true,"dataTypesArray":["Integer","Long","Double","Decimal","Number","String","URL"],"targetDataTypeArray":["Integer","Long","Double","Decimal","Number","String","URL"],"enableDataSlotBinding":true,"tType":"","enableServiceBinding":true},"topicInfo":{"type":"publish","topicName":["/sbm/textfield/onChange","/sbm/textfield/onClick","/sbm/textfield/onFocus","/sbm/textfield/onBlur","/sbm/textfield/onKeyPress","/sbm/textfield/onKeyUp","/sbm/textfield/onMouseDown"]},"serviceURL":{"selected":false},"nameFolder":"textfield","validation":[{"selected":true,"label":"None","type":"none","options":[]},{"selected":false,"label":"Integer","type":"integer","options":["validateOn","isRequired","useCharacterMasking","minValue","maxValue","textfieldRequiredMsg"]},{"selected":false,"label":"Email","type":"email","options":["validateOn","isRequired","minChars","maxChars","textfieldRequiredMsg"]},{"selected":false,"label":"Date","type":"date","options":["formatDate","validateOn","isRequired","useCharacterMasking","minValue","maxValue","textfieldRequiredMsg"]},{"selected":false,"label":"Time","type":"time","options":["formatTime","validateOn","isRequired","useCharacterMasking","minValue","maxValue","textfieldRequiredMsg"]},{"selected":false,"label":"Credit Card","type":"credit_card","options":["formatCreditCard","validateOn","isRequired","useCharacterMasking","textfieldRequiredMsg"]},{"selected":false,"label":"Zip Code","type":"zip_code","options":["formatZipCode","validateOn","isRequired","useCharacterMasking","pattern","textfieldRequiredMsg"]},{"selected":false,"label":"Social Security Number","type":"social_security_number","options":["validateOn","isRequired","useCharacterMasking","pattern","textfieldRequiredMsg"]},{"selected":false,"label":"Currency","type":"currency","options":["formatCurrency","validateOn","isRequired","useCharacterMasking","minValue","maxValue","textfieldRequiredMsg"]},{"selected":false,"label":"Real","type":"real","options":["validateOn","isRequired","useCharacterMasking","minValue","maxValue","textfieldRequiredMsg"]},{"selected":false,"label":"IP","type":"ip","options":["formatIP","validateOn","isRequired","useCharacterMasking","textfieldRequiredMsg"]},{"selected":false,"label":"URL","type":"url","options":["validateOn","isRequired","minChars","maxChars","textfieldRequiredMsg"]},{"selected":false,"label":"Phone Number","type":"phone_number","options":["formatPhone","validateOn","useCharacterMasking","isRequired","pattern","textfieldRequiredMsg"]},{"selected":false,"label":"Custom","type":"custom","options":["pattern","isRequired","textfieldRequiredMsg","customRegularExpression"]}],"args":[{"type":{"values":[{"name":"text","value":"Text"},{"name":"password","value":"Password"},{"name":"text(view only)","value":"Label"}],"label":"Type","defaultValue":"text","type":"STRING"}},{"size":{"description":"Number of visible characters in the textfield","label":"Size","defaultValue":"15","type":"INTEGER"}},{"maxlength":{"description":"Maximum number of characters allowed.","label":"Max Length","defaultValue":"256","type":"INTEGER"}},{"readonly":{"values":[{"name":"true","value":"true"},{"name":"false","value":"false"}],"label":"Read Only","defaultValue":"false","type":"BOOLEAN"}},{"visible":{"label":"%Form.checkbox.visible","defaultValue":"true","type":"BOOLEAN"}},{"disabled":{"values":[{"name":"true","value":"true"},{"name":"false","value":"false"}],"label":"Disabled","defaultValue":"false","type":"BOOLEAN"}}],"typeFolder":"sbm","image":"images/textfield.png","label":"TextField","type":"sbm","isMultiSelect":false,"widgetRenderer":"com.savvion.tools.form.data.widget.renderers.TextFieldRenderer","dataslot":{"selected":false},"version":"1.0","category":"Text Field","description":"","name":"TextField","label":"%widget.textfield.label","jmakiVersion":"1.0","value":{"selected":true,"defaultValue":"","type":"STRING","required":"false"},"previewData":{},"enableWidgetBinding":true}</widgetjson>
+                </control>
+              <a href="javascript://" onclick="setUserControl(document.form.bizsite_assigneeName);searchUser()" target="" title="">
+                <control dateOnly="false" height="32" id="image1" password="false" tabindex="0" type="img" url="@SBM_ROOT/bpmportal/css/apptheme01/images/icon_edit_user_search_single.gif" version="1" widgetType="basic" width="32"/>
+              </a>
+              <control dateOnly="false" format="reassign" id="button_reassign" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br clear="all"/>
+</body>
+</Form>

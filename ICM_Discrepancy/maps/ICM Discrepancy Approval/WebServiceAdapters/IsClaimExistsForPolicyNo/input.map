@@ -1,0 +1,404 @@
+<map version="1.3">
+  <param name="IN.PolicyNo.0_0" type="java.lang.String" value="@IN.PolicyNo.0_0"/>
+  <param name="WSCONFIG" type="java.lang.String">
+<java class="java.beans.XMLDecoder" version="1.6.0_05"> 
+ <object class="com.savvion.sbm.adapters.webservice.WSConfig"> 
+  <void property="callInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.WSCallInfo"> 
+    <void property="encodingType"> 
+     <string>LITERAL</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="operationInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.OperationInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>CheckClaimExistOnPolicy</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://tempuri.org/</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="XMLPluginConfig"> 
+     <string>&lt;config&gt;
+  &lt;version&gt;2&lt;/version&gt;
+  &lt;template&gt;
+&lt;soapenv:Body xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;&#13;
+    &lt;CheckClaimExistOnPolicyResponse xmlns="http://tempuri.org/"&gt;&#13;
+        &lt;CheckClaimExistOnPolicyResult&gt;&#13;
+            &lt;xs:schema xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;&#13;
+                &lt;xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;&#13;
+                    &lt;xs:complexType&gt;&#13;
+                        &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;&#13;
+                            &lt;xs:element name="Table"&gt;&#13;
+                                &lt;xs:complexType&gt;&#13;
+                                    &lt;xs:sequence&gt;&#13;
+                                        &lt;xs:element minOccurs="0" name="ClaimExists" type="xs:boolean"/&gt;&#13;
+                                    &lt;/xs:sequence&gt;&#13;
+                                &lt;/xs:complexType&gt;&#13;
+                            &lt;/xs:element&gt;&#13;
+                            &lt;xs:element name="Table1"&gt;&#13;
+                                &lt;xs:complexType&gt;&#13;
+                                    &lt;xs:sequence&gt;&#13;
+                                        &lt;xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime"/&gt;&#13;
+                                        &lt;xs:element minOccurs="0" name="Status" type="xs:string"/&gt;&#13;
+                                    &lt;/xs:sequence&gt;&#13;
+                                &lt;/xs:complexType&gt;&#13;
+                            &lt;/xs:element&gt;&#13;
+                        &lt;/xs:choice&gt;&#13;
+                    &lt;/xs:complexType&gt;&#13;
+                &lt;/xs:element&gt;&#13;
+            &lt;/xs:schema&gt;&#13;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;&#13;
+                &lt;NewDataSet xmlns=""&gt;&#13;
+                    &lt;Table diffgr:id="Table1" msdata:rowOrder="0"&gt;&#13;
+                        &lt;ClaimExists&gt;true&lt;/ClaimExists&gt;&#13;
+                    &lt;/Table&gt;&#13;
+                    &lt;Table1 diffgr:id="Table11" msdata:rowOrder="0"&gt;&#13;
+                        &lt;CreatedDate&gt;2011-09-05T14:28:00+05:30&lt;/CreatedDate&gt;&#13;
+                        &lt;Status&gt;Policy details awaited&lt;/Status&gt;&#13;
+                    &lt;/Table1&gt;&#13;
+                &lt;/NewDataSet&gt;&#13;
+            &lt;/diffgr:diffgram&gt;&#13;
+        &lt;/CheckClaimExistOnPolicyResult&gt;&#13;
+    &lt;/CheckClaimExistOnPolicyResponse&gt;&#13;
+&lt;/soapenv:Body&gt;
+  &lt;/template&gt;
+  &lt;fields&gt;
+    &lt;field name="IsClmExists" type="String" xpath="/soapenv:Body/ns1:CheckClaimExistOnPolicyResponse/ns1:CheckClaimExistOnPolicyResult/diffgr:diffgram/NewDataSet/Table/ClaimExists/text()"/&gt;
+  &lt;/fields&gt;
+  &lt;namespaceaware&gt;true&lt;/namespaceaware&gt;
+  &lt;namespacemap&gt;
+    &lt;map name="ns1" value="http://tempuri.org/"/&gt;
+    &lt;map name="soapenv" value="http://schemas.xmlsoap.org/soap/envelope/"/&gt;
+    &lt;map name="msdata" value="urn:schemas-microsoft-com:xml-msdata"/&gt;
+    &lt;map name="xs" value="http://www.w3.org/2001/XMLSchema"/&gt;
+    &lt;map name="diffgr" value="urn:schemas-microsoft-com:xml-diffgram-v1"/&gt;
+  &lt;/namespacemap&gt;
+&lt;/config&gt;
+</string> 
+    </void> 
+    <void property="XMLPluginOutputParameters"> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.file.Parameter"> 
+       <void property="description"> 
+        <string>IsClmExists</string> 
+       </void> 
+       <void property="name"> 
+        <string>IsClmExists</string> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="complexTypeMapping"> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.ComplexTypeMappingInfo" id="ComplexTypeMappingInfo0"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>&gt;&gt;CheckClaimExistOnPolicyResponse&gt;CheckClaimExistOnPolicyResult</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://tempuri.org/</string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>com.savvion.bo.CheckClaimExistOnPolicyResponseCheckClaimExistOnPolicyResult</string> 
+       </void> 
+       <void property="mode"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.ComplexTypeMappingInfo"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>&gt;getClaimStatusForPolicy</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://tempuri.org/</string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>com.savvion.bo.GetClaimStatusForPolicy</string> 
+       </void> 
+       <void property="mode"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.ComplexTypeMappingInfo"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>&gt;getClaimStatusForPolicyResponse</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://tempuri.org/</string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>com.savvion.bo.GetClaimStatusForPolicyResponse</string> 
+       </void> 
+       <void property="mode"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.ComplexTypeMappingInfo"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>StatusResponce</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://tempuri.org/</string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>com.savvion.bo.StatusResponce</string> 
+       </void> 
+       <void property="mode"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="inputParam"> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>PolicyNo</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://tempuri.org/</string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>PolicyNo</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>PolicyNo</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>PolicyNo.0_0</string> 
+       </void> 
+       <void property="value"> 
+        <string>1002930909098080</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="isWrapped"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="isXmlOutput"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="returnParam"> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>CheckClaimExistOnPolicyResult</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://tempuri.org/</string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="basicType"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="ctmi"> 
+        <object idref="ComplexTypeMappingInfo0"/> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>com.savvion.bo.CheckClaimExistOnPolicyResponseCheckClaimExistOnPolicyResult</string> 
+       </void> 
+       <void property="label"> 
+        <string>CheckClaimExistOnPolicyResult</string> 
+       </void> 
+       <void property="mode"> 
+        <int>2</int> 
+       </void> 
+       <void property="name"> 
+        <string>CheckClaimExistOnPolicyResult</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>CheckClaimExistOnPolicyResult.1_0</string> 
+       </void> 
+       <void property="value"> 
+        <string>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;soapenv:Body xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;CheckClaimExistOnPolicyResponse xmlns="http://tempuri.org/"&gt;
+        &lt;CheckClaimExistOnPolicyResult&gt;
+            &lt;xs:schema id="NewDataSet" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+                &lt;xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                    &lt;xs:complexType&gt;
+                        &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                            &lt;xs:element name="Table"&gt;
+                                &lt;xs:complexType&gt;
+                                    &lt;xs:sequence&gt;
+                                        &lt;xs:element minOccurs="0" name="ClaimExists" type="xs:boolean"/&gt;
+                                    &lt;/xs:sequence&gt;
+                                &lt;/xs:complexType&gt;
+                            &lt;/xs:element&gt;
+                            &lt;xs:element name="Table1"&gt;
+                                &lt;xs:complexType&gt;
+                                    &lt;xs:sequence&gt;
+                                        &lt;xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime"/&gt;
+                                        &lt;xs:element minOccurs="0" name="Status" type="xs:string"/&gt;
+                                    &lt;/xs:sequence&gt;
+                                &lt;/xs:complexType&gt;
+                            &lt;/xs:element&gt;
+                        &lt;/xs:choice&gt;
+                    &lt;/xs:complexType&gt;
+                &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+                &lt;NewDataSet xmlns=""&gt;
+                    &lt;Table diffgr:id="Table1" msdata:rowOrder="0"&gt;
+                        &lt;ClaimExists&gt;true&lt;/ClaimExists&gt;
+                    &lt;/Table&gt;
+                    &lt;Table1 diffgr:id="Table11" msdata:rowOrder="0"&gt;
+                        &lt;CreatedDate&gt;2011-09-05T14:28:00+05:30&lt;/CreatedDate&gt;
+                        &lt;Status&gt;Policy details awaited&lt;/Status&gt;
+                    &lt;/Table1&gt;
+                &lt;/NewDataSet&gt;
+            &lt;/diffgr:diffgram&gt;
+        &lt;/CheckClaimExistOnPolicyResult&gt;
+    &lt;/CheckClaimExistOnPolicyResponse&gt;
+&lt;/soapenv:Body&gt;
+</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>&gt;&gt;CheckClaimExistOnPolicyResponse&gt;CheckClaimExistOnPolicyResult</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://tempuri.org/</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="style"> 
+     <string>document</string> 
+    </void> 
+    <void property="use"> 
+     <string>literal</string> 
+    </void> 
+    <void property="useXMLPlugin"> 
+     <boolean>true</boolean> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="otherSecConfigFile"> 
+   <string/> 
+  </void> 
+  <void property="password"> 
+   <string/> 
+  </void> 
+  <void property="portInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.PortInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>IsClaimExistsSoap</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://tempuri.org/</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>IsClaimExistsSoap</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="runtimeSecurityType"> 
+   <int>0</int> 
+  </void> 
+  <void property="samlTokenConfigFile"> 
+   <string/> 
+  </void> 
+  <void property="serviceInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.ServiceInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>IsClaimExists</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://tempuri.org/</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>IsClaimExists</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="soapActionURI"> 
+   <string>http://tempuri.org/CheckClaimExistOnPolicy</string> 
+  </void> 
+  <void property="targetEndpointAddress"> 
+   <string>http://10.65.15.85:8181/IsClaimExists.asmx</string> 
+  </void> 
+  <void property="targetNameSpace"> 
+   <string>http://tempuri.org/</string> 
+  </void> 
+  <void property="userName"> 
+   <string/> 
+  </void> 
+  <void property="userNameTokenConfigFile"> 
+   <string/> 
+  </void> 
+  <void property="wsdlPassword"> 
+   <string/> 
+  </void> 
+  <void property="wsdlUrl"> 
+   <string>http://10.65.15.85:8181/IsClaimExists.asmx?wsdl</string> 
+  </void> 
+  <void property="wsdlUserName"> 
+   <string/> 
+  </void> 
+ </object> 
+</java>
+  </param>  <param name="SESSION_TOKEN_SUPPORT" type="java.lang.String" value="false"/>
+  <param name="TARGET_EPA" type="java.lang.String" value="@TARGET_EPA"/>
+</map>

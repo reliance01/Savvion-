@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.other_expressions" path="expressions/other" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.custom_script_one_line" path="expressions/other" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.custom_script_one_line">
+      <template>
+${script};
+      </template>
+      <widgets>
+        <entryWidget col="0" colspan="1" id="script" presentation="FIELD" row="0" rowspan="1" validation="NONE">
+        </entryWidget>
+      </widgets>
+    </grid>
+  </item>  
+
+  <item label="$Scripting.item.custom_script_multiline" path="expressions/other" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.custom_script_multiline">
+      <template>
+${script};
+      </template>
+      <widgets>
+        <entryWidget col="0" colspan="1" id="script" presentation="AREA" row="0" rowspan="1" validation="NONE">
+        </entryWidget>
+      </widgets>
+    </grid>
+  </item>  
+
+  <item label="$Scripting.item.invoke_adaplet" path="expressions/other" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.invoke_adaplet">
+      <template>Bm.util.invokeAdaplet('${adaplet}');</template>
+      <widgets>
+        <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.invoke_adaplet</label>
+        <choiceWidget col="1" colspan="1" id="adaplet" row="0" rowspan="1" type="ADAPLET">
+          <selection type="ADAPLET"></selection>
+        </choiceWidget>
+      </widgets>
+    </grid>
+  </item>  
+
+  <item label="$Scripting.item.invoke_adaplet_with_callback" path="expressions/other" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.invoke_adaplet_with_callback">
+      <template>Bm.util.invokeAdaplet('${adaplet}','${callback}');</template>
+      <widgets>
+        <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.invoke_adaplet</label>
+        <choiceWidget col="1" colspan="1" id="adaplet" row="0" rowspan="1" type="ADAPLET">
+          <selection type="ADAPLET"></selection>
+        </choiceWidget>
+        <label row="0" col="2" rowspan="1" colspan="1">$Scripting.label.with_callback</label>
+        <entryWidget col="3" colspan="1" id="callback" presentation="FIELD" row="0" rowspan="1" validation="NONE">
+          <reference type="constant" encoding="JAVA_STRING"></reference>
+        </entryWidget>
+      </widgets>
+    </grid>
+  </item>  
+
+</palette>

@@ -1,0 +1,95 @@
+{
+    'name': 'TextField',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/textfield.png',
+    'description': 'Savvion text field widget.',
+    'category': 'Text Field',
+    'args': [
+		{'type':{'label':'Type', 'type':'STRING', 'defaultValue': 'text', 
+                  'values': [{'name':'text', 'value':'Text'},{'name':'password', 'value':'Password'},{'name':'text(view only)', 'value':'Label'}]}},
+		{'size':{'label':'Size', 'type':'INTEGER', 'defaultValue': '32', 'description':'Number of visible characters in the textfield'}},
+		{'maxlength':{'label':'Max Length', 'type':'INTEGER', 'defaultValue': '50', 'description':'Maximum number of characters allowed.'}},
+		{'readonly':{'label':'Read Only', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'disabled':{'label':'Disabled', 'type':'BOOLEAN', 'defaultValue': 'false'}}
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }, 
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/textfield/onChange',
+					'/sbm/textfield/onClick',
+					'/sbm/textfield/onFocus',
+					'/sbm/textfield/onBlur',
+					'/sbm/textfield/onKeyPress',
+					'/sbm/textfield/onKeyUp',
+					'/sbm/textfield/onMouseDown']       
+    },
+    'validation': [
+        {'type':'none',
+          'label':'None',
+          'options':[],
+          'selected':'true'
+        },
+	{'type':'length', 
+          'label':'%widget.validation.type.length.label',
+          'options':['validateOn', 'isRequired', 'minChars', 'maxChars','requiredValidationMsg']
+        },
+        {'type':'integer', 
+          'label':'Integer',
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'textfieldRequiredMsg']
+        },
+        {'type':'email',
+          'label':'Email',
+          'options':['validateOn', 'isRequired', 'minChars', 'maxChars', 'textfieldRequiredMsg']
+        },
+        {'type':'date',
+          'label':'Date',
+          'options':['formatDate', 'validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'textfieldRequiredMsg']
+        },
+        {'type':'time',
+          'label':'Time',
+          'options':['formatTime', 'validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'textfieldRequiredMsg']
+        },
+        {'type':'credit_card',
+          'label':'Credit Card',
+          'options':['formatCreditCard', 'validateOn', 'isRequired', 'useCharacterMasking', 'textfieldRequiredMsg']
+        },
+        {'type':'zip_code',
+          'label':'Zip Code',
+          'options':['formatZipCode', 'validateOn', 'isRequired', 'useCharacterMasking', 'pattern', 'textfieldRequiredMsg']
+        },
+        {'type':'social_security number',
+          'label':'Social Security Number',
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'pattern', 'textfieldRequiredMsg']
+        },
+        {'type':'currency',
+          'label':'Currency',
+          'options':['formatCurrency', 'validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'textfieldRequiredMsg']
+        },
+        {'type':'real',
+          'label':'Real',
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'textfieldRequiredMsg']
+        },
+        {'type':'ip',
+          'label':'IP',
+          'options':['formatIP', 'validateOn', 'isRequired', 'useCharacterMasking', 'textfieldRequiredMsg']
+        },
+        {'type':'url',
+          'label':'URL',
+          'options':['validateOn', 'isRequired', 'minChars', 'maxChars', 'textfieldRequiredMsg']
+        },
+        {'type':'phone_number',
+          'label':'Phone Number',
+          'options':['formatPhone', 'validateOn', 'useCharacterMasking', 'isRequired', 'pattern', 'textfieldRequiredMsg']
+        },
+        {'type':'custom',
+          'label':'Custom',
+          'options':['pattern','isRequired', 'textfieldRequiredMsg','customRegularExpression']
+        }
+    ]
+}

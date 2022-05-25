@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.utility_methods" path="jst/utility" icon="fldr_obj.gif"/>
+
+  <item label="sendEmail()" path="jst/utility" icon="template.gif">
+    <grid content="EXPRESSION" description="JSTools: sendEmail()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: sendEmail()</label>
+        <label row="1" col="0">$Scripting.label.address</label>
+        <list row="1" col="1" id="address" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT">user@host.com</reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+        <label row="2" col="0">$Scripting.label.subject</label>
+        <list row="2" col="1" id="subject" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+        <label row="3" col="0">$Scripting.label.message</label>
+        <list row="3" col="1" id="content" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value" presentation="AREA">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.sendEmail(""+gel.getValue(${address}), ""+gel.getValue(${subject}), ""+gel.getValue(${content}));</template>
+    </grid>
+  </item>
+
+  <item label="writeLog()" path="jst/utility" icon="template.gif">
+    <grid content="EXPRESSION" description="JSTools: writeLog()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: writeLog()</label>
+        <label row="1" col="0">$Scripting.label.message</label>
+        <list row="1" col="1" id="message" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid id="session" content="VALUE_EXPRESSION" description="Context Variable">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.writeLog(""+gel.getValue(${message}));</template>
+    </grid>
+  </item>
+
+</palette>

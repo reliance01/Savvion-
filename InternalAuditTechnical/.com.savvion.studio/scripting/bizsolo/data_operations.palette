@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.data_operations" path="data_operations" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.set_dataslot" path="data_operations" icon="template.gif">
+    <grid content="EXPRESSION" description="$Scripting.description.set_dataslot">
+      <widgets>
+        <label col="0">$Scripting.label.set_the_value_of</label>
+        <treeChoiceWidget id="dataslot" col="1" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+          <selection type="DATASLOT"/>
+        </treeChoiceWidget>
+        <label col="2">$Scripting.label.to</label>
+        <list col="3" id="value" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+          <!-- default: set to constant -->
+          <grid content="VALUE_EXPRESSION" description="Constant">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"/>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+          
+        </list>
+      </widgets>
+      <template>gel.copy(${value}, "@${dataslot}");</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.set_variable" path="data_operations" icon="template.gif">
+    <grid content="EXPRESSION" description="$Scripting.description.set_variable">
+      <widgets>
+        <label col="0">$Scripting.label.set_the_value_of_var</label>
+        <entryWidget id="var" col="1"/>
+        <label col="2">$Scripting.label.to</label>
+        <list col="3" id="value" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+          <!-- default: set to constant -->
+          <grid content="VALUE_EXPRESSION" description="Constant">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"/>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+          
+        </list>
+      </widgets>
+      <template>gel.copy(${value}, "%${var}");</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.copy_value" path="data_operations" icon="template.gif">
+    <grid content="EXPRESSION" description="$Scripting.description.copy_value">
+      <widgets>
+        <label col="0">$Scripting.label._copy</label>
+        <list col="1" id="src" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+          <!-- default: set to constant -->
+          <grid content="VALUE_EXPRESSION" description="Constant">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"/>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+          
+        </list>
+        <label col="2">$Scripting.label.to</label>
+        <list col="3" id="dst" allowedContent="MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+          <!-- default: set to dataslot -->
+          <grid content="MUTABLE_VALUE_EXPRESSION" description="Dataslot Value">
+            <widgets>
+              <label col="0">$Scripting.label._dataslot_</label>
+              <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+                <selection type="DATASLOT"/>
+              </treeChoiceWidget>
+            </widgets>
+            <template>"@${dataslot}"</template>
+          </grid>
+          
+        </list>
+      </widgets>
+      <template>gel.copy(${src}, ${dst});</template>
+    </grid>
+  </item>
+
+</palette>

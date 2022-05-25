@@ -1,0 +1,25 @@
+application common
+module common_rules
+import RulewizardUtil;
+
+{
+	MonthLookupInfopad := new persistent infopad<cell{nonthName:string}>[12][1]("MonthLookupInfopad");
+	MonthLookupInfopad.addRowLabels("Months",list{"January","February","March","April","May","June","July","August","September","October","November","December"});
+	MonthLookupInfopad[1][1].nonthName := "January";
+	MonthLookupInfopad[2][1].nonthName := "February";
+	MonthLookupInfopad[3][1].nonthName := "March";
+	MonthLookupInfopad[4][1].nonthName := "April";
+	MonthLookupInfopad[5][1].nonthName := "May";
+	MonthLookupInfopad[6][1].nonthName := "June";
+	MonthLookupInfopad[7][1].nonthName := "July";
+	MonthLookupInfopad[8][1].nonthName := "August";
+	MonthLookupInfopad[9][1].nonthName := "September";
+	MonthLookupInfopad[10][1].nonthName := "October";
+	MonthLookupInfopad[11][1].nonthName := "November";
+	MonthLookupInfopad[12][1].nonthName := "December";
+}
+
+finalize
+{
+	discard(MonthLookupInfopad);
+}

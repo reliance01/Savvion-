@@ -1,0 +1,7 @@
+<configform synchronous="true" version="1.2">
+    <block title="Inputs" description="Inputs" hidden="false">
+        <param name="SESSION_TOKEN_SUPPORT" access="HIDDEN" description="SESSION_TOKEN_SUPPORT" type="java.lang.String" value="false"/>
+    </block>
+    <block title="Outputs" description="Outputs" hidden="false">
+    </block>
+</configform>

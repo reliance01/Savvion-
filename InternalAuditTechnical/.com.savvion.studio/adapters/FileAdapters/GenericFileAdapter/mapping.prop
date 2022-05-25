@@ -1,0 +1,9 @@
+adapter-configurator=com.savvion.sbm.adapters.file.FileAdapterConfiguratorDialog
+map-configurator=com.savvion.sbm.adapters.framework.GroupMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.GroupMapper
+AdapterCategory=FileAdapters
+AdapterName=GenericFileAdapter
+adapter-class=com.savvion.sbm.adapters.file.FileAdapter
+log-level=10
+icon=disk_blue.png
+adaplet=false

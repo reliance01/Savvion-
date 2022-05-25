@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Process SYSTEM "../../common/processtemplates/processTemplate.dtd">
+<Process name="ICMExcessRefundApp" type="BIZLOGIC">
+  <Label>ICMExcessRefundApp</Label>
+  <Description/>
+  <Application name="ICMExcessRefundApp"/>
+  <Category level="0"/>
+  <Category level="1"/>
+  <Group/>
+  <Manager>icm</Manager>
+  <EstimatedDuration>1d</EstimatedDuration>
+  <TimeCreated>1386060801939</TimeCreated>
+  <Author>rgicon</Author>
+  <Version/>
+  <Attributes>
+    <Attribute name="ProcessType" required="true">
+      <Label>Process Type</Label>
+      <Description>Type of the process</Description>
+      <Value>BusinessProcess</Value>
+    </Attribute>
+    <Attribute name="Objective" required="false">
+      <Label>Objective</Label>
+      <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Goal" required="false">
+      <Label>Goal</Label>
+      <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="OrganizationalUnit" required="false">
+      <Label>Organizational Unit</Label>
+      <Description>The organizational unit that owns this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Influencers" required="false">
+      <Label>Influencers</Label>
+      <Description>People who have influenced development of this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Risks" required="false">
+      <Label>Risks</Label>
+      <Description>Risks associated with this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Rewards" required="false">
+      <Label>Rewards</Label>
+      <Description>Potential rewards on investment for this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Executable" required="false">
+      <Label>Executable</Label>
+      <Description>Can the Process  Ever be made executable?</Description>
+      <Value>Yes</Value>
+    </Attribute>
+  </Attributes>
+  <Alerts>
+    <Alert name="Default">
+      <AlertSeverity>High</AlertSeverity>
+      <AlertMessage>This is the default alert.</AlertMessage>
+      <AlertDescription/>
+      <AlertCondition type="java:expression"/>
+      <AlertDelivery type="sbm">
+        <AlertRecipient type="USER">${@CREATOR}</AlertRecipient>
+      </AlertDelivery>
+    </Alert>
+  </Alerts>
+  <AtomicWS height="36" name="Start" width="36" worktime="false" x="216" y="24">
+    <AtomicType>START</AtomicType>
+    <PerformingApp type="JSP">Start.jsp</PerformingApp>
+    <Priority>MEDIUM</Priority>
+    <Dataoutput>Approver</Dataoutput>
+    <Dataoutput>ApproverStatus</Dataoutput>
+    <Dataoutput>Branch</Dataoutput>
+    <Dataoutput>ClassName</Dataoutput>
+    <Dataoutput>InstrumentFrom</Dataoutput>
+    <Dataoutput>InstrumentId</Dataoutput>
+    <Dataoutput>InsuredName</Dataoutput>
+    <Dataoutput>PayeeName</Dataoutput>
+    <Dataoutput>PayTo</Dataoutput>
+    <Dataoutput>PolicyNo</Dataoutput>
+    <Dataoutput>PrintLocation</Dataoutput>
+    <Dataoutput>Product</Dataoutput>
+    <Dataoutput>ProposalID</Dataoutput>
+    <Dataoutput>RefundAmount</Dataoutput>
+    <Dataoutput>RefundType</Dataoutput>
+    <Dataoutput>Remarks</Dataoutput>
+    <Dataoutput>RequestDate</Dataoutput>
+    <Dataoutput>RequestedBy</Dataoutput>
+    <Dataoutput>TransactionId</Dataoutput>
+    <Format editable="true" input="Approver" label="Approver:" password="false" required="false" size="20" type="text">
+      <Label>Approver:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ApproverStatus" label="ApproverStatus:" required="false" type="combo">
+      <Label>ApproverStatus:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="Branch" label="Branch:" password="false" required="false" size="20" type="text">
+      <Label>Branch:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ClassName" label="Class:" password="false" required="false" size="20" type="text">
+      <Label>Class:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="InstrumentFrom" label="InstrumentFrom:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentFrom:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="InstrumentId" label="InstrumentId:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="InsuredName" label="InsuredName:" password="false" required="false" size="20" type="text">
+      <Label>InsuredName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="PayeeName" label="PayeeName:" password="false" required="false" size="20" type="text">
+      <Label>PayeeName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="PayTo" label="PayTo:" password="false" required="false" size="20" type="text">
+      <Label>PayTo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="PolicyNo" label="PolicyNo:" password="false" required="false" size="20" type="text">
+      <Label>PolicyNo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="PrintLocation" label="PrintLocation:" password="false" required="false" size="20" type="text">
+      <Label>PrintLocation:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="Product" label="Product:" password="false" required="false" size="20" type="text">
+      <Label>Product:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ProposalID" label="ProposalID:" password="false" required="false" size="20" type="text">
+      <Label>ProposalID:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="RefundAmount" label="RefundAmount:" password="false" required="false" size="20" type="text">
+      <Label>RefundAmount:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="RefundType" label="RefundType:" password="false" required="false" size="20" type="text">
+      <Label>RefundType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="Remarks" label="Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Remarks:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="RequestDate" label="RequestDate:" password="false" required="false" size="20" type="text">
+      <Label>RequestDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="RequestedBy" label="RequestedBy:" password="false" required="false" size="20" type="text">
+      <Label>RequestedBy:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="TransactionId" label="TransactionId:" password="false" required="false" size="20" type="text">
+      <Label>TransactionId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Option name="Instructions" visible="true"/>
+    <Option name="Priority" visible="true"/>
+    <Option name="StartDate" visible="false"/>
+    <Option name="DueDate" visible="false"/>
+    <Option name="Reassign" visible="true"/>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="ApproveExcessRefund" width="108" worktime="false" x="180" y="108">
+    <Label>ApproveExcessRefund</Label>
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@Approver</Performer>
+    <PerformingApp type="JSP">ApproveExcessRefund.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <PreFunction type="javascript:function">/* type your javascript function body here */
+
+var proposalid = jst.getDataSlot("ProposalID");
+
+
+
+var sb = new java.lang.StringBuffer();
+
+sb.append("&lt;html&gt;&lt;style type=\"text/css\" &gt;&lt;!--.mailbody {font-family: Calibri, Helvetica,sans-serif;font-size:14px}--&gt;&lt;!--.tabletitle {width:200px;font-weight:bold;color:#000080;}--&gt;&lt;!--.tablecell {width:200px;}--&gt;&lt;!--.tablecls {width:800px; cellpadding:15px}--&gt;&lt;/style&gt;&lt;body class=\"mailbody\"&gt;&lt;br/&gt;");
+
+sb.append("Dear Approver, ");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Proposal " + proposalid + " is pending for excess refund approval in Savvion, kindly taking necessary action");
+
+sb.append("&lt;/table&gt;");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Request you to do the needful. Click &lt;b&gt;&lt;a href=\"http://bpm.reliancegeneral.co.in/sbm/bpmportal/login.jsp\" target=\"_blank\"&gt;here&lt;/a&gt; &lt;/b&gt;on this link to login into the system");				
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Thank you,");
+
+sb.append("&lt;br/&gt;Reliance Application Support Team");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ************* THIS IS SYSTEM GENERATED MAIL. PLEASE DO NOT REPLY. **************&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;");
+
+sb.append("&lt;br/&gt;&lt;/body&gt;&lt;/html&gt;");
+
+
+
+var userMailID = jst.getDataSlot("Approver");
+
+var mailFrom = "rgicl.applnsupport@reliancegeneral.co.in";
+
+var hm = new java.util.HashMap();
+
+hm.put("TO", userMailID);
+
+hm.put("FROM", mailFrom);
+
+hm.put("SUBJECT", "Proposal " + proposalid + " is pending for excess refund approval in Savvion");
+
+hm.put("BODY", sb);
+
+hm.put("WORKSTEP_NAME", jst.getWorkstepName());
+
+hm.put("WORKITEM_NAME", jst.getWorkstepName());
+
+hm.put("PTID",jst.getProcessInstanceID());
+
+hm.put("PIID",jst.getProcessInstanceID());
+
+var ems = jst.loadClass("com.icm.EmailSender");
+
+var obj = ems.newInstance();
+
+obj.send(hm);</PreFunction>
+    <PostFunction type="javascript:function">var blsession = blserver.connect("rgicl", "rgicl");
+
+var piId = jst.getProcessInstanceID();
+
+var wsName = jst.getWorkstepName();
+
+var wsi = blserver.getWorkStepInstance(blsession, piId, wsName);
+
+var lst = wsi.getCompletedWorkItemPerformer();
+
+jst.putDataSlot("Approver", lst.get(lst.size()-1));</PostFunction>
+    <Datainput>Remarks</Datainput>
+    <Datainput>ApproverStatus</Datainput>
+    <Datainput>TransactionId</Datainput>
+    <Datainput>RequestedBy</Datainput>
+    <Datainput>RequestDate</Datainput>
+    <Datainput>RefundType</Datainput>
+    <Datainput>RefundAmount</Datainput>
+    <Datainput>ProposalID</Datainput>
+    <Datainput>Product</Datainput>
+    <Datainput>PrintLocation</Datainput>
+    <Datainput>PayTo</Datainput>
+    <Datainput>InsuredName</Datainput>
+    <Datainput>InstrumentFrom</Datainput>
+    <Datainput>ClassName</Datainput>
+    <Datainput>Branch</Datainput>
+    <Datainput>PayeeName</Datainput>
+    <Dataoutput>Remarks</Dataoutput>
+    <Dataoutput>ApproverStatus</Dataoutput>
+    <Format editable="true" input="Remarks" label="Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Remarks:</Label>
+    </Format>
+    <Format editable="true" input="ApproverStatus" label="Approver Status:" password="false" required="false" size="20" type="text">
+      <Label>Approver Status:</Label>
+    </Format>
+    <Format editable="false" input="TransactionId" label="Transaction Id:" password="false" required="false" size="20" type="text">
+      <Label>Transaction Id:</Label>
+    </Format>
+    <Format editable="false" input="RequestedBy" label="Requested By:" password="false" required="false" size="20" type="text">
+      <Label>Requested By:</Label>
+    </Format>
+    <Format editable="false" input="RequestDate" label="Request Date:" password="false" required="false" size="20" type="text">
+      <Label>Request Date:</Label>
+    </Format>
+    <Format editable="false" input="RefundType" label="Refund Type:" password="false" required="false" size="20" type="text">
+      <Label>Refund Type:</Label>
+    </Format>
+    <Format editable="false" input="RefundAmount" label="Refund Amount:" password="false" required="false" size="20" type="text">
+      <Label>Refund Amount:</Label>
+    </Format>
+    <Format editable="false" input="ProposalID" label="Proposal ID:" password="false" required="false" size="20" type="text">
+      <Label>Proposal ID:</Label>
+    </Format>
+    <Format editable="false" input="Product" label="Product:" password="false" required="false" size="20" type="text">
+      <Label>Product:</Label>
+    </Format>
+    <Format editable="false" input="PrintLocation" label="Print Location:" password="false" required="false" size="20" type="text">
+      <Label>Print Location:</Label>
+    </Format>
+    <Format editable="false" input="PayTo" label="Pay To:" password="false" required="false" size="20" type="text">
+      <Label>Pay To:</Label>
+    </Format>
+    <Format editable="false" input="InsuredName" label="Insured Name:" password="false" required="false" size="20" type="text">
+      <Label>Insured Name:</Label>
+    </Format>
+    <Format editable="false" input="InstrumentFrom" label="Instrument From:" password="false" required="false" size="20" type="text">
+      <Label>Instrument From:</Label>
+    </Format>
+    <Format editable="false" input="ClassName" label="Class:" password="false" required="false" size="20" type="text">
+      <Label>Class:</Label>
+    </Format>
+    <Format editable="false" input="Branch" label="Branch:" password="false" required="false" size="20" type="text">
+      <Label>Branch:</Label>
+    </Format>
+    <Format editable="false" input="PayeeName" label="Payee Name:" password="false" required="false" size="20" type="text">
+      <Label>Payee Name:</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="36" name="End 1" width="36" worktime="false" x="216" y="288">
+    <AtomicType>END</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <ExternalWS height="60" name="UpdateExcessRefundStatus" width="108" x="180" y="192">
+    <Label>UpdateExcessRefundStatus</Label>
+    <Performer category="WebServiceAdapters" generate="false" managed="true" name="GenericWebServiceAdapter">com.savvion.sbm.adapters.webservice.WebServiceAdapter</Performer>
+    <PerformBy>execute</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Priority>MEDIUM</Priority>
+    <Datainput>Approver</Datainput>
+    <Datainput>TransactionId</Datainput>
+    <Datainput>Remarks</Datainput>
+    <Datainput>ApproverStatus</Datainput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)"/>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <Link Name="Connection 5" default="true">
+    <Label>Connection 5</Label>
+    <Source cp="2">UpdateExcessRefundStatus</Source>
+    <Point x="234.0" y="252.0"/>
+    <Point x="234.0" y="288.0"/>
+    <Target cp="0">End 1</Target>
+  </Link>
+  <Link Name="Connection 2" default="true">
+    <Label>Connection 2</Label>
+    <Source cp="2">ApproveExcessRefund</Source>
+    <Point x="234.0" y="168.0"/>
+    <Point x="234.0" y="192.0"/>
+    <Target cp="0">UpdateExcessRefundStatus</Target>
+  </Link>
+  <Link Name="Connection 1" default="true">
+    <Label>Connection 1</Label>
+    <Source cp="2">Start</Source>
+    <Point x="234.0" y="60.0"/>
+    <Point x="234.0" y="108.0"/>
+    <Target cp="0">ApproveExcessRefund</Target>
+  </Link>
+  <Dataslot Name="TransactionId" category="User" name="TransactionId" type="STRING">
+    <Label>TransactionId:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="TransactionId:" password="false" required="false" size="20" type="text">
+      <Label>TransactionId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProposalID" category="User" name="ProposalID" type="STRING">
+    <Label>ProposalID:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ProposalID:" password="false" required="false" size="20" type="text">
+      <Label>ProposalID:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RequestDate" category="User" name="RequestDate" type="STRING">
+    <Label>RequestDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RequestDate:" password="false" required="false" size="20" type="text">
+      <Label>RequestDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Product" category="User" name="Product" type="STRING">
+    <Label>Product:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Product:" password="false" required="false" size="20" type="text">
+      <Label>Product:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ClassName" category="User" name="ClassName" type="STRING">
+    <Label>Class:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Class:" password="false" required="false" size="20" type="text">
+      <Label>Class:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InsuredName" category="User" name="InsuredName" type="STRING">
+    <Label>InsuredName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InsuredName:" password="false" required="false" size="20" type="text">
+      <Label>InsuredName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RefundType" category="User" name="RefundType" type="STRING">
+    <Label>RefundType:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RefundType:" password="false" required="false" size="20" type="text">
+      <Label>RefundType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RefundAmount" category="User" name="RefundAmount" type="STRING">
+    <Label>RefundAmount:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RefundAmount:" password="false" required="false" size="20" type="text">
+      <Label>RefundAmount:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InstrumentFrom" category="User" name="InstrumentFrom" type="STRING">
+    <Label>InstrumentFrom:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InstrumentFrom:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentFrom:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PayTo" category="User" name="PayTo" type="STRING">
+    <Label>PayTo:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PayTo:" password="false" required="false" size="20" type="text">
+      <Label>PayTo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PrintLocation" category="User" name="PrintLocation" type="STRING">
+    <Label>PrintLocation:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PrintLocation:" password="false" required="false" size="20" type="text">
+      <Label>PrintLocation:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Branch" category="User" name="Branch" type="STRING">
+    <Label>Branch:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Branch:" password="false" required="false" size="20" type="text">
+      <Label>Branch:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RequestedBy" category="User" name="RequestedBy" type="STRING">
+    <Label>RequestedBy:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RequestedBy:" password="false" required="false" size="20" type="text">
+      <Label>RequestedBy:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Approver" category="User" name="Approver" type="STRING">
+    <Label>Approver:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Approver:" password="false" required="false" size="20" type="text">
+      <Label>Approver:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Remarks" category="User" name="Remarks" type="STRING">
+    <Label>Remarks:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Remarks:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="ApproverStatus" category="User" name="ApproverStatus" type="STRING">
+    <Label>ApproverStatus:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ApproverStatus:" required="false" type="combo">
+      <Label>ApproverStatus:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PolicyNo" category="User" name="PolicyNo" type="STRING">
+    <Label>PolicyNo:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PolicyNo:" password="false" required="false" size="20" type="text">
+      <Label>PolicyNo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InstrumentId" category="User" name="InstrumentId" type="STRING">
+    <Label>InstrumentId:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InstrumentId:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PayeeName" category="User" name="PayeeName" type="STRING">
+    <Label>PayeeName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PayeeName:" password="false" required="false" size="20" type="text">
+      <Label>PayeeName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <History>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1630317933303" to="http://10.62.180.35:18793/sbm/deployment">Mon Aug 30 15:35:33 IST 2021</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1505905265413" to="http://10.65.5.80:18793/sbm/deployment">Wed Sep 20 16:31:05 IST 2017</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1505905241858" to="http://10.65.5.81:18793/sbm/deployment">Wed Sep 20 16:30:41 IST 2017</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1505905020490" to="http://10.65.5.81:18793/sbm/deployment">Wed Sep 20 16:27:00 IST 2017</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1505905001137" to="http://10.65.5.80:18793/sbm/deployment">Wed Sep 20 16:26:41 IST 2017</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1505904841423" to="http://10.65.5.158:18793/sbm/deployment">Wed Sep 20 16:24:01 IST 2017</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1505904540679" to="http://10.65.5.158:18793/sbm/deployment">Wed Sep 20 16:19:00 IST 2017</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1468707440803" to="http://10.65.5.81:18793/sbm/deployment">Sun Jul 17 03:47:20 IST 2016</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1468706690841" to="http://10.65.5.80:18793/sbm/deployment">Sun Jul 17 03:34:50 IST 2016</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1468651215945" to="http://10.65.5.80:18793/sbm/deployment">Sat Jul 16 12:10:15 IST 2016</Deployed>
+    <Created as="ICMExcessRefundApp" by="rgicon" on="1386060801939">Tue Dec 03 14:23:21 IST 2013</Created>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1387362352533" to="http://10.65.15.160:8080/sbm/deployment">Wed Dec 18 15:55:52 IST 2013</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1387796846806" to="http://10.65.15.160:8080/sbm/deployment">Mon Dec 23 16:37:26 IST 2013</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1389069562090" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 07 10:09:22 IST 2014</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1389071090505" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 07 10:34:50 IST 2014</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1389071250228" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 07 10:37:30 IST 2014</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1389950278565" to="http://10.65.5.55:18793/sbm/deployment">Fri Jan 17 14:47:58 IST 2014</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1489639892266" to="http://10.65.5.80:18793/sbm/deployment">Thu Mar 16 10:21:32 IST 2017</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="bpmadmin" on="1622706721575" to="http://rgisavuat:19793/sbm/deployment">Thu Jun 03 13:22:01 IST 2021</Deployed>
+    <Deployed as="ICMExcessRefundApp" by="rgicl" on="1626146709682" to="http://10.62.182.42:18793/sbm/deployment">Tue Jul 13 08:55:09 IST 2021</Deployed>
+  </History>
+  <Repository/>
+</Process>

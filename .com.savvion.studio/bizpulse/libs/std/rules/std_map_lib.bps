@@ -1,0 +1,38 @@
+application std
+module std_map_lib
+
+//
+// Map related functions
+//
+fun put(m: map<string, `x>, key: string, value: `x): void {
+	m[key] := value;
+}
+fun get(m: map<string, `x>, key: string): `x {
+	return m[key];
+}
+fun containsKey(m: map<string, `x>, key: string): boolean {
+	return m[key] != nil; // nil value is not allowed in (persistent)map
+}
+fun isEmpty(m: map<string, `x>): boolean {
+	return m.size() = 0; 
+}
+
+type entry<`x, `y> = {key: `x, value: `y};
+
+fun filter(m: map<`x, `y>, cond: entry<`x, `y>->boolean): map<`x, `y> {
+	val fm = map{};
+	foreach e: m 
+	where cond(e) 
+	{ fm[e.key] := e.value; }
+	return fm;
+}
+
+fun loop(m: map<`x, `y>, action: entry<`x, `y>->`z): void {
+	foreach e: m 
+	{ action(e); }
+}
+fun loop(m: map<`x, `y>, cond: entry<`x, `y>->boolean, action: entry<`x, `y>->`z): void {
+	foreach e: m 
+	where cond(e) 
+	{ action(e); }
+}

@@ -1,0 +1,112 @@
+application std
+module util
+
+fun foldl(f: `x*`y->`x, a:`x, bs:list<`y>) {
+    var a0 = a;
+    for (var iter = bs.iterator(); iter.hasNext(); ) {
+	val b = iter.next();
+	a0 := f(a0, b);
+    }
+    return a0;
+}
+
+fun sum(xs: list<int>) {
+    return foldl(fn(x: int, y: int)=>(x+y), 0, xs);
+}
+fun sum(xs: list<double>) {
+    return foldl(fn(x: double, y: double)=>(x+y), 0.0, xs);
+}
+
+fun max(xs: list<int>) {
+    return foldl(fn(x: int, y: int)=>((x = nil)?y:((x > y)?x:y)), nil, xs);
+}
+fun max(xs: list<double>) {
+    return foldl(fn(x: double, y: double)=>((x = nil)?y:((x > y)?x:y)), nil, xs);
+}
+fun min(xs: list<int>) {
+    return foldl(fn(x: int, y: int)=>((x = nil)?y:((x < y)?x:y)), nil, xs);
+}
+fun min(xs: list<double>) {
+    return foldl(fn(x: double, y: double)=>((x = nil)?y:((x < y)?x:y)), nil, xs);
+}
+
+fun min(x: int, y: int) { return (x < y)?x:y; }
+fun min(x: int, y: double) { return (x < y)?(cast(double)x):y; }
+fun min(x: double, y: int) { return (x < y)?x:(cast(double)y); }
+fun min(x: double, y: double) { return (x < y)?x:y; }
+
+fun max(x: int, y: int):int { return (x > y)?x:y; }
+fun max(x: int, y: double):double { return (x > y)?(cast(double)x):y; }
+fun max(x: double, y: int):double { return (x > y)?x:(cast(double)y); }
+fun max(x: double, y: double):double { return (x > y)?x:y; }
+
+fun avg(n1: int, n2: int, count: int, weight: int):int { 
+    return (n1*count+n2*weight)/(count+weight); 
+}
+fun avg(n1: int, n2: double, count: int, weight: int):double { 
+    return (n1*count+n2*weight)/(count+weight); 
+}
+fun avg(n1: double, n2: int, count: int, weight: int):double { 
+    return (n1*count+n2*weight)/(count+weight);
+}
+fun avg(n1: double, n2: double, count: int, weight: int):double { 
+    return (n1*count+n2*weight)/(count+weight);
+}
+
+/*
+// for 4.5
+fun trace(s: string) {
+    ~java.lang.System::out.println(s);
+}
+*/
+
+// moved to calendar::calendar_rules.bps
+
+// duration in millisec
+fun dueDate(startDate: date, duration: int): date {
+    return new ~java.util.Date(toInt(startDate)+duration);
+}
+fun duration(startDate: date, endDate: date): int {
+    return toInt(endDate)-toInt(startDate);
+}
+
+fun bdueDate(startDate: date, duration: int): date {
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::calendar().dueDate(startDate, duration);
+}
+fun bdueDate(startDate: date, duration: int, calendarName: string): date {
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::calendar().dueDate(startDate, duration, calendarName);
+}
+fun bduration(startDate: date, endDate: date): int {
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::calendar().duration(startDate, endDate);
+}
+fun bduration(startDate: date, endDate: date, calendarName: string): int {
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::calendar().duration(startDate, endDate, calendarName);
+}
+fun isSystemCalendarSet(): boolean {
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::calendar().isSystemCalendarSet();
+}
+fun createRuleAlert(name: string, templateName: string, moduleName: string, pStructureType: string, pStructureName: string): void{
+    ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().createRuleAlert(name, templateName, moduleName, pStructureType, pStructureName);    
+}	
+fun publishRuleAlert(templateName: string, name: string, rctx: ~java.util.Map): void{
+    ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().publishRuleAlert(templateName, name, rctx);    
+}
+fun getVariables(templateName: string, name: string): ~java.util.Set{
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().getVariables(templateName, name);
+}
+fun containsAlerts(templateName: string): boolean{
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().containsAlerts(templateName);
+}
+fun loadAlerts(templateName: string): void{
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().loadAlerts(templateName);
+}
+fun unloadAlerts(templateName: string): void{
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().unloadAlerts(templateName);
+}
+fun reloadAlerts(templateName: string): void{
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().reloadAlerts(templateName);
+}
+fun getAlertsAsString(): string{
+    return ~com.savvion.sbm.bizpulse.common.intf.__bpctx::alert().getAlertsAsString();
+}
+

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+
+  <category label="$Scripting.category.comparisons" path="boolean/comparisons" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.compare_with_number" path="boolean/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.compare_with_number">
+      <template>Bm.util.simpleCompareConstant('${widget}', '${operation}', '${value}', 'number')</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">The value of</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*NUMBER_WIDGETS">
+            <selection type="WIDGET"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="operation" row="0" rowspan="1" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.equals" type="constant">==</selection>
+            <choice presentation="$Scripting.operation.equals" type="constant">==</choice>
+            <choice presentation="$Scripting.operation.does_not_equal" type="constant">!=</choice>
+            <choice presentation="$Scripting.operation.is_less_than" type="constant">&lt;</choice>
+            <choice presentation="$Scripting.operation.is_greater_than" type="constant">&gt;</choice>
+            <choice presentation="$Scripting.operation.is_less_than_or_equal_to" type="constant">&lt;=</choice>
+            <choice presentation="$Scripting.operation.is_greater_than_or_equal_to" type="constant">&gt;=</choice>
+          </choiceWidget>
+          <entryWidget row="0" col="3" rowspan="1" colspan="1" id="value" presentation="FIELD" validation="FLOAT">
+            <reference type="CONSTANT">0</reference>
+          </entryWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.compare_with_string" path="boolean/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.compare_with_string">
+      <template>Bm.util.simpleCompareConstant('${widget}', '${operation}', '${value}', 'string')</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label._the_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*STRING_WIDGETS">
+            <selection type="WIDGET"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="operation" row="0" rowspan="1" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.equals" type="constant">==</selection>
+            <choice presentation="$Scripting.operation.equals" type="constant">==</choice>
+            <choice presentation="$Scripting.operation.does_not_equal" type="constant">!=</choice>
+          </choiceWidget>
+          <entryWidget row="0" col="3" rowspan="1" colspan="1" id="value" presentation="FIELD" validation="NONE">
+            <reference type="CONSTANT" encoding="JAVA_STRING"></reference>
+          </entryWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.empty_nonempty_string" path="boolean/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.empty_nonempty_string">
+      <template>${operation}Bm.util.isEmptySimple('${widget}')</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label._the_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*STRING_WIDGETS">
+            <selection type="WIDGET"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="operation" row="0" rowspan="1" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.is_empty" type="constant"></selection>
+            <choice presentation="$Scripting.operation.is_empty" type="constant"></choice>
+            <choice presentation="$Scripting.operation.is_not_empty" type="constant">!</choice>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.string_length" path="boolean/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.string_length">
+      <template>Bm.util.getLength(Bm.util.getSimpleValue('${widget}')) ${operation} ${length}</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label._the_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*STRING_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="operation" row="0" rowspan="1" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.is_exactly" type="constant">==</selection>
+            <choice presentation="$Scripting.operation.is_exactly" type="constant">==</choice>
+            <choice presentation="$Scripting.operation.is_not" type="constant">!=</choice>
+            <choice presentation="$Scripting.operation.is_less_than" type="constant">&lt;</choice>
+            <choice presentation="$Scripting.operation.is_more_than" type="constant">&gt;</choice>
+            <choice presentation="$Scripting.operation.is_not_more_than" type="constant">&lt;=</choice>
+            <choice presentation="$Scripting.operation.is_at_least" type="constant">&gt;=</choice>
+          </choiceWidget>
+          <entryWidget row="0" col="3" rowspan="1" colspan="1" id="length" presentation="FIELD" validation="INTEGER">
+            <reference type="constant">0</reference>
+          </entryWidget>
+          <label row="0" col="4" rowspan="1" colspan="1">$Scripting.label.characters_long</label>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.compare_numeric_widgets" path="boolean/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.compare_numeric_widgets">
+      <template>Bm.util.simpleCompare('${widget1}', '${operation}', '${widget2}', 'number')</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label._the_numeric_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget1" row="0" rowspan="1" type="WIDGET" filter="*NUMBER_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="operation" row="0" rowspan="1" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.equals" type="constant">==</selection>
+            <choice presentation="$Scripting.operation.equals" type="constant">==</choice>
+            <choice presentation="$Scripting.operation.does_not_equal" type="constant">!=</choice>
+            <choice presentation="$Scripting.operation.is_less_than" type="constant">&lt;</choice>
+            <choice presentation="$Scripting.operation.is_greater_than" type="constant">&gt;</choice>
+            <choice presentation="$Scripting.operation.is_less_than_or_equal_to" type="constant">&lt;=</choice>
+            <choice presentation="$Scripting.operation.is_greater_than_or_equal_to" type="constant">&gt;=</choice>
+          </choiceWidget>
+          <label row="0" col="3" rowspan="1" colspan="1">$Scripting.label.the_value_of</label>
+          <choiceWidget col="4" colspan="1" id="widget2" row="0" rowspan="1" type="WIDGET" filter="*NUMBER_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.compare_string_widgets" path="boolean/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.compare_string_widgets">
+      <template>Bm.util.simpleCompare('${widget1}', '${operation}', '${widget2}', 'string')</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label._the_string_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget1" row="0" rowspan="1" type="WIDGET" filter="*STRING_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="operation" row="0" rowspan="1" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.equals" type="constant">==</selection>
+            <choice presentation="$Scripting.operation.equals" type="constant">==</choice>
+            <choice presentation="$Scripting.operation.does_not_equal" type="constant">!=</choice>
+          </choiceWidget>
+          <label row="0" col="3" rowspan="1" colspan="1">$Scripting.label.the_value_of</label>
+          <choiceWidget col="4" colspan="1" id="widget2" row="0" rowspan="1" type="WIDGET" filter="*STRING_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+</palette>

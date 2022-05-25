@@ -1,0 +1,10 @@
+#Sat Mar 19 14:39:58 IST 2022
+application.name=TechDeskSuspendedItems
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.webapp
+application.mainprocessname=TechDeskSuspendedItems
+module.id=f9dea2db-fceb-452d-82bd-416348d4938d
+module.version=8
+application.mainappfile=TechDeskSuspendedItems/WEB-INF/template/TechDeskSuspendedItems.swt
+module.name=TechDeskSuspendedItems
+application.root=TechDeskSuspendedItems

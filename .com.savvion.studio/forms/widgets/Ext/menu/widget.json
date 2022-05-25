@@ -1,0 +1,47 @@
+ {
+    'name': 'Menu',
+	'label': 'Menu',
+    'type': 'ext',
+    'version': '.9.6.3',
+    'jmakiVersion': '.9.6.3',    
+    'image': 'images/ext-menu.jpg',
+    'description': 'A menu widget.',
+    'category': 'Menu',
+    'value':{'type' : 'OBJECT',
+                'defaultValue':
+                {'menu' : [
+                 {'label': 'Some Topic',
+              	'menu': [
+             	  {'label':'Some Item', 'href':'http://www.sun.com'},
+                  {'label':'Some Item 2', 'href':'http://www.jmaki.com'}
+               	 ]},
+		         {'label': 'Some Other Topic',
+                  'menu': [
+		          {'label':'Some Other Item', 'href':'http://www.java.sun.com'},
+                  {'label':'Some Other Item 2',  action:{topic: '/mytopic', message: '2.jsp'}}
+               	 ]}
+            ]
+        }
+    },
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'libs' : [
+                   '../resources/libs/adapter/ext/ext-base.js',
+                   '../resources/libs/ext-all.js'
+               ],
+              'styles' : [
+                 '../resources/styles/css/ext-all.css',                 
+                 '../resources/styles/css/ytheme-aero.css'
+               ],
+              'resources' : [
+                '../resources/styles/images'
+               ]
+        }
+    },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': '/Ext/menu/onclick',
+       'description':'on onclick event publish to /jmaki/menu topic passing the corresponding string for the menu item if the active property is used.  If the href property is used then navigation goes to the URL represented by that corresponding string.'
+    }  
+  }

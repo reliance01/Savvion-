@@ -1,0 +1,686 @@
+<expressionset>
+  <getfield>sbm.util.getValue("${field}")</getfield>
+
+  <category>
+    <name>Op&#x00e9;rations sur les donn&#x00e9;es</name>
+    <description>Diverses op&#x00e9;rations</description>
+    <expressions>
+      <expression>
+        <name>Copier la valeur d'un champ</name>
+        <description>Copie la valeur d'un champ dans un autre champ</description>
+        <parameters>
+          <parameter name="field1" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="field2" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Copie la valeur du champ | ${field1} | dans le champ | ${field2}
+        </presentation>
+        <code>
+sbm.util.setValue('${field2}',sbm.util.getValue('${field1}'));
+        </code>
+      </expression>
+      <expression>
+        <name>Attribuer la valeur d'un champ</name>
+        <description>Attribue la valeur du champ &#x00e0; une constante</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+Attribuer la valeur du champ | ${field} | &#x00e0; | ${string}
+        </presentation>
+        <code>
+sbm.util.setValue('${field}', '${string}');
+        </code>
+      </expression>
+      <expression>
+        <name>Copier la valeur d'un composant d'interface graphique</name>
+        <description>Copie la valeur d'un composant d'interface graphique dans un autre composant d'interface graphique</description>
+        <parameters>
+          <parameter name="widget1" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="widget2" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+Copier la valeur du composant d'interface graphique | ${widget1} | dans | ${widget2}
+        </presentation>
+        <code>
+sbm.widgets.setValue('${widget2}',sbm.widgets.getValue('${widget1}'));
+        </code>
+      </expression>
+      <expression>
+        <name>Attribuer la valeur d'un composant d'interface graphique</name>
+        <description>Attribue la valeur d'un composant d'interface graphique &#x00e0; une constante</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+Attribuer la valeur du composant d'interface graphique | ${widget} | &#x00e0; | ${string}
+        </presentation>
+        <code>
+sbm.widgets.setValue('${widget}', '${string}');
+        </code>
+      </expression>
+    </expressions>
+  </category>
+  
+  <category>
+    <name>Effets d'un champ</name>
+    <description>Effets pour un champ de type form</description>
+    <expressions>
+      <expression>
+        <name>Appara&#x00ee;tre</name>
+        <description>Fait progressivement appara&#x00ee;tre un champ visible</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Faire appara&#x00ee;tre le champ | ${field}
+        </presentation>
+        <code>
+sbm.effects.Appear("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Apparition par diminution verticale</name>
+        <description>Fait appara&#x00ee;tre un champ par diminution verticale</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Faire appara&#x00ee;tre le champ | ${field} | par diminution verticale
+        </presentation>
+        <code>
+sbm.effects.BlindDown("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Disparition par diminution verticale</name>
+        <description>Fait dispara&#x00ee;tre un champ par diminution verticale</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre le champ | ${field} | par diminution verticale
+        </presentation>
+        <code>
+sbm.effects.BlindUp("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Disparition en tombant</name>
+        <description>Fait dispara&#x00ee;tre un champ en tombant</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre le champ | ${field} | en tombant
+        </presentation>
+        <code>
+sbm.effects.DropOut("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Effacement graduel</name>
+        <description>Fait dispara&#x00ee;tre un champ en l'effa&#x00e7;ant graduellement</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre le champ | ${field} | en l'effa&#x00e7;ant graduellement
+        </presentation>
+        <code>
+sbm.effects.Fade("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Effacement en se repliant</name>
+        <description>Fait dispara&#x00ee;tre un champ en le repliant</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre le champ | ${field} | en le repliant
+        </presentation>
+        <code>
+sbm.effects.Fold("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Secouer</name>
+        <description>Secoue un champ de gauche &#x00e0; droite</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Secouer le champ | ${field} | de gauche &#x00e0; droite 
+        </presentation>
+        <code>
+sbm.effects.Shake("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>R&#x00e9;tr&#x00e9;cir</name>
+        <description>R&#x00e9;tr&#x00e9;cit un champ jusqu'&#x00e0; sa disparition</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+R&#x00e9;tr&#x00e9;cir le champ | ${field} | jusqu'&#x00e0; sa disparition
+        </presentation>
+        <code>
+sbm.effects.Shrink("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>&#x00c9;craser</name>
+        <description>&#x00c9;crase un champ jusqu'&#x00e0; sa disparition</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+&#x00c9;craser le champ | ${field} | jusqu'&#x00e0; sa disparition
+        </presentation>
+        <code>
+sbm.effects.Squish("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>&#x00c9;teindre</name>
+        <description>&#x00c9;teint un champ</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+&#x00c9;teindre le champ | ${field}
+        </presentation>
+        <code>
+sbm.effects.SwitchOff("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>&#x00c9;clater</name>
+        <description>&#x00c9;clate un champ</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+&#x00c9;clater le champ | ${field}
+        </presentation>
+        <code>
+sbm.effects.Puff("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Faire palpiter</name>
+        <description>Fait palpiter un champ</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Faire palpiter le champ | ${field}
+        </presentation>
+        <code>
+sbm.effects.Pulsate("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Cacher</name>
+        <description>Rend un champ invisible</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Cacher le champ | ${field}
+        </presentation>
+        <code>
+sbm.util.hide("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>Afficher</name>
+        <description>Rendre un champ visible</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Afficher le champ | ${field}
+        </presentation>
+        <code>
+sbm.util.show("${field}");
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+  <category>
+    <name>Effets d'une DIV</name>
+    <description>Effets pour les sections HTML DIV</description>
+    <expressions>
+      <expression>
+        <name>Appara&#x00ee;tre</name>
+        <description>Fait progressivement appara&#x00ee;tre une section DIV visible</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Faire appara&#x00ee;tre la section DIV | ${div}
+        </presentation>
+        <code>
+sbm.effects.Appear("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Apparition par diminution verticale</name>
+        <description>Fait appara&#x00ee;tre une section DIV par diminution verticale</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Faire appara&#x00ee;tre la section DIV | ${div} | par diminution verticale
+        </presentation>
+        <code>
+sbm.effects.BlindDown("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Disparition par diminution verticale</name>
+        <description>Fait dispara&#x00ee;tre une section DIV par diminution verticale</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre la section DIV | ${div} | par diminution verticale
+        </presentation>
+        <code>
+sbm.effects.BlindUp("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Disparition en tombant</name>
+        <description>Fait dispara&#x00ee;tre une section DIV en tombant</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre la section DIV | ${div} | en tombant
+        </presentation>
+        <code>
+sbm.effects.DropOut("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Effacement graduel</name>
+        <description>Fait dispara&#x00ee;tre une section DIV en l'effa&#x00e7;ant graduellement</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre la section DIV | ${div} | en l'effa&#x00e7;ant graduellement
+        </presentation>
+        <code>
+sbm.effects.Fade("${div}");
+        </code>
+      </expression>
+      <expression>
+       <name>Effacement en se repliant</name>
+        <description>Fait dispara&#x00ee;tre une section DIV en la repliant</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Faire dispara&#x00ee;tre la section DIV | ${div} | en la repliant
+        </presentation>
+        <code>
+sbm.effects.Fold("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Secouer</name>
+        <description>Secoue une section DIV de gauche &#x00e0; droite</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Secouer la section DIV | ${div} | de gauche &#x00e0; droite
+        </presentation>
+        <code>
+sbm.effects.Shake("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>R&#x00e9;tr&#x00e9;cir</name>
+        <description>R&#x00e9;tr&#x00e9;cit une section DIV jusqu'&#x00e0; sa disparition</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+R&#x00e9;tr&#x00e9;cir la section DIV | ${div} | jusqu'&#x00e0; sa disparition
+        </presentation>
+        <code>
+sbm.effects.Shrink("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>&#x00c9;craser</name>
+        <description>&#x00c9;crase une section DIV jusqu'&#x00e0; sa disparition</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+&#x00c9;craser la section DIV | ${div} | jusqu'&#x00e0; sa disparition
+        </presentation>
+        <code>
+sbm.effects.Squish("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>&#x00c9;teindre</name>
+        <description>&#x00c9;teint une section DIV</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+&#x00c9;teindre la section DIV | ${div}
+        </presentation>
+        <code>
+sbm.effects.SwitchOff("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>&#x00c9;clater</name>
+        <description>&#x00c9;clate une section DIV</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+&#x00c9;clater la section DIV | ${div}
+        </presentation>
+        <code>
+sbm.effects.Puff("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Faire palpiter</name>
+        <description>Fait palpiter une section DIV</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Faire palpiter la section DIV | ${div}
+        </presentation>
+        <code>
+sbm.effects.Pulsate("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Cacher</name>
+        <description>Rend une section DIV invisible</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Cacher la section DIV | ${div}
+        </presentation>
+        <code>
+sbm.util.hide("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>Afficher</name>
+        <description>Rend une section DIV visible</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+Afficher la section DIV | ${div}
+        </presentation>
+        <code>
+sbm.util.show("${div}");
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+  <category>
+    <name>Effets d'un composant d'interface graphique</name>
+    <description>Effets pour les composants d'interface graphique</description>
+    <expressions>
+      <expression>
+        <name>Afficher</name>
+        <description>Rend un composant d'interface graphique visible</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+Afficher le composant d'interface graphique | ${widget}
+        </presentation>
+        <code>
+sbm.widgets.show("${widget}");
+        </code>
+      </expression>
+      <expression>
+        <name>Cacher</name>
+        <description>Rend un composant d'interface graphique invisible</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+Cacher le composant d'interface graphique | ${widget}
+        </presentation>
+        <code>
+sbm.widgets.hide("${widget}");
+        </code>
+      </expression>
+      <expression>
+        <name>Activer</name>
+        <description>Active un composant d'interface graphique</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+Activer le composant d'interface graphique | ${widget}
+        </presentation>
+        <code>
+sbm.widgets.enable("${widget}");
+        </code>
+      </expression>
+      <expression>
+        <name>D&#x00e9;sactiver</name>
+        <description>D&#x00e9;sactive un composant d'interface graphique</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+D&#x00e9;sactiver le composant d'interface graphique | ${widget}
+        </presentation>
+        <code>
+sbm.widgets.disable("${widget}");
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+  <category>
+    <name>Autre</name>
+    <description>Autres op&#x00e9;rations</description>
+    <expressions>
+      <expression>
+        <name>Invoquer un adaplet</name>
+        <description>Invoque un adaplet</description>
+        <parameters>
+          <parameter name="adaplet" type="FIELDLIST" editable="false" filter="ADAPLET"/>
+        </parameters>
+        <presentation>
+Invoquer l'adaplet | ${adaplet}
+        </presentation>
+        <code>
+sbm.adaplet.invoke("${adaplet}");
+        </code>
+      </expression>
+      <expression>
+        <name>Invoquer un adaplet avec rappel</name>
+        <description>Invoque un adaplet avec une fonction de rappel.</description>
+        <parameters>
+          <parameter name="adaplet" type="FIELDLIST" editable="false" filter="ADAPLET"/>
+          <parameter name="callback" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+Invoquer l'adaplet | ${adaplet} | avec la fonction de rappel | ${callback}
+        </presentation>
+        <code>
+sbm.adaplet.invoke("${adaplet}", "${callback}");
+        </code>
+      </expression>
+      <expression>
+        <name>Script personnalis&#x00e9;</name>
+        <description>Ex&#x00e9;cute le JavaScript personnalis&#x00e9;</description>
+        <parameters>
+          <parameter name="script" type="VERYLONGSTRING" editable="true"/>
+        </parameters>
+        <presentation>
+Ex&#x00e9;cuter le JavaScript suivant :
+${script}
+        </presentation>
+        <code>
+{
+${script};
+}
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+  <category>
+    <name>Conditions</name>
+    <description>Conditions</description>
+    <expressions>
+      <expression>
+        <name>Comparer des champs</name>
+        <description>Compare les valeurs de deux champs</description>
+        <parameters>
+          <parameter name="field1" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">est &#x00e9;gale &#x00e0;</choice>
+            <choice value="!=">n'est pas &#x00e9;gale &#x00e0;</choice>
+            <choice value="&lt;">est inf&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&gt;">est sup&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&lt;=">est inf&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+            <choice value="&gt;=">est sup&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+          </parameter>
+          <parameter name="field2" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+Si la valeur du champ | ${field1} | ${operator} | la valeur du champ | ${field2}
+        </presentation>
+        <code>
+if (sbm.utils.compare("${field1}", "${operator}", "${field2}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>Comparer un champ avec une constante</name>
+        <description>Compare la valeur d'un champ avec une constante</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">est &#x00e9;gale &#x00e0;</choice>
+            <choice value="!=">n'est pas &#x00e9;gale &#x00e0;</choice>
+            <choice value="&lt;">est inf&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&gt;">est sup&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&lt;=">est inf&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+            <choice value="&gt;=">est sup&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+          </parameter>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+Si la valeur du champ | ${field} | ${operator} | ${string}
+        </presentation>
+        <code>
+if (sbm.utils.compareConstant("${field}", "${operator}", "${string}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>Comparer des composants d'interface graphique</name>
+        <description>Compare les valeurs de deux composants d'interface graphique</description>
+        <parameters>
+          <parameter name="widget1" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">est &#x00e9;gale &#x00e0;</choice>
+            <choice value="!=">n'est pas &#x00e9;gale &#x00e0;</choice>
+            <choice value="&lt;">est inf&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&gt;">est sup&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&lt;=">est inf&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+            <choice value="&gt;=">est sup&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+          </parameter>
+          <parameter name="widget2" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+Si la valeur de | ${widget1} | ${operator} | la valeur de | ${widget2}
+        </presentation>
+        <code>
+if (sbm.widgets.compare("${widget1}", "${operator}", "${widget2}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>Compare un composant d'interface graphique avec une constante</name>
+        <description>Compare la valeur d'un composant d'interface graphique avec une constante</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">est &#x00e9;gale &#x00e0;</choice>
+            <choice value="!=">n'est pas &#x00e9;gale &#x00e0;</choice>
+            <choice value="&lt;">est inf&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&gt;">est sup&#x00e9;rieure &#x00e0;</choice>
+            <choice value="&lt;=">est inf&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+            <choice value="&gt;=">est sup&#x00e9;rieure ou &#x00e9;gale &#x00e0;</choice>
+          </parameter>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+Si la valeur de | ${widget} | ${operator} | ${string}
+        </presentation>
+        <code>
+if (sbm.widgets.compareConstant("${widget}", "${operator}", "${string}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>Condition personnalis&#x00e9;e</name>
+        <description>D&#x00e9;finit une condition personnalis&#x00e9;e</description>
+        <parameters>
+          <parameter name="string" type="LONGSTRING" editable="true"/>
+        </parameters>
+        <presentation>
+Si | ${string}
+        </presentation>
+        <code>
+if (${string}) 
+        </code>
+      </expression>
+      <expression>
+        <name>D&#x00e9;but de bloc</name>
+        <description>D&#x00e9;finit le d&#x00e9;but d'un bloc d'actions.  Doit &#x00ea;tre suivi par une fin de bloc</description>
+        <parameters>
+        </parameters>
+        <presentation>
+--- D&#x00e9;but de bloc ---
+        </presentation>
+        <code>
+{ 
+        </code>
+      </expression>
+      <expression>
+        <name>Fin de bloc</name>
+        <description>D&#x00e9;finit la fin d'un bloc d'actions.  Doit &#x00ea;tre pr&#x00e9;c&#x00e9;d&#x00e9; d'un d&#x00e9;but de bloc</description>
+        <parameters>
+        </parameters>
+        <presentation>
+--- Fin de bloc ---
+        </presentation>
+        <code>
+} 
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+</expressionset>

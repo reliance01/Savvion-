@@ -1,0 +1,478 @@
+<map version="1.3">
+  <param name="IN.strAppSupportPerformer.6_0" type="java.lang.String" value="@IN.strAppSupportPerformer.6_0"/>
+  <param name="SESSION_TOKEN_SUPPORT" type="java.lang.String" value="false"/>
+  <param name="IN.strAppSupportPhoneRemark.7_0" type="java.lang.String" value="@IN.strAppSupportPhoneRemark.7_0"/>
+  <param name="IN.AppSupportStatus.1_0" type="java.lang.String" value="@IN.AppSupportStatus.1_0"/>
+  <param name="IN.TicketNumber.0_0" type="java.lang.String" value="@IN.TicketNumber.0_0"/>
+  <param name="WSCONFIG" type="java.lang.String">
+<java class="java.beans.XMLDecoder" version="1.7.0_55">
+ <object class="com.savvion.sbm.adapters.webservice.WSConfig">
+  <void property="callInfo">
+   <object class="com.savvion.sbm.adapters.webservice.WSCallInfo">
+    <void property="encodingType">
+     <string>LITERAL</string>
+    </void>
+   </object>
+  </void>
+  <void property="operationInfo">
+   <object class="com.savvion.sbm.adapters.webservice.OperationInfo">
+    <void property="QName">
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+      <void property="localPart">
+       <string>SetCurrentAppSupportStatus</string>
+      </void>
+      <void property="namesSpace">
+       <string>http://tempuri.org/</string>
+      </void>
+     </object>
+    </void>
+    <void property="inputParam">
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>TicketNumber</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>TicketNumber</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>TicketNumber</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>TicketNumber.0_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>AppSupportStatus</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>AppSupportStatus</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>AppSupportStatus</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>AppSupportStatus.1_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>AppSupportRemark</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>AppSupportRemark</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>AppSupportRemark</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>AppSupportRemark.2_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>Category</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>Category</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>Category</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>Category.3_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>OtherRemark</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>OtherRemark</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>OtherRemark</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>OtherRemark.4_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>strFileName</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>strFileName</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>strFileName</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>strFileName.5_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>strAppSupportPerformer</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>strAppSupportPerformer</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>strAppSupportPerformer</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>strAppSupportPerformer.6_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>strAppSupportPhoneRemark</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>strAppSupportPhoneRemark</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>strAppSupportPhoneRemark</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>strAppSupportPhoneRemark.7_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="isAllPrimitive">
+     <boolean>true</boolean>
+    </void>
+    <void property="isWrapped">
+     <boolean>true</boolean>
+    </void>
+    <void property="returnParam">
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>SetCurrentAppSupportStatusResult</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="isOmittable">
+        <boolean>false</boolean>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.Integer</string>
+       </void>
+       <void property="label">
+        <string>SetCurrentAppSupportStatusResult</string>
+       </void>
+       <void property="mode">
+        <int>2</int>
+       </void>
+       <void property="name">
+        <string>SetCurrentAppSupportStatusResult</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>SetCurrentAppSupportStatusResult.8_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>int</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="style">
+     <string>document</string>
+    </void>
+    <void property="use">
+     <string>literal</string>
+    </void>
+   </object>
+  </void>
+  <void property="otherSecConfigFile">
+   <string/>
+  </void>
+  <void property="password">
+   <string/>
+  </void>
+  <void property="portInfo">
+   <object class="com.savvion.sbm.adapters.webservice.PortInfo">
+    <void property="QName">
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+      <void property="localPart">
+       <string>ServiceSoap</string>
+      </void>
+      <void property="namesSpace">
+       <string>http://tempuri.org/</string>
+      </void>
+     </object>
+    </void>
+    <void property="description">
+     <string>ServiceSoap</string>
+    </void>
+   </object>
+  </void>
+  <void property="runtimeSecurityType">
+   <int>0</int>
+  </void>
+  <void property="samlTokenConfigFile">
+   <string/>
+  </void>
+  <void property="serviceInfo">
+   <object class="com.savvion.sbm.adapters.webservice.ServiceInfo">
+    <void property="QName">
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+      <void property="localPart">
+       <string>Service</string>
+      </void>
+      <void property="namesSpace">
+       <string>http://tempuri.org/</string>
+      </void>
+     </object>
+    </void>
+    <void property="description">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
+  <void property="soapActionURI">
+   <string>http://tempuri.org/SetCurrentAppSupportStatus</string>
+  </void>
+  <void property="targetEndpointAddress">
+   <string>http://calldesk.reliancegeneral.co.in:8081/Service.asmx</string>
+  </void>
+  <void property="targetNameSpace">
+   <string>http://tempuri.org/</string>
+  </void>
+  <void property="userName">
+   <string/>
+  </void>
+  <void property="userNameTokenConfigFile">
+   <string/>
+  </void>
+  <void property="wsdlPassword">
+   <string/>
+  </void>
+  <void property="wsdlUrl">
+   <string>http://calldesk.reliancegeneral.co.in:8081/Service.asmx?wsdl</string>
+  </void>
+  <void property="wsdlUserName">
+   <string/>
+  </void>
+ </object>
+</java>
+  </param>  <param name="IN.strFileName.5_0" type="java.lang.String" value="@IN.strFileName.5_0"/>
+  <param name="TARGET_EPA" type="java.lang.String" value="@TARGET_EPA"/>
+  <param name="IN.AppSupportRemark.2_0" type="java.lang.String" value="@IN.AppSupportRemark.2_0"/>
+  <param name="IN.OtherRemark.4_0" type="java.lang.String" value="@IN.OtherRemark.4_0"/>
+  <param name="IN.Category.3_0" type="java.lang.String" value="@IN.Category.3_0"/>
+</map>

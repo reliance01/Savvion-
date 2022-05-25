@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.savvion.bpmstudio.savvion.server.launchconfig">
+<listAttribute key="com.savvion.studio.designer.server.launching.ejb.classpath">
+<listEntry value="D:/SBM2015\conf"/>
+<listEntry value="D:/SBM2015\conf\properties"/>
+<listEntry value="D:/SBM2015\conf\resources\common"/>
+<listEntry value="D:/SBM2015\ebmsapps"/>
+<listEntry value="D:/SBM2015\adapters\jms\conf"/>
+<listEntry value="D:/SBM2015\lib\jdbcclasspath.jar"/>
+<listEntry value="D:/SBM2015\jdk\lib\tools.jar"/>
+<listEntry value="D:/SBM2015\lib\xalan.jar"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\ejbadapters"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\bo\classes"/>
+<listEntry value="D:/SBM2015\BizPulse\jmsmaps"/>
+<listEntry value="D:/SBM2015\lib\core-3.4.2.v_883_R34x.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-api.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-compiler.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-core.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-decisiontables.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-templates.jar"/>
+<listEntry value="D:/SBM2015\lib\joda-time.jar"/>
+<listEntry value="D:/SBM2015\lib\jsr94.jar"/>
+<listEntry value="D:/SBM2015\lib\jxl.jar"/>
+<listEntry value="D:/SBM2015\lib\mvel2.jar"/>
+<listEntry value="D:/SBM2015\lib\xpp3.jar"/>
+<listEntry value="D:/SBM2015\lib\xstream.jar"/>
+<listEntry value="D:/SBM2015\lib\antlr-runtime.jar"/>
+<listEntry value="D:/SBM2015\lib\log4j.jar"/>
+<listEntry value="D:/SBM2015\lib\org.springframework.core.jar"/>
+<listEntry value="D:/SBM2015\lib\org.springframework.expression.jar"/>
+<listEntry value="D:/SBM2015\lib\org.springframework.aop.jar"/>
+<listEntry value="D:/SBM2015\lib\org.springframework.asm.jar"/>
+<listEntry value="D:/SBM2015\lib\org.springframework.beans.jar"/>
+<listEntry value="D:/SBM2015\lib\org.springframework.context.jar"/>
+<listEntry value="D:/SBM2015\lib\org.springframework.context.support.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-logging.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-codec.jar"/>
+<listEntry value="D:/SBM2015\lib\juel.jar"/>
+<listEntry value="D:/jboss-eap-6.3\bin\run.jar"/>
+</listAttribute>
+<stringAttribute key="com.savvion.studio.designer.server.launching.ejb.maintype" value="org.jboss.Main"/>
+<stringAttribute key="com.savvion.studio.designer.server.launching.ejb.prgmarg" value="-c ejbServer -b 0.0.0.0"/>
+<stringAttribute key="com.savvion.studio.designer.server.launching.ejb.vmarg" value="-Dsbm.home=D:/SBM2015 -server -Xms256m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m -Dsbm.server.name=ejbServer -Dsbm.server.type=ejb -Dprogram.name=run.bat -Dappserver.home=D:/jboss-eap-6.3 -Djava.endorsed.dirs=D:/jboss-eap-6.3\lib\endorsed"/>
+<listAttribute key="com.savvion.studio.designer.server.launching.portal.classpath">
+<listEntry value="D:/SBM2015\conf"/>
+<listEntry value="D:/SBM2015\conf\properties"/>
+<listEntry value="D:/SBM2015\conf\resources\common"/>
+<listEntry value="D:/SBM2015\ebmsapps"/>
+<listEntry value="D:/SBM2015\adapters\jms\conf"/>
+<listEntry value="D:/SBM2015\lib\jdbcclasspath.jar"/>
+<listEntry value="D:/SBM2015\jdk\lib\tools.jar"/>
+<listEntry value="D:/SBM2015\adapters\jms\conf"/>
+<listEntry value="D:/SBM2015\conf\resources\bpmportal"/>
+<listEntry value="D:/SBM2015\BizPulse\jmsmaps"/>
+<listEntry value="D:/SBM2015\conf\resources\designer"/>
+<listEntry value="D:/SBM2015\cluster\conf"/>
+<listEntry value="D:/SBM2015\BizSolo"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\ejbadapters"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\bo\classes"/>
+<listEntry value="D:/SBM2015\BizPulse\libs"/>
+<listEntry value="D:/SBM2015\lib\portalclasspath.jar"/>
+<listEntry value="D:/SBM2015\lib\xalan.jar"/>
+<listEntry value="D:/SBM2015\lib\serializer.jar"/>
+<listEntry value="D:/SBM2015\lib\batik.jar"/>
+<listEntry value="D:/SBM2015\lib\jaxrpc.jar"/>
+<listEntry value="D:/SBM2015\lib\stax.jar"/>
+<listEntry value="D:/SBM2015\lib\stax-api.jar"/>
+<listEntry value="D:/SBM2015\lib\log4j.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-logging.jar"/>
+<listEntry value="D:/SBM2015\lib\sdms.jar"/>
+<listEntry value="D:/SBM2015\lib\jcifs.jar"/>
+<listEntry value="D:/jboss-eap-6.3\bin\run.jar"/>
+</listAttribute>
+<stringAttribute key="com.savvion.studio.designer.server.launching.portal.prgmarg" value="-c portalServer -b 0.0.0.0"/>
+<stringAttribute key="com.savvion.studio.designer.server.launching.portal.vmarg" value="-Dsbm.home=D:/SBM2015 -server -Xms256m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m -Dsbm.server.name=portalServer -Dsbm.server.type=web -Dprogram.name=run.bat -Djavax.xml.stream.XMLInputFactory=com.bea.xml.stream.MXParserFactory -Djavax.xml.stream.XMLEventFactory=com.bea.xml.stream.EventFactory -Djavax.xml.stream.XMLOutputFactory=com.bea.xml.stream.XMLOutputFactoryBase -Dappserver.home=D:/jboss-eap-6.3 -Djava.endorsed.dirs=D:/jboss-eap-6.3\lib\endorsed"/>
+<listAttribute key="com.savvion.studio.designer.server.stopping.bizlogic.classpath">
+<listEntry value="D:/SBM2015\conf"/>
+<listEntry value="D:/SBM2015\conf\properties"/>
+<listEntry value="D:/SBM2015\conf\resources\common"/>
+<listEntry value="D:/SBM2015\lib\sbmclientcp.jar"/>
+<listEntry value="D:/SBM2015\lib\um.jar"/>
+<listEntry value="D:/SBM2015\lib\umext.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-configuration.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-lang.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-collections.jar"/>
+<listEntry value="D:/SBM2015\lib\bsh.jar"/>
+<listEntry value="D:/SBM2015\lib\swsframework.jar"/>
+<listEntry value="D:/SBM2015\ebmsapps"/>
+<listEntry value="D:/jboss-eap-6.3\client\jbossall-client.jar"/>
+<listEntry value="D:/jboss-eap-6.3\client\javassist.jar"/>
+<listEntry value="D:/jboss-eap-6.3\client\trove.jar"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\bo\classes"/>
+<listEntry value="D:/SBM2015\lib\blclient.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-logging.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-discovery.jar"/>
+<listEntry value="D:/SBM2015\lib\htmlparser.jar"/>
+<listEntry value="D:/SBM2015\lib\jsr173_api.jar"/>
+<listEntry value="D:/SBM2015\lib\sjsxp.jar"/>
+<listEntry value="D:/SBM2015\lib\sdms.jar"/>
+</listAttribute>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.bizlogic.maintype" value="com.savvion.sbm.bizlogic.client.BLMain"/>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.bizlogic.prgmarg" value="-cmd stop"/>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.bizlogic.vmarg" value="-Dsbm.home=D:/SBM2015"/>
+<listAttribute key="com.savvion.studio.designer.server.stopping.bizpulse.classpath">
+<listEntry value="D:/SBM2015\conf"/>
+<listEntry value="D:/SBM2015\conf\properties"/>
+<listEntry value="D:/SBM2015\conf\resources\common"/>
+<listEntry value="D:/SBM2015\lib\sbmclientcp.jar"/>
+<listEntry value="D:/SBM2015\lib\um.jar"/>
+<listEntry value="D:/SBM2015\lib\umext.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-configuration.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-lang.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-collections.jar"/>
+<listEntry value="D:/SBM2015\lib\bsh.jar"/>
+<listEntry value="D:/SBM2015\lib\swsframework.jar"/>
+<listEntry value="D:/SBM2015\ebmsapps"/>
+<listEntry value="D:/jboss-eap-6.3\client\jbossall-client.jar"/>
+<listEntry value="D:/jboss-eap-6.3\client\javassist.jar"/>
+<listEntry value="D:/jboss-eap-6.3\client\trove.jar"/>
+<listEntry value="D:/SBM2015\BizPulse\libs"/>
+<listEntry value="D:/SBM2015\lib\bpcompiler.jar"/>
+<listEntry value="D:/SBM2015\lib\bizpulse.jar"/>
+<listEntry value="D:/SBM2015\lib\bpqueryservice.jar"/>
+<listEntry value="D:/SBM2015\lib\bpclient.jar"/>
+<listEntry value="D:/SBM2015\lib\blclient.jar"/>
+<listEntry value="D:/SBM2015\lib\jaxen.jar"/>
+<listEntry value="D:/SBM2015\lib\castor-xml.jar"/>
+<listEntry value="D:/SBM2015\lib\regexp.jar"/>
+<listEntry value="D:/SBM2015\lib\BpmPortalWebServices.jar"/>
+<listEntry value="D:/SBM2015\lib\sbmadapter_db.jar"/>
+<listEntry value="D:/SBM2015\lib\sbmadapterframework.jar"/>
+</listAttribute>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.bizpulse.maintype" value="com.savvion.ejb.bizpulse.manager.BizPulseClient"/>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.bizpulse.prgmarg" value="-stop"/>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.bizpulse.vmarg" value="-Dsbm.home=D:/SBM2015 -DCommand.ScriptName=stopBizPulseServer"/>
+<listAttribute key="com.savvion.studio.designer.server.stopping.ejb.classpath">
+<listEntry value="D:/SBM2015\conf"/>
+<listEntry value="D:/SBM2015\conf\properties"/>
+<listEntry value="D:/SBM2015\conf\resources\common"/>
+<listEntry value="D:/SBM2015\ebmsapps"/>
+<listEntry value="D:/SBM2015\adapters\jms\conf"/>
+<listEntry value="D:/SBM2015\lib\jdbcclasspath.jar"/>
+<listEntry value="D:/SBM2015\jdk\lib\tools.jar"/>
+<listEntry value="D:/SBM2015\lib\xalan.jar"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\ejbadapters"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\bo\classes"/>
+<listEntry value="D:/SBM2015\BizPulse\jmsmaps"/>
+<listEntry value="D:/SBM2015\lib\core-3.4.2.v_883_R34x.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-api.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-compiler.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-core.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-decisiontables.jar"/>
+<listEntry value="D:/SBM2015\lib\drools-templates.jar"/>
+<listEntry value="D:/SBM2015\lib\joda-time.jar"/>
+<listEntry value="D:/SBM2015\lib\jsr94.jar"/>
+<listEntry value="D:/SBM2015\lib\jxl.jar"/>
+<listEntry value="D:/SBM2015\lib\mvel2.jar"/>
+<listEntry value="D:/SBM2015\lib\xpp3.jar"/>
+<listEntry value="D:/SBM2015\lib\xstream.jar"/>
+<listEntry value="D:/SBM2015\lib\antlr-runtime.jar"/>
+<listEntry value="D:/SBM2015\lib\log4j.jar"/>
+<listEntry value="D:/jboss-eap-6.3\bin\shutdown.jar"/>
+<listEntry value="D:/jboss-eap-6.3\client\jbossall-client.jar"/>
+</listAttribute>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.ejb.maintype" value="org.jboss.Shutdown"/>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.ejb.prgmarg" value="-s RGISAVPPROD:16003"/>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.ejb.vmarg" value="-Djboss.boot.loader.name=startEjbServer.cmd"/>
+<listAttribute key="com.savvion.studio.designer.server.stopping.portal.classpath">
+<listEntry value="D:/SBM2015\conf"/>
+<listEntry value="D:/SBM2015\conf\properties"/>
+<listEntry value="D:/SBM2015\conf\resources\common"/>
+<listEntry value="D:/SBM2015\ebmsapps"/>
+<listEntry value="D:/SBM2015\adapters\jms\conf"/>
+<listEntry value="D:/SBM2015\lib\jdbcclasspath.jar"/>
+<listEntry value="D:/SBM2015\jdk\lib\tools.jar"/>
+<listEntry value="D:/SBM2015\adapters\jms\conf"/>
+<listEntry value="D:/SBM2015\conf\resources\bpmportal"/>
+<listEntry value="D:/SBM2015\BizPulse\jmsmaps"/>
+<listEntry value="D:/SBM2015\conf\resources\designer"/>
+<listEntry value="D:/SBM2015\cluster\conf"/>
+<listEntry value="D:/SBM2015\BizSolo"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\ejbadapters"/>
+<listEntry value="D:/SBM2015\ebmsapps\common\bo\classes"/>
+<listEntry value="D:/SBM2015\BizPulse\libs"/>
+<listEntry value="D:/SBM2015\lib\portalclasspath.jar"/>
+<listEntry value="D:/SBM2015\lib\xalan.jar"/>
+<listEntry value="D:/SBM2015\lib\serializer.jar"/>
+<listEntry value="D:/SBM2015\lib\batik.jar"/>
+<listEntry value="D:/SBM2015\lib\jaxrpc.jar"/>
+<listEntry value="D:/SBM2015\lib\stax.jar"/>
+<listEntry value="D:/SBM2015\lib\stax-api.jar"/>
+<listEntry value="D:/SBM2015\lib\log4j.jar"/>
+<listEntry value="D:/SBM2015\lib\commons-logging.jar"/>
+<listEntry value="D:/SBM2015\lib\sdms.jar"/>
+<listEntry value="D:/SBM2015\lib\jcifs.jar"/>
+<listEntry value="D:/jboss-eap-6.3\bin\shutdown.jar"/>
+<listEntry value="D:/jboss-eap-6.3\client\jbossall-client.jar"/>
+</listAttribute>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.portal.prgmarg" value="-s RGISAVPPROD:18003"/>
+<stringAttribute key="com.savvion.studio.designer.server.stopping.portal.vmarg" value="-Djboss.boot.loader.name=startPortalServer.cmd"/>
+</launchConfiguration>

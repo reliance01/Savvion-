@@ -1,0 +1,153 @@
+application std
+module std_tensor_lib
+
+fun count(arr: array<`x>[]): int {
+     return arr.count(arr.offset());
+}
+
+fun rowCount(arr: array<`x>[]): int {
+    return arr.count(arr.offset());
+}
+fun colCount(arr: array<`x>[]): int {
+    return arr.count(arr.offset()+1);
+}
+
+fun setTitle(arr: array<`x>[], title: string): void {
+    arr.setTitle(arr.offset(), title);
+}
+fun setRowTitle(arr: array<`x>[], title: string): void {
+    arr.setTitle(arr.offset(), title);
+}
+fun setColTitle(arr: array<`x>[], title: string): void {
+    arr.setTitle(arr.offset()+1, title);
+}
+
+fun setLabel(arr: array<`x>[], idx: int, label: string): void {
+    arr.setLabel(arr.offset(), idx, label);
+}
+fun setRowLabel(arr: array<`x>[], idx: int, label: string): void {
+    arr.setLabel(arr.offset(), idx, label);
+}
+fun setColLabel(arr: array<`x>[], idx: int, label: string): void {
+    arr.setLabel(arr.offset()+1, idx, label);
+}
+
+fun getIndex(arr: array<`x>[], label: string): int {
+    return arr.getIndex(arr.offset(), label);
+}
+fun getRowIndex(arr: array<`x>[], label: string): int {
+    return arr.getIndex(arr.offset(), label);
+}
+fun getColIndex(arr: array<`x>[], label: string): int {
+    return arr.getIndex(arr.offset()+1, label);
+}
+
+fun getTitle(arr: array<`x>[]): string {
+    return arr.getTitle(arr.offset());
+}
+fun getRowTitle(arr: array<`x>[]): string {
+    return arr.getTitle(arr.offset());
+}
+fun getColTitle(arr: array<`x>[]): string {
+    return arr.getTitle(arr.offset()+1);
+}
+
+fun getLabel(arr: array<`x>[], idx: int): string {
+    return arr.getLabel(arr.offset(), idx);
+}
+fun getRowLabel(arr: array<`x>[], idx: int): string {
+    return arr.getLabel(arr.offset(), idx);
+}
+fun getColLabel(arr: array<`x>[], idx: int): string {
+    return arr.getLabel(arr.offset()+1, idx);
+}
+
+fun keySet(arr: array<`x>[]): list<string> {
+    return arr.keySet(arr.offset());
+}
+fun rowKeySet(arr: array<`x>[]): list<string> {
+    return arr.keySet(arr.offset());
+}
+fun colKeySet(arr: array<`x>[]): list<string> {
+    return arr.keySet(arr.offset()+1);
+}
+
+fun getSlotValue(arr: array<`x>[], idx: int, slot_idx: int) {
+    return arr.getSlotValue(list{idx}, slot_idx);
+}
+fun getSlotValue(arr: array<`x>[], idx1: int, idx2: int, slot_idx: int) {
+    return arr.getSlotValue(list{idx1, idx2}, slot_idx);
+}
+
+//
+// obsolete: for compatibility
+//
+
+// obsolete : use setTitle
+fun addTitle(arr: array<`x>[], title: string): void {
+    arr.setTitle(arr.offset(), title);
+}
+// obsolete: use setRowTitle
+fun addRowTitle(arr: array<`x>[], title: string): void {
+    arr.setTitle(arr.offset(), title);
+}
+// obsolete: use setColTitle
+fun addColTitle(arr: array<`x>[], title: string): void {
+    arr.setTitle(arr.offset()+1, title);
+}
+
+// obsolete: use setTitle and setLabels
+fun addLabels(arr: array<`x>[], degree: int, title: string, labels: list<string>): void {
+    arr.setTitle(degree, title);
+    arr.setLabels(degree, labels);
+}
+
+// obsolete: use setTitle and setLabels
+fun addLabels(arr: array<`x>[], title: string, labels: list<string>): void {
+    arr.addLabels(arr.offset(), title, labels);
+}
+
+// obsolete: use setRowTitle and setRowLabels
+fun addRowLabels(arr: array<`x>[], title: string, labels: list<string>): void {
+    arr.addLabels(arr.offset(), title, labels);
+}
+// obsolete: use setColTitle and setColLabels
+fun addColLabels(arr: array<`x>[], title: string, labels: list<string>): void {
+    arr.addLabels(arr.offset()+1, title, labels);
+}
+
+fun setAll(arr: array<`x>[], x: `x): void {
+    val offset = arr.offset();
+    val r_last = arr.size()+offset;
+    val is_arr = (arr.degree() = 1);
+    for (var i = offset; i < r_last; i++) {
+	if (is_arr) {
+	   arr[i] := x;
+	} else {
+	   setAll(LOOPHOLE(arr[i]), x);
+	}
+    }
+}
+
+// added for bp 5.5
+fun findLabelIndex(ls: list<`x>, label: string): int {
+    var idx = 1;
+    do {
+	if (key = label) return idx;
+	idx++;
+    } from key: ls;
+    return -1;
+}
+// this return -1 when no label found
+fun findIndex(arr: infopad<`x>[], label: string): int {
+    return findLabelIndex(arr.rowKeySet(), label);
+}
+// this return -1 when no label found
+fun findRowIndex(arr: infopad<`x>[], label: string): int {
+    return findLabelIndex(arr.rowKeySet(), label);
+}
+// this return -1 when no label found
+fun findColIndex(arr: infopad<`x>[], label: string): int {
+    return findLabelIndex(arr.colKeySet(), label);
+}
+

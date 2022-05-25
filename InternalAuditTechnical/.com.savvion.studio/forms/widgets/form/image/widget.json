@@ -1,0 +1,7 @@
+{
+    'name': 'Image',
+    'type': 'form',
+    'version': '1.0', 
+    'description': 'This widget renders and displays an image.'
+   
+}

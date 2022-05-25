@@ -1,0 +1,185 @@
+package vam.com.rgi.rcorp.wsdl;
+
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import javax.xml.namespace.QName;
+import org.apache.axis.description.ElementDesc;
+import org.apache.axis.description.TypeDesc;
+import org.apache.axis.encoding.Deserializer;
+import org.apache.axis.encoding.Serializer;
+import org.apache.axis.encoding.ser.BeanDeserializer;
+import org.apache.axis.encoding.ser.BeanSerializer;
+
+public class CreateProcessInstance implements Serializable {
+   private String session;
+   private String ptName;
+   private String piNamePrefix;
+   private String priority;
+   private DataSlotTemplate[] dst;
+   private Object __equalsCalc = null;
+   private boolean __hashCodeCalc = false;
+   private static TypeDesc typeDesc = new TypeDesc(CreateProcessInstance.class, true);
+
+   static {
+      typeDesc.setXmlType(new QName("http://workflow.webservice.savvion.com", ">createProcessInstance"));
+      ElementDesc elemField = new ElementDesc();
+      elemField.setFieldName("session");
+      elemField.setXmlName(new QName("http://workflow.webservice.savvion.com", "session"));
+      elemField.setXmlType(new QName("http://www.w3.org/2001/XMLSchema", "string"));
+      elemField.setNillable(false);
+      typeDesc.addFieldDesc(elemField);
+      elemField = new ElementDesc();
+      elemField.setFieldName("ptName");
+      elemField.setXmlName(new QName("http://workflow.webservice.savvion.com", "ptName"));
+      elemField.setXmlType(new QName("http://www.w3.org/2001/XMLSchema", "string"));
+      elemField.setNillable(false);
+      typeDesc.addFieldDesc(elemField);
+      elemField = new ElementDesc();
+      elemField.setFieldName("piNamePrefix");
+      elemField.setXmlName(new QName("http://workflow.webservice.savvion.com", "piNamePrefix"));
+      elemField.setXmlType(new QName("http://www.w3.org/2001/XMLSchema", "string"));
+      elemField.setNillable(false);
+      typeDesc.addFieldDesc(elemField);
+      elemField = new ElementDesc();
+      elemField.setFieldName("priority");
+      elemField.setXmlName(new QName("http://workflow.webservice.savvion.com", "priority"));
+      elemField.setXmlType(new QName("http://www.w3.org/2001/XMLSchema", "string"));
+      elemField.setNillable(false);
+      typeDesc.addFieldDesc(elemField);
+      elemField = new ElementDesc();
+      elemField.setFieldName("dst");
+      elemField.setXmlName(new QName("http://workflow.webservice.savvion.com", "dst"));
+      elemField.setXmlType(new QName("http://workflow.webservice.savvion.com", "DataSlotTemplate"));
+      elemField.setNillable(false);
+      elemField.setMaxOccursUnbounded(true);
+      typeDesc.addFieldDesc(elemField);
+   }
+
+   public CreateProcessInstance() {
+   }
+
+   public CreateProcessInstance(String session, String ptName, String piNamePrefix, String priority, DataSlotTemplate[] dst) {
+      this.session = session;
+      this.ptName = ptName;
+      this.piNamePrefix = piNamePrefix;
+      this.priority = priority;
+      this.dst = dst;
+   }
+
+   public String getSession() {
+      return this.session;
+   }
+
+   public void setSession(String session) {
+      this.session = session;
+   }
+
+   public String getPtName() {
+      return this.ptName;
+   }
+
+   public void setPtName(String ptName) {
+      this.ptName = ptName;
+   }
+
+   public String getPiNamePrefix() {
+      return this.piNamePrefix;
+   }
+
+   public void setPiNamePrefix(String piNamePrefix) {
+      this.piNamePrefix = piNamePrefix;
+   }
+
+   public String getPriority() {
+      return this.priority;
+   }
+
+   public void setPriority(String priority) {
+      this.priority = priority;
+   }
+
+   public DataSlotTemplate[] getDst() {
+      return this.dst;
+   }
+
+   public void setDst(DataSlotTemplate[] dst) {
+      this.dst = dst;
+   }
+
+   public DataSlotTemplate getDst(int i) {
+      return this.dst[i];
+   }
+
+   public void setDst(int i, DataSlotTemplate _value) {
+      this.dst[i] = _value;
+   }
+
+   public synchronized boolean equals(Object obj) {
+      if (!(obj instanceof CreateProcessInstance)) {
+         return false;
+      } else {
+         CreateProcessInstance other = (CreateProcessInstance)obj;
+         if (obj == null) {
+            return false;
+         } else if (this == obj) {
+            return true;
+         } else if (this.__equalsCalc != null) {
+            return this.__equalsCalc == obj;
+         } else {
+            this.__equalsCalc = obj;
+            boolean _equals = (this.session == null && other.getSession() == null || this.session != null && this.session.equals(other.getSession())) && (this.ptName == null && other.getPtName() == null || this.ptName != null && this.ptName.equals(other.getPtName())) && (this.piNamePrefix == null && other.getPiNamePrefix() == null || this.piNamePrefix != null && this.piNamePrefix.equals(other.getPiNamePrefix())) && (this.priority == null && other.getPriority() == null || this.priority != null && this.priority.equals(other.getPriority())) && (this.dst == null && other.getDst() == null || this.dst != null && Arrays.equals(this.dst, other.getDst()));
+            this.__equalsCalc = null;
+            return _equals;
+         }
+      }
+   }
+
+   public synchronized int hashCode() {
+      if (this.__hashCodeCalc) {
+         return 0;
+      } else {
+         this.__hashCodeCalc = true;
+         int _hashCode = 1;
+         if (this.getSession() != null) {
+            _hashCode += this.getSession().hashCode();
+         }
+
+         if (this.getPtName() != null) {
+            _hashCode += this.getPtName().hashCode();
+         }
+
+         if (this.getPiNamePrefix() != null) {
+            _hashCode += this.getPiNamePrefix().hashCode();
+         }
+
+         if (this.getPriority() != null) {
+            _hashCode += this.getPriority().hashCode();
+         }
+
+         if (this.getDst() != null) {
+            for(int i = 0; i < Array.getLength(this.getDst()); ++i) {
+               Object obj = Array.get(this.getDst(), i);
+               if (obj != null && !obj.getClass().isArray()) {
+                  _hashCode += obj.hashCode();
+               }
+            }
+         }
+
+         this.__hashCodeCalc = false;
+         return _hashCode;
+      }
+   }
+
+   public static TypeDesc getTypeDesc() {
+      return typeDesc;
+   }
+
+   public static Serializer getSerializer(String mechType, Class _javaType, QName _xmlType) {
+      return new BeanSerializer(_javaType, _xmlType, typeDesc);
+   }
+
+   public static Deserializer getDeserializer(String mechType, Class _javaType, QName _xmlType) {
+      return new BeanDeserializer(_javaType, _xmlType, typeDesc);
+   }
+}

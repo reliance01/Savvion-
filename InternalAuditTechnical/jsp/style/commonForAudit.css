@@ -1,0 +1,453 @@
+#scheduledAuditInfo td
+{
+  font-size = 12px;
+  color:#5e5e5e;
+  background-color:#D2E0F1;
+}
+
+#scheduledAuditInfo th
+{
+   background-color : #98b8df;
+   text-align : center;
+   font-size = 12px;
+   color:#5e5e5e;
+   font = bold;
+}
+
+#auditStartDate,#auditEndDate
+{
+  width : 190px;
+}
+
+.required
+{
+  color:red;
+}
+
+.error_message
+{
+  color:red;
+  font:normal;
+  font-size:10px;
+}
+
+.webPageContainer
+{
+  background-color: white;
+  font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 12px;
+}
+
+.header
+{
+  width:100%;
+  height:20px;
+  font:bold 12px;
+  font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+  color:white;
+  background-color:#DC241F;
+  padding-top:1px;
+  text-align:center;
+  margin-bottom:8px;
+}
+
+.header_Info
+{
+}
+
+.project_info
+{
+  margin:20px;
+}
+
+.label
+{
+  font-size:12px;
+  font-weight:bold;
+  color:#4D4D4D;
+  padding-left:20px;
+}
+
+.cell
+{
+  padding-left:20px;
+}
+
+.cell > div
+{
+  padding-left:20px;
+}
+
+.parameterLinkContainerStyle
+{
+  width:100%;
+ -- height:20px;
+}
+
+.parameterLink
+{
+  height:15px;
+  font:bold;
+  padding:5px;
+  font-size:13px;
+  display:inline;
+  color:#666666;
+  word-break:break-all;
+  margin:1px;
+  cursor:pointer;
+  background-color:#eee;
+  border:1px solid #98b8df;
+  --width:200px;
+}
+
+.parameterLinkActivated
+{
+   background-color:#FFA500;
+   cursor:pointer;
+   color:white;
+}
+
+.parameterLinkDeactivated
+{
+   background-color:SteelBlue;
+   color:White;
+}
+
+.dynamicTableStyle
+{
+  border:1px solid white;
+  border-collapse:collapse;
+  text-align:center;
+  margin-top:10px;
+}
+
+.dynamicTableTH
+{
+   text-align:center;
+   font-size:10px;
+   color:#5E5E5E;
+   border:1px solid white;
+   border-collapse:collapse;
+   background-color:#98b8df;
+   --padding:0px 5px 0px 5px;
+}
+
+.dynamicTableTH1
+{
+   --text-align:center;
+   font-size:10px;
+   color:#5E5E5E;
+   border:1px solid white;
+   border-collapse:collapse;
+   background-color:#98b8df;
+   --padding:0px 20px 0px 20px;
+}
+
+.dynamicTableCell
+{
+   --padding:1px;
+   text-align:center;
+   font-size:10px;
+   color:#5E5E5E;
+   border:1px solid white;
+   border-collapse:collapse;
+}
+
+.evenRowStyle
+{
+  background-color:#D2E0F1;
+}
+
+.oddRowStyle
+{
+  background-color:#D2E0F1;
+}
+
+.saveDataConfirmationStyle
+{
+  display:none;
+  font-size:14px;
+  font:bold;
+  font-style:italic;
+  color:white;
+  background-color:green;
+  height:40px;
+  width:400px;
+  margin-left:450px;
+  text-align:center;
+  padding-top:10px;
+}
+
+.saveSubmitContainer
+{
+  margin-top:70px;
+  padding-bottom:10px;
+}
+
+.saveButtonStyle
+{
+  margin:50px 0px 10px 420px;
+  display:inline;
+}
+
+.submitButtonStyle
+{
+  margin:50px 0px 10px 100px;
+  display:inline;
+}
+
+#fade{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 125%;
+    background-color: #000;
+    z-index:1001;
+    -moz-opacity: 0.7;
+    opacity:.70;
+    filter: alpha(opacity=70);
+}
+
+#shwFullTxt
+{
+   display: none;
+   color:white;
+   position: absolute;
+   top: 30%;
+   left: 30%;
+   width: 30%;
+   height: 20%;
+   background-color:  black;
+   z-index:1001;
+   -moz-opacity: 0.7;
+   opacity:.70;
+   filter: alpha(opacity=70);
+   text-align:center;
+   font-weight:bold;
+   vertical-align:middle;
+}
+
+#light{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    width: 400px;
+    height: 250px;
+    margin-left: -150px;
+    margin-top: -100px;                 
+    padding: 10px;
+    border: 2px solid #98b8df;
+    background-color: #D2E0F1;
+    z-index:1002;
+    overflow:visible;
+}
+
+.light{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    width: 900px;
+    height: 350px;
+    --margin-left: -150px;
+    margin-top: -100px;                 
+    padding: 10px;
+    border: 2px solid #98b8df;
+    background-color: #D2E0F1;
+    z-index:1002;
+    overflow:visible;
+    --overflow:auto;
+}
+
+#lightAuditee{
+  display: none;
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    width: 400px;
+    height: 150px;
+    margin-left: -150px;
+    margin-top: -100px;                 
+    padding: 10px;
+    border: 2px solid #98b8df;
+    background-color: #D2E0F1;
+    z-index:1002;
+    overflow:visible;
+}
+
+#virtualOffDiv
+{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    width: 250px;
+    height: 200px;
+    margin-left: -150px;
+    margin-top: -100px;                 
+    padding: 10px;
+    border: 2px solid #98b8df;
+    background-color: #d6e3f2;
+    z-index:1002;
+    overflow:auto;
+}
+
+#popupSubjectDiv,#popupMessageDiv,#popupOtherMailDiv
+{
+   display: none;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 350px;
+    height:100px;
+    margin-left: -150px;
+    margin-top: -100px;                 
+    padding: 10px;
+    border: 2px solid #98b8df;
+    background-color: #D2E0F1;
+    z-index:1002;
+    overflow:visible;
+}
+
+.cancel
+{
+ display:block;
+ position:absolute;
+ top:-20px;
+ right:-20px;
+ background:rgb(245,245,245);
+ background-repeat:no-repeat;
+ background-image:url(../images/no.png);
+ color:black;
+ height:20px;
+ width:20px;
+ text-decoration:none;
+ text-align:center;
+ font-weight:bold;
+}
+
+.uploadDivStl
+{
+  background-color:#D2E0F1;
+  width:200px;
+ -- height:30px;
+  color:#5E5E5E;
+  font-weight:bold;
+  margin:5px 100px 10px 0px;
+  float:right;
+  text-align:center;
+  cursor:pointer;
+  border:1px solid #98b8df;
+}
+
+.popupBtn
+{
+  width:100px;
+  cursor:pointer;
+  height:20px;
+  background-color:#98b8df;
+  --margin:10px 0px 0px 115px;;
+  margin:5px;
+  text-align:center;
+  color:white;
+}
+
+label textarea
+{
+  vertical-align:middle;
+  font-size:12px;
+  font-weight:bold;
+}
+
+#remarkPopup
+{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 350px;
+  height:100px;
+  margin-left: -150px;
+  margin-top: -100px;                 
+  padding: 10px;
+  border: 2px solid #98b8df;
+  background-color: #D2E0F1;
+  z-index:1002;
+  overflow:visible;
+}
+
+#subParamPopup
+{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 350px;
+    height:100px;
+    margin-left: -150px;
+    margin-top: -100px;                 
+    padding: 10px;
+    border: 2px solid #98b8df;
+    background-color: #D2E0F1;
+    z-index:1002;
+    overflow:visible;
+}
+
+#addSubParam
+{
+    background-color:#D2E0F1;
+    width:200px;
+   -- height:30px;
+    color:#5E5E5E;
+    font-weight:bold;
+    margin:5px 100px 10px 0px;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    border:1px solid #98b8df;
+}
+
+#deleteParam
+{
+    background-color:#D2E0F1;
+    width:200px;
+    height:30px;
+    color:#5E5E5E;
+    font-weight:bold;
+    margin:5px 100px 10px 0px;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    border:1px solid #98b8df;
+}
+
+#paramPopup
+{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 350px;
+    height:100px;
+    margin-left: -150px;
+    margin-top: -100px;                 
+    padding: 10px;
+    border: 2px solid #98b8df;
+    background-color: #D2E0F1;
+    z-index:1002;
+    overflow:visible;
+}
+
+.notFound
+{
+  background-image:url("../images/no-record-found.jpg");
+  background-repeat:no-repeat;
+  height:300px;
+  width:250px;
+  margin:50px 50px 50px 500px;
+}

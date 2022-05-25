@@ -1,0 +1,633 @@
+.ApBody {
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN: 6px
+}
+
+.ApSegDataLabel {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; WIDTH: 15%; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApSegDataVal {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; WIDTH: 85%; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApSegGenLabel {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApSegGenData {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApRequired {
+	FONT-SIZE: 6pt; COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+
+.ApSegTblInBg{  background-color: #CACBDB}
+.ApSegTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	background-color: #EDECF9;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-left: 2px;
+	color: #070740;
+	clip:   rect(   );
+	border-top: 1px solid #070740;
+	border-right: 2px solid #070740;
+	border-bottom: 1px solid #070740;
+	border-left: 1px solid #070740;
+}
+.ApSegLineBg {  background-color: #280E5D; height: 2px}
+.ApSegTblBgPad {  padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; background-color: #EEEEEE; border: 1px #999999 solid}
+.ApSegDivPad {
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	visibility: visible;
+	SCROLLBAR-FACE-COLOR: #E2E2E2;
+	SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF;
+	SCROLLBAR-SHADOW-COLOR: #666666;
+	SCROLLBAR-3DLIGHT-COLOR: #545454;
+	SCROLLBAR-ARROW-COLOR: #003333;
+	SCROLLBAR-DARKSHADOW-COLOR: #352A7B;
+	SCROLLBAR-BASE-COLOR: #DEE3FD;
+	scrollbar-track-color: #CECECE;
+	overflow: auto;
+	background-color: #DCDCDC;
+	layer-background-color: #DCDCDC;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	border: 1px solid;
+	border-color: #0A0872 #0A0872 #0A0872 #0A0872;
+	position: absolute;
+	background-image: url(images/seg_div_pad.gif);
+}
+.ApSegDataTbl { }
+.ApSegValCntr {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValLft {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValRt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: right;
+	font-weight: bold;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+
+.ApSegFieldCntr {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegFieldLft {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegFieldRt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: right;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValCntrAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValLftAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValRtAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: right;
+	font-weight: bold;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSegFieldCntrAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: center;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSegFieldLftAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSegFieldRtAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSmlTxt {  font-size: 8pt; color: #000000}
+.ApButtonDarkBg { background-color: #FFFFFF; border: 1px solid #444575; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; color: #FFFFFF}
+.ApBtnSpace {  padding-right: 4px; padding-left: 4px; color: #CCCCCC}
+.ApScrnButton {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #7B7DB6;
+	cursor: hand;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-top: 1px solid #444575;
+	border-right: 2px solid #444575;
+	border-bottom: 2px solid #444575;
+	border-left: 1px solid #444575;
+}
+.ApScrnButtonHover {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #535597;
+	cursor: hand;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-top: 1px solid #313259;
+	border-right: 2px solid #313259;
+	border-bottom: 2px solid #313259;
+	border-left: 1px solid #313259;
+}
+.ApScrnButtonDis {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #CCCCFF;
+	border-top-width: 1px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 1px;
+	color: #AFBEE7;
+	font-weight: bold;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #7B7DB6;
+	border-right-color: #7B7DB6;
+	border-bottom-color: #7B7DB6;
+	border-left-color: #7B7DB6;
+
+}
+A.ApSegTblLnk {  font-size: 8pt; color: #000099; text-decoration: none}
+A.ApSegTblLnk:hover {  font-size: 8pt; text-decoration: underline}
+A.ApSegTblLnk:visited { }
+.ApSegTblBgDark {  background-color: #070740}
+.ApSegTableCellPad {  }
+.ApSegColHdrTitle { font-size: 8pt; font-weight: bold; color: #000066; background-color: #FFFFFF; border-color: #99CCFF #000000 #000000 #99CCFF; border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.ApSegColHdrSrNo {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #676BA5;
+	text-align: center;
+	width: 1%;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #9FA3C6;
+	border-right-color: #9FA3C6;
+	border-bottom-color: #9FA3C6;
+	border-left-color: #9FA3C6;
+}
+.ApSegColHdr {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #676BA5;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #9FA3C6;
+	border-right-color: #9FA3C6;
+	border-bottom-color: #9FA3C6;
+	border-left-color: #9FA3C6;
+}
+.ApSegInBtn {  font-size: 8pt; color: #003366; border: #004182 solid; background-color: #FFFFFF; border-width: 1px 2px 2px 1px; cursor: hand}
+.ApSegInBtnHover {  font-size: 8pt; color: #0066CC; border: #004182 solid; background-color: #F8F8F8; border-width: 1px 2px 2px 1px; cursor: hand}
+
+A.ApCalDayLnk {  font-size: 8pt; color: #000000; text-decoration: none}
+A.ApCalDayLnk:hover {  text-decoration: underline; color: #006699}
+A.ApCalDayLnk:visited { }
+A.ApCalDayLnkSlct {  font-size: 8pt; color: #990000; text-decoration: none; font-weight: bold}
+A.ApCalDayLnkSlct:hover {  text-decoration: underline; color: #FF3300}
+A.ApCalDayLnkSlct:visited { }
+A.ApCalMnthLnk {  font-size: 8pt; color: #FFFFFF; text-decoration: none; text-align: center}
+A.ApCalMnthLnk:hover {  font-size: 8pt; text-decoration: underline; color: #DDF9FF}
+A.ApCalMnthLnk:visited { }
+A.ApCalMnthLnkSlct {  font-size: 8pt; color: #FFFFEC; text-decoration: none; text-align: center}
+A.ApCalMnthLnkSlct:hover {  font-size: 8pt; text-decoration: underline; color: #D9F8FF}
+A.ApCalMnthLnkSlct:visited { }
+A.ApCalYearLnk {  font-size: 12pt; color: #FFFFFF; text-decoration: underline; font-family: Arial, Helvetica, sans-serif; font-weight: bold}
+A.ApCalYearLnk:hover {  font-size: 12pt; text-decoration: none}
+A.ApCalYearLnk:visited { }
+.ApCalDay {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; background-color: #FFFFFF; text-align: right; border-color: #FFFFFF #DFDFDF #DFDFDF #efefef; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.ApCalDaySlct {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FDFFDF;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	background-image: url(images/cal_day_slct.gif);
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+
+.ApCalMnthBg {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #7277B0; text-align: center; width: 22px}
+.ApCalMnthBgSlct {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #A6AAD5; text-align: center}
+.ApCalTbl {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8px}
+.ApCalTblBg {  background-color: #004566}
+.ApCalTblLightBg { background-color: #070740}
+.ApCalWeek {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; color: #000000; background-color: #CCCCCC; text-align: center; border: #efefef; border-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 1px; background-image: url(images/cal_week.gif)}
+.ApCalYear {  font-size: 12pt; color: #FFFFFF; font-weight: bold; font-family: Arial, Helvetica, sans-serif}
+.ApCalYearBg {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #4B4D7D; text-align: center}
+.ApInfoTbl {  white-space: nowrap}
+.ApInfo {  color: #00287D; font-size: 8pt}
+.ApInptTxt {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #BCC7CF #45617E #243242 #96A7B4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApInptTxtArea {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; BORDER-RIGHT: #CCCCCC 1px solid; BORDER-TOP: #666666 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-BOTTOM: #999999 1px solid; SCROLLBAR-FACE-COLOR: #CCCCCC; SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; SCROLLBAR-SHADOW-COLOR: #003366; SCROLLBAR-3DLIGHT-COLOR: #CCCCCC; SCROLLBAR-ARROW-COLOR: #666666; SCROLLBAR-DARKSHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #666666; scrollbar-track-color: #CCCCCC;; background-color: #FFFFFF}
+.ApInptSelect {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #CCCCCC #666666 #000000 #999999; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApInptRadio { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #BCC7CF #45617E #243242 #96A7B4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApInptChkBox { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #BCC7CF #45617E #243242 #96A7B4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApCalYearCombo {  font-size: 8pt; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: #E5E6F5; border: #FFFFFF; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.ApCalTimeLabel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.ApCalInptTxtHhMm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #efefef;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #efefef;
+	background-color: #E5E6F5;
+
+}
+.ApCalInptSelectAmPm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #efefef;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #efefef;
+	background-color: #E5E6F5;
+
+}
+
+.ApCalDateBgGrp {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #595C8F; text-align: center}
+
+.ApCalInptMainBtn {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-color: #FFFFFF;
+
+}
+.ApCalInptMainBtnHover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-color: #efefef;
+
+}
+.ApCalMainBtnBg {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #CCCCCC; text-align: center}
+.ApCalDayCurrentDate {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FDFFDF;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	font-weight: bold;
+	color: #996633;
+}
+A.ApCalDayLnkcurrentDate {  font-size: 8pt; color: #000000; text-decoration: none; font-weight: bold}
+A.ApCalDayLnkcurrentDate:hover {  text-decoration: underline; color: #000000}
+A.ApCalDayLnkcurrentDate:visited { }
+.ApTab {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #CCCCCC;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 8pt;
+	color: #000000;
+	padding-top: 0px;
+	padding-right: 2px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	cursor: hand;
+	border-top: 1px solid #3A4876;
+	border-right: 1px solid #3A4876;
+	border-bottom: 1px solid #3A4876;
+	border-left: 1px solid #3A4876;
+}
+.ApTabSlct {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 8pt;
+	vertical-align: middle;
+	cursor: hand;
+	padding: 0px 2px 1px 1px;
+	border-top: 1px solid #3A4876;
+	border-right: 1px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 1px solid #3A4876;
+}
+.ApTabEmptySpace {
+	background-color: #FFFFFF;
+	border-top: 0px solid #3A4876;
+	border-right: 0px solid #3A4876;
+	border-bottom: 1px solid #3A4876;
+	border-left: 0px solid #3A4876;
+}
+.ApTabBody {
+	background-color: #FFFFFF;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-top: 0px solid #3A4876;
+	border-right: 1px solid #3A4876;
+	border-bottom: 1px solid #3A4876;
+	border-left: 1px solid #3A4876;
+	vertical-align: top;
+}
+.ApTabDivShow {
+	display: block;
+}
+.ApTabDivHide {
+	display: none;
+}
+.ApTabLnk {
+	font-size: 8pt;
+	color: #000033;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.ApTabLnk:active {
+	text-decoration: none;
+	color: #003399
+}
+.ApTabLnk:hover {
+	color: #0033CC
+}
+.ApTabLnk:visited {
+}
+DIV.vBoxClass{
+font-size: 8pt;
+font-family: Verdana;
+background-color: #F5F8F9;
+color: #FF0033;
+border-top-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-right-style: solid;
+border-top-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-right-width: 1px;
+border-top-color: #000099;
+border-bottom-color: #000099;
+border-left-color: #000099;
+border-right-color: #000099;
+margin-left: 2px;
+margin-top: 5px;
+margin-bottom: 5px;
+padding-left: 20px;
+padding-right: 5px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.errHilite{
+color: #FF0033;
+background-color: #F5F8F9;
+}
+
+/*tab section styles*/
+.SbmTabSection { 
+	padding:4px;
+}
+.SbmTabSection .SbmTab { 
+	z-index:6;
+	position: relative;
+	text-align:left;
+}
+.SbmTabSection .SbmTab table{
+	border-collapse:collapse;
+}
+.SbmTabSection .SbmTab table tr td,
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab {
+	white-space:nowrap;
+}
+.SbmTabSection .SbmTab table tr td.SbmBlankTab {
+	BORDER-BOTTOM: #949a9c 1px solid;
+}
+
+.SbmTabSection .SbmTab table tr td  a{
+	height:21px;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor:pointer;
+	background:url(images/sbm_tab_td_left.gif) no-repeat left 1px;
+	text-align:center;
+	padding: 0px 0px 0px 8px;
+	font-weight:bold;
+	display:block;
+	vertical-align:;
+}
+
+.SbmTabSection .SbmTab table tr td  a span{
+	height:21px;
+	background:url(images/sbm_tab_td_right.gif) no-repeat right 0px;
+	padding:0px 8px 0px 0px;
+	white-space:nowrap;
+	display:block;
+}
+
+.SbmTabSection .SbmTab table tr td a:hover{
+	text-decoration:none;
+	display:block;
+	background:url(images/sbm_tab_td_left_hover.gif) no-repeat left 1px;
+}
+
+.SbmTabSection .SbmTab table tr td a:hover span{
+	text-decoration:none;
+	display:block;
+	background:url(images/sbm_tab_td_right_hover.gif) no-repeat right 0px;
+}
+
+.SbmTabSection .SbmTab table tr td  a span b{ 
+	padding:5px 0 0 0;
+	display:block;
+	font-weight:normal;
+}
+
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a,
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a:hover{
+	background: url(images/sbm_tab_td_left_selected.gif) no-repeat left 1px;
+	color: #000000;
+	display:block;
+}
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab a span,
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab a:hover span{
+	background:url(images/sbm_tab_td_right_selected.gif) no-repeat right 1px;
+	color: #000000;
+	display:block;
+}
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a:hover, .SbmTab table tr td.SbmSelectedTab  a:hover span{
+	text-decoration:none;
+	display:block
+}
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a span b{ 
+	padding:4px 0 0 0;
+	display:block;
+	font-weight:normal;
+}
+.SbmTabSection .SbmTabContentDiv{ 
+	border:1px  #949A9C solid;
+	border-top:none;
+	display:block; 
+	position:relative;  
+	z-index:2;
+	padding:7px; background:#FFFFFF;
+	_height:1px;
+}
+/*end tab section styles*/
+
+/*Added New CSS styles to globally fix some html elements*/
+body, table, tr, td, caption, div, span, p, input, label, p, fieldset, fieldset legend, input, textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+}
+label { font-weight:bold}
+textarea, select, .ApInptTxt, .ApInptTxtArea, .ApInptSelect{
+	padding:2px;
+	border:1px solid #6B838D;
+	border-color: #6B838D #C6CBCC #C6CBCC #6B838D;
+	
+	margin:2px 0 2px 0;
+	}
+input{margin:2px 0 2px 0;}
+select, .ApInptSelect { padding:1px;}
+a{
+	color: #003399;
+	text-decoration: none;
+}
+a:hover{
+	color: #003399;
+	text-decoration: underline;
+}
+fieldset { padding:8px; margin:8px 0 8px 0 }
+fieldset legend{ padding:4px  0 4px 0 ;}
+/* end Added New CSS styles to globally fix some html elements*/

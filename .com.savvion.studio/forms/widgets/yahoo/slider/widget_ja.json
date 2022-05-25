@@ -1,0 +1,55 @@
+{
+    'name': 'Slider',
+	'label': '\ufeff\u30b9\u30e9\u30a4\u30c0',
+    'type': 'yahoo',
+    'version': '1.0',
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-slider.jpg',
+    'description': '\u6c34\u5e73\u3082\u3057\u304f\u306f\u5782\u76f4\u8ef8\u4e0a\u306e\u6709\u9650\u7bc4\u56f2\u3067\u30e6\u30fc\u30b6\u304c\u5024\u3092\u8abf\u6574\u3059\u308b\u3053\u3068\u3092\u53ef\u80fd\u306b\u3059\u308b\u30b9\u30e9\u30a4\u30c0\u30fc\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8',
+    'category': 'Slider',
+    'args': [
+            {'topic':{'label':'\u30c8\u30d4\u30c3\u30af', 'type':'STRING', 'defaultValue': '/yahoo/slider', 'description': '\u30c8\u30d4\u30c3\u30af\u306f\u767a\u884c\u3055\u308c\u307e\u3059\u3002'}},
+            {'sliderType':{'label':'\u30b9\u30e9\u30a4\u30c0\u30fc\u30bf\u30a4\u30d7', 'type':'STRING', 'defaultValue': '\u6c34\u5e73', 'values': [
+              {'name' : '\u6c34\u5e73', 'value' : 'H', 'description' : '\u6c34\u5e73\u30b9\u30e9\u30a4\u30c0\u30fc'},
+              {'name' : '\u5782\u76f4', 'value' : 'V', 'description' : '\u5782\u76f4\u30b9\u30e9\u30a4\u30c0\u30fc'}
+             ],
+            'description': '\u30b9\u30e9\u30a4\u30c0\u30fc\u306e\u30aa\u30ea\u30a8\u30f3\u30c6\u30fc\u30b7\u30e7\u30f3'}},
+	    {'animate':{'label':'\u30a2\u30cb\u30e1\u30fc\u30b7\u30e7\u30f3', 'type':'BOOLEAN', 'defaultValue': 'true', 'description': '\u30a2\u30cb\u30e1\u30fc\u30b7\u30e7\u30f3\u30d5\u30e9\u30b0', 'values': [{'name':'\u306F\u3044', 'value':'true'},{'name':'\u3044\u3044\u3048', 'value':'false'}]}},
+	    {'scaleFactor':{'label':'\u500d\u7387', 'type':'NUMBER', 'defaultValue': 0.5, 'description': '\u30d4\u30af\u30bb\u30eb\u88dc\u6b63\u5024\u3092\u5b9f\u5024\u306b\u5909\u63db\u3059\u308b\u305f\u3081\u306e\u30ab\u30b9\u30bf\u30e0\u500d\u7387'}},
+	    {'tickSize':{'label':'\u76ee\u76db\u308a\u30b5\u30a4\u30ba', 'type':'NUMBER', 'defaultValue': 25, 'description': '\uff11\u76ee\u76db\u5f53\u305f\u308a\u306e\u30b5\u30a4\u30ba'}},
+	    {'sliderLeft':{'label':'\u5de6\u30b9\u30e9\u30a4\u30c0\u30fc', 'type':'NUMBER', 'defaultValue': 0, 'description': '\u5de6\u306b\u52d5\u304b\u305b\u308b\u30a8\u30ec\u30e1\u30f3\u30c8\u306e\u30d4\u30af\u30bb\u30eb\u6570'}},
+	    {'sliderRight':{'label':'\u53f3\u30b9\u30e9\u30a4\u30c0\u30fc', 'type':'NUMBER', 'defaultValue': 100, 'description': '\u53f3\u306b\u52d5\u304b\u305b\u308b\u30a8\u30ec\u30e1\u30f3\u30c8\u306e\u30d4\u30af\u30bb\u30eb\u6570'}},
+	    {'initialValue':{'label':'\u521d\u671f\u5024', 'type':'NUMBER', 'defaultValue': 50, 'description': '\u958b\u59cb\u5730\u70b9\u304b\u3089\u306e\u30d4\u30af\u30bb\u30eb\u6570'}}
+    ],
+    'value': {
+         'required':'true',
+         'type': 'NUMBER',
+         'defaultValue':50    	
+    },
+    'config' : {
+    	'type': {
+		'id' : 'yahoo.slider',
+	        'libs': [
+			'../resources/libs/yahoo/v2.4.0/yahoo-dom-event/yahoo-dom-event.js',
+			'../resources/libs/yahoo/v2.4.0/animation/animation-min.js',
+			'../resources/libs/yahoo/v2.4.0/dragdrop/dragdrop-min.js',
+			'../resources/libs/yahoo/v2.4.0/slider/slider-min.js',
+                        '../resources/libs/yahoo/v2.4.0/element/element-beta-min.js',
+                        '../resources/libs/yahoo/v2.4.0/container/container_core-min.js',
+                        '../resources/libs/yahoo/v2.4.0/button/button-min.js'
+			 ],
+                 'styles': [
+                     '../resources/libs/yahoo/v2.4.0/fonts/fonts-min.css',
+                     '../resources/libs/yahoo/v2.4.0/button/assets/skins/sam/button.css'],
+                'resources': [
+                    '../resources/libs/yahoo/v2.4.0/assets',
+                    '../resources/libs/yahoo/v2.4.0/button/assets']        
+	    }
+     },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/yahoo/slider/onChange'],
+       'description':'\u30b9\u30e9\u30a4\u30c0\u30fc\u304c\u5909\u66f4\u3055\u308c\u308b\u3068\u304d\u3001onChange\u306ftopicName\u306b\u767a\u884c\u3057\u307e\u3059\u3002 \u305d\u308c\u306fID\u3068\u5024\u3067\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092\u767a\u884c\u3057\u307e\u3059\u3002 \u5024\u306f\u30b9\u30e9\u30a4\u30c0\u30fc\u306e\u5024\u3067\u3059\u3002'
+    }
+     
+}

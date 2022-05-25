@@ -1,0 +1,443 @@
+application BizLogicAPI
+
+using com.savvion.common.SBMUtils;
+
+module ProcessControlUtil
+import BL40_API;
+
+namespace sm="http://www.savvion.com/v6/sm";
+namespace default="http://www.savvion.com/v6/sm";
+
+type SBMMessage = sm:SBMMessage;
+
+type JHashMap = ~java.util.HashMap;
+type JException = ~java.lang.Exception;
+
+// All BizLogic datatypes
+type BLLong = ~java.lang.Long;
+type BLDouble = ~java.lang.Double;
+type BLBoolean = ~java.lang.Boolean;
+type BLDateTime = ~com.savvion.sbm.bizlogic.server.svo.DateTime;
+type BLDecimal = ~com.savvion.sbm.bizlogic.server.svo.Decimal;
+type BLXML = ~com.savvion.sbm.bizlogic.server.svo.XML;
+
+// Module working variables, not to be persisted and reinitialized at every startup
+var sbmversion = nil;
+var curMsg = nil;
+var cpi_previous_pivalue = nil;
+var auditFlag = nil;
+
+
+// Module working variables for the CreateProcessInstance action
+var hmCPI = new JHashMap();
+
+// Module working variables for the CompleteWorkStep action
+var hmCWS = new JHashMap();
+
+// Module working variables for the UpdateDataslot action
+var hmUD = new JHashMap();
+
+
+// Functions to manipulate with module variables
+fun getPreviousProcessInstance() : string {
+    return cpi_previous_pivalue;
+}
+
+fun setPreviousProcessInstance(newpivalue: string ) : void{
+    cpi_previous_pivalue := newpivalue;
+}
+
+fun setCurrentMessage(newmsg: SBMMessage) : void{
+    curMsg := newmsg;
+}
+
+fun getCreateProcessInstanceDefMap() : JHashMap {
+    if ( hmCPI = nil) {
+        hmCPI := new JHashMap();
+    }
+    return hmCPI;
+}
+
+fun getCompleteWorkStepDefMap() : JHashMap {
+    if ( hmCWS = nil) {
+        hmCWS := new JHashMap();
+    }
+    return hmCWS;
+}
+
+fun getUpdateDataslotDefMap() : JHashMap {
+    if ( hmUD = nil) {
+        hmUD := new JHashMap();
+    }
+    return hmUD;
+}
+
+
+fun getAuditFlag(): boolean {
+    if(auditFlag = nil) {
+        val bstrapProp = ~SBMUtils::loadResourceProperties("ruleeditor.conf");
+        val auditlog = bstrapProp.getProperty("rulewizard.rules.debug");
+        if((auditlog != nil) and (auditlog.equalsIgnoreCase("true")))
+            auditFlag := true;
+        else    
+            auditFlag := false;
+    }    
+    return auditFlag;
+}
+
+// Debug methods
+fun pr(s: string) {
+    println(s);
+}
+
+fun doLog(msg: SBMMessage) : boolean{
+    if((getAuditFlag() = true))
+        return true;
+    else
+        return false;
+}
+
+// Prints a message arrival if bizpulseoutput log enabled and message to be logged
+fun pr_msg(msg: SBMMessage, actionNode: DOMNode, actionName: string): void
+{
+    if(doLog(msg) = true) {
+        pr("=====================");
+        pr("Version = " + toString(msg.SBMMessage.SBMMessageHeader.Version));
+        pr("Source = " + toString(msg.SBMMessage.SBMMessageHeader.Source));
+        pr("ActionName = " + actionName);
+        pr("ProcessTemplateName = " + toString(actionNode.ProcessTemplateName));
+    }
+}
+
+// Prints a message execution result, if bizpulseoutput log enabled and message to be logged
+fun pr_msg_result(msg: SBMMessage, success: string): void
+{
+    if(doLog(msg) = true) {
+        pr("Result = " + success);
+        pr("=====================");
+    }
+}
+
+// Gets and initialises the module variable for sbm version
+fun getSBMVersion() : string {
+    if ( sbmversion = nil) {
+        val bstrapProp = ~SBMUtils::loadResourceProperties("sbm.conf");
+        sbmversion := bstrapProp.getProperty("sbm.version");
+    }
+    return sbmversion;
+}
+
+// Checks for message validity
+fun isValidMsg(msg: SBMMessage): boolean
+{
+    // Validate version
+    val a1 = toString(msg.SBMMessage.SBMMessageHeader.Version);
+
+    if (a1 != nil)
+        return true;
+    else
+        return false;
+}
+
+// Conversion functions to BizLogic dataslot objects
+fun toStringObj(s : string) : JObject
+{
+// var t = new string(s);
+ return cast ( JObject) s;
+}
+
+fun toLongObj(s : string) : JObject
+{
+ var t = new BLLong(s);
+ return cast ( JObject) t;
+}
+
+fun toDoubleObj(s : string) : JObject
+{
+ var t = new BLDouble(s);
+ return cast ( JObject) t;
+}
+
+fun toDecimalObj(s : string) : JObject
+{
+ var t = new BLDecimal(s);
+ return cast ( JObject) t;
+}
+
+fun toBooleanObj(s : string) : JObject
+{
+ var t = new BLBoolean(s);
+ return cast ( JObject) t;
+}
+
+fun toDateObj(s : string) : JObject
+{
+ var t = new BLDateTime(toInt(s));
+ return cast ( JObject) t;
+}
+
+fun toXMLObj(s : string) : JObject
+{
+ var t = new BLXML(s);
+ return cast ( JObject) t;
+}
+
+
+fun toListObj(s : string) : JObject
+{
+    var t = new ~java.util.ArrayList();
+    var tok = new ~java.util.StringTokenizer(s,",");
+    while(tok.hasMoreElements()) t.add(cast(string)tok.nextElement());
+    return cast (JObject) t;
+}
+
+
+fun toDSObject(dstype: string, dsvalue: string) : JObject
+{
+    var retObj = nil;
+    try {
+        if(     (dstype.equalsIgnoreCase("String"))
+             or (dstype.equalsIgnoreCase("URL"))
+        ) {
+            retObj := toStringObj(dsvalue);
+        } else if(dstype.equalsIgnoreCase("Long")) {
+            retObj := toLongObj(dsvalue);
+        } else if(dstype.equalsIgnoreCase("Double")) {
+            retObj := toDoubleObj(dsvalue);
+        } else if(dstype.equalsIgnoreCase("Decimal")) {
+            retObj := toDecimalObj(dsvalue);
+        } else if(dstype.equalsIgnoreCase("Boolean")) {
+            retObj := toBooleanObj(dsvalue);
+        } else if(dstype.equalsIgnoreCase("DateTime")) {
+            retObj := toDateObj(dsvalue);
+        } else if(dstype.equalsIgnoreCase("List")) {
+            retObj := toListObj(dsvalue);
+        } else if(dstype.equalsIgnoreCase("XML")) {
+            retObj := toXMLObj(dsvalue);
+        }
+    } catch (ex : JException) {
+        pr("ProcessControlUtil:toDSObject: Caught Exception: Ex = " + ex);
+        throw ex;
+    }
+    return cast(JObject)retObj;
+}
+
+
+// Extracts the Attribute List or the Dataslot List elements from the ContextData
+// part of the incoming message and returns as a Map
+fun getContextDataList(msg: DOMNode, ctx: DOMNode, listToGet: string): JHashMap
+{
+    val retMap = new JHashMap();
+
+    if(listToGet.equals("ATTRIBUTELIST")) {
+        val attrList = ctx.AttributeList;
+
+        val creator = attrList.Creator;
+        if (creator != nil)
+            retMap.put("CREATOR", toString(creator));
+
+        val priority = attrList.Priority;
+        if (priority != nil)
+            retMap.put("PRIORITY", toString(priority));
+
+        val instancename = attrList.InstanceName;
+        if (instancename != nil)
+            retMap.put("PROCESSINSTANCENAME", toString(instancename));
+
+    } else {
+        val dataslotList = ctx.DataslotList;
+
+        foreach dataslot of dataslotList *~ "sm:Dataslot" {
+            val dsname = toString(dataslot.Name);
+            val dsvalue = toString(dataslot.Value);
+            val dstype = toString(dataslot.type);
+            
+            val objdsvalue = toDSObject(dstype, dsvalue);
+            retMap.put(dsname, objdsvalue);
+        }
+    }
+    return retMap;
+}
+
+// Executes the CreateProcessInstance action and uses the values
+// from the incoming message or the pre-defined defaults
+fun CreateProcessInstanceExec(action: DOMNode, msg: DOMNode): int
+{
+    var success = -1;
+    val ptname = toString(action.ProcessTemplateName);
+    val usedefaults = toString(action.useDefaults);
+    val b = usedefaults.equalsIgnoreCase("true");
+    
+    var attributeList=new JHashMap();
+    var dataslotList=new JHashMap();
+    
+    // Get the entry for template specified in message
+    var templateDefaults = cast(JHashMap) getCreateProcessInstanceDefMap().get(ptname);
+
+    if ( (templateDefaults != nil) and (b = true) ){
+        attributeList.putAll(cast(JHashMap) templateDefaults.get("AttributeList"));
+        dataslotList.putAll(cast(JHashMap) templateDefaults.get("DataslotList"));
+    } 
+
+    // Get the message attributes/dataslots and superimpose on defaults
+    val ctx = action.ContextData;
+
+    var msgAttributeList = getContextDataList(msg, ctx, "ATTRIBUTELIST");
+    var msgDataslotList = getContextDataList(msg, ctx, "DATASLOTLIST");
+    attributeList.putAll(msgAttributeList);
+    dataslotList.putAll(msgDataslotList);
+    
+    
+    try {
+        // Get the bizlogic session and create the process instance
+        val blServer = getBLServer();
+        val blSession=getBLSession();
+        val pt = blServer.getProcessTemplate(blSession, ptname);
+        val piPrefix = toString(attributeList.get("PROCESSINSTANCENAME"));
+        val pi = pt.createProcessInstance(piPrefix, attributeList, dataslotList, true);
+
+        // Update the last pi created value      
+        setPreviousProcessInstance(pi.getName());
+        pr("Previous PI = " + getPreviousProcessInstance());
+
+        // Return success code
+        success := 0;
+    } catch (ex : JException) {
+        pr("ProcessControlUtil:CreateProcessInstanceExec: Caught Exception: Ex = " + ex);
+        pr("ProcessControlUtil:CreateProcessInstanceExec: Process Template (" + ptname 
+        + ") couldnt be found. Maybe its not installed");
+        throw ex;
+    }
+    
+    return success;
+}
+
+
+// Executes the CompleteWorkStep action and uses the values
+// from the incoming message or the pre-defined defaults
+fun CompleteWorkStepExec(action: DOMNode, msg: DOMNode): int
+{
+    var success = -1;
+    val ptname = toString(action.ProcessTemplateName);
+    var piname = toString(action.ProcessInstanceName);
+    var wsname = toString(action.WorkStepName);
+    val usedefaults = toString(action.useDefaults);
+    val b = usedefaults.equalsIgnoreCase("true");
+    
+    var dataslotList=new JHashMap();
+    
+    // Get the entry for template specified in message
+    var templateDefaults = cast(JHashMap) getCompleteWorkStepDefMap().get(ptname);
+
+    if ( (templateDefaults != nil) and (b = true) ){
+        // Check if incoming workstepname matches default entry
+        val defDataslotList = cast(JHashMap)templateDefaults.get(wsname);
+        if(defDataslotList != nil)
+            dataslotList.putAll(defDataslotList);
+    } 
+
+    // Get the message attributes/dataslots and superimpose on defaults
+    val ctx = action.ContextData;
+
+    var msgDataslotList = getContextDataList(msg, ctx, "DATASLOTLIST");
+    dataslotList.putAll(msgDataslotList);
+    
+    
+    try {
+        // Get the bizlogic session and create the process instance
+        val blServer = getBLServer();
+        val blSession=getBLSession();
+        val pt = blServer.getProcessTemplate(blSession, ptname);
+
+        // Get the last pi created value      
+        if(piname.equalsIgnoreCase("#PREVPI"))
+            piname := getPreviousProcessInstance();
+
+        if(piname != nil) {
+            // TODO: This is a depreceted method, needs to be replaced with 
+            // function which takes a piid instead of piname
+            val pi = blServer.getProcessInstance(blSession, piname);
+
+            val wil = pi.getWorkItemList(wsname);
+
+            if(wil != nil) {
+                var wiList = wil.list;
+                for (var j = 0; j < wiList.size(); j++ ) {
+                     var wi = cast(~com.savvion.sbm.bizlogic.server.svo.WorkItem)wiList.elementAt(j);
+                     wi.complete(dataslotList);
+                }
+                success := 0;
+            }
+            
+        } else {
+            pr("ProcessControlUtil:CompleteWorkStepExec: Process Instance Name is Nil");
+        }
+
+    } catch (ex : JException) {
+        pr("ProcessControlUtil:CompleteWorkStepExec: Caught Exception: Ex = " + ex);
+        pr("ProcessControlUtil:CompleteWorkStepExec: Process Instance(" + piname 
+        + ") with WorkStep (" + wsname 
+        + ") couldnt be found. Maybe its completed");
+        throw ex;
+    }
+    
+    return success;
+}
+
+
+// Executes the UpdateDataslot action and uses the values
+// from the incoming message or the pre-defined defaults
+fun UpdateDataslotExec(action: DOMNode, msg: DOMNode): int
+{
+    var success = -1;
+    val ptname = toString(action.ProcessTemplateName);
+    var piname = toString(action.ProcessInstanceName);
+    val usedefaults = toString(action.useDefaults);
+    val b = usedefaults.equalsIgnoreCase("true");
+    
+    var dataslotList=new JHashMap();
+    
+    // Get the entry for template specified in message
+    var templateDefaults = cast(JHashMap) getUpdateDataslotDefMap().get(ptname);
+
+    if ( (templateDefaults != nil) and (b = true) ){
+        dataslotList.putAll(cast(JHashMap) templateDefaults.get("DataslotList"));
+    } 
+
+    // Get the message attributes/dataslots and superimpose on defaults
+    val ctx = action.ContextData;
+
+    var msgDataslotList = getContextDataList(msg, ctx, "DATASLOTLIST");
+    dataslotList.putAll(msgDataslotList);
+    
+    try {
+        // Get the bizlogic session and create the process instance
+        val blServer = getBLServer();
+        val blSession=getBLSession();
+
+        // Get the last pi created value      
+        if(piname.equalsIgnoreCase("#PREVPI"))
+            piname := getPreviousProcessInstance();
+
+        if(piname != nil) {
+            // TODO: This is a depreceted method, needs to be replaced with 
+            // function which takes a piid instead of piname
+            val pi = blServer.getProcessInstance(blSession, piname);
+
+            if(pi != nil) {
+                pi.updateSlotValue(dataslotList);
+                success := 0;
+            }
+        } else {
+            pr("ProcessControlUtil:UpdateDataslotExec: Process Instance Name is Nil");
+        }
+
+    } catch (ex : JException) {
+        pr("ProcessControlUtil:UpdateDataslotExec: Caught Exception: Ex = " + ex);
+        pr("ProcessControlUtil:UpdateDataslotExec: Process Instance(" + piname + ") couldnt be found. Maybe its completed");
+        throw ex;
+    }
+    
+    return success;
+}
+

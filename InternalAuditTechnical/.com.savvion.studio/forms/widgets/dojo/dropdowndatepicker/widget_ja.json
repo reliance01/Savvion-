@@ -1,0 +1,36 @@
+ {
+    'name': 'Drop Down Date Picker',
+    'type': 'dojo',
+    'version' : '1.0',
+    'jmakiVersion' : '1.0',    
+    'image': 'images/dojo-drop-down-date-picker.jpg',
+    'description': '\u3053\u308c\u306f\u30ab\u30ec\u30f3\u30c0\u30fc\u3092\u8868\u793a\u3057\u65e5\u4ed8\u3092\u5165\u529b\u3059\u308b\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8\u3067\u3059\u3002',
+    'category': 'Calendar',
+    'topicInfo' : {
+	    'type': 'publish',
+	    'topicName': ['/dojo/dropdownDatePicker/onSelect'],
+	    'description' : '\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8ID\u3001wargs\u3001\u9078\u629e\u3055\u308c\u305f\u5024\u3092\u767a\u884c\u3057\u307e\u3059\u3002',
+    },
+    "args": [
+        {"displayFormat":{
+            "label":"\u8868\u793a\u5f62\u5f0f", 
+            "type":"STRING",
+            "description":"yyyy/MM/dd\u306f\u65e5\u4ed8\u306e\u5f62\u5f0f\u3067\u3059\u3002yyyy\u306f\u5e74\u3001MM\u306f\u6708\u3001dd\u306f\u65e5\u3092\u8868\u3057\u307e\u3059\u3002",   
+            "defaultValue": "yyyy/MM/dd"
+            }
+        }
+    ] , 
+    'value': {'required': false, 'type': 'DATE'},
+	'config' : {
+          'type' :
+           { 'id' : 'dojo', 
+             'libs' : [
+                   '../resources/libs/dojo/v0.4.3/djd43.js'
+               ],
+               'preload' : 'if (typeof djConfig ==\'undefined\') djConfig = { parseWidgets: false, searchIds: [] };',
+               'resources' : [
+                 '../resources/libs/dojo/v0.4.3/src'
+               ]
+    	  }        
+  	}
+}

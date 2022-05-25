@@ -1,0 +1,28 @@
+ {
+    'name': 'Menu',
+    'label': '%widget.menu.label',
+    'type': 'ext',
+    'version': '.9.6.3',
+    'jmakiVersion': '.9.6.3',    
+    'image': 'images/ext-menu.jpg',
+    'description': '%widget.menu.description',
+    'category': 'Menu',
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'resources' : [
+                '../resources/styles/images'
+               ]
+        }
+    },
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+	'topicInfo': {
+       'type': 'publish',
+       'topicName': '/Ext/menu/onClick',
+       'description':'on onclick event publish to /jmaki/menu topic passing the corresponding string for the menu item if the active property is used.  If the href property is used then navigation goes to the URL represented by that corresponding string.'
+    }    
+  }

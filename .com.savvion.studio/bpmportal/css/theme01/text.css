@@ -1,0 +1,183 @@
+/* Classes for different types of textual information */
+.RedTxt { color: #CC3300 }
+.Error { color: #B30000; font-size: 11px }
+.ErrorTblBg {  
+	border: 1px solid; 
+	border-color: #FF6600 #C60000 #C60000 #FF6600;
+	background: #FFFFFF
+}
+.Info { color: #00287D; font-size: 11px }
+.InformationTitle {  
+	font-size: 14px;
+	font-weight: bold; 
+	color: #003399; 
+	padding-top: 2px; 
+	padding-bottom: 2px
+}
+.InfoTblBg {  
+	border:1px solid #0066CC;
+	background: #FFFFFF
+}
+.InfoTbl { white-space: nowrap }
+.Confirmation { color: #009900; font-size: 11px }
+.ConfirmationTitle {  
+	font-size: 12px;
+	font-weight: bold; 
+	padding-top: 4px;
+	padding-bottom:4px;
+}
+.ConfirmationMsg {
+	font-size: 11px;
+	font-weight: normal;
+	padding: 2px 5px 2px 15px
+}
+.ConfirmationMsgBox {
+	padding: 10px;
+	color: #009990;
+}
+.ConfirmationTblBg { border: 1px solid #009999; background: #FFFFF6;width:500px;border-collapse: collapse;margin-top:30px}
+.Wrnng { color: #000000; font-size: 11px }
+.WarningTitle {  
+	font-size: 12pt; 
+	font-weight: bold; 
+	color: #000000; 
+	padding-top: 2px; 
+	padding-bottom: 2px
+}
+.WarningTblBg {  
+	border-color: #999999 #000000 #000000 #999999; 
+	border-style: solid; 
+	border-width: 1px;
+	background: #FBFBFB
+}
+.SmlTxt { font-size: 11px; color: #000000 }
+.SmlTxtBld { font-size: 11px; font-weight: bold }
+.SmlTxtDis { font-size: 11px; color: #999999; text-decoration: none }
+.SmlTxtEditPerformer { font-size: 11px; color: #000000; white-space: nowrap }
+.Reloaded { font-size: 11px; font-weight: bold; color: #009900 }
+.Required { font-size: 11px; color: #FF0000 }
+A.CopyLnk { font-size: 11px; color: #999999; text-decoration: none }
+A.CopyLnk:hover { text-decoration: underline }
+A.CopyLnk:visited { }
+.CopyTxt { font-size: 11px; color: #999999 }
+div.auto_complete { width: 350px; background: #FFFFFF }
+div.auto_complete ul {
+	border: 1px solid #888888;
+	margin :0;
+	padding :0;
+	width :100%;
+    list-style-type :none;
+	line-height: 9pt
+}
+div.auto_complete ul li { margin: 0; padding: 3px; font-size: 11px }
+div.auto_complete ul li.selected { background: #FFFFBB }
+div.auto_complete ul strong.highlight { color: #880000; margin: 0; padding: 0 }
+/* login page styles*/
+.SbmLoginMainDiv {
+	font: normal 12px tahoma,arial,helvetica,sans-serif;
+	margin: 0;
+	vertical-align: middle;
+	padding: 8px;
+	background: url(images/sbm_login_bg.png) no-repeat;
+} 
+.SbmLoginMainDiv div, .SbmLoginMainDiv span {  }
+.ImageDiv {
+	position:relative;  
+	vertical-align:middle;
+	z-index:4;
+	width:50%
+}
+.SbmInfoMessage {
+	font: normal 11px tahoma,arial,helvetica,sans-serif;
+	vertical-align: middle;
+	text-align: left
+}
+.InputTable {
+   font:normal 12px tahoma,arial,helvetica,sans-serif; 
+}
+
+.InputTable td { padding: 3px }
+
+.WarningDiv {
+	font: normal 10px tahoma,verdana,helvetica;
+	text-align:left;
+	color: #FF0000
+}
+.SbmSupport {
+	white-space:nowrap;
+	text-align: right;
+	font-size: 11px;
+	color: #15428B;
+	z-index: 50
+}
+.SbmSupport a { text-decoration: none }
+.SbmSupport a:hover { text-decoration: underline }
+.SbmCopyright {
+	white-space:nowrap;
+	text-align:left;
+	font-size: 11px;
+	color: #15428B;
+}
+.SbmVersion {
+	position: absolute;
+	top:84px;
+	left:124px;
+	white-space:nowrap;
+	width: 262px;
+	text-align:left;
+	color: #1846A3
+}
+
+
+
+.ResultBtn, .ResultBtnHover {
+	font: normal 11px tahoma,verdana,helvetica;
+	padding-left:3px;
+	padding-right:3px;
+	vertical-align: middle;
+	cursor: hand;
+	color: #15428B;
+	border: 1px solid #15428B
+}
+
+.ResultBtn {
+	background: url(images/scrn_button.gif) repeat-x 0px 0px
+}
+
+.ResultBtnHover {
+	background: url(images/scrn_button_hvr.gif) repeat-x 0px -3px
+}
+.SBMButton {
+	white-space:nowrap;
+	width: 211px;
+	text-align: left
+}
+.SBMButton input.Button, .SBMButton input.ButtonPressed {
+	display:block;
+	width:61px; 
+	height:23px;
+	text-align:center;
+	vertical-align:middle;
+	outline: none;
+	position: relative;
+	color:#5265A5;
+	top:3px;
+	border:none;
+	font-size: 11px;
+	font-weight: bold
+}
+.SBMButton input.Button{ : 6; background: url(images/login_button_normal.gif) }
+.SBMButton input.ButtonPressed {
+	top:4px;
+	background: url(images/login_button_pressed.gif)
+}
+
+.LoginBackground {
+	position:absolute;
+	width:100%;
+	height:115px;
+	z-index:1;
+	left: 0;
+	top: 95px;
+	background: #FFFFFF
+}

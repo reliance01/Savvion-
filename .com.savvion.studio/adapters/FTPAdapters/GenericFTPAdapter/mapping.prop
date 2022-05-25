@@ -1,0 +1,9 @@
+adapter-configurator=com.savvion.sbm.adapters.ftp.FTPAdapterConfiguratorDialog
+map-configurator=com.savvion.sbm.adapters.framework.GroupMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.GroupMapper
+AdapterCategory=FTPAdapters
+AdapterName=GenericFTPAdapter
+adapter-class=com.savvion.sbm.adapters.ftp.FTPAdapter
+log-level=10
+icon=server_document.png
+adaplet=false

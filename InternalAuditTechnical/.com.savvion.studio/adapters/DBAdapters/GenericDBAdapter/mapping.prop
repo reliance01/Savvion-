@@ -1,0 +1,10 @@
+adapter-configurator=com.savvion.sbm.adapters.db.DBAdapterConfigurator
+map-configurator=com.savvion.sbm.adapters.framework.TabbedMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.SimpleMapper
+AdapterCategory=DBAdapters
+AdapterName=GenericDBAdapter
+adapter-class=com.savvion.sbm.adapters.db.DBAdapter
+log-level=10
+icon=data.png
+adaplet=true
+inline-enabled=true

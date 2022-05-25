@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_05" class="java.beans.XMLDecoder"> 
+ <object class="com.savvion.sbm.bo.bean.BusinessObjectTypeBean"> 
+  <void property="attributes"> 
+   <void method="put"> 
+    <string>id</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string>0</string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>id</string> 
+     </void> 
+     <void property="name"> 
+      <string>id</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.Long</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.Long</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>region</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>region</string> 
+     </void> 
+     <void property="name"> 
+      <string>region</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>address</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>address</string> 
+     </void> 
+     <void property="name"> 
+      <string>address</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>purchaseamount</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string>0</string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>purchaseamount</string> 
+     </void> 
+     <void property="name"> 
+      <string>purchaseamount</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.Long</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.Long</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>salesquarter</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>salesquarter</string> 
+     </void> 
+     <void property="name"> 
+      <string>salesquarter</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>lastname</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>lastname</string> 
+     </void> 
+     <void property="name"> 
+      <string>lastname</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>firstname</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>firstname</string> 
+     </void> 
+     <void property="name"> 
+      <string>firstname</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>pcode</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>pcode</string> 
+     </void> 
+     <void property="name"> 
+      <string>pcode</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>city</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>city</string> 
+     </void> 
+     <void property="name"> 
+      <string>city</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>productname</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>productname</string> 
+     </void> 
+     <void property="name"> 
+      <string>productname</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+  </void> 
+  <void property="categoryName"> 
+   <string>demo</string> 
+  </void> 
+  <void property="className"> 
+   <string>com.savvion.bo.demo.Customer</string> 
+  </void> 
+  <void property="createdDate"> 
+   <long>1227220406863</long> 
+  </void> 
+  <void property="creator"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="dataSourceRef"> 
+   <string></string> 
+  </void> 
+  <void property="description"> 
+   <string></string> 
+  </void> 
+  <void property="lastModifiedBy"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="lastModifiedDate"> 
+   <long>1227220424925</long> 
+  </void> 
+  <void property="name"> 
+   <string>Customer</string> 
+  </void> 
+ </object> 
+</java> 

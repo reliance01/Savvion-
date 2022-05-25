@@ -1,0 +1,34 @@
+ {
+    'name': 'Grid',
+    'type': 'ext',
+    'version': '.9.6.4',
+    'jmakiVersion': '.9.6',
+    'image': 'images/ext-grid.jpg',
+    'description': 'This widget is dynamic grid that can easily be configured.',
+	'category': 'Table',    
+    'args': [
+                {'title':{'type':'STRING', 'defaultValue': 'Grid Widget', 'description':'Title of the grid widget.'}}
+        ],    
+    'value': {'required':'true', 'type': 'OBJECT',
+             'defaultValue':{
+                'columns':[
+                              { 'label' : 'Title', 'id' : 'title'},
+                              { 'label':'Author', 'id' : 'author'},
+                              { 'label': 'ISBN #', 'id' : 'isbn'},
+                              { 'label': 'Description', 'id' : 'description'}
+                              ],
+                'rows':[
+                        { 'title' : 'Book Title 1', 'author' : 'Author 1', 'isbn': '4412', 'description' : 'A Some long description'},
+                        { 'id' : 'foo', 'title' : 'Book Title 2', 'author' : 'Author 2', 'isbn': '4412', 'description' : 'A Some long description'}
+                       ]
+             }
+    },
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'resources' : [
+                '../resources/styles/images'
+               ]
+        }
+    }
+  }

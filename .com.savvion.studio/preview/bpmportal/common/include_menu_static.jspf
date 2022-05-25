@@ -1,0 +1,614 @@
+<%@ page import="com.savvion.sbm.bpmportal.bizsite.appinfo.ExternalAppInfo" %>
+<%@ page import="com.savvion.sbm.bpmportal.util.UserManagerUtil" %>
+<%@ page import="com.savvion.sbm.bpmportal.util.PasswordUtil" %>
+<%@ page import="com.savvion.sbm.bpmportal.util.PortalConstants" %>
+<%@ page import="com.savvion.sbm.bpmportal.util.PortalUtil" %>
+<%@ page import="java.util.Locale" %>
+<!-- /**** MODIFIED FOR BUSINESS EXPERT CODE INTEGRATION ****/ -->
+<%@page import="java.lang.reflect.Method"%>
+
+<jsp:useBean id="userBean" scope="session" class="com.savvion.sbm.bpmportal.bean.UserBean" />
+
+<!-- script type='text/javascript' src='../javascript/preloadImages<%= bizManage.getTheme() %>.js'></script>
+<script type='text/javascript'>preLoadImages();</script -->
+
+<% if(session.getAttribute(PortalConstants.NO_MENUS) == null || (Boolean)session.getAttribute(PortalConstants.NO_MENUS) == false)
+   {
+%>
+<script type="text/javascript">
+<!--
+if (document.captureEvents){
+    document.captureEvents(Event.KEYPRESS);
+    document.onkeypress = handleShortKeys;
+}
+else{
+    document.onkeypress = handleShortKeys;
+}
+
+//to set password notification message timeout to 5sec
+function hideWaring() {
+    setTimeout("hideWaringMsg()",5000);
+}
+function hideWaringMsg() {
+    var msgdiv = document.getElementById('wrnMsgDiv');
+    if(msgdiv != undefined && msgdiv != null) {
+        msgdiv.style.visibility = 'hidden';
+    }
+}
+window.onLoad = hideWaring();
+
+// For hot keys handling
+var SHIFT_CNTR_T = 20;
+var SHIFT_CNTR_M = 13;
+var SHIFT_CNTR_S = 19;
+var SHIFT_CNTR_L = 12;
+var SHIFT_CNTR_O = 15;
+var SHIFT_CNTR_F = 6;
+var SHIFT_CNTR_I = 9;
+var SHIFT_CNTR_A = 1;
+var SHIFT_CNTR_N = 14;
+var SHIFT_CNTR_K = 11;
+var SHIFT_CNTR_H = 27;
+var SHIFT_CNTR_W = 23;
+var SHIFT_CNTR_D = 4;
+var SHIFT_CNTR_G = 7;
+var SHIFT_CNTR_Q = 17;
+var SHIFT_CNTR_P = 16;
+var SHIFT_CNTR_E = 5;
+var SHIFT_CNTR_R = 18;
+var SHIFT_CNTR_C = 3;
+var SHIFT_CNTR_V = 22;
+var SHIFT_CNTR_U = 21;
+var SHIFT_CNTR_Z = 26;
+
+function handleShortKeys(evt)
+{
+    var keyAsciiCode = 0;
+    if(isIE)
+        evt = event;
+    if((evt.shiftKey) && (evt.ctrlKey))
+    {
+        if(isIE)
+        {
+            keyAsciiCode = evt.keyCode;
+        }
+        else
+        {
+            keyAsciiCode = evt.which;
+            keyAsciiCode = keyAsciiCode - 64;
+        }
+        switch(keyAsciiCode)
+        {
+            case SHIFT_CNTR_T:
+                goToTasks();
+                break;
+            case SHIFT_CNTR_M:
+                goToStatus();
+                break;
+            case SHIFT_CNTR_S:
+                goToApps();
+                break;
+            case SHIFT_CNTR_H:
+                goToAlerts();
+                break;
+            case SHIFT_CNTR_O:
+                goToProfile();
+                break;
+            case SHIFT_CNTR_F:
+                goToFilterList();
+                break;
+            case SHIFT_CNTR_D:
+                goToDashboardHome();
+                break;
+           <% if (userBean.hasLink("overview")) { %>
+                case SHIFT_CNTR_I:
+                    goToInstanceList();
+                    break;
+                case SHIFT_CNTR_A:
+                    goToApplicationList();
+                    break;
+           <% } %>
+           <% if (userBean.hasLink("reports")) { %>
+                case SHIFT_CNTR_R:
+                    goToMyReports()
+                    break;
+           <% } %>
+           <% if (userBean.hasLink("instanceManager")) { %>
+        case SHIFT_CNTR_N:
+            goToAppLevel();
+                    break;
+            case SHIFT_CNTR_K:
+                goToTaskLevel();
+                    break;
+                case SHIFT_CNTR_W:
+                    goToWsLevel()
+                    break;
+           <% } %>
+           <% if (userBean.hasLink("balancedScorecard")) { %>
+                case SHIFT_CNTR_C:
+                    goToBscView();
+                    break;
+           <% } %>
+           <% if (userBean.hasLink("admsystem")) { %>
+                case SHIFT_CNTR_V:
+                        goToLogViewer();
+                    break;
+           <% } %>
+           <% if (userBean.hasLink("userManagement")) { %>
+                case SHIFT_CNTR_G:
+                    goToGroupAdmin();
+                    break;
+                case SHIFT_CNTR_Q:
+                    goToQueueAdmin();
+                    break;
+                case SHIFT_CNTR_P:
+                    goToPermissionAdmin();
+                    break;
+                case SHIFT_CNTR_E:
+                    goToDelegateAdmin();
+                    break;
+                case SHIFT_CNTR_U:
+                    goToUserAdmin();
+                    break;
+           <% } %>
+           <% if (userBean.hasLink("applications")) { %>
+                case SHIFT_CNTR_L:
+                    goToBLApps();
+                    break;
+                case SHIFT_CNTR_Z:
+                    goToBSApps();
+                    break;
+           <% } %>
+        }
+    }else if(DISABLE_ENTER_KEY) {        
+        disableSubmit(evt);              
+    }
+}
+
+
+<%
+
+    boolean enableBRMSPortal = false;
+    if(session.getAttribute(PortalConstants.BRMSPORTAL_ACCESS) != null) {
+        enableBRMSPortal = (Boolean) session.getAttribute(PortalConstants.BRMSPORTAL_ACCESS);
+    } else {
+            if(PortalUtil.self().isBizrulesLicenseValid()
+                    && ( userBean.hasLink("infopads") || userBean.hasLink("balancedScorecard")
+                        || userBean.hasLink("instanceManager") || userBean.hasLink("reports")
+                || userBean.hasLink("overview") || userBean.hasLink("applications")
+                || userBean.hasLink("userManagement") || userBean.hasLink("admsystem")) )
+        {
+        enableBRMSPortal = true;
+        } else {
+            enableBRMSPortal = false;
+        }
+        session.setAttribute(PortalConstants.BRMSPORTAL_ACCESS, enableBRMSPortal);
+    }
+
+%>
+
+-->
+</script>
+
+<div id="topPanelContainer">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+      <td>
+          <a href="http://www.aurea.com" class="logoImage"></a>
+      </td>
+      <td align="right">
+        <table width="300" border="0" style="padding-right:10px;" cellpadding="0" align="right" cellspacing="0" border="0">
+        <tr>
+            <td align="right" valign="bottom" class="cmdLinks"  colspan="2"  nowrap>
+                  <% if(userBean.hasLink(PortalConstants.BCP_PRODUCT_ID)) { %>
+                       <a href="javascript:goToControlTowerHome()"><sbm:message key="PCT" /></a>
+                        &nbsp;|&nbsp;
+                  <% } %>
+                   <% if(enableBRMSPortal) { %>
+               <a href="javascript:goToBRMSPortal('<%= bizManage.getLocale().getLanguage() %>')" class="BRMSPortalIcon"><sbm:message key="BRMSPortal" /></a>
+               &nbsp;|&nbsp;
+                   <% } %>
+                   <a href="javascript:goToSupportInfo()" class="supportIcon"><sbm:message key="support" /></a>
+                   &nbsp;|&nbsp;
+                   <a href="javascript:goToHelp(<%= menu1 %>)" class="helpIcon"><sbm:message key="help" /></a>
+                   &nbsp;|&nbsp;
+                   <a href="javascript:goToAbout()" class="aboutIcon"><sbm:message key="about" /></a>
+                   &nbsp;|&nbsp;
+                   <a href="javascript:goToLogout()" class="logoutIcon"><sbm:message key="logout" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" nowrap>
+            <%
+              if(session.getAttribute("isPwdExprNotified") == null && UserManagerUtil.self().isDueNotify(bizManage.getId())){
+            %>
+                <%
+                  long daysBeforeExp = UserManagerUtil.self().getDaysBeforeExpiry(bizManage.getId());
+                %>
+                <div class="cmdLinks" id="wrnMsgDiv">
+                    <% if(daysBeforeExp < 1) {%>
+                        <span class="passwordWarning">&nbsp;&nbsp;<sbm:message key="pwdExprNotificationFor0Days"/>&nbsp;&nbsp;</span>
+                    <%}else{%>
+                <span class="passwordWarning">&nbsp;&nbsp;<sbm:message key="pwdExprNotification" params="<%=String.valueOf(daysBeforeExp)%>" />&nbsp;&nbsp;</span>
+                    <%}%>
+                </div>
+            <% session.setAttribute("isPwdExprNotified","true");
+            }
+            %>
+            </td>
+            <td align="right" nowrap>
+                <div class="cmdLinks">
+                    <span class="welcomeTitle">
+                        <sbm:message key="Welcome" />
+                    </span>
+                    <a href="javascript: goToProfile()"><%=bizManage.getFirstName()%></a>
+                </div>
+            </td>
+        </tr>
+        </table>
+     </td>
+  </tr>
+  </table>
+</div>
+
+<div id="tabsContainer">
+    <div id="mainTabsDiv">
+        <div id="myHomeTabContainer" class="x-hide-display">
+            <div id="myHomeTab"></div>
+        </div>
+        <div id="managementTabContainer" class="x-hide-display">
+            <div id="managementTab"></div>
+        </div>
+        <div id="adminTabContainer" class="x-hide-display">
+            <div id="administrationTab"></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+<!--
+Ext.onReady(function(){
+    Ext.QuickTips.init();
+
+    var noFavMenus = [{text: '<sbm:message key="NoFavoritesDefined" />'}];
+    <%
+    StringBuilder favMenus = null;
+    java.util.List externalAppsList = userBean.getUserFavorites(bizManage.getLocale());
+    if(externalAppsList != null && externalAppsList.size() > 0) {
+        favMenus = new StringBuilder();
+        favMenus.append("[");
+        for(int appsCount=0;appsCount < externalAppsList.size();appsCount++) {
+            ExternalAppInfo extAppInfo = (ExternalAppInfo)externalAppsList.get(appsCount);
+            if(extAppInfo != null) {
+                if (favMenus.length() > 1) {
+                    favMenus.append(",");
+                }
+                favMenus.append("{ text: \"").append(extAppInfo.getDisplayName()).append("\", href:\"javascript:MM_openBrWindow(\'").append(extAppInfo.getLink()).append("\',\'newWindow\',\'\')\" }");
+            }
+        }
+        favMenus.append("]");
+    }
+    %>
+
+    var favoriteMenuItems = <% if(favMenus == null) out.print("noFavMenus"); else out.print(favMenus); %>;
+
+    var myHomeToolbar = new Ext.Toolbar();
+    myHomeToolbar.render('myHomeTab');
+
+    myHomeToolbar.add({
+            text:'<sbm:message key="subMenu1" />', handler: goToTasks, pressed: <%= (menu1.equals("0") && submenu1.equals("0")) ? true : false %>
+        }, '-', {
+                text:'<sbm:message key="subMenu18" />', handler: goToMyCollaborativeTasks, pressed: <%= (menu1.equals("0") && submenu1.equals("9")) ? true : false %>
+        }, '-', {
+            text:'<sbm:message key="subMenu2" />', handler: goToStatus, pressed: <%= (menu1.equals("0") && submenu1.equals("1")) ? true : false %>
+        }, '-', {
+            text:'<sbm:message key="subMenu17" />', handler: goToAlerts, pressed: <%= (menu1.equals("0") && submenu1.equals("2")) ? true : false %>
+        }, '-', {
+            text:'<sbm:message key="subMenu3" />', handler: goToApps, pressed: <%= (menu1.equals("0") && submenu1.equals("3")) ? true : false %>
+        }, '-', {
+            text:'<sbm:message key="subMenu8" />', handler: goToDashboardHome, pressed: <%= (menu1.equals("0") && submenu1.equals("4")) ? true : false %>
+        }, '-', {
+            text:'<sbm:message key="subMenu16" />', handler: goToModels, pressed: <%= (menu1.equals("0") && submenu1.equals("5")) ? true : false %>
+        }, '-', {
+            text:'<sbm:message key="subMenu5" />', handler: goToProfile, pressed: <%= (menu1.equals("0") && submenu1.equals("6")) ? true : false %>
+        }, '-', {
+            text:'<sbm:message key="subMenu6" />',
+            pressed: <%= (menu1.equals("0") && submenu1.equals("7")) ? true : false %>,
+        menu : {items: [
+                        {text: '<sbm:message key="sub2Menu1" />', handler: goToFilterList},
+                        {text: '<sbm:message key="sub2Menu2" />', handler: goToProxyList},
+                        {text: '<sbm:message key="sub2Menu28" />', handler: goToCalendarHome},
+                        '-',
+            {text: '<sbm:message key="sub2Menu27" />', handler: goToAlertPreferences}
+                ]}
+        }, '-', {
+            text:'<sbm:message key="subMenu4" />',
+            pressed: <%= (menu1.equals("0") && submenu1.equals("8")) ? true : false %>,
+            menu : {items: favoriteMenuItems}
+        }
+    );
+	myHomeToolbar.doLayout();
+
+    var adminToolbar = new Ext.Toolbar();
+    adminToolbar.render('administrationTab');
+
+    <%
+        boolean addAdminSeperator = false;
+    if (userBean.hasLink("admsystem")) {
+        addAdminSeperator = true;
+    %>
+            adminToolbar.add({
+                    text:'<sbm:message key="subMenu13" />',
+                    pressed: <%= (menu1.equals("2") && submenu1.equals("0")) ? true : false %>,
+                    menu : {items: [
+                         {text: '<sbm:message key="sub2Menu14" />', handler: goToSystemStatus},
+                                    {
+                        text: '<sbm:message key="sub2Menu15" />',
+                        menu: {
+                            items: [
+                                {text: '<sbm:message key="sub3Menu1" />', handler: goToSBMConfig},
+                                {text: '<sbm:message key="sub3Menu9" />', handler: goToLogConfig},
+                                {text: '<sbm:message key="sub3Menu2" />', handler: goToBizSoloConfig},
+                                {text: '<sbm:message key="sub3Menu10" />', handler: goToPortalConfig},
+                                {text: '<sbm:message key="sub3Menu5" />', handler: goToBizLogicConfig},
+                                {text: '<sbm:message key="sub3Menu11" />', handler: goToBizStoreConfig},
+                                {text: '<sbm:message key="sub3Menu12" />', handler: goToEmailConfig},
+                                {text: '<sbm:message key="sub3Menu6" />', handler: goToBizPulseConfig},
+                                <% if(PortalUtil.self().isBusinessExpertInstalled()) {%>
+                                {text: '<sbm:message key="sub3Menu13" />', handler: goToBEConfig},
+                                <%}%>
+                                {text: '<sbm:message key="sub3Menu8" />', handler: goToEventPublisherConfig}
+                            ]
+                        }
+                        },
+                        {text: '<sbm:message key="sub2Menu16" />', handler: goToLogViewer},
+                        {text: '<sbm:message key="sub2Menu24" />', handler: goToAdminFilterList},
+                        {text: '<sbm:message key="sub2Menu29" />', handler: goToCalendarAdmin},
+                        {text: '<sbm:message key="sub2Menu30" />', handler: goToDashboardAdmin},
+                        {text: '<sbm:message key="sub2Menu25" />', handler: goToAttributeList},
+                        {text: '<sbm:message key="sub2Menu31" />', handler: goToAuditEvents}
+                    ]}
+            });
+                            <%
+                                    }
+        if (userBean.hasLink("userManagement")) {
+           if(addAdminSeperator) {
+                            %>
+            adminToolbar.add('-');
+                            <%
+                                    }
+           addAdminSeperator = true;
+                            %>
+           adminToolbar.add({
+                text:'<sbm:message key="subMenu14" />',
+                pressed: <%= (menu1.equals("2") && submenu1.equals("1")) ? true : false %>,
+                menu : {items: [
+                     {text: '<sbm:message key="sub2Menu17" />', handler: goToUserAdmin},
+                     {text: '<sbm:message key="sub2Menu18" />', handler: goToGroupAdmin},
+                     {text: '<sbm:message key="sub2Menu19" />', handler: goToQueueAdmin},
+                     {text: '<sbm:message key="sub2Menu20" />', handler: goToPermissionAdmin},
+                     {text: '<sbm:message key="sub2Menu21" />', handler: goToDelegateAdmin},
+                     {text: '<sbm:message key="sub2Menu26" />', handler: goToFavoritesAdmin}
+                    ]
+                }
+           });
+                            <%
+                                    }
+        if (userBean.hasLink("applications")) {
+           if(addAdminSeperator) {
+                            %>
+            adminToolbar.add('-');
+                            <%
+                                    }
+           addAdminSeperator = true;
+%>
+       adminToolbar.add({
+                text:'<sbm:message key="subMenu15" />',
+                pressed: <%= (menu1.equals("2") && submenu1.equals("2")) ? true : false %>,
+                menu : {items: [
+                     {text: '<sbm:message key="sub2Menu22" />', handler: goToBLApps},
+                     {text: '<sbm:message key="sub2Menu23" />', handler: goToBSApps}
+                    ]}
+            });
+  <%
+    }
+  %>
+	adminToolbar.doLayout();
+
+    var mgmtToolbar = new Ext.Toolbar();
+    mgmtToolbar.render('managementTab');
+
+<%
+        boolean addMgmtSeperator = false;
+        if (userBean.hasLink("overview")) {
+            addMgmtSeperator = true;
+    %>
+        mgmtToolbar.add({
+            text:'<sbm:message key="subMenu7" />',
+            pressed: <%= (menu1.equals("1") && submenu1.equals("0")) ? true : false %>,
+            menu : {items: [
+                {text: '<sbm:message key="tasks" />', handler: goToTaskList},
+                 {text: '<sbm:message key="sub2Menu3" />', handler: goToInstanceList},
+                 {text: '<sbm:message key="sub2Menu4" />', handler: goToApplicationList}
+            ]}
+        });
+  <%
+    }
+       if (userBean.hasLink("reports")) {
+           if(addMgmtSeperator) {
+  %>
+            mgmtToolbar.add('-');
+<%
+    }
+           addMgmtSeperator = true;
+%>
+           mgmtToolbar.add({
+                text:'<sbm:message key="subMenu9" />',
+                pressed: <%= (menu1.equals("1") && submenu1.equals("2")) ? true : false %>,
+            menu : {items: [
+                     {text: '<sbm:message key="sub2Menu5" />', handler: goToMyReports},
+                     '-',
+                     {text: '<sbm:message key="sub2Menu6" />', handler: goStatusReportGenerator},
+                     {text: '<sbm:message key="sub2Menu7" />', handler: goTimeAnalysisReportGenerator},
+                     {text: '<sbm:message key="sub2Menu8" />', handler: goWorkloadReportGenerator}
+                ]}
+           });
+  <%
+    }
+        if (userBean.hasLink("instanceManager")) {
+           if(addMgmtSeperator) {
+  %>
+            mgmtToolbar.add('-');
+  <%
+    }
+           addMgmtSeperator = true;
+  %>
+        mgmtToolbar.add({
+                text:'<sbm:message key="subMenu10" />',
+                pressed: <%= (menu1.equals("1") && submenu1.equals("3")) ? true : false %>,
+                menu : {items: [
+                     {text: '<sbm:message key="sub2Menu9" />', handler: goToAppLevel},
+                     {text: '<sbm:message key="sub2Menu10" />', handler: goToTaskLevel},
+                     {text: '<sbm:message key="sub2Menu11" />', handler: goToWsLevel}
+            ]}
+           });
+  <%
+    }
+        if (userBean.hasLink("balancedScorecard")) {
+           if(addMgmtSeperator) {
+  %>
+            mgmtToolbar.add('-');
+  <%
+    }
+           addMgmtSeperator = true;
+  %>
+           mgmtToolbar.add({
+                text:'<sbm:message key="subMenu11" />',
+                pressed: <%= (menu1.equals("1") && submenu1.equals("4")) ? true : false %>,
+                menu : {items: [
+                     {text: '<sbm:message key="sub2Menu12" />', handler: goToBscView},
+                     {text: '<sbm:message key="sub2Menu13" />', handler: goToBscDesign}
+            ]}
+           });
+<%
+    }
+        if (userBean.hasLink("infopads")) {
+           if(addMgmtSeperator) {
+%>
+            mgmtToolbar.add('-');
+<%
+    }
+           addMgmtSeperator = true;
+%>
+           mgmtToolbar.add({
+                text:'<sbm:message key="subMenu12" />', handler: goToInfopadManager, pressed: <%= (menu1.equals("1") && submenu1.equals("5")) ? true : false %>
+           });
+        <% } %>
+         /**** BUSINESS EXPERT CODE INTEGRATION START ****/
+        <% if (PortalUtil.self().isBusinessExpertInstalled() && userBean.hasLink("businessExpert")) {
+            Class<?> clazz = Class.forName("com.savvion.bm.analytics.AnalyticsUtil");
+            Method method = clazz.getMethod("getBEProperty",new Class[]{Locale.class,String.class});
+            if(addMgmtSeperator) {
+        %>
+            mgmtToolbar.add('-');
+        <% }
+            addMgmtSeperator = true;
+         %>
+           mgmtToolbar.add({
+                text:'<%= method.invoke(null,bizManage.getLocale(),"subMenu58") %>',
+                pressed: <%= (menu1.equals("1") && submenu1.equals("6")) ? true : false %>,
+                menu : {items: [
+                     {text: '<%= method.invoke(null,bizManage.getLocale(),"sub2Menu59") %>', handler: goToAnalysis},
+                     {text: '<%= method.invoke(null,bizManage.getLocale(),"sub2Menu58") %>', handler: goToAnalytics}
+            ]}
+           });
+        <%
+    }
+/**** BUSINESS EXPERT CODE INTEGRATION END ****/
+%>
+    mgmtToolbar.doLayout();
+    
+    var tabItems = new Array();
+    tabItems.push({id: 'myHomeTab', contentEl:'myHomeTabContainer', title: '<sbm:message key="topMenu1" />', iconCls: 'homeIcon'});
+
+    <%
+        /**** MODIFIED FOR BUSINESS EXPERT CODE INTEGRATION ****/
+        if (userBean.hasLink("overview") || userBean.hasLink("reports") || userBean.hasLink("instanceManager") || userBean.hasLink("balancedScorecard") || userBean.hasLink("infopads") || (PortalUtil.self().isBusinessExpertInstalled() && userBean.hasLink("businessExpert")))
+        {
+    %>
+            tabItems.push({id: 'managementTab', contentEl:'managementTabContainer', title: '<sbm:message key="topMenu2" />',iconCls: 'mgmtIcon'});
+    <%
+        }
+        if (userBean.hasLink("admsystem") || userBean.hasLink("userManagement") || userBean.hasLink("applications"))
+        {
+    %>
+            tabItems.push({id: 'adminTab', contentEl:'adminTabContainer', title: '<sbm:message key="topMenu3" />',iconCls: 'adminIcon'});
+    <%
+        }
+    %>
+
+    var activeTab = <%= menu1%>;
+    if(tabItems.length <= activeTab)
+        activeTab = tabItems.length - 1;
+
+    var tabs = new Ext.TabPanel({
+        renderTo: 'mainTabsDiv',
+        plain:true,
+        activeTab: activeTab,
+        border : true,
+        frame:true,
+        defaults: {autoHeight: true,autoWidth: true},
+        items: tabItems
+    });
+
+    tabs.addListener("beforetabchange", function(tabPanel, newtab, currenttab) {
+                                            <%
+                                                String jsaction = null;
+                                            %>
+                                            var newTabId = newtab['id'];
+                                            if(newTabId == 'myHomeTab') {
+                                                if(Ext.isGecko3)
+                                                return goToTasks();
+                                                else
+                                                    goToTasks();
+                                            } else if(newTabId == 'managementTab') {
+                                                <%
+                                                    /**** BUSINESS EXPERT CODE INTEGRATION START ****/
+                                                    if (PortalUtil.self().isBusinessExpertInstalled() && userBean.hasLink("businessExpert"))
+                                                        jsaction = "goToAnalysis";
+                                                    /**** BUSINESS EXPERT CODE INTEGRATION END ****/
+                                                    if (userBean.hasLink("infopads"))
+                                                        jsaction = "goToInfopadManager";
+                                                    if (userBean.hasLink("balancedScorecard"))
+                                                        jsaction = "goToBscView";
+                                                    if (userBean.hasLink("instanceManager"))
+                                                        jsaction = "goToAppLevel";
+                                                    if (userBean.hasLink("reports"))
+                                                        jsaction = "goToMyReports";
+                                                    if (userBean.hasLink("overview"))
+                                                        jsaction = "goToInstanceList";
+                                                    if(jsaction != null)
+                                                        out.println("if(Ext.isGecko3) return " + jsaction + "(); else " + jsaction + "();");
+                                                %>
+                                            } else {
+                                                <%
+                                                    if (userBean.hasLink("applications"))
+                                                        jsaction = "goToBLApps";
+                                                    if (userBean.hasLink("userManagement"))
+                                                        jsaction = "goToUserAdmin";
+                                                    if (userBean.hasLink("admsystem"))
+                                                        jsaction = "goToSystemStatus";
+                                                    if(jsaction != null)
+                                                        out.println("if(Ext.isGecko3) return " + jsaction + "(); else " + jsaction + "();");
+                                                %>
+                                            }
+                                            return false;
+                                        });
+  });
+-->
+</script>
+<% } %>
+
+<sbm:xsrf />
+

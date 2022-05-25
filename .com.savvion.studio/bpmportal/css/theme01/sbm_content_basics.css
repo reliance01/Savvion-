@@ -1,0 +1,745 @@
+.SbmReloaded {
+	color: #009900;
+	font-stretch: wider
+}
+
+.SbmSearchBar {
+	margin: 0px;
+	vertical-align: top;
+	border-bottom: #003399 1px solid;
+	background: #FFFFFF
+}
+
+.SbmSearchBar td{
+	padding: 1px 4px;
+	height: 24px;
+	vertical-align: middle
+}
+
+.SbmLogText {
+	color: #000000;
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF url(../../css_70/theme01/images/sml_txt_log.gif)
+}
+
+.SbmLogText  pre {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 22px;
+	padding: 0px 4px
+}
+
+.SbmSearchBar a.SbmQueryButton {
+	cursor: pointer;
+	text-decoration: none;
+	color: #000000;
+	white-space: nowrap;
+	padding: 0px;
+	border: 1px solid #FFFFFF;
+	display: block;
+	background: #FFFFFF
+}
+
+.SbmSearchBar a.SbmQueryButton:hover {
+	cursor: hand;
+	text-decoration: none;
+	color: #000000;
+	border: 1px solid #CCCCCC;
+	background: #FFFFFF
+}
+
+.SbmSearchBar a.SbmQueryButton:active {
+	color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	background: #CCCCCC
+}
+
+.SbmSearchBar a.SbmInsideButton1:visited{ }
+
+.SbmQuickSearchLinkDiv { }
+
+.SbmQuickSearchLinkDiv b, span{
+	padding-left: 1px
+}
+
+.SbmQuickSearchLinkDiv a{
+	padding-left: 1px;
+	color: #009AFF
+}
+
+.SbmQuickSearchLinkDiv a:hover{
+	padding-left: 1px;
+	color: #004994
+}
+
+.SbmQuickSearchLinkDiv a:active{ }
+
+.SbmAdminHomeDiv {
+	padding: 6px;
+	_width: 100%; /*margin:4px;
+border:#006699 solid 1px;*/
+	display: block
+}
+
+.SbmAdminHomeTable {
+	margin-bottom: 10px
+}
+
+td.SbmAdminHomeTitleCell {
+	padding: 2px;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #FFFFFF;
+	cursor: pointer;
+	background: #FFFFFF
+}
+
+td.SbmAdminHomeTitleCell:Hover {
+	padding: 2px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #D7D7D7;
+	cursor: pointer;
+	background: #FFFFFF
+}
+
+td.SbmAdminHomeTitleCell:Active {
+	padding: 2px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #D7D7D7;
+	cursor: pointer;
+	background: #EFEFEF
+}
+
+.SbmAdminHomeTitleCell a.Hide{
+	color: #000000; /*background-color: #B5D7FF;*/
+	white-space: nowrap;
+	display: block;
+	padding: 1px;
+	border: 1px solid #FFFFFF;
+	text-decoration: none
+}
+
+.SbmAdminHomeTitleCell a.Hide:hover {
+	border: 1px solid #000000;
+	color: #000000;
+	text-decoration: none
+}
+
+.SbmAdminHomeTitleCell a.Hide:active {
+	border: 1px solid #EFEFEF;
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #EFEFEF
+}
+
+.SbmAdminHomeTitleCell a.Hide:visited{ }
+
+.SbmAdminHomeContentCell {
+	padding: 0px;
+	margin: 0px;
+	border-top: 0px solid #6A9FFF;
+	border-right: 0px solid #6A9FFF;
+	border-bottom: 0px solid #6A9FFF;
+	border-left: 0px solid #6A9FFF;
+	background: #FFFFFF
+}
+
+	
+.SbmAdminHomeContentCell a.Edit{
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	border: 1px solid #FFFFFF;
+	text-decoration: none;
+	background: #FFFFFF;
+	padding: 0px 2px
+}
+
+.SbmAdminHomeContentCell a.Edit:hover {
+	border: 1px solid #5AB2EF;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF
+}
+
+.SbmAdminHomeContentCell a.Edit:active {
+	border: 1px solid #5AB2EF;
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #5AB2EF
+}
+
+.SbmAdminHomeContentCell a.Edit:visited{ }
+
+.SbmAdminHomeCommonLink{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	display: block;
+	width: 1%;
+	white-space: nowrap;
+	color: #00509F
+}
+
+/*calendar popup*/
+.SbmCalendarDiv {
+	display: block;
+	position: absolute;
+	margin: 0px;
+	border: 1px solid #FFFFFF /*padding:4px;
+background-color:#CCCCCC*/
+}
+
+.SbmCalendarTimeCellBackground {
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center;
+	background: #A5C7E7
+}
+
+.SbmCalendarTimeCellBackground td{
+	font-size: 8pt;
+	padding: 3px
+}
+
+.SbmCalendarTimeCellBackground input, select{
+	font-size: 8pt;
+	color: #000066;
+	border: 1px solid #7B86A5;
+	background: #FFFFFF
+}
+
+.SbmCalendarYearCellBackground {
+	text-align: center;
+	padding: 2px;
+	font: bold 8pt Arial, Helvetica, sans-serif;
+	background: #A5C7E7
+}
+
+.SbmCalendarYearCellBackground select{
+	border: 1px solid #7B86A5;
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+
+	
+.SbmCalendarMainTable {
+	background: #7B86A5
+}
+
+.SbmCalendarDaysTable { }
+
+.SbmCalendarDaysTable TH{
+	font-weight: bold;
+	color: #52619C;
+	text-align: center;
+	border-top: 0px solid #89A1B2;
+	border-right: 1px solid #89A1B2;
+	border-bottom: 1px solid #89A1B2;
+	border-left: 0px solid #89A1B2;
+	padding: 2px;
+	background: #CED7E7
+}
+
+.SbmCalendarDaysTable TD{
+	text-align: right;
+	border-top: 0px solid #BDCED2;
+	border-right: 1px solid #BDCED2;
+	border-bottom: 1px solid #BDCED2;
+	border-left: 0px solid #BDCED2;
+	padding: 2px;
+	background: #FFFFFF
+}
+
+.SbmCalendarDaysTable TD.SbmCurrentDate{
+	text-align: right;
+	font-weight: bold;
+	color: #996633;
+	background: #FDFFDF
+}
+
+TD.SbmCurrentDate A {
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold
+}
+
+TD.SbmCurrentDate A:hover {
+	text-decoration: underline;
+	color: #000000
+}
+
+TD.SbmCurrentDate A:visited { }
+
+.SbmCalendarDaysTable A {
+	color: #000000;
+	text-decoration: none
+}
+
+.SbmCalendarDaysTable A:hover {
+	text-decoration: underline;
+	color: #006699
+}
+
+.SbmCalendarDaysTable A:visited { }
+
+.SbmCalendarDaysTable TD.SbmSelectedDate {
+	text-align: right;
+	padding: 2px;
+	background: #FDFFDF
+}
+
+TD.SbmSelectedDate A {
+	color: #990000;
+	text-decoration: none;
+	font-weight: bold
+}
+
+TD.SbmSelectedDate A:hover {
+	text-decoration: underline;
+	color: #FF3300
+}
+
+TD.SbmSelectedDate A:visited { }
+
+.SbmCalendarMonthsTable { }
+
+.SbmCalendarMonthsTable TD{
+	text-align: center;
+	width: 22px;
+	font-weight: bold;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #9BBEDD;
+	border-right-color: #9BBEDD;
+	border-bottom-color: #9BBEDD;
+	border-left-color: #9BBEDD;
+	background: #B7D4EE
+}
+
+.SbmCalendarMonthsTable TD.SelectedMonth{
+	text-align: center;
+	font-weight: bold;
+	padding: 2px;
+	background: #85B3E1
+}
+
+TD.SelectedMonth A {
+	color: #FFFFEC;
+	text-decoration: none;
+	text-align: center
+}
+
+TD.SelectedMonth A:hover {
+	font-size: 8pt;
+	text-decoration: underline;
+	color: #FFFFFF
+}
+
+TD.SelectedMonth A:visited { }
+
+.SbmCalendarMonthsTable TD A {
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center
+}
+
+.SbmCalendarMonthsTable TD A:hover {
+	text-decoration: underline;
+	color: #FFFFFF
+}
+
+.SbmCalendarMonthsTable TD A:visited { }
+
+.SbmCalendarButtonCell {
+	text-align: center;
+	padding: 3px;
+	font: 8pt Arial, Helvetica, sans-serif;
+	background: #EFF7FF
+}
+
+.SbmCalendarButtonCellBackground {
+	padding: 0px;
+	margin: 0
+}
+
+.SbmCalendarButtonCellBackground .SbmButtonSeparator {
+	color: #52B2E7;
+	width: 4px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0px 1px
+}
+
+.SbmCalendarButtonCellBackground  a {
+	cursor: pointer;
+	border: 1px solid #ECF6FF;
+	text-decoration: none;
+	color: #000000;
+	white-space: nowrap;
+	display: block;
+	background: #ECF6FF;
+	padding: 0px 2px
+}
+
+.SbmCalendarButtonCellBackground a:hover {
+	cursor: hand;
+	border: 1px solid #5AB2EF;
+	text-decoration: none;
+	color: #000000;
+	background: #FFFFFF
+}
+
+.SbmCalendarButtonCellBackground a:active {
+	border: 1px solid #5AB2EF;
+	color: #FFFFFF;
+	background: #5AB2EF
+}
+
+.SbmCalendarButtonCellBackground a:visited{ }
+
+.SbmBizCalendarMainTable TH{
+	font-weight: bold;
+	color: #536399;
+	text-align: center;
+	border-top: 0px solid #8CA2B5;
+	border-right: 1px solid #8CA2B5;
+	border-bottom: 1px solid #8CA2B5;
+	border-left: 0px solid #8CA2B5;
+	background: #CED5E1
+}
+
+.SbmBizCalendarMainTable TD{
+	text-align: center;
+	height: 41px;
+	width: 42px;
+	font-size: 11pt;
+	vertical-align: middle;
+	color: #333333;
+	border: 1px solid #BDCFD6;
+	border-top: 0px solid #BDCFD6;
+	border-right: 1px solid #BDCFD6;
+	border-bottom: 1px solid #BDCFD6;
+	border-left: 0px solid #BDCFD6;
+	background: #FFFFFF
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarDay {
+	background: center center
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarDayHover {
+	cursor: hand;
+	cursor: pointer;
+	font-weight: bold;
+	background: #FFFFDE center center
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarWeekend{
+	color: #7C7C7C;
+	background: #EFEFEF center center
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarWeekendHover {
+	cursor: hand;
+	font-weight: bold;
+	background: #FFE6E6 center center
+}
+
+.SbmBizCalendarMainTable Caption {
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #7B86A5;
+	border-right-color: #7B86A5;
+	border-bottom-color: #7B86A5;
+	border-left-color: #7B86A5;
+	margin: 0px;
+	padding: 0px;
+	background: #A5C7E7
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarMarkHoliday {
+	cursor: hand;
+	border: 1px solid #84B2E7;
+	color: #000000;
+	background: #B5D7EF url(../../css_70/theme01/images/biz_cal_holiday.gif) center center
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarMarkHolidayHover {
+	cursor: hand;
+	cursor: pointer;
+	border: 1px solid #A5C7ED;
+	font-weight: bold;
+	background: #D3E7F5 url(../../css_70/theme01/images/biz_cal_holiday.gif) center center
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarEdited {
+	cursor: hand;
+	border: 1px solid #A7ADBE;
+	color: #000000;
+	background: #BDC1CE url(../../css_70/theme01/images/biz_cal_edited.gif) center center
+}
+
+.SbmBizCalendarMainTable TD.SbmBizCalendarEditedHover {
+	cursor: hand;
+	cursor: pointer;
+	border: 1px solid #8897AC;
+	font-weight: bold;
+	color: #000000;
+	background: #A5AEC0 url(../../css_70/theme01/images/biz_cal_edited.gif) center center
+}
+
+.SbmBizCalendarMonthYearTable { }
+
+.SbmBizCalendarMonthYearTable td{
+	font-size: 8pt;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none
+}
+
+.SbmBizCalendarMonthYearTable select{
+	color: #000066;
+	border: 1px solid #7B86A5;
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+
+.SbmBizCalendarLegendTable {
+	padding: 4px;
+	border-top: 0px solid #7B86A5;
+	border-right: 1px solid #7B86A5;
+	border-bottom: 1px solid #7B86A5;
+	border-left: 1px solid #7B86A5;
+	background: #FFFFFF
+}
+
+.SbmHolidayListDiv {
+	visibility: visible;
+	scrollbar-face-color: #FFFFE1;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #665E00;
+	scrollbar-3dlight-color: #CCB600;
+	scrollbar-arrow-color: #333200;
+	scrollbar-darkshadow-color: #D3AD45;
+	scrollbar-base-color: #FDFCDE;
+	scrollbar-track-color: #ECE9BC;
+	overflow: auto;
+	layer-background-color: #D1D0B1;
+	border: 1px solid #B6A778;
+	height: 338px;
+	background: #FFFFEF repeat-x fixed
+}
+
+.SbmHolidayListDiv{ }
+
+.SbmHolidayListDiv Table{
+	padding: 0;
+	margin: 0;
+	background: #C8C19D
+}
+
+.SbmHolidayListDiv Caption{
+	padding: 3px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFCC66;
+	border-right-color: #FFCC66;
+	border-bottom-color: #FFCC66;
+	border-left-color: #FFCC66;
+	background: #FFFFCC
+}
+
+.SbmHolidayListDiv td{
+	padding: 3px;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #F2ECB6;
+	border-right-color: #F2ECB6;
+	border-bottom-color: #F2ECB6;
+	border-left-color: #F2ECB6;
+	background: #FFFFEF
+}
+
+.SbmBizCalendarComponentMainDiv{ padding: 8px }
+
+.SbmBizCalendarComponent{
+	position: absolute
+}
+
+.SbmBizCalendarComponentHolidayList{
+	position: absolute;
+	left: 430px;
+	width: 250px
+}
+
+.SbmDisabledSelect{
+	background: #CCCCCC
+}
+
+.SbmDashboardComponentContainerDiv{
+	font-size: 8pt;
+	padding: 4px;
+	background: #CCCCCC
+}
+
+.SbmDashboardComponentHorizontalSeparator{
+	display: block;
+	border: 1px solid #000000;
+	height: 4px;
+	position: relative;
+	background: #CCCCCC
+}
+
+	
+.SbmDashboardComponentDiv{
+	border: 2px solid #993300;
+	float: left;
+	background: #CCCCCC
+}
+
+.SbmDashboardComponentTitleDiv {
+	border: 1px solid #7B86A5;
+	height: 18px;
+	background: #CAE3FF;
+	padding: 2px
+}
+
+.SbmDashboardComponentContentDiv {
+	border-top: 0px solid #7B86A5;
+	border-right: 1px solid #7B86A5;
+	border-bottom: 1px solid #7B86A5;
+	border-left: 1px solid #7B86A5; /*width:390px;*/
+	background: #FFFFFF;
+	padding: 4px
+}
+
+.SbmDashboardComponentTitle{
+	float: left;
+	border: 1px solid #CAE3FF;
+	padding: 0px 2px
+}
+
+.SbmDashboardComponentHelp{
+	float: right;
+	width: 17px
+}
+
+.SbmDashboardComponentEdit{
+	float: right;
+	width: 44px
+}
+
+.SbmDashboardComponentDelete{
+	float: right;
+	width: 58px
+}
+
+.SbmDashboardComponentHide{
+	float: right;
+	width: 20px
+}
+
+.SbmGroupFieldset {
+	position: relative;
+	margin-top: 10px;
+	_margin-top: 20px;
+	background: #F7FBFF;
+	_padding-top: 20px;
+	border: solid 1px #7B86A5;
+	padding: 10px 8px 8px
+}
+
+.SbmGroupFieldset td.SbmLabel {
+	border-right: 0px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF;
+	padding: 4px;
+	padding-left: 16px;
+	text-align: right;
+	font-weight: bold;
+	background: #F7FBFF
+}
+
+.SbmGroupFieldset td.SbmValue {
+	border-right: 0px solid #C3D1DF;
+	border-top: 0px solid #C3D1DF;
+	border-left: 0px solid #C3D1DF;
+	border-bottom: 0px solid #C3D1DF;
+	padding: 4px;
+	background: #F7FBFF
+}
+
+.SbmGroupLegend {
+	position: absolute;
+	top: -10px;
+	background: #F7FBFF;
+	color: #000000;
+	border: 1px solid #7B86A5;
+	padding: 3px 6px;
+	font-weight: bold
+}
+
+a.SbmDetailsPreviousTask, a.SbmDetailsNextTask {
+	float: right;
+	margin-right: 8px;
+	font-size: 8pt;
+	color: #004994;
+	text-decoration: none
+}
+
+a.SbmDetailsNextTask:hover,  a.SbmDetailsPreviousTask:hover{
+	text-decoration: underline
+}
+
+.SbmDetailsTitleLinkGroup{
+	width: 200px;
+	border: 0px solid #000000;
+	display: block
+}
+
+.SbmCalendarMonthTable, .SbmBizCalendarMainTable {
+	border: 1px solid #7B86A5
+}
+
+.SbmHolidayListDiv a, td, caption, .SbmCalendarMainTable td, th, input, select, .SbmBizCalendarMainTable TH, TD {
+	font: 8pt Verdana, Arial, Helvetica, sans-serif
+}
+
+fieldset, legend, .SbmMarginePadding0, .SbmMarginePadding0 td {
+	margin: 0;
+	padding: 0
+}

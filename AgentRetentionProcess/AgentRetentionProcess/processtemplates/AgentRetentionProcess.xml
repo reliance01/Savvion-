@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Process SYSTEM "../../common/processtemplates/processTemplate.dtd">
+<Process name="AgentRetentionProcess" type="BIZLOGIC">
+  <Description/>
+  <Application name="AgentRetentionProcess"/>
+  <Category level="0"/>
+  <Category level="1"/>
+  <Group/>
+  <Manager>@CREATOR</Manager>
+  <EstimatedDuration>1d</EstimatedDuration>
+  <TimeCreated>1477381450340</TimeCreated>
+  <Author>rgicon</Author>
+  <Version/>
+  <Attributes>
+    <Attribute name="ProcessType" required="true">
+      <Label>Process Type</Label>
+      <Description>Type of the process</Description>
+      <Value>BusinessProcess</Value>
+    </Attribute>
+    <Attribute name="Objective" required="false">
+      <Label>Objective</Label>
+      <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Goal" required="false">
+      <Label>Goal</Label>
+      <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="OrganizationalUnit" required="false">
+      <Label>Organizational Unit</Label>
+      <Description>The organizational unit that owns this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Influencers" required="false">
+      <Label>Influencers</Label>
+      <Description>People who have influenced development of this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Risks" required="false">
+      <Label>Risks</Label>
+      <Description>Risks associated with this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Rewards" required="false">
+      <Label>Rewards</Label>
+      <Description>Potential rewards on investment for this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Executable" required="false">
+      <Label>Executable</Label>
+      <Description>Can the Process  Ever be made executable?</Description>
+      <Value>Yes</Value>
+    </Attribute>
+  </Attributes>
+  <Alerts>
+    <Alert name="Default">
+      <AlertSeverity>High</AlertSeverity>
+      <AlertMessage>This is the default alert.</AlertMessage>
+      <AlertDescription/>
+      <AlertCondition type="java:expression"/>
+      <AlertDelivery type="sbm">
+        <AlertRecipient type="USER">${@CREATOR}</AlertRecipient>
+      </AlertDelivery>
+    </Alert>
+  </Alerts>
+  <AtomicWS height="36" name="Start" width="36" worktime="false" x="276" y="24">
+    <AtomicType>START</AtomicType>
+    <PerformingApp type="JSP">Start.jsp</PerformingApp>
+    <Priority>MEDIUM</Priority>
+    <PostFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+java.lang.Class cls = jst.loadClass("com.agent.ejb.initiateagent.AgentFlowProcess");
+
+java.lang.Object obj = cls.newInstance();
+
+java.lang.String branchCode = jst.getDataSlotValue("branch_code");
+
+java.lang.String smCode = jst.getDataSlotValue("sm_code");
+
+java.lang.String role = jst.getDataSlotValue("role");
+
+java.lang.String bmId = obj.getPerformerDetail(role ,branchCode,smCode);
+
+jst.putDataSlot ("bm",bmId);
+
+obj.addAgentDetail(jst.getProcessInstanceID());;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PostFunction>
+    <Dataoutput>role</Dataoutput>
+    <Dataoutput>sm_code</Dataoutput>
+    <Dataoutput>sm_name</Dataoutput>
+    <Dataoutput>branch_code</Dataoutput>
+    <Dataoutput>branch_name</Dataoutput>
+    <Dataoutput>agent_code</Dataoutput>
+    <Dataoutput>attrition_probability</Dataoutput>
+    <Dataoutput>business_category</Dataoutput>
+    <Dataoutput>licence_type</Dataoutput>
+    <Dataoutput>claim_TAT_category</Dataoutput>
+    <Dataoutput>policy_gap</Dataoutput>
+    <Dataoutput>sales_category</Dataoutput>
+    <Dataoutput>claim_per_category</Dataoutput>
+    <Dataoutput>sm_level_vintage</Dataoutput>
+    <Dataoutput>time_last_pol</Dataoutput>
+    <Dataoutput>payout_TAT_category</Dataoutput>
+    <Dataoutput>vintage_month</Dataoutput>
+    <Dataoutput>fresh_per</Dataoutput>
+    <Dataoutput>sm_status</Dataoutput>
+    <Dataoutput>business_last_12month</Dataoutput>
+    <Dataoutput>attrition_risk</Dataoutput>
+    <Format editable="true" input="role" label="Role" password="false" required="false" size="20" type="text">
+      <Label>Role</Label>
+    </Format>
+    <Format editable="true" input="sm_code" label="Sm_code" password="false" required="false" size="20" type="text">
+      <Label>Sm_code</Label>
+    </Format>
+    <Format editable="true" input="sm_name" label="Sm_name" password="false" required="false" size="20" type="text">
+      <Label>Sm_name</Label>
+    </Format>
+    <Format editable="true" input="branch_code" label="Branch_code" password="false" required="false" size="20" type="text">
+      <Label>Branch_code</Label>
+    </Format>
+    <Format editable="true" input="branch_name" label="Branch_name" password="false" required="false" size="20" type="text">
+      <Label>Branch_name</Label>
+    </Format>
+    <Format editable="true" input="agent_code" label="Agent_code" password="false" required="false" size="20" type="text">
+      <Label>Agent_code</Label>
+    </Format>
+    <Format editable="true" input="attrition_probability" label="Attrition_probability" password="false" required="false" size="20" type="text">
+      <Label>Attrition_probability</Label>
+    </Format>
+    <Format editable="true" input="business_category" label="Business_category" password="false" required="false" size="20" type="text">
+      <Label>Business_category</Label>
+    </Format>
+    <Format editable="true" input="licence_type" label="Licence_type" password="false" required="false" size="20" type="text">
+      <Label>Licence_type</Label>
+    </Format>
+    <Format editable="true" input="claim_TAT_category" label="Claim_ t a t_category" password="false" required="false" size="20" type="text">
+      <Label>Claim_ t a t_category</Label>
+    </Format>
+    <Format editable="true" input="policy_gap" label="Policy_gap" password="false" required="false" size="20" type="text">
+      <Label>Policy_gap</Label>
+    </Format>
+    <Format editable="true" input="sales_category" label="Sales_category" password="false" required="false" size="20" type="text">
+      <Label>Sales_category</Label>
+    </Format>
+    <Format editable="true" input="claim_per_category" label="Claim_per_category" password="false" required="false" size="20" type="text">
+      <Label>Claim_per_category</Label>
+    </Format>
+    <Format editable="true" input="sm_level_vintage" label="Sm_level_vintage" password="false" required="false" size="20" type="text">
+      <Label>Sm_level_vintage</Label>
+    </Format>
+    <Format editable="true" input="time_last_pol" label="Time_last_pol" password="false" required="false" size="20" type="text">
+      <Label>Time_last_pol</Label>
+    </Format>
+    <Format editable="true" input="payout_TAT_category" label="Payout_ t a t_category" password="false" required="false" size="20" type="text">
+      <Label>Payout_ t a t_category</Label>
+    </Format>
+    <Format editable="true" input="vintage_month" label="Vintage_month" password="false" required="false" size="20" type="text">
+      <Label>Vintage_month</Label>
+    </Format>
+    <Format editable="true" input="fresh_per" label="Fresh_per" password="false" required="false" size="20" type="text">
+      <Label>Fresh_per</Label>
+    </Format>
+    <Format editable="true" input="sm_status" label="Sm_status" password="false" required="false" size="20" type="text">
+      <Label>Sm_status</Label>
+    </Format>
+    <Format editable="true" input="business_last_12month" label="Business_last_12month" password="false" required="false" size="20" type="text">
+      <Label>Business_last_12month</Label>
+    </Format>
+    <Format editable="true" input="attrition_risk" label="Attrition_risk" password="false" required="false" size="20" type="text">
+      <Label>Attrition_risk</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Option name="Instructions" visible="true"/>
+    <Option name="Priority" visible="true"/>
+    <Option name="StartDate" visible="false"/>
+    <Option name="DueDate" visible="false"/>
+    <Option name="Reassign" visible="true"/>
+    <Simulation distribution="ct" scenario="(default)"/>
+  </AtomicWS>
+  <AtomicWS height="60" name="Call Updation" width="108" worktime="false" x="240" y="120">
+    <Label>Call Updation</Label>
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@bm</Performer>
+    <PerformingApp type="JSP">CallUpdation.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <PreFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+java.lang.Class cls = jst.loadClass("com.agent.ejb.initiateagent.AgentFlowProcess");
+
+java.lang.Object obj = cls.newInstance();
+
+java.lang.String defaultId = obj.getMandatoryInfo().split(",")[1].trim();
+
+jst.putDataSlot("defaultPerformer",defaultId);
+
+java.lang.Class cls1 = jst.loadClass("com.agent.ejb.mail.Mailer");
+
+java.lang.Object obj1 = cls1.newInstance();
+
+java.lang.String mailbody = "callupdation";
+
+obj1.bmTaskNotify(jst.getProcessInstanceID(),mailbody);
+
+java.lang.String performer = jst.getDataSlotValue("bm");
+
+java.lang.Class cls2 = jst.loadClass("com.agent.ejb.initiateagent.CallUpdation");
+
+java.lang.Object obj2 = cls2.newInstance();
+
+obj2.setPerformerEscalation(jst.getProcessInstanceID());;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PreFunction>
+    <PostFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+java.lang.Class cls = jst.loadClass("com.agent.ejb.initiateagent.AgentFlowProcess");
+
+java.lang.Object obj = cls.newInstance();
+
+java.lang.String empCode= jst.getDataSlotValue("bm");
+
+java.lang.String managerId = obj.getImmediateMgr(empCode);
+
+jst.putDataSlot("immediateManager",managerId);
+
+java.lang.Class cls1 = jst.loadClass("com.agent.ejb.initiateagent.CallUpdation");
+
+java.lang.Object obj1 = cls1.newInstance();
+
+obj1.updateEscalationComplete(jst.getProcessInstanceID());;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PostFunction>
+    <Datainput>agent_code</Datainput>
+    <Datainput>bm</Datainput>
+    <Datainput>role</Datainput>
+    <Datainput>immediateManager</Datainput>
+    <Datainput>defaultPerformer</Datainput>
+    <Datainput>isImmediateManagerCall</Datainput>
+    <Datainput>spocs</Datainput>
+    <Datainput>removeSpocs</Datainput>
+    <Datainput>bmRemark</Datainput>
+    <Datainput>immediateManagerRemarks</Datainput>
+    <Datainput>isComplete</Datainput>
+    <Dataoutput>agent_code</Dataoutput>
+    <Dataoutput>bm</Dataoutput>
+    <Dataoutput>role</Dataoutput>
+    <Dataoutput>immediateManager</Dataoutput>
+    <Dataoutput>defaultPerformer</Dataoutput>
+    <Dataoutput>isImmediateManagerCall</Dataoutput>
+    <Dataoutput>spocs</Dataoutput>
+    <Dataoutput>removeSpocs</Dataoutput>
+    <Dataoutput>bmRemark</Dataoutput>
+    <Dataoutput>immediateManagerRemarks</Dataoutput>
+    <Dataoutput>isComplete</Dataoutput>
+    <Format editable="true" input="agent_code" label="Agent_code" password="false" required="false" size="20" type="text">
+      <Label>Agent_code</Label>
+    </Format>
+    <Format editable="true" input="bm" label="Bm" password="false" required="false" size="20" type="text">
+      <Label>Bm</Label>
+    </Format>
+    <Format editable="true" input="role" label="Role" password="false" required="false" size="20" type="text">
+      <Label>Role</Label>
+    </Format>
+    <Format editable="true" input="immediateManager" label="Immediate Manager" password="false" required="false" size="20" type="text">
+      <Label>Immediate Manager</Label>
+    </Format>
+    <Format editable="true" input="defaultPerformer" label="Default Performer" password="false" required="false" size="20" type="text">
+      <Label>Default Performer</Label>
+    </Format>
+    <Format editable="true" input="isImmediateManagerCall" label="Is Immediate Manager Call" password="false" required="false" size="20" type="text">
+      <Label>Is Immediate Manager Call</Label>
+    </Format>
+    <Format editable="true" input="spocs" label="Spocs" password="false" required="false" size="20" type="text">
+      <Label>Spocs</Label>
+    </Format>
+    <Format editable="true" input="removeSpocs" label="Remove Spocs" password="false" required="false" size="20" type="text">
+      <Label>Remove Spocs</Label>
+    </Format>
+    <Format editable="true" input="bmRemark" label="Bm Remark" password="false" required="false" size="20" type="text">
+      <Label>Bm Remark</Label>
+    </Format>
+    <Format editable="true" input="immediateManagerRemarks" label="Immediate Manager Remarks" password="false" required="false" size="20" type="text">
+      <Label>Immediate Manager Remarks</Label>
+    </Format>
+    <Format editable="true" input="isComplete" label="Is Complete" password="false" required="false" size="20" type="text">
+      <Label>Is Complete</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="ImmediateManager" width="108" worktime="false" x="408" y="216">
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@immediateManager</Performer>
+    <PerformingApp type="JSP">ImmediateManager.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <PreFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+java.lang.Class cls = jst.loadClass("com.agent.ejb.mail.Mailer");
+
+java.lang.Object obj = cls.newInstance();
+
+obj.immediateManagerTaskNotify(jst.getProcessInstanceID());
+
+java.lang.Class cls = jst.loadClass("com.agent.ejb.initiateagent.CallUpdation");
+
+java.lang.Object obj = cls.newInstance();
+
+java.lang.String branchManager = "branchManager";
+
+obj.addBmRemark(jst.getProcessInstanceID(), branchManager);;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PreFunction>
+    <PostFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+java.lang.Class cls = jst.loadClass("com.agent.ejb.initiateagent.CallUpdation");
+
+java.lang.Object obj = cls.newInstance();
+
+java.lang.String immediateManager = "immediateManager";
+
+obj.addBmRemark(jst.getProcessInstanceID(), immediateManager);
+
+java.lang.Class cls1 = jst.loadClass("com.agent.ejb.mail.Mailer");
+
+java.lang.Object obj1 = cls1.newInstance();
+
+obj1.bmTaskNotify(jst.getProcessInstanceID(),"immediatemanager");;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PostFunction>
+    <Datainput>immediateManagerRemarks</Datainput>
+    <Datainput>agent_code</Datainput>
+    <Datainput>isImmediateManagerCall</Datainput>
+    <Datainput>bmRemark</Datainput>
+    <Dataoutput>immediateManagerRemarks</Dataoutput>
+    <Dataoutput>agent_code</Dataoutput>
+    <Dataoutput>isImmediateManagerCall</Dataoutput>
+    <Dataoutput>bmRemark</Dataoutput>
+    <Format editable="true" input="immediateManagerRemarks" label="Immediate Manager Remarks" password="false" required="false" size="20" type="text">
+      <Label>Immediate Manager Remarks</Label>
+    </Format>
+    <Format editable="true" input="agent_code" label="Agent_code" password="false" required="false" size="20" type="text">
+      <Label>Agent_code</Label>
+    </Format>
+    <Format editable="true" input="isImmediateManagerCall" label="Is Immediate Manager Call" password="false" required="false" size="20" type="text">
+      <Label>Is Immediate Manager Call</Label>
+    </Format>
+    <Format editable="true" input="bmRemark" label="Bm Remark" password="false" required="false" size="20" type="text">
+      <Label>Bm Remark</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="Spoc Resolution" width="108" worktime="false" x="240" y="324">
+    <Label>Spoc Resolution</Label>
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@spocs</Performer>
+    <PerformingApp type="JSP">SpocResolution.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+      <CollabFunction enabled="false" type="Email"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <PreFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+java.lang.Class cls = jst.loadClass("com.agent.ejb.mail.Mailer");
+
+java.lang.Object obj = cls.newInstance();
+
+obj.spocTaskNotify(jst.getProcessInstanceID());;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PreFunction>
+    <PostFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+java.lang.Class cls1 = jst.loadClass("com.agent.ejb.initiateagent.CallUpdation");
+
+java.lang.Object obj1 = cls1.newInstance();
+
+obj1.updateEscalationComplete(jst.getProcessInstanceID());;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PostFunction>
+    <Datainput>tempSpoc</Datainput>
+    <Datainput>agent_code</Datainput>
+    <Datainput>role</Datainput>
+    <Datainput>bm</Datainput>
+    <Datainput>isReopen</Datainput>
+    <Datainput>isComplete</Datainput>
+    <Dataoutput>tempSpoc</Dataoutput>
+    <Dataoutput>agent_code</Dataoutput>
+    <Dataoutput>role</Dataoutput>
+    <Dataoutput>bm</Dataoutput>
+    <Dataoutput>isReopen</Dataoutput>
+    <Dataoutput>isComplete</Dataoutput>
+    <Format editable="true" input="tempSpoc" label="Temp Spoc" password="false" required="false" size="20" type="text">
+      <Label>Temp Spoc</Label>
+    </Format>
+    <Format editable="true" input="agent_code" label="Agent_code" password="false" required="false" size="20" type="text">
+      <Label>Agent_code</Label>
+    </Format>
+    <Format editable="true" input="role" label="Role" password="false" required="false" size="20" type="text">
+      <Label>Role</Label>
+    </Format>
+    <Format editable="true" input="bm" label="Bm" password="false" required="false" size="20" type="text">
+      <Label>Bm</Label>
+    </Format>
+    <Format editable="true" input="isReopen" label="Is Reopen" password="false" required="false" size="20" type="text">
+      <Label>Is Reopen</Label>
+    </Format>
+    <Format editable="true" input="isComplete" label="Is Complete" password="false" required="false" size="20" type="text">
+      <Label>Is Complete</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="36" name="End 1" width="36" worktime="false" x="276" y="432">
+    <AtomicType>END</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)"/>
+  </AtomicWS>
+  <ConnectorWS height="36" name="Immediate Manager Selection" width="36" x="276" y="228">
+    <ConnectorType>DECISIONSPLIT</ConnectorType>
+  </ConnectorWS>
+  <Link Name="isComplete" default="false">
+    <Label>isComplete</Label>
+    <Source cp="3">Immediate Manager Selection</Source>
+    <Point x="276.0" y="246.0"/>
+    <Point x="220.0" y="246.0"/>
+    <Point x="220.0" y="441.0"/>
+    <Point x="276.0" y="441.0"/>
+    <Target cp="11">End 1</Target>
+    <Condition type="java">isComplete.equals("1")<ConditionXMLEncoded>PGNvbmRpdGlvbj4KICA8Z2V0ZmllbGQ+CiR7ZmllbGR9CiAgPC9nZXRmaWVsZD4KICA8ZXhwcmVz&#13;
+c2lvbnM+CiAgICA8Y29uZmlndXJhdGlvbj4KICAgICAgPGNhdGVnb3J5PjwvY2F0ZWdvcnk+CiAg&#13;
+ICAgIDxleHByZXNzaW9uIHR5cGU9ImJhc2ljIj4KICAgICAgICA8bmFtZT48L25hbWU+CiAgICAg&#13;
+ICAgPGRlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb24+CiAgICAgICAgPG1vZGU+QklaTE9HSUM8L21v&#13;
+ZGU+CiAgICAgICAgPHBhcmFtZXRlcnM+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9ImZpcnN0&#13;
+T3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4ke2lzQ29t&#13;
+cGxldGV9PC9wYXJhbWV0ZXI+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9Im9wZXJhdG9yTmFt&#13;
+ZSIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj5TdHJpbmdFcXVhbHM8&#13;
+L3BhcmFtZXRlcj4KICAgICAgICAgIDxwYXJhbWV0ZXIgbmFtZT0ic2Vjb25kT3BlcmFuZCIgdHlw&#13;
+ZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4mcXVvdDsxJnF1b3Q7PC9wYXJh&#13;
+bWV0ZXI+CiAgICAgICAgPC9wYXJhbWV0ZXJzPgogICAgICAgIDxwcmVzZW50YXRpb24+CgogICAg&#13;
+ICAgIDwvcHJlc2VudGF0aW9uPgogICAgICAgIDxjb2RlPgppc0NvbXBsZXRlLmVxdWFscygmcXVv&#13;
+dDsxJnF1b3Q7KQogICAgICAgIDwvY29kZT4KICAgICAgICA8am9pbk5leHQ+QU5EPC9qb2luTmV4&#13;
+dD4KICAgICAgPC9leHByZXNzaW9uPgogICAgPC9jb25maWd1cmF0aW9uPgogIDwvZXhwcmVzc2lv&#13;
+bnM+CjwvY29uZGl0aW9uPgo=</ConditionXMLEncoded>
+    </Condition>
+  </Link>
+  <Link Name="isImmediateManagerCall" default="false">
+    <Label>isImmediateManagerCall</Label>
+    <Source cp="1">Immediate Manager Selection</Source>
+    <Point x="312.0" y="246.0"/>
+    <Point x="408.0" y="246.0"/>
+    <Target cp="3">ImmediateManager</Target>
+    <Condition type="java">!isImmediateManagerCall.equals("0")<ConditionXMLEncoded>PGNvbmRpdGlvbj4KICA8Z2V0ZmllbGQ+CiR7ZmllbGR9CiAgPC9nZXRmaWVsZD4KICA8ZXhwcmVz&#13;
+c2lvbnM+CiAgICA8Y29uZmlndXJhdGlvbj4KICAgICAgPGNhdGVnb3J5PjwvY2F0ZWdvcnk+CiAg&#13;
+ICAgIDxleHByZXNzaW9uIHR5cGU9ImJhc2ljIj4KICAgICAgICA8bmFtZT48L25hbWU+CiAgICAg&#13;
+ICAgPGRlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb24+CiAgICAgICAgPG1vZGU+QklaTE9HSUM8L21v&#13;
+ZGU+CiAgICAgICAgPHBhcmFtZXRlcnM+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9ImZpcnN0&#13;
+T3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4ke2lzSW1t&#13;
+ZWRpYXRlTWFuYWdlckNhbGx9PC9wYXJhbWV0ZXI+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9&#13;
+Im9wZXJhdG9yTmFtZSIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj5T&#13;
+dHJpbmdEb2VzTm90RXF1YWw8L3BhcmFtZXRlcj4KICAgICAgICAgIDxwYXJhbWV0ZXIgbmFtZT0i&#13;
+c2Vjb25kT3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4m&#13;
+cXVvdDswJnF1b3Q7PC9wYXJhbWV0ZXI+CiAgICAgICAgPC9wYXJhbWV0ZXJzPgogICAgICAgIDxw&#13;
+cmVzZW50YXRpb24+CgogICAgICAgIDwvcHJlc2VudGF0aW9uPgogICAgICAgIDxjb2RlPgohaXNJ&#13;
+bW1lZGlhdGVNYW5hZ2VyQ2FsbC5lcXVhbHMoJnF1b3Q7MCZxdW90OykKICAgICAgICA8L2NvZGU+&#13;
+CiAgICAgICAgPGpvaW5OZXh0PkFORDwvam9pbk5leHQ+CiAgICAgIDwvZXhwcmVzc2lvbj4KICAg&#13;
+IDwvY29uZmlndXJhdGlvbj4KICA8L2V4cHJlc3Npb25zPgo8L2NvbmRpdGlvbj4K</ConditionXMLEncoded>
+    </Condition>
+  </Link>
+  <Link Name="Connection 13" default="true">
+    <Label>Connection 13</Label>
+    <Source cp="0">ImmediateManager</Source>
+    <Point x="462.0" y="216.0"/>
+    <Point x="462.0" y="150.0"/>
+    <Point x="348.0" y="150.0"/>
+    <Target cp="1">Call Updation</Target>
+  </Link>
+  <Link Name="Without Remark" default="true">
+    <Label>Without Remark</Label>
+    <Source cp="2">Immediate Manager Selection</Source>
+    <Point x="294.0" y="264.0"/>
+    <Point x="294.0" y="324.0"/>
+    <Target cp="0">Spoc Resolution</Target>
+  </Link>
+  <Link Name="Connection 7" default="true">
+    <Label>Connection 7</Label>
+    <Source cp="2">Call Updation</Source>
+    <Point x="294.0" y="180.0"/>
+    <Point x="294.0" y="228.0"/>
+    <Target cp="0">Immediate Manager Selection</Target>
+  </Link>
+  <Link Name="Connection 1" default="true">
+    <Label>Connection 1</Label>
+    <Source cp="2">Start</Source>
+    <Point x="294.0" y="60.0"/>
+    <Point x="294.0" y="120.0"/>
+    <Target cp="0">Call Updation</Target>
+  </Link>
+  <Link Name="Connection 12" default="true">
+    <Label>Connection 12</Label>
+    <Source cp="2">Spoc Resolution</Source>
+    <Point x="294.0" y="384.0"/>
+    <Point x="294.0" y="432.0"/>
+    <Target cp="0">End 1</Target>
+  </Link>
+  <Link Name="isReOpen" default="false">
+    <Label>isReOpen</Label>
+    <Source cp="3">Spoc Resolution</Source>
+    <Point x="240.0" y="354.0"/>
+    <Point x="220.0" y="354.0"/>
+    <Point x="220.0" y="150.0"/>
+    <Point x="240.0" y="150.0"/>
+    <Target cp="3">Call Updation</Target>
+    <Condition type="java">isReopen.equals("1")<ConditionXMLEncoded>PGNvbmRpdGlvbj4KICA8Z2V0ZmllbGQ+CiR7ZmllbGR9CiAgPC9nZXRmaWVsZD4KICA8ZXhwcmVz&#13;
+c2lvbnM+CiAgICA8Y29uZmlndXJhdGlvbj4KICAgICAgPGNhdGVnb3J5PjwvY2F0ZWdvcnk+CiAg&#13;
+ICAgIDxleHByZXNzaW9uIHR5cGU9ImJhc2ljIj4KICAgICAgICA8bmFtZT48L25hbWU+CiAgICAg&#13;
+ICAgPGRlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb24+CiAgICAgICAgPG1vZGU+QklaTE9HSUM8L21v&#13;
+ZGU+CiAgICAgICAgPHBhcmFtZXRlcnM+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9ImZpcnN0&#13;
+T3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4ke2lzUmVv&#13;
+cGVufTwvcGFyYW1ldGVyPgogICAgICAgICAgPHBhcmFtZXRlciBuYW1lPSJvcGVyYXRvck5hbWUi&#13;
+IHR5cGU9IlNUUklORyIgZWRpdGFibGU9ImZhbHNlIiBmaWx0ZXI9IiI+U3RyaW5nRXF1YWxzPC9w&#13;
+YXJhbWV0ZXI+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9InNlY29uZE9wZXJhbmQiIHR5cGU9&#13;
+IlNUUklORyIgZWRpdGFibGU9ImZhbHNlIiBmaWx0ZXI9IiI+JnF1b3Q7MSZxdW90OzwvcGFyYW1l&#13;
+dGVyPgogICAgICAgIDwvcGFyYW1ldGVycz4KICAgICAgICA8cHJlc2VudGF0aW9uPgoKICAgICAg&#13;
+ICA8L3ByZXNlbnRhdGlvbj4KICAgICAgICA8Y29kZT4KaXNSZW9wZW4uZXF1YWxzKCZxdW90OzEm&#13;
+cXVvdDspCiAgICAgICAgPC9jb2RlPgogICAgICAgIDxqb2luTmV4dD5BTkQ8L2pvaW5OZXh0Pgog&#13;
+ICAgICA8L2V4cHJlc3Npb24+CiAgICA8L2NvbmZpZ3VyYXRpb24+CiAgPC9leHByZXNzaW9ucz4K&#13;
+PC9jb25kaXRpb24+Cg==</ConditionXMLEncoded>
+    </Condition>
+  </Link>
+  <Dataslot Name="agent_code" category="User" name="agent_code" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="attrition_probability" category="User" name="attrition_probability" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="attrition_risk" category="User" name="attrition_risk" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="business_category" category="User" name="business_category" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="business_last_12month" category="User" name="business_last_12month" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="claim_per_category" category="User" name="claim_per_category" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="claim_TAT_category" category="User" name="claim_TAT_category" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="fresh_per" category="User" name="fresh_per" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="licence_type" category="User" name="licence_type" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="payout_TAT_category" category="User" name="payout_TAT_category" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="policy_gap" category="User" name="policy_gap" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue>0</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="sales_category" category="User" name="sales_category" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="sm_level_vintage" category="User" name="sm_level_vintage" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="sm_status" category="User" name="sm_status" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="time_last_pol" category="User" name="time_last_pol" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="vintage_month" category="User" name="vintage_month" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue>0</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="bmRemark" category="User" name="bmRemark" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="immediateManagerRemarks" category="User" name="immediateManagerRemarks" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="isReopen" category="User" name="isReopen" type="STRING">
+    <Description>This will use when BM/CM &amp; RM/RH will reopen call updation.</Description>
+    <DataType>STRING</DataType>
+    <DataValue>0</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="isImmediateManagerCall" category="User" name="isImmediateManagerCall" type="STRING">
+    <Description>It is use when BM/CM RM/RH will send task to immediate Manager</Description>
+    <DataType>STRING</DataType>
+    <DataValue>0</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="immediateManager" category="User" name="immediateManager" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="isComplete" category="User" name="isComplete" type="STRING">
+    <Description>It is used when bm/cm want to complete call on first step.</Description>
+    <DataType>STRING</DataType>
+    <DataValue>0</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="spocs" category="User" name="spocs" type="STRING">
+    <Description>This will contain all spocs selected by bm/cm.</Description>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="branch_code" category="User" name="branch_code" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="branch_name" category="User" name="branch_name" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="bm" category="User" name="bm" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="removeSpocs" category="User" name="removeSpocs" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="tempSpoc" category="User" name="tempSpoc" type="STRING">
+    <Description>This dataslot will handle temp. spoc value which will use for BM submit button show/hide.</Description>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="role" category="User" name="role" type="STRING">
+    <Description>This dataslot will hold the Role. means this call is either for BM/CM or RM/RH.</Description>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="sm_code" category="User" name="sm_code" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="sm_name" category="User" name="sm_name" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="defaultPerformer" category="User" name="defaultPerformer" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="escalationCount" category="User" name="escalationCount" type="NUMBER">
+    <DataType>LONG</DataType>
+    <DataValue>1</DataValue>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" required="false" type="field"/>
+    <Storage type="LONG"/>
+  </Dataslot>
+  <Dataslot Name="mailCount" category="User" name="mailCount" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue>1</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <History>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1494911551150" to="http://10.65.5.80:18793/sbm/deployment">Tue May 16 10:42:31 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1494911524614" to="http://10.65.5.81:18793/sbm/deployment">Tue May 16 10:42:04 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1493727545212" to="http://10.65.5.158:18793/sbm/deployment">Tue May 02 17:49:05 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1493727385364" to="http://10.65.5.158:18793/sbm/deployment">Tue May 02 17:46:25 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492266109872" to="http://10.65.5.158:18793/sbm/deployment">Sat Apr 15 19:51:49 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492259826910" to="http://10.65.5.158:18793/sbm/deployment">Sat Apr 15 18:07:06 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492249293807" to="http://10.65.5.158:18793/sbm/deployment">Sat Apr 15 15:11:33 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492248120250" to="http://10.65.5.158:18793/sbm/deployment">Sat Apr 15 14:52:00 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492091981862" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 13 19:29:41 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492089457802" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 13 18:47:37 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492082858058" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 13 16:57:38 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491398976329" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 18:59:36 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491373231524" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 11:50:31 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491371856198" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 11:27:36 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491370930749" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 11:12:10 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491370007032" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 10:56:47 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491317233889" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 20:17:13 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491317157916" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 20:15:57 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491316591427" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 20:06:31 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491316412790" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 20:03:32 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491316112097" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 19:58:32 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491315313446" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 19:45:13 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491311870754" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 18:47:50 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491311181461" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 18:36:21 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491310631085" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 18:27:11 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491309278921" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 18:04:38 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491308508064" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 17:51:48 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491308219164" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 17:46:59 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491307949796" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 17:42:29 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491307308567" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 17:31:48 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491306222686" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 17:13:42 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491304007790" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 16:36:47 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491303529052" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 16:28:49 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491302999146" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 16:19:59 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491302433546" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 16:10:33 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491302346591" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 16:09:06 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491302028800" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 16:03:48 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491301372532" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 15:52:52 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491300478642" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 15:37:58 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491298323435" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 15:02:03 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491293030688" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 13:33:50 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491292791382" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 13:29:51 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491292655021" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 13:27:35 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491291513603" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 13:08:33 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491291493744" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 13:08:13 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491290756543" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 12:55:56 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491289756369" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 04 12:39:16 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491196576414" to="http://10.65.15.167:18793/sbm/deployment">Mon Apr 03 10:46:16 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484648667894" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 15:54:27 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484648592525" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 15:53:12 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484647487434" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 15:34:47 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484647193347" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 15:29:53 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484644963468" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 14:52:43 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484644789658" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 14:49:49 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484644395945" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 14:43:15 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484639992780" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 13:29:52 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484639804109" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 13:26:44 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484639675635" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 13:24:35 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484638242234" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 13:00:42 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484638096545" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 12:58:16 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484637525833" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 12:48:45 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484637305377" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 12:45:05 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484282399463" to="http://10.65.15.167:18793/sbm/deployment">Fri Jan 13 10:09:59 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484282036356" to="http://10.65.15.167:18793/sbm/deployment">Fri Jan 13 10:03:56 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484281526607" to="http://10.65.15.167:18793/sbm/deployment">Fri Jan 13 09:55:26 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484226882291" to="http://10.65.15.167:18793/sbm/deployment">Thu Jan 12 18:44:42 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484226358652" to="http://10.65.15.167:18793/sbm/deployment">Thu Jan 12 18:35:58 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484223876727" to="http://10.65.15.167:18793/sbm/deployment">Thu Jan 12 17:54:36 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484223311719" to="http://10.65.15.167:18793/sbm/deployment">Thu Jan 12 17:45:11 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484222604210" to="http://10.65.15.167:18793/sbm/deployment">Thu Jan 12 17:33:24 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1482327541988" to="http://10.65.15.167:18793/sbm/deployment">Wed Dec 21 19:09:01 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1482327168753" to="http://10.65.15.167:18793/sbm/deployment">Wed Dec 21 19:02:48 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1482326941588" to="http://10.65.15.167:18793/sbm/deployment">Wed Dec 21 18:59:01 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1482325892821" to="http://10.65.15.167:18793/sbm/deployment">Wed Dec 21 18:41:32 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480659665651" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 11:51:05 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480659639240" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 11:50:39 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480659111018" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 11:41:51 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480656501233" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 10:58:21 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480654928003" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 10:32:08 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480653490916" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 10:08:10 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480595659770" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 18:04:19 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480595473426" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 18:01:13 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480595087837" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 17:54:47 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480501148727" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 15:49:08 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480500788238" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 15:43:08 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480491941493" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 13:15:41 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480491808314" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 13:13:28 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480491691609" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 13:11:31 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480491536700" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 13:08:56 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480491468808" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 13:07:48 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480491326643" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 13:05:26 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480491199190" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 30 13:03:19 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479886944054" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 23 13:12:24 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479886512148" to="http://10.65.15.167:18793/sbm/deployment">Wed Nov 23 13:05:12 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479789683752" to="http://10.65.15.167:18793/sbm/deployment">Tue Nov 22 10:11:23 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479732192207" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 21 18:13:12 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479729626744" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 21 17:30:26 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479728174540" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 21 17:06:14 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479727612169" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 21 16:56:52 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479705764884" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 21 10:52:44 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479537452186" to="http://10.65.15.167:18793/sbm/deployment">Sat Nov 19 12:07:32 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479537001778" to="http://10.65.15.167:18793/sbm/deployment">Sat Nov 19 12:00:01 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479465740636" to="http://10.65.15.167:18793/sbm/deployment">Fri Nov 18 16:12:20 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1478261467213" to="http://10.65.15.167:18793/sbm/deployment">Fri Nov 04 17:41:07 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1478006883551" to="http://10.65.15.167:18793/sbm/deployment">Tue Nov 01 18:58:03 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477982319910" to="http://10.65.15.167:18793/sbm/deployment">Tue Nov 01 12:08:39 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477979080722" to="http://10.65.15.167:18793/sbm/deployment">Tue Nov 01 11:14:40 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477485114283" to="http://10.65.15.167:18793/sbm/deployment">Wed Oct 26 18:01:54 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477478640336" to="http://10.65.15.167:18793/sbm/deployment">Wed Oct 26 16:14:00 IST 2016</Deployed>
+    <Created as="AgentRetentionProcess" by="rgicon" on="1477381450340">Tue Oct 25 13:14:10 IST 2016</Created>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477382540729" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 13:32:20 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477382784669" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 13:36:24 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477382823186" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 13:37:03 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477388699675" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 15:14:59 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477388789579" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 15:16:29 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477388986687" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 15:19:46 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477392957956" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 16:25:57 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477395300493" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 17:05:00 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477395424343" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 17:07:04 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477395961144" to="http://10.65.15.167:18793/sbm/deployment">Tue Oct 25 17:16:01 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477564894270" to="http://10.65.15.167:18793/sbm/deployment">Thu Oct 27 16:11:34 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1477564926734" to="http://10.65.15.167:18793/sbm/deployment">Thu Oct 27 16:12:06 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1478158351242" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 03 13:02:31 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1478158799076" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 03 13:09:59 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1478159046698" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 03 13:14:06 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1478177841685" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 03 18:27:21 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479110703138" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 14 13:35:03 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479121525562" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 14 16:35:25 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479128532049" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 14 18:32:12 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479129567370" to="http://10.65.15.167:18793/sbm/deployment">Mon Nov 14 18:49:27 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479378391932" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 17 15:56:31 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479378991962" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 17 16:06:31 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479381920441" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 17 16:55:20 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1479382555102" to="http://10.65.15.167:18793/sbm/deployment">Thu Nov 17 17:05:55 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480579263693" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 13:31:03 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480579561267" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 13:36:01 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480579656006" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 13:37:36 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480579735552" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 13:38:55 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480585550829" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 15:15:50 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480588889157" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 16:11:29 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480589145421" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 16:15:45 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480589355743" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 16:19:15 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480590166265" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 16:32:46 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480592308496" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 17:08:28 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480592989942" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 17:19:49 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480593152262" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 17:22:32 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480593482689" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 17:28:02 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480593671014" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 17:31:11 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480594679705" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 01 17:47:59 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480657768312" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 11:19:28 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480665752337" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 13:32:32 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480671877509" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 15:14:37 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480673232352" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 15:37:12 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480674888185" to="http://10.65.15.167:18793/sbm/deployment">Fri Dec 02 16:04:48 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480760097873" to="http://10.65.15.167:18793/sbm/deployment">Sat Dec 03 15:44:57 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480765557241" to="http://10.65.15.167:18793/sbm/deployment">Sat Dec 03 17:15:57 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480767837221" to="http://10.65.15.167:18793/sbm/deployment">Sat Dec 03 17:53:57 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480923002491" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 13:00:02 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480923150833" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 13:02:30 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480930216117" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 15:00:16 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480937946143" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:09:06 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480938190426" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:13:10 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480938736837" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:22:16 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480939077373" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:27:57 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480939202798" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:30:02 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480939492260" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:34:52 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480939833435" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:40:33 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480939916990" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:41:56 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480940161632" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:46:01 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480940348880" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:49:08 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480940510654" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:51:50 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480940523150" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:52:03 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480940920018" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 17:58:40 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480941558065" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 18:09:18 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480945422726" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 19:13:42 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480946501586" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 19:31:41 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1480948052118" to="http://10.65.15.167:18793/sbm/deployment">Mon Dec 05 19:57:32 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481000142328" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 06 10:25:42 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481002176137" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 06 10:59:36 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481010450341" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 06 13:17:30 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481010621537" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 06 13:20:21 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481010876506" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 06 13:24:36 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481010929453" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 06 13:25:29 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481015708877" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 06 14:45:08 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481105225970" to="http://10.65.15.167:18793/sbm/deployment">Wed Dec 07 15:37:05 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481111515583" to="http://10.65.15.167:18793/sbm/deployment">Wed Dec 07 17:21:55 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481119798980" to="http://10.65.15.167:18793/sbm/deployment">Wed Dec 07 19:39:58 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481171708632" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 08 10:05:08 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1481173576596" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 08 10:36:16 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1482229445839" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 20 15:54:05 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1482230737877" to="http://10.65.15.167:18793/sbm/deployment">Tue Dec 20 16:15:37 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1483017474976" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 29 18:47:54 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1483020349852" to="http://10.65.15.167:18793/sbm/deployment">Thu Dec 29 19:35:49 IST 2016</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1483424384879" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 03 11:49:44 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484636487345" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 17 12:31:27 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484721674689" to="http://10.65.15.167:18793/sbm/deployment">Wed Jan 18 12:11:14 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1484722958831" to="http://10.65.15.167:18793/sbm/deployment">Wed Jan 18 12:32:38 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1486536187559" to="http://10.65.15.167:18793/sbm/deployment">Wed Feb 08 12:13:07 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1487051381634" to="http://10.65.15.167:18793/sbm/deployment">Tue Feb 14 11:19:41 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1487237428762" to="http://10.65.15.167:18793/sbm/deployment">Thu Feb 16 15:00:28 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1487238677653" to="http://10.65.15.167:18793/sbm/deployment">Thu Feb 16 15:21:17 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1490191717966" to="http://10.65.15.167:18793/sbm/deployment">Wed Mar 22 19:38:37 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1490860226301" to="http://10.65.15.167:18793/sbm/deployment">Thu Mar 30 13:20:26 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1490860546838" to="http://10.65.15.167:18793/sbm/deployment">Thu Mar 30 13:25:46 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1490885668360" to="http://10.65.15.167:18793/sbm/deployment">Thu Mar 30 20:24:28 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491022523626" to="http://10.65.15.167:18793/sbm/deployment">Sat Apr 01 10:25:23 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491022759781" to="http://10.65.15.167:18793/sbm/deployment">Sat Apr 01 10:29:19 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491212858434" to="http://10.65.15.167:18793/sbm/deployment">Mon Apr 03 15:17:38 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491217615611" to="http://10.65.15.167:18793/sbm/deployment">Mon Apr 03 16:36:55 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491373950957" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 12:02:30 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491374478789" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 12:11:18 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491375759466" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 12:32:39 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491376753969" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 12:49:13 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491377324389" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 12:58:44 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491378056832" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 13:10:56 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491378310086" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 13:15:10 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491378574961" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 13:19:34 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491384327944" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 14:55:27 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491385070044" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 15:07:50 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491385112367" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 15:08:32 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491386067549" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 15:24:27 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491387219856" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 15:43:39 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491387542951" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 15:49:02 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491388051313" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 15:57:31 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491396554653" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 18:19:14 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491397095791" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 18:28:15 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491397261106" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 18:31:01 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491397533610" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 18:35:33 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491397961866" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 18:42:41 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491399560493" to="http://10.65.15.167:18793/sbm/deployment">Wed Apr 05 19:09:20 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491450671515" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 09:21:11 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491450948652" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 09:25:48 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491457162136" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 11:09:22 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491458567524" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 11:32:47 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491459548556" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 11:49:08 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491460710878" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 12:08:30 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491463905792" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 13:01:45 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491485759845" to="http://10.65.15.167:18793/sbm/deployment">Thu Apr 06 19:05:59 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1491916552855" to="http://10.65.15.167:18793/sbm/deployment">Tue Apr 11 18:45:52 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492244632753" to="http://10.65.5.158:18793/sbm/deployment">Sat Apr 15 13:53:52 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1492248745786" to="http://10.65.5.158:18793/sbm/deployment">Sat Apr 15 15:02:25 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1493199389263" to="http://10.65.5.158:18793/sbm/deployment">Wed Apr 26 15:06:29 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1493200856578" to="http://10.65.5.158:18793/sbm/deployment">Wed Apr 26 15:30:56 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1493302991666" to="http://10.65.5.158:18793/sbm/deployment">Thu Apr 27 19:53:11 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1493970925721" to="http://10.65.5.158:18793/sbm/deployment">Fri May 05 13:25:25 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1495124345581" to="http://10.65.5.81:18793/sbm/deployment">Thu May 18 21:49:05 IST 2017</Deployed>
+    <Deployed as="AgentRetentionProcess" by="rgicl" on="1631687525785" to="http://10.62.180.35:18793/sbm/deployment">Wed Sep 15 12:02:05 IST 2021</Deployed>
+  </History>
+  <Repository/>
+</Process>

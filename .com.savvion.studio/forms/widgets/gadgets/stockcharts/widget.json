@@ -1,0 +1,16 @@
+{
+    'name': 'StockCharts',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/stockcharts.png',
+    'description': 'Stock Charts.',
+    'category': 'Finance',
+    'args': [
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.data_operations" path="expressions/data_operations" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.set_widget_value" path="expressions/data_operations" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.set_widget_value">
+      <template>Bm.util.setSimpleValue('${widget}', '${string}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.set_the_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*VALUE_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <label col="2" colspan="1" id="" row="0" rowspan="1">$Scripting.label.to</label>
+          <entryWidget row="0" col="3" rowspan="1" colspan="1" id="string" presentation="FIELD" validation="NONE">
+            <reference type="constant" encoding="JAVA_STRING"></reference>
+          </entryWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.copy_widget_value" path="expressions/data_operations" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.copy_widget_value">
+      <template>Bm.util.copySimple('${src}', '${dst}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.copy_the_value_of</label>
+          <choiceWidget col="1" colspan="1" id="src" row="0" rowspan="1" type="WIDGET" filter="*VALUE_WIDGETS">
+
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <label col="2" colspan="1" id="" row="0" rowspan="1">$Scripting.label.to</label>
+          <choiceWidget col="3" colspan="1" id="dst" row="0" rowspan="1" type="WIDGET" filter="*VALUE_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+  
+  <item label="Clear widget" path="expressions/data_operations" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.set_widget_value">
+      <template>Bm.util.clearSimple('${widget}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">Clear</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*VALUE_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+</palette>

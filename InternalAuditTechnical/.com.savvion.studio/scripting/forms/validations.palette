@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+
+  
+  <category label="$Scripting.category.validations" path="boolean/validations" icon="fldr_obj.gif"/>
+
+
+  <!-- DISABLING STANDARD VALIDATIONS: Not supported yet
+
+  <item label="$Scripting.item.standard_validation" path="boolean/validations" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.standard_validation">
+      <template>${not}sbm.util.validate(Bm.util.getSimpleValue('${widget}'), '${validation}')</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label._the_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*VALUE_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="not" row="0" rowspan="1" type="CONSTANT">
+            <selection presentation="$Scripting.operation.is" type="constant" searchable="false"></selection>
+            <choice presentation="$Scripting.operation.is" type="constant"></choice>
+            <choice presentation="$Scripting.operation.is_not" type="constant">!</choice>
+          </choiceWidget>
+          <choiceWidget col="3" colspan="1" id="validation" row="0" rowspan="1" type="CONSTANT">
+            <selection presentation="a valid integer" type="constant" searchable="false">integer</selection>
+            <choice presentation="a valid integer" type="constant">integer</choice>
+            <choice presentation="a valid decimal number" type="constant">decimal</choice>
+            <choice presentation="a valid phone number" type="constant">phone</choice>
+            <choice presentation="a valid credit card number" type="constant">credit_card</choice>
+            <choice presentation="a valid US zip code" type="constant">zip</choice>
+            <choice presentation="a valid US state abbreviation" type="constant">credit_card</choice>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  -->
+
+  <item label="$Scripting.item.regex_validation" path="boolean/validations" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.regex_validation">
+      <template>${not}Bm.util.matchRegex(Bm.util.getSimpleValue('${widget}'), '${regex}')</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label._the_value_of</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*VALUE_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <choiceWidget col="2" colspan="1" id="not" row="0" rowspan="1" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.matches_the_regex" type="constant"></selection>
+            <choice presentation="$Scripting.operation.matches_the_regex" type="constant"></choice>
+            <choice presentation="$Scripting.operation.does_not_match_the_regex" type="constant">!</choice>
+          </choiceWidget>
+          <entryWidget row="0" col="3" rowspan="1" colspan="1" id="regex" presentation="FIELD" validation="NONE">
+            <reference type="constant" encoding="JAVA_STRING">^(.)+$</reference>
+          </entryWidget>
+        </widgets>
+    </grid>
+  </item>
+  
+</palette>

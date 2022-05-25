@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+
+  <string id="ALL_DATASLOTS" value="BOOLEAN,BUSINESSOBJECT,DATETIME,DOCUMENT,LIST,MAP,NUMBER,OBJECT,STRING,URL,XML"/>
+  <string id="VALUE_DATASLOTS" value="BOOLEAN,BUSINESSOBJECT,DATETIME,LIST,MAP,NUMBER,OBJECT,STRING,URL,XML"/>
+  
+  <!-- Define tree order -->
+
+  <!-- <category path="functions"/> -->
+  <category path="data_operations"/>
+  <category path="value_expressions"/>
+  <category path="other"/>
+  <category path="other/control_structures"/>
+  <category path="other/custom"/>
+  <category path="conditions"/>
+  <category path="conditions/comparisons"/>
+  <category path="conditions/other"/>
+  <category path="jst"/>
+  <category path="jst/get"/>
+  <category path="jst/set"/>
+  <category path="jst/utility"/>
+  
+</palette>

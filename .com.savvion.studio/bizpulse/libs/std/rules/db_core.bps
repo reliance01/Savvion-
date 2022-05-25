@@ -1,0 +1,188 @@
+application std
+module db_core
+import std_tensor_lib;
+
+val debug = false;
+fun log(s: string) {
+    if (debug) println(s);
+}
+
+type AlarmInfo = cell{
+     infopad_name:string, 
+     alarm_name:string, 
+     cond: string, 
+     slot_idx: int, 
+     comp_slot_idx: int,
+     is_index: int, // boolean
+     is_absolute: int // boolean
+     };
+
+fun new_alarm(ifpd: array<`x>[], info: AlarmInfo) {
+    fun comp_fun (coord: list<int>, new_val: any): void {
+	val degree = coord.size();
+/*
+	log(">> comp_fun<1>: degree: "+degree);
+	log(">> comp_fun<2>: infopad_name: "+info.infopad_name+", alarm_name: "+info.alarm_name+", val: "+new_val.toString());
+*/
+        if (degree = 2) {
+	   val idx1 = coord[0];
+	   val idx2 = coord[1];
+//	   log(">> comp_fun<3>: idx1: "+idx1+", idx2: "+idx2);
+	   notify event BPEVENT_INFOPAD_ALARM::{
+		  value: info.alarm_name, row: idx1, column: idx2,
+		  slot: info.slot_idx, slotvalue: new_val, 
+		  table: info.infopad_name
+		  };
+        } else {
+//	   log(">> comp_fun<4>: ");
+	   val evt = event BPEVENT_TENSOR_ALARM::{
+	          value: info.alarm_name, degree: degree,
+		  slot: info.slot_idx, slotvalue: new_val, 
+		  table: info.infopad_name
+		  };
+	   val offset = ifpd.offset();
+	   for (var i = 0; i < degree; i++) {
+	       val idx = offset+i;
+	       evt.initEventProperty("coord_"+idx, coord[i]);
+//	       evt.setEventProperty("coord_"+idx, coord[i]); // temporary!!
+	   }
+	   notify evt;
+        }
+    }
+    fun absolute_comp_fun(comp: `x*`y -> boolean)(coord: list<int>, curr_val, new_val): void {
+	val compare_val = (info.is_index = 1)?ifpd.getSlotValue(coord, info.comp_slot_idx)
+			  :toFloat(info.comp_slot_idx);
+//        log(">> absolute_comp_fun: compare_val: "+compare_val.toString()+", new_val: "+new_val.toString());
+	if (comp(compare_val, new_val)) comp_fun(coord, new_val);
+    }
+    fun transitional_comp_fun(comp: `x*`y -> boolean)(coord: list<int>, curr_val, new_val): void {
+	val compare_val = (info.is_index = 1)?ifpd.getSlotValue(coord, info.comp_slot_idx)
+			  :toFloat(info.comp_slot_idx);
+	if (comp(compare_val, new_val)) {
+	   if (not comp(compare_val, curr_val)) comp_fun(coord, new_val);
+	}
+    }
+    val triggerf = (info.is_absolute = 1)?absolute_comp_fun:transitional_comp_fun;
+/*
+    val cmpf = (info.cond = "EQ")?(fn(x: any, y: any)=>(x = y)):
+	((info.cond = "NE")?(fn(x: any, y: any)=>(x != y)):
+	((info.cond = "GT")?(fn(x: any, y: any)=>(x < y)):
+	((info.cond = "GE")?(fn(x: any, y: any)=>(x <= y)):
+	((info.cond = "LT")?(fn(x: any, y: any)=>(x > y)):
+	((info.cond = "LE")?(fn(x: any, y: any)=>(x >= y)):
+	(fn(x: any, y: any)=>false))))));
+*/
+    val cmpf = (info.cond = "EQ")?(fn(x: any, y: any)=>(x = y)):
+	((info.cond = "NE")?(fn(x: any, y: any)=>(x != y)):
+	((info.cond = "GT")?(fn(x: any, y: any)=>(LOOPHOLE(x) < LOOPHOLE(y))):
+	((info.cond = "GE")?(fn(x: any, y: any)=>(LOOPHOLE(x) <= LOOPHOLE(y))):
+	((info.cond = "LT")?(fn(x: any, y: any)=>(LOOPHOLE(x) > LOOPHOLE(y))):
+	((info.cond = "LE")?(fn(x: any, y: any)=>(LOOPHOLE(x) >= LOOPHOLE(y))):
+	(fn(x: any, y: any)=>false))))));
+/*
+    val cmpf = (info.cond = "EQ")?(fn(x: number, y: number)=>(x = y)):
+	((info.cond = "NE")?(fn(x: number, y: number)=>(x != y)):
+	((info.cond = "GT")?(fn(x: number, y: number)=>(x < y)):
+	((info.cond = "GE")?(fn(x: number, y: number)=>(x <= y)):
+	((info.cond = "LT")?(fn(x: number, y: number)=>(x > y)):
+	((info.cond = "LE")?(fn(x: number, y: number)=>(x >= y)):
+	(fn(x: number, y: number)=>false))))));
+*/
+//    log(">> new_alarm: name: "+info.infopad_name+", alarm_name: "+info.alarm_name+", cond: "+info.cond+", slot_idx: "+info.slot_idx+", comp_slot_idx: "+info.comp_slot_idx+", is_index: "+info.is_index+", is_absolute: "+info.is_absolute);
+    return triggerf(cmpf);
+}
+
+val infopad_alarm_table = new persistent array<AlarmInfo>[]("infopad_alarm_table");
+
+fun add_alarm(info: AlarmInfo): void {
+    val sz = infopad_alarm_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info0 = infopad_alarm_table[i];
+	if (info.infopad_name = info0.infopad_name and info.alarm_name = info0.alarm_name) {
+	   infopad_alarm_table.remove(i);
+	   break;
+	}
+    }
+    infopad_alarm_table.add(info);
+}
+
+// public function.
+fun removeCheck(ifpd: array<`x>[]) {
+    ifpd.removeTrigger();
+    val name = ifpd.getName();
+    val sz = infopad_alarm_table.size();
+    var b = false;
+    for (var i = sz-1; i >= 0; i--) {
+	val info = infopad_alarm_table[i];
+	if (info.infopad_name = name) {
+	   infopad_alarm_table.remove(i);
+	   b := true;
+	}
+    }
+    return b;
+}
+
+fun removeCheck(ifpd: array<`x>[], alarm_name: string) {
+    ifpd.removeTrigger(alarm_name);
+    val name = ifpd.getName();
+    val sz = infopad_alarm_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = infopad_alarm_table[i];
+	if (info.infopad_name = name and info.alarm_name = alarm_name) {
+	   infopad_alarm_table.remove(i);
+	   return true;
+	}
+    }
+    return false;
+}
+
+// for check, do not allow to use same name. 
+// if name is already used, old value is replaced by new one.
+fun set_alarm(ifpd: array<`x>[], alarm_name: string, slot_idx: int, cond: string, comp_slot_idx: int, typ: string) {
+    val is_index = (typ = "*absolute" or typ = "*transitional")?1:0;
+    val is_absolute = (typ = "absolute" or typ = "*absolute")?1:0;
+    val info = AlarmInfo{ 
+	infopad_name: ifpd.getName(), alarm_name: alarm_name, 
+	cond: cond, slot_idx: slot_idx, comp_slot_idx: comp_slot_idx, 
+	is_index: is_index, is_absolute: is_absolute};
+    add_alarm(info);
+//    log(">> set_alarm: "+ifpd.getName()+", alarm_name: "+alarm_name);
+    ifpd.setTrigger(alarm_name, info.slot_idx, new_alarm(ifpd, info));
+}
+
+// discard infopad.
+fun remove_alarm_info(ifpd: array<`x>[]) {
+    val name = ifpd.getName();
+//    log(">> remove_alarm_info: infopad: "+name);
+    var sz = infopad_alarm_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = infopad_alarm_table[i];
+	if (info.infopad_name = name) {
+	   infopad_alarm_table.remove(i);
+	   i--; sz--;
+        }
+    }
+}
+
+// for infopad recovery.
+fun recover_alarm(ifpd: array<`x>[]): void {
+    val ifpd_name =  ifpd.getName();
+//    log(">> recover_alarm: "+ifpd_name);
+    val sz = infopad_alarm_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = infopad_alarm_table[i];
+	if (info.infopad_name = ifpd_name) {
+	   ifpd.setTrigger(info.alarm_name, info.slot_idx, new_alarm(ifpd, info));
+	}
+    }
+}
+
+initialize {
+}
+
+reinitialize {
+}
+
+finalize {
+    discard(infopad_alarm_table); // may be dangerous..  TBI..
+}

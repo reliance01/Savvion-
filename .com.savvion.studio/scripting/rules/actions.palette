@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+
+  <item label="Send E-mail" path="rules/actions" icon="template.gif">
+    <grid content="ACTION" collapsible="true" description="Send E-mail">
+      <widgets>
+        <label row="0" col="0" colspan="2">Send E-mail</label>
+        <label row="1" col="0">From:</label>
+        <entryWidget row="1" col="1" id="from" presentation="FIELD" validation="NONE"/>
+        <label row="2" col="0">To:</label>
+        <entryWidget row="2" col="1" id="to" presentation="FIELD" validation="NONE"/>
+        <label row="3" col="0">Cc:</label>
+        <entryWidget row="3" col="1" id="cc" presentation="FIELD" validation="NONE"/>
+        <label row="4" col="0">Subject:</label>
+        <entryWidget row="5" col="1" id="subject" presentation="FIELD" validation="NONE"/>
+        <entryWidget row="6" col="0" colspan="2" id="body" presentation="AREA" validation="NONE"/>
+      </widgets>
+      <template>
+sendEmail();
+      </template>
+    </grid>
+  </item>
+
+  <item label="Increase priority" path="rules/actions" icon="template.gif">
+    <grid content="ACTION" collapsible="true" description="Increase priority">
+      <widgets>
+        <label row="0" col="0" rowspan="1" colspan="1">Increase priority</label>
+      </widgets>
+      <template>
++"&lt;action&gt;&lt;increase_priority/&gt;&lt;/action&gt;"
+      </template>
+    </grid>
+  </item>
+
+  <item label="Log message" path="rules/actions" icon="template.gif">
+    <grid content="ACTION" collapsible="true" description="Print message">
+      <widgets>
+        <label row="0" col="0" rowspan="1" colspan="1">Log message:</label>
+        <entryWidget row="0" col="1" rowspan="1" colspan="1" id="message" presentation="FIELD" validation="NONE">
+          <reference type="constant" encoding=""></reference>
+        </entryWidget>
+      </widgets>
+      <template>
++"&lt;action&gt;&lt;print&gt;${message}&lt;/print&gt;&lt;/action&gt;"
+      </template>
+    </grid>
+  </item>
+
+</palette>

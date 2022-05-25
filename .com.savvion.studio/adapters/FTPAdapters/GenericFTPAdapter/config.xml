@@ -1,0 +1,28 @@
+<configform synchronous="true" version="1.2">
+    <block title="Source" description="Source" hidden="false">
+        <param name="SRC.MODE" access="HIDDEN" description="MODE" type="java.lang.String" value="0" mandatory="true"/>
+        <param name="SRC.LOCALPATH" access="HIDDEN" description="Path Prefix" type="java.lang.String" value="" mandatory="false"/>
+        <param name="SRC.LOCALFILE" access="HIDDEN" description="File Name" type="java.lang.String" value="" mandatory="false"/>
+        <param name="SRC.ASCIIFTP" access="HIDDEN" description="ASCIIFTP" type="java.lang.Boolean" value="false" mandatory="false"/>
+        <param name="SRC.PASSIVEFTP" access="HIDDEN" description="PASSIVEFTP" type="java.lang.Boolean" value="false" mandatory="false"/>
+        <param name="SRC.FTPSERVER" access="HIDDEN" description="FTP Server" type="java.lang.String" value="" mandatory="false"/>
+        <param name="SRC.FTPUSER" access="HIDDEN" description="FTP User Name" type="java.lang.String" value="" mandatory="false"/>
+        <param name="SRC.FTPPASS" access="HIDDEN" description="FTP Password" type="java.lang.String" value="" mandatory="false"/>
+        <param name="SRC.FTPDIR" access="HIDDEN" description="Remote Directory" type="java.lang.String" value="" mandatory="false"/>
+        <param name="SRC.FTPFILE" access="HIDDEN" description="Remote File Name" type="java.lang.String" value="" mandatory="false"/>
+        <param name="SRC.DOCUMENT" access="I" description="Document" type="java.lang.String" value="" mandatory="true"/>
+    </block>
+    <block title="Target" description="Target" hidden="false">
+        <param name="TRG.MODE" access="HIDDEN" description="MODE" type="java.lang.String" value="0" mandatory="true"/>
+        <param name="TRG.LOCALPATH" access="HIDDEN" description="Path Prefix" type="java.lang.String" value="" mandatory="false"/>
+        <param name="TRG.LOCALFILE" access="HIDDEN" description="File Name" type="java.lang.String" value="" mandatory="false"/>
+        <param name="TRG.ASCIIFTP" access="HIDDEN" description="ASCIIFTP" type="java.lang.Boolean" value="false" mandatory="false"/>
+        <param name="TRG.PASSIVEFTP" access="HIDDEN" description="PASSIVEFTP" type="java.lang.Boolean" value="false" mandatory="false"/>
+        <param name="TRG.FTPSERVER" access="HIDDEN" description="FTP Server" type="java.lang.String" value="" mandatory="false"/>
+        <param name="TRG.FTPUSER" access="HIDDEN" description="FTP User Name" type="java.lang.String" value="" mandatory="false"/>
+        <param name="TRG.FTPPASS" access="HIDDEN" description="FTP Password" type="java.lang.String" value="" mandatory="false"/>
+        <param name="TRG.FTPDIR" access="HIDDEN" description="Remote Directory" type="java.lang.String" value="" mandatory="false"/>
+        <param name="TRG.FTPFILE" access="HIDDEN" description="Remote File Name" type="java.lang.String" value="" mandatory="false"/>
+        <param name="TRG.DOCUMENT" access="O" description="Document" type="java.lang.Object" value="" mandatory="true"/>
+    </block>
+</configform>

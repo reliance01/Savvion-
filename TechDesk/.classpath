@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonResources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/BPM Studio Library"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/sqlserverjdbc.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/j2ee.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/AP2021_libs"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jdbc/native/lib/oraclejdbc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

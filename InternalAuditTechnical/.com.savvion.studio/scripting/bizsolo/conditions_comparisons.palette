@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.comparisons" path="conditions/comparisons" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.numerical_comparison" path="conditions/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.description.numerical_comparison">
+      <template>gel.compare(${operand1}, "${operation}", ${operand2})</template>
+        <widgets>
+          <list col="0" id="operand1" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to dataslot -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.description.dataslot_value">
+              <widgets>
+                <label col="0">$Scripting.label._dataslot_</label>
+                <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+                  <selection type="DATASLOT"/>
+                </treeChoiceWidget>
+              </widgets>
+              <template>"@${dataslot}"</template>
+            </grid>
+
+          </list>
+          <choiceWidget col="1" id="operation" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.equals" type="constant">==</selection>
+            <choice presentation="$Scripting.operation.equals" type="constant">==</choice>
+            <choice presentation="$Scripting.operation.does_not_equal" type="constant">!=</choice>
+            <choice presentation="$Scripting.operation.is_less_than" type="constant">&lt;</choice>
+            <choice presentation="$Scripting.operation.is_greater_than" type="constant">&gt;</choice>
+            <choice presentation="$Scripting.operation.is_less_than_or_equal_to" type="constant">&lt;=</choice>
+            <choice presentation="$Scripting.operation.is_greater_than_or_equal_to" type="constant">&gt;=</choice>
+          </choiceWidget>
+          <list col="2" id="operand2" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to constant -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.label.constant">
+              <widgets>
+                <label col="0">$Scripting.label._constant_</label>
+                <entryWidget col="1" id="value">
+                  <reference type="CONSTANT" encoding="JAVA_STRING"/>
+                </entryWidget>
+              </widgets>
+              <template>"${value}"</template>
+            </grid>
+          
+          </list>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.string_comparison" path="conditions/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.description.string_comparison">
+      <template>gel.compare(${operand1}, "${operation}", ${operand2})</template>
+        <widgets>
+          <list col="0" id="operand1" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to dataslot -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.description.dataslot_value">
+              <widgets>
+                <label col="0">$Scripting.label._dataslot_</label>
+                <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+                  <selection type="DATASLOT"/>
+                </treeChoiceWidget>
+              </widgets>
+              <template>"@${dataslot}"</template>
+            </grid>
+
+          </list>
+          <choiceWidget col="1" id="operation" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.equals" type="constant">eq</selection>
+            <choice presentation="$Scripting.operation.equals" type="constant">eq</choice>
+            <choice presentation="$Scripting.operation.does_not_equal" type="constant">ne</choice>
+          </choiceWidget>
+          <list col="2" id="operand2" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to constant -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.label.constant">
+              <widgets>
+                <label col="0">$Scripting.label._constant_</label>
+                <entryWidget col="1" id="value">
+                  <reference type="CONSTANT" encoding="JAVA_STRING"/>
+                </entryWidget>
+              </widgets>
+              <template>"${value}"</template>
+            </grid>
+          
+          </list>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.boolean_comparison" path="conditions/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.description.boolean_comparison">
+      <template>gel.compare(${boolean}, "==", ${value})</template>
+        <widgets>
+          <list col="0" id="boolean" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to dataslot -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.description.dataslot_value">
+              <widgets>
+                <label col="0">$Scripting.label._dataslot_</label>
+                <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="BOOLEAN">
+                  <selection type="DATASLOT"/>
+                </treeChoiceWidget>
+              </widgets>
+              <template>"@${dataslot}"</template>
+            </grid>
+
+          </list>
+          <choiceWidget col="1" id="value" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.is_true" type="constant">1</selection>
+            <choice presentation="$Scripting.operation.is_true" type="constant">1</choice>
+            <choice presentation="$Scripting.operation.is_false" type="constant">0</choice>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.object_comparison" path="conditions/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.description.object_comparison">
+      <template>gel.compare(${operand1}, "${operation}", ${operand2})</template>
+        <widgets>
+          <list col="0" id="operand1" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to dataslot -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.description.dataslot_value">
+              <widgets>
+                <label col="0">$Scripting.label._dataslot_</label>
+                <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+                  <selection type="DATASLOT"/>
+                </treeChoiceWidget>
+              </widgets>
+              <template>"@${dataslot}"</template>
+            </grid>
+
+          </list>
+          <choiceWidget col="1" id="operation" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.equals" type="constant">oeq</selection>
+            <choice presentation="$Scripting.operation.equals" type="constant">oeq</choice>
+            <choice presentation="$Scripting.operation.does_not_equal" type="constant">one</choice>
+          </choiceWidget>
+          <list col="2" id="operand2" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to dataslot -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.description.dataslot_value" filter="*VALUE_DATASLOTS">
+              <widgets>
+                <label col="0">$Scripting.label._dataslot_</label>
+                <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false">
+                  <selection type="DATASLOT"/>
+                </treeChoiceWidget>
+              </widgets>
+              <template>"@${dataslot}"</template>
+            </grid>
+          
+          </list>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.null_empty_string" path="conditions/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.description.null_empty_string">
+      <template>${operation}gel.isEmpty(${operand1})</template>
+        <widgets>
+          <list col="0" id="operand1" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to dataslot -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.description.dataslot_value">
+              <widgets>
+                <label col="0">$Scripting.label._dataslot_</label>
+                <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+                  <selection type="DATASLOT"/>
+                </treeChoiceWidget>
+              </widgets>
+              <template>"@${dataslot}"</template>
+            </grid>
+
+          </list>
+          <choiceWidget col="1" id="operation" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.is_empty" type="constant"></selection>
+            <choice presentation="$Scripting.operation.is_empty" type="constant"></choice>
+            <choice presentation="$Scripting.operation.is_not_empty" type="constant">!</choice>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.string_length" path="conditions/comparisons" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.description.string_length">
+      <template>gel.compareLength(${operand}, "${operation}", ${length})</template>
+        <widgets>
+          <label col="0">$Scripting.label.the_length_of</label>
+          <list col="1" id="operand" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to dataslot -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.description.dataslot_value">
+              <widgets>
+                <label col="0">$Scripting.label._dataslot_</label>
+                <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+                  <selection type="DATASLOT"/>
+                </treeChoiceWidget>
+              </widgets>
+              <template>"@${dataslot}"</template>
+            </grid>
+
+          </list>
+          <choiceWidget col="2" id="operation" type="CONSTANT" searchable="false">
+            <selection presentation="$Scripting.operation.is_exactly" type="constant">==</selection>
+            <choice presentation="$Scripting.operation.is_exactly" type="constant">==</choice>
+            <choice presentation="$Scripting.operation.is_not" type="constant">!=</choice>
+            <choice presentation="$Scripting.operation.is_less_than" type="constant">&lt;</choice>
+            <choice presentation="$Scripting.operation.is_more_than" type="constant">&gt;</choice>
+            <choice presentation="$Scripting.operation.is_not_more_than" type="constant">&lt;=</choice>
+            <choice presentation="$Scripting.operation.is_at_least" type="constant">&gt;=</choice>
+          </choiceWidget>
+          <list col="3" id="length" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+
+            <!-- default: set to constant -->
+            <grid content="VALUE_EXPRESSION" description="$Scripting.label.constant">
+              <widgets>
+                <label col="0">$Scripting.label._constant_</label>
+                <entryWidget col="1" id="value" validation="INTEGER">
+                  <reference type="CONSTANT" encoding="JAVA_STRING">0</reference>
+                </entryWidget>
+              </widgets>
+              <template>"${value}"</template>
+            </grid>
+
+          </list>
+        </widgets>
+    </grid>
+  </item>
+
+</palette>

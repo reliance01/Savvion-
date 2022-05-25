@@ -1,0 +1,233 @@
+<Gestures label="$Designer.label.defaultGestures">
+  <Group label="$Designer.area.shapesTasks">
+    <Gesture action="shape_start" label="$Designer.shape.start" description="$Designer.shape.start">
+      <Icon>gesture_b.png</Icon>
+      <Thumbprint>4M0iB0Jw000009Mci0C0Nx2WFImsmg00002hBXQ0002a000</Thumbprint>
+      <Thumbprint>4M02y0N_1wNf0aU00034c8yoFIlYgclg00BMGgBYisiw000Ew0yw</Thumbprint>
+      <Thumbprint>4M0iyMOe0wIMB0NrNj0035E9uazslhzw000028DXY02a0000</Thumbprint>
+      <Thumbprint>4N0229Ni2nyskFydCbP4I5DwNA2M4cn1g00000Crr5402a00060</Thumbprint>
+    </Gesture>
+    <Gesture action="shape_activity" label="$Designer.shape.workstep" description="$Designer.shape.workstep">
+      <Icon>gesture_a.png</Icon>
+      <Thumbprint>4N0y2zBMNBIsmF4000N1yp75M974Y00000EwNk2V2k08E4o000</Thumbprint>
+      <Thumbprint>4N0yj434ufNszIlr800an4v5OuNc362U00000000Nl34toE0c000</Thumbprint>
+      <Thumbprint>4N0y2ON60a35gco0NgmUFYuIhppa35-A0cmM00FMJgHwI9002a0000</Thumbprint>
+      <Thumbprint>4N0y2sBM2YNw36caat35qE3540N4Eg2m0awbscl9Og2E00o01z0</Thumbprint>
+    </Gesture>
+    <!-- CURRENTLY NOT SUPPORTED: Uncomment and use -Dcom.savvion.gesture.createActivityWithPerformer=true to enable for testing
+    <Gesture action="shape_activity_performer" description="$Designer.shape.workstep_performer_description" label="$Designer.shape.workstep_performer">
+      <Icon>gesture_a_performer.png</Icon>
+      <Thumbprint>4M8y002i09H4Q0NGIwJslaY0N400282D2L36gakciz00yw0000</Thumbprint>
+      <Thumbprint>4M8yEw34qt0ckpQ0NYNy36S9BMI0000009IbYaMbg0060000</Thumbprint>
+      <Thumbprint>4M8xy02jHg376D0cqcqwNjI00000282b34Uchw00002a0000</Thumbprint>
+      <Thumbprint>4M8yEw34uM0coEM0DciwNRB9wbg000002n2D34kcj000yw0000</Thumbprint>
+    </Gesture>
+    -->
+    <Gesture action="shape_decision" label="$Designer.shape.decision" description="$Designer.shape.decision">
+      <Icon>gesture_d.png</Icon>
+      <Thumbprint>4M8y00000cpchW-v00000cpw34OcHYpYishFH6P6r4Acig08E01M00</Thumbprint>
+      <Thumbprint>4N8y00000ciH_40w000036f5imN52INtNkG0NFNuLMFqk0y008E0</Thumbprint>
+      <Thumbprint>4N4y000baq35agN62oHYsIiVL4n4scq02y002cDVT7j5AckaA0qa0000</Thumbprint>
+      <Thumbprint>4N4y00000bezLS000cpqAcr02X2zNLNfCCNiNsC0NrCw2a00y00</Thumbprint>
+      <Icon>gesture_d1.png</Icon>
+      <Thumbprint>4O0i0009iz2HeM0000NGHGaw0wzMO01o_5Gt2kN2NF000008E0</Thumbprint>
+      <Thumbprint>4O0y00000aWbNj0000NCLpf548AMj7A0DIma9DN3Nu000w08E0</Thumbprint>
+      <Thumbprint>4N0y0008-o2Or5s638k0NuEq75k4o008IchgDGf5b8400000yw</Thumbprint>
+      <Thumbprint>4N0y000aX5YbEch02dNH0cosoW39obKg0009oaaEz0Nx0008E0c</Thumbprint>
+    </Gesture>
+    <Gesture action="shape_xor" label="$Designer.shape.xor" description="$Designer.shape.xor" filter="bizlogic">
+      <Icon>gesture_x.png</Icon>
+      <Icon>gesture_x1.png</Icon>
+      <Thumbprint>4M0wN934Q000NENgf6-l09vaAciIl0NK0bY0N2DMCgKYnIhg070008E</Thumbprint>
+      <Thumbprint>4M0wCgHMNj378ciHwcrg00NI0cqrj4P4Uciw34o000000708E00</Thumbprint>
+      <Thumbprint>4M0wLgNk2O2uAclIlwNE003bccnbWkNjC0Lg34Ot09GFNfHw08E000s</Thumbprint>
+      <Thumbprint>4N0w00000cnYk2NkLwNC388bj5mnND2iIM2RIMI8-zNqNg00yw002a0</Thumbprint>
+      <Thumbprint>4M02G0Ns2Q35Q0N4Na000976X8scm0N7BQNENlIq80NHIg35s000ua00</Thumbprint>
+      <Thumbprint>4M02N835Q00034L4s000NANuOQ0000N8NwNi2CBcqIn5N7Nw0000ywy0</Thumbprint>
+      <Thumbprint>4M02H0Nk2j2u0cmYkw0034b4T98a4ac8z5D6_5GeCVD5eZ2xNL0000ywyw</Thumbprint>
+      <Thumbprint>4M02Nf36800034K_000ckIqIKMCMCM35v5GU2g36j58bT6I0002a1M</Thumbprint>
+      <Thumbprint>4M02Nu36g0002cBM0036iWOR0auQ2eNFNQNpCM36mN2pD00008E7</Thumbprint>
+      <Thumbprint>4M02N237w92oJg2SN8000af6P9EbAci6BIoIlYiVY0NjFw36U000y8E2</Thumbprint>
+      <Thumbprint>4M02Nr3680Bpw0Jci62BEMNlNgOF0002NuNaNrBgBcmXA9-X0000yws</Thumbprint>
+      <Thumbprint>4M02N23649Aa40NdN5000aX5T9YaGhL0yIosocjVg0NEJ0zchM00052a</Thumbprint>
+      <Thumbprint>4M80eU348a89Kj08U00bv5gcvaM0FGK8N5LqocoX2bNKNpNU0000s8E</Thumbprint>
+      <Thumbprint>4M802v2N2i2iNA0ciw00NhNp3aKm09r4AcnImUwcq037X576A0001wyw</Thumbprint>
+      <Thumbprint>4M802X34Ki09f400Hpo0BIocwgPg002H36iBzgNp2iNwNiNv0000ywyw</Thumbprint>
+      <Thumbprint>4M802Z2RKM2LKw2M0035f7AcEw00N1j7b4e9CYkFG9NbNoNx0000y0yw</Thumbprint>
+      <Thumbprint>4M02GwN32WCsog2GN80chcpMGqH6kclML034-aNpme36qP1siw0008E8E0</Thumbprint>
+      <Thumbprint>4M02H0N40000NrNd2v2L2XNwOH2n2m0cosnsgUw0NyN52RNi0000yws</Thumbprint>
+      <Thumbprint>4M02DMGgN7Asow2SNn0bn44a-ZNY2K2w0cmpL5kR35n5o9n5M0002a2a</Thumbprint>
+      <Thumbprint>4M420034OvO30bP5w0LYo0Cab40cmwGM34EcmMBwNqNd0bM02a0500</Thumbprint>
+    </Gesture>
+    <Gesture action="shape_or" label="$Designer.shape.or" description="$Designer.shape.or">
+      <Icon>gesture_o.png</Icon>
+      <Thumbprint>4N0g3434Y0BsowNw3500OlCT0036s0JgNp2OF736mN0aU000000</Thumbprint>
+      <Thumbprint>4M002wNf1TND358clw35-Tz000Nw0GIckwNcAA36eR0bo000000</Thumbprint>
+      <Thumbprint>4O0w34n4Q0AcoMNz34Q0NDDP0037g0FgN52Yy8wcobQ0L0000000</Thumbprint>
+      <Thumbprint>4N0g2_No09758cn0Ns0clF6k0036I0CgNe34cFoclYkM35k0000000</Thumbprint>
+    </Gesture>
+    <Gesture action="shape_and" label="$Designer.shape.and" description="$Designer.shape.and" filter="bizlogic">
+      <Icon>gesture_N.png</Icon>
+      <Thumbprint>4M8wK8z4D4U8Mcmwz0NIB0CMN035800000Nby0zsqVMbf4y800002a0</Thumbprint>
+      <Thumbprint>4M8wFwN5GaAbn5g634M00akaMbwcgg00I9M0OeFwzYnEE00008E</Thumbprint>
+      <Thumbprint>4M8wyg2nFM37eK0cqoQcjlCgNM340bKPD034mE0crFg0Jw072a00</Thumbprint>
+      <Thumbprint>4M8w002R35-MGg38I009U0LcnwIIhqA0LpA0J0002a00s00</Thumbprint>
+      <Thumbprint>4M4wJMNYNgIw36s00000CMNu35kcgIs508K-0cpw00yw00yw00</Thumbprint>
+      <Thumbprint>4M8wNkycosgWSjFsiMGgN-0034gchg001035Cq0coHAa746800002a0</Thumbprint>
+    </Gesture>
+    <Gesture action="shape_message" label="$Designer.shape.message" description="$Designer.shape.message" filter="bizlogic">
+      <Icon>gesture_M.png</Icon>
+      <Thumbprint>4M8yKwNaJWcciYpg0cqWc0HIi0AsoM00IgNLGFQcnwobM8Eg2a2a00</Thumbprint>
+      <Thumbprint>4M8yDgNLNrCgNHN7Cg36s009w0JIiwN2NWFwNoJVQcpqZ0FMyw00yC00</Thumbprint>
+      <Thumbprint>4M4yH0N9GYgMNAND00000b40NuJgLYnqocmHuh35g90aI8E007k0</Thumbprint>
+      <Thumbprint>4M8yzw2AI036yE0cmEUcp8SC38uJHwIst9wcnG6o342FF2Ndk01wqa00</Thumbprint>
+      <Thumbprint>4M8yN237L4Kq2ANN1gN7002w2ADYh0NdNiF0NtN2IMNCNmkckwy000yEw00</Thumbprint>
+      <Thumbprint>4M8yygFQI0NJNFF0HcqVU0N0Bg2_Ig38mB37o9McjwCwN61wcMoM00</Thumbprint>
+      <Thumbprint>4M8xB0NgBbccnsqVA9z7A00bw0O6HwyIhHEctGus2M0008E008FM00</Thumbprint>
+    </Gesture>
+    <Gesture action="shape_end" label="$Designer.shape.end" description="$Designer.shape.end">
+      <Icon>gesture_e.png</Icon>
+      <Thumbprint>4M4y2sEwNoHIo8X5Ych036_4Ick02NNy2b2lE0Nm0035I0Dw0008E00</Thumbprint>
+      <Thumbprint>4M4xAslcrRNaf6yhNr34kbj48clw00Ns09Q00308z5w0N000yw0000</Thumbprint>
+      <Thumbprint>4M4y2eCMNKDYsTN53480NMN2f5M0CsrgywyYkMNjLg2BN8070000yw0</Thumbprint>
+      <Thumbprint>4M4y0036meND2s2X0cmIrwNOzGmdNA2r0cogNmN50b1000000600</Thumbprint>
+    </Gesture>
+  </Group>
+  <Group label="$Designer.area.layoutTasks">
+    <Gesture action="add_swimlane" label="$Designer.layout.swimlane" description="$Designer.layout.swimlane" filter="bizlogic">
+      <Icon>gesture_s.png</Icon>
+      <Thumbprint>4O01BFT5M8-Gur2G2u35NiNS2H0cqgN62t1YiwHM35_5E00000o0</Thumbprint>
+      <Thumbprint>4O01CVv5400035sciMNuB0NR2K0coEyk2R2bN82M0coYkg00000M</Thumbprint>
+      <Thumbprint>4O02000000Nc2ECYiYowNm34I0NB2s2n0VE9s9f4_5w0000000</Thumbprint>
+      <Thumbprint>4O422XNs34Ibc0BwBwNwivNu2k0cq0zwFwKbk9Wy3475s00000o0</Thumbprint>
+    </Gesture>
+    <Gesture action="add_phase" label="$Designer.layout.phase" description="$Designer.layout.phase" filter="bizlogic">
+      <Icon>gesture_p.png</Icon>
+      <Thumbprint>4M0hN535b4EMNlNlejNfNSNU2tscjw400aEcgg34BM0000yw02s0</Thumbprint>
+      <Thumbprint>4M01EwNANdiyNsN5qgIYyYs0AUAcvMCM00Nd3643NXFQ0000yw00k0</Thumbprint>
+      <Thumbprint>4M01LMOeN72lNrNA1Hf6X7EbI0NM2n002p2C0b-i80002a001M0</Thumbprint>
+      <Thumbprint>4M0hJgNAH8FsucwgCXn6f6Ub6c2V2c002t2-0Ylp6c0000y000yw</Thumbprint>
+      <Thumbprint>4M0hH0NS2z2T000cigv5yoLb35-jzHX6-Sn5I0LFY0000008E00</Thumbprint>
+      <Thumbprint>4M01IUL62KIVL6n7Kgu-NCNr0F8cngAg00Nib5E0NJI00000yw0000</Thumbprint>
+      <Thumbprint>4M01N936T4iHGcwIq0BXb675A8yf35Ci000bOaNl0cmFI00008E0100</Thumbprint>
+      <Thumbprint>4N02000000Iagb0cvcgW36rav5UUKKNGI8H5l0HaQ0000008F00</Thumbprint>
+      <Thumbprint>4M01N735eQFWn6z7GgCchsrYsgua35h8M00ciq76A0NfGg0000yw0200</Thumbprint>
+    </Gesture>
+    <Gesture action="add_group" label="$Designer.menu.group" description="$Designer.menu.group">
+      <Icon>gesture_rectangle.png</Icon>
+      <Thumbprint>4M00NKsIlwzMNByYi0NoNn0M000cpw35kIm029NB0cmcmD08E01My0</Thumbprint>
+      <Thumbprint>4M00NN1Ylwy0Npf4Icpclw800035s2Nj35Z036k0NRNjk0y008E8w0</Thumbprint>
+      <Thumbprint>4M00No8cmggco1N235T7w0s000NR9bZIri8cmgysoclD08w0282a</Thumbprint>
+      <Thumbprint>4M00Jgn5g135qaN634X5I30000Nk1YlRNO0wNl1swIh9Q0yw08w8w0</Thumbprint>
+    </Gesture>
+  </Group>
+  <Group label="$Designer.area.actions">
+    <Gesture action="layout" label="$Designer.task.autoLayout" description="$Designer.task.autoLayout">
+      <Icon>gesture_L.png</Icon>
+      <Thumbprint>4M0yy0NG1wNG36ccgw00000cqwg00000344200yw0000</Thumbprint>
+      <Thumbprint>4M0yccnw2aNX35oYgO00000cpM1g00002R0008E0000</Thumbprint>
+      <Thumbprint>4M0y2fNC09b60cx3Nm000000Nj0000000chg002a0000</Thumbprint>
+      <Thumbprint>4M0y0cpg0cngNo35Gr00000cp02p00000cgw1g2a0000</Thumbprint>
+    </Gesture>
+    <Gesture action="layout_force" label="$Designer.task.forceAutoLayout" description="$Designer.task.forceAutoLayout">
+      <Icon>gesture_reverse_L.png</Icon>
+      <Thumbprint>4M8wNnhclwygNr2q36L5A2000000J00000002a000000</Thumbprint>
+      <Thumbprint>4M8wN30Ii00cqFg0NGNN0w00000bw2000000yw00000</Thumbprint>
+      <Thumbprint>4M8wNI4ciwkcnEw0NBND0400000chM2b000008E00000</Thumbprint>
+      <Thumbprint>4M8wLw2-yg36qQ0crIlM9g000034E0s00000yw00000</Thumbprint>
+    </Gesture>
+    <Gesture action="layout_force_with_swimlanes" label="$Designer.task.forceAutoLayoutWithSwimlanes" description="$Designer.description.forceAutoLayoutWithSwimlanes" filter="bizlogic">
+      <Icon>gesture_reverse_LL.png</Icon>
+      <Thumbprint>4M8yNL0ciw0cggyMNRAwNqggNE34Q9c0000034Q4a8072a00</Thumbprint>
+      <Thumbprint>4M8yNFaONl00KR0cvpOkNb08P9kcrwyF400000N62a1M1Myw00</Thumbprint>
+      <Thumbprint>4M8yNz2iKi0cn30chx3440yIogNRb4pg000034E0y8E0yw0000</Thumbprint>
+      <Thumbprint>4M8yO34aM737o02QKxO4yA2U0000000035Mckaq808E008w</Thumbprint>
+      <Thumbprint>4M8xNA0as335tQ38mC36edN334Si00000cjM2b001g28yw00</Thumbprint>
+      <Thumbprint>4M4yNG49AC378008-8L02fNG35Ypq900000cn0g7052a000</Thumbprint>
+      <Thumbprint>4M8yNL08Mp0cpx08X5U0Agm_2f2rm8ArswuB35k0ua401C0g</Thumbprint>
+    </Gesture>
+    <Gesture action="remove" label="$Designer.task.removeShapeOrLink" description="$Designer.task.removeShapeOrLink">
+      <Icon>gesture_strike_h.png</Icon>
+      <Thumbprint>4M4x0036A8A0000036w8U0000034I8A000000000</Thumbprint>
+      <Thumbprint>4M4x0038s0g00000N60w00000cjM80000000000</Thumbprint>
+      <Thumbprint>4M4x0036Q0s00000NQ08w00000KM2b000000000</Thumbprint>
+      <Thumbprint>4M4x00364900000037I8E000003400g000000000</Thumbprint>
+      <Icon>gesture_strike_v.png</Icon>
+      <Thumbprint>4N0i00000000zMNz2r3749oci000000000000000</Thumbprint>
+      <Thumbprint>4N0i00000000C0NJ2t36E9Ichg00000000000000</Thumbprint>
+      <Thumbprint>4N0i000000002fNA08L700r4w000000000000000</Thumbprint>
+      <Thumbprint>4N0i000000000csgscngscjw000000000000000</Thumbprint>
+      <Icon>gesture_strike_ul.png</Icon>
+      <Thumbprint>4M0yNq378aga00000034obE00000000cm4Ngc000000</Thumbprint>
+      <Thumbprint>4M0yNE37800000000cnMNk0000000035kclw0000000</Thumbprint>
+      <Thumbprint>4M0yNw35U00000000cq0NB0000000035gcmg0000000</Thumbprint>
+      <Thumbprint>4M0yNQ37g00000000cn0Nt0000000034MciM0000000</Thumbprint>
+      <Icon>gesture_strike_dl.png</Icon>
+      <Thumbprint>4M8w00000cqw36M00cpg36o00cjg34E000000000000</Thumbprint>
+      <Thumbprint>4M8w002x09D4A0Nn003740Nh003440KM00000000000</Thumbprint>
+      <Thumbprint>4M8w00000ctw36800cog35I00aE0KFI0Fg000000000</Thumbprint>
+      <Thumbprint>4M8w00000cng34U00cm0366v09X4w0Nf000000000000</Thumbprint>
+
+      <Thumbprint>4O020009ql0br5000036j5800036P6k000000000000</Thumbprint>
+      <Thumbprint>4O02000000NbNm0000NqNt0000NTNF0000000000000</Thumbprint>
+      <Thumbprint>4O020009Cm0bj4E00036v5M00036z60000000000000</Thumbprint>
+      <Thumbprint>4O02000000N8Nn0000NANn0000NMNK0000000000000</Thumbprint>
+
+      <Thumbprint>4O80350ciw000008U8QcjMNd000000AMBgNs36c0000000</Thumbprint>
+      <Thumbprint>4O8034Uci000000000NM37800000000cnwNy0000000</Thumbprint>
+      <Thumbprint>4O8035ocmM00000000Nt35g00000000cqgNJ0000000</Thumbprint>
+      <Thumbprint>4O8035sciM000008M8EcmMNz0000000035Ucp0000000</Thumbprint>
+    </Gesture>
+    <Gesture action="verify" label="$Designer.task.verify" description="$Designer.task.verify">
+      <Icon>gesture_v.png</Icon>
+      <Thumbprint>4M0wHwNp2U37o00000000coMN4O5Dg2UJw35Y000002a000</Thumbprint>
+      <Thumbprint>4M0wCwNu2x37gacciw00000cr038Ke09v4g0Nv0000c0yw00</Thumbprint>
+      <Thumbprint>4M4w002f35UcpwNgy000003600NnzM2UK038k000000000</Thumbprint>
+      <Thumbprint>4M0wAwNw2Q37w9QaM0000036w9ys292GyM34b4o0NW000000</Thumbprint>
+      <Thumbprint>4M0wCwJ0N636k00000000cpgGYrVg0GcgM38k000001w00</Thumbprint>
+      <Thumbprint>4M0w8aw9EcqgNy2-Gg00Kg35eK0bWhAlDqo0N50000o0000</Thumbprint>
+      <Thumbprint>4M4w001MIMNC34iB002Y0cjrI0KoOlyWmI0cj0000600000</Thumbprint>
+      <Thumbprint>4M0wBwGMNc37c00000000cowHF5w34Si0cmsg036k000000</Thumbprint>
+    </Gesture>
+    <Gesture action="zoom_in" label="$Designer.button.zoom_in" description="$Designer.button.zoom_in">
+      <Icon>gesture_z.png</Icon>
+      <Thumbprint>4M0yOt2m000000LMs0JYhMNPzYkgJclYng002S2a0000yD00</Thumbprint>
+      <Thumbprint>4M0yC00000NFNpNhAcn0y035b4Ucowy0JsjYtg003548w02a00k0</Thumbprint>
+      <Thumbprint>4M0yNB2e000cDIksjgNo1w352-34E8AcjYlsl02CE0Hg001g08E0</Thumbprint>
+      <Thumbprint>4M0yNF1w2AGwNTzIhgNaJYog2VIwN62a000000Ne2a00yC0000</Thumbprint>
+    </Gesture>
+    <Gesture action="zoom_out" label="$Designer.button.zoom_out" description="$Designer.button.zoom_out">
+      <Icon>gesture_reverse_z.png</Icon>
+      <Thumbprint>4O803589w00cgFgaQchMArw0ErT4gakcggBqL48chMNH1w2a001M</Thumbprint>
+      <Thumbprint>4O801wg00cosm0N435oar6A0N22Q1BNl2NHM2y3909c0yw0700</Thumbprint>
+      <Thumbprint>4O801g800cpHCaNN3749L6Y0Nn37ef2sJwJM00372j00yw08E00</Thumbprint>
+      <Thumbprint>4O802M2h0036qH35Acq0Gsq035EchMy1HwEg003aEC08E02a00</Thumbprint>
+    </Gesture>
+    <Gesture action="undo" label="$Designer.button.undo" description="$Designer.description.undo">
+      <Icon>gesture_undo.png</Icon>
+      <Thumbprint>4O4x0036b5yj000000NBNtzw00000clspUQ0002a000000</Thumbprint>
+	  <Thumbprint>4O4x0036b5F000000ctco9s0000034qQzk0008E00000</Thumbprint>
+	  <Thumbprint>4O4x003675im000000NGN50000002zO3D00008E00000</Thumbprint>
+	  <Thumbprint>4O4x0035X5s9A00000NFNk2i00000clsrABM002a000000</Thumbprint>
+	  <Thumbprint>4O4x0036j45M00000crIspI0000034f6Oq0000yw0000</Thumbprint>
+	  <Thumbprint>4N4x003635Gn000000NRIoQ0000034sg0000yw00000</Thumbprint>
+	  <Thumbprint>4O4x0036T52f000000NjNC0000002CNCyg0008E00000</Thumbprint>
+    </Gesture>
+    <Gesture action="redo" label="$Designer.button.redo" description="$Designer.description.redo">
+      <Icon>gesture_redo.png</Icon>
+      <Thumbprint>4M02C0scicgG83BR800cqcna40000034n6ux00000000yw0</Thumbprint>
+      <Thumbprint>4M410038qGBj00000chYqUM0000035r6Kr00000000yw</Thumbprint>
+      <Thumbprint>4M410035P4Cas00000NPNMs000002WNzDg00000008E0</Thumbprint>
+      <Thumbprint>4M41002ANay300000crYq98000003536Gg00000000yw</Thumbprint>
+      <Thumbprint>4M41003575I9c00000NEN82c00000clcugAM0000002a00</Thumbprint>
+      <Thumbprint>4M410035-AA000000cqsnMB0000035j6k8U0000000yw</Thumbprint>
+    </Gesture>    
+    <Gesture action="help" label="$Designer.button.help" description="$Designer.button.help">
+      <Icon>gesture_question.png</Icon>
+      <Thumbprint>4M0iBw2x00000cqEylsbv848IHQ8WuN90000000000c0</Thumbprint>
+      <Thumbprint>4M0iN40M00000clgzw2GJM2zNp2FDcm02CEM0000000M00</Thumbprint>
+      <Thumbprint>4M0iI02A00000cqM2e2LK0yqb5AaCkNv0a2I0000000000</Thumbprint>
+      <Thumbprint>4M0iLQ34E00000Nu08U2g8SFNr2V3640KYn00000000000</Thumbprint>
+    </Gesture>
+  </Group>
+</Gestures>

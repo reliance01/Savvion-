@@ -1,0 +1,57 @@
+{
+    'name': 'Button',
+	'label': '\u30dc\u30bf\u30f3',
+    'type': 'yahoo',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-button.jpg',
+    'description': '\u4e00\u822c\u7684\u306a\u30dc\u30bf\u30f3\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8',
+    'category': 'Button',
+    'args': [
+    {'type': {
+         'type':'STRING', 
+         'defaultValue': '\u30dc\u30bf\u30f3', 
+         'description': '\u30dc\u30bf\u30f3\u30bf\u30a4\u30d7',
+         'values': [
+         {'name': '\u30dc\u30bf\u30f3', 'value': 'button', 'description': '\u57fa\u672c\u7684\u306a\u62bc\u30dc\u30bf\u30f3', 'disableArgs':['checked', 'href']},
+         {'name': '\u5b8c\u4e86', 'value': 'complete','description': '\u62bc\u4e0b\u3059\u308b\u3068\u6307\u5b9a\u3057\u305fURL\u3078\u30ca\u30d3\u30b2\u30fc\u30c8\u3059\u308b', 'disableArgs':['checked', 'href']},
+         {'name': '\u30ad\u30e3\u30f3\u30bb\u30eb', 'value': 'cancel','description': '\u62bc\u4e0b\u3059\u308b\u3068\u73fe\u5728\u306e\u30d5\u30a9\u30fc\u30e0\u3092\u30ad\u30e3\u30f3\u30bb\u30eb\u3059\u308b', 'disableArgs':['checked', 'href']},
+         {'name': '\u30ea\u30bb\u30c3\u30c8', 'value': 'reset','description': '\u62bc\u4e0b\u3059\u308b\u3068\u73fe\u5728\u306e\u30d5\u30a9\u30fc\u30e0\u3092\u30ea\u30bb\u30c3\u30c8\u3059\u308b', 'disableArgs':['checked', 'href']},
+         {'name': '\u4fdd\u5b58', 'value': 'save','description': '\u62bc\u4e0b\u3059\u308b\u3068\u73fe\u5728\u306e\u30d5\u30a9\u30fc\u30e0\u3092\u4fdd\u5b58\u3059\u308b', 'disableArgs':['checked', 'href']},
+         {'name': '\u518d\u5272\u308a\u5f53\u3066', 'value': 'reassign','description': '\u62bc\u4e0b\u3059\u308b\u3068\u73fe\u5728\u306e\u30d5\u30a9\u30fc\u30e0\u3092\u518d\u5272\u308a\u5f53\u3066\u3059\u308b', 'disableArgs':['checked', 'href']},
+         ]
+     }},
+     {'label':{'label':'\u30e9\u30d9\u30eb', 'type':'STRING', 'defaultValue': '\u62bc\u4e0b', 'description': '\u30dc\u30bf\u30f3\u30e9\u30d9\u30eb'}},
+     {'checked':{'label':'\u9078\u629e\u72b6\u614b', 'type':'BOOLEAN', 'defaultValue': false, 'description': '\u30c1\u30a7\u30c3\u30af\u30dc\u30c3\u30af\u30b9\u72b6\u614b', 'editable':false, 'values': [{'name':'\u306F\u3044', 'value':'true'},{'name':'\u3044\u3044\u3048', 'value':'false'}]}},
+     {'href':{'label':'\u30ea\u30f3\u30af', 'type':'STRING', 'defaultValue': 'http://ajax.dev.java.net', 'description': '\u30ea\u30f3\u30af\u30dc\u30bf\u30f3\u306eURL', 'editable':false}},
+     {'duallist':{'label':'\u4e8c\u6b21\u5143\u30ea\u30b9\u30c8', 'type':'BOOLEAN','defaultValue': false, 'description': '\u30dc\u30bf\u30f3\u304c\u4e8c\u6b21\u5143\u30ea\u30b9\u30c8\u3067\u5171\u6709\u3055\u308c\u3066\u3044\u308b\u304b\u3069\u3046\u304b', 'values': [{'name':'\u306F\u3044', 'value':'true'},{'name':'\u3044\u3044\u3048', 'value':'false'}]}},
+     {'sourcelist':{'label':'\u30bd\u30fc\u30b9\u30ea\u30b9\u30c8', 'type':'STRING','defaultValue': '', 'description': '\u30bd\u30fc\u30b9\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8\u540d'}},
+     {'targetlist':{'label':'\u30bf\u30fc\u30b2\u30c3\u30c8\u30ea\u30b9\u30c8', 'type':'STRING','defaultValue': '', 'description': '\u30bf\u30fc\u30b2\u30c3\u30c8\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8\u540d'}}    
+     ],
+     'value': {
+         'required':'false',
+         'type': 'OBJECT',
+         'defaultValue':{
+         }
+     },    
+     'config' : {
+         'type': {
+             'id' : 'yahoo.button',
+             'libs': [ 
+             '../resources/libs/yahoo/v2.4.0/yahoo-dom-event/yahoo-dom-event.js',
+             '../resources/libs/yahoo/v2.4.0/element/element-beta-min.js',
+             '../resources/libs/yahoo/v2.4.0/container/container_core-min.js',
+             '../resources/libs/yahoo/v2.4.0/button/button-min.js'],
+             'styles': [
+             '../resources/libs/yahoo/v2.4.0/button/assets/skins/sam/button.css'],
+        'resources': [
+                '../resources/libs/yahoo/v2.4.0/assets',
+                '../resources/libs/yahoo/v2.4.0/button/assets']     
+         }
+     },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/yahoo/button/onClick','/yahoo/button/onChange'],
+       'description':'\u30dc\u30bf\u30f3\u3092\u30af\u30ea\u30c3\u30af\u3059\u308b\u304b\u5909\u66f4\u3055\u308c\u308b\u3068\u304d\u3001\u4e21\u65b9\u304c\u305d\u308c\u3089\u306etopicName\u306b\u767a\u884c\u3055\u308c\u307e\u3059\u3002\u30c1\u30a7\u30c3\u30af\u30dc\u30c3\u30af\u30b9\u306e\u30dc\u30bf\u30f3\u304b\u3089onChange\u3060\u3051\u3092\u9001\u308a\u307e\u3059\u3002\u4e21\u65b9\u304cID\u3068\u5024\u3067\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092\u767a\u884c\u3057\u307e\u3059\u3002onClick\u306e\u5024\u306f{}\u3067\u3059\u3002onChange\u5024\u306f{oldValue,newValue}\u3067\u3059\u3002.'
+    }
+}

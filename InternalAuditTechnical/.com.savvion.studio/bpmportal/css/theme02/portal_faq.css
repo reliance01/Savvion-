@@ -1,0 +1,163 @@
+BODY {
+	MARGIN: 0px; 
+	BACKGROUND-REPEAT: no-repeat; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	BACKGROUND-COLOR: #ffffff
+}
+A {
+	COLOR: #0053A6; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:visited {
+}
+td {
+	font-size: 8pt;
+}
+h5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #FFFFFF;
+	border-right-color: #D1E0F1;
+	border-bottom-color: #D1E0F1;
+	border-left-color: #efefef;
+	background-color: #F2F4F7;
+	padding: 2px 2px 2px 8px;
+	margin: 4px;
+}
+li {
+	line-height: 13pt;
+}
+h2 {
+	font-size: 13pt;
+	font-weight: bold;
+}
+h3 {
+	font-size: 9pt;
+}
+ul {
+	border: 0px solid #FFFFFF;
+}
+h1 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #004A6F;
+}
+hr {
+	border-top: 1px solid #CCCCCC;
+	border-right: none #FFFFFF;
+	border-bottom: solid #FFFFFF;
+	border-left: none #FFFFFF;
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+}
+h4 {
+	font-size: 14px;
+	color: #666666;
+}
+A.FaqLnk {  
+	font-size: 9pt; 
+	color: #000099; 
+	text-decoration: none
+}
+A.FaqLnk:hover {  
+	font-size: 9pt; 
+	text-decoration: underline
+}
+A.FaqLnk:visited { 
+}
+
+.FaqBodyTxt {
+	FONT-SIZE: 9pt; 
+	WORD-SPACING: 1px; 
+	LINE-HEIGHT: 14pt; 
+	LETTER-SPACING: 0px
+}
+.FaqHdng1 {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 12px; 
+	COLOR: #315977
+}
+.FaqHr {
+	COLOR: #efefef; 
+	LINE-HEIGHT: 1pt
+}
+.FaqLineBg {
+	BACKGROUND-COLOR: #bfcbee
+}
+.FaqQues {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 14px; 
+	COLOR: #003399
+}
+.FaqSubHdng {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 14px
+}
+.FaqSubHdngMain {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 16px; COLOR: #8d8d8d; 
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A.CopyLnk {
+	FONT-SIZE: 8pt; 
+	COLOR: #999999; 
+	TEXT-DECORATION: none
+}
+A.CopyLnk:hover {
+	TEXT-DECORATION: underline
+}
+A.CopyLnk:visited {
+}
+.CopyTxt {
+	FONT-SIZE: 8pt; 
+	COLOR: #999999
+}
+.LogoBg {
+	BACKGROUND-COLOR: #828284
+}
+.HeadLine {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 12pt; COLOR: #ffffff; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.LogoUpLine {
+	FONT-SIZE: 8pt; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	BACKGROUND-COLOR: #333366
+}
+.CmnTitle { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	font-size: 10pt; 
+	background-color: #F2F2FF; 
+	border: 1px solid #333668; 
+	padding-top: 4px; 
+	padding-right: 2px; 
+	padding-bottom: 4px; 
+	padding-left: 2px; 
+	color: #000066
+}
+.FaqHdng {
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 18px; COLOR: #003366; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.CmnTblEmboss {
+	BACKGROUND-COLOR: #ffffff;
+	border: 1px solid #333668;
+
+}
+.CmnTblInBg {
+	BACKGROUND-COLOR: #bccbd6
+}

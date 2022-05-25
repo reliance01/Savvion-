@@ -1,0 +1,10 @@
+adapter-configurator=com.savvion.sbm.adapters.jms.AdapterConfiguratorDialog
+map-configurator=com.savvion.sbm.adapters.framework.GroupMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.GroupMapper
+AdapterCategory=JMSAdapters
+AdapterName=GenericJMSAdapter
+adapter-class=com.savvion.sbm.adapters.jms.JMSAdapter
+log-level=10
+icon=messages.png
+adaplet=false
+inline-enabled=true

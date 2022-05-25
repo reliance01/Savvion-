@@ -1,0 +1,582 @@
+.SbmSummaryPanelLayoutType1{
+	visibility: visible;
+	position: absolute;
+	overflow-y: auto;
+	overflow-x: hidden;
+	top: 62px;
+	bottom: 6px;
+	z-index: 0;
+	background: #FFFFFF
+}
+.SbmListDiv, .SbmDetailsDiv {
+	padding: 0px;
+	width: 100%; /*for ie*/
+	_position: absolute; /*for ie*/
+	background: #FFFFFF
+}
+.SbmMenuPanelLayoutType1 {
+	position: absolute;
+	overflow-y: auto;
+	overflow-x: hidden;
+	top: 62px;
+	bottom: 6px
+}
+/*for menu screen*/
+.SbmTabDivLayoutType1
+	{
+	position: absolute;
+	top: 0; /*\*/
+	right: 0;
+	left: 0px; /* Exclude right and left props for Mac IE5 */
+	margin: 0 0 0 0px; /*\*/
+	margin: 0; /* */
+	height: 62px;
+	width: expression(document.body.clientWidth);
+	background: #E7EBEF
+}
+.SbmBottomPanelLayoutType1
+	{
+	position: absolute; /* Exclude for Mac IE5 */
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 6px;
+	margin: 0 0px 0 0; /* Cater for Mac IE5 */
+	margin: 0; /* Put back for all the rest */
+	width: expression(document.body.clientWidth)
+}
+.SbmContentPanelDivMainLayoutType1
+	{
+	position: absolute; /* Exclude all previous props for Mac IE5 */
+	margin: 145px 305px 5px 155px; /* Cater for Mac IE5 */
+	margin: 0; /* Put back for all the rest */
+	overflow: hidden; /* no need for Mac IE5 to see this */
+	border: 1px solid #7B86A5;
+	border-top: 0px solid #7B86A5;
+	height: expression(document.body.clientHeight - (6 + 62) + "px");
+	top: 62px;
+	bottom: 6px
+}
+.SbmContentPanelDivMainLayoutType1MenuVisible {
+	right: 0px;
+	left: 160px;
+	width: expression(document.body.clientWidth - (160 + 0) + "px")
+}
+.SbmContentPanelDivMainLayoutType1MenuHide {
+	right: 0px;
+	left: 16px;
+	width: expression(document.body.clientWidth - (16 + 0) + "px")
+}
+.SbmContentPanelDivMainLayoutType1MenuVisibleSummaryVisible {
+	right: 139px;
+	left: 160px;
+	width: expression(document.body.clientWidth - (160 + 139) + "px")
+}
+.SbmContentPanelDivMainLayoutType1MenuHideSummaryVisible {
+	right: 139px;
+	left: 16px;
+	width: expression(document.body.clientWidth - (16 + 139) + "px")
+}
+.SbmContentPanelDivMainLayoutType1MenuVisibleSummaryHide {
+	right: 16px;
+	left: 160px;
+	width: expression(document.body.clientWidth - (160 + 16) + "px")
+}
+.SbmContentPanelDivMainLayoutType1MenuHideSummaryHide {
+	right: 16px;
+	left: 16px;
+	width: expression(document.body.clientWidth - (16 + 16) + "px")
+}
+.SbmContentDiv2LayoutType1 { vertical-align: top; /*not required*/ width: 100% }
+.TitleButtonFilterDiv2{ }
+.SbmContentDiv3LayoutType1 {
+	border: 0px solid #7D86A3; /*bottom:50%; 
+	top:66px; */
+	position: absolute;
+	overflow: hidden;
+	width: 100%; /*for ie content resize*/
+	visibility: visible
+}
+.TitleButtonFilterDiv3LayoutType1{
+	top: 66px;
+	bottom: 50%;
+	height: expression(document.body.clientHeight/2 - (66 + 0 + 32) + "px")
+}
+.TitleSearchDiv3LayoutType1{
+	top: 42px;
+	bottom: 50%;
+	height: expression(document.body.clientHeight/2 - (43 + 0 + 32) + "px")
+}
+.TitleButtonDiv3LayoutType1{
+	top: 43px;
+	bottom: 50%;
+	height: expression(document.body.clientHeight/2 - (43 + 0 + 32) + "px")
+}
+.TitleButtonDiv3LayoutType7{
+	top: 43px;
+	bottom: 70%;
+	_height: expression(document.body.clientHeight/3 - (43 + 0 + 34 ) + "px")
+}
+.TitleDiv3LayoutType7{
+	top: 18px;
+	bottom: 70%;
+	_height: expression(document.body.clientHeight/3 - (18 + 0 + 34 ) + "px")
+}
+.TitleButtonSearchQuickSearchDiv3LayoutType1{
+	top: 92px;
+	bottom: 50%;
+	height: expression(document.body.clientHeight/2 - (92 + 0 + 32) + "px")
+}
+.TitleButtonFilterDiv3LayoutType6{
+	top: 66px;
+	bottom: 0%;
+	height: expression(document.body.clientHeight - (66 + 0 + 32 + 35) + "px")
+}
+.TitleButtonSearchQuickSearchDiv3LayoutType6{
+	top: 92px;
+	bottom: 0%;
+	height: expression(document.body.clientHeight - (92 + 0 + 32 + 35) + "px")
+}
+.TitleDiv3LayoutType1{
+	top: 18px;
+	bottom: 50%;
+	height: expression(document.body.clientHeight/2 - (18 + 0 + 32) + "px")
+}
+.TitleDiv3LayoutType9{
+	top: 18px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (63 + 18 + 6 + 0) + "px")
+}
+.TitleButtonDiv3LayoutType9{
+	top: 43px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (63 + 43 + 6 + 0) + "px")
+}
+.TitleButtonFilterDiv3LayoutType9{
+	top: 67px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (63 + 67 + 6 + 0) + "px")
+}
+.TitleButtonFilterDiv3LayoutType9A{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (63 + 67 + 6 + 0) + "px")
+}
+.TitleButtonTabDiv3LayoutType9{
+	top: 62px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (63 + 62 + 6 + 0) + "px")
+}
+.SbmContentDiv3LayoutType1A {
+	position: inherit;
+	_position: absolute;
+	overflow: auto;
+	display: block;
+	width: 100%; /*for ie content resize*/
+	z-index: 1; /*height: expression(document.body.clientHeight/2 - (40 + 66) + "px");*/
+	background: #FFFFFF
+}
+.Div3LayoutType1ABorder {
+	border-top: 1px solid #7D86A3;
+	border-right: 0px solid #7D86A3;
+	border-bottom: 2px solid #7D86A3;
+	border-left: 0px solid #7D86A3
+}
+.Div3LayoutType7ABorder {
+	border-top: 1px solid #7D86A3;
+	border-right: 0px solid #7D86A3;
+	border-bottom: 1px solid #7D86A3;
+	border-left: 0px solid #7D86A3;
+	_border-bottom: 2px solid #7D86A3
+}
+.TitleButtonFilterDiv3LayoutType1A{
+	top: 0px;
+	bottom: 21px;
+	height: expression(document.body.clientHeight/2 - (66 + 1 + 21 + 32) + "px")
+}
+.TitleSearchDiv3LayoutType1A{
+	top: 0px;
+	bottom: 0px;
+	height: expression(document.body.clientHeight/2 - (42 + 1 + 0 + 32) + "px")
+}
+.TitleButtonDiv3LayoutType1A{
+	top: 0px;
+	bottom: 21px;
+	height: expression(document.body.clientHeight/2 - (43 + 1 + 21 + 32) + "px")
+}
+.TitleButtonDiv3LayoutType7A{
+	top: 0px;
+	bottom: 0px; /*height:100px;_height:103px;*/
+	height: expression(document.body.clientHeight/3 - (43 + 1 + 0 + 32) + "px");
+	*: /
+}
+.TitleDiv3LayoutType7A{
+	top: 0px;
+	bottom: 0px; /*height:100px;_height:103px;*/
+	height: expression(document.body.clientHeight/3 - (18 + 1 + 0 + 32) + "px");
+	*: /
+}
+.TitleButtonSearchQuickSearchDiv3LayoutType1A{
+	top: 0px;
+	bottom: 21px;
+	height: expression(document.body.clientHeight/2 - (99 + 1 + 21 + 25) + "px")
+}
+.TitleButtonFilterDiv3LayoutType6A{
+	top: 0px;
+	bottom: 22px;
+	height: expression(document.body.clientHeight - (66 + 1 + 21 + 32 + 35) + "px")
+}
+.TitleButtonSearchQuickSearchDiv3LayoutType6A{
+	top: 0px;
+	bottom: 22px;
+	height: expression(document.body.clientHeight - (99 + 1 + 21 + 32 + 28) + "px")
+}
+.TitleDiv3LayoutType1A{
+	top: 0px;
+	bottom: 0px;
+	height: expression(document.body.clientHeight/2 - (18 + 0 + 0 + 32) + "px")
+}
+.TitleButtonDiv3LayoutType1B{
+	position: inherit; /*for pagination*/
+	_position: absolute;
+	bottom: 1px;
+	_bottom: 2px
+}
+.PopTitleButtonTitleButtonSearchQuickSearchPaginationDiv3LayoutType1B{
+	position: inherit; /*for pagination*/
+	_position: absolute;
+	bottom: -1px;
+	_bottom: -2px
+}
+.TitleButtonDiv3LayoutType6B{
+	position: inherit; /*for pagination*/
+	_position: absolute;
+	bottom: -1px;
+	_bottom: 0px
+}
+.TitleButtonDiv3LayoutType2{
+	top: 0px;
+	bottom: 0;
+	_height: 193px; /* total required height expression(document.body.clientHeight/2 - (0 + 32) + "px");*/
+	position: static;
+	_position: absolute
+}
+.TitleDiv3LayoutType2{
+	top: 0px;
+	bottom: 0;
+	_height: 218px; /* total required height expression(document.body.clientHeight/2 - (0 + 32) + "px");*/
+	position: static;
+	_position: absolute
+}
+.TitleButtonDiv3LayoutType2A{ top: 43px; bottom: 0; height: 136 }
+.TitleDiv3LayoutType2A{ top: 18px; bottom: 0; height: 161 }
+.TitleButtonDiv3LayoutType3{
+	top: 0px;
+	bottom: 0;
+	_height: 140px; /* total required height expression(document.body.clientHeight/2 - (0 + 32) + "px");*/
+	position: static;
+	_position: absolute
+}
+.TitleButtonDiv3LayoutType3A{ top: 43px; bottom: 0; height: 96 }
+.TitleDiv3LayoutType5{
+	top: 0px;
+	bottom: 0;
+	_height: 125px; /* total required height expression(document.body.clientHeight/2 - (0 + 32) + "px");*/
+	position: static;
+	_position: absolute
+}
+.TitleDiv3LayoutType5A{ top: 18px; bottom: 0; height: 106 }
+.TitleDiv3LayoutType9A{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (63 + 18 + 6 + 0) + "px")
+}
+.TitleButtonDiv3LayoutType9A{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (63 + 43 + 6 + 0) + "px")
+}
+.TitleButtonTabDiv3LayoutType9A{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (63 + 62 + 6 + 0) + "px")
+}
+.SbmContentDiv4LayoutType1 {
+	overflow: hidden;
+	position: absolute;
+	background: #FFFFFF
+}
+.Div4LayoutType1 {
+	top: 50%;
+	bottom: 0;
+	width: 100%; /*for ie content resize*/
+	_height: 100%
+}
+.Div4LayoutType7 {
+	top: 30%; /*top:143px;*/
+	_top: expression(document.body.clientHeight/3 - (35 + 0 + 0 ) + "px");
+	bottom: 0;
+	width: 100%; /*for ie content resize*/
+	_height: 100%
+}
+.Div4LayoutType2 {
+	top: 180px;
+	bottom: 0;
+	width: 100%; /*for ie content resize*/
+	_height: 100%
+}
+.Div4LayoutType3 {
+	top: 140px;
+	bottom: 0;
+	width: 100%; /*for ie content resize*/
+	_height: 100%
+}
+.Div4LayoutType5 {
+	top: 125px;
+	bottom: 0;
+	width: 100%; /*for ie content resize*/
+	_height: 100%
+}
+.SbmContentDiv5LayoutType1 { display: block; /*height:40px; */ vertical-align: top }
+.SbmContentDiv6LayoutType1 {
+	border-top: 1px solid #7D86A3;
+	border-right: 0px solid #7D86A3;
+	border-bottom: 0px solid #7D86A3;
+	border-left: 0px solid #7D86A3;
+	position: absolute;
+	width: 100%;
+	visibility: visible;
+	overflow: auto;
+	_display: block;
+	bottom: 0;
+	_z-index: 3;
+	background: #FFFFFF
+}
+.TitleButtonFilterDiv6 {
+	top: 68px;
+	height: expression(document.body.clientHeight/2 - (69 + 32) + "px")
+}
+.TitleFilterDiv6 {
+	top: 41px;
+	height: expression(document.body.clientHeight/2 - (42 + 32) + "px")
+}
+.TitleFilterTabDiv6 {
+	top: 60px;
+	height: expression(document.body.clientHeight/2 - (60 + 32) + "px")
+}
+.TitleButtonDiv6 {
+	top: 43px;
+	height: expression(document.body.clientHeight/2 - (44 + 32) + "px")
+}
+.TitleButtonTabDiv6 {
+	top: 62px;
+	height: expression(document.body.clientHeight/2 - (62 + 32) + "px")
+}
+.TitleButtonTabDiv6LayoutType7 {
+	top: 62px; /*height: expression(document.body.clientHeight - (273) + "px");(18 + 25 + 100 + 18 + 25 + 19 + 32 + 6 + 30)*/
+	height: expression(document.body.clientHeight/1.5 - (62 + 32) + "px")
+}
+.TitleFilterTabDiv6LayoutType7 {
+	top: 60px; /*height: expression(document.body.clientHeight - (273) + "px");(18 + 25 + 100 + 18 + 25 + 19 + 32 + 6 + 30)*/
+	height: expression(document.body.clientHeight/1.5 - (62 + 32) + "px")
+}
+.TitleFilterDiv6LayoutType7 {
+	top: 41px; /*height: expression(document.body.clientHeight - (273) + "px");(18 + 25 + 100 + 18 + 25 + 19 + 32 + 6 + 30)*/
+	height: expression(document.body.clientHeight/1.5 - (41 + 32) + "px");
+	border-top: #7B86A5 1px solid
+}
+.TitleButtonFilterDiv6LayoutType7 {
+	top: 63px; /*height: expression(document.body.clientHeight - (273) + "px");(18 + 25 + 100 + 18 + 25 + 19 + 32 + 6 + 30)*/
+	height: expression(document.body.clientHeight/1.5 - (63 + 32) + "px");
+	border-top: #7B86A5 1px solid
+}
+.TitleButtonDiv6LayoutType7 {
+	top: 43px; /*height: expression(document.body.clientHeight - (273) + "px");(18 + 25 + 100 + 18 + 25 + 19 + 32 + 6 + 30)*/
+	height: expression(document.body.clientHeight/1.5 - (43 + 32) + "px");
+	border-top: #7B86A5 1px solid
+}
+.MaxTitleFilterDiv6 {
+	top: 41px;
+	height: expression(document.body.clientHeight - (42 + 58 + 10) + "px")
+}
+.TitleDiv6 {
+	top: 18px;
+	height: expression(document.body.clientHeight/2 - (19 + 32) + "px")
+}
+.TitleDiv6LayoutType2 {
+	top: 18px;
+	height: expression(document.body.clientHeight - (6 + 18 + 180 + 62) + "px")
+}
+.TitleDiv6LayoutType3 {
+	top: 18px;
+	height: expression(document.body.clientHeight - (6 + 18 + 140 + 62) + "px")
+}
+.TitleDiv6LayoutType5 {
+	top: 18px;
+	height: expression(document.body.clientHeight - (6 + 18 + 125 + 62) + "px")
+}
+.TitleButtonDiv6LayoutType5 {
+	top: 43px;
+	height: expression(document.body.clientHeight - (6 + 43 + 125 + 62) + "px")
+}
+.MaximizeTitleDiv6 {
+	top: 18px;
+	height: expression(document.body.clientHeight - (18 + 58 + 10) + "px")
+}
+/*for all other div*/	
+.MaximizeDivHide { display: none }
+.MaximizeDiv4 {
+	top: 0px;
+	bottom: 0px;
+	height: 100%;
+	height: expression(document.body.clientHeight - (0 + 0) + "px")
+}
+.SbmPopupContentDivMainBigSizeScreen {
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	bottom: 40px;
+	right: 40px; /*width:640px;*/
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+	min-width: 400px;
+	border: 0px solid #7D86A3;
+	z-index: 999999999;
+	background: #FFFFFF
+}
+.SbmPopupContentDiv2LayoutType1 {
+	vertical-align: top; /*not required*/
+	width: 100%;
+	border-top: 1px solid #7D86A3;
+	border-right: 1px solid #7D86A3;
+	border-bottom: 0px solid #7D86A3;
+	border-left: 1px solid #7D86A3
+}
+.SbmPopupContentDiv3LayoutType1 {
+	border-top: 0px solid #7D86A3;
+	border-right: 1px solid #7D86A3;
+	border-bottom: 1px solid #7D86A3;
+	border-left: 1px solid #7D86A3; /*bottom:50%; 
+	top:66px; */
+	position: absolute;
+	overflow: hidden;
+	width: 100%; /*for ie content resize*/
+	visibility: visible
+}
+.SbmPopupTitleButtonDiv3LayoutType1BigSizeScreen{
+	top: 49px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (100 + 49 + 6 + 0) + "px")
+}
+.SbmPopupTitleButtonTabDiv3LayoutType1BigSizeScreen{
+	top: 68px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (100 + 68 + 6 + 0) + "px")
+}
+.SbmPopupTitleButtonDiv3LayoutType1MediumSizeScreen{
+	top: 49px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (200 + 49 + 6 + 0) + "px")
+}
+.SbmPopupTitleDiv3LayoutType1SmallSizeScreen{
+	top: 24px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (200 + 24 + 6 + 0) + "px")
+}
+.SbmPopupContentDiv3LayoutType1A {
+	position: inherit;
+	_position: absolute;
+	overflow: auto;
+	display: block;
+	width: 100%; /*for ie content resize*/
+	z-index: 0; /*height: expression(document.body.clientHeight/2 - (40 + 66) + "px");*/
+	background: #FFFFFF
+}
+.SbmPopupTitleButtonDiv3LayoutType1ABigSizeScreen{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (100 + 48 + 6 + 0) + "px")
+}
+.SbmPopupTitleButtonTabDiv3LayoutType1ABigSizeScreen{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (100 + 69 + 6 + 0) + "px")
+}
+.SbmPopupTitleButtonSearchQuickSearchDiv3LayoutType1ABigSizeScreen{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (100 + 101 + 6 + 0) + "px")
+}
+.SbmPopupTitleButtonSearchQuickSearchPaginationDiv3LayoutType1ABigSizeScreen{
+	top: 0px;
+	bottom: 20px;
+	_height: expression(document.body.clientHeight - (100 + 101 + 6 + 20) + "px")
+}
+.SbmPopupTitleButtonDiv3LayoutType1AMediumSizeScreen{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (200 + 49 + 6 + 0) + "px")
+}
+.SbmPopupTitleDiv3LayoutType1ASmallSizeScreen{
+	top: 0px;
+	bottom: 0px;
+	_height: expression(document.body.clientHeight - (200 + 24 + 6 + 0) + "px")
+}
+.SbmSummaryPanelLayoutType1MenuVisibleSummaryVisible, .SbmSummaryPanelLayoutType1MenuHideSummaryVisible {
+	right: 0;
+	width: 139px;
+	height: expression(document.body.clientHeight- (62 + 6 + 0) + "px");
+	left: expression(document.body.clientWidth - (139 + 0) + "px")
+}
+.SbmSummaryPanelLayoutType1MenuVisibleSummaryHide, .SbmSummaryPanelLayoutType1MenuHideSummaryHide {
+	right: 0;
+	width: 16px;
+	height: expression(document.body.clientHeight- (62 + 6 + 0) + "px");
+	left: expression(document.body.clientWidth - (16 + 0) + "px")
+}
+.SbmMenuPanelLayoutType1MenuVisible, .SbmMenuPanelLayoutType1MenuVisibleSummaryVisible, .SbmMenuPanelLayoutType1MenuVisibleSummaryHide {
+	left: 0;
+	width: 160px;
+	height: expression(document.body.clientHeight- (6 + 62 + 0) + "px")
+}
+.SbmMenuPanelLayoutType1MenuHideSummaryHide, .SbmMenuPanelLayoutType1MenuHideSummaryVisible, .SbmMenuPanelLayoutType1MenuHide {
+	left: 0;
+	width: 16px;
+	height: expression(document.body.clientHeight- (6 + 62 + 0) + "px")
+}
+.SbmContentDiv1LayoutType1, .SbmPopupContentDiv1LayoutType1 {
+	height: 100%;
+	width: 100%; /*for ie content resize*/
+	background: #7D86A3
+}
+.SbmContentDiv6LayoutType4, .SbmContentDiv6LayoutType7 {
+	border: 0px solid #7D86A3;
+	position: absolute;
+	width: 100%;
+	visibility: visible;
+	overflow: auto;
+	_display: block;
+	bottom: 0;
+	_z-index: 3;
+	background: #FFFFFF
+}
+.SbmPopupContentDivMainMediumSizeScreen, .SbmPopupContentDivMainSmallSizeScreen {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	bottom: 100px;
+	right: 100px; /*width:640px;*/
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+	min-width: 400px;
+	border: 0px solid #7D86A3;
+	z-index: 999999999;
+	background: #FFFFFF
+}
+.SbmPopupTitleButtonSearchQuickSearchDiv3LayoutType1BigSizeScreen, .SbmPopupTitleButtonSearchQuickSearchPaginationDiv3LayoutType1BigSizeScreen {
+	top: 99px;
+	bottom: 0;
+	_height: expression(document.body.clientHeight - (100 + 101 + 6 + 0) + "px")
+}

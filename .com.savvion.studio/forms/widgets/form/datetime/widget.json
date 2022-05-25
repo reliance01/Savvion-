@@ -1,0 +1,44 @@
+ {
+    'name': 'Date Time',
+    'label': '%widget.datetime.label',
+    'type': 'form',
+    'version' : '1.0',
+    'jmakiVersion' : '1.0',    
+    'image': 'images/datepicker.jpg',
+    'description': 'This widget is a drop down date picker.',
+    'category': 'Calendar',
+    'topicInfo' : {
+	    'type': 'publish',
+	    'topicName': ['/dojo/dropdownDatePicker/onSelect'],
+	    'description': 'Publish widget id, wargs and value selected'
+    },
+    'args': [
+		{'dateonly':{'label':'%Designer.format.date_only', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+        {'visible':{'label':'%Form.checkbox.visible', 'type':'BOOLEAN', 'defaultValue': 'true'}},
+		{'readonly':{'label':'Read Only', 'type':'BOOLEAN', 'defaultValue': 'false'}}		       
+    ] ,
+    'value': {'required': false, 'type': 'DATE'},
+    'config' : {
+          'type' :
+           { 'id' : 'dojo', 
+             'libs' : [
+                  
+               ],
+               'preload' : 'if (typeof djConfig ==\'undefined\') djConfig = { parseWidgets: false, searchIds: [] };',
+               'resources' : [
+                
+               ]
+          }       
+    },
+   	'validation': [
+        {'type':'none',
+		  'label':'%Designer.value.showNone',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+		  'label':'%EditorChoices.label.Default',
+          'options':['validateOn', 'isRequired', 'requiredValidationMsg']
+        }
+    ]    
+}

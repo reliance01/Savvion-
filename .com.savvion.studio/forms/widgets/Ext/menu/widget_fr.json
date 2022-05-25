@@ -1,0 +1,47 @@
+{
+    'name': 'Menu',
+	'label': 'Menu',
+    'type': 'ext',
+    'version': '.9.6.3',
+    'jmakiVersion': '.9.6.3',    
+    'image': 'images/ext-menu.jpg',
+    'description': 'objet graphique de type menu.',
+    'category': 'Menu',
+    'value':{'type' : 'OBJECT',
+                'defaultValue':
+                {'menu' : [
+                 {'label': 'un sujet',
+              	'menu': [
+             	  {'label':'un article', 'href':'http://www.sun.com'},
+                  {'label':'un autre article', 'href':'http://www.jmaki.com'}
+               	 ]},
+		         {'label': 'un autre sujet',
+                  'menu': [
+		          {'label':'un autre article', 'href':'http://www.java.sun.com'},
+                  {'label':'encore un autre article',  action:{topic: '/mytopic', message: '2.jsp'}}
+               	 ]}
+            ]
+        }
+    },
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'libs' : [
+                   '../resources/libs/adapter/ext/ext-base.js',
+                   '../resources/libs/ext-all.js'
+               ],
+              'styles' : [
+                 '../resources/styles/css/ext-all.css',                 
+                 '../resources/styles/css/ytheme-aero.css'
+               ],
+              'resources' : [
+                '../resources/styles/images'
+               ]
+        }
+    },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': '/Ext/menu/onclick',
+       'description':'L\'\u00e9v\u00e9nement onclick publie le sujet dans /jmaki/menu en passant la cha\u00eene de caract\u00e8res correspondant \u00e0 l\'article du menu si la propri\u00e9t\u00e9 active est utilis\u00e9e.  Si la propri\u00e9t\u00e9 href est utilis\u00e9e alors la navigation va \u00e0 l\'URL repr\u00e9sent\u00e9e par la cha\u00eene de caract\u00e8res correspondante.'
+    }  
+  }

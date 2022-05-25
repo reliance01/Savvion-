@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_05" class="java.beans.XMLDecoder"> 
+ <object class="com.savvion.sbm.bo.bean.BusinessObjectTypeBean"> 
+  <void property="attributes"> 
+   <void method="put"> 
+    <string>id</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>id</string> 
+     </void> 
+     <void property="name"> 
+      <string>id</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>category</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>category</string> 
+     </void> 
+     <void property="name"> 
+      <string>category</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>releaseDate</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string>2008-11-14 15:09:10.812</string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>releaseDate</string> 
+     </void> 
+     <void property="name"> 
+      <string>releaseDate</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.sql.Timestamp</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>price</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string>0.0</string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>price</string> 
+     </void> 
+     <void property="name"> 
+      <string>price</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.math.BigDecimal</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>name</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>name</string> 
+     </void> 
+     <void property="name"> 
+      <string>name</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>available</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string>false</string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>available</string> 
+     </void> 
+     <void property="name"> 
+      <string>available</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.Boolean</string> 
+     </void> 
+    </object> 
+   </void> 
+  </void> 
+  <void property="categoryName"> 
+   <string>demo</string> 
+  </void> 
+  <void property="className"> 
+   <string>com.savvion.bo.demo.Product</string> 
+  </void> 
+  <void property="createdDate"> 
+   <long>1226704207156</long> 
+  </void> 
+  <void property="creator"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="dataSourceRef"> 
+   <string></string> 
+  </void> 
+  <void property="description"> 
+   <string></string> 
+  </void> 
+  <void property="id"> 
+   <long>2</long> 
+  </void> 
+  <void property="lastModifiedBy"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="lastModifiedDate"> 
+   <long>1227056962777</long> 
+  </void> 
+  <void property="name"> 
+   <string>Product</string> 
+  </void> 
+ </object> 
+</java> 

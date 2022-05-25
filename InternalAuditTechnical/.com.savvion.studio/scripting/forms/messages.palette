@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.messages" path="expressions/messages" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.popup_message" path="expressions/messages" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.popup_message">
+      <template>Bm.util.popupMessage('${message}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.show_this_popup_message</label>
+           <entryWidget row="1" col="0" rowspan="1" colspan="1" id="message" presentation="AREA" validation="NONE">
+             <reference type="constant" encoding="HTML_JAVA_STRING"></reference>
+          </entryWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.inline_message" path="expressions/messages" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.inline_message">>
+      <template>Bm.util.inlineMessage('${div}', '${message}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.show_this_inline_message_in_the</label>
+          <choiceWidget col="1" colspan="1" id="div" row="0" rowspan="1" type="WIDGET" filter="DIVIDER">
+            <selection type="widget"></selection>
+          </choiceWidget>
+          <label row="0" col="2" rowspan="1" colspan="1">$Scripting.label.divider</label>
+          <entryWidget row="1" col="0" rowspan="1" colspan="3" id="message" presentation="AREA" validation="NONE">
+             <reference type="constant" encoding="HTML_JAVA_STRING"></reference>
+          </entryWidget>
+        </widgets>
+    </grid>
+  </item>
+
+</palette>

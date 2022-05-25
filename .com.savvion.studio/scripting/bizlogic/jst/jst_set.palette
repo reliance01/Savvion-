@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.set_methods" path="jst/set" icon="fldr_obj.gif"/>
+
+  <item label="setDueDate()" path="jst/set" icon="template.gif">
+    <grid content="EXPRESSION" description="JSTools: setDueDate()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: setDueDate()</label>
+        <label row="1" col="0">$Scripting.label.due_date</label>
+        <list row="1" col="1" id="value" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="MUTABLE_VALUE_EXPRESSION" description="$Scripting.description.dataslot_value">
+            <widgets>
+              <label col="0">$Scripting.label._dataslot_</label>
+              <choiceWidget col="1" id="dataslot" type="DATASLOT" fill="false">
+                <selection type="DATASLOT"/>
+              </choiceWidget>
+            </widgets>
+            <template>"@${dataslot}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.setDueDate(gel.toCalendar(gel.getValue(${value})));</template>
+    </grid>
+  </item>
+
+  <item label="setInstruction()" path="jst/set" icon="template.gif">
+    <grid content="EXPRESSION" description="JSTools: setInstruction()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: setInstruction()</label>
+        <label row="1" col="0">$Scripting.label.instruction</label>
+        <list row="1" col="1" id="value" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="Constant">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value" presentation="AREA">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.setInstruction(""+gel.getValue(${value}));</template>
+    </grid>
+  </item>
+
+  <item label="setPerformer()" path="jst/set" icon="template.gif">
+    <grid content="EXPRESSION" description="JSTools: setPerformer()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: setPerformer()</label>
+        <label row="1" col="0">$Scripting.label.performer</label>
+        <list row="1" col="1" id="value" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.setPerformer(""+gel.getValue(${value}));</template>
+    </grid>
+  </item>
+
+  <item label="setPriority()" path="jst/set" icon="template.gif">
+    <grid content="EXPRESSION" description="JSTools: setPriority()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: setPriority()</label>
+        <label row="1" col="0">$Scripting.label.priority</label>
+        <list row="1" col="1" id="value" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.setPriority(""+gel.getValue(${value}));</template>
+    </grid>
+  </item>
+
+    <item label="setXPathValue()" path="jst/set" icon="template.gif">
+    <grid content="EXPRESSION" description="JSTools: setXPathValue()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: setXPathValue()</label>
+        <label row="1" col="0">$Scripting.label.dataslot_</label>
+        <choiceWidget row="1" col="1" id="dataslotName" type="DATASLOT" fill="false" filter="XML">
+          <selection type="DATASLOT"/>
+        </choiceWidget>
+        <label row="2" col="0">$Scripting.label.xpath</label>
+        <list row="2" col="1" id="xpath" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+        <label row="3" col="0">$Scripting.label.value</label>
+        <list row="3" col="1" id="value" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.setXPathValue("${dataslotName}", ${xpath}, ""+gel.getValue(${value}));</template>
+    </grid>
+  </item>
+
+</palette>

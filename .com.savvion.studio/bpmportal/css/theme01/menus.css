@@ -1,0 +1,208 @@
+#topPanelContainer {
+	height: 42px;
+	border: 0px solid #C3DAF9;
+	background: #3C7FAF
+}
+
+#tabsContainer {
+	border: 0px solid #C3DAF9;
+	color: #15428B;
+	background: #DEECFD;
+	background: #3C7FAF
+}
+
+#breadcrumb {
+	border: 0px;
+	vertical-align: middle;
+	padding: 4px 5px 4px 5px;
+	font-size: 11px;
+	color: #444444;
+	text-transform: capitalize
+}
+
+a:link, a:visited, a:active {
+	color: #0464BB;
+	text-decoration: none
+}
+
+.cmdLinks {
+	padding: 4px;
+	color: #DEECFD;
+	font: 11px Tahoma, Arial
+}
+
+.cmdLinks a:link, .cmdLinks a:visited, .cmdLinks a:active {
+	color: #DEECFD;
+	text-decoration: none
+}
+
+.x-tab-panel-body .x-panel-body {
+	padding: 0px;
+	background: #DEECFD;
+	border: 1px solid #8DB2E3;
+	border-top: 0px
+}
+
+.x-btn-text { color: #15428B }
+
+.x-tab-panel-header {
+	border: 0px solid #8DB2E3;
+	padding-bottom: 0px
+}
+
+.x-tab-panel-footer {
+	border: 1px solid #8DB2E3;
+	padding-top: 2px
+}
+
+.x-tab-panel-body {
+	border: 0px solid #8DB2E3;
+	background: #FFFFFF
+}
+
+ul.x-tab-strip-top {
+	width: auto;
+}
+
+.x-grid3-cell-inner {
+	white-space:normal;
+}
+
+.homeIcon {
+	 background-image: url(images/home.png) !important
+}
+
+.mgmtIcon {
+	 background-image: url(images/pie-chart.png) !important
+}
+
+.adminIcon {
+	 background-image: url(images/gear.png) !important
+}
+
+.supportIcon {
+	background: url(images/icon_support.png) no-repeat scroll top left !important;
+	padding-left: 18px;
+	padding-bottom:3px;
+	position:relative;
+}
+
+.helpIcon {
+	background: url(images/icon_help.png) no-repeat scroll top left !important;
+	padding-left: 18px;
+	padding-bottom:3px;
+	position:relative;
+}
+
+.aboutIcon {
+	background: url(images/icon_info.png) no-repeat scroll top left !important;
+	padding-left: 18px;
+	padding-bottom:3px;
+	position:relative;
+}
+
+.logoutIcon {
+	background: url(images/icon_logout.png) no-repeat scroll top left !important;
+	padding-left: 18px;
+	padding-bottom:3px;
+	position:relative;
+}
+
+.logoImage {
+	background: transparent url(images/bpmportal_logo-lgt.png) no-repeat scroll top left;
+	float: left;
+	width: 302px;
+	height: 38px;
+	position: relative;
+	padding-top: 2px
+}
+
+.pamLogoImage {
+	background: transparent url(images/pamportall_logo.png) no-repeat scroll top left;
+	float: left;
+	width: 302px;
+	height: 38px;
+	position: relative;
+	padding-top: 2px
+}
+
+.makeAvailableIcon {
+	background: transparent url(images/available_asign_colhdr.gif) no-repeat scroll top left;
+	padding-left: 16px
+}
+
+.collaborativeIcon {
+	background: transparent url(images/icon_collaborative_task.gif) no-repeat scroll top left;
+	padding-left: 16px
+}
+
+.infoIcon {
+	background: transparent url(images/icon_info_small.gif) no-repeat scroll top left;
+	padding-left: 18px;
+	height: 20px
+}
+
+.bcSepIcon {
+	 background: url(images/c-sep.gif) no-repeat scroll 3px center !important;
+	 padding-left: 11px;
+	 vertical-align: middle;
+    height: 18px
+}
+
+.cmdSepPlainIcon {
+	 background: url(../../javascript/ext/resources/images/default/grid/grid-split.gif) no-repeat scroll 3px center !important;
+	 padding-left: 11px;
+	 vertical-align: middle;
+    height: 18px
+}
+
+.cmdSepIcon {
+	 background: url(../../javascript/ext/resources/images/default/grid/grid-blue-split.gif) no-repeat scroll 3px center !important;
+	 padding-left: 11px;
+	 vertical-align: middle;
+    height: 18px
+}
+.printIcon {
+	 background: url(images/icon_print.gif) no-repeat scroll left center !important;
+	 display:block;
+	 padding-left:20px;
+	 padding-right:5px;
+	 vertical-align: middle;
+	 text-decoration: none;
+    height: 18px;
+	 font-size: 11px;
+}
+.pagePrev {
+	background: url(../../javascript/ext/resources/images/default/grid/page-prev.gif) no-repeat scroll center left;
+	padding-left:8px;
+	vertical-align: middle;
+	padding-bottom:3px;
+}
+
+.pagePrevDis {
+	background:url(../../javascript/ext/resources/images/default/grid/page-prev-disabled.gif) no-repeat scroll center left;
+	padding-left:8px;
+	vertical-align: middle;
+	padding-bottom:3px;
+}
+
+.pageNext {
+	background:url(../../javascript/ext/resources/images/default/grid/page-next.gif) no-repeat scroll center right;
+	padding-left:12px;
+	vertical-align: middle;
+	padding-bottom:3px;
+}
+
+.pageNextDis {
+	background:url(../../javascript/ext/resources/images/default/grid/page-next-disabled.gif) no-repeat scroll center right;
+	padding-right:12px;
+	vertical-align: middle;
+	padding-bottom:3px;
+}
+
+.welcomeTitle { color: #D6D6D6 }
+
+a:hover, .cmdLinks a:hover {
+	color: #1C417C;
+	text-decoration: underline
+}

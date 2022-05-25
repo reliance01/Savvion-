@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+
+  <item label="$Scripting.item.date_only" path="value_expressions/datetime" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.date_only">
+      <label col="0">Scripting.label._date</label>
+      <widgets>
+        <label col="0">$Scripting.label._date_time_</label>
+        <datetime col="1" id="value" presentation="DATE_ONLY">
+          <reference type="CONSTANT">1325404800000</reference>
+        </datetime>
+      </widgets>
+      <template>"${value}"</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.date_time" path="value_expressions/datetime" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.date_time">
+      <label col="0">$Scripting.label.date_time</label>
+      <widgets>
+        <label col="0">$Scripting.label._date_time_</label>
+        <datetime col="1" id="value" presentation="DATE_TIME">
+          <reference type="CONSTANT">1325404800000</reference>
+        </datetime>
+      </widgets>
+      <template>"${value}"</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.time_interval" path="value_expressions/datetime" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.time_interval">
+      <label col="0">$Scripting.label.time_interval</label>
+      <widgets>
+        <label col="0">$Scripting.label._time_interval_</label>
+        <interval col="1" id="value">
+          <reference type="CONSTANT">0</reference>
+        </interval>
+      </widgets>
+      <template>"${value}"</template>
+    </grid>
+  </item>
+
+  <category label="$Scripting.category.date_time" path="value_expressions/datetime" icon="fldr_obj.gif"/>
+
+</palette>
+

@@ -1,0 +1,9 @@
+adapter-configurator=com.savvion.sbm.adapters.excel.ExcelAdapter2007Configurator
+map-configurator=com.savvion.sbm.adapters.framework.TabbedMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.SimpleMapper
+AdapterCategory=ExcelAdapters
+AdapterName=GenericExcelAdapter
+adapter-class=com.savvion.sbm.adapters.excel.ExcelAdapter2007
+log-level=10
+icon=chart.png
+adaplet=false

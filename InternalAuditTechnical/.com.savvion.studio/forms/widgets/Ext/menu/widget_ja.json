@@ -1,0 +1,47 @@
+ {
+    'name': 'Menu',
+	'label': '\ufeff\u30e1\u30cb\u30e5\u30fc',
+    'type': 'ext',
+    'version': '.9.6.3',
+    'jmakiVersion': '.9.6.3',    
+    'image': 'images/ext-menu.jpg',
+    'description': '\u30e1\u30cb\u30e5\u30fc\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8\u3067\u3059\u3002',
+    'category': 'Menu',
+    'value':{'type' : 'OBJECT',
+                'defaultValue':
+                {'menu' : [
+                 {'label': '\u898b\u51fa\u3057',
+              	'menu': [
+             	  {'label':'\u9805\u76ee', 'href':'http://www.sun.com'},
+                  {'label':'\u9805\u76ee2', 'href':'http://www.jmaki.com'}
+               	 ]},
+		         {'label': '\u4ed6\u306e\u898b\u51fa\u3057',
+                  'menu': [
+		          {'label':'\u4ed6\u306e\u9805\u76ee', 'href':'http://www.java.sun.com'},
+                  {'label':'\u4ed6\u306e\u9805\u76ee2',  action:{topic: '/mytopic', message: '2.jsp'}}
+               	 ]}
+            ]
+        }
+    },
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'libs' : [
+                   '../resources/libs/adapter/ext/ext-base.js',
+                   '../resources/libs/ext-all.js'
+               ],
+              'styles' : [
+                 '../resources/styles/css/ext-all.css',                 
+                 '../resources/styles/css/ytheme-aero.css'
+               ],
+              'resources' : [
+                '../resources/styles/images'
+               ]
+        }
+    },
+     'topicInfo': {
+       'type': 'publish',
+       'topicName': '/Ext/menu/onclick',
+       'description':'\u30a2\u30af\u30c6\u30a3\u30d6\u30d7\u30ed\u30d1\u30c6\u30a3\u304c\u4f7f\u7528\u3055\u308c\u3066\u3044\u308b\u5834\u5408\u3001onclick\u30a4\u30d9\u30f3\u30c8\u3067\u306f\u30e1\u30cb\u30e5\u30fc\u30a2\u30a4\u30c6\u30e0\u306e\u5bfe\u5fdc\u3059\u308b\u6587\u5b57\u5217\u3092\u6e21\u3057\u3001/jmaki/menu\u306b\u30c8\u30d4\u30c3\u30af\u3092\u767a\u884c\u3057\u307e\u3059\u3002href\u30d7\u30ed\u30d1\u30c6\u30a3\u304c\u4f7f\u7528\u3055\u308c\u3066\u3044\u308b\u5834\u5408\u3001\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\u306f\u5bfe\u5fdc\u3059\u308b\u6587\u5b57\u5217\u306b\u3088\u3063\u3066\u8868\u3055\u308c\u305fURL\u306b\u884c\u304d\u307e\u3059\u3002'
+    }  
+  }

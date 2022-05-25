@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Process_Testing">
+        <wb-resource deploy-path="/" source-path="/Process_Testing/src/java"/>
+        <wb-resource deploy-path="/" source-path="/Process_Testing_V2/src/java"/>
+    </wb-module>
+</project-modules>

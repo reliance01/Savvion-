@@ -1,0 +1,12 @@
+.combobox {
+    color: #333; 
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:93%; 
+    margin-top:3px; 
+    padding-left:2px; 
+    vertical-align:top; 
+    border:1px solid #999999;
+}
+
+.combobox:hover {    border:1px solid #596486;z-index:101}
+.combobox:focus {    border:1px solid #48526a} 

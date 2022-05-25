@@ -1,0 +1,32 @@
+{
+    'name': 'Calendar',
+    'type': 'yahoo',
+    'version': '1.0',
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-calendar.jpg',
+    'description': 'A calendar.',
+    'category': 'Calendar',
+    'args':  [ 
+         {'topic':{'type':'STRING', 'defaultValue': '/yahoo/calendar', 'description': 'The topic published to'}}
+     ],
+    'config' : {
+        'type' :
+        { 'id' : 'yahoo.calendar', 
+          'libs' : [
+          '../resources/libs/yahoo/v2.4.0/yahoo-dom-event/yahoo-dom-event.js',
+          '../resources/libs/yahoo/v2.4.0/calendar/calendar-min.js'
+          ],
+          'styles' : [
+          '../resources/libs/yahoo/v2.4.0/calendar/assets/skins/sam/calendar.css'
+          ],
+          'resources': [
+          '../resources/libs/yahoo/v2.4.0/assets',
+          '../resources/libs/yahoo/v2.4.0/calendar/assets']  
+        }
+    },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/yahoo/calendar/onSelect'],
+       'description':'onSelect publishes to its topicName when a date is selected. It publishes an object with id and value. The value is a JavaScript Date Object.'
+    }    
+}

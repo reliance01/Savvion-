@@ -1,0 +1,36 @@
+{
+    'name': 'TextArea',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/textarea.jpg',
+    'description': 'Savvion textarea widget.',
+    'category': 'Text Area',
+    'args': [
+		{'wrap':{'type':'STRING', 'defaultValue': 'soft', 
+                  'values': [{'name':'soft', 'value':'soft'},{'name':'hard', 'value':'hard'},{'name':'off', 'value':'off'}]}},
+		{'rows':{'type':'INTEGER', 'defaultValue': '5'}},
+		{'cols':{'type':'INTEGER', 'defaultValue': '25'}},
+		{'readonly':{'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'disabled':{'type':'BOOLEAN', 'defaultValue': 'flase'}}
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/textarea/onChange',
+					'/sbm/textarea/onKeyPress']
+    },
+    'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'validate', 
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'minChars', 'maxChars', 'textareaCounterType', 'textareaHint', 'textareaValidationMsg', 'textAreaValidationMsgMin', 'textAreaValidationMsgMax']
+        },
+    ]
+}

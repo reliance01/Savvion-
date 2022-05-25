@@ -1,0 +1,7 @@
+#Tue Apr 12 10:16:29 IST 2016
+module.name=CommonResources
+adapter.type=BIZLOGIC
+module.version=8
+module.type=com.savvion.studio.designer.module.common.resources
+adapter.version=8.1
+module.id=1f173512-d0b3-4114-a160-a0217f1ae747

@@ -1,0 +1,16 @@
+{
+    'name': 'GoogleTalk',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/googletalk.png',
+    'description': 'GoogleTalk widget.',
+    'category': 'googlemaps',
+    'args': [
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }
+}

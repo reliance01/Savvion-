@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Form SYSTEM "form.dtd">
+<Form tstamp="1478347482076" version="9.0">
+  <Dataslot Name="TransactionId" category="User" name="TransactionId" type="STRING" webbpaID="1468574521564">
+    <Label>TransactionId:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="TransactionId:" password="false" required="false" size="20" type="text">
+      <Label>TransactionId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProposalID" category="User" name="ProposalID" type="STRING" webbpaID="1468574521565">
+    <Label>ProposalID:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ProposalID:" password="false" required="false" size="20" type="text">
+      <Label>ProposalID:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RequestDate" category="User" name="RequestDate" type="STRING" webbpaID="1468574521566">
+    <Label>RequestDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RequestDate:" password="false" required="false" size="20" type="text">
+      <Label>RequestDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Product" category="User" name="Product" type="STRING" webbpaID="1468574521567">
+    <Label>Product:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Product:" password="false" required="false" size="20" type="text">
+      <Label>Product:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ClassName" category="User" name="ClassName" type="STRING" webbpaID="1468574521568">
+    <Label>Class:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Class:" password="false" required="false" size="20" type="text">
+      <Label>Class:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InsuredName" category="User" name="InsuredName" type="STRING" webbpaID="1468574521569">
+    <Label>InsuredName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InsuredName:" password="false" required="false" size="20" type="text">
+      <Label>InsuredName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RefundType" category="User" name="RefundType" type="STRING" webbpaID="1468574521570">
+    <Label>RefundType:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RefundType:" password="false" required="false" size="20" type="text">
+      <Label>RefundType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RefundAmount" category="User" name="RefundAmount" type="STRING" webbpaID="1468574521571">
+    <Label>RefundAmount:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RefundAmount:" password="false" required="false" size="20" type="text">
+      <Label>RefundAmount:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InstrumentFrom" category="User" name="InstrumentFrom" type="STRING" webbpaID="1468574521572">
+    <Label>InstrumentFrom:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InstrumentFrom:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentFrom:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PayTo" category="User" name="PayTo" type="STRING" webbpaID="1468574521573">
+    <Label>PayTo:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PayTo:" password="false" required="false" size="20" type="text">
+      <Label>PayTo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PrintLocation" category="User" name="PrintLocation" type="STRING" webbpaID="1468574521574">
+    <Label>PrintLocation:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PrintLocation:" password="false" required="false" size="20" type="text">
+      <Label>PrintLocation:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Branch" category="User" name="Branch" type="STRING" webbpaID="1468574521575">
+    <Label>Branch:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Branch:" password="false" required="false" size="20" type="text">
+      <Label>Branch:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RequestedBy" category="User" name="RequestedBy" type="STRING" webbpaID="1468574521576">
+    <Label>RequestedBy:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RequestedBy:" password="false" required="false" size="20" type="text">
+      <Label>RequestedBy:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Approver" category="User" name="Approver" type="STRING" webbpaID="1468574521577">
+    <Label>Approver:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Approver:" password="false" required="false" size="20" type="text">
+      <Label>Approver:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Remarks" category="User" name="Remarks" type="STRING" webbpaID="1468574521578">
+    <Label>Remarks:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Remarks:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="ApproverStatus" category="User" name="ApproverStatus" type="STRING" webbpaID="1468574521579">
+    <Label>ApproverStatus:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ApproverStatus:" required="false" type="combo">
+      <Label>ApproverStatus:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PolicyNo" category="User" name="PolicyNo" type="STRING" webbpaID="1468574521580">
+    <Label>PolicyNo:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PolicyNo:" password="false" required="false" size="20" type="text">
+      <Label>PolicyNo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InstrumentId" category="User" name="InstrumentId" type="STRING" webbpaID="1468574521581">
+    <Label>InstrumentId:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InstrumentId:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PayeeName" category="User" name="PayeeName" type="STRING" webbpaID="1468574521582">
+    <Label>PayeeName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PayeeName:" password="false" required="false" size="20" type="text">
+      <Label>PayeeName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <DataSources/>
+  <Validation/>
+  <head>
+    <link rel="stylesheet" type="bizsolo"/>
+  </head>
+  <body class="apbody">
+    <section editable="true" height="0" type="header" visible="true">
+      <fields>
+        <field name="instructions">true</field>
+        <field name="dueDate">true</field>
+        <field name="priority">true</field>
+        <field name="startDate">true</field>
+      </fields>
+    </section>
+    <table align="center" cellpadding="0" cellspacing="0" id="table1" width="100%">
+      <tbody>
+        <tr>
+          <td class="apbuttondarkbg" id="" width="64%">
+            <div align="center">
+              <control dateOnly="false" format="complete" id="button_complete" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+              <control dateOnly="false" format="save" id="button_save" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+              <control dateOnly="false" format="reset" id="button_reset" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+              <control dateOnly="false" format="cancel" id="button_cancel" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+              <control args="{'type':'text', 'size':106, 'maxlength':256, 'readonly':false, 'visible':true, 'disabled':false, 'validationType':'none', 'validation':{}, 'toolTip':'', 'tabOrder':'0'}" dateOnly="false" editable="true" height="18" id="bizsite_assigneeName" image="forms/widgets/sbm/textfield/images/textfield.png" password="false" required="false" tabindex="0" type="sbm.textfield" version="1" visible="true" widgetSource="{type:'STATIC'}" widgetTarget="{type:'DATASLOT', dataSlotName:'', dataSlotType:''}" widgetType="advanced" width="954">
+                <widgetjson>{"adapletDataSource":{"selected":false},"bindingController":{"target":"","enableSystemDataslotAsSource":true,"enableTargetBinding":true,"tType":"","enableDataSlotBinding":true,"enableServiceBinding":true},"topicInfo":{"type":"publish","topicName":["/sbm/textfield/onChange","/sbm/textfield/onClick","/sbm/textfield/onFocus","/sbm/textfield/onBlur","/sbm/textfield/onKeyPress","/sbm/textfield/onKeyUp","/sbm/textfield/onMouseDown"]},"serviceURL":{"selected":false},"nameFolder":"textfield","validation":[{"selected":true,"label":"%widget.validation.type.none.label","type":"none","options":[]},{"selected":false,"label":"%widget.validation.type.integer.label","type":"integer","options":["validateOn","isRequired","useCharacterMasking","minValue","maxValue","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.email.label","type":"email","options":["validateOn","isRequired","minChars","maxChars","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.date.label","type":"date","options":["formatDate","validateOn","isRequired","useCharacterMasking","minValue","maxValue","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.time.label","type":"time","options":["formatTime","validateOn","isRequired","useCharacterMasking","minValue","maxValue","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.creditcard.label","type":"credit_card","options":["formatCreditCard","validateOn","isRequired","useCharacterMasking","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.zipcode.label","type":"zip_code","options":["formatZipCode","validateOn","isRequired","useCharacterMasking","pattern","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.ssn.label","type":"social_security_number","options":["validateOn","isRequired","useCharacterMasking","pattern","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.currency.label","type":"currency","options":["formatCurrency","validateOn","isRequired","useCharacterMasking","minValue","maxValue","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.real.label","type":"real","options":["validateOn","isRequired","useCharacterMasking","minValue","maxValue","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.ip.label","type":"ip","options":["formatIP","validateOn","isRequired","useCharacterMasking","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.url.label","type":"url","options":["validateOn","isRequired","minChars","maxChars","requiredValidationMsg","textfieldRequiredMsg"]},{"selected":false,"label":"%widget.validation.type.phonenumber.label","type":"phone_number","options":["formatPhone","validateOn","useCharacterMasking","isRequired","requiredValidationMsg","textfieldRequiredMsg","pattern"]},{"selected":false,"label":"%widget.validation.type.custom.label","type":"custom","options":["validateOn","pattern","isRequired","requiredValidationMsg","textfieldRequiredMsg","customRegularExpression"]}],"args":[{"type":{"values":[{"name":"%widget.arg.text.label","value":"Text"},{"name":"%widget.arg.password.label","value":"Password"}],"label":"%widget.arg.type.label","type":"STRING","defaultValue":"text"}},{"size":{"description":"%widget.arg.size.description.label","label":"%widget.arg.size.label","type":"INTEGER","defaultValue":"106"}},{"maxlength":{"description":"%widget.arg.maxlength.description","label":"%widget.arg.maxlength.label","type":"INTEGER","defaultValue":"256"}},{"readonly":{"label":"%widget.arg.readonly.label","type":"BOOLEAN","defaultValue":"false"}},{"visible":{"label":"%widget.arg.visible.label","type":"BOOLEAN","defaultValue":"true"}},{"disabled":{"label":"%widget.arg.disabled.label","type":"BOOLEAN","defaultValue":"false"}}],"typeFolder":"sbm","image":"images/textfield.png","label":"%widget.textfield.label","type":"sbm","dataslot":{"selected":false},"widgetRenderer":"com.savvion.tools.form.data.widget.renderers.TextFieldRenderer","isMultiSelect":false,"version":"1.0","category":"Text Field","description":"","name":"TextField","value":{"selected":true,"required":"false","type":"STRING","defaultValue":""},"jmakiVersion":"1.0","enableWidgetBinding":true,"previewData":{}}</widgetjson>
+              </control>
+              <a href="javascript://" onclick="setUserControl(document.form.bizsite_assigneeName);searchUser()" target="" title="">
+                <control dateOnly="false" height="32" id="image1" password="false" tabindex="0" type="img" url="@SBM_ROOT/bpmportal/css/apptheme01/images/icon_edit_user_search_single.gif" version="1" widgetType="basic" width="32"/>
+              </a>
+              <control dateOnly="false" format="reassign" id="button_reassign" password="false" tabindex="0" type="button" version="1" widgetType="basic"/>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <section editable="true" height="0" type="footer" visible="true">
+      <fields>
+        <field name="reassign">true</field>
+        <field name="workTime">false</field>
+        <field name="skippable">false</field>
+      </fields>
+    </section>
+  </body>
+</Form>

@@ -1,0 +1,9 @@
+adapter-configurator=com.savvion.sbm.adapters.email.EmailAdapterConfiguratorDialog
+map-configurator=com.savvion.sbm.adapters.framework.GroupMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.GroupMapper
+AdapterCategory=EmailAdapters
+AdapterName=GenericEmailAdapter
+adapter-class=com.savvion.sbm.adapters.email.EmailAdapter
+log-level=10
+icon=mail.png
+adaplet=false

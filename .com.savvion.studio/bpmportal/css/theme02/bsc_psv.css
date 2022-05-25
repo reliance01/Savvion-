@@ -1,0 +1,472 @@
+/* Classes for "Balanced Scorecard" and "Process Status Viewer" screens */
+.BalScorMainTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	background-color: #1385BB;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-left: 2px;
+	color: #FFFFFF;
+	clip:   rect(   );
+	border-top: 1px solid #003399;
+	border-right: 2px solid #003399;
+	border-bottom: 0px solid #003399;
+	border-left: 1px solid #003399;
+}
+.BalScorMainTitleText {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10pt; 
+	color: #FFFFFF; 
+	clip:   rect(   )
+}
+.BalScorSubTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	background-color: #B6E5FF;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-left: 2px;
+	color: #FFFFFF;
+	clip:   rect(   );
+	border-top: 1px solid #003399;
+	border-right: 2px solid #003399;
+	border-bottom: 0px solid #003399;
+	border-left: 1px solid #003399;
+}
+.BalScorSubTitleText {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10pt; 
+	color: #003399; 
+	clip:   rect(   )
+}
+.BalScorTblEmboss {
+	background-color: #FFFFFF;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	border-top: 1px solid #003399;
+	border-right: 2px solid #003399;
+	border-bottom: 2px solid #003399;
+	border-left: 1px solid #003399;
+}
+.NoteButton {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	cursor: hand;
+	cursor: pointer;
+	color: #663300;
+	font-weight: bold;
+	border-top: 1px solid #990000;
+	border-right: 2px solid #990000;
+	border-bottom: 2px solid #990000;
+	border-left: 1px solid #990000;
+}
+.NoteButtonHover {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	cursor: hand;
+	cursor: pointer;
+	color: #CC9900;
+	font-weight: bold;
+	border-top: 1px solid #770000;
+	border-right: 2px solid #770000;
+	border-bottom: 2px solid #770000;
+	border-left: 1px solid #770000;
+}
+.BalScorChildTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #DEF5FF;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-left: 2px;
+	color: #397DB5;
+	clip:   rect(   );
+	border-top: 1px solid #397DB5;
+	border-right: 2px solid #397DB5;
+	border-bottom: 1px solid #397DB5;
+	border-left: 1px solid #397DB5;
+}
+.BalScorChartMainTbl {
+	padding: 6px;
+	border: 4px solid #FFFFFF;
+}
+.BalScorInbetweenTd {
+	border: 4px solid #FFFFFF;
+}
+.BalTargetBlnk {
+	text-align: right;
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+.PsvInbetweenTbl { 
+	border: 4px #FFFFFF solid 
+}
+.PsvTitle { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10pt; 
+	background-color: #F2F2FF; 
+	border: #003399 solid; 
+	padding-top: 4px; 
+	padding-right: 2px; 
+	padding-bottom: 4px; 
+	padding-left: 2px; color: #000066; 
+	clip:   rect(   ); 
+	border-width: 1px 1px 0px
+}
+.PsvTblEmboss { 
+	background-color: #FFFFFF; 
+	border: #003399 solid; 
+	border-width: 1px 1px 0px; 
+	padding-top: 2px; 
+	padding-right: 2px; 
+	padding-bottom: 2px; 
+	padding-left: 2px
+}
+.PsvTitleTxt { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10pt; 
+	color: #000066; 
+	clip: rect( )
+}
+.PsvHdr {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3D7EAF;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #6E7195;
+	border-right-color: #333668;
+	border-bottom-color: #333668;
+	border-left-color: #6E7195;
+}
+.PsvTblBg {
+	background-color: #004F75;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #004F75;
+	border-right-color: #004F75;
+	border-bottom-color: #004F75;
+	border-left-color: #004F75;
+}
+.PsvWorkStepCompleted { 
+	text-align: center ; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #009900; 
+	border-color: #00CC99 #006633 #006633 #00CC99; 
+	border-style: solid; 
+	border-top-width: 2px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 2px; 
+	background-image: url(images/psv_work_step_completed.gif)
+}
+.PsvWorkStepActivated {
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: #FFFFCC;
+	background-image: url(images/psv_work_step_activated.gif);
+	border-top-width: 2px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFF00;
+	border-bottom-color: #FFFF00;
+	border-left-color: #FFFFFF;
+}
+.PsvWorkStepSuspended { 
+	text-align: center ; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #FF9933; 
+	border-color: #FFDBA4 #C67700 #C67700 #FFDBA4; 
+	border-style: solid; 
+	border-top-width: 2px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 2px; 
+	background-image: url(images/psv_work_step_suspended.gif)
+}
+.PsvWorkStepInactive { 
+	text-align: center ; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #CCCCCC; 
+	border-color: #efefef #999999 #999999 #efefef; 
+	border-style: solid; 
+	border-top-width: 2px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 2px; 
+	background-image: url(images/psv_work_step_inactive.gif)
+}
+.PsvWorkStepSkipped { 
+	text-align: center; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #FFFFFF; 
+	border-color: #efefef #999999 #999999 #efefef; 
+	border-style: solid; 
+	border-top-width: 2px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 2px; 
+}
+.PsvWorkStepLghtBg {
+	background-color: #efefef;
+	text-align: center;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #333668;
+	border-right-color: #333668;
+	border-bottom-color: #333668;
+	border-left-color: #333668;
+}
+.PsvBlnkFieldCntr {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 1px solid #333668;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.PsvWorkStepActivatedTr { 
+	text-align: center ; 
+	background-color: #FF0000; 
+	background-image: url(images/psv_work_step_activated.gif)
+}
+.PsvWorkStepSaved {
+ text-align: center;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9pt;
+ font-weight: bold;
+ color: #000000;
+ background-color: #FF0000;
+ border: 1px solid #990000;
+}
+.PsvWorkStepNotSaved {
+ text-align: center;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9pt;
+ font-weight: bold;
+ color: #000000;
+ background-color: #808080;
+ border: 1px solid #666666;
+}
+.PsvWorkStepAverage  {
+ text-align: center;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9pt;
+ font-weight: bold;
+ color: #000000;
+ background-color: #FFFFFF;
+ border: 1px solid #CCCCCC;
+}
+.PsvWorkStepLessAverage  {
+ text-align: center;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9pt;
+ font-weight: bold;
+ color: #000000;
+ background-color: #0000FF;
+ border: 1px solid #000099;
+}
+.PsvWorkStepCompletedNote { 
+	text-align: center ; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #009900; 
+	border-color: #00CC99 #006633 #006633 #00CC99; 
+	border-style: solid; 
+	border-top-width: 2px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 2px; 
+	background-image: url(images/psv_work_step_completed_note.gif)
+}
+.PsvWorkStepActivatedNote {
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: #FFFFCC;
+	background-image: url(images/psv_work_step_activated_note.gif);
+	border-top-width: 2px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFF00;
+	border-bottom-color: #FFFF00;
+	border-left-color: #FFFFFF;
+}
+.PsvWorkStepSuspendedNote { 
+	text-align: center ; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #FF9933; 
+	border-color: #FFDBA4 #C67700 #C67700 #FFDBA4; 
+	border-style: solid; 
+	border-top-width: 2px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 2px; 
+	background-image: url(images/psv_work_step_suspended_note.gif)
+}
+.PsvWorkStepInactiveNote { 
+	text-align: center ; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #CCCCCC; 
+	border-color: #efefef #999999 #999999 #efefef; 
+	border-style: solid; 
+	border-top-width: 2px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 2px; 
+	background-image: url(images/psv_work_step_inactive_note.gif)
+}
+.PsvWorkStepNoteBorder {
+	border: 1px solid #000000;
+}
+.PsvTitleAlt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #F4F4F5;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-left: 2px;
+	color: #000066;
+	clip:   rect(   );
+	border-top: 1px solid #003399;
+	border-right: 1px solid #003399;
+	border-bottom: 0px solid #003399;
+	border-left: 1px solid #003399;
+}
+.PsvTitleTxtAlt { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; color: #000066; 
+	clip: rect( )
+}
+A.PsvTitleLnk {  
+	font-size: 8pt; color: #0378D2; 
+	text-decoration: none; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica, sans-serif
+}
+A.PsvTitleLnk:hover {  
+	color: #0378D2; 
+	text-decoration: underline
+}
+A.PsvTitleLnk:visited { 
+}
+.PsvTblInBg{  
+	background-color: #BCD2DA
+}
+.CnslInbetweenTbl {  
+	border: 4px #FFFFFF solid
+}
+.CnslCompTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 8pt;
+	background-color: #DEF7FF;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-left: 2px;
+	color: #397DB5;
+	clip:   rect(   );
+	text-align: center;
+	border-top: 1px solid #397DB5;
+	border-right: 2px solid #397DB5;
+	border-bottom: 1px solid #397DB5;
+	border-left: 1px solid #397DB5;
+}
+.CnslMainDataTbl {  
+	border: 1px #000099 solid; 
+	background-color: #FFFFFF
+}
+.CnslMainDataTd {  
+	background-color: #FFFFFF; 
+	vertical-align: text-top; 
+	padding-top: 4px; 
+	padding-right: 4px; 
+	padding-bottom: 4px; 
+	padding-left: 4px
+}
+.CnslCompTblEmboss {
+	background-color: #FFFFFF;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	border-top: 0px solid #397DB5;
+	border-right: 2px solid #397DB5;
+	border-bottom: 2px solid #397DB5;
+	border-left: 1px solid #397DB5;
+}
+.CnslInbetweenTd {  
+	text-align: center; 
+	vertical-align: top
+}

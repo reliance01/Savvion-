@@ -1,0 +1,147 @@
+<!-- 
+	This xml files defines the extensible widgets to be used in form editor.
+	All child elements under <fewidgets> define the path to the widget resource directory.
+	
+	Below lists the supported attributes
+	
+	1. icon (optional)
+		This optional attribute defines the image to be used in the task pane.  If not defined, a generic image will be used.
+		The icon should be placed in the following directory, e.g. sbm\textfield\images\field_text.png
+
+	2. enableDataSlotBinding (optional)
+		This optional attribute determines if a widget can be bound to a data slot.  The default value is true if not defined.
+
+	3. enableServiceBinding (optional)
+		This optional attribute determines if a widget can be bound to a service.  The default value is true if not defined.
+	
+	4. enableTargetBinding (optional)
+		This optional attribute determines if a widget can be bound to a target data slot.  The default value is true if not defined.
+		
+	5. enableSystemDataslotAsSource (optional)
+		This optional attribute determines if a System dataslot can be used as a dataslot source.  The default value is true if not defined.
+		
+	6. The widget text value contains a JSON object that describes the supported source and target mappings for a widget.  The JSON object follows the following BNF notation.
+	
+		widget supported data binding 	::= "{ sourceTargetMapping : [" <binding_combo>* "]}"
+		binding_combo 					::= "{" <data_source> <data_target> "}" [","]
+		data_source 					::= "'source':" <data_type> ","
+		data_target 					::= "'target':" <data_type_list>
+		data_type_list 					::= "[" [<data_type> [","] ]* "]"
+		data_type ::= 'NULL' | 'BOOLEAN' | 'DATETIME' | 'DOCUMENT' | 'LIST' | 'MAP' | 'INTEGER' | 'LONG' | 'DOUBLE' | 'DECIMAL' | 'NUMBER' | 'STRING' | 'URL' | 'XML'
+	
+		Example:
+			
+			The definition below defines the possible databinding for a date time control.  If the source is not bound to a "NULL" datatype then the supported targets are "DATETIME" and "STRING"
+			Similarly if the source datatype is "STRING" then the target can only be "STRING".
+			
+				<datetime icon="field_calendar.png">
+					{"sourceTargetMapping": [
+												{ "source":"NULL" , "target":["DATETIME", "STRING"]},
+												{ "source":"DATETIME" , "target":["DATETIME"]},
+												{ "source":"STRING" , "target":["STRING"]}
+											]
+					}		
+				</datetime>
+	
+	author: Son Ngo
+ -->
+<fewidgets>
+	<sbm>
+		<textfield icon="textfield_icon.png">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["INTEGER", "LONG","DOUBLE","DECIMAL","NUMBER","STRING","URL"]},
+										{ "source":"INTEGER" , "target":["INTEGER"]},
+										{ "source":"LONG" , "target":["LONG"]},
+										{ "source":"DOUBLE" , "target":["DOUBLE"]},
+										{ "source":"DECIMAL" , "target":["DECIMAL"]},
+										{ "source":"NUMBER" , "target":["NUMBER"]},
+										{ "source":"STRING" , "target":["STRING"]},
+										{ "source":"URL" , "target":["URL"]}
+									]
+			}
+		</textfield>
+		<textarea icon="textarea_icon.png">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["INTEGER", "LONG","DOUBLE","DECIMAL","NUMBER","STRING","URL"]},
+										{ "source":"INTEGER" , "target":["INTEGER"]},
+										{ "source":"LONG" , "target":["LONG"]},
+										{ "source":"DOUBLE" , "target":["DOUBLE"]},
+										{ "source":"DECIMAL" , "target":["DOUBLE"]},
+										{ "source":"NUMBER" , "target":["NUMBER"]},
+										{ "source":"STRING" , "target":["STRING"]},
+										{ "source":"URL" , "target":["URL"]}
+									]
+			}		
+		</textarea>
+		<combobox icon="combobox_icon.png" isMultiSelectControl="true" enableSystemDataslotAsSource="false">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["LIST", "STRING"]},
+										{ "source":"LIST" , "target":["LIST", "STRING"]},
+										{ "source":"MAP" , "target":["LIST", "STRING"]},
+										{ "source":"STRING" , "target":["LIST", "STRING"]}
+									]
+			}		
+		</combobox>
+		<checkbox icon="checkbox_icon.png" isMultiSelectControl="true" enableSystemDataslotAsSource="false">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["LIST"]},
+										{ "source":"LIST" , "target":["LIST"] },
+										{ "source":"MAP" , "target":["LIST", "MAP"] },
+										{ "source":"STRING" , "target":["LIST"] },
+										{ "source":"BOOLEAN" , "target":["BOOLEAN"] }
+									]
+			}
+		</checkbox>
+		<radio icon="radio_icon.png" isMultiSelectControl="true" enableSystemDataslotAsSource="false">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["LIST", "STRING"]},
+										{ "source":"LIST" , "target":["LIST", "STRING"]},
+										{ "source":"MAP" , "target":["LIST", "STRING"]},
+										{ "source":"STRING" , "target":["LIST", "STRING"]}
+									]
+			}		
+		</radio>
+		<list icon="list_icon.png" isMultiSelectControl="true" enableSystemDataslotAsSource="false">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["LIST"]},
+										{ "source":"LIST" , "target":["LIST"]},
+										{ "source":"MAP" , "target":["LIST"]},
+										{ "source":"STRING" , "target":["LIST"]}
+									]
+			}		
+		</list>		
+    </sbm>	
+	<form>
+		<tree icon="field_tree.png" enableDataSlotBinding="false" enableTargetBinding="false" />	
+		<grid icon="table_24.png" enableDataSlotBinding="false" enableTargetBinding="false"/>		
+		<menu icon="field_horizontal_menu.png" enableDataSlotBinding="false" enableTargetBinding="false"/>
+		<slider icon="field_slider.png" enableDataSlotBinding="true">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["INTEGER", "LONG", "DOUBLE", "DECIMAL"]},
+										{ "source":"INTEGER" , "target":["INTEGER", "NUMBER"]},
+										{ "source":"LONG" , "target":["LONG", "NUMBER"]},
+										{ "source":"DOUBLE" , "target":["DOUBLE", "NUMBER"]},
+										{ "source":"NUMBER" , "target":["NUMBER"]},
+										{ "source":"DECIMAL" , "target":["DECIMAL", "NUMBER"]}
+									]
+			}		
+		</slider>	
+		<datetime icon="field_calendar.png">
+			{"sourceTargetMapping": [
+										{ "source":"NULL" , "target":["DATETIME", "STRING"]},
+										{ "source":"DATETIME" , "target":["DATETIME"]},
+										{ "source":"STRING" , "target":["STRING"]}
+									]
+			}		
+		</datetime>
+		<button icon="button_icon.png"/>	
+	</form>
+<!--
+      <gadgets>
+      <googlemaps icon="googlemapssmall.png" enableServiceBinding="false" enableDataSlotBinding="false" enableTargetBinding="false" />
+      <outlook icon="outlooksmall.png" enableServiceBinding="false" enableDataSlotBinding="false" enableTargetBinding="false" />
+      <googletalk icon="googletalksmall.png" enableServiceBinding="false" enableDataSlotBinding="false" enableTargetBinding="false" />
+      <youtube icon="youtubesmall.png" enableServiceBinding="false" enableDataSlotBinding="false" enableTargetBinding="false" />
+      </gadgets>
+-->	
+</fewidgets>

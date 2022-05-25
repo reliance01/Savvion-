@@ -1,0 +1,363 @@
+.ApBody {
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN: 6px
+}
+
+.ApSegDataLabel {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; WIDTH: 15%; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApSegDataVal {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; WIDTH: 85%; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApSegGenLabel {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApSegGenData {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 0px solid; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; BORDER-BOTTOM: #ffffff 2px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.ApRequired {
+	FONT-SIZE: 6pt; COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.ApSegTblInBg{  background-color: #BCD2DA}
+.ApSegTitle { font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 10pt; background-color: #E8F8FF; border: #003399 solid; padding-top: 4px; padding-right: 2px; padding-bottom: 4px; padding-left: 2px; color: #000066; background-image:  url(images/seg_title.gif); border-width: 1px 2px 1px 1px; clip:   rect(   )}
+.ApSegLineBg {  background-color: #004E9B; height: 2px}
+.ApSegTblBgPad {  padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; background-color: #EEEEEE; border: 1px #999999 solid}
+.ApSegDivPad {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	position:absolute;
+	visibility: visible;
+	SCROLLBAR-FACE-COLOR: #DEF0FD;
+	SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF;
+	SCROLLBAR-SHADOW-COLOR: #003366;
+	SCROLLBAR-3DLIGHT-COLOR: #0099CC;
+	SCROLLBAR-ARROW-COLOR: #003333;
+	SCROLLBAR-DARKSHADOW-COLOR: #4583D3;
+	SCROLLBAR-BASE-COLOR: #DEF0FD;
+	scrollbar-track-color: #BBE1FB;
+	overflow: scroll;
+	background-color: #E2E2E2;
+	layer-background-color: #B1C0D1;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	border: 1px solid;
+	border-color: #006699 #000064 #000064 #006699;
+	background-image: url(images/seg_div_pad.gif);
+}
+.ApSegDataTbl { }
+.ApSegValCntr {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValLft {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValRt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: right;
+	font-weight: bold;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+
+.ApSegFieldCntr {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegFieldLft {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegFieldRt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: right;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValCntrAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValLftAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	border-top: 0px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ApSegValRtAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: right;
+	font-weight: bold;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSegFieldCntrAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: center;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSegFieldLftAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSegFieldRtAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 0px solid #F8F8F8;
+	border-right: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+.ApSmlTxt {  font-size: 8pt; color: #000000}
+.ApButtonDarkBg { background-color: #C4E9FF; border: 1px #0099CC solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; font-weight: bold; color: #FFFFFF}
+.ApBtnSpace {  padding-right: 4px; padding-left: 4px; color: #CCCCCC}
+.ApScrnButton { font-size: 8pt; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: #006BB9; cursor: hand; background-image:  url(images/scrn_button.gif); font-weight: bold; color: #FFFFFF; border: #002166; border-style: solid; border-top-width: 1px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 1px}
+.ApScrnButtonHover { font-size: 8pt; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: #4897D1; cursor: hand; background-image:  url(images/scrn_button_hover.gif); font-weight: bold; color: #FFFFFF; border: #003366 solid; border-width: 1px 2px 2px 1px}
+A.ApSegTblLnk {  font-size: 8pt; color: #000099; text-decoration: none}
+A.ApSegTblLnk:hover {  font-size: 8pt; text-decoration: underline}
+A.ApSegTblLnk:visited { }
+.ApSegTblBgDark {  background-color: #0054A8}
+.ApSegTableCellPad {  }
+.ApSegColHdrTitle { font-size: 8pt; font-weight: bold; color: #000066; background-color: #FFFFFF; border-color: #99CCFF #000000 #000000 #99CCFF; border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.ApSegColHdrSrNo {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #2E72A9;
+	text-align: center;
+	background-image:  url(images/seg_col_hdr.gif);
+	width: 1%;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #79AFDB;
+	border-right-color: #79AFDB;
+	border-bottom-color: #79AFDB;
+	border-left-color: #79AFDB;
+}
+.ApSegColHdr {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #2E72A9;
+	text-align: center;
+	background-image:  url(images/seg_col_hdr.gif);
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #79AFDB;
+	border-right-color: #79AFDB;
+	border-bottom-color: #79AFDB;
+	border-left-color: #79AFDB;
+}
+.ApSegInBtn {  font-size: 8pt; color: #003366; border: #004182 solid; background-color: #FFFFFF; border-width: 1px 2px 2px 1px; cursor: hand}
+.ApSegInBtnHover {  font-size: 8pt; color: #0066CC; border: #004182 solid; background-color: #F8F8F8; border-width: 1px 2px 2px 1px; cursor: hand}
+
+A.ApCalDayLnk {  font-size: 8pt; color: #000000; text-decoration: none}
+A.ApCalDayLnk:hover {  text-decoration: underline; color: #006699}
+A.ApCalDayLnk:visited { }
+A.ApCalDayLnkSlct {  font-size: 8pt; color: #990000; text-decoration: none; font-weight: bold}
+A.ApCalDayLnkSlct:hover {  text-decoration: underline; color: #FF3300}
+A.ApCalDayLnkSlct:visited { }
+A.ApCalMnthLnk {  font-size: 8pt; color: #FFFFFF; text-decoration: none; text-align: center}
+A.ApCalMnthLnk:hover {  font-size: 8pt; text-decoration: underline; color: #DDF9FF}
+A.ApCalMnthLnk:visited { }
+A.ApCalMnthLnkSlct {  font-size: 8pt; color: #FFFFEC; text-decoration: none; text-align: center}
+A.ApCalMnthLnkSlct:hover {  font-size: 8pt; text-decoration: underline; color: #D9F8FF}
+A.ApCalMnthLnkSlct:visited { }
+A.ApCalYearLnk {  font-size: 12pt; color: #FFFFFF; text-decoration: underline; font-family: Arial, Helvetica, sans-serif; font-weight: bold}
+A.ApCalYearLnk:hover {  font-size: 12pt; text-decoration: none}
+A.ApCalYearLnk:visited { }
+.ApCalDay {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; background-color: #FFFFFF; text-align: right; border-color: #FFFFFF #DFDFDF #DFDFDF #efefef; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.ApCalDaySlct {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; background-color: #efefef; text-align: right; border-color: #FFFFFF #CDCDCD #CDCDCD #FFFFFF; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.ApCalMnthBg {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #005AA6; text-align: center; width: 22px; background-image: url(images/cal_mnth_bg.gif)}
+.ApCalMnthBgSlct {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #0091D8; text-align: center; background-image: url(images/cal_mnth_bg_slct.gif)}
+.ApCalTbl {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8px}
+.ApCalTblBg {  background-color: #004566}
+.ApCalTblLightBg { background-color: #0D2245}
+.ApCalWeek {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; color: #000000; background-color: #CCCCCC; text-align: center; border: #efefef; border-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 1px; background-image: url(images/cal_week.gif)}
+.ApCalYear {  font-size: 12pt; color: #FFFFFF; font-weight: bold; font-family: Arial, Helvetica, sans-serif}
+.ApCalYearBg {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #003F8A; text-align: center; background-image: url(images/cal_year_bg.gif)}
+.ApInfoTbl {  white-space: nowrap}
+.ApInfo {  color: #00287D; font-size: 8pt}
+.ApInptTxt {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #BCC7CF #45617E #243242 #96A7B4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApInptTxtArea {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; BORDER-RIGHT: #CCCCCC 1px solid; BORDER-TOP: #666666 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-BOTTOM: #999999 1px solid; SCROLLBAR-FACE-COLOR: #CCCCCC; SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; SCROLLBAR-SHADOW-COLOR: #003366; SCROLLBAR-3DLIGHT-COLOR: #CCCCCC; SCROLLBAR-ARROW-COLOR: #666666; SCROLLBAR-DARKSHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #666666; scrollbar-track-color: #CCCCCC;; background-color: #FFFFFF}
+.ApInptSelect {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #CCCCCC #666666 #000000 #999999; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApInptRadio { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #BCC7CF #45617E #243242 #96A7B4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApInptChkBox { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; border-color: #BCC7CF #45617E #243242 #96A7B4; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #FFFFFF}
+.ApCalYearCombo {  font-size: 8pt; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: #D9F8FF; border: #FFFFFF; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.ApCalTimeLabel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.ApCalInptTxtHhMm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #efefef;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #efefef;
+	background-color: #D9F8FF;
+
+}
+.ApCalInptSelectAmPm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #efefef;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #efefef;
+	background-color: #D9F8FF;
+
+}
+.ApCalDaySlct {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FDFFDF;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	background-image: url(images/cal_day_slct.gif);
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+
+
+}
+.ApCalDateBgGrp {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #0091D8; text-align: center; background-image: url(images/cal_date_bg_grp.gif)}
+
+.ApCalInptMainBtn {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-color: #FFFFFF;
+
+}
+.ApCalInptMainBtnHover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-color: #efefef;
+
+}
+.ApCalMainBtnBg {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; background-color: #CCCCCC; text-align: center}
+.ApCalDayCurrentDate {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FDFFDF;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	font-weight: bold;
+	color: #996633;
+
+
+
+}
+A.ApCalDayLnkcurrentDate {  font-size: 8pt; color: #000000; text-decoration: none; font-weight: bold}
+A.ApCalDayLnkcurrentDate:hover {  text-decoration: underline; color: #000000}
+A.ApCalDayLnkcurrentDate:visited { }

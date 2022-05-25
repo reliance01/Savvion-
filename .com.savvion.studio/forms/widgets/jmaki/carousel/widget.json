@@ -1,0 +1,58 @@
+{"name": "Carousel",
+         "type": "jmaki",
+         "version" : "1.1",
+         "jmakiVersion" : "1.1",
+         "author" : "Greg Murray",
+         "url" : "https://ajax.dev.java.net",         
+         "image" : "images/jmaki-carousel.jpg",
+         "description": "This widget allows you to scroll through a set of items.",
+         "args": [
+             {"orientation":
+              {"type":"STRING",
+               "description" : "The orientation.",
+               "values": [
+                  {"name" : "Horizontal",   "value" : "horizontal", "description" : "Horizontal orientation."},
+                  {"name" : "Vertical",   "value" : "vertical", "description" : "Vertical orientation."}
+                ],
+                "defaultValue": "horizontal"
+             }
+            },
+            {"scrollCount":{"type":"NUMBER", "defaultValue": 1, "description": "Number of times to scroll."}}
+             ],
+            "value":{"type" : "OBJECT",
+                "defaultValue":
+                [
+        {"title" : "jMaki Project Home", "link" : "https://ajax.dev.java.net", "description" : "Where to go for the latest jMaki." },
+        {"title" : "jMaki Widgets Home", "link" : "https://widgets.dev.java.net", "description" : "The source for the latest jMaki widgets." },
+        {"title" : "jMaki-Charting Home", "link" : "https://jmaki-charting.dev.java.net", "description" : "Enables complex charts rendered on the client in any modern browser." },
+        {"title" : "jMaki-Charting Home", "link" : "https://jmaki.com", "description" : "The place that ties it all together." }
+    ]
+    },
+    "config" : {
+          "type" :
+           { "id" : "jmaki",
+              "themes" : [
+                   {"id" : "kame",
+                    "default" : true,
+                     "style" : "../resources/styles/themes/kame/theme.css"
+                   },
+                   {"id" : "ocean",
+                     "style" : "../resources/styles/themes/ocean/theme.css"
+                   }
+               ],
+               "resources" : [
+                   "../resources/styles"
+               ]
+          }  
+    },
+    "topicInfo": {
+       "defaultPublish" : "/jmaki/carousel",       "defaultSubscribe" : ["/jmaki/carousel"],
+       "description":"on onclick event publish to /jmaki/carousel topic passing the cooresponding string for the menu item if the active property is used.  If the href property is used then navigation goes to the URL represented by that cooresponding string.",
+      "commands" : [
+          {"name" : "clear",
+          "description" : "Clear the carousel"},
+          {"name" : "setItems",
+          "description" : "Set the items in the carousel to the values specific"
+          }
+      ],       "events" : [           {"name" :  "onClick",           "description" : "publish the value of the selected node"}         ]    }
+ }

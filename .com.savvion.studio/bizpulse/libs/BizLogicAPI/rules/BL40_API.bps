@@ -1,0 +1,34 @@
+application BizLogicAPI
+
+using java.lang.*;
+using com.savvion.sbm.util.SBMHomeFactory;
+using com.savvion.sbm.util.BMBootProps;
+using com.savvion.sbm.bizlogic.server.ejb.*;
+using com.savvion.sbm.bizlogic.util.Session;
+
+module BL40_API
+import std::*;
+
+var blServer: ~BLServer = null;
+var session: ~Session = null;
+
+fun getBLServer()  {
+    if (blServer = std::compatibility_support::null) {
+            val factory = ~SBMHomeFactory::self();
+//            val blServerHome = cast(~BLServerHome)factory.lookupHome(~Class::forName("com.savvion.sbm.bizlogic.server.ejb.BLServerHome"));
+            val clsLoader = factory.getClass().getClassLoader();
+            val cls = ~Class::forName("com.savvion.sbm.bizlogic.server.ejb.BLServerHome", true, clsLoader);
+            val blServerHome = cast(~BLServerHome)factory.lookupHome(cls);
+            blServer := blServerHome.create();
+    }
+        return blServer;
+}
+
+fun getBLSession() {
+    if (session = null){
+    if (blServer = null)
+        getBLServer();
+    session := blServer.connect(~BMBootProps::self().getUser(), ~BMBootProps::self().getPassword());
+    }
+    return session;
+}

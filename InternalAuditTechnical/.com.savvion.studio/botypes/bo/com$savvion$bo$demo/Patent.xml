@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_05" class="java.beans.XMLDecoder"> 
+ <object class="com.savvion.sbm.bo.bean.BusinessObjectTypeBean"> 
+  <void property="attributes"> 
+   <void method="put"> 
+    <string>patentId</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>patentId</string> 
+     </void> 
+     <void property="name"> 
+      <string>patentId</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>submitters</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="collection"> 
+      <boolean>true</boolean> 
+     </void> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>submitters</string> 
+     </void> 
+     <void property="name"> 
+      <string>submitters</string> 
+     </void> 
+     <void property="typeCategory"> 
+      <string>demo</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>com.savvion.bo.demo.Submitter</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>accepted</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string>false</string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>accepted</string> 
+     </void> 
+     <void property="name"> 
+      <string>accepted</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.Boolean</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.Boolean</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>patentDate</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string>2009-07-07 17:55:20.999</string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>patentDate</string> 
+     </void> 
+     <void property="name"> 
+      <string>patentDate</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.sql.Timestamp</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.sql.Timestamp</string> 
+     </void> 
+    </object> 
+   </void> 
+  </void> 
+  <void property="categoryName"> 
+   <string>demo</string> 
+  </void> 
+  <void property="className"> 
+   <string>com.savvion.bo.demo.Patent</string> 
+  </void> 
+  <void property="createdDate"> 
+   <long>1247014340946</long> 
+  </void> 
+  <void property="creator"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="dataSourceRef"> 
+   <string></string> 
+  </void> 
+  <void property="description"> 
+   <string></string> 
+  </void> 
+  <void property="lastModifiedBy"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="lastModifiedDate"> 
+   <long>1247014535937</long> 
+  </void> 
+  <void property="name"> 
+   <string>Patent</string> 
+  </void> 
+ </object> 
+</java> 

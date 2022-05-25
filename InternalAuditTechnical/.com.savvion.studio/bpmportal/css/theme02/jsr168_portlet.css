@@ -1,0 +1,97 @@
+/* JSR 168 Portlet CSS*/
+
+.portlet-font {
+	FONT-SIZE: 8pt; COLOR: #000000; 
+}
+.portlet-font A {
+	COLOR: #000000
+}
+.portlet-font-dim {
+	FONT-SIZE: medium; COLOR: #c4c4c4; 
+}
+.portlet-msg-status {
+	FONT-SIZE: medium; COLOR: #000000; FONT-STYLE: italic; 
+}
+.portlet-msg-info {
+	FONT-SIZE: 8pt;
+	COLOR: #003399;
+	background-image: url(../../css_70/theme01/images/info.gif);
+	background-repeat: no-repeat;
+	padding: 2 2 2 18px !important;
+	background-position: left top;
+	display:block;
+}
+.portlet-msg-error {
+	FONT-SIZE: medium; COLOR: #ff0000;
+}
+.portlet-msg-alert {
+	FONT-SIZE: medium; COLOR: #ff0000; FONT-STYLE: italic; 
+}
+.portlet-msg-success {
+	FONT-SIZE: medium; COLOR: #007f00; 
+}
+.portlet-section-header {
+	FONT-SIZE: 8pt;
+	color: #000000;
+	background-color: #E7ECF4;
+	;
+	font-weight: bold;
+	text-decoration: none;
+}
+.portlet-section-body {
+	FONT-SIZE: 8pt; BACKGROUND: #FFFFFF; COLOR: #000000; 
+}
+.portlet-section-alternate {
+	FONT-SIZE: 8pt; BACKGROUND: #EFF3F7; COLOR: #000000; 
+}
+
+.portlet-section-selected {
+	FONT-SIZE: 8pt; BACKGROUND: #D0E6FA; COLOR: #000000; 
+}
+.portlet-section-subheader {
+	FONT-SIZE: 8pt; BACKGROUND: #91aee8; COLOR: #405278; 
+}
+.portlet-section-footer {
+	FONT-SIZE: 8pt; COLOR: #000000; 
+}
+.portlet-section-text {
+	FONT-SIZE: 8pt; COLOR: #000000; 
+}
+.portlet-form-label {
+	FONT-SIZE: 8pt; COLOR: #000000; 
+}
+.portlet-form-input-field {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 80%; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial
+}
+.portlet-form-button {
+	BORDER-RIGHT: #6699cc 1px solid; BORDER-TOP: #6699cc 1px solid; FONT-SIZE: 10px; BACKGROUND: url(/html/themes/classic/color_schemes/01/button_gradient.gif) repeat-x; BORDER-LEFT: #6699cc 1px solid; BORDER-BOTTOM: #6699cc 1px solid; FONT-FAMILY: Arial
+}
+.portlet-icon-label {
+	FONT-SIZE: small; COLOR: #000000; 
+}
+.portlet-dlg-icon-label {
+	FONT-SIZE: small; COLOR: #000000; 
+}
+.portlet-form-field-label {
+	FONT-SIZE: medium; COLOR: #000000; 
+}
+.portlet-form-field {
+	FONT-SIZE: medium; COLOR: #000000; 
+}
+.form-text {
+	BORDER-RIGHT: #A2AAC0 1px solid;
+	BORDER-TOP: #A2AAC0 1px solid;
+	BORDER-LEFT: #A2AAC0 1px solid;
+	BORDER-BOTTOM: #A2AAC0 1px solid;
+	FONT-SIZE: 8pt;
+	COLOR: #000000;
+}
+
+.form-text:hover {
+	BORDER-RIGHT: #596486 1px solid;
+	BORDER-TOP: #596486 1px solid;
+	BORDER-LEFT: #596486 1px solid;
+	BORDER-BOTTOM: #596486 1px solid;
+	FONT-SIZE: 8pt;
+	COLOR: #000000;
+}

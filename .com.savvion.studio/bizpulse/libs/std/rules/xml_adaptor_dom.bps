@@ -1,0 +1,25 @@
+application std
+module xml_adaptor_dom
+import event_lib;
+
+type NamespaceList = map<string, string>;
+
+fun selectPath(xmlObj: DOMNode, xpath: string): list<DOMNode> {
+        return selectNodes(create_xpath(xpath, map{}), xmlObj);
+}
+fun find(xmlObj: DOMNode, xpath: string): DOMNode {
+	return selectSingleNode(create_xpath(xpath, map{}), xmlObj);
+}
+fun match(xmlObj: DOMNode, xpath: string): boolean {
+	return match(create_xpath(xpath, map{}), xmlObj);
+}
+
+fun selectPath(xmlObj: DOMNode, xpath: string, ns: NamespaceList): list<DOMNode> {
+        return selectNodes(create_xpath(xpath, ns), xmlObj);
+}
+fun find(xmlObj: DOMNode, xpath: string, ns: NamespaceList): DOMNode {
+	return selectSingleNode(create_xpath(xpath, ns), xmlObj);
+}
+fun match(xmlObj: DOMNode, xpath: string, ns: NamespaceList): boolean {
+	return match(create_xpath(xpath, ns), xmlObj);
+}

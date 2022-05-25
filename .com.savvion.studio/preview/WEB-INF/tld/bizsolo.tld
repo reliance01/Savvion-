@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!--
+ Copyright (c) 2016 - 2018. Aurea Software, Inc. All Rights Reserved.
+ SAVVION PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+-->
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_1.dtd">
+
+
+<taglib>
+
+
+  <!-- ========== Tag Library Description Elements ========================= -->
+
+
+  <tlibversion>1.1</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>bizsolo</shortname>
+
+
+  <!-- ========== Tag Descriptions ========================================= -->
+
+  <tag>
+    <name>displayResultSet</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.DisplayResultSetTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>tableOptions</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>headerOptions</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>bodyOptions</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>altBodyOptions</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>headerFontOptions</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>bodyFontOptions</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>headerTags</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>bodyTags</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>columnOptions</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>columnNames</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>startFrom</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>maxRows</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+  </tag>
+
+
+  <tag>
+
+    <name>value</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.DataslotValueTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+<!--
+    <description>
+        Renders a dataslot value.
+    </description>
+-->
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+<!--
+      <description>
+          The dataslot name.
+      </description>
+-->
+    </attribute>
+
+    <attribute>
+      <name>index</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+<!--
+      <description>
+          The index of multi-valued dataslot value. For example, to get
+          "Banana" from a ComboBox dataslot whose value is
+          ["Apple", "Banana", "Cantaloop"], the user can say "index='1'".
+     </description>
+-->
+    </attribute>
+    
+    <attribute>
+      <name>valueType</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+<!--
+      <description>
+          The dataslot name.
+      </description>
+-->
+    </attribute>
+     <attribute>
+      <name>output</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+<!--
+      <description>
+          This attribute determines if the the output of the tag should be Javascript or not.
+      </description>
+-->
+    </attribute>
+
+  </tag>
+
+  <tag>
+
+    <name>label</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.LabelTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+<!--
+    <description>
+        Renders a resource label.
+    </description>
+-->
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+<!--
+      <description>
+          The resource name. It can be a dataslot name, a workstep name,
+          or a link name.
+      </description>
+-->
+    </attribute>
+
+    <attribute>
+      <name>workstepName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+<!--
+      <description>
+          The name of the workstep this resource belongs to.
+      </description>
+-->
+    </attribute>
+
+    <attribute>
+      <name>type</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+<!--
+      <description>
+          The type of the resource. It can be "dataslot", "workstep", or
+          "link".
+      </description>
+-->
+    </attribute>
+
+  </tag>
+
+  <tag>
+    <name>checkbox</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.CheckboxTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>disabled</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>option</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.OptionTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>radio</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.RadioTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>disabled</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>initApp</name>
+    <tagclass>com.savvion.BizSolo.tags.InitApplicationTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>parentApp</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>mode</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>refresh</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>initDS</name>
+    <tagclass>com.savvion.BizSolo.tags.InitDsTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>type</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>label</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>param</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>hexval</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>choices</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>classType</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>setAllDS</name>
+    <tagclass>com.savvion.BizSolo.tags.SetAllDsTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>dsList</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>setDS</name>
+    <tagclass>com.savvion.BizSolo.tags.SetDsTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>type</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>hexval</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getDS</name>
+    <tagclass>com.savvion.BizSolo.tags.GetDsPresentationTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>file</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>wsName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>type</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>styleClass</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>writePerm</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>required</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>password</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>size</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>maxlength</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>rows</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>cols</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>docInterface</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>mode</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>multiline</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>appendWith</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>precision</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>scale</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>validationType</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+     <attribute>
+      <name>presentationMap</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+     <attribute>
+      <name>classType</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>isStart</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+     <attribute>
+      <name>render</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>repeatSectionPaths</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>handleEvents</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+	<attribute>
+      <name>dateOnly</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>id</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>extJsVer</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>    
+  </tag>
+
+  <tag>
+    <name>executeAction</name>
+    <tagclass>com.savvion.BizSolo.tags.ExecuteActionTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>wsName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>epClassName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>dsClassName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>perfMethod</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>query</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>filter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>dsi</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>dso</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>mode</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>res</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>invokeWS</name>
+    <tagclass>com.savvion.BizSolo.tags.InvokeWebServiceTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>epClassName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>perfMethod</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>serviceName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>wsdl</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>operation</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>port</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>OpParam</name>
+    <tagclass>com.savvion.BizSolo.tags.WebServOpParamTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>msg</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>part</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>type</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>redirectURL</name>
+    <tagclass>com.savvion.BizSolo.tags.RedirectURLTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>page</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>application</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>forwardURL</name>
+    <tagclass>com.savvion.BizSolo.tags.ForwardURLTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>page</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>checkSecure</name>
+    <tagclass>com.savvion.BizSolo.tags.SecureIdTag</tagclass>
+    <bodycontent>empty</bodycontent>
+  </tag>
+
+  <tag>
+    <name>transferDS</name>
+    <tagclass>com.savvion.BizSolo.tags.TransferDsTag</tagclass>
+    <bodycontent>empty</bodycontent>
+  </tag>
+
+  <tag>
+    <name>getLabel</name>
+    <tagclass>com.savvion.BizSolo.tags.GetLabelTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>type</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>wsName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>resClass</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>mode</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>pageInstruction</name>
+    <tagclass>com.savvion.BizSolo.tags.PageInstructionTag</tagclass>
+    <bodycontent>tagdependent</bodycontent>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>link</name>
+    <tagclass>com.savvion.BizSolo.tags.LinkTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>rel</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>href</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>style</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>extJsVer</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>    
+  </tag>  
+
+  <tag>
+    <name>getHttpPath</name>
+    <tagclass>com.savvion.BizSolo.tags.GetHttpPathTag</tagclass>
+    <teiclass>com.savvion.BizSolo.tags.GenericStringTagExtraInfo</teiclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>pageName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>appName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>applyXSL</name>
+    <tagclass>com.savvion.BizSolo.tags.XSLTransformTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>xml</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>xsl</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>keepFile</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getBSParameter</name>
+    <tagclass>com.savvion.BizSolo.tags.GetParameterTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>generateId</name>
+    <tagclass>com.savvion.BizSolo.tags.GenerateIdTag</tagclass>
+    <teiclass>com.savvion.BizSolo.tags.GenericStringTagExtraInfo</teiclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>setCallerData</name>
+    <tagclass>com.savvion.BizSolo.tags.SetCallerDataTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>parentApp</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>childApp</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>dsList</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>returnPage</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getCallerData</name>
+    <tagclass>com.savvion.BizSolo.tags.GetCallerDataTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>parentApp</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>childApp</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>dsList</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>setParentData</name>
+    <tagclass>com.savvion.BizSolo.tags.SetParentDataTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>dsList</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getParentData</name>
+    <tagclass>com.savvion.BizSolo.tags.GetParentDataTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>dsList</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>guardLogin</name>
+    <tagclass>com.savvion.BizSolo.tags.GuardLoginTag</tagclass>
+    <bodycontent>empty</bodycontent>
+  </tag>
+
+  <tag>
+    <name>checkPermission</name>
+    <tagclass>com.savvion.BizSolo.tags.CheckPermissionTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>application</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>component</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>permission</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>choose</name>
+    <tagclass>com.savvion.BizSolo.tags.ChooseTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+  </tag>
+
+  <tag>
+    <name>when</name>
+    <tagclass>com.savvion.BizSolo.tags.WhenTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>test</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>otherwise</name>
+    <tagclass>com.savvion.BizSolo.tags.OtherwiseTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+  </tag>
+
+  <tag>
+    <name>if</name>
+    <tagclass>com.savvion.BizSolo.tags.IfTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>test</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>ifCrtWS</name>
+    <tagclass>com.savvion.BizSolo.tags.IfCrtWorkstepTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>param</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>isDefault</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getResourceLabel</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.ResourceLabelTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>resClass</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>mode</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getResource</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.ResourcePresentationTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>wsName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>styleClass</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>writePerm</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>required</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>size</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>maxlength</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>mode</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>getResourceValue</name>
+    <tagclass>com.savvion.sbm.bizsolo.jsp.tags.ResourceValueTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>wsName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>isAssigned</name>
+    <tagclass>com.savvion.BizSolo.tags.IsAssigned</tagclass>
+    <bodycontent>JSP</bodycontent>
+  </tag>
+  
+  <tag>
+    <name>isNotSuspended</name>
+    <tagclass>com.savvion.BizSolo.tags.IsNotSuspended</tagclass>
+    <bodycontent>JSP</bodycontent>
+  </tag>
+
+<tag>
+  <name>xsrf</name>
+  <tag-class>com.savvion.sbm.websecurity.xsrf.tags.XSRFTag</tag-class>
+  <body-content>empty</body-content>
+  <description>Generates XSRF token information.</description>
+</tag>
+<tag>
+  <name>getApplicationResources</name>
+  <tag-class>com.savvion.BizSolo.tags.GetApplicationResources</tag-class>
+  <body-content>empty</body-content>
+  <description>Gets Application Resources</description>
+  <attribute>
+      <name>baseName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+  </attribute>
+</tag>
+
+</taglib>

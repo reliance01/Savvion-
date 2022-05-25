@@ -1,0 +1,37 @@
+{
+    'name': 'Drop Down Date Picker',
+	'label': 'Choix D\u00e9roulant De Dates',
+    'type': 'dojo',
+    'version' : '1.0',
+    'jmakiVersion' : '1.0',    
+    'image': 'images/dojo-drop-down-date-picker.jpg',
+    'description': 'Cet objet graphique est un choix d\u00e9roulant de dates.',
+    'category': 'Calendar',
+    'topicInfo' : {
+	    'type': 'publish',
+	    'topicName': ['/dojo/dropdownDatePicker/onSelect'],
+	    'description': 'Publie l\'id du widget, wargs et la valeur s\u00e9lectionn\u00e9e'
+    },
+    "args": [
+        {"displayFormat":{
+            "label":"Format d'affichage", 
+            "type":"STRING",
+            "description":"Le format de donn\u00e9es de MM/dd/yyyy est MM = le mois, dd = le jour du mois, et yyyy l'ann\u00e9e",   
+            "defaultValue": "MM/dd/yyyy"
+            }
+        }
+    ] ,
+    'value': {'required': false, 'type': 'DATE'},
+    'config' : {
+          'type' :
+           { 'id' : 'dojo', 
+             'libs' : [
+                   '../resources/libs/dojo/v0.4.3/djd43.js'
+               ],
+               'preload' : 'if (typeof djConfig ==\'undefined\') djConfig = { parseWidgets: false, searchIds: [] };',
+               'resources' : [
+                 '../resources/libs/dojo/v0.4.3/src'
+               ]
+          }       
+    }
+}

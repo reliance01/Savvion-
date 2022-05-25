@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MappingData SYSTEM "db2ds_mapping.dtd" >
+<MappingData>
+<Dataslot Name="realname">
+	<Table>SUBJECT</Table>
+	<Column>REALNAME</Column>
+	<Restriction>NAME='Liviu'</Restriction>
+</Dataslot>
+<Dataslot Name="id">
+	<Table>SUBJECT</Table>
+	<Column>ID</Column>
+	<Restriction>NAME='Liviu'</Restriction>
+</Dataslot>
+<Dataslot Name="Name">
+	<Table>SUBJECT</Table>
+	<Column>NAME</Column>
+	<Restriction>NAME='Liviu'</Restriction>
+</Dataslot>
+</MappingData>

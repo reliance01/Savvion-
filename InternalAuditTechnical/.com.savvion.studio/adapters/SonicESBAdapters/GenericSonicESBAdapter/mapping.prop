@@ -1,0 +1,12 @@
+adapter-configurator=com.savvion.sbm.adapters.sonic.SonicAdapterConfigurationDialog
+map-configurator=com.savvion.sbm.adapters.framework.GroupMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.GroupMapper
+AdapterCategory=SonicESBAdapters
+AdapterName=GenericSonicESBAdapter
+adapter-class=com.savvion.sbm.adapters.sonic.SonicESBAdapter
+log-level=10
+icon=sonic.png
+adaplet=false
+adapter.execution.timeout=60000
+receive.timeout.for.replyToEndpoint=100
+thread.sleep.between.receive=50

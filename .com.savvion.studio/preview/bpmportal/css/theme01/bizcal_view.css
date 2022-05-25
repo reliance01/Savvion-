@@ -1,0 +1,285 @@
+.BizCalDay {
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	border: 2px solid #FFFFFF;
+	font-size: 11pt;
+	vertical-align: middle;
+	color: #333333;
+	background: #FFFFFF center center
+}
+
+.BizCalTimeLabel {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF
+}
+
+.BizCalInptTxtHhMm {
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #EFEFEF;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #EFEFEF;
+	background: #D9F8FF
+}
+
+.BizCalInptSelectAmPm {
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #EFEFEF;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #EFEFEF;
+	background: #F7F7FF
+}
+
+.BizCalDaySlct {
+	font-size: 8pt;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	background: #FDFFDF
+}
+
+.BizCalMnthBg {
+	text-align: center;
+	width: 22px;
+	font: bold 8pt Arial, Helvetica, sans-serif;
+	background: #005AA6
+}
+
+.BizCalMnthBgSlct {
+	text-align: center;
+	font: bold 8pt Arial, Helvetica, sans-serif;
+	background: #0091D8
+}
+
+.BizCalTblLightBg {
+	background: #d4d4d4;
+	border:1px solid #9b9b9b;
+}
+
+.BizCalWeek {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #536399;
+	text-align: center;
+	border-top: 1px solid #bcc2cd;
+	border-right: 0px solid #bcc2cd;
+	border-bottom: 1px solid #90939a;
+	border-left: 1px solid #bcc2cd;
+	background: #CED5E1;
+	padding:2px;
+}
+
+.BizCalWeekend {
+	font-size: 11pt;
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	border: 2px solid #EFEFEF;
+	vertical-align: middle;
+	color: #7C7C7C;
+	background: #EFEFEF center center
+}
+
+.BizCalHoliday {
+	font-size: 11pt;
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	cursor: hand;
+	border: 2px solid #9CAEE7;
+	vertical-align: middle;
+	color: #233E8D;
+	background: #DEE3F7 url(images/biz_cal_holiday.gif) center center
+}
+
+.BizCalHolidayHover {
+	font-size: 11pt;
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	cursor: hand;
+	cursor: pointer;
+	border: 2px solid #899FE2;
+	font-weight: bold;
+	vertical-align: middle;
+	color: #233E8D;
+	background: #DEE3F7 url(images/biz_cal_holiday.gif) center center
+}
+
+.BizCalHalfHoliday, .BizCalHalfHolidayHover{
+	font-size: 11pt;
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	cursor: pointer;
+	border: 2px solid #559AD7;
+	vertical-align: middle;
+	color: #233E8D;
+	background: #ABE0EB url(images/biz_cal_half_holiday.gif) center center 
+}
+
+.BizCalHalfHolidayHover {
+	border: 2px solid #559AD7;
+	font-weight: bold;
+}
+
+.BizCalDayHover {
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	border: 2px solid #CFD3DE;
+	cursor: hand;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 11pt;
+	vertical-align: middle;
+	color: #333333;
+	background: #FFFFFF center center
+}
+
+.BizCalWeekendHover {
+	font-size: 11pt;
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	border: 2px solid #FFC6C6;
+	cursor: hand;
+	font-weight: bold;
+	vertical-align: middle;
+	background: #FFE6E6 center center
+}
+
+.BizCalEdited {
+	font-size: 11pt;
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	cursor: hand;
+	border: 2px solid #A7ADBE;
+	vertical-align: middle;
+	color: #000000;
+	background: #BDC1CE url(images/biz_cal_edited.gif) center center
+}
+
+.BizCalEditedHover {
+	font-size: 11pt;
+	text-align: center;
+	height: 38px;
+	width: 50px;
+	cursor: hand;
+	cursor: pointer;
+	border: 2px solid #8897AC;
+	font-weight: bold;
+	vertical-align: middle;
+	color: #000000;
+	background: #A5AEC0 url(images/biz_cal_edited.gif) center center
+}
+
+.CalSegTblBgPad {
+	border: 1px #999999 solid;
+	background: #EEEEEE;
+	padding: 4px
+}
+
+.CalListDivPad {
+	visibility: visible;
+	scrollbar-face-color: #FFFFE1;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #665E00;
+	scrollbar-3dlight-color: #CCB600;
+	scrollbar-arrow-color: #333200;
+	scrollbar-darkshadow-color: #D3AD45;
+	scrollbar-base-color: #FDFCDE;
+	scrollbar-track-color: #ECE9BC;
+	overflow: auto;
+	layer-background-color: #D1D0B1;
+	border: 1px solid #B6A778;
+	background: #D4D4D4 repeat-x fixed
+}
+
+.CalTblBgDark {
+	background: #C8C19D
+}
+
+.BizCalDateBgGrp {
+	text-align: center;
+	font: bold 10pt Arial, Helvetica, sans-serif;
+	background: #9b9b9b;
+	padding:1px;
+}
+.CalValLft b{
+	color:#000;
+	font-weight:bold;
+	font-size: 11px;
+	background:#ffffc1;
+	display:block;
+	padding:2px;
+}
+.CalValLft, .CalValLftAlt {
+	font-size: 8pt;
+	color: #000000;
+	text-align: left;
+	border-top: 0px none #FFFFFF;
+	border-right: 1px none #FFFFFF;
+	border-bottom: 1px none #FFFFFF;
+	border-left: 1px none #FFFFFF;
+	background: #FFFFEA;
+	padding:2px;
+	min-width:120px;
+}
+a.BmIconCalendarView, .BmLegendWeekend, .BmLegendHoliday {
+	display:block;
+	width:35px;
+	height:16px;
+	overflow:hidden;
+	background:url(images/view-calendar-sprites.gif) no-repeat left top;
+	vertical-align: top;
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+ *display:inline;
+}
+a.BmIconCalendarView:hover { background-position:0 -16px; }
+.BmLegendWeekend, .BmLegendHoliday {
+	width:19px;
+	height:17px;
+	background:url(images/calendar-legend-sprites.gif) no-repeat left top;
+}
+.BmLegendWeekend { background-position:0 -17px; }
+.BizCalTblLightBg table {
+display: table;
+border-collapse: separate;
+}
+
+.BizCalTblLightBg table [cellspacing=0] {
+border-spacing: 0px;
+-webkit-border-horizontal-spacing: 0px;
+-webkit-border-vertical-spacing: 0px;
+}
+.BizCalTblLightBg  table{
+white-space: normal;
+line-height: normal;
+font-weight: normal;
+font-size: 14px;
+font-variant: normal;
+font-style: normal;
+color: -webkit-text;
+text-align: -webkit-auto;
+}
+.LegendBar { padding:2px}
+.LegendBar, .LegendBar *{ background:#e2e2e2}

@@ -1,0 +1,24 @@
+###########################################
+# Mapping file
+# __ebmsapps_archive maps to $SBM/ebmsapps
+# __webapps_archive maps to $SBM/BizSolo
+# __sbm_archive maps to $SBM
+# __sbmweb_archive maps to web app directory (for pramati it is “pramati…/public_html/sbm)
+# use EXCLUDED_DIR to remove mapping of folder in project to server. E.g. privFolder=EXCLUDED_DIR
+
+# These 2 folders are copied to deploy location to the folder according to this mapping
+External\ Business\ Objects=__ebmsapps_archive/common/bo/classes
+dxsi-projects=__sbm_archive/dxsi/javaapps
+
+# The following 6 folder mappings are ignored since correct deploy locations for them are generated automatically
+#Adapters=
+#Business\ Objects=
+#External\ Business\ Objects=
+#lib=
+#dxsi-model=
+#jpa-model=
+
+# Web Resources
+css=__sbmweb_archive/ebmsapps/common/css
+images=__sbmweb_archive/ebmsapps/common/images
+javascript=__sbmweb_archive/ebmsapps/common/javascript

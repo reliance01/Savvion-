@@ -1,0 +1,97 @@
+{
+    'name': 'TextField',
+		'label': '%widget.textfield.label',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/textfield.png',
+    'description': '%widget.textfield.description',
+    'category': 'Text Field',
+    'args': [
+		{'type':{'label':'%widget.arg.type.label', 'type':'STRING', 'defaultValue': 'text', 
+                  'values': [{'key':'%widget.arg.text.label', 'value':'Text'},{'key':'%widget.arg.password.label', 'value':'Password'}]}},
+		{'size':{'label':'%widget.arg.size.label', 'type':'INTEGER', 'defaultValue': '32', 'description':'%widget.arg.size.description.label'}},
+		{'maxlength':{'label':'%widget.arg.maxlength.label', 'type':'INTEGER', 'defaultValue': '50', 'description':'%widget.arg.maxlength.description'}},
+		{'readonly':{'label':'%widget.arg.readonly.label', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'visible':{'label':'%widget.arg.visible.label', 'type':'BOOLEAN', 'defaultValue': 'true'}},
+		{'disabled':{'label':'%widget.arg.disabled.label', 'type':'BOOLEAN', 'defaultValue': 'false'}}
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }, 
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/textfield/onChange',
+					'/sbm/textfield/onClick',
+					'/sbm/textfield/onFocus',
+					'/sbm/textfield/onBlur',
+					'/sbm/textfield/onKeyPress',
+					'/sbm/textfield/onKeyUp',
+					'/sbm/textfield/onMouseDown']       
+    },
+    'validation': [
+        {'type':'none',
+          'label':'%widget.validation.type.none.label',
+          'options':[],
+          'selected':'true'
+        },
+	{'type':'length', 
+          'label':'%widget.validation.type.length.label',
+          'options':['validateOn', 'isRequired', 'minChars', 'maxChars','requiredValidationMsg']
+        },
+        {'type':'integer', 
+          'label':'%widget.validation.type.integer.label',
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'email',
+          'label':'%widget.validation.type.email.label',
+          'options':['validateOn', 'isRequired', 'minChars', 'maxChars', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'date',
+          'label':'%widget.validation.type.date.label',
+          'options':['formatDate', 'validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'time',
+          'label':'%widget.validation.type.time.label',
+          'options':['formatTime', 'validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'credit_card',
+          'label':'%widget.validation.type.creditcard.label',
+          'options':['formatCreditCard', 'validateOn', 'isRequired', 'useCharacterMasking', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'zip_code',
+          'label':'%widget.validation.type.zipcode.label',
+          'options':['formatZipCode', 'validateOn', 'isRequired', 'useCharacterMasking', 'pattern', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'social_security_number',
+          'label':'%widget.validation.type.ssn.label',
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'pattern', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'currency',
+          'label':'%widget.validation.type.currency.label',
+          'options':['formatCurrency', 'validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'real',
+          'label':'%widget.validation.type.real.label',
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'minValue', 'maxValue', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'ip',
+          'label':'%widget.validation.type.ip.label',
+          'options':['formatIP', 'validateOn', 'isRequired', 'useCharacterMasking', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'url',
+          'label':'%widget.validation.type.url.label',
+          'options':['validateOn', 'isRequired', 'minChars', 'maxChars', 'requiredValidationMsg', 'textfieldRequiredMsg']
+        },
+        {'type':'phone_number',
+          'label':'%widget.validation.type.phonenumber.label',
+          'options':['formatPhone', 'validateOn', 'useCharacterMasking', 'isRequired', 'requiredValidationMsg', 'textfieldRequiredMsg', 'pattern']
+        },
+        {'type':'custom',
+          'label':'%widget.validation.type.custom.label',
+          'options':['validateOn', 'pattern','isRequired', 'requiredValidationMsg', 'textfieldRequiredMsg','customRegularExpression']
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+/* JSR 168 Portlet CSS*/
+.portlet-font { font-size: 11px; color: #000000 }
+.portlet-font A { color: #000000 }
+.portlet-font-dim { font-size: medium; color: #C4C4C4 }
+.portlet-msg-status { font-size: medium; color: #000000; font-style: italic }
+.portlet-msg-info {
+	font-size: 11px;
+	color: #003399;
+	padding: 2 2 2 18px !important;
+	display: block;
+	background: url(../../css_70/theme01/images/info.gif) no-repeat left top
+}
+.portlet-msg-error { font-size: medium; color: #FF0000 }
+.portlet-msg-alert { font-size: medium; color: #FF0000; font-style: italic }
+.portlet-msg-success { font-size: medium; color: #007F00 }
+.portlet-section-header {
+	font-size: 11px;
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+	background: #E7ECF4
+}
+.portlet-section-body { font-size: 11px; background: #FFFFFF; color: #000000 }
+.portlet-section-alternate { font-size: 11px; background: #EFF3F7; color: #000000 }
+.portlet-section-selected { font-size: 11px; background: #D0E6FA; color: #000000 }
+.portlet-section-subheader { font-size: 11px; background: #91AEE8; color: #405278 }
+.portlet-section-footer { font-size: 11px; color: #000000 }
+.portlet-section-text { font-size: 11px; color: #000000 }
+.portlet-form-label { font-size: 11px; color: #000000 }
+.portlet-form-input-field { border: 1px solid #CCCCCC; font: 80% Arial }
+.portlet-form-button {
+	border: 1px solid #6699CC;
+	background: url(/html/themes/classic/color_schemes/01/button_gradient.gif) repeat-x;
+	font: 10px Arial
+}
+.portlet-icon-label { font-size: small; color: #000000 }
+.portlet-dlg-icon-label { font-size: small; color: #000000 }
+.portlet-form-field-label { font-size: medium; color: #000000 }
+.portlet-form-field { font-size: medium; color: #000000 }
+.form-text {
+	border: 1px solid #A2AAC0;
+	font-size: 11px;
+	color: #000000
+}
+.form-text:hover {
+	border: 1px solid #596486;
+	font-size: 11px;
+	color: #000000
+}

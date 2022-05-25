@@ -1,0 +1,52 @@
+{
+    'name': 'Button',
+    'label':'%widget.button.label', 
+    'type': 'form',
+    'version': '1.0',
+    'image': 'images/button_icon.png',
+    'jmakiVersion' : '1.8',
+	  'category': 'Button',   
+    'description': '%widget.button.description',
+    'args': [
+    {'type': {
+         'label':'%widget.arg.type.label','type':'STRING', 
+         'defaultValue': 'button', 
+         'description': 'Button type',
+         'values': [
+         	  {"label": "%Form.button.button", "key": "button", "description" : "Basic push button"},
+            {"label": "%Form.button.submit", "key": "submit", "description" : "Navigates to a specified url when pressed"},
+            {"label": "%Form.button.reset", "key": "reset", "description" : "Resets the parent form when pressed"},
+			      {"label": "%Form.button.complete", "key": "complete", "description": "Navigates to a specified url when pressed", "disableArgs":["checked", "href"]},
+			      {"label": "%Form.button.reassign", "key": "reassign", "description": "Reassigns the parent form when pressed", "disableArgs":["checked", "href"]},
+			      {"label": "%Form.button.save", "key": "save", "description": "Saves the parent form when pressed", "disableArgs":["checked", "href"]},
+			      {"label": "%Form.button.cancel", "key": "cancel", "description": "Cancels the parent form when pressed.", "disableArgs":["checked", "href"]}         
+         ]
+     }},
+     {'label':{'label':'%widget.arg.label.label','type':'STRING', 'defaultValue': 'Push me', 'description': 'Button label'}},
+     {'duallist':{'label':'%widget.button.duallist','type':'BOOLEAN','defaultValue': false, 'description': 'whether button participates in a dual list'}},
+     {'sourcelist':{'label':'%widget.button.sourcelist','type':'STRING','defaultValue': '', 'description': 'source widget name'}},
+     {'targetlist':{'label':'%widget.button.targetlist','type':'STRING','defaultValue': '', 'description': 'target widget name'}} 
+     ],
+     'value': {
+         'required':'false',
+         'type': 'OBJECT',
+         'defaultValue':{
+         }
+     },    
+     'config' : {
+         'type': {
+             'id' : 'form.button',
+             'libs': [ 
+             ],
+             'styles': [
+             ],
+        'resources': [
+             ]     
+         }
+     },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/form/button/onClick'],
+       'description':'Both publish to their topicName when the button is clicked or changed. onChange only is sent from checkbox buttons. Both publish an object with id and value. onClick\'s value is {}. onChange value is {oldValue,newValue}.'
+    }
+}

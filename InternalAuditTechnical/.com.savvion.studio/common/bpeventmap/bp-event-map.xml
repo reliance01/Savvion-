@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bm:bpEventMap xmlns:bm="http://www.savvion.com/sbm/bizpulse/bpeventmap">
+	<bm:xmlEventMap>
+		<bm:xmltype>
+			<bm:name>purchaseOrder</bm:name>
+			<bm:uri>http://example.com/po</bm:uri>
+		</bm:xmltype>
+		
+		<bm:index>
+			<bm:indexName>
+				state
+			</bm:indexName>
+			<bm:xpathIndex>
+				<bm:namespace>
+					<bm:prefix>po</bm:prefix>
+					<bm:uri>http://example.com/po</bm:uri>
+				</bm:namespace>
+				<bm:namespace>
+					<bm:prefix>po1</bm:prefix>
+					<bm:uri>http://example.com/po1</bm:uri>
+				</bm:namespace>
+				<bm:namespace>
+					<!-- default namespace -->
+					<!-- <bm:uri>http://example.com/po2</bm:uri> -->
+				</bm:namespace>
+				<bm:xpath>po:shipTo/po:state</bm:xpath>
+			</bm:xpathIndex>
+		</bm:index>
+		
+		<bm:index>
+			<bm:indexName>
+				zip
+			</bm:indexName>
+			<bm:xpathIndex>
+				<bm:xpath>shipTo/zip</bm:xpath>
+			</bm:xpathIndex>
+		</bm:index>
+
+		<bm:index>
+			<bm:indexName>
+				a
+			</bm:indexName>
+			<bm:propertyIndex>
+				a
+			</bm:propertyIndex>	
+		</bm:index>
+		<bm:index>
+			<bm:propertyIndex>
+				b
+			</bm:propertyIndex>	
+		</bm:index>
+
+	</bm:xmlEventMap>
+	
+        <bm:xmlEventMap>
+		<bm:xmltype>
+			<bm:name>invoice</bm:name>
+			<bm:uri>http://example.com/iv</bm:uri>
+		</bm:xmltype>
+		
+		<bm:index>
+			<bm:indexName>
+				orderNumber
+			</bm:indexName>
+			<bm:xpathIndex>
+				<bm:namespace>
+					<bm:prefix>iv</bm:prefix>
+					<bm:uri>http://example.com/iv</bm:uri>
+				</bm:namespace>
+				<bm:xpath>/iv:invoice/@orderNumber</bm:xpath>
+			</bm:xpathIndex>
+		</bm:index>
+	</bm:xmlEventMap>
+	
+	<bm:xmlEventMap>
+		<bm:xmltype>
+			<bm:name>payment</bm:name>
+			<bm:uri>http://example.com/py</bm:uri>
+		</bm:xmltype>
+		
+		<bm:index>
+			<bm:indexName>
+				orderNumber
+			</bm:indexName>
+			<bm:xpathIndex>
+				<bm:namespace>
+					<bm:prefix>py</bm:prefix>
+					<bm:uri>http://example.com/py</bm:uri>
+				</bm:namespace>
+				<bm:xpath>/py:payment/@orderNumber</bm:xpath>
+			</bm:xpathIndex>
+		</bm:index>
+	</bm:xmlEventMap>
+	
+	<bm:anonymousEventMap>
+		<bm:eventType>
+			<bm:type>
+				SAP
+			</bm:type>
+			<bm:value>
+				CREATE_VENDOR
+			</bm:value>
+		</bm:eventType>
+		<bm:index>
+			<bm:indexName>
+				VENDORID
+			</bm:indexName>
+			<bm:attrIndex>
+				VENDORID
+			</bm:attrIndex>
+		</bm:index>
+	</bm:anonymousEventMap>
+	
+	<bm:anonymousEventMap>
+		<bm:eventType>
+			<bm:type>
+				SAP
+			</bm:type>
+			<bm:value>
+				VENDOR_PAYMENT
+			</bm:value>
+		</bm:eventType>
+		<bm:index>
+			<bm:indexName>
+				VENDORID
+			</bm:indexName>
+			<bm:attrIndex>
+				VENDORID
+			</bm:attrIndex>
+		</bm:index>
+	</bm:anonymousEventMap>
+	
+	<bm:anonymousEventMap>
+		<bm:eventType>
+			<bm:type>
+				timeout
+			</bm:type>
+			<bm:value>
+				latepayment
+			</bm:value>
+		</bm:eventType>
+		<bm:index>
+			<bm:indexName>
+				orderNumber
+			</bm:indexName>
+			<bm:attrIndex>
+				orderNumber
+			</bm:attrIndex>
+		</bm:index>
+	</bm:anonymousEventMap>	
+</bm:bpEventMap>

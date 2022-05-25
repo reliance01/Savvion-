@@ -1,0 +1,13 @@
+#Tue Jul 05 14:23:03 IST 2016
+publishing.type=Copy_Files_Only
+application.name=OE_OM_WorkFlow
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=OE_OM_WorkFlow
+module.id=ee64fbf3-8edb-4cbc-9dd8-a51d1e9ac4d7
+module.version=8
+application.mainappfile=processtemplates/OE_OM_WorkFlow.spt
+module.name=OE_OM_WorkFlow
+application.root=OE_OM_WorkFlow

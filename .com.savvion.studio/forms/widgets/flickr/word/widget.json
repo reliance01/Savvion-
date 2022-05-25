@@ -1,0 +1,28 @@
+{
+    'name': 'Image Word',
+    'type': 'flickr',
+    'version': '.8',
+    'jmakiVersion' : '.8.2',
+    'author' : 'Greg Murray',
+    'url' : 'https://ajax.dev.java.net',    
+    'image': 'images/flickr-word.jpg',
+    'description': 'Create a message using images from flickr for each character.',
+    'category': 'Text Field',
+    'args': [
+          		{'word': {'type':'STRING', 'defaultValue': 'jmaki', 'description':'The word to display.'}},
+          		{'repeatCharacters': {'type':'BOOLEAN', 'defaultValue': 'false', 'description':'Whether or not to use unquie images for each character.'}},
+          		{'size': {'type':'NUMBER', 'defaultValue': 50,
+                  'values': [
+                    {'name' : '25', 'value' : 25, 'description' : 'Small.'},
+                    {'name' : '50', 'value' : 50, 'description' : 'Medium.'},
+                    {'name' : '75', 'value' : 75, 'description' : 'Large.'}
+                   ], 'description':'The block size to display.'}},
+          		{'apikey': {'type':'STRING', 'defaultValue': '', 'description':'The flickr API key.'}}
+            ],
+    'config' : {
+        'type' :
+           { 'id' : 'word',
+             'libs' : [ '../resources/libs/flickr/common.js' ]
+        }
+    } 
+}

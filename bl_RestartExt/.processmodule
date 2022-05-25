@@ -1,0 +1,13 @@
+#Wed Sep 15 11:23:17 IST 2021
+publishing.type=Copy_Files_Only
+application.name=bl_RestartExt
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=bl_RestartExt_process
+module.id=121ef0b3-2dc3-4924-9a92-c057cb784b9c
+module.version=8
+application.mainappfile=processtemplates/bl_RestartExt_process.spt
+module.name=bl_RestartExt_process
+application.root=bl_RestartExt_process

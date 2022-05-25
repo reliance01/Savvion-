@@ -1,0 +1,38 @@
+{
+    'name': 'Radio',
+	  'label': '%widget.radio.label',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/radio.jpg',
+    'description': '%widget.radio.description',
+    'category': 'Button',
+    'args': [
+                {'layout':{'label':'%widget.arg.layout.label', 'type':'STRING', 'defaultValue': 'vertical', 'values': [{'key':'vertical', 'label':'%widget.arg.layout.vertical.label'},{'key':'horizontal', 'label':'%widget.arg.layout.horizontal.label'}]}},
+		{'readonly':{'label':'%widget.arg.readonly.label', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'visible':{'label':'%widget.arg.visible.label', 'type':'BOOLEAN', 'defaultValue': 'true'}},
+		{'disabled':{'label':'%widget.arg.disabled.label', 'type':'BOOLEAN', 'defaultValue': 'false'}}
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/radio/onChange',
+					'/sbm/radio/onClick',
+					'/sbm/radio/onFocus',
+					'/sbm/radio/onBlur']
+    },
+   'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+          'options':['validateOn', 'isRequired', 'radioRequiredMsg']
+        }
+    ]
+
+}

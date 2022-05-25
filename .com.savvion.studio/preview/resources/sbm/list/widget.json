@@ -1,0 +1,35 @@
+{
+    'name': 'List',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/list.jpg',
+    'description': 'Savvion List widget.',
+    'category': 'List',
+    'args': [
+		{'size':{'type':'NUMBER', 'defaultValue': '5'}},
+		{'readonly':{'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'disabled':{'type':'BOOLEAN', 'defaultValue': 'flase'}}		
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/list/onChange',
+					'/sbm/list/onFocus',
+					'/sbm/list/onBlur']
+    },
+   'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+          'options':['validateOn', 'isRequired', 'invalidValue']
+    }
+    ]
+
+}

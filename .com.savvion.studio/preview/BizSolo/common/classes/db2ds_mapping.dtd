@@ -1,0 +1,35 @@
+<?xml encoding="UTF-8"?>
+<!-- Copyright (c) 2016 - 2018. Aurea Software, Inc. All Rights Reserved.
+ This program is an unpublished copyrighted work which is proprietary
+ to Savvion, Inc. and contains confidential information that is not
+ to be reproduced or disclosed to any other person or entity without
+ prior written consent from Savvion, Inc. in each and every instance.
+-->
+
+<!-- Inline mixed content -->
+<!ENTITY gt "&#62;">
+<!ENTITY lt "&#60;" >
+
+
+<!ELEMENT MappingData (
+        Dataslot*
+)>
+
+
+<!ELEMENT Dataslot (
+        Table*,
+	Column*,
+	Restriction
+)>
+
+<!ATTLIST Dataslot
+        Name CDATA #REQUIRED
+>
+
+<!ELEMENT Table (#PCDATA)>
+
+<!ELEMENT Column (#PCDATA)>
+
+<!ELEMENT Restriction (#PCDATA)>
+
+<!-- end of DTD -->

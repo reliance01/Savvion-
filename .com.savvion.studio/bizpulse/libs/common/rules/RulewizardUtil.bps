@@ -1,0 +1,70 @@
+application common
+module RulewizardUtil
+val max_long = 2147483647;
+val max_double = 2147483647;
+val min_long = -2147483648;
+val min_double = -2147483648;
+fun scalindex(scval:float, scstart:int, scend:int, scstep:int, inRange:boolean):int {
+    var n = 1;
+    if(inRange = true) {
+        n := 0;
+        if ((scval < scstart) or (scval > scend))  return -1;
+    }
+    if (scval < scstart) return n;
+    for (var i = scstart+scstep; i < scend; i+=scstep){
+        n++;
+        if (scval < i) return n;
+    }
+    n++;
+    if (scval < scend) return n;
+    n++;
+    return n;
+}
+fun converttofloat(o : JObject) : float {
+    var f;
+    val clsname = o.getClass().getName();
+
+    if (clsname = "java.lang.Long") {
+        var t = cast(~java.lang.Long)o;
+        f := t.doubleValue();
+    } else if (clsname = "java.lang.Double") {
+        var t = cast(~java.lang.Double)o;
+        f := t.doubleValue();
+    } else if (clsname = "com.savvion.sbm.bizlogic.server.svo.Decimal") {
+        var t = cast(~com.savvion.sbm.bizlogic.server.svo.Decimal)o;
+        f := t.getValue().doubleValue();
+    } else if (clsname = "java.lang.String") {
+        var t = cast(~java.lang.String)o;
+        f := toFloat(t);
+    }
+    return f;
+}
+fun getduration(starttime:date, endtime:date, timeUnit:string):int {
+    var n = 0.0;
+    if(timeUnit.equals("SEC")) {
+        n := duration(starttime, endtime);
+        n := n / 1000;      // Convert to Seconds
+    } else if(timeUnit.equals("MIN")) {
+        n := duration(starttime, endtime);
+        n := n / (1000 * 60);      // Convert to Minutes
+    } else if(timeUnit.equals("HOUR")) {
+        n := duration(starttime, endtime);
+        n := n / (1000 * 60 * 60);      // Convert to Hours
+    } else if(timeUnit.equals("B_HOUR")) {
+        n := bduration(starttime, endtime);
+        n := n / (1000 * 60 * 60);      // Convert to Hours
+    } else if(timeUnit.equals("B_MIN")) {
+        n := bduration(starttime, endtime);
+        n := n / (1000 * 60);		// Convert to Minutes
+    } else if(timeUnit.equals("B_SEC")) {
+        n := bduration(starttime, endtime);
+        n := n / 1000; 			// Convert to Seconds
+    }    
+    return toInt(n);
+}
+fun executeAdapter(adapterType:string, processContext:~java.util.Hashtable, hashInputVar:~java.util.Hashtable):~java.util.Hashtable{
+    var qfclsname;
+    if(adapterType.equals("DBAdapters")) qfclsname := "com.savvion.sbm.adapters.db.DBAdapter";
+    val commonMAObj = new ~common.externalperformers.ManagedSBMAdapters();
+    return commonMAObj.execute(qfclsname, processContext, hashInputVar);
+}

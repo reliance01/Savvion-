@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.value_expressions" path="value_expressions" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.user_dataslot" path="value_expressions" icon="template.gif">
+    <grid content="MUTABLE_VALUE_EXPRESSION" description="$Scripting.description.user_dataslot">
+      <widgets>
+        <label col="0">$Scripting.label._dataslot_</label>
+        <treeChoiceWidget col="1" id="dataslot" type="DATASLOT" fill="false" filter="*VALUE_DATASLOTS">
+          <selection type="DATASLOT"/>
+        </treeChoiceWidget>
+      </widgets>
+      <template>"@${dataslot}"</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.constant_expression" path="value_expressions" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+      <label col="0">$Scripting.label.constant</label>
+      <widgets>
+        <label col="0">$Scripting.label._constant_</label>
+        <entryWidget col="1" id="value">
+          <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"/>
+        </entryWidget>
+      </widgets>
+      <template>"${value}"</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.custom_expression" path="value_expressions" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.custom_expression">
+      <widgets>
+      <label col="0">$Scripting.label._custom_code_</label>
+        <entryWidget col="1" id="value" tools="bs_autocomplete">
+          <reference type="CONSTANT"/>
+        </entryWidget>
+      </widgets>
+      <template>${value}</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.context_variable" path="value_expressions" icon="template.gif">
+    <grid content="MUTABLE_VALUE_EXPRESSION" description="$Scripting.description.context_variable">
+      <widgets>
+      <label col="0">$Scripting.label._context_variable_</label>
+        <entryWidget col="1" id="value" validation="ID">
+          <reference type="CONSTANT"/>
+        </entryWidget>
+      </widgets>
+      <template>"%${value}"</template>
+    </grid>
+  </item>
+
+</palette>

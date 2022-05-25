@@ -1,0 +1,7 @@
+#Tue Apr 12 17:34:24 IST 2016
+module.name=InternalAuditResources
+adapter.type=BIZLOGIC
+module.version=8
+module.type=com.savvion.studio.designer.module.common.resources
+adapter.version=8.1
+module.id=16c401e3-1941-4e76-a6be-6dcfc38d86dd

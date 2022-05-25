@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;TechDeskV2/TechDesk_V2/soapui.log&apos;" deleteContents="false" description="Delete resource &apos;TechDeskV2/TechDesk_V2/soapui.log&apos;" element1="/TechDeskV2/TechDesk_V2/soapui.log" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1635096162471"/>
+</session>

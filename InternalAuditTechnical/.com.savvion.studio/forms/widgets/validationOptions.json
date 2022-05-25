@@ -1,0 +1,248 @@
+{ 'validateOn':{'arg':'validateOn',
+                'label':'%widget.validation.arg.validateOn',
+                'type':'STRING',
+                'defaultValue':'[\'blur\']',
+                'description':'',
+                'values':[
+                  {'name':'%widget.validation.arg.validateOn.blur', 'value':'[\'blur\']', 'description':''}, 
+                  {'name':'%widget.validation.arg.validateOn.change', 'value':'[\'change\']', 'description':''},
+                  {'name':'%widget.validation.arg.validateOn.blurChange', 'value':'[\'blur\', \'change\']', 'description':''}
+                ]
+  },
+ 'invalidValue':{'arg':'invalidValue',
+                'label':'%widget.validation.arg.invalidValue',
+                'type':'STRING',
+                'defaultValue':'-1',
+                'description':''
+  },
+ 'radioRequiredMsg':{'arg':'radioRequiredMsg',
+                'label':'%widget.validation.arg.radioRequiredMsg',
+                'type':'STRING',
+                'defaultValue':'%widget.validation.arg.radioRequiredMsg.defaultValue',
+                'description':''
+  },
+
+  'isRequired':{'arg':'isRequired',
+                'label':'%widget.validation.arg.isRequired',
+                'type':'BOOLEAN',
+                'defaultValue':'true',
+                'description':'',
+                'values':[
+                  {'name':'%widget.label.true', 'value':'true', 'description':''},
+                  {'name':'%widget.label.false', 'value':'false', 'description':''}
+                ]
+  },
+  'useCharacterMasking':{'arg':'useCharacterMasking',
+                        'label':'%widget.validation.arg.useCharacterMasking',
+                        'type':'BOOLEAN',
+                        'defaultValue':'false',
+                        'description':'',
+                        'values':[
+                                  {'name':'%widget.label.true', 'value':'true', 'description':''},
+                                  {'name':'%widget.label.false', 'value':'false', 'description':''}
+                                 ]
+  },
+  'minValue':{'arg':'minValue',
+               'label':'%widget.validation.arg.minValue',
+               'type':'STRING',
+               'defaultValue':-1,
+               'description':'',
+  },
+  'maxValue':{'arg':'maxValue',
+              'label':'%widget.validation.arg.maxValue',
+              'type':'STRING',
+              'defaultValue':1000,
+              'description':'',
+  },
+  'minChars':{'arg':'minChars',
+              'label':'%widget.validation.arg.minChars',
+              'type':'INTEGER',
+              'defaultValue':0,
+              'description':'',
+  },
+  'maxChars':{'arg':'maxChars',
+              'label':'%widget.validation.arg.maxChars',
+              'type':'INTEGER',
+              'defaultValue':1000,
+              'description':'',
+  },
+  'minSelections':{'arg':'minSelections',
+              'label':'%widget.validation.arg.minSelections',
+              'type':'INTEGER',
+              'defaultValue':0,
+              'description':'',
+  },
+  'maxSelections':{'arg':'maxSelections',
+              'label':'%widget.validation.arg.maxSelections',
+              'type':'INTEGER',
+              'defaultValue':1000,
+              'description':'',
+  },
+  'formatDate':{'arg':'format',
+                'label':'%widget.validation.arg.formatDate',
+                'type':'STRING',
+                'defaultValue':'mm/dd/yy',
+                'description':'',
+                'values':[
+                  {'name':'mm/dd/yy', 'value':'mm/dd/yy', 'description':''},
+                  {'name':'mm/dd/yyyy', 'value':'mm/dd/yyyy', 'description':''},
+                  {'name':'dd/mm/yyyy', 'value':'dd/mm/yyyy', 'description':''},
+                  {'name':'dd/mm/yy', 'value':'dd/mm/yy', 'description':''},
+                  {'name':'yy/mm/dd', 'value':'yy/mm/dd', 'description':''},
+                  {'name':'yyyy/mm/dd', 'value':'yyyy/mm/dd', 'description':''},
+                  {'name':'mm-dd-yy', 'value':'mm-dd-yy', 'description':''},
+                  {'name':'dd-mm-yy', 'value':'dd-mm-yy', 'description':''},
+                  {'name':'yyyy-mm-dd', 'value':'yyyy-mm-dd', 'description':''},
+                  {'name':'mm.dd.yyyy', 'value':'mm.dd.yyyy', 'description':''},
+                  {'name':'dd.mm.yyyy', 'value':'dd.mm.yyyy', 'description':''}
+                ]
+  },
+  'formatTime':{'arg':'format',
+                'label':'%widget.validation.arg.formatTime',
+                'type':STRING',
+                'defaultValue':'HH:mm',
+                'description':'',
+                'values':[
+                  {'name':'HH:mm', 'value':'HH:mm', 'description':''},
+                  {'name':'HH:mm:ss', 'value':'HH:mm:ss', 'description':''},
+                  {'name':'hh:mm tt', 'value':'hh:mm tt', 'description':'%widget.validation.arg.formatTime.amPm'},
+                  {'name':'hh:mm:ss tt', 'value':'hh:mm:ss tt', 'description':'%widget.validation.arg.formatTime.amPm'},
+                  {'name':'hh:mm t', 'value':'hh:mm t', 'description':'%widget.validation.arg.formatTime.aP'},
+                  {'name':'hh:mm;ss t', 'value':'hh:mm;ss t', 'description':'%widget.validation.arg.formatTime.aP'}
+                ]
+  },
+  'formatCreditCard':{'arg':'format',
+                      'label':'%widget.validation.arg.formatCreditCard',
+                      'type':STRING',
+                      'defaultValue':'visa',
+                      'description':'',
+                      'values':[
+                        {'name':'%widget.validation.arg.formatCreditCard.visa', 'value':'visa', 'description':''},
+                        {'name':'%widget.validation.arg.formatCreditCard.mastercard', 'value':'mastercard', 'description':''},
+                        {'name':'%widget.validation.arg.formatCreditCard.amex', 'value':'amex', 'description':''},
+                        {'name':'%widget.validation.arg.formatCreditCard.discover', 'value':'discover', 'description':''},
+                        {'name':'%widget.validation.arg.formatCreditCard.dinersclub', 'value':'dinersclub', 'description':''}
+                      ]
+  },
+  'formatZipCode':{'arg':'format',
+                   'label':'%widget.validation.arg.formatZipCode',
+                   'type':'STRING',
+                   'defaultValue':'zip_us5',
+                   'description':'',
+                   'values':[
+                    {'name':'%widget.validation.arg.formatZipCode.5digit', 'value':'zip_us5', 'description':''},
+                    {'name':'%widget.validation.arg.formatZipCode.9digit', 'value':'zip_us9', 'description':''},
+                    {'name':'%widget.validation.arg.formatZipCode.uk', 'value':'zip_uk', 'description':''},
+                    {'name':'%widget.validation.arg.formatZipCode.canada', 'value':'zip_canada', 'description':''},
+                    {'name':'%widget.validation.arg.formatZipCode.custom', 'value':'zip_custom', 'description':''}
+                   ]
+  },
+  'pattern':{'arg':'pattern',
+             'label':'%widget.validation.arg.pattern',
+             'type':'STRING',
+             'defaultValue':'',
+             'description':'%widget.validation.arg.pattern.description'
+  },
+  'formatCurrency':{'arg':'format',
+                    'label':'%widget.validation.arg.formatCurrency',
+                    'type':'STRING',
+                    'defaultValue':'comma_dot',
+                    'description':'',
+                    'values':[
+                      {'name':'%widget.validation.arg.formatCurrency.commaDot', 'value':'comma_dot', 'description':''},
+                      {'name':'%widget.validation.arg.formatCurrency.dotComma', 'value':'dot_comma', 'description':''}
+                    ]
+  },
+  'formatIP':{'arg':'format',
+              'label':'%widget.validation.arg.formatIP',
+              'type':'STRING',
+              'defaultValue':'ipv4',
+              'description':'',
+              'values':[
+                {'name':'%widget.validation.arg.formatIP.ipv4', 'value':'ipv4', 'description':''},
+                {'name':'%widget.validation.arg.formatIP.ipv6', 'value':'ipv6', 'description':''},
+                {'name':'%widget.validation.arg.formatIP.ipv4Ipv6', 'value':'ipv6_ipv4', 'description':''}
+              ]     
+  },
+  'formatPhone':{'arg':'format',
+              'label':'%widget.validation.arg.formatPhone',
+              'type':'STRING',
+              'defaultValue':'phone_number',
+              'description':'',
+              'values':[
+                {'name':'%widget.validation.arg.formatPhone.phoneNumber', 'value':'phone_number', 'description':''},
+                {'name':'%widget.validation.arg.formatPhone.phoneCustom', 'value':'phone_custom', 'description':''}
+              ]     
+  },
+  'customRegularExpression':{'arg':'regExp',
+                   'label':'%widget.validation.arg.customRegularExpression',
+                   'type':'STRING',
+                   'defaultValue':'',
+                   'description':''
+  },
+  'textfieldRequiredMsg':{'arg':'textfieldRequiredMsg',
+              'label':'%widget.validation.arg.textfieldRequiredMsg',    
+              'type':'MESSAGE',
+              'defaultValue':'%widget.validation.arg.textfieldRequiredMsg.defaultValue',
+              'description':'%widget.validation.error.message'
+  },
+  'checkboxRequiredMsg':{'arg':'checkboxRequiredMsg',
+              'label':'%widget.validation.arg.checkboxRequiredMsg',
+              'type':'MESSAGE',
+              'defaultValue':'%widget.validation.arg.checkboxRequiredMsg.defaultValue',
+              'description':'%widget.validation.error.message'
+  },
+  'checkboxMinSelectionsMsg':{'arg':'checkboxMinSelectionsMsg',
+              'label':'%widget.validation.arg.checkboxMinSelectionsMsg',
+              'type':'MESSAGE',
+              'defaultValue':'%widget.validation.arg.checkboxMinSelectionsMsg.defaultValue',
+              'description':'%widget.validation.error.message'
+  },
+  'checkboxMaxSelectionsMsg':{'arg':'checkboxMaxSelectionsMsg',
+              'label':'%widget.validation.arg.checkboxMaxSelectionsMsg',
+              'type':'MESSAGE',
+              'defaultValue':'%widget.validation.arg.checkboxMaxSelectionsMsg.defaultValue',
+              'description':'%widget.validation.error.message'
+  },
+  'requiredValidationMsg': {'arg':'requiredValidationMsg',
+  						'label':'%widget.validation.arg.requiredValidationMsg',
+  						'type':'MESSAGE',
+  						'defaultValue':'%widget.validation.arg.requiredValidationMsg.defaultValue',
+  						'description':'%widget.validation.arg.requiredValidationMsg.description'
+  },
+  'textareaCounterType':{'arg':'counterType',
+             'label':'%widget.validation.arg.textareaCounterType',
+             'type':'String',
+             'defaultValue':'chars_remaining',
+             'description':'',
+             'values':[
+               {'name':'%widget.validation.arg.textareaCounterType.charsRemaining', 'value':'chars_remaining', 'description':''},
+               {'name':'%widget.validation.arg.textareaCounterType.charsCount', 'value':'chars_count', 'description':''}
+             ]
+  },
+  'textareaHint':{'arg':'hint',
+              'label':'%widget.validation.arg.textareaHint',
+              'type':'String',
+              'defaultValue':'%widget.validation.arg.textareaHint.defaultValue',
+              'description':''
+  },
+
+  'textareaValidationMsg':{'arg':'validation_message',
+              'label':'Textarea Validation Message',
+              'type':'MESSAGE',
+              'defaultValue':'Please enter a valid value.',
+              'description':'%widget.validation.error.message'
+  },
+  'textAreaValidationMsgMin':{'arg':'validation_message_minChars',
+              'label':'%widget.validation.arg.textAreaValidationMsgMin',
+              'type':'MESSAGE',
+              'defaultValue':'%widget.validation.arg.textAreaValidationMsgMin.defaultValue',
+              'description':'%widget.validation.error.message'
+  },
+  'textAreaValidationMsgMax':{'arg':'validation_message_maxChars',
+              'label':'%widget.validation.arg.textAreaValidationMsgMax',
+              'type':'MESSAGE',
+              'defaultValue':'%widget.validation.arg.textAreaValidationMsgMax.defaultValue',
+              'description':'%widget.validation.error.message'
+  }
+}                         

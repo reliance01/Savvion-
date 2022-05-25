@@ -1,0 +1,13 @@
+#Thu May 19 17:47:04 IST 2016
+publishing.type=Copy_Files_Only
+application.name=Marcom_OnlineFlow
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=Marcom_OnlineFlow
+module.id=f01b016e-fae5-4d40-9042-28746e971902
+module.version=8
+application.mainappfile=processtemplates/Marcom_OnlineFlow.spt
+module.name=Marcom_OnlineFlow
+application.root=Marcom_OnlineFlow

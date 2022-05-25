@@ -1,0 +1,26 @@
+<%@ page import="com.savvion.sbm.bizmanage.api.BizManageBean"%>
+<%@ page import="com.savvion.sbm.bpmportal.util.PortalNumberFormatUtil"%>
+
+<% 
+   BizManageBean bm = (BizManageBean)session.getAttribute("bizManage");
+%>
+   <script type="text/javascript" src="../javascript/ext/src/locale/ext-lang-<%=bm.getLocale().getLanguage() %>.js" charset="UTF-8"></script>
+<%
+   if(null == isExtUxDtTime || !isExtUxDtTime) {
+%>
+        <script type="text/javascript" src="../javascript/jscalendar/calendar.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="../javascript/jscalendar/calendar-<%=bm.getLocale().getLanguage() %>.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="../javascript/jscalendar/calendar-setup-<%=bm.getLocale().getLanguage() %>.js" charset="UTF-8"></script>
+        <script type='text/javascript' src="../javascript/bizcalendar.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="../javascript/bizcalendar-<%=bm.getLocale().getLanguage() %>.js" charset="UTF-8"></script>
+ 
+<%
+   } 
+%>   
+   
+<script type="text/javascript">
+
+   function getLocalizedDecimalSeparator(){
+   	return '<%= PortalNumberFormatUtil.getDecimalSeparator(bm.getLocale()) %>';
+   }
+</script>   

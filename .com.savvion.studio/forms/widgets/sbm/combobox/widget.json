@@ -1,0 +1,41 @@
+{
+    'name': 'Combobox',
+	'label': '%widget.combobox.label',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/combobox.jpg',
+    'description': '%widget.combobox.description',
+    'category': 'Combobox',
+    'args': [
+		{'size':{'label':'%widget.arg.dropdown.label', 'type':'NUMBER', 'defaultValue': '20'}},
+		{'readonly':{'label':'%widget.arg.readonly.label', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'visible':{'label':'%widget.arg.visible.label', 'type':'BOOLEAN', 'defaultValue': 'true'}},
+		{'disabled':{'label':'%widget.arg.disabled.label', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+        {'cascade':{'label':'%widget.arg.cascade.label', 'type':'BOOLEAN', 'defaultValue': 'false'}},	
+        {'level':{'label':'%widget.arg.level.label', 'type':'NUMBER', 'defaultValue': '0'}}	            	
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/combobox/onChange',
+					'/sbm/combobox/onFocus',
+					'/sbm/combobox/onBlur']
+    },
+   'validation': [
+        {'type':'none',
+		  'label':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+		 'label':'default',
+          'options':['validateOn', 'isRequired', 'invalidValue']
+        }
+    ]
+
+}

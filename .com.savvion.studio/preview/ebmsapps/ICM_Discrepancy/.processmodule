@@ -1,0 +1,13 @@
+#Sat Jul 16 12:03:17 IST 2016
+publishing.type=Copy_Files_Only
+application.name=ICM_Discrepancy
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=ICM_Discrepancy
+module.id=a759ddf1-1264-46aa-a2fb-262d2fed6b6a
+module.version=8
+application.mainappfile=processtemplates/ICM_Discrepancy.spt
+module.name=ICM_Discrepancy
+application.root=ICM_Discrepancy

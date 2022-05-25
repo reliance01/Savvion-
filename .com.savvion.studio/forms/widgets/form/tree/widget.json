@@ -1,0 +1,59 @@
+ {
+    'name': 'Tree',
+    'type': 'Ext',
+    'version': '2.1',
+    'jmakiVersion': '1.8.0',
+    'image': 'images/ext-tree.jpg',
+    'description': '%widget.tree.description',
+    'modelURL' : 'http://wiki.java.net/bin/view/Projects/jMakiTreeModel',
+    'category': 'Tree',
+    'label':'%widget.tree.label',
+    'args': [
+                {'width':{'label':'%widget.label.width','type':'DIMENSION','defaultValue':'auto'}},
+                {'height':{'label':'%widget.label.height','type':'DIMENSION','defaultValue':'auto'}},
+                {'showRoot':{'label':'%widget.label.show.root.node','type':'BOOLEAN','defaultValue':true}}
+        ], 
+    'value': {'required':'true',
+    'type': 'OBJECT',
+    'defaultValue':{ 
+     	'root':{
+               'id' : 'root',
+               'label' : 'Tree Root Node',
+               'expanded' : true,
+               'action' : {
+                   'topic' : '/tree/foo',
+                   'message' : { 'url' : 'someURL'}
+                },
+                'children' : [
+                     { 'label' : 'Node 1.1'},
+                     { 'label' : 'Node 1.2',
+                       'id' : 'foo2',
+                       'expanded' : true,
+                       'children' : [
+                           { 'label' : 'Node 3.1',
+                             'id' : 'foo',
+                             'action' : {'topic' : '/tree/foo2',
+                                         'message' : 'some message'
+                                        }
+                           }
+                        ]
+                    }
+                ]
+            }
+        }
+     },
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'resources' : [
+                '../resources/libs/ext/resources'
+               ]
+        }
+    },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/Ext/tree/onClick','/Ext/tree/onCollapse','/Ext/tree/onExpand'],
+       'description':'All of them publish to their topicName when a tree node is clicked, collapsed or expanded. All of them publish an object with id and value. The value is {label}.'
+    }    
+    
+  }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ICM_Discrepancy</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.wst.jsdt.core.javascriptValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.common.project.facet.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.aurea.cxprocess.studio.build.bizlogicBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.aurea.cxprocess.studio.bizlogicNature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
+		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>processtemplates/ICM_Discrepancy.ICM Discrepancy Approval.js</name>
+			<type>1</type>
+			<location>C:/Users/Rajat/AppData/Local/Temp/ICM_Discrepancy.ICM Discrepancy Approval994448291747233461.js</location>
+		</link>
+		<link>
+			<name>processtemplates/ICM_Discrepancy.Tax Refund Approval.js</name>
+			<type>1</type>
+			<location>C:/Users/Rajat/AppData/Local/Temp/ICM_Discrepancy.Tax Refund Approval4373995090867176403.js</location>
+		</link>
+		<link>
+			<name>processtemplates/ICM_Discrepancy.Tax Refund Verifier.js</name>
+			<type>1</type>
+			<location>C:/Users/Rajat/AppData/Local/Temp/ICM_Discrepancy.Tax Refund Verifier8144399160524333799.js</location>
+		</link>
+	</linkedResources>
+</projectDescription>

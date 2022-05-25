@@ -1,0 +1,15 @@
+application std
+module compatibility_support
+
+//
+// to support compatibility with 3.0(2.0)
+//
+val NULL = "NULL";
+val null: nil = nil;
+
+fun elements(xs: list<`x>): iterator<`x> {
+    return xs.iterator();
+}
+fun update(x: `x): `x {
+    return x;
+}

@@ -1,0 +1,229 @@
+
+/*for menu*/
+.SbmDashboardLayoutMenu{
+	position:absolute;
+	left:706px;
+	_left:699px;
+	top:38px;
+	width:150px;
+	z-index:999999999;
+	background-color: #FFFFFF;
+	border: 1px solid #7B86A5;
+
+	
+}
+.SbmDashboardLayoutMenu span{ position:relative;
+height:29px;
+padding:2px;
+display:block;
+}
+.SbmDashboardLayoutMenu a{ position:relative;
+border:1px solid #ffffff;
+display:block;
+color:#000000;
+text-decoration:none;
+}
+.SbmDashboardLayoutMenu a:hover{ position:relative;
+border:1px solid #5AB2EF;
+background-color:#EFF7FF;
+white-space:nowrap;
+}
+.SbmDashboardLayoutMenu a:active{ position:relative;
+border:1px solid #5AB2EF;
+background-color:#5AB2EF;
+white-space:nowrap;
+color:#FFFFFF;
+}
+.SbmDashboardLayoutMenu a.Selected{ position:relative;
+border:1px solid #5AB2EF;
+background-color:#EFF7FF;
+white-space:nowrap;
+}
+.SbmDashboardLayoutMenu img{ 
+margin-right:4px;
+}
+.SbmDashboardLayoutMenuLink {width:152px; 
+display:block; 
+
+}
+.SbmDashboardLayoutMenuLink a {
+	background-image: url(sbm_btn_down_menuoption.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	border:#EFF7FF solid 1px;
+	padding:1px;
+}
+.SbmDashboardLayoutMenuLink a:hover {
+	background-image: url(sbm_btn_down_menuoption.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	border:#5AB2EF solid 1px;
+}
+/*for menu*/
+
+
+#layout-outer-side-decoration {
+width: 100%;/*760px*/
+}
+
+#layout-content-container { padding:4px;}
+td.layout-column-spacer {}
+td.layout-column-spacer div{
+width:8px;
+display:block;}
+
+#layout-outer-side-decoration {
+margin-left: auto;
+margin-right: auto;
+}
+#layout-inner-side-decoration {
+}
+#layout-box {
+background-color: #FFFFFF;
+/*margin-top: 10px;*/
+text-align: center;
+width: 100%;
+}
+
+#layout-content-outer-decoration {
+z-index: 0;
+}
+#layout-bottom-container {
+text-align: left;
+}
+.layout-add-select-style {
+}
+.portal-add-content {
+background-color: #FFFFFF;
+border: 3px solid #6699CC;
+padding: 8px;
+}
+#layout-column_column-1,
+#layout-column_column-2,
+#layout-column_column-3,
+#layout-column_column-4,
+#layout-column_column-5
+{
+min-height: 75px;
+_height:75px;/*for ie*/
+
+}
+
+.layout-column-highlight {
+background: url(diagonal-lines.gif) scroll repeat;
+}
+/******************************************************************************/
+/* Portlet CSS                                                                */
+/******************************************************************************/
+/* Liferay Portlet */
+.portlet-dragging-placeholder {
+background-color: #EAF2FF;
+}
+#portlet-place-holder DIV {
+background-color: #B6CBEB;
+}
+.portlet-loading {
+background: url(loading_animation.gif) no-repeat top center;
+text-align: center;
+}
+.portlet-container {
+background-color: #FFFFFF;
+position: relative;
+}
+.portlet-box {
+border: 1px solid #6699CC;
+margin-top: 1px;
+}
+.portlet-minimum-height {
+_height: 1px;/*for ie*/
+}
+.portlet-header-bar {
+border: 1px solid #6699CC;
+background: url(button_gradient.gif) scroll repeat-x center left;
+position: relative;
+}
+.portlet-borderless-container { position: relative; }
+.portlet-borderless-bar { text-align: left; font-size: 0.8em; }
+.portlet-wrap-title {
+height: 20px;
+position: relative;
+}
+.portlet-title {
+color: #4A517D;
+font-weight: bold;
+position: absolute;
+top: 3px;
+left: 5px;
+font-size:8pt; /*for 1 col layout*/
+white-space:nowrap; /*for 1 col layout*/
+}
+.portlet-small-icon-bar {
+padding-left: 2px;
+position: absolute;
+top: 1px;
+_top: 3px;/*for ie*/
+right: 2px;
+}
+.portlet-top-decoration {
+background: url(portlet_corner_ul.gif) no-repeat top left;
+height: 5px;
+}
+.portlet-top-decoration DIV {
+background: url(portlet_corner_ur.gif) no-repeat top right;
+height: 5px;
+}
+.portlet-top-decoration DIV DIV {
+background: #FFFFFF;
+border-top: 1px solid #6699CC;
+font-size: 0;
+height: 5px;
+margin: 0 5px 0 5px;
+}
+.portlet-inner-top {
+margin: 0 auto 0 auto;
+}
+.portlet-bottom-blank {
+margin-bottom: 5px;
+}
+.portlet-bottom-decoration {
+background: url(portlet_corner_bl.gif) no-repeat top left;
+height: 5px;
+}
+.portlet-bottom-decoration DIV {
+background: url(portlet_corner_br.gif) no-repeat top right;
+height: 5px;
+}
+.portlet-bottom-decoration DIV DIV {
+background: #FFFFFF;
+border-bottom: 1px solid #6699CC;
+font-size: 0;
+height: 5px;
+margin: 0 5px 0 5px;
+}
+.portlet-bottom-decoration-2 {
+background: transparent url(middle.gif) scroll repeat-x top;
+margin-bottom: 5px;
+width: 100%;
+}
+.portlet-bottom-decoration-2 DIV {
+background: transparent url(left.gif) scroll no-repeat top left;
+width: 100%;
+}
+.portlet-bottom-decoration-2 DIV DIV {
+background: transparent url(right.gif) scroll no-repeat top right;
+font-size: 0;
+height: 6px;
+width: 100%;
+}
+.SbmSummaryHelp, .SbmSummaryHelp A, .SbmSummaryHelp div,.SbmSummaryHelpHover A, .SbmSummaryHelpHover div{ margin:0px; padding:0px}
+
+.SbmSummaryHelp A{background:#FFFFFF url(sbm_dashboard_summary_help.gif) no-repeat left top; display:block; width:16px; height:16px; _width:18px; _height:18px;}
+
+.SbmSummaryHelp div{ display:none}
+
+.SbmSummaryHelpHover A{background:#FFFFFF url(sbm_dashboard_summary_help.gif) no-repeat -16px top; display:block; width:16px; height:16px; _width:18px; _height:18px; }
+
+.SbmSummaryHelpHover div{ position: absolute; display: block; background:#FFFFFF; padding:4px; border:#000000 1px solid; width:200px; margin:-2px 0px 0px 1px}
+
+.SbmSummaryHelpHover div .A{ position: absolute; display: block; background:#FFFFFF; padding:4px; border:#000000 1px solid; width:200px;}
+

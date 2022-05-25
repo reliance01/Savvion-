@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+<!--
+  <category label="Functions" path="functions" icon="fldr_obj.gif"/>
+
+  <item label="New Function" path="functions" icon="template.gif">
+    <list content="FUNCTION" allowedContent="EXPRESSION" prompt="Drop expressions here">
+<template>
+<![CDATA[
+com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+gel.setDataslots(jst.getDataSlotRealValue(gel.toList(new String[]{${inputDataslots}})));
+
+${list}
+
+jst.setDataSlotValues(gel.getModifiedDataslots());
+]]>
+</template>
+    </list>
+  </item>
+
+-->
+</palette>

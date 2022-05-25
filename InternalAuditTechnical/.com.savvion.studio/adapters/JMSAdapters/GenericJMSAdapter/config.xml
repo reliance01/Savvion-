@@ -1,0 +1,14 @@
+<configform synchronous="true" version="1.2">
+    <block title="Hidden" description="Hidden" hidden="true">
+        <param name="_SEND" access="HIDDEN" description="Send Mode" type="java.lang.String" value="true"/>
+        <param name="_RECEIVE" access="HIDDEN" description="Receive Mode" type="java.lang.String" value="false"/>
+        <param name="_JMS_IN.PAYLOAD" access="HIDDEN" description="_JMS_IN.PAYLOAD" type="java.lang.String" value=""/>
+        <param name="_JMS_IN.PROPERTIES" access="HIDDEN" description="_JMS_IN.PROPERTIES" type="java.lang.String" value=""/>
+    </block>
+    <block title="Runtime Setup " description="JMS Adapter Configuration" hidden="false">
+        <param name="_CONNECTION_FACTORY" access="HIDDEN" description="Connection Factory" type="java.lang.String" value="jms/BMConnectionFactoryXA"/>
+        <param name="_DESTINATION" access="IO" description="Queue" type="java.lang.String" value=""/>
+        <param name="_CID" access="IO" description="Correlation ID" type="java.lang.String" value=""/>
+        <param name="_CID_PREFIX" access="HIDDEN" description="Correlation ID Prefix" type="java.lang.String" value=""/>
+    </block>
+</configform>

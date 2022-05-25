@@ -1,0 +1,307 @@
+A.SIDEBAR_TODO_LINK { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+        color: #000077;
+}
+
+A.SIDEBAR_STATUS_LINK {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+        color: #000077;
+}
+
+TD.BzSideBarContentToDoLABEL {
+	text-align: left;
+	vertical-align:	bottom;
+	color: #000000;
+	background-color: #ffffff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight:normal;
+}
+
+TD.BzSideBarContentStatusLABEL {
+	text-align: left;
+	vertical-align:	bottom;
+	color: #000000;
+	background-color: #ffffff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight:normal;
+}
+
+TD.BzSideBarContentToDoNoneLabel {
+	text-align: center;
+	vertical-align: bottom;
+	color: #000000; 
+	background-color: #ffffff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight:bold;
+}
+
+TD.BzSideBarContentStatusNoneLabel {
+	text-align: center;
+	vertical-align: bottom; 
+	color: #000000;
+	background-color: #ffffff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight:bold;
+}
+
+TD.BzSideBarContentToDoNUMBER {
+	text-align: right;
+	vertical-align: bottom; color: #000000;
+	background-color: #ffffff;
+	font-family:Arial, Helvetica,sans-serif;
+	font-size: 9pt;
+	font-weight:normal;
+}
+
+TD.BzSideBarContentStatusNUMBER {
+	text-align: right;
+	vertical-align: bottom;
+	color: #000000;
+	background-color: #ffffff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight:normal;
+}
+
+TD.BzAppTabBG { text-align: center; vertical-align: bottom; color:#666699; font-size: 8pt; font-weight:bold; font-family: Arial, Helvetica, sans-serif; }
+
+BODY {
+	layer-background-color: #FFFFFF;  /* Netscape specific */
+	background-color: #FFFFFF;
+	color: #000077;
+}
+
+.title {
+	layer-background-color:	#669966;	
+	background-color:	#669966;
+	font-family:		Arial, Helvetica, sans-serif;
+	font-size:		2em;
+	text-align:		center;
+	margin-right:		30%;
+}
+
+A.TODOLINK { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; text-align: left; color: #000077; }
+A.ASSIGNTOMELINK { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; text-align: left; color: #000077; }
+A.APPLICATIONLINK { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; text-align: left; color: #000077; }
+A.APPINFOLINK { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; text-align: left; color: #000077; }
+A.STATUSLINK { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; text-align: left; color: #000077; }
+A.SIDEBARLINK { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000077; }
+A.TOOLTIP { text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; text-align: left; color: #000077; }
+
+
+PRE { font-family:	Arial, Helvetica, sans-serif; }
+
+.message {
+	margin-top: 3em;	
+	text-align: center;
+	font-weight: bold;
+	background-color: #21248A;
+	color: #ffffff;
+}
+
+.error {
+	margin-top: 3em;	
+	text-align: left;
+	background-color: red;
+	font-weight: bold;
+}
+
+
+.main { /*	position:absolute; 
+		left: 15%; 
+		top: 1em; 
+		margin-top: 1em;
+		margin-left: 1em;
+		width: 80%;
+	*/
+	}
+
+
+.tableheadrow { }
+.tablehead { }
+
+/* Used for the color signaling priority */
+.tableheadel0 { text-align: left; width: 1em; }
+
+/* Long text column */
+TH.tableheadelLn { text-align: left; background-color: #E0F1FE; width: 60em; }
+.tableheadelSh { text-align: left; background-color: #E0F1FE; }
+.tableheadel { text-align: left; background-color: #E0F1FE; }
+.tablerow1 { /*	background-color: #00D000;*/ } 
+.tablerow2 { } 
+.tablerow1el { }
+
+/* First element in row 1 - it's a color */
+.tablerow1el1 { }
+.tablerow2el { /* background-color: #00000; */ } 
+
+.loginFrame { margin-left: 5em; margin-top: 5em; text-align: right;	width: 50%; }
+.label { font-weight: bold; background-color: #E0F1FE; font-family: Arial, Helvetica, sans-serif; }
+.labelForm { font-weight: bold; background-color: #E0F1FE; font-family: Arial, Helvetica, sans-serif; text-align: left; }
+.inputform { } 
+.inputfield { } 
+.inputrow { margin: 0.5em; } 
+
+.label1 { background-color: #D6F1FE; font-family: Arial, Helvetica, sans-serif; width: 20%; }
+.inputform1 { margin-left: 0%;} 
+.inputrow1 { text-align: left;} 
+.inputfield1 { text-align: right; } 
+
+#PCL {
+		font-family: Arial, Helvetica, sans-serif;
+		font-style: none;
+		font-weight: normal;
+		text-decoration: none;
+		font-size: 8pt;
+}
+
+#PTT { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; }
+
+#PST { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; }
+
+/****** Login Page CSS elements ******/
+
+BODY.BzLoginPageBG { font-family: Arial, Helvetica, sans-serif; text-align: center; background-color: #FFFFFF; }
+TD.BzLoginTableCell {font-family:Arial, Helvetica, sans-serif; font-size: 10pt; vertical-align:center; text-align:right;}
+TD.BzLoginEntriesColumn { font-family: Arial, Helvetica, sans-serif; text-align: left; vertical-align: top; }
+TD.BzLoginAboutColumn { font-family: Arial, Helvetica, sans-serif; vertical-align: top; }
+TD.BzLoginAboutTitle { font-family: Arial, Helvetica, sans-serif; background-color: #CCCCFF; }
+TD.BzLoginFooter { font-family: Arial, Helvetica, sans-serif; text-align: center; }
+
+/****** Common frame page elements ******/
+TH.BzSortHead { text-align: left; background-color: #9999FF; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; }
+TD.BzHeaderEnum { text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #666699 }
+TD.BzHeaderDirection { text-align: right; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #666699 }
+TD.BzOverdue { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: bold; color: #CC3300 }
+B.BzRedBold { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; color: #CC3300 }
+B.BzGreenBold { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; color: #009933 }
+I.BzDateline { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; font-style: italic; color: #BBBBBB }
+A.BzNoUnderline { text-decoration: none; color: #000000; }
+
+/****** ToDo Page CSS elements ******/
+
+BODY.BzToDoPageBG { background-color: #FFFFFF; }
+TR.BzToDoTableHeadRow {}
+TH.BzToDoTableHead { text-align: left; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; font-style: normal; }
+TH.BzToDoTableDataHead { text-align: left; background-color: #CCCCCC; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; font-style: normal; }
+TD.BzToDoTableCell { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; }
+TD.BzToDoTableBG { text-align: center; vertical-align: top; background-color: #FFFFFF; font-family:Arial, Helvetica, sans-serif; font-size: 9pt;}}
+TD.BzToDoTabBG { text-align: center; vertical-align: bottom; background-color: #6262FF; font-family:Arial, Helvetica, sans-serif; font-size: 9pt;}}
+
+TR.BzToDoTabEmptyRow { background-color: #8080FF; }
+TD.BzToDoTabEmptyColumn { background-color: #8080FF; }
+TH.BzToDoSummary { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; }
+
+.BzToDoTableRow0 { background-color: #FFFFFF; }
+.BzToDoTableRow1 { background-color: #EEEEEE; }
+
+TD.BzToDoTableSubItem1 { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt }
+TD.BzToDoTableSubItem1Overdue { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; color: #CC3300; font-weight: bold; }
+TD.BzToDoTableSubItem2 { text-align: right; vertical-align: top; font-style: italic; font-family:Arial, Helvetica, sans-serif; font-size: 9pt;}
+TD.BzToDoTableSubItem2Overdue { text-align: right; vertical-align: top; font-style: italic; font-weight: bold; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; color: #CC3300; }
+
+/****** Status Page CSS elements ******/
+
+BODY.BzStatusPageBG { background-color: #FFFFFF; }
+
+TR.BzStatusTableHeadRow {}
+TH.BzStatusTableHead { text-align: left; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; }
+TD.BzStatusTableCell { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; }
+TD.BzStatusTableBG { text-align: center; vertical-align: top; background-color: #FFFFFF; }
+TD.BzStatusTabBG { text-align: center; vertical-align: bottom; }
+TH.BzStatusSummary { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; }
+
+TR.BzStatusTabEmptyRow { background-color: #8080FF; }
+TD.BzStatusTabEmptyColumn { background-color: #8080FF; }
+
+.BzStatusTableRow0 { background-color: #FFFFFF; }
+.BzStatusTableRow1 { background-color: #EEEEEE; }
+
+
+/****** Application Page CSS elements ******/
+
+BODY.BzAppPageBG { background-color: #FFFFFF; }
+
+TR.BzAppTableHeadRow {}
+TH.BzAppTableHead { text-align: left; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; }
+TD.BzAppTableCell { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; }
+TD.BzAppTableBG { text-align: center; vertical-align: top; background-color: #FFFFFF; }
+TD.BzAppTabBG { text-align: center; vertical-align: bottom; color:#666699; font-size: 8pt; font-weight:bold; font-family: Arial, Helvetica, sans-serif; }
+TH.BzAppSummary { text-align: left; vertical-align: top; font-family:Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; }
+
+TR.BzAppTabEmptyRow { background-color: #6C75B3; }
+TD.BzAppTabEmptyColumn { background-color: #6C75B3; }
+
+.BzAppTableRow0 { background-color: #FFFFFF; }
+.BzAppTableRow1 { background-color: #EEEEEE; }
+
+B.BzAppTitle { color: #FFFFFF; }
+
+
+/****** SideBar CSS elements ******/
+
+BODY.BzSideBarPageBG { background-color: #FFFFFF; font-family:Arial, Helvetica, sans-serif; }
+
+TD.BzSideBarColumnHead { text-align: left; background-color: #FFFFFF; color:#666699; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold;}
+TD.BzSideBarBlock { text-align: left; margin-left: auto; background-color: #FFFFFF; font-family:Arial, Helvetica, sans-serif; font-size: 10pt; font-weight:normal;}
+TD.BzSideBarContentBlock {text-align: right; vertical-align: bottom; color: #000000; background-color: #ffffff; font-family:Arial, Helvetica, sans-serif; font-size: 10pt; font-weight:normal;}
+
+DIV.BzSideBarListStyle { font: small; padding-left: 1% }
+
+
+/****** Command Area CSS elements ******/
+
+BODY.BzCmdsAreaPageBG { background-color: #6C75B3; }
+
+BODY.BzCmdsArea { background-color: #6C75B3; }
+
+
+/****** BizSite Application Area CSS elements ******/
+
+BODY.BzBizSiteAppPageBG { background-color: #FFFFFF; }
+
+
+/****** Error Page CSS elements ******/
+
+BODY.BzErrorPageBG {
+       text-align: center;
+       background-color: #FFFFFF;
+       font-family:Arial, Helvetica, sans-serif
+}
+
+TD.BzErrorTitle {
+       text-align: center;
+       vertical-align: bottom;
+       color: #000000;
+       background-color: #FFFFFF;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 14pt;
+       font-weight: normal
+}
+
+TD.BzErrorMessage {
+       text-align: center;
+       vertical-align: bottom;
+       color: #000000;
+       background-color: #FFFFFF;
+       font-family:Arial, Helvetica, sans-serif;
+       font-size: 10pt;
+       font-weight:normal
+}
+
+TD.BzErrorLink {
+       text-align: center;
+       vertical-align: bottom;
+       color: #000000;
+       background-color: #ffffff;
+       font-family:Arial, Helvetica, sans-serif;
+       font-size: 10pt;
+       font-weight:normal
+}
+

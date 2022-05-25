@@ -1,0 +1,43 @@
+{
+    'name': 'Editor',
+    'type': 'yahoo',
+    'version': '1.0',
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-editor.jpg',
+    'description': 'A rich text editor.',
+    'category': 'Editor',
+    'value': {
+        'required':'false', 
+        'type': 'STRING', 
+        'defaultValue': 'Edit Me Please'},
+    'config' : {
+        'type' :
+        { 'id' : 'yahoo.editor', 
+          'libs' : [
+          '../resources/libs/yahoo/v2.4.0/utilities/utilities.js',
+          '../resources/libs/yahoo/v2.4.0/container/container-min.js',
+          '../resources/libs/yahoo/v2.4.0/menu/menu-min.js',
+          '../resources/libs/yahoo/v2.4.0/button/button-min.js',
+          '../resources/libs/yahoo/v2.4.0/editor/editor-beta-min.js'
+          ],
+          'styles': [
+              '../resources/libs/yahoo/v2.4.0/fonts/fonts-min.css',
+              '../resources/libs/yahoo/v2.4.0/container/assets/skins/sam/container.css',
+              '../resources/libs/yahoo/v2.4.0/menu/assets/skins/sam/menu.css',
+              '../resources/libs/yahoo/v2.4.0/button/assets/skins/sam/button.css',
+              '../resources/libs/yahoo/v2.4.0/editor/assets/skins/sam/editor.css'],
+          'resources': [
+              '../resources/libs/yahoo/v2.4.0/fonts',
+              '../resources/libs/yahoo/v2.4.0/assets',
+              '../resources/libs/yahoo/v2.4.0/container/assets',
+              '../resources/libs/yahoo/v2.4.0/menu/assets',
+              '../resources/libs/yahoo/v2.4.0/button/assets',
+              '../resources/libs/yahoo/v2.4.0/editor/assets']  
+        }
+    },
+    'topicInfo' : {
+	'type' : 'publish',
+	'topicName' : '/yahoo/editor/onSave',
+	'description' : 'Publish contents of the editor when Save event occurs'
+    }    	
+}

@@ -1,0 +1,872 @@
+application BizLogicAPI
+module wf_util
+import std::class_lib;
+
+type JVector = ~java.util.Vector;
+type JHashtable = ~java.util.Hashtable;
+type JAdmin = ~BizLogicAPI.jclass.WF$Admin;
+type JWorkitem = ~BizLogicAPI.jclass.WF$Workitem;
+type JSession = ~BizLogicAPI.jclass.WF$Session;
+type JProcess = ~BizLogicAPI.jclass.WF$Process;
+type JProcessInstance = ~BizLogicAPI.jclass.WF$ProcessInstance;
+type JProcessTemplate = ~BizLogicAPI.jclass.WF$ProcessTemplate;
+
+
+fun jarray2list(vs: jarray<`x>[]): list<`x> {
+       val lv = list{};
+       if (vs = nil) return lv;
+       for (var i = 0; i < vs.length; i++) {
+           lv.add(vs[i]);
+       }
+       return lv;
+}
+
+fun list2jarray(lv: list<`x>, jarr: jarray<`x>[]): void {
+       var i = 0;
+       if (lv != nil)
+       {
+           for (val iter = lv.iterator(); iter.hasNext(); i++) {
+               val js = iter.next();
+               jarr[i] := js;
+       }
+       }
+}
+
+fun list2jarray(lv: list<string>): jarray<string>[] {
+       if (lv != nil)
+       {
+           val jarr = new jarray<string>[lv.size()];
+           list2jarray(lv, jarr);
+           return jarr;
+       }
+       return new jarray<string>[0];
+}
+
+
+fun int_list_to_jarray(lv: list<int>): jarray<int>[] {
+       if (lv != nil)
+       {
+           val jarr = new jarray<int>[lv.size()];
+           var i = 0;
+           for (val iter = lv.iterator(); iter.hasNext(); i++) {
+           jarr[i] := iter.next();
+           }
+           return jarr;
+       }
+       return new jarray<int>[0];
+}
+
+fun toStringList(vs: JVector): list<string> {
+       val lv: list<string> = list{};
+       if (vs = nil) return lv;
+       for (val iter = vs.iterator(); iter.hasNext(); ) {
+       val s = toString(iter.next());
+       lv.add(s);
+       }
+       return lv;
+}
+
+fun toStringVector(lv: list<any>): JVector {
+       val jvec = new JVector();
+       if (lv = nil) return jvec;
+       for (val iter = lv.iterator(); iter.hasNext(); ) {
+       val v = iter.next();
+       jvec.add(toString(v)); // TBI. we assume FYI is string list..
+       }
+       return jvec;
+}
+
+public fun table2Map(jtbl: JHashtable): map<string, string> {
+       val mv: map<string, string> = map{};
+       if (jtbl = nil) return mv;
+       for (val iter = jtbl.keys(); iter.hasMoreElements(); ) {
+           val name = cast(string)iter.nextElement();
+           val value = jtbl.get(name); // String or Long.. TBI..
+           mv[name] := toString(value);
+       }
+       return mv;
+}
+
+public fun table2map1(jtbl: JHashtable): map<string, list<string>> {
+       val mv: map<string, list<string>> = map{};
+       if (jtbl = nil) return mv;
+       for (val iter = jtbl.keys(); iter.hasMoreElements(); ) {
+           val name = cast(string)iter.nextElement();
+           val value = cast(jarray<string>[])jtbl.get(name);
+           mv[name] := jarray2list(value);
+       }
+       return mv;
+}
+
+public fun table2map2(jtbl: JHashtable): map<int, list<string>> {
+       val mv: map<int, list<string>> = map{};
+       if (jtbl = nil) return mv;
+       for (val iter = jtbl.keys(); iter.hasMoreElements(); ) {
+           val id = cast(int)iter.nextElement();
+           var value = cast(JVector)jtbl.get(id);
+           mv[id] := toStringList(value);
+       }
+       return mv;
+}
+
+public fun table2map3(vec: JVector): list<map<string, string>> {
+       val lv: list<map<string, string>> = list{};
+       if (vec = nil) return lv;
+       for (val iter = vec.iterator(); iter.hasNext(); ) {
+           val jtbl = cast(JHashtable)iter.next();
+           lv.add(table2Map(jtbl));
+       }
+       return lv;
+}
+
+public fun map2table(mv: map<string, any>): JHashtable {
+       val jtbl = new JHashtable();
+       if (mv = nil) return jtbl;
+       for (val iter = mv.iterator(); iter.hasNext(); ) {
+           val sv = cast(string)iter.next();
+           val value = cast(JObject)mv[sv];
+           jtbl.put(sv, value); // TBI..
+       }
+       return jtbl;
+}
+
+
+//
+// WFWorkitem
+//
+
+class WFWorkitem {
+    public var jworkitem: JWorkitem;
+    public fun WFWorkitem(wi: JWorkitem): void {
+       jworkitem := wi;
+    }
+    public fun WFWorkitem(jsess: JSession, wiName: string): void {
+       jworkitem := ~BizLogicAPI.jclass.WFFactory::createWorkitem(jsess, wiName);
+    }
+
+    public fun getWorkitemInfo(): map<string, string> {
+       val jtbl = jworkitem.getWorkitemInfo();
+       return table2Map(jtbl);
+    }
+    public fun isWorkitemAssigned(): boolean {
+       return jworkitem.isWorkitemAssigned();
+    }
+    public fun isEmailSupportEnabled(): boolean {
+       return jworkitem.isEmailSupportEnabled();
+    }
+
+    // TBI.. is it necessary to convert to string??
+    public fun getWorkitemDataslotValue(dsName: string): string {
+       return toString(jworkitem.getWorkitemDataslotValue(dsName)); // TBI.. see  code
+    }
+    public fun setWorkitemDataslot(dsName: string, obj: any): void {
+       jworkitem.setWorkitemDataslot(dsName, cast(JObject)obj);
+    }
+    public fun setAllWorkitemData(wi: WFWorkitem): void {
+       jworkitem.setAllWorkitemData(wi.jworkitem);
+    }
+    public fun assignWorkitemPerformer(wi: WFWorkitem): void {
+       jworkitem.assignWorkitemPerformer(wi.jworkitem);
+    }
+    public fun reassignWorkitemPerformer(performer: string): void {
+       jworkitem.reassignWorkitemPerformer(performer);
+    }
+    public fun completeWorkitem(): void {
+       jworkitem.completeWorkitem();
+    }
+    public fun completeWorkitem(mv: map<string, any>): void {
+       val jtbl = map2table(mv);
+       jworkitem.completeWorkitem(jtbl);
+    }
+    public fun emailAssignedTaskWithWarning(warning: string): void {
+       jworkitem.emailAssignedTaskWithWarning(warning);
+    }
+
+    public static fun jarray2list(jarr: jarray<JWorkitem>[]): list<WFWorkitem> {
+           var lv = list{};
+           if (jarr != nil)
+           {
+               for (var i = 0; i < jarr.length; i++) {
+                   lv.add(new WFWorkitem(jarr[i]));
+               }
+           }
+           return lv;
+    }
+}
+
+class WFProcess {
+    public var process: JProcess;
+    public fun WFProcess(p: JProcess): void {
+       process := p;
+    }
+
+    public fun flagOn(dsName: string): void {
+       process.setDataslotValue(dsName, true);
+    }
+    public fun flagOff(dsName: string): void {
+       process.setDataslotValue(dsName, false);
+    }
+    public fun getManager(): string {
+       return process.getManager();
+    }
+    public fun setManager(mgrName: string): void {
+       process.setManager(mgrName);
+    }
+
+    public fun setProcessDescription(description: string): void {
+       process.setProcessDescription(description);
+    }
+
+    public fun getWorkstepInstruction(wsName: string): string {
+       return process.getWorkstepInstruction(wsName);
+    }
+    public fun setWorkstepInstruction(wsName: string, instruction: string): void {
+       process.setWorkstepInstruction(wsName, instruction);
+    }
+
+    public fun setWorkstepPerformer(wsName: string, performer: string): void {
+       process.setWorkstepPerformer(wsName, performer);
+    }
+    public fun setWorkstepPerformer(wsName: string, performer: string, performedByAll: boolean): void {
+       process.setWorkstepPerformer(wsName, performer, performedByAll);
+    }
+    public fun setPreCondition(wsName: string, startCondition: string): void {
+       process.setPreCondition(wsName, startCondition);
+    }
+
+    public fun getDataslotInfo(): list<map<string, string>> {
+       val infos = process.getDataslotInfo();
+       return table2map3(infos);
+    }
+    public fun setProcessDataslotValues(mv: map<string, any>): void {
+       val jtbl = map2table(mv);
+       process.setProcessDataslotValues(jtbl);
+    }
+    public fun setDataslotValue(dsName: string, value: any): void {
+       // need to change if value's typ is string.. see corresponding the java code. TBI.
+       process.setDataslotValue(dsName, cast(JObject)value);
+    }
+
+    public fun getDataslotChoice(dsName: string): string {
+       return process.getDataslotChoice(dsName);
+    }
+    public fun getInputDataslotNames(dsName: string): list<string> {
+       return jarray2list(process.getInputDataslotNames(dsName));
+    }
+    public fun getOutputDataslotNames(dsName: string): list<string> {
+       return jarray2list(process.getOutputDataslotNames(dsName));
+    }
+}
+
+class WFProcessInstance extends WFProcess {
+
+      public fun WFProcessInstance(p: JProcessInstance): void {
+         WFProcess(p);
+      }
+      public fun WFProcessInstance(jsess: JSession, piName: string): void {
+         WFProcess(~BizLogicAPI.jclass.WFFactory::createProcessInstance(jsess, piName));
+      }
+      public fun get_pi(): JProcessInstance {
+         return cast(JProcessInstance)process;
+      }
+      public fun getInfo(): map<string, string> {
+         val jpi = get_pi();
+         val infos = jpi.getInfo();
+         return table2Map(infos);
+      }
+      // [VALID] added 5/29/02(nobuyuki)
+      public fun isValidProcessInstance(): boolean {
+         val jpi = get_pi();
+         return jpi.isValidProcessInstance();
+      }
+      public fun getProcessTemplateName(): string {
+         val jpi = get_pi();
+         return jpi.getProcessTemplateName();
+      }
+      public fun getMilestone(): string {
+         val jpi = get_pi();
+         return jpi.getMilestone();
+      }
+      public fun getProcessInstanceXML(): string {
+         val jpi = get_pi();
+         return jpi.getProcessInstanceXML();
+      }
+      public fun getProcessInstanceWorkitem(): list<WFWorkitem> {
+         val jpi = get_pi();
+         return WFWorkitem.jarray2list(jpi.getProcessInstanceWorkitem());
+      }
+      public fun getDuedate(): string {
+         val jpi = get_pi();
+         return jpi.getDuedate();
+      }
+      public fun setDuedate(duedate: string): void {
+         val jpi = get_pi();
+         jpi.setDuedate(duedate);
+      }
+      public fun setCreator(creator: string): void {
+         val jpi = get_pi();
+         jpi.setCreator(creator);
+      }
+      public fun setPriority(priority: string): void {
+         val jpi = get_pi();
+         jpi.setPriority(priority);
+      }
+      public fun activate(): void {
+         val jpi = get_pi();
+         jpi.activate();
+      }
+      public fun suspend(): void {
+         val jpi = get_pi();
+         jpi.suspend();
+      }
+      public fun resume(): void {
+         val jpi = get_pi();
+         jpi.resume();
+      }
+      public fun remove(): void {
+         val jpi = get_pi();
+         jpi.remove();
+      }
+      public fun createProcessInstance(wi: WFWorkitem): WFProcessInstance {
+         val jpi = get_pi();
+         val jpi1 = jpi.createProcessInstance(wi.jworkitem);
+         return new WFProcessInstance(jpi1);
+      }
+      public fun getWorkitem(): list<WFWorkitem> {
+         val jpi = get_pi();
+         return WFWorkitem.jarray2list(jpi.getWorkitem());
+      }
+      public fun getActIveworksteplist(): list<string> {
+         val jpi = get_pi();
+         return jarray2list(jpi.getActiveWorkstepList());
+      }
+
+      public fun getWorkstepInfo(): list<map<string, string>> {
+         val jpi = get_pi();
+         val jwsInfos = jpi.getWorkstepInfo();
+         return table2map3(jwsInfos);
+      }
+      public fun getWorkstepInfo(wsName: string): map<string, string> {
+         val jpi = get_pi();
+         val jtbl = jpi.getWorkstepInfo(wsName);
+         return table2Map(jtbl);
+      }
+      public fun getWorkstepDuedate(wsName: string): string {
+         val jpi = get_pi();
+         return jpi.getWorkstepDuedate(wsName);
+      }
+      public fun setWorkstepDuedate(wsName: string, duedate: string): void {
+         val jpi = get_pi();
+         jpi.setWorkstepDuedate(wsName, duedate);
+      }
+      public fun getStartWorkstep(): string {
+         val jpi = get_pi();
+         return jpi.getStartWorkstep();
+      }
+      public fun setStartWorkstep(wsName: string): void {
+         val jpi = get_pi();
+         jpi.setStartWorkstep(wsName);
+      }
+      public fun setWorkstepPriority(wsName: string, priority: string): void {
+         val jpi = get_pi();
+         jpi.setWorkstepPriority(wsName, priority);
+      }
+      /*public fun setSubProcessInstanceName(wsName: string, subPiName: string): void {
+         val jpi = get_pi();
+         jpi.setSubProcessInstanceName(wsName, subPiName);
+      }*/
+
+//      public fun restartWorkstep(wsName: string): void {
+//       val jpi = get_pi();
+//       jpi.restartWorkstep(wsName);
+//      }
+
+      public fun reactivateWorkstep(wsName: string): void {
+         val jpi = get_pi();
+         jpi.reactivateWorkstep(wsName);
+      }
+      public fun suspendWorkstep(wsName: string): void {
+         val jpi = get_pi();
+         jpi.suspendWorkstep(wsName);
+      }
+      public fun resumeWorkstep(wsName: string): void {
+         val jpi = get_pi();
+         jpi.resumeWorkstep(wsName);
+      }
+
+      public fun getDataslotInfo(): list<map<string, string>> {
+         val jpi = get_pi();
+         val jdsInfos = jpi.getDataslotInfo();
+         return table2map3(jdsInfos);
+      }
+      public fun getDataslotInfo(dsName: string): map<string, string> {
+         val jpi = get_pi();
+         val jtbl = jpi.getDataslotInfo(dsName);
+         return table2Map(jtbl);
+      }
+
+//      public fun getDataslotValue(dsName: string): any {
+//       val jpi = get_pi();
+//       val jvalue = jpi.getDataslotValue(dsName);
+//       return jvalue;
+//      }
+      public fun getDataslotValue(dsName: string): `x {
+         val jpi = get_pi();
+         val jvalue = jpi.getDataslotValue(dsName);
+         return LOOPHOLE(jvalue);
+      }
+      public fun getIntDataslotValue(dsName: string): int {
+         val jpi = get_pi();
+         return cast(int)jpi.getDataslotValue(dsName);
+      }
+      public fun getDoubleDataslotValue(dsName: string): double {
+         val jpi = get_pi();
+         return cast(double)jpi.getDataslotValue(dsName);
+      }
+      public fun getBooleanDataslotValue(dsName: string): boolean {
+         val jpi = get_pi();
+         return cast(boolean)jpi.getDataslotValue(dsName);
+      }
+      public fun getStringDataslotValue(dsName: string): string {
+         val jpi = get_pi();
+         return cast(string)jpi.getDataslotValue(dsName);
+      }
+/*
+      public fun getDocumentURLList(dsName: string): list<string> {
+         val jpi = get_pi();
+         return jarray2list(jpi.getDocumentURLList(dsName));
+      }
+      public fun getDocumentURL(dsName: string, docName: string): string {
+         val jpi = get_pi();
+         return jpi.getDocumentURL(dsName, docName);
+      }
+      public fun setDocument(dsName: string, path: string): void {
+         val jpi = get_pi();
+         jpi.setDocument(dsName, path);
+      }
+      public fun removeDocument(dsName: string, docName: string): void {
+         val jpi = get_pi();
+         jpi.removeDocument(dsName, docName);
+      }
+*/
+}
+
+class WFProcessTemplate extends WFProcess {
+      public fun WFProcessTemplate(p: JProcess): void {
+         WFProcess(p);
+      }
+      public fun WFProcessTemplate(jsess: JSession, ptName: string): void {
+         WFProcess(~BizLogicAPI.jclass.WFFactory::createProcessTemplate(jsess, ptName));
+      }
+      public fun get_pt(): JProcessTemplate {
+         return cast(JProcessTemplate)process;
+      }
+      public fun getID(): string {
+         val jpt = get_pt();
+         return ""+jpt.getID(); // TBI.. id (long) must be converted to string..
+      }
+      public fun getInfo(): map<string, string> {
+         val jpt = get_pt();
+         val jtbl = jpt.getInfo();
+         return table2Map(jtbl);
+      }
+      public fun getProcessTemplateXML(): string {
+         val jpt = get_pt();
+         return jpt.getProcessTemplateXML();
+      }
+      public fun getDisplayName(): string {
+         val jpt = get_pt();
+         return jpt.getDisplayName();
+      }
+      public fun setDisplayName(displayName: string): void {
+         val jpt = get_pt();
+         jpt.setDisplayName(displayName);
+      }
+      public fun getFYI(): list<string> {
+         val jpt = get_pt();
+         return toStringList(jpt.getFYI());
+      }
+      public fun setFYI(fys: list<string>): void {
+         val jpt = get_pt();
+         jpt.setFYI(toStringVector(fys));
+      }
+      public fun getRollbackPoints(): list<string> {
+         val jpt = get_pt();
+         return toStringList(jpt.getRollbackPoints());
+      }
+      public fun getProcessTemplateWorkitem(): WFWorkitem {
+         val jpt = get_pt();
+         val jwi = jpt.getProcessTemplateWorkitem();
+         return new WFWorkitem(jwi);
+      }
+      public fun getWorkstepInfo(): list<map<string, string>> {
+         val jpt = get_pt();
+         val jptwsInfos = jpt.getWorkstepInfo();
+         return table2map3(jptwsInfos);
+      }
+      public fun getPreFunction(wsName: string): string {
+         val jpt = get_pt();
+         return jpt.getPreFunction(wsName);
+      }
+      public fun setPreFunction(wsName: string, jscript: string): void {
+         val jpt = get_pt();
+         jpt.setPreFunction(wsName, jscript);
+      }
+      public fun getPostFunction(wsName: string): string {
+         val jpt = get_pt();
+         return jpt.getPostFunction(wsName);
+      }
+      public fun setPostFunction(wsName: string, jscript: string): void {
+         val jpt = get_pt();
+         jpt.setPostFunction(wsName, jscript);
+      }
+      public fun getCompFunction(wsName: string): string {
+         val jpt = get_pt();
+         return jpt.getCompFunction(wsName);
+      }
+      public fun setCompFunction(wsName: string, jscript: string): void {
+         val jpt = get_pt();
+         jpt.setCompFunction(wsName, jscript);
+      }
+      public fun getReactivateWorkstepName(wsName: string): string {
+         val jpt = get_pt();
+         return jpt.getReactivateWorkstepName(wsName);
+      }
+      public fun setReactivateWorkstepName(failureWSname: string, reactivateWSname: string): void {
+         val jpt = get_pt();
+         jpt.setReactivateWorkstepName(failureWSname, reactivateWSname);
+
+      }
+      public fun getWorkstepFYI(wsName: string): list<string> {
+         val jpt = get_pt();
+         return toStringList(jpt.getWorkstepFYI(wsName));
+      }
+      public fun setWorkstepFYI(wsName: string, fyis: list<string>): void {
+         val jpt = get_pt();
+         jpt.setWorkstepFYI(wsName, toStringVector(fyis));
+      }
+      public fun setSaveDataslots(wsName: string, dsNames: list<string>): void {
+         val jpt = get_pt();
+         jpt.setSaveDataslots(wsName, toStringVector(dsNames));
+      }
+      public fun install(): void {
+         val jpt = get_pt();
+         jpt.install();
+      }
+      public fun suspend(): void {
+         val jpt = get_pt();
+         jpt.suspend();
+      }
+      public fun resume(): void {
+         val jpt = get_pt();
+         jpt.resume();
+      }
+      public fun remove(): void {
+         val jpt = get_pt();
+         jpt.remove();
+      }
+      /*
+      public fun setProcessAutoPagingFlag(flag: boolean): void {
+         val jpt = get_pt();
+         jpt.setProcessAutoPagingFlag(flag);
+      }
+      */
+      public fun createProcessInstance(piName: string, priority: string): WFProcessInstance {
+         val jpt = get_pt();
+         val jpi = jpt.createProcessInstance(piName, priority);
+         return new WFProcessInstance(jpi);
+      }
+      public fun createProcessInstance(piName: string, priority: string, mv: map<string, any>): WFProcessInstance {
+         val jpt = get_pt();
+         val jtbl = map2table(mv);
+         val jpi = jpt.createProcessInstance(piName, priority, jtbl);
+         return new WFProcessInstance(jpi);
+      }
+      /*public fun createSubProcessInstance(caller: string, callback: boolean, creator: string, piName: string, priority: string, mv: map<string, any>, outputSlots: list<string>): WFProcessInstance {
+         val jpt = get_pt();
+         val jtbl = map2table(mv);
+         val joutputSlots = list2jarray(outputSlots);
+         val jpi = jpt.createSubProcessInstance(caller, callback, creator, piName, priority, jtbl, joutputSlots);
+         return new WFProcessInstance(jpi);
+
+      }*/
+      public fun getProcessInstanceNameList(): list<string> {
+         val jpt = get_pt();
+         return jarray2list(jpt.getProcessInstanceNameList());
+      }
+      public fun getProcessInstanceList(): map<string, string> {
+         val jpt = get_pt();
+         return table2Map(jpt.getProcessInstanceList());
+      }
+      public fun removeAllProcessInstances(): void {
+         val jpt = get_pt();
+         jpt.removeAllProcessInstances();
+      }
+      public fun removeReactivateWorkstep(wsName: string): void {
+         val jpt = get_pt();
+         jpt.removeReactivateWorkstep(wsName);
+      }
+}
+
+class WFSession {
+      public var jsess: JSession = nil;
+      public fun WFSession(): void {
+         val v = ~BizLogicAPI.jclass.WFFactory::getDefaultSession();
+         this.jsess := v;
+      }
+      public fun WFSession(sess: JSession): void {
+         this.jsess := sess;
+      }
+      public fun WFSession(session: string, userId: string, password: string): void {
+         this.jsess := ~BizLogicAPI.jclass.WFFactory::createSession(session, userId, password);
+      }
+      // order of orverloading is important. string version has high priority.
+      public fun getPT(evt: EVENT): WFProcessTemplate {
+         val ptName = evt.getPTName();
+         return new WFProcessTemplate(jsess, ptName);
+      }
+      public fun getPT(ptName: string): WFProcessTemplate {
+         return new WFProcessTemplate(jsess, ptName);
+      }
+      public fun getPI(evt: EVENT): WFProcessInstance {
+         val piName = evt.getPIName();
+         return new WFProcessInstance(jsess, piName);
+      }
+      public fun getPI(piName: string): WFProcessInstance {
+         return new WFProcessInstance(jsess, piName);
+      }
+
+      // need to invoke class!
+      public fun getWI(evt: EVENT): WFWorkitem {
+         val wiName = evt.getWIName();
+         return new WFWorkitem(jsess, wiName);
+      }
+      public fun getWI(wiName: string): WFWorkitem {
+         return new WFWorkitem(jsess, wiName);
+      }
+
+      public fun suspendBizLogicServer(): void {
+         jsess.suspendBizLogicServer();
+      }
+      /*
+      public fun suspendDBConnections(): void {
+         jsess.suspendDBConnections();
+      }
+      public fun backup(): void {
+         jsess.backup();
+      }
+      */
+      public fun disconnect(): void {
+         jsess.disconnect();
+      }
+      public fun shutdown(): void {
+         jsess.shutdown();
+      }
+      public fun setSessionTimeout(sec: int): void {
+         jsess.setSessionTimeout(sec);
+      }
+      public fun setTimerInterval(interval: string): void {
+         jsess.setTimerInterval(interval);
+      }
+      public fun reloadBizLogicConfiguration(): void {
+         jsess.reloadBizLogicConfiguration();
+      }
+      public fun isSessionValid(): boolean {
+         return jsess.isSessionValid();
+      }
+      public fun getSessionCount(): int {
+         return jsess.getSessionCount();
+      }
+      public fun getActiveSessionList(): list<string> {
+         return jarray2list(jsess.getActiveSessionList());
+      }
+      public fun getBizLogicVersion(): string {
+         return jsess.getBizLogicVersion();
+      }
+      public fun getStartTime(): string {
+         return jsess.getStartTime();
+      }
+      public fun getProcessTemplateVersions(displayName: string): map<string, string> {
+         val jtbl = jsess.getProcessTemplateVersions(displayName);
+         return table2Map(jtbl);
+      }
+      public fun isProcessTemplateCreated(ptName: string): boolean {
+         return jsess.isProcessTemplateCreated(ptName);
+      }
+      public fun getProcessTemplateList(): list<string> {
+         return jarray2list(jsess.getProcessTemplateList());
+      }
+      public fun getProcessTemplateListWithComments(): map<string, string> {
+         val jtbl = jsess.getProcessTemplateListWithComments();
+         return table2Map(jtbl);
+      }
+      public fun getUserProcessTemplateList(): map<int, list<string>> {
+         val jtbl = jsess.getUserProcessTemplateList();
+         return table2map2(jtbl);
+      }
+      public fun getUserAuthorizedProcessTemplateList(): map<string, string> {
+         val jtbl = jsess.getUserAuthorizedProcessTemplateList();
+         return table2Map(jtbl);
+      }
+      public fun getSuspendedProcessTemplateList(): list<string> {
+         val jpts = jsess.getSuspendedProcessTemplateList();
+         return jarray2list(jpts);
+      }
+      public fun createProcessTemplate(xmlFileName: string): WFProcessTemplate {
+         val jpt = jsess.createProcessTemplate(xmlFileName);
+         return new WFProcessTemplate(jpt);
+      }
+      public fun createAndInstallProcessTemplate(xmlFileName: string): WFProcessTemplate {
+         val jpt = jsess.createAndInstallProcessTemplate(xmlFileName);
+         return new WFProcessTemplate(jpt);
+
+      }
+      public fun createAndInstallProcessTemplateVersion(XMLFileName: string, parentPTName: string, displayName: string): WFProcessTemplate {
+         val jpt = jsess.createAndInstallProcessTemplateVersion(XMLFileName, parentPTName, displayName);
+         return new WFProcessTemplate(jpt);
+      }
+      public fun removeAllProcesses(): void {
+         jsess.removeAllProcesses();
+      }
+      public fun getProcessInstanceNameList(): list<string> {
+         val jpts = jsess.getProcessInstanceNameList();
+         return jarray2list(jpts);
+      }
+      public fun getProcessInstanceList(): map<string, string> {
+         val jtbl = jsess.getProcessInstanceList();
+         return table2Map(jtbl);
+      }
+      public fun getUserCreatedProcessInstanceList(): map<string, list<string>> {
+         val jtbl = jsess.getUserCreatedProcessInstanceList();
+         return table2map1(jtbl);
+      }
+      public fun getUserCreatedProcessInstanceList(user: string): map<string, list<string>> {
+         val jtbl = jsess.getUserCreatedProcessInstanceList(user);
+         return table2map1(jtbl);
+      }
+      public fun getWorkitemList(): list<WFWorkitem> {
+         return WFWorkitem.jarray2list(jsess.getWorkitemList());
+      }
+      public fun getWorkitemList(user: string): list<WFWorkitem> {
+         return WFWorkitem.jarray2list(jsess.getWorkitemList(user));
+      }
+      public fun getWorkitem(wiName: string): WFWorkitem {
+         val jwi = jsess.getWorkitem(wiName);
+         return new WFWorkitem(jwi);
+      }
+      public fun getWorkitemListWOData(): list<WFWorkitem> {
+             return WFWorkitem.jarray2list(jsess.getWorkitemListWOData());
+      }
+      public fun getWorkitemListWOData(user: string): list<WFWorkitem> {
+         return WFWorkitem.jarray2list(jsess.getWorkitemListWOData(user));
+      }
+      public fun getActiveWorkstepList(): map<string, list<string>> {
+         val jtbl = jsess.getActiveWorkstepList();
+         return table2map1(jtbl);
+      }
+      public fun getSuspendedWorkstepList(): map<string, string> {
+         val jtbl = jsess.getSuspendedWorkstepList();
+         return table2Map(jtbl);
+      }
+      public fun getSuspendedWorkstepList(pName: string): map<string, string> {
+         val jtbl = jsess.getSuspendedWorkstepList(pName);
+         return table2Map(jtbl);
+      }
+      public fun getUserCreatedActiveWorkstepList(): list<map<string, string>> {
+         val jwss = jsess.getUserCreatedActiveWorkstepList();
+         return table2map3(jwss);
+      }
+      public fun getUserCreatedActiveWorkstepList(ptList: list<string>): list<map<string, string>> {
+         val jptList = toStringVector(ptList);
+         val jwss = jsess.getUserCreatedActiveWorkstepList(jptList);
+         return table2map3(jwss);
+      }
+      /*
+      public fun getListenerList(): string {
+         return jsess.getListenerList();
+      }
+      public fun addListener(listener: string, eventType: int, syncMode: boolean): void {
+         return jsess.addListener(listener, eventType, syncMode);
+      }
+      public fun addListener(listener: string, eventTypes: list<int>, syncMode: boolean): void {
+         val jeventTypes = int_list_to_jarray(eventTypes);
+         return jsess.addListener(listener, jeventTypes, syncMode);
+      }
+      public fun removeListener(listenerID: int): void {
+         jsess.removeListener(listenerID);
+      }
+      */
+}
+
+class WFAdmin {
+      public var jadmin: JAdmin;
+      public fun WFAdmin(admin: JAdmin): void {
+         this.jadmin := admin;
+      }
+      public static fun findSession(session: string, userId: string, password: string): WFSession {
+         return new WFSession(session, userId, password);
+      }
+      public static fun findSession(session: string): WFSession {
+         return new WFSession(session, nil, nil);
+      }
+      public static fun findSession(session: string, userId: string): WFSession {
+         return new WFSession(session, userId, nil);
+      }
+      public static fun BLsession(): WFSession {
+         return new WFSession();
+      }
+      /*
+      public static fun connect(): WFSession {
+         return new WFSession();
+      }
+      */
+      public fun BLsession(userId: string, password: string): WFSession {
+         val jsess = jadmin.connect(userId, password);
+         return new WFSession(jsess);
+      }
+      /*
+      public fun connect(userId: string): WFSession {
+         val jsess = jadmin.connect(userId);// deprecated..
+         return new WFSession(jsess);
+      }
+      */
+      public fun connect(userId: string, password: string): WFSession {
+         val jsess = jadmin.connect(userId, password);
+         return new WFSession(jsess);
+      }
+      public fun checkConnection(): boolean {
+         return jadmin.checkConnection();
+      }
+      /*
+      public fun restoreDBConnections(userId: string, password: string): void {
+         jadmin.restoreDBConnections(userId, password);
+      }
+      */
+      public fun resumeBizLogicServer(userId: string, password: string): void {
+         jadmin.resumeBizLogicServer(userId, password);
+      }
+      /*
+      public fun getBizLogicServerStatus(): map<string, string> {
+         val jtbl = jadmin.getBizLogicServerStatus();
+         return table2Map(jtbl);
+      }
+      */
+      /*
+      public fun getDocumentName(documentURL: string): string {
+         return jadmin.getDocumentName(documentURL);
+      }
+      */
+      /*
+      public fun getBizLogicHeapMemory(): map<string, string> {
+         val jtbl = jadmin.getBizLogicHeapMemory();
+         return table2Map(jtbl);
+      }
+      public fun runGarbageCollector(): void {
+         jadmin.runGarbageCollector();
+      }
+      */
+}
+
+fun BLsession(): WFSession {
+    return new WFSession();
+}

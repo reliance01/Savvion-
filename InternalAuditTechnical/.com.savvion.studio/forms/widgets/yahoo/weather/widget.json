@@ -1,0 +1,25 @@
+{
+    'name': 'Weather',
+    'type': 'yahoo',
+    'version': '1.0',
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-weather.jpg',
+    'description': 'This widget lets you find the weather forecast using Yahoo Weather RSS feed.',
+    'category': 'Weather',
+    'args': [
+    {'topic':{'type':'STRING', 'defaultValue': '/yahoo/weather', 'description': 'The topic published to'}},
+    {'shown':{'type':'BOOLEAN', 'defaultValue': 'true', 'description': 'Whether to show the widget controls or not'}}],
+    'config' : {
+        'type': {
+            'id' : 'yahoo.weather',
+            'libs': [
+            '../resources/libs/yahoo/v2.4.0/yahoo-dom-event/yahoo-dom-event.js'
+            ]
+        }
+    },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/yahoo/weather/onChange'],
+       'description':'This publish to its topicName when getForecast function is called. They publish an object with id and value. The value is {success, "data": { ok, lastUpdated, city, region, country, temparature_unit, distance_unit, pressure_unit, speed_unit, chill,direction,speed,humidity,visibility,pressure,rising, sunrise,sunset,latitude,longitude, forecast: [{date,text,code,temparature},{day,date,text,code,low,high}+]}}'
+    }    
+}

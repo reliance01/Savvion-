@@ -1,0 +1,19 @@
+{
+    'name': 'HTML Viewer',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/browser.jpg',
+    'description': 'Savvion browser widget.',
+    'category': 'Browser',
+    'args': [
+		{'frameborder':{'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'scrolling':{'type':'STRING', 'defaultValue': 'auto', 
+                  'values': [{'name':'yes', 'value':'yes'},{'name':'no', 'value':'no'},{'name':'auto', 'value':'auto'}]}}		
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }
+}

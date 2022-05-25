@@ -1,0 +1,225 @@
+.blue_shade_reliance_blue tr td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: normal 8pt tahoma, arial, sans-serif;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 1px solid #3375B7;
+		color: #3375B7;
+		background: #E4F0F6;
+		}
+		
+.blue_shade_reliance_blue_tr_td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: normal 8pt tahoma;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 1px solid #3375B7;
+		color: #3375B7;
+		background: #E4F0F6;
+		}
+				
+.blue_shade_reliance_red tr td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: normal 8pt tahoma, arial, sans-serif;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 1px solid #E4F0F6;
+		color: #FFFFFF;
+		background: #DC241F;
+		}
+		
+.blue_shade_reliance_red_tr_td {
+		margin: 0;
+		padding: 1px 1px 1px 1px;;
+		font: normal 11pt tahoma;
+		line-height: 1.4em;
+		border-collapse: collapse;
+		border: 0px solid #E4F0F6;
+		color: #FFFFFF;
+		background: #DC241F;
+		}
+
+
+#light{
+display: none;
+position: absolute;
+top: 130%;
+left: 48%;
+width: 400px;
+height: 300px;
+margin-left: -150px;
+margin-top: -100px;                 
+z-index:1002;
+overflow:visible;
+}
+
+#fade{
+display: none;
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 200%;
+background-color: #000;
+z-index:1001;
+-moz-opacity: 0.7;
+opacity:.70;
+filter: alpha(opacity=70);
+}
+
+.button
+{
+  border : 1px solid #223399;
+  background-color : #b9c9fe;
+  font-familiy : Arial, Tahoma,Verdana, Helvetica, sans-serif;
+  color : #002170;
+  font-size : 11px;
+  font-weight : bold;
+  margin : 2px;
+  cursor:pointer;
+}
+
+.inp
+{
+  border : 1px solid #223399;
+  background-color : #ffffff;
+  font-family : Arial, Tahoma,Verdana, Helvetica, sans-serif;
+  height : 18px;
+  color : #333333;
+  font-size : 11px;
+  font-weight : normal;
+  margin : 1px 5px 1px 5px;
+    }
+
+.tabHeadRow
+{
+  height:20px;
+  color:#223399;
+  background-color:#b9c9fe;
+}
+
+.tabHeadTd
+{
+       width:50%;
+    height:15px;
+    font:bold 12px;
+    font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    color:white;
+    background-color : #003366;
+    text-transform : uppercase;
+       text-align:center;
+}
+
+.fieldName
+{
+  background-color:#6F6F7C;
+  color:white;
+  height:35px;
+  font-weight:bold;
+  font-family: Geneva,Tahoma,Verdana,sans-serif; 
+  text-align:center;
+  border:1px solid white;
+  width:50%;
+  font-size:10px;
+}
+
+.fieldValue
+{
+  background-color:#f5f8f9;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color:black;
+  text-align:center;
+  overflow:auto;
+  font-size:10px;
+  border:1px solid white;
+  width:50%;
+  text-transform : uppercase;
+  }
+
+.fieldValue1
+{
+  background-color:#f5f8f9;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color:black;
+  text-align:center;
+--  overflow:auto;
+  font-size:10px;
+  border:1px solid white;
+--  width:50%;
+  text-transform : uppercase;
+  }
+
+.fieldValue2
+{
+  background-color:#f5f8f9;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color:black;
+  text-align:center;
+--  overflow:auto;
+  font-size:10px;
+  border:1px solid white;
+--  width:50%;
+ -- text-transform : uppercase;
+  }
+
+   .shwRMK
+{
+ width:150px;
+ height:40px;
+ overflow-y:auto;
+   }
+  .header
+   {
+    width:100%;
+    height:40px;
+    font:bold 12px;
+    font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    color:white;
+    background-color : #003366;
+    padding-top:10px;
+    text-transform : uppercase;
+       text-align:center;
+   }
+
+.Msg
+{
+  height:20px;
+  color:#223399;
+  font-size : 15px;
+  font-weight:bold;
+  margin:80px 50px 50px 100px;
+  font:italic;
+  --background-color:#b9c9fe;
+}
+
+.popup
+{
+      position:fixed;
+      top: 50%;
+      left: 50%;
+      width:400px;
+      height:250px;
+      background-image: url('images/popup_background.jpg');
+}
+
+   
+.cancel
+{
+display:block;
+position:absolute;
+top:-20px;
+right:-20px;
+background:rgb(245,245,245);
+background-repeat:no-repeat;
+background-image:url('images/no.png');
+color:black;
+height:20px;
+width:20px;
+text-decoration:none;
+text-align:center;
+font-weight:bold;
+}
+		

@@ -1,0 +1,45 @@
+{
+    "name": "Slider",
+    "label": "%widget.slider.label",    
+    "type": "yahoo",
+    "version": "1.0",
+    "jmakiVersion" : "1.0",
+    "image": "images/yahoo-slider.jpg",
+    "category": "Slider",
+    "description": "%widget.slider.description",
+    "args": [
+            {"sliderType":{"label":"%widget.label.sliderType","type":"STRING", "defaultValue": "H", "values": [
+              {"label": "%widget.arg.layout.horizontal.label", "key": "H", "description" : "Horizontal slider."},
+              {"label": "%widget.arg.layout.vertical.label", "key": "V", "description" : "Vertical slider."}
+             ],
+            "description": "The orientation of the slider."}},
+            {"sizeInPixels":{"label":"%widget.label.sizeInPixel","type":"NUMBER", "defaultValue": 200, "description": "Size of slider in pixels"}},    	    
+	    {"tickSize":{"label":"%widget.label.tickSize","type":"NUMBER", "defaultValue": 10, "description": "Tick size"}},
+	    {"minValue":{"label":"%widget.label.minValue","type":"NUMBER", "defaultValue": 0, "description": "Minimum value"}},
+	    {"maxValue":{"label":"%widget.label.maxValue","type":"NUMBER", "defaultValue": 100, "description": "Maximum value"}},
+	    {"initialValue":{"label":"%widget.label.initialValue","type":"NUMBER", "defaultValue": 50, "description": "The initial value"}}
+    ],
+    'value': {
+         'required':'false',
+         'type': 'Integer',
+         'defaultValue': 0
+    },    
+    "config" : {
+    	"type": {
+		"id" : "yahoo.slider",
+	        "libs": [
+			
+			 ],
+                 "styles": [
+                    ],
+                "resources": [
+                    
+		    ]
+	    }
+     },
+    "topicInfo": {
+       "type": "publish",
+       "topicName": ["/yahoo/slider/onChange"],
+       "description":"onChange publishes to its topicName when the slider's value is selected. It publishes an object with widgetId and value. The value is the slider's value."
+    }
+}

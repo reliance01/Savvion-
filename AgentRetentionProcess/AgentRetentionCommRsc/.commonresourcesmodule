@@ -1,0 +1,7 @@
+#Tue Oct 25 13:14:56 IST 2016
+module.name=AgentRetentionCommRsc
+adapter.type=BIZLOGIC
+module.version=8
+module.type=com.savvion.studio.designer.module.common.resources
+adapter.version=8.1
+module.id=081d0c2f-7ce9-4aa4-8516-ef97b6cb9546

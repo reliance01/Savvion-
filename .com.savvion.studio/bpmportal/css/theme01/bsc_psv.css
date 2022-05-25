@@ -1,0 +1,304 @@
+/* Classes for "Balanced Scorecard" and "Process Status Viewer" screens */
+.BalScorMainTitle {
+	font-weight: bold;
+	font-size: 9pt;
+	color: #224466;
+	clip: rect(   );
+	border-top: 1px solid #336699;
+	border-right: 2px solid #336699;
+	border-bottom: 0px solid #336699;
+	border-left: 1px solid #336699;
+	background: #B7CAE7;
+	padding: 2px
+}
+
+.BalScorSubTitle {
+	font-weight: bold;
+	font-size: 10pt;
+	color: #224466;
+	clip: rect(   );
+	border-top: 1px solid #336699;
+	border-right: 2px solid #336699;
+	border-bottom: 0px solid #336699;
+	border-left: 1px solid #336699;
+	background: #B7CAE7;
+	padding: 2px
+}
+
+.BalSmlTxt {
+	color: #224466;
+	font-size: 8pt
+}
+
+.BalSmlTxtBld {
+	color: #224466;
+	font-size: 8pt;
+	font-weight: bold
+}
+
+.BalScorTblEmboss {
+	border-top: 1px solid #336699;
+	border-right: 2px solid #336699;
+	border-bottom: 2px solid #336699;
+	border-left: 1px solid #336699;
+	background: #FFFFFF;
+	padding: 2px
+}
+
+.NoteButton {
+	font-size: 8pt;
+	cursor: hand;
+	color: #663300;
+	font-weight: bold;
+	border-top: 1px solid #990000;
+	border-right: 2px solid #990000;
+	border-bottom: 2px solid #990000;
+	border-left: 1px solid #990000;
+	background: #FFFFFF
+}
+
+.NoteButtonHover {
+	font-size: 8pt;
+	cursor: hand;
+	color: #CC9900;
+	font-weight: bold;
+	border-top: 1px solid #770000;
+	border-right: 2px solid #770000;
+	border-bottom: 2px solid #770000;
+	border-left: 1px solid #770000;
+	background: #FFFFFF
+}
+
+.BalScorChildTitle {
+	font-size: 8pt;
+	color: #224466;
+	clip: rect(   );
+	border-top: 1px solid #336699;
+	border-right: 2px solid #336699;
+	border-bottom: 1px solid #336699;
+	border-left: 1px solid #336699;
+	background: #F1F1FF;
+	padding: 3px 2px
+}
+
+.BalScorChartMainTbl {
+	padding: 2px;
+	border: 2px solid #FFFFFF
+}
+
+.BalScorInbetweenTd {
+	border: 4px solid #FFFFFF
+}
+
+.BalTargetBlnk {
+	text-align: right;
+	width: 100%;
+	font-size: 8pt
+}
+
+.PsvTitle {
+	font: normal 13px tahoma,arial,verdana,helvetica;
+	font-weight: bold;
+	color: #15428B;
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+.PsvTblEmboss {
+	border: 1px #003399 solid;
+	background: #FFFFFF;
+	padding: 2px
+}
+
+.PsvTitleTxt {
+	font-size: 10pt;
+	color: #000066;
+	clip: rect( )
+}
+
+.PsvHdr {
+	font: bold 11px arial,tahoma,helvetica,sans-serif;
+	color: #000000;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #8091A9;
+	border-bottom-color: #8091A9;
+	border-left-color: #FFFFFF;
+	background: #F5F8F9 url(images/psv_hdr.gif)
+}
+
+.PsvTblBg {
+	border:1px solid #8091A9;
+	background: #8091A9
+}
+
+.PsvWorkStepActivated, .PsvWorkStepSkipped, .PsvWorkStepLghtBg,.PsvWorkStepInactive,.PsvWorkStepSaved,.PsvWorkStepNotSaved {
+	text-align: left;
+	font: bold 11px arial,tahoma,helvetica,sans-serif;
+	color: #000000;
+	padding:3px;
+}
+
+.PsvWorkStepActivated {
+	/*border:1px solid #FFFF00;*/
+	background: #FFFFCC url(images/psv_work_step_activated.gif)
+}
+
+.PsvWorkStepSkipped {
+   /*border:1px solid #EFEFEF;*/
+	background: #FFFFFF
+}
+
+.PsvWorkStepLghtBg {
+	/*border: 1px solid #8091A9;
+	border-left-width: 0px;
+	border-right-width: 0px;*/
+	background: #f6f6f0;
+}
+
+.PsvBlnkFieldCntr {
+	/*border-top: 1px solid #8091A9;
+	border-right: 1px solid #8091A9;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;*/
+	background: #FFFFFF
+}
+
+.PsvWorkStepActivatedTr {
+	text-align: center;
+	background: #FF0000
+}
+
+.PsvWorkStepSaved {
+	border: 1px solid #990000;
+	background: #FF0000
+}
+
+.PsvWorkStepNotSaved {
+	border: 1px solid #666666;
+	background: #808080
+}
+
+.PsvWorkStepAverage,.PsvWorkStepLessAverage, .PsvWorkStepActivatedNote,.PsvWorkStepCompleted, .PsvWorkStepCompletedNote,.PsvWorkStepSuspended, .PsvWorkStepSuspendedNote {
+	text-align: left;
+	font: bold 11px arial,tahoma,helvetica,sans-serif;
+	color: #000000;
+	padding:3px;
+	
+}
+
+.PsvWorkStepAverage {
+	border: 1px solid #CCCCCC;
+	background: #FFFFFF
+}
+
+.PsvWorkStepLessAverage {
+	border: 1px solid #000099;
+	background: #0000FF
+}
+
+.PsvWorkStepActivatedNote {
+   border:1px solid #FFFFFF;
+	background: #FFFFCC url(images/psv_work_step_activated_note.gif)
+}
+
+.PsvWorkStepNoteBorder {
+	border: 1px solid #000000
+}
+
+.PsvInbetweenTbl, .CnslInbetweenTbl {
+	border: 4px #FFFFFF solid
+}
+
+.PsvWorkStepCompleted, .PsvWorkStepCompletedNote {
+	background: #CFFFCF;
+}
+
+.PsvWorkStepSuspended, .PsvWorkStepSuspendedNote {
+	background: #FF9933
+}
+
+.PsvWorkStepInactive, .PsvWorkStepInactiveNote {
+	background: #CCCCCC
+}
+
+
+.PsvTitleAlt {
+	font-size: 11px;
+	color: #000066;
+	clip: rect(   );
+	border: 1px solid #003399;
+	border-bottom-size: 0px;
+	background: #EEF0F2;
+	padding: 4px 2px
+}
+
+.PsvTitleTxtAlt {
+	font-size: 11px;
+	color: #000066;
+	clip: rect( )
+}
+
+A.PsvTitleLnk {
+	color: #0378D2;
+	text-decoration: none;
+	font: bold 11px tahoma,arial,helvetica,sans-serif;
+}
+
+A.PsvTitleLnk:hover {
+	color: #0378D2;
+	text-decoration: underline
+}
+
+A.PsvTitleLnk:visited { }
+
+.PsvTblInBg{
+	background: #BCD2DA
+}
+
+.CnslCompTitle {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #7375BD;
+	clip: rect(   );
+	text-align: center;
+	border-top: 1px solid #7375BD;
+	border-right: 2px solid #7375BD;
+	border-bottom: 1px solid #7375BD;
+	border-left: 1px solid #7375BD;
+	background: #F1F1FF;
+	padding: 4px 2px
+}
+
+.CnslMainDataTbl {
+	border: 1px #000099 solid;
+	background: #FFFFFF
+}
+
+.CnslMainDataTd {
+	vertical-align: text-top;
+	background: #FFFFFF;
+	padding: 4px
+}
+
+.CnslCompTblEmboss {
+	border-top: 0px solid #336699;
+	border-right: 2px solid #336699;
+	border-bottom: 2px solid #336699;
+	border-left: 1px solid #336699;
+	background: #FFFFFF;
+	padding: 2px
+}
+
+.CnslInbetweenTd {
+	text-align: center;
+	vertical-align: top
+}
+
+.BalScorMainTitleText, .BalScorSubTitleText {
+	font-size: 9pt;
+	color: #224466;
+	clip: rect(   )
+}

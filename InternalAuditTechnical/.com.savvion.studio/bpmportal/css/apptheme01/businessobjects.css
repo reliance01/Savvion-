@@ -1,0 +1,169 @@
+/*business objects section styles*/
+.BusinessObjectSection table, 
+.BusinessObjectSection tr, 
+.BusinessObjectSection td, 
+.BusinessObjectSection caption, 
+.BusinessObjectSection div, 
+.BusinessObjectSection span, 
+.BusinessObjectSection p, 
+.BusinessObjectSection input, 
+.BusinessObjectSection label, 
+.BusinessObjectSection p, 
+.BusinessObjectSection fieldset, 
+.BusinessObjectSection fieldset legend{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+}
+
+.BusinessObjectSection label { font-weight:bold}
+.BusinessObjectSection input, .BusinessObjectSection textarea {
+	background-color: #FFFFFF;
+	padding:2px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #6B838D;
+	border-right-color: #C6CBCC;
+	border-bottom-color: #C6CBCC;
+	border-left-color: #6B838D;
+	}
+
+.BusinessObjectSection a{
+	color: #003399;
+	text-decoration: none;
+}
+.BusinessObjectSection a:hover{
+	color: #003399;
+	text-decoration: underline;
+}
+.BusinessObjectSection fieldset { padding:8px; }
+.BusinessObjectSection fieldset legend{ padding:4px;}
+
+.BusinessObjectSection { padding:8px 4px 8px 4px ;}
+.BusinessObjectSection .ListDataSection table { 
+	border-collapse:collapse;
+	border:1px solid #8091A9;
+	border-width:1px 0px 1px 1px;
+}
+.BusinessObjectSection .ListDataSection table thead tr th{
+	border:1px solid #8091A9;
+	border-collapse:collapse;
+	margin:0;
+	padding:4px;
+	background:#E6EDEF;
+	border-width:0px 1px 1px 0;
+}
+.BusinessObjectSection .ListDataSection table thead tr th.SortedColumn{
+	background:#D6E3E7}
+.BusinessObjectSection .ListDataSection table thead tr th.SortedColumn a img{
+	background:#D6E3E7;
+	text-decoration:none}
+.BusinessObjectSection .ListDataSection table thead th a{
+	font-weight:bold;
+	color: #003399;
+	text-decoration: none;
+}
+.BusinessObjectSection .ListDataSection table thead th a:hover{
+	color: #003399;
+	text-decoration: underline;
+}
+.BusinessObjectSection .ListDataSection table tbody tr td{
+	background:#FFFFFF;
+	margin:0;
+	padding:4px;
+	border:1px solid #8091A9;
+	border-width:0 1px 0px 0;
+}
+
+.BusinessObjectSection .ListDataSection table tbody tr td a.Edit,
+.BusinessObjectSection .ListDataSection table tbody tr.odd td a.Edit{
+display:block;
+width:16px;
+height:16px;
+background:url(images/sbm_icon_edit_for_list_table.gif) no-repeat 0px 0px}
+.BusinessObjectSection .ListDataSection table tbody tr td a.Edit:hover,
+.BusinessObjectSection .ListDataSection table tbody tr.odd td a.Edit:hover{
+background:url(images/sbm_icon_edit_for_list_table.gif) no-repeat -16px 0px}
+
+.BusinessObjectSection .ListDataSection table tbody tr td a.Delete,
+.BusinessObjectSection .ListDataSection table tbody tr.odd td a.Delete{
+display:block;
+width:16px;
+height:16px;
+background:url(images/sbm_icon_delete_for_list_table.gif) no-repeat 0px 0px}
+.BusinessObjectSection .ListDataSection table tbody tr td a.Delete:hover,
+.BusinessObjectSection .ListDataSection table tbody tr.odd td a.Delete:hover{
+background:url(images/sbm_icon_delete_for_list_table.gif) no-repeat -16px 0px}
+
+.BusinessObjectSection .ListDataSection table tbody tr.odd td{
+	background: #EEF0F2;
+	margin:0;
+	padding:4px;
+	border:1px solid #8091A9;
+	border-width:0 1px 0px 0;
+}
+.BusinessObjectSection .ListDataSection table caption{
+	text-align:left;
+	letter-spacing:-1px;
+}
+.BusinessObjectSection .ButtonSection {}
+.BusinessObjectSection .ButtonSection table { 
+	border-collapse:collapse;
+	border:1px solid #8091A9; 
+	border-bottom:none
+}
+.BusinessObjectSection .ButtonSection table thead tr th{
+	border-collapse:collapse;
+	margin:0;
+	padding:4px;
+	background:#E6EDEF;
+	font-weight:normal;
+}
+.BusinessObjectSection .ButtonSection table thead th a{
+	font-weight:bold;
+	color: #003399;
+	text-decoration: none;
+	padding:2px;
+	border:1px #E7EFEF solid;
+	display:block;
+}
+
+
+.BusinessObjectSection .ButtonSection table thead th a:hover{
+	color: #003399;
+	border:1px #C1C8D6 solid;
+	padding:2px;
+	background:#FFFFFF
+}
+
+.BusinessObjectSection .DetailsDataSection table { 
+	border-collapse:collapse;
+	border:1px solid #8091A9;
+}
+.BusinessObjectSection .DetailsDataSection table tbody tr th,
+.BusinessObjectSection .DetailsDataSection table tbody tr td{
+	background:#FFFFFF;
+	margin:0;
+	padding:4px;
+	border:1px solid #8091A9;
+	border-width:0 0px 0px 0;
+}
+
+.BusinessObjectSection .DetailsDataSection table tbody tr.odd th,
+.BusinessObjectSection .DetailsDataSection table tbody tr.odd td{
+	background: #EEF0F2;
+	margin:0;
+	padding:4px;
+	border:1px solid #8091A9;
+	border-width:0 0px 0px 0;
+}
+.BusinessObjectSection .DetailsDataSection table caption{
+	text-align:left;
+	letter-spacing:-1px;
+}
+/*end business objects section styles*/

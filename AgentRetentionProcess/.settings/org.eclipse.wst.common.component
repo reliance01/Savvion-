@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="AgentRetentionProcess">
+        <wb-resource deploy-path="/" source-path="/AgentRetentionCommRsc/Business Objects"/>
+        <wb-resource deploy-path="/" source-path="/AgentRetentionCommRsc/Adapters"/>
+    </wb-module>
+</project-modules>

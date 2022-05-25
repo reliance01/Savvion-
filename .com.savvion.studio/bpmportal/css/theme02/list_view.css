@@ -1,0 +1,453 @@
+/* Classes for list view screens */
+.ColHdr {
+	font-size: 8pt;
+	color: #EDEDFF;
+	background-color: #6E7195;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #6E7195;
+	border-right-color: #333668;
+	border-bottom-color: #333668;
+	border-left-color: #6E7195;
+	font-weight: bold;
+}
+.ColHdrSrNo {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #EDEDFF;
+	background-color: #6E7195;
+	text-align: center;
+	width: 1%;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #6E7195;
+	border-right-color: #333668;
+	border-bottom-color: #333668;
+	border-left-color: #6E7195;
+}
+.ColHdrSort {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #8F91BD;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #8F91BD;
+	border-right-color: #333668;
+	border-bottom-color: #333668;
+	border-left-color: #8F91BD;
+}
+A.ColHdrLnk {
+	font-size: 8pt;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+A.ColHdrLnk:hover {  
+	text-decoration: underline
+}
+A.ColHdrLnk:visited { 
+}
+.ChkBoxNone { 
+	border-style: none
+}
+.ChkBox {
+	color: #000000;
+	background-color: #FFFFFF;
+	font-size: 8pt;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #333668;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+.ChkBoxAlt {
+	background-color: #F4F4F5;
+	text-align: center;
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 1px solid #F4F4F5;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #F4F4F5;
+	border-left: 1px solid #F4F4F5;
+}
+.ChkBoxSlct {
+	color: #000000;
+	background-color: #DCDCDE;
+	font-size: 8pt;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #DCDCDE;
+	border-right-color: #333668;
+	border-bottom-color: #DCDCDE;
+	border-left-color: #DCDCDE;
+}
+.ChkBoxSlctAll {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: #6E7195;
+	text-align: center;
+	width: 1%;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #6E7195;
+	border-right-color: #333668;
+	border-bottom-color: #333668;
+	border-left-color: #6E7195;
+}
+A.TblLnk {  
+	font-size: 8pt; 
+	color: #000099; 
+	text-decoration: none
+}
+A.TblLnk:hover {  
+	font-size: 8pt; 
+	text-decoration: underline
+}
+A.TblLnk:visited { 
+}
+.FilterTblEmboss { 
+	background-color: #FFFFFF; 
+	border: 1px solid #333668
+}
+.ListDivPad {
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	visibility: visible;
+	SCROLLBAR-FACE-COLOR: #E2E2E2;
+	SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF;
+	SCROLLBAR-SHADOW-COLOR: #666666;
+	SCROLLBAR-3DLIGHT-COLOR: #545454;
+	SCROLLBAR-ARROW-COLOR: #003333;
+	SCROLLBAR-DARKSHADOW-COLOR: #352A7B;
+	SCROLLBAR-BASE-COLOR: #DEF0FD;
+	scrollbar-track-color: #ACACAC;
+	overflow: auto;
+	background-color: #BEBEBE;
+	layer-background-color: #BEBEBE;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	border: 1px solid;
+	border-color: #0A0872 #0A0872 #0A0872 #0A0872;
+	position: absolute;
+	background-image: url(images/list_div_pad.gif);
+}
+.ListLineBg {
+	background-color: #003366;
+	height: 2px;
+	background-image: url(images/list_line_bg.gif);
+}
+.ListTblBgPad {  
+	padding-top: 4px; 
+	padding-right: 4px; 
+	padding-bottom: 4px; 
+	padding-left: 4px; 
+	background-color: #D4D4D4; 
+	border: 1px #999999 solid
+}
+.ValCntr {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ValCntrAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F4F4F5;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 1px solid #F4F4F5;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #F4F4F5;
+	border-left: 1px solid #F4F4F5;
+}
+.ValCntrSlct {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #DCDCDE;
+	text-align: center;
+	border-top: 1px solid #DCDCDE;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #DCDCDE;
+	border-left: 1px solid #DCDCDE;
+}
+.ValCntrAltSlct {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #DCDCDE;
+	text-align: center;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #DCDCDE;
+	border-right-color: #DCDCDE;
+	border-bottom-color: #333668;
+	border-left-color: #DCDCDE;
+}
+.ValLft {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ValLftAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F4F4F5;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 1px solid #F4F4F5;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #F4F4F5;
+	border-left: 1px solid #F4F4F5;
+}
+.ValLftSlct {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #DCDCDE;
+	text-align: left;
+	border-top: 1px solid #DCDCDE;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #DCDCDE;
+	border-left: 1px solid #DCDCDE;
+}
+.ValLftAltSlct {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #DCDCDE;
+	text-align: left;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #DCDCDE;
+	border-right-color: #333668;
+	border-bottom-color: #DCDCDE;
+	border-left-color: #DCDCDE;
+}
+.ValRt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: right;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.ValRtAlt {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F4F4F5;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 1px solid #F4F4F5;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #F4F4F5;
+	border-left: 1px solid #F4F4F5;
+}
+.ValRtSlct {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #DCDCDE;
+	text-align: right;
+	border-top: 1px solid #DCDCDE;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #DCDCDE;
+	border-left: 1px solid #DCDCDE;
+}
+.ValRtAltSlct {
+	font-size: 8pt;
+	color: #000000;
+	background-color: #DCDCDE;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #DCDCDE;
+	border-right-color: #333668;
+	border-bottom-color: #DCDCDE;
+	border-left-color: #DCDCDE;
+}
+.ListTableCellPad {  
+}
+.MainTable {  
+}
+.SegTableCellPad {  
+}
+.SepBarTbl {  
+}
+.FilterBarTbl {  
+}
+.TblBgDark {
+	background-color: #333668;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #333668;
+	border-right-color: #333668;
+	border-bottom-color: #333668;
+	border-left-color: #333668;
+}
+.ListTblHdng {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #E4E9EC;
+	width: 100%;
+	white-space: nowrap;
+	color: #000066;
+	padding: 2px;
+	border-top: 1px solid #333668;
+	border-right: 1px solid #333668;
+	border-bottom: 0px solid #333668;
+	border-left: 1px solid #333668;
+}
+.ListTblBgPad {  
+	padding-top: 4px; 
+	padding-right: 4px; 
+	padding-bottom: 4px; 
+	padding-left: 4px; 
+	background-color: #D4D4D4; 
+	border: 1px #999999 solid
+}
+#SbmRow {
+ BACKGROUND-COLOR: #ffffff; 
+}
+#SbmRow TD{
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+#SbmRowAlt {
+ BACKGROUND-COLOR: #F4F4F5; 
+ }
+ 
+#SbmRowAlt TD{
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F4F4F5;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 1px solid #F4F4F5;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #F4F4F5;
+	border-left: 1px solid #F4F4F5;
+}
+#SbmRowSlct {
+ BACKGROUND-COLOR: #DCDCDE;
+}
+#SbmRowSlct TD{
+	font-size: 8pt;
+	color: #000000;
+	background-color: #DCDCDE;
+	border-top: 1px solid #DCDCDE;
+	border-right: 1px solid #333668;
+	border-bottom: 1px solid #DCDCDE;
+	border-left: 1px solid #DCDCDE;
+}
+
+DIV.vBoxClass{
+font-size: 8pt;
+font-family: Verdana;
+background-color: #F5F8F9;
+color: #FF0033;
+border-top-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-right-style: solid;
+border-top-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-right-width: 1px;
+border-top-color: #000099;
+border-bottom-color: #000099;
+border-left-color: #000099;
+border-right-color: #000099;
+margin-left: 2px;
+margin-top: 5px;
+margin-bottom: 5px;
+padding-left: 20px;
+padding-right: 5px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.errHilite{
+color: #FF0033;
+background-color: #F5F8F9;
+}

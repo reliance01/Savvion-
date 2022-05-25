@@ -1,0 +1,66 @@
+body
+{
+	background-color : #F7F6F2;
+	color : #949496;
+	padding : 5px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	color : #949496;
+}
+
+.header
+{
+	width : 99%;
+	height: 22px;
+	font-size : 14px;
+	font-family : serif;
+	line-height : 24px;
+	font-weight : bold;
+	text-align : center;
+	background-color : #991b1e;
+	color : white;
+}
+
+table.agentDtl
+{
+	width : 99%;
+	--overflow : hidden;
+	--background : white;
+	--border : 1px solid #167F92;
+	border-collapse : collapse;
+	--margin-top : 10px; 
+}
+
+table.agentDtl tr
+{
+	height : 20px;
+	border : 1px solid #949496;
+}
+
+.fieldName
+{
+	width : 16%;
+	 margin: 0;
+    padding: 1px 1px 1px 1px;
+    font: bold 8pt tahoma, arial, sans-serif;
+    line-height: 1.4em;
+    border-collapse: collapse;
+    border: 1px solid #3375B7;
+    color: #3375B7;
+    background: #dbeeff;
+}
+
+.fieldValue
+{
+	width : 16%;
+     margin: 0;
+    padding: 1px 1px 1px 1px;
+    font: bold 8pt tahoma, arial, sans-serif;
+    line-height: 1.4em;
+    border-collapse: collapse;
+    border: 1px solid #3375b7;
+    color: #333333;
+    background: #f3f7fb;
+}

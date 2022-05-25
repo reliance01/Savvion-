@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Process SYSTEM "../../common/processtemplates/processTemplate.dtd">
+<Process name="ICMProposalCancelRefund" type="BIZLOGIC">
+  <Label>ICM Proposal Cancellation Refund</Label>
+  <Description>Approval For ICM proposal cancellation refund.</Description>
+  <Application name="ICMProposalCancelRefund"/>
+  <Category level="0"/>
+  <Category level="1"/>
+  <Group/>
+  <Manager>@CREATOR</Manager>
+  <EstimatedDuration>1d</EstimatedDuration>
+  <TimeCreated>1416207235253</TimeCreated>
+  <Author>70177492</Author>
+  <Version/>
+  <Attributes>
+    <Attribute name="ProcessType" required="true">
+      <Label>Process Type</Label>
+      <Description>Type of the process</Description>
+      <Value>BusinessProcess</Value>
+    </Attribute>
+    <Attribute name="Objective" required="false">
+      <Label>Objective</Label>
+      <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Goal" required="false">
+      <Label>Goal</Label>
+      <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="OrganizationalUnit" required="false">
+      <Label>Organizational Unit</Label>
+      <Description>The organizational unit that owns this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Influencers" required="false">
+      <Label>Influencers</Label>
+      <Description>People who have influenced development of this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Risks" required="false">
+      <Label>Risks</Label>
+      <Description>Risks associated with this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Rewards" required="false">
+      <Label>Rewards</Label>
+      <Description>Potential rewards on investment for this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Executable" required="false">
+      <Label>Executable</Label>
+      <Description>Can the Process  Ever be made executable?</Description>
+      <Value>Yes</Value>
+    </Attribute>
+  </Attributes>
+  <Alerts>
+    <Alert name="Default">
+      <AlertSeverity>High</AlertSeverity>
+      <AlertMessage>This is the default alert.</AlertMessage>
+      <AlertDescription/>
+      <AlertCondition type="java:expression"/>
+      <AlertDelivery type="sbm">
+        <AlertRecipient type="USER">${@CREATOR}</AlertRecipient>
+      </AlertDelivery>
+    </Alert>
+  </Alerts>
+  <AtomicWS height="36" name="Start" width="36" worktime="false" x="324" y="60">
+    <AtomicType>START</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="Cancellation Refund Approval" width="108" worktime="false" x="288" y="132">
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@Approver</Performer>
+    <PerformingApp type="JSP">CancellationRefundApproval.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <PreFunction type="javascript:function">/* type your javascript function body here */
+
+var proposalid = jst.getDataSlotValue("ProposalID");
+
+
+
+var sb = new java.lang.StringBuffer();
+
+sb.append("&lt;html&gt;&lt;style type=\"text/css\" &gt;&lt;!--.mailbody {font-family: Calibri, Helvetica,sans-serif;font-size:14px}--&gt;&lt;!--.tabletitle {width:200px;font-weight:bold;color:#000080;}--&gt;&lt;!--.tablecell {width:200px;}--&gt;&lt;!--.tablecls {width:800px; cellpadding:15px}--&gt;&lt;/style&gt;&lt;body class=\"mailbody\"&gt;&lt;br/&gt;");
+
+sb.append("Dear Approver, ");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Proposal " + proposalid + " is pending for late login approval in Savvion, kindly taking necessary action");
+
+sb.append("&lt;/table&gt;");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Request you to do the needful. Click &lt;b&gt;&lt;a href=\"http://bpm.reliancegeneral.co.in/sbm/bpmportal/login.jsp\" target=\"_blank\"&gt;here&lt;/a&gt; &lt;/b&gt;on this link to login into the system");				
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Thank you,");
+
+sb.append("&lt;br/&gt;Reliance Application Support Team");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ************* THIS IS SYSTEM GENERATED MAIL. PLEASE DO NOT REPLY. **************&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;");
+
+sb.append("&lt;br/&gt;&lt;/body&gt;&lt;/html&gt;");
+
+
+
+var userMailID = jst.getDataSlot("Approver");
+
+var mailFrom = "rgicl.applnsupport@reliancegeneral.co.in";
+
+var hm = new java.util.HashMap();
+
+hm.put("TO", userMailID);
+
+hm.put("FROM", mailFrom);
+
+hm.put("SUBJECT", "Proposal " + proposalid + " is pending for late login approval in Savvion");
+
+hm.put("BODY", sb);
+
+hm.put("WORKSTEP_NAME", jst.getWorkstepName());
+
+hm.put("WORKITEM_NAME", jst.getWorkstepName());
+
+hm.put("PTID",jst.getProcessInstanceID());
+
+hm.put("PIID",jst.getProcessInstanceID());
+
+var ems = jst.loadClass("com.icm.EmailSender");
+
+var obj = ems.newInstance();
+
+obj.send(hm);</PreFunction>
+    <Datainput>Remarks</Datainput>
+    <Datainput>ApproverStatus</Datainput>
+    <Datainput>ICMRemarks</Datainput>
+    <Datainput>TransactionId</Datainput>
+    <Datainput>RequestDate</Datainput>
+    <Datainput>RequestedBy</Datainput>
+    <Datainput>RefundType</Datainput>
+    <Datainput>RefundAmount</Datainput>
+    <Datainput>ProposalID</Datainput>
+    <Datainput>Product</Datainput>
+    <Datainput>PrintLocation</Datainput>
+    <Datainput>PolicyNo</Datainput>
+    <Datainput>PayeeName</Datainput>
+    <Datainput>InsuredName</Datainput>
+    <Datainput>PayTo</Datainput>
+    <Datainput>InstrumentFrom</Datainput>
+    <Datainput>InstrumentId</Datainput>
+    <Datainput>Branch</Datainput>
+    <Datainput>ClassName</Datainput>
+    <Datainput>Approver</Datainput>
+    <Dataoutput>Remarks</Dataoutput>
+    <Dataoutput>ApproverStatus</Dataoutput>
+    <Dataoutput>ICMRemarks</Dataoutput>
+    <Dataoutput>PayeeName</Dataoutput>
+    <Format editable="true" input="Remarks" label="Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Remarks:</Label>
+    </Format>
+    <Format editable="true" input="ApproverStatus" label="ApproverStatus:" password="false" required="false" size="20" type="text">
+      <Label>ApproverStatus:</Label>
+    </Format>
+    <Format editable="true" input="ICMRemarks" label="ICMRemarks:" password="false" required="false" size="20" type="text">
+      <Label>ICMRemarks:</Label>
+    </Format>
+    <Format editable="false" input="TransactionId" label="TransactionId:" password="false" required="false" size="20" type="text">
+      <Label>TransactionId:</Label>
+    </Format>
+    <Format editable="false" input="RequestDate" label="RequestDate:" password="false" required="false" size="20" type="text">
+      <Label>RequestDate:</Label>
+    </Format>
+    <Format editable="false" input="RequestedBy" label="RequestedBy:" password="false" required="false" size="20" type="text">
+      <Label>RequestedBy:</Label>
+    </Format>
+    <Format editable="false" input="RefundType" label="RefundType:" password="false" required="false" size="20" type="text">
+      <Label>RefundType:</Label>
+    </Format>
+    <Format editable="false" input="RefundAmount" label="RefundAmount:" password="false" required="false" size="20" type="text">
+      <Label>RefundAmount:</Label>
+    </Format>
+    <Format editable="false" input="ProposalID" label="ProposalID:" password="false" required="false" size="20" type="text">
+      <Label>ProposalID:</Label>
+    </Format>
+    <Format editable="false" input="Product" label="Product:" password="false" required="false" size="20" type="text">
+      <Label>Product:</Label>
+    </Format>
+    <Format editable="false" input="PrintLocation" label="PrintLocation:" password="false" required="false" size="20" type="text">
+      <Label>PrintLocation:</Label>
+    </Format>
+    <Format editable="false" input="PolicyNo" label="PolicyNo:" password="false" required="false" size="20" type="text">
+      <Label>PolicyNo:</Label>
+    </Format>
+    <Format editable="true" input="PayeeName" label="Payee Name:" password="false" required="false" size="20" type="text">
+      <Label>Payee Name:</Label>
+    </Format>
+    <Format editable="false" input="InsuredName" label="InsuredName:" password="false" required="false" size="20" type="text">
+      <Label>InsuredName:</Label>
+    </Format>
+    <Format editable="false" input="PayTo" label="PayTo:" password="false" required="false" size="20" type="text">
+      <Label>PayTo:</Label>
+    </Format>
+    <Format editable="false" input="InstrumentFrom" label="InstrumentFrom:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentFrom:</Label>
+    </Format>
+    <Format editable="false" input="InstrumentId" label="InstrumentId:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentId:</Label>
+    </Format>
+    <Format editable="false" input="Branch" label="Branch:" password="false" required="false" size="20" type="text">
+      <Label>Branch:</Label>
+    </Format>
+    <Format editable="false" input="ClassName" label="Class:" password="false" required="false" size="20" type="text">
+      <Label>Class:</Label>
+    </Format>
+    <Format editable="false" input="Approver" label="Approver:" password="false" required="false" size="20" type="text">
+      <Label>Approver:</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="36" name="End 1" width="36" worktime="false" x="324" y="336">
+    <AtomicType>END</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <ExternalWS height="60" name="UpdateICMProposalRefund" width="108" x="288" y="240">
+    <Performer category="WebServiceAdapters" generate="false" managed="true" name="GenericWebServiceAdapter">com.savvion.sbm.adapters.webservice.WebServiceAdapter</Performer>
+    <PerformBy>execute</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Priority>MEDIUM</Priority>
+    <Datainput>Remarks</Datainput>
+    <Datainput>Approver</Datainput>
+    <Datainput>TransactionId</Datainput>
+    <Datainput>ApproverStatus</Datainput>
+    <Dataoutput>returnStatus</Dataoutput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)"/>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <Link Name="Connection 1" default="true">
+    <Label>Connection 1</Label>
+    <Source cp="2">Start</Source>
+    <Point x="342.0" y="96.0"/>
+    <Point x="342.0" y="132.0"/>
+    <Target cp="0">Cancellation Refund Approval</Target>
+  </Link>
+  <Link Name="Connection 7" default="true">
+    <Label>Connection 7</Label>
+    <Source cp="2">Cancellation Refund Approval</Source>
+    <Point x="342.0" y="192.0"/>
+    <Point x="342.0" y="240.0"/>
+    <Target cp="0">UpdateICMProposalRefund</Target>
+  </Link>
+  <Link Name="Connection 8" default="true">
+    <Label>Connection 8</Label>
+    <Source cp="2">UpdateICMProposalRefund</Source>
+    <Point x="342.0" y="300.0"/>
+    <Point x="342.0" y="336.0"/>
+    <Target cp="0">End 1</Target>
+  </Link>
+  <Dataslot Name="returnStatus" category="User" name="returnStatus" type="STRING">
+    <Label>returnStatus:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="returnStatus:" password="false" required="false" size="20" type="text">
+      <Label>returnStatus:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PayeeName" category="User" name="PayeeName" type="STRING">
+    <Label>PayeeName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PayeeName:" password="false" required="false" size="20" type="text">
+      <Label>PayeeName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Approver" category="User" name="Approver" type="STRING">
+    <Label>Approver:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Approver:" password="false" required="false" size="20" type="text">
+      <Label>Approver:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ApproverStatus" category="User" name="ApproverStatus" type="STRING">
+    <Label>ApproverStatus:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ApproverStatus:" required="false" type="combo">
+      <Label>ApproverStatus:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Branch" category="User" name="Branch" type="STRING">
+    <Label>Branch:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Branch:" password="false" required="false" size="20" type="text">
+      <Label>Branch:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ClassName" category="User" name="ClassName" type="STRING">
+    <Label>Class:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Class:" password="false" required="false" size="20" type="text">
+      <Label>Class:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InstrumentFrom" category="User" name="InstrumentFrom" type="STRING">
+    <Label>InstrumentFrom:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InstrumentFrom:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentFrom:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InstrumentId" category="User" name="InstrumentId" type="STRING">
+    <Label>InstrumentId:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InstrumentId:" password="false" required="false" size="20" type="text">
+      <Label>InstrumentId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InsuredName" category="User" name="InsuredName" type="STRING">
+    <Label>InsuredName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InsuredName:" password="false" required="false" size="20" type="text">
+      <Label>InsuredName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PayTo" category="User" name="PayTo" type="STRING">
+    <Label>PayTo:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PayTo:" password="false" required="false" size="20" type="text">
+      <Label>PayTo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PolicyNo" category="User" name="PolicyNo" type="STRING">
+    <Label>PolicyNo:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PolicyNo:" password="false" required="false" size="20" type="text">
+      <Label>PolicyNo:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PrintLocation" category="User" name="PrintLocation" type="STRING">
+    <Label>PrintLocation:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PrintLocation:" password="false" required="false" size="20" type="text">
+      <Label>PrintLocation:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Product" category="User" name="Product" type="STRING">
+    <Label>Product:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Product:" password="false" required="false" size="20" type="text">
+      <Label>Product:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProposalID" category="User" name="ProposalID" type="STRING">
+    <Label>ProposalID:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ProposalID:" password="false" required="false" size="20" type="text">
+      <Label>ProposalID:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RefundAmount" category="User" name="RefundAmount" type="STRING">
+    <Label>RefundAmount:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RefundAmount:" password="false" required="false" size="20" type="text">
+      <Label>RefundAmount:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RefundType" category="User" name="RefundType" type="STRING">
+    <Label>RefundType:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RefundType:" password="false" required="false" size="20" type="text">
+      <Label>RefundType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Remarks" category="User" name="Remarks" type="STRING">
+    <Label>Remarks:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>true</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" height="4" label="Remarks:" required="false" type="textarea" width="4">
+      <Label>Remarks:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="RequestDate" category="User" name="RequestDate" type="STRING">
+    <Label>RequestDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RequestDate:" password="false" required="false" size="20" type="text">
+      <Label>RequestDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RequestedBy" category="User" name="RequestedBy" type="STRING">
+    <Label>RequestedBy:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RequestedBy:" password="false" required="false" size="20" type="text">
+      <Label>RequestedBy:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="TransactionId" category="User" name="TransactionId" type="STRING">
+    <Label>TransactionId:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>64</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="TransactionId:" password="false" required="false" size="20" type="text">
+      <Label>TransactionId:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="64" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ICMRemarks" category="User" name="ICMRemarks" type="STRING">
+    <Label>ICMRemarks:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ICMRemarks:" password="false" required="false" size="20" type="text">
+      <Label>ICMRemarks:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <History>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1468707457870" to="http://10.65.5.81:18793/sbm/deployment">Sun Jul 17 03:47:37 IST 2016</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1468706705724" to="http://10.65.5.80:18793/sbm/deployment">Sun Jul 17 03:35:05 IST 2016</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1468651245195" to="http://10.65.5.80:18793/sbm/deployment">Sat Jul 16 12:10:45 IST 2016</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1425520288497" to="http://10.65.5.55:18793/sbm/deployment">Thu Mar 05 07:21:28 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1424844481608" to="http://10.65.15.160:8080/sbm/deployment">Wed Feb 25 11:38:01 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1423467274869" to="http://10.65.15.160:8080/sbm/deployment">Mon Feb 09 13:04:34 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421312269077" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 14:27:49 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421312148401" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 14:25:48 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421312085010" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 14:24:45 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421311951717" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 14:22:31 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421141596789" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 15:03:16 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1420810070501" to="http://10.65.15.160:8080/sbm/deployment">Fri Jan 09 18:57:50 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1420809965402" to="http://10.65.15.160:8080/sbm/deployment">Fri Jan 09 18:56:05 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1420809242660" to="http://10.65.15.160:8080/sbm/deployment">Fri Jan 09 18:44:02 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1420809158256" to="http://10.65.15.160:8080/sbm/deployment">Fri Jan 09 18:42:38 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1420808534309" to="http://10.65.15.160:8080/sbm/deployment">Fri Jan 09 18:32:14 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1420808196480" to="http://10.65.15.160:8080/sbm/deployment">Fri Jan 09 18:26:36 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1419425652247" to="http://10.65.15.160:8080/sbm/deployment">Wed Dec 24 18:24:12 IST 2014</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1416208637223" to="http://10.65.15.160:8080/sbm/deployment">Mon Nov 17 12:47:17 IST 2014</Deployed>
+    <Created as="ICMProposalCancelRefund" by="70177492" on="1416207235253">Mon Nov 17 12:23:55 IST 2014</Created>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1419402078198" to="http://10.65.15.160:8080/sbm/deployment">Wed Dec 24 11:51:18 IST 2014</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1419578468420" to="http://10.65.15.160:8080/sbm/deployment">Fri Dec 26 12:51:08 IST 2014</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421126174134" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 10:46:14 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421126758191" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 10:55:58 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421126865211" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 10:57:45 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421128036765" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 11:17:16 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421128150440" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 11:19:10 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421128262310" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 11:21:02 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421131388032" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:13:08 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421131450870" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:14:10 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421131585271" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:16:25 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421131726813" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:18:46 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421131887300" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:21:27 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421132042488" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:24:02 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421132209686" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:26:49 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421132288415" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:28:08 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421132426937" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:30:26 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421132933168" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:38:53 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421133076263" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:41:16 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421133189739" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 12:43:09 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421134690674" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 13:08:10 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421139594167" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 14:29:54 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421140075351" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 14:37:55 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421140127898" to="http://10.65.15.160:8080/sbm/deployment">Tue Jan 13 14:38:47 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421299374630" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 10:52:54 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421299662949" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 10:57:42 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421299695993" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 10:58:15 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421299752459" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 10:59:12 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421300116984" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:05:16 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421300725807" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:15:25 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421301108189" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:21:48 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421301816845" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:33:36 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421301883130" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:34:43 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421301949389" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:35:49 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421301999010" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:36:39 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421302707703" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:48:27 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421302843368" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:50:43 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421302961594" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:52:41 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421303048107" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:54:08 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421303152131" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:55:52 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421303269983" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 11:57:49 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1421303453476" to="http://10.65.15.160:8080/sbm/deployment">Thu Jan 15 12:00:53 IST 2015</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1505907539786" to="http://10.65.5.81:18793/sbm/deployment">Wed Sep 20 17:08:59 IST 2017</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1505907560966" to="http://10.65.5.80:18793/sbm/deployment">Wed Sep 20 17:09:20 IST 2017</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="bpmadmin" on="1622706732865" to="http://rgisavuat:19793/sbm/deployment">Thu Jun 03 13:22:12 IST 2021</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1626146699455" to="http://10.62.182.42:18793/sbm/deployment">Tue Jul 13 08:54:59 IST 2021</Deployed>
+    <Deployed as="ICMProposalCancelRefund" by="rgicl" on="1630317948270" to="http://10.62.180.35:18793/sbm/deployment">Mon Aug 30 15:35:48 IST 2021</Deployed>
+  </History>
+  <Repository/>
+</Process>

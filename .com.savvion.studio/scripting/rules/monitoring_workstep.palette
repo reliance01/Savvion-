@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <item label="Workstep" path="rules/rules" icon="template.gif">
+    <grid content="FUNCTION" collapsible="true" description="Monitoring rule">
+      <widgets>
+        <label row="1" col="0" rowspan="1" colspan="1">Workstep:</label>
+        <choiceWidget col="1" colspan="1" id="wsname" row="1" rowspan="1" type="WORKSTEP">
+          <selection type="WORKSTEP"></selection>
+        </choiceWidget>
+        <label row="2" col="0" rowspan="1" colspan="1">Monitoring interval:</label>
+        <interval row="2" col="1" fill="false" rowspan="1" colspan="1" id="from" presentation="FIELD" validation="NONE">
+          <reference type="constant" encoding=""></reference>
+        </interval>
+        <list id="condition" row="3" col="0" rowspan="1" colspan="2" label="Condition" prompt="drop conditions here" allowedContent="CONDITION"/>
+        <list id="actions" row="4" col="0" rowspan="1" colspan="2" label="Action if Condition is True" prompt="drop actions here" allowedContent="ACTION"/>
+        <list id="to_completed_actions" row="5" col="0" rowspan="1" colspan="2" label="Action if Condition is False" prompt="drop actions here" allowedContent="ACTION"/>
+      </widgets>
+      <template>
+application AppWithTO1
+module AppWithTO1_rules
+
+import TimeOutLib::*;
+
+val to_xml = "&lt;to-params rulename='${ruleName}' ptname='Assign_A_Task_V3' wsname='${wsname}'&gt;"
++"&lt;to_wactivated&gt;&lt;fromDate&gt;${from}&lt;/fromDate&gt;&lt;toDate&gt;150000&lt;/toDate&gt;&lt;period&gt;500000&lt;/period&gt;&lt;/to_wactivated&gt;"
++"&lt;to_timeout_occured&gt;"
+${actions}
++"&lt;/to_timeout_occured&gt;"
++"&lt;to_wcompleted&gt;"
+${to_completed_actions}
++"&lt;/to_wcompleted&gt;"
++"&lt;/to-params&gt;";
+		
+initialize {
+	TimeOutLib::TimeOutLib_data::load_to_xml(to_xml);
+}
+
+finalize {
+        TimeOutLib::TimeOutLib_data::unload_to_data("${ruleName}");
+}
+
+      </template>
+    </grid>
+  </item>
+
+</palette>

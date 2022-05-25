@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.complex_expressions" path="value_expressions/complex" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.number_operation" path="value_expressions/complex" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.number_operation">
+      <widgets>
+
+        <list col="0" id="op1" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+        </list>
+
+        <choiceWidget col="1" id="operation" type="CONSTANT" searchable="false">
+          <selection presentation="+" type="constant">+</selection>
+          <choice presentation="+" type="constant">+</choice>
+          <choice presentation="-" type="constant">-</choice>
+          <choice presentation="/" type="constant">/</choice>
+          <choice presentation="*" type="constant">*</choice>
+        </choiceWidget>
+
+        <list col="2" id="op2" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+        </list>
+
+      </widgets>
+      <template>gel.calculate(${op1},"${operation}",${op2})</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.string_concatenation" path="value_expressions/complex" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.string_concatenation">
+      <widgets>
+        <list col="0" id="op1" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+        </list>
+
+        <label col="1">.</label>
+
+        <list col="2" id="op2" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+        </list>
+
+      </widgets>
+      <template>gel.calculate(${op1},".",${op2})</template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.statistical_operation" path="value_expressions/complex" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="$Scripting.description.statistical_operation">
+      <widgets>
+        <choiceWidget col="0" id="operation" type="CONSTANT" searchable="false">
+          <selection presentation="$Scripting.operation._sum_of" type="constant">sum</selection>
+          <choice presentation="$Scripting.operation._sum_of" type="constant">sum</choice>
+          <choice presentation="$Scripting.operation._average_of" type="constant">avg</choice>
+          <choice presentation="$Scripting.operation._minimum_of" type="constant">min</choice>
+          <choice presentation="$Scripting.operation._maximum_of" type="constant">max</choice>
+        </choiceWidget>
+
+        <list col="1" id="ops" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" prompt="$Scripting.label.drop_value_expressions_here" delimiter=",">
+        </list>
+
+      </widgets>
+      <template>gel.${operation}(${ops})</template>
+    </grid>
+
+  </item>
+
+</palette>

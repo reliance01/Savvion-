@@ -1,0 +1,44 @@
+<Attributes>
+  <Attribute editable="true" name="Objective" required="false">
+    <Label>Objective</Label>
+    <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+    <Value default="true"/>
+  </Attribute>
+  <Attribute editable="true" name="Goal" required="false">
+    <Label>Goal</Label>
+    <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+    <Value default="true"/>
+  </Attribute>
+  <Attribute editable="true" name="OrganizationalUnit" required="false">
+    <Label>Organizational Unit</Label>
+    <Description>The organizational unit that owns this process model</Description>
+    <Value default="true"/>
+  </Attribute>
+  <Attribute editable="true" name="Influencers" required="false">
+    <Label>Influencers</Label>
+    <Description>People who have influenced development of this process model</Description>
+    <Value default="true"/>
+  </Attribute>
+  <Attribute editable="true" name="Risks" required="false">
+    <Label>Risks</Label>
+    <Description>Risks associated with this process model</Description>
+    <Value default="true"/>
+  </Attribute>
+  <Attribute editable="true" name="Rewards" required="false">
+    <Label>Rewards</Label>
+    <Description>Potential rewards on investment for this process model</Description>
+    <Value default="true"/>
+  </Attribute>
+  <Attribute editable="false" name="Executable" required="false">
+    <Label>Executable</Label>
+    <Description>Can the Process  Ever be made executable?</Description>
+    <Value>No</Value>
+    <Value default="true">Yes</Value>
+  </Attribute>
+  <Attribute editable="false" name="ProcessType" required="true">
+    <Label>Process Type</Label>
+    <Description>Type of the process</Description>
+    <Value default="true">BusinessProcess</Value>
+    <Value>SystemProcess</Value>
+  </Attribute>
+</Attributes>

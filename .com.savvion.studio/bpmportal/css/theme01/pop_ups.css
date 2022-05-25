@@ -1,0 +1,189 @@
+/* Classes for Pop-ups */
+.PopFieldRt {
+	font-size: 8pt;
+	color: #000000;
+	text-align: right;
+	background: #FFFFFF
+}
+
+.PopTblEmboss {
+	border: 1px solid #99BBE8;
+	border-top: 0 none;
+	overflow: hidden;
+	background: #FFFFFF;
+	position: relative
+}
+
+.PopTitle {
+	overflow: hidden;
+	zoom: 1;
+	color: #15428B;
+	font: bold 11px tahoma,arial,verdana,sans-serif;
+	padding: 3px 3px 2px 5px;
+	border-top: 1px solid #99BBE8;
+	border-bottom: 1px solid #99BBE8;
+	line-height: 15px;
+	background: url(../../javascript/ext/resources/images/default/panel/white-top-bottom.gif) repeat-x 0 -1px
+}
+/*  font-weight: bold;
+	font-size: 13px;
+	border: 1px solid #003399;
+	color: #003399;
+	background: url(../../javascript/ext/resources/images/default/panel/white-top-bottom.gif) #EBF3FD repeat-x left bottom;
+	padding: 4px 5px 4px 5px;
+}*/
+.PopValRt {
+	font-size: 8pt;
+	color: #000000;
+	text-align: right;
+	font-weight: bold;
+	background: #FFFFFF
+}
+
+.PopButton {
+	font-size: 8pt;
+	cursor: hand;
+	color: #5164A4;
+	border: 1px solid #5E71B0;
+	font-weight: bold
+}
+
+.PopButtonHover {
+	font-size: 8pt;
+	cursor: hand;
+	color: #3A4876;
+	border: 1px solid #3A4876;
+	font-weight: bold;
+	background: #FFFFFF
+}
+
+.PopButtonDis {
+	font-size: 8pt;
+	border-top-width: 1px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 1px;
+	color: #C1CAE8;
+	font-weight: bold;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #D0DAF8;
+	border-right-color: #BFCDF7;
+	border-bottom-color: #BFCDF7;
+	border-left-color: #D0DAF8;
+	background: #F7F7FF
+}
+
+.PopNoteTblEmboss {
+	border: solid;
+	border-width: 1px 2px 2px 1px;
+	border-color: #AE7200 #710000 #710000 #AE7200;
+	background: #EFEFEF
+}
+
+.PopNoteSmlTxt {
+	font-size: 8pt;
+	line-height: 16pt;
+	list-style-type: square;
+	background: #FFFFFF
+}
+
+.PopNoteTitle {
+	font-weight: bold;
+	font-size: 10pt;
+	border: solid;
+	border-color: #B35900 #934900 #934900 #B35900;
+	color: #712D00;
+	border-width: 1px 2px 0px 1px;
+	background: #FFFFDD;
+	padding: 4px 2px
+}
+.PopNoteTblInBg{ background: #D8D0BA }
+.PopTblEmbossList {
+	border: solid;
+	border-width: 1px 2px 2px 1px;
+	border-color: #330066 #330066 #330033;
+	background: #FFFFFF
+}
+.PopMainTblPad { border: 2px solid #FFFFFF }
+.PopBtnSpace { padding-right: 4px; padding-left: 4px }
+.PopDataTbl { }
+
+.FilterTblEmboss1 {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #FFFFFF;
+	height: 20px;
+	border-top: 1px solid #5992E6;
+	border-right: 1px solid #5076B6;
+	border-bottom: 1px solid #5076B6;
+	border-left: 1px solid #5992E6;
+	background: #90B6EE;
+	padding: 2px
+}
+
+.SegDivPadNew1 {
+	visibility: visible;
+	overflow: auto;
+	layer-background-color: #E7F2FE;
+	border: 1px solid;
+	border-color: #006699 #000064 #000064 #006699;
+	background: url() #EEEEEE repeat-x fixed;
+	padding: 4px
+}
+
+.SegDivPadNew2 {
+	visibility: visible;
+	overflow: auto;
+	layer-background-color: #DBF7EC;
+	border: 1px solid;
+	border-color: #006699 #000064 #000064 #006699;
+	background: url() #EEEEEE repeat-x fixed;
+	padding: 4px
+}
+
+.ViewSlctHdrBg1 {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #FFFFFF;
+	height: 20px;
+	border-top: 1px solid #84AAAA;
+	border-right: 1px solid #628E8E;
+	border-bottom: 1px solid #628E8E;
+	border-left: 1px solid #84AAAA;
+	background: #A2BFBF;
+	padding: 2px
+}
+
+.ViewUnSlctHdrBg1 {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #FFFFFF;
+	height: 20px;
+	border-top: 1px solid #669AE8;
+	border-right: 1px solid #5080C7;
+	border-bottom: 1px solid #5080C7;
+	border-left: 1px solid #669AE8;
+	background: #90B6EE;
+	padding: 2px
+}
+
+.ViewTblEmbossUnSlctBg1 { }
+
+.ViewTblEmbossSlctBg2 { }
+
+.PopFieldCntr, .PopValCntr {
+	font-size: 8pt;
+	color: #000000;
+	text-align: center;
+	background: #FFFFFF
+}
+
+.PopFieldLft, .PopValLft {
+	font-size: 8pt;
+	color: #000000;
+	text-align: left;
+	background: #FFFFFF
+}

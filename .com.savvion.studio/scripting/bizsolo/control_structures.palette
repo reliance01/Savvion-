@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.control_structures" path="other/control_structures" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.if_then" path="other/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.if_then">
+      <template>if (${condition}) {
+  ${actions}
+}</template>
+      <widgets>
+        <list id="condition" row="0" label="$Scripting.label._if" prompt="$Scripting.label.drop_condition_here" allowedContent="BOOLEAN" max="1"/>
+        <list id="actions"  row="1" label="$Scripting.label.then" prompt="$Scripting.label.drop_expressions_here" allowedContent="EXPRESSION"/>
+      </widgets>
+    </grid>
+  </item>
+  
+  <item label="$Scripting.item.if_then_else" path="other/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.if_then_else">
+      <template>if (${condition}) {
+  ${then_actions}
+} else {
+  ${else_actions}
+}</template>
+      <widgets>
+        <list id="condition" max="1" allowedContent="BOOLEAN" label="$Scripting.label._if" prompt="$Scripting.label.drop_condition_here" row="0" rowspan="0"/>
+        <list id="then_actions" allowedContent="EXPRESSION" label="$Scripting.label.then" prompt="$Scripting.label.drop_expressions_here" row="1" rowspan="0"/>
+        <list id="else_actions" allowedContent="EXPRESSION" label="$Scripting.label.else" prompt="$Scripting.label.drop_expressions_here" row="2" rowspan="0"/>
+      </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.while_loop" path="other/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.description.while_loop">
+      <template>while (${condition}) {
+  ${actions}
+}</template>
+      <widgets>
+        <list id="condition" row="0" label="$Scripting.label._while_true" prompt="$Scripting.label.drop_condition_here" allowedContent="BOOLEAN" max="1"/>
+        <list id="actions" row="1" label="$Scripting.label.repeat" prompt="$Scripting.label.drop_expressions_here" allowedContent="EXPRESSION"/>
+      </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.for_loop" path="other/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.description.for_loop">
+      <widgets>
+        <label row="0" col="0">$Scripting.label._using_var</label>
+        <entryWidget row="0" col="1" id="var" validation="ID">
+          <reference type="CONSTANT" encoding="NONE">i</reference>
+        </entryWidget>
+        <label row="0" col="2">$Scripting.label.loop_start</label>
+        <entryWidget row="0" col="3" id="from" validation="INTEGER">
+          <reference type="CONSTANT" encoding="NONE">1</reference>
+        </entryWidget>
+        <label row="0" col="4">$Scripting.label.loop_end</label>
+        <entryWidget row="0" col="5" id="to" validation="INTEGER">
+          <reference type="CONSTANT" encoding="NONE">5</reference>
+        </entryWidget>
+        <label row="0" col="6">$Scripting.label.loop_step</label>
+        <entryWidget row="0" col="7" id="step" validation="INTEGER">
+          <reference type="CONSTANT" encoding="NONE">1</reference>
+        </entryWidget>
+        <list id="actions" row="1" col="0" colspan="8" label="$Scripting.label.performing_the_following_" prompt="$Scripting.label.drop_expressions_here" allowedContent="EXPRESSION"/>
+      </widgets>
+      <template>
+<![CDATA[
+for (int loopVar_${var}=${from}; loopVar_${var}<=${to}; loopVar_${var}+=${step})
+{
+  gel.putVar("${var}", loopVar_${var});
+  ${actions}
+}
+]]>
+      </template>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.return_value" path="other/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.return_value">
+      <template>return ${value};</template>
+      <widgets>
+        <label col="0">$Scripting.label.return</label>
+        <entryWidget col="1" id="value" presentation="FIELD" validation="NONE">
+           <reference type="constant" encoding="NONE"></reference>
+        </entryWidget>
+      </widgets>
+    </grid>
+  </item>
+
+</palette>

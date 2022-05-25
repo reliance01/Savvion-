@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="ResumeSuspendedItems/bin" path="ResumeSuspendedItems/src/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/BPM Studio Library"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SBM LIB"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/apama_engine_client.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/apama_util.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/apamacp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/apamaservice.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/broker.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/cewolf.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/dbforms.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/designer.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/designer_signed.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/emc-dfs-rt.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/emc-dfs-rt-remote.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/emc-dfs-services.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/emc-dfs-services-remote.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/emc-dfs-tools.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/form.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/j2ee.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/jakarta-poi.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/jbossall-client.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/jboss-javaee.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/jintegra.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/ReqResObject.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/ruleeditor.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/rulewizard.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/soapui.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/soapui-xbean.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/soapui-xmlbeans.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/soap-xmlbeans.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/sqlserverjdbc.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/streambuffer.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/Savvion2015 JARs/wstx-asl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/actional-sdk.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/activation.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/adapterscp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/adapterscpDesigner.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/addressing.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/ajax-wrapper-comp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/alloy.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/annotations-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/antlr.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/antlr-runtime.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/apache-mime.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/archivercp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/archiverextcp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/args4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/avalon-framework-cvs.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/axis.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/axis-ant.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/batik.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/batik-awt-util.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/batik-dom.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/batik-svggen.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/batik-util.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/batik-xml.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bcprov.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/beanalysis.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/beanpersistence.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bizpass.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bizpulse.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bizrules-model.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bizsolo.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/blclient.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bmarchiver.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bm-jackrabbit-standalone.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bmlicense.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bmlicensetool.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bmwebsecurity.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bopersistence.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bpclient.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bpcompiler.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bpmportal.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bpmportalwebservices.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bpqueryservice.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/brclient.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/brmsportal.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/bsh.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/c3p0.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/CalAndMaskField.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/castor-xml.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/cglib-nodep-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/cms.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/cocoon.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/common.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-cli.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-codec.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-collections.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-configuration.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-digester.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-discovery.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-httpclient.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-io.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-jxpath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-lang.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-lang3.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-math.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-net.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-pool.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-ssl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-validator.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/commons-vfs.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/core-3.4.2.v_883_R34x.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/cup.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/cxf.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/DataXtendHibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/DataXtendSavvion.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/dataxtendsi.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/dbconfigtool.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/dcs.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/ddjdbccp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/deployment.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/docgen.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/docservice.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/dom4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-compiler.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-core.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-decisiontables.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-ide-common.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-jsr94.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-repository.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-templates.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/drools-verifier.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/dwr.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/dxsiconfig.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/dxsi-loader-utils.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/ehcache-core.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/ehcachecp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/eigenbase-properties.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/eigenbase-resgen.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/eigenbase-xom.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/ejbclasspath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/eventpublisher.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/ezmorph.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/firststeps.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/fop.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/fop09.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/gel.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/gson-2.7.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/hibernate-jpa.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/htmlparser.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/httpclient.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/httpcore.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/httpmime.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/ibatis.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/icons.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/itext.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/itools.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jai_codec.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jai_core.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jasper.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jasperreports.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/javassist.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jaxen.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jaxws-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jazzy-core.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jboss-seam.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jboss-seam-remoting.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jcifs.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jcommon.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jcr.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jdbcclasspath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jedis-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jfor.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jfreechart.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jhall.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jide-common.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jide-grids.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/joda-time.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jpaclasspath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jpivot.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/js.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jsf-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jsfcompounds-core.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/json-lib.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jsr94.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jsr173_api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jsr311-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/juel.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jxl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/logkit.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/looks.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/mail.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/mgmt_client.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/mgmt_config.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/mondrian.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/mvel2.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/neethi.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/nekohtml.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/nodekeeper.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/olap4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/opensaml.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.json.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.aop.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.asm.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.beans.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.context.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.context.support.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.core.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.expression.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.jdbc.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.orm.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.transaction.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.web.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/org.springframework.web.servlet.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/pim.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/pmt.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/poi.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/poi-block.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/poi-ooxml.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/poi-ooxml-schemas.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/policy.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/portalaop.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/portalclasspath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/processgraph.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/processreportbuilder.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/quartz-all.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/regexp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/repository.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/rmt.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/RTFDoclet.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/runtimereport.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/saaj.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/saaj-impl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/savvion.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/savvionsms.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/saxpath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_bizrules.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_db.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_email.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_excel.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_file.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_ftp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_jms.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_sap.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_sonicesb.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapter_ws.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadapterframework.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmadaptersvc_client.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmbizcalendarlibs.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmchart.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmclasspath.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmclientcp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmcluster.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmdistcacheframework.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmutil.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmwidget.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sbmxmlparser.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sdms.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/serializer.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sjsxp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/slf4j-jdk14.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/soap.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sonic_Client.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sonic_Crypto.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sonic_Selector.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sonic_SSL.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sonic_XMessage.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/soniccp.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/sonicservice.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/standard.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/stax.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/stax-api.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/swsframework.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/tbutils-wcf.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/uddi4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/um.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/umext.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/US_export_policy.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/userconfig.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/velocity.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/velocity-dep.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/wcf.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/webdavlib.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/webservice.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/weka.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/wsdl4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/wss4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xalan.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xbean.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xml4j.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xml-apis.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xmlgraphics-commons.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/XmlSchema.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xmlsec.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xom.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xpp3.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xq_config.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xq_core.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/xstream.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jdbc/native/lib/oraclejdbc.jar"/>
+	<classpathentry kind="lib" path="C:/bpmstudio/2021_LIB/jdbc/native/lib/postgresqljdbc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

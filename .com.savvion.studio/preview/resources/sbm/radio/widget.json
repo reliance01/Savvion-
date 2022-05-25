@@ -1,0 +1,38 @@
+{
+    'name': 'Radio',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/radio.jpg',
+    'description': 'Savvion Radio widget.',
+    'category': 'Button',
+    'args': [
+                {'layout':{'type':'STRING', 'defaultValue': 'vertical', 'values': [{'name':'vertical', 'value':'vertical'},{'name':'horizontal', 'value':'horizontal'}]}},
+		{'size':{'type':'NUMBER', 'defaultValue': '20'}},
+		{'maxlength':{'type':'NUMBER', 'defaultValue': '20'}},
+		{'readonly':{'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'disabled':{'type':'BOOLEAN', 'defaultValue': 'flase'}}		
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/radio/onChange',
+					'/sbm/radio/onClick',
+					'/sbm/radio/onFocus',
+					'/sbm/radio/onBlur']
+    },
+   'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+          'options':['validateOn', 'isRequired', 'radioRequiredMsg']
+        }
+    ]
+
+}

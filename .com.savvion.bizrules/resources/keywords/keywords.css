@@ -1,0 +1,17 @@
+/* This class name is set on the div element on the DRL source. This is used for setting common properties for the whole source. */
+.drlsyntax {
+    font-size: 14px;
+}
+
+/*
+    The following three classes are used for overriding the DRL source properties for the respective keywords/literals/comments.
+*/
+.keyword {
+    color:#BC0000;
+}
+.comment {
+    color:#C49700;
+}
+.literal {
+    color:#008000;  
+}

@@ -1,0 +1,11 @@
+ {
+         'name': 'Editable List',
+         'type': 'jmaki',
+         'version': '.8',
+         'jmakiVersion' : '.8.2',
+         'author' : 'Greg Murray',
+         'image' : 'images/jmaki-list.jpg',           
+         'url' : 'https://ajax.dev.java.net',    
+         'description': 'An inline todo list interacting with some backend service',
+         'category': 'List'
+  }

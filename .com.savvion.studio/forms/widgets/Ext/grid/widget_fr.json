@@ -1,0 +1,40 @@
+{
+    'name': 'Grid',
+	'label': 'Grille',
+    'type': 'ext',
+    'version': '.9.6.4',
+    'jmakiVersion': '.9.6',
+    'image': 'images/ext-grid.jpg',	
+    'description': 'Cet objet graphique est une grille dynamique qui se configure facilement.',
+    'category': 'Table',    
+    'args': [
+                {'title':{'type':'STRING', 'defaultValue': 'objet graphique de type grille', 'description':'Titre de l\'objet graphique de type grille.'}}
+        ],
+    'value': {'required':'true', 'type': 'OBJECT',
+             'defaultValue':{
+                'columns':[
+                              { 'label' : 'Titre', 'id' : 'title'},
+                              { 'label':'Auteur', 'id' : 'author'},
+                              { 'label': 'ISBN', 'id' : 'isbn'},
+                              { 'label': 'Description', 'id' : 'description'}
+                              ],
+                'rows':[
+                        { 'title' : 'Titre du livre 1', 'author' : 'Auteur 1', 'isbn': '4412', 'description' : 'Une description'},
+                        { 'id' : 'foo', 'title' : 'Titre du livre 2', 'author' : 'Auteur 2', 'isbn': '4412', 'description' : 'Une description'}
+                       ]
+             }
+    },
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'resources' : [
+                '../resources/styles/images'
+               ]
+        }
+    },
+    "topicInfo": {
+       "type": "publish",
+       "topicName": ["/Ext/grid/onSelect"],
+       "description":"onChange publie selon le nom de topic quand une ligne de la grille est s\u00e9lectionn\u00e9e. Cela publie un objet avec widgetId et valeur. La valeur est celle de la ligne s\u00e9lectionn\u00e9e."
+    }
+  }

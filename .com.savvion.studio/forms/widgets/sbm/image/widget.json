@@ -1,0 +1,24 @@
+{
+    'name': 'Image',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/image.jpg',
+    'description': 'Savvion Image widget.',
+    'category': 'Image',
+    'args': [
+		{'alt':{'type':'STRING', 'defaultValue': 'Loading Image...'}},
+		{'width':{'type':'INTEGER', 'defaultValue': '105'}},
+		{'height':{'type':'INTEGER', 'defaultValue': '97'}},
+		{'border':{'type':'INTEGER', 'defaultValue': '0'}}		
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': []
+    }
+}

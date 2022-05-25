@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Process SYSTEM "../../common/processtemplates/processTemplate.dtd">
+<Process name="Process_Testing_V2" type="BIZLOGIC">
+  <Description/>
+  <Application name="Process_Testing"/>
+  <Category level="0"/>
+  <Category level="1"/>
+  <Group/>
+  <Manager>@CREATOR</Manager>
+  <EstimatedDuration>1d</EstimatedDuration>
+  <TimeCreated>1637325973337</TimeCreated>
+  <Author>Rajat</Author>
+  <Version>2</Version>
+  <Attributes>
+    <Attribute name="ProcessType" required="true">
+      <Label>Process Type</Label>
+      <Description>Type of the process</Description>
+      <Value>BusinessProcess</Value>
+    </Attribute>
+    <Attribute name="Objective" required="false">
+      <Label>Objective</Label>
+      <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Goal" required="false">
+      <Label>Goal</Label>
+      <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="OrganizationalUnit" required="false">
+      <Label>Organizational Unit</Label>
+      <Description>The organizational unit that owns this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Influencers" required="false">
+      <Label>Influencers</Label>
+      <Description>People who have influenced development of this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Risks" required="false">
+      <Label>Risks</Label>
+      <Description>Risks associated with this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Rewards" required="false">
+      <Label>Rewards</Label>
+      <Description>Potential rewards on investment for this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Executable" required="false">
+      <Label>Executable</Label>
+      <Description>Can the Process  Ever be made executable?</Description>
+      <Value>Yes</Value>
+    </Attribute>
+  </Attributes>
+  <Alerts>
+    <Alert name="Default">
+      <AlertSeverity>High</AlertSeverity>
+      <AlertMessage>This is the default alert.</AlertMessage>
+      <AlertDescription/>
+      <AlertCondition type="java:expression"/>
+      <AlertDelivery type="sbm">
+        <AlertRecipient type="USER">${@CREATOR}</AlertRecipient>
+      </AlertDelivery>
+    </Alert>
+  </Alerts>
+  <AtomicWS height="36" name="Start" width="36" worktime="false" x="96" y="72">
+    <AtomicType>START</AtomicType>
+    <PerformingApp type="JSP">Start.jsp</PerformingApp>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Option name="Instructions" visible="true"/>
+    <Option name="Priority" visible="true"/>
+    <Option name="StartDate" visible="false"/>
+    <Option name="DueDate" visible="false"/>
+    <Option name="Reassign" visible="true"/>
+    <Simulation distribution="ct" scenario="(default)"/>
+  </AtomicWS>
+  <AtomicWS height="60" name="Activity 1" width="108" worktime="false" x="396" y="60">
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@CREATOR</Performer>
+    <PerformingApp type="JSP">Activity1.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <Datainput>ApproverStatus</Datainput>
+    <Datainput>Value2</Datainput>
+    <Datainput>Value1</Datainput>
+    <Datainput>CallType</Datainput>
+    <Dataoutput>ApproverStatus</Dataoutput>
+    <Dataoutput>Value2</Dataoutput>
+    <Dataoutput>Value1</Dataoutput>
+    <Dataoutput>CallType</Dataoutput>
+    <Format editable="true" input="ApproverStatus" label="Approver Status" password="false" required="false" size="20" type="text">
+      <Label>Approver Status</Label>
+    </Format>
+    <Format editable="true" input="Value2" label="Value2" password="false" required="false" size="20" type="text">
+      <Label>Value2</Label>
+    </Format>
+    <Format editable="true" input="Value1" label="Value1" password="false" required="false" size="20" type="text">
+      <Label>Value1</Label>
+    </Format>
+    <Format editable="true" input="CallType" label="Call Type" password="false" required="false" size="20" type="text">
+      <Label>Call Type</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="Activity 2" width="108" worktime="false" x="396" y="360">
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@CREATOR</Performer>
+    <PerformingApp type="JSP">Activity2.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <Datainput>Value1</Datainput>
+    <Datainput>Sum</Datainput>
+    <Datainput>Value2</Datainput>
+    <Dataoutput>Value1</Dataoutput>
+    <Dataoutput>Sum</Dataoutput>
+    <Dataoutput>Value2</Dataoutput>
+    <Format editable="true" input="Value1" label="Value1" password="false" required="false" size="20" type="text">
+      <Label>Value1</Label>
+    </Format>
+    <Format editable="true" input="Sum" label="Sum" password="false" required="false" size="20" type="text">
+      <Label>Sum</Label>
+    </Format>
+    <Format editable="true" input="Value2" label="Value2" password="false" required="false" size="20" type="text">
+      <Label>Value2</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="36" name="End 1" width="36" worktime="false" x="660" y="372">
+    <AtomicType>END</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)"/>
+  </AtomicWS>
+  <ExternalWS generate="true" height="60" name="Adapter 1" width="108" x="540" y="60">
+    <Performer generate="true">custom_adapter</Performer>
+    <PerformBy>addValues</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Priority>MEDIUM</Priority>
+    <Datainput>Sum@setSum</Datainput>
+    <Datainput>Value1@setValue1</Datainput>
+    <Datainput>Value2@setValue2</Datainput>
+    <Dataoutput>Sum@getSum</Dataoutput>
+    <Dataoutput>Value1@getValue1</Dataoutput>
+    <Dataoutput>Value2@getValue2</Dataoutput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)"/>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <ConnectorWS height="60" name="Decision 1" width="60" x="216" y="60">
+    <ConnectorType>DECISIONSPLIT</ConnectorType>
+  </ConnectorWS>
+  <ConnectorWS height="60" name="Decision 2" width="60" x="564" y="192">
+    <ConnectorType>DECISIONSPLIT</ConnectorType>
+  </ConnectorWS>
+  <ConnectorWS height="60" name="Or 1" width="60" x="564" y="360">
+    <ConnectorType>ORJOIN</ConnectorType>
+  </ConnectorWS>
+  <Link Name="Connection 1" default="true">
+    <Label>Connection 1</Label>
+    <Source cp="1">Start</Source>
+    <Point x="132.0" y="90.0"/>
+    <Point x="216.0" y="90.0"/>
+    <Target cp="3">Decision 1</Target>
+  </Link>
+  <Link Name="Connection 3" default="true">
+    <Label>Connection 3</Label>
+    <Source cp="2">Adapter 1</Source>
+    <Point x="594.0" y="120.0"/>
+    <Point x="594.0" y="192.0"/>
+    <Target cp="0">Decision 2</Target>
+  </Link>
+  <Link Name="Connection 4" default="true">
+    <Label>Connection 4</Label>
+    <Source cp="1">Activity 2</Source>
+    <Point x="504.0" y="390.0"/>
+    <Point x="564.0" y="390.0"/>
+    <Target cp="3">Or 1</Target>
+  </Link>
+  <Link Name="Approved" default="false">
+    <Label>Approved</Label>
+    <Source cp="3">Decision 2</Source>
+    <Point x="564.0" y="222.0"/>
+    <Point x="450.0" y="222.0"/>
+    <Point x="450.0" y="360.0"/>
+    <Target cp="0">Activity 2</Target>
+    <Condition type="java">ApproverStatus.equals("Approve")<ConditionXMLEncoded>PGNvbmRpdGlvbj4KICA8Z2V0ZmllbGQ+CiR7ZmllbGR9CiAgPC9nZXRmaWVsZD4KICA8ZXhwcmVz&#13;
+c2lvbnM+CiAgICA8Y29uZmlndXJhdGlvbj4KICAgICAgPGNhdGVnb3J5PjwvY2F0ZWdvcnk+CiAg&#13;
+ICAgIDxleHByZXNzaW9uIHR5cGU9ImJhc2ljIj4KICAgICAgICA8bmFtZT48L25hbWU+CiAgICAg&#13;
+ICAgPGRlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb24+CiAgICAgICAgPG1vZGU+QklaTE9HSUM8L21v&#13;
+ZGU+CiAgICAgICAgPHBhcmFtZXRlcnM+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9ImZpcnN0&#13;
+T3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4ke0FwcHJv&#13;
+dmVyU3RhdHVzfTwvcGFyYW1ldGVyPgogICAgICAgICAgPHBhcmFtZXRlciBuYW1lPSJvcGVyYXRv&#13;
+ck5hbWUiIHR5cGU9IlNUUklORyIgZWRpdGFibGU9ImZhbHNlIiBmaWx0ZXI9IiI+U3RyaW5nRXF1&#13;
+YWxzPC9wYXJhbWV0ZXI+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9InNlY29uZE9wZXJhbmQi&#13;
+IHR5cGU9IlNUUklORyIgZWRpdGFibGU9ImZhbHNlIiBmaWx0ZXI9IiI+JnF1b3Q7QXBwcm92ZSZx&#13;
+dW90OzwvcGFyYW1ldGVyPgogICAgICAgIDwvcGFyYW1ldGVycz4KICAgICAgICA8cHJlc2VudGF0&#13;
+aW9uPgoKICAgICAgICA8L3ByZXNlbnRhdGlvbj4KICAgICAgICA8Y29kZT4KQXBwcm92ZXJTdGF0&#13;
+dXMuZXF1YWxzKCZxdW90O0FwcHJvdmUmcXVvdDspCiAgICAgICAgPC9jb2RlPgogICAgICAgIDxq&#13;
+b2luTmV4dD5BTkQ8L2pvaW5OZXh0PgogICAgICA8L2V4cHJlc3Npb24+CiAgICA8L2NvbmZpZ3Vy&#13;
+YXRpb24+CiAgPC9leHByZXNzaW9ucz4KPC9jb25kaXRpb24+Cg==</ConditionXMLEncoded>
+    </Condition>
+  </Link>
+  <Link Name="Rejected" default="true" x="2" y="23">
+    <Label>Rejected</Label>
+    <Source cp="2">Decision 2</Source>
+    <Point x="594.0" y="252.0"/>
+    <Point x="594.0" y="360.0"/>
+    <Target cp="0">Or 1</Target>
+  </Link>
+  <Link Name="Connection 12" default="true">
+    <Label>Connection 12</Label>
+    <Source cp="1">Or 1</Source>
+    <Point x="624.0" y="390.0"/>
+    <Point x="660.0" y="390.0"/>
+    <Target cp="3">End 1</Target>
+  </Link>
+  <Link Name="Issue" default="true" x="-57" y="30">
+    <Label>Issue</Label>
+    <Source cp="2">Decision 1</Source>
+    <Point x="246.0" y="120.0"/>
+    <Point x="246.0" y="390.0"/>
+    <Point x="396.0" y="390.0"/>
+    <Target cp="3">Activity 2</Target>
+  </Link>
+  <Link Name="Request" default="false">
+    <Label>Request</Label>
+    <Source cp="1">Decision 1</Source>
+    <Point x="276.0" y="90.0"/>
+    <Point x="396.0" y="90.0"/>
+    <Target cp="3">Activity 1</Target>
+    <Condition type="java">CallType.equals("Request")<ConditionXMLEncoded>PGNvbmRpdGlvbj4KICA8Z2V0ZmllbGQ+CiR7ZmllbGR9CiAgPC9nZXRmaWVsZD4KICA8ZXhwcmVz&#13;
+c2lvbnM+CiAgICA8Y29uZmlndXJhdGlvbj4KICAgICAgPGNhdGVnb3J5PjwvY2F0ZWdvcnk+CiAg&#13;
+ICAgIDxleHByZXNzaW9uIHR5cGU9ImJhc2ljIj4KICAgICAgICA8bmFtZT48L25hbWU+CiAgICAg&#13;
+ICAgPGRlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb24+CiAgICAgICAgPG1vZGU+QklaTE9HSUM8L21v&#13;
+ZGU+CiAgICAgICAgPHBhcmFtZXRlcnM+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9ImZpcnN0&#13;
+T3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4ke0NhbGxU&#13;
+eXBlfTwvcGFyYW1ldGVyPgogICAgICAgICAgPHBhcmFtZXRlciBuYW1lPSJvcGVyYXRvck5hbWUi&#13;
+IHR5cGU9IlNUUklORyIgZWRpdGFibGU9ImZhbHNlIiBmaWx0ZXI9IiI+U3RyaW5nRXF1YWxzPC9w&#13;
+YXJhbWV0ZXI+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9InNlY29uZE9wZXJhbmQiIHR5cGU9&#13;
+IlNUUklORyIgZWRpdGFibGU9ImZhbHNlIiBmaWx0ZXI9IiI+JnF1b3Q7UmVxdWVzdCZxdW90Ozwv&#13;
+cGFyYW1ldGVyPgogICAgICAgIDwvcGFyYW1ldGVycz4KICAgICAgICA8cHJlc2VudGF0aW9uPgoK&#13;
+ICAgICAgICA8L3ByZXNlbnRhdGlvbj4KICAgICAgICA8Y29kZT4KQ2FsbFR5cGUuZXF1YWxzKCZx&#13;
+dW90O1JlcXVlc3QmcXVvdDspCiAgICAgICAgPC9jb2RlPgogICAgICAgIDxqb2luTmV4dD5BTkQ8&#13;
+L2pvaW5OZXh0PgogICAgICA8L2V4cHJlc3Npb24+CiAgICA8L2NvbmZpZ3VyYXRpb24+CiAgPC9l&#13;
+eHByZXNzaW9ucz4KPC9jb25kaXRpb24+Cg==</ConditionXMLEncoded>
+    </Condition>
+  </Link>
+  <Link Name="Connection 15" default="true">
+    <Label>Connection 15</Label>
+    <Source cp="1">Activity 1</Source>
+    <Point x="504.0" y="90.0"/>
+    <Point x="540.0" y="90.0"/>
+    <Target cp="3">Adapter 1</Target>
+  </Link>
+  <Dataslot Name="Value1" category="User" name="Value1" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Value2" category="User" name="Value2" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="Sum" category="User" name="Sum" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="CallType" category="User" name="CallType" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue>Request</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ApproverStatus" category="User" name="ApproverStatus" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <Choices>Approve|Reject</Choices>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" required="false" type="combo">
+      <Choice value="Approve">
+        <Label>Approve</Label>
+      </Choice>
+      <Choice value="Reject">
+        <Label>Reject</Label>
+      </Choice>
+    </Format>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <History>
+    <Created as="Process_Testing_V2" by="Rajat" from="Process_Testing" on="1637325973337">Fri Nov 19 18:16:13 IST 2021</Created>
+    <Deployed as="Process_Testing_V2" by="rgicl" on="1637393334257" to="http://10.62.180.35:18793/sbm/deployment">Sat Nov 20 12:58:54 IST 2021</Deployed>
+  </History>
+  <Repository/>
+</Process>

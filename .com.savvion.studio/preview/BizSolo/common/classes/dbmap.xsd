@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 	Copyright (c) 2016 - 2018. Aurea Software, Inc. All Rights Reserved.
+	author: Liviu Casapu
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:annotation>
+		<xsd:documentation xml:lang="en">
+			This schema describes the syntax for mapping database data to BizSolo (web) application data (called dataslots) 
+		</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:element name="MappingData">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ParametricQuery" type="ParametricQueryType" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ParametricQueryType">
+		<xsd:sequence>
+			<xsd:element ref="Table" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Dataslot" type="DataslotType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Restriction"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DataslotType">
+		<xsd:sequence>
+			<xsd:element ref="Column" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:element name="Restriction" type="xsd:string"/>
+	<xsd:element name="Table" type="xsd:string"/>
+	<xsd:element name="Column" type="xsd:string"/>
+</xsd:schema>

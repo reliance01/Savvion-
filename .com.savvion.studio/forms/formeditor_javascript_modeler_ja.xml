@@ -1,0 +1,659 @@
+<expressionset>
+  <getfield>sbm.util.getValue("${field}")</getfield>
+
+  <category>
+    <name>データ操作</name>
+    <description>各種の操作です。</description>
+    <expressions>
+      <expression>
+        <name>フィールド値のコピー</name>
+        <description>フィールドの値を別のフィールドにコピーします。</description>
+        <parameters>
+          <parameter name="field1" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="field2" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field1} | の値を | ${field2} | にコピーします。
+        </presentation>
+        <code>
+sbm.util.setValue('${field2}',sbm.util.getValue('${field1}'));
+        </code>
+      </expression>
+      <expression>
+        <name>フィールド値の設定</name>
+        <description>フィールドの値を定数に設定します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | の値を | ${string} | に設定します。
+        </presentation>
+        <code>
+sbm.util.setValue('${field}', '${string}');
+        </code>
+      </expression>
+      <expression>
+        <name>ウィジェット値のコピー</name>
+        <description>ウィジェットの値を別のウィジェットにコピーします。</description>
+        <parameters>
+          <parameter name="widget1" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="widget2" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+ウィジェット | ${widget1} | の値を | ${widget2} | にコピーします。
+        </presentation>
+        <code>
+sbm.widgets.setValue('${widget2}',sbm.widgets.getValue('${widget1}'));
+        </code>
+      </expression>
+      <expression>
+        <name>ウィジェット値の設定</name>
+        <description>ウィジェットの値を定数に設定します。</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+ウィジェット | ${widget} | の値を | ${string} | に設定します。
+        </presentation>
+        <code>
+sbm.widgets.setValue('${widget}', '${string}');
+        </code>
+      </expression>
+    </expressions>
+  </category>
+  
+  <category>
+    <name>フィールドの効果</name>
+    <description>フォームフィールドの効果です。</description>
+    <expressions>
+      <expression>
+        <name>徐々に表示</name>
+        <description>フィールドを徐々に表示します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を徐々に表示します。
+        </presentation>
+        <code>
+sbm.effects.Appear("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>ブラインドダウン</name>
+        <description>フィールドを上から下に表示します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を上から下に表示します。
+        </presentation>
+        <code>
+sbm.effects.BlindDown("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>ブラインドアップ</name>
+        <description>フィールドを下から上に消します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を下から上に表示します。
+        </presentation>
+        <code>
+sbm.effects.BlindUp("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>ドロップアウト</name>
+        <description>フィールドをドロップアウト (落下させて消す) します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | をドロップアウトします。
+        </presentation>
+        <code>
+sbm.effects.DropOut("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>フェードアウト</name>
+        <description>フィールドをフェードアウトさせます。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | をフェードアウトさせます。
+        </presentation>
+        <code>
+sbm.effects.Fade("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>折りたたみ</name>
+        <description>フィールドを折りたたみます。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を折りたたみます。
+        </presentation>
+        <code>
+sbm.effects.Fold("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>シェイク</name>
+        <description>フィールドを揺らします。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を揺らします。
+        </presentation>
+        <code>
+sbm.effects.Shake("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>縮小</name>
+        <description>フィールドを縮小します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を縮小します。
+        </presentation>
+        <code>
+sbm.effects.Shrink("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>スキッシュ</name>
+        <description>フィールドをスキッシュします。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | をスキッシュします。
+        </presentation>
+        <code>
+sbm.effects.Squish("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>スイッチオフ</name>
+        <description>フィールドを消します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を消します。
+        </presentation>
+        <code>
+sbm.effects.SwitchOff("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>パフ</name>
+        <description>フィールドを拡大しながら消します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を拡大しながら消します。
+        </presentation>
+        <code>
+sbm.effects.Puff("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>点滅</name>
+        <description>フィールドを点滅させます。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を点滅させます。
+        </presentation>
+        <code>
+sbm.effects.Pulsate("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>非表示</name>
+        <description>フィールドを非表示にします。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を非表示にします。
+        </presentation>
+        <code>
+sbm.util.hide("${field}");
+        </code>
+      </expression>
+      <expression>
+        <name>表示</name>
+        <description>フィールドを表示します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+フィールド | ${field} | を表示します。
+        </presentation>
+        <code>
+sbm.util.show("${field}");
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+  <category>
+    <name>DIV の効果</name>
+    <description>HTML の DIV セクションの効果です。</description>
+    <expressions>
+      <expression>
+        <name>徐々に表示</name>
+        <description>DIV セクションを徐々に表示します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を徐々に表示します。
+        </presentation>
+        <code>
+sbm.effects.Appear("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>ブラインドダウン</name>
+        <description>DIV セクションを上から下に表示します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を上から下に表示します。
+        </presentation>
+        <code>
+sbm.effects.BlindDown("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>ブラインドアップ</name>
+        <description>DIV セクションを下から上に消します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を下から上に表示します。
+        </presentation>
+        <code>
+sbm.effects.BlindUp("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>ドロップアウト</name>
+        <description>DIV セクションをドロップアウト (落下させて消す) します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | をドロップアウトします。
+        </presentation>
+        <code>
+sbm.effects.DropOut("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>フェードアウト</name>
+        <description>DIV セクションを徐々に消します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | をフェードアウトさせます。
+        </presentation>
+        <code>
+sbm.effects.Fade("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>折りたたみ</name>
+        <description>DIV セクションを折りたたみます。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を折りたたみます。
+        </presentation>
+        <code>
+sbm.effects.Fold("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>シェイク</name>
+        <description>DIV セクションを揺らします。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を揺らします。
+        </presentation>
+        <code>
+sbm.effects.Shake("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>縮小</name>
+        <description>DIV セクションを縮小します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を縮小します。
+        </presentation>
+        <code>
+sbm.effects.Shrink("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>スキッシュ</name>
+        <description>DIV セクションをスキッシュします。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | をスキッシュします。
+        </presentation>
+        <code>
+sbm.effects.Squish("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>スイッチオフ</name>
+        <description>DIV セクションを消します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を消します。
+        </presentation>
+        <code>
+sbm.effects.SwitchOff("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>パフ</name>
+        <description>DIV セクションを拡大しながら消します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を拡大しながら消します。
+        </presentation>
+        <code>
+sbm.effects.Puff("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>点滅</name>
+        <description>DIV セクションを点滅させます。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を点滅させます。
+        </presentation>
+        <code>
+sbm.effects.Pulsate("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>非表示</name>
+        <description>DIV セクションを非表示にします。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を非表示にします。
+        </presentation>
+        <code>
+sbm.util.hide("${div}");
+        </code>
+      </expression>
+      <expression>
+        <name>表示</name>
+        <description>DIV セクションを表示します。</description>
+        <parameters>
+          <parameter name="div" type="FIELDLIST" editable="false" filter="DIV"/>
+        </parameters>
+        <presentation>
+DIV セクション | ${div} | を表示します。
+        </presentation>
+        <code>
+sbm.util.show("${div}");
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+  <category>
+    <name>ウィジェットの効果</name>
+    <description>ウィジェットの効果です。</description>
+    <expressions>
+      <expression>
+        <name>表示</name>
+        <description>ウィジェットを表示します。</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+ウィジェット | ${widget} | を表示します。
+        </presentation>
+        <code>
+sbm.widgets.show("${widget}");
+        </code>
+      </expression>
+      <expression>
+        <name>非表示</name>
+        <description>ウィジェットを非表示にします。</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+ウィジェット | ${widget} | を非表示にします。
+        </presentation>
+        <code>
+sbm.widgets.hide("${widget}");
+        </code>
+      </expression>
+      <expression>
+        <name>有効化</name>
+        <description>ウィジェットを有効にします。</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+ウィジェット | ${widget} | を有効にします。
+        </presentation>
+        <code>
+sbm.widgets.enable("${widget}");
+        </code>
+      </expression>
+      <expression>
+        <name>無効化</name>
+        <description>ウィジェットを無効にします。</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+ウィジェット | ${widget} | を無効にします。
+        </presentation>
+        <code>
+sbm.widgets.disable("${widget}");
+        </code>
+      </expression>
+    </expressions>
+  </category>
+
+  <category>
+    <name>その他</name>
+    <description>その他の操作です。</description>
+    <expressions>
+      <expression>
+        <name>カスタムスクリプト</name>
+        <description>カスタムの JavaScript を実行します。</description>
+        <parameters>
+          <parameter name="script" type="VERYLONGSTRING" editable="true"/>
+        </parameters>
+        <presentation>
+次の JavaScript を実行します。
+${script}
+        </presentation>
+        <code>
+{
+${script};
+}
+        </code>
+      </expression>
+    </expressions>
+  </category>
+  
+  <category>
+    <name>条件</name>
+    <description>条件</description>
+    <expressions>
+      <expression>
+        <name>フィールドを比較する</name>
+        <description>2 つのフィールドの値を比較します。</description>
+        <parameters>
+          <parameter name="field1" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">＝</choice>
+            <choice value="!=">≠</choice>
+            <choice value="&lt;">＜</choice>
+            <choice value="&gt;">＞</choice>
+            <choice value="&lt;=">≧</choice>
+            <choice value="&gt;=">≧</choice>
+          </parameter>
+          <parameter name="field2" type="FIELDLIST" editable="false" filter="FIELD"/>
+        </parameters>
+        <presentation>
+| ${field1} | ${operator} | ${field2} | の場合
+        </presentation>
+        <code>
+if (sbm.utils.compare("${field1}", "${operator}", "${field2}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>フィールドを定数と比較する</name>
+        <description>フィールドの値を定数と比較します。</description>
+        <parameters>
+          <parameter name="field" type="FIELDLIST" editable="false" filter="FIELD"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">＝</choice>
+            <choice value="!=">≠</choice>
+            <choice value="&lt;">＜</choice>
+            <choice value="&gt;">＞</choice>
+            <choice value="&lt;=">≧</choice>
+            <choice value="&gt;=">≧</choice>
+          </parameter>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+| ${field} | ${operator} | ${string} | の場合
+        </presentation>
+        <code>
+if (sbm.utils.compareConstant("${field}", "${operator}", "${string}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>ウィジェットを比較する</name>
+        <description>2 つのウィジェットの値を比較します。</description>
+        <parameters>
+          <parameter name="widget1" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">＝</choice>
+            <choice value="!=">≠</choice>
+            <choice value="&lt;">＜</choice>
+            <choice value="&gt;">＞</choice>
+            <choice value="&lt;=">≧</choice>
+            <choice value="&gt;=">≧</choice>
+          </parameter>
+          <parameter name="widget2" type="FIELDLIST" editable="false" filter="WIDGET"/>
+        </parameters>
+        <presentation>
+| ${widget1} | ${operator} | ${widget2} | の場合
+        </presentation>
+        <code>
+if (sbm.widgets.compare("${widget1}", "${operator}", "${widget2}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>ウィジェットを定数と比較する</name>
+        <description>ウィジェットの値を定数と比較します。</description>
+        <parameters>
+          <parameter name="widget" type="FIELDLIST" editable="false" filter="WIDGET"/>
+          <parameter name="operator" type="SELECTION" editable="false">
+            <choice value="==">＝</choice>
+            <choice value="!=">≠</choice>
+            <choice value="&lt;">＜</choice>
+            <choice value="&gt;">＞</choice>
+            <choice value="&lt;=">≧</choice>
+            <choice value="&gt;=">≧</choice>
+          </parameter>
+          <parameter name="string" type="STRING" editable="true"/>
+        </parameters>
+        <presentation>
+| ${widget} | ${operator} | ${string} | の場合
+        </presentation>
+        <code>
+if (sbm.widgets.compareConstant("${widget}", "${operator}", "${string}")) 
+        </code>
+      </expression>
+      <expression>
+        <name>カスタム条件</name>
+        <description>カスタム条件を定義します。</description>
+        <parameters>
+          <parameter name="string" type="LONGSTRING" editable="true"/>
+        </parameters>
+        <presentation>
+| ${string} | の場合
+        </presentation>
+        <code>
+if (${string}) 
+        </code>
+      </expression>
+      <expression>
+        <name>ブロック開始</name>
+        <description>アクションのブロックの先頭を定義します。これより後にブロック終了が必要です。</description>
+        <parameters>
+        </parameters>
+        <presentation>
+--- ブロック開始 ---
+        </presentation>
+        <code>
+{ 
+        </code>
+      </expression>
+      <expression>
+        <name>ブロック終了</name>
+        <description>アクションのブロックの末尾を定義します。これより前にブロック開始が必要です。</description>
+        <parameters>
+        </parameters>
+        <presentation>
+--- ブロック終了 ---
+        </presentation>
+        <code>
+} 
+        </code>
+      </expression>
+     </expressions>
+  </category>
+  
+</expressionset>

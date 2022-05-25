@@ -1,0 +1,1 @@
+[{"selected":true,"value":"none","label":"None"},{"selected":false,"value":"full_time","label":"Full Time"},{"selected":false,"value":"part_time","label":"Part Time"},{"selected":false,"value":"contractor","label":"Contractor"},{"selected":false,"value":"hourly","label":"Hourly"},{"selected":false,"value":"seasonal","label":"Seasonal"},{"sdeWidgetKey":"Combobox"}]

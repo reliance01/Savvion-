@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.control_structures" path="expressions/control_structures" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.if_then" path="expressions/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.if_then">
+      <template>if (${condition}) {
+  ${actions}
+}</template>
+      <widgets>
+        <list id="condition" row="0" col="0" rowspan="1" colspan="1" label="$Scripting.label._if" prompt="$Scripting.label.drop_condition_here" allowedContent="BOOLEAN" max="1"/>
+        <list id="actions"  row="1" col="0" rowspan="1" colspan="1" label="$Scripting.label.then" prompt="$Scripting.label.drop_expressions_here" allowedContent="EXPRESSION"/>
+      </widgets>
+    </grid>
+  </item>
+  
+  <item label="$Scripting.item.if_then_else" path="expressions/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.if_then_else">
+      <template>if (${condition}) {
+  ${then_actions}
+} else {
+  ${else_actions}
+}</template>
+      <widgets>
+        <list id="condition" max="1" allowedContent="BOOLEAN" col="0" colspan="1" label="$Scripting.label._if" prompt="$Scripting.label.drop_condition_here" row="0" rowspan="0"/>
+        <list id="then_actions" allowedContent="EXPRESSION" col="0" colspan="1" label="$Scripting.label.then" prompt="$Scripting.label.drop_expressions_here" row="1" rowspan="0"/>
+        <list id="else_actions" allowedContent="EXPRESSION" col="0" colspan="1" label="$Scripting.label.else" prompt="$Scripting.label.drop_expressions_here" row="2" rowspan="0"/>
+      </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.stop_script_execution" path="expressions/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.stop_script_execution">
+      <template>return false;</template>
+      <widgets>
+        <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.stop_script_execution</label>
+      </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.return_value" path="expressions/control_structures" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.return_value">
+      <template>return ${value};</template>
+      <widgets>
+        <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.return</label>
+        <entryWidget row="0" col="3" rowspan="1" colspan="1" id="value" presentation="FIELD" validation="NONE">
+           <reference type="constant" encoding="NONE"></reference>
+        </entryWidget>
+      </widgets>
+    </grid>
+  </item>
+
+</palette>
+

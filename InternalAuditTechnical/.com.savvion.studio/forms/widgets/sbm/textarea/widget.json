@@ -1,0 +1,38 @@
+{
+    'name': 'TextArea',
+	'label': '%widget.textarea.label',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/textarea.jpg',
+    'description': '%widget.textarea.description',
+    'category': 'Text Area',
+    'args': [
+		{'wrap':{'label':'%widget.arg.wrap.label', 'type':'STRING', 'defaultValue': 'Soft', 
+                  'values': [{'key':'soft', 'label':'%widget.arg.wrap.soft.label'},{'key':'hard', 'label':'%widget.arg.wrap.hard.label'},{'key':'off', 'label':'%widget.arg.wrap.off.label'}]}},
+		{'rows':{'label':'%widget.arg.rows.label', 'type':'INTEGER', 'defaultValue': '5'}},
+		{'cols':{'label':'%widget.arg.cols.label', 'type':'INTEGER', 'defaultValue': '25'}},
+		{'visible':{'label':'%Form.checkbox.visible', 'type':'BOOLEAN', 'defaultValue': 'true'}},
+		{'readonly':{'label':'%widget.arg.readonly.label', 'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'disabled':{'label':'%widget.arg.disabled.label', 'type':'BOOLEAN', 'defaultValue': 'false'}}
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/textarea/onChange',
+					'/sbm/textarea/onKeyPress']
+    },
+    'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'validate', 
+          'options':['validateOn', 'isRequired', 'useCharacterMasking', 'minChars', 'maxChars', 'textareaCounterType', 'textareaValidationMsg', 'textAreaValidationMsgMin', 'textAreaValidationMsgMax', 'requiredValidationMsg']
+        },
+    ]
+}

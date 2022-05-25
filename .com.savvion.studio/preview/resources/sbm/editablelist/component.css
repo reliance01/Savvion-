@@ -1,0 +1,31 @@
+.plain {
+ color: black;
+ height:25px;
+ font-size:18px;
+ font-weight: bold;
+ font-family: Arial;
+ background: white;
+}
+
+.over {
+ color: white;
+ height:25px;
+ font-size:18px;
+ font-weight: bold;
+ font-family: Arial;
+ background: #0099FF;
+ cursor: pointer;
+}
+
+
+.elistDiv {
+ position: relative;
+ width: 300px;
+ height: 275px;
+ overflow: auto;
+}
+
+.elistContainer {
+ width: 300px;
+ height: 275px;
+}

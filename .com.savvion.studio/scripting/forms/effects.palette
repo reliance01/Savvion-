@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.effects" path="expressions/effects" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.effect_show" path="expressions/effects" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.effect_show">
+      <template>Bm.util.show('${widget}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.effect_show</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.effect_hide" path="expressions/effects" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.effect_hide">
+      <template>Bm.util.hide('${widget}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.effect_hide</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.effect_enable" path="expressions/effects" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.effect_enable">
+      <template>Bm.util.enable('${widget}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.effect_enable</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*ACTIVATED_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.effect_disable" path="expressions/effects" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.effect_disable">
+      <template>Bm.util.disable('${widget}');</template>
+        <widgets>
+          <label row="0" col="0" rowspan="1" colspan="1">$Scripting.label.effect_disable</label>
+          <choiceWidget col="1" colspan="1" id="widget" row="0" rowspan="1" type="WIDGET" filter="*ACTIVATED_WIDGETS">
+            <selection type="widget"></selection>
+          </choiceWidget>
+        </widgets>
+    </grid>
+  </item>
+
+  <!-- TODO: More effects -->
+
+</palette>

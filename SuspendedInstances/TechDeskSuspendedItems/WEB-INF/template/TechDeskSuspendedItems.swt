@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Process name="TechDeskSuspendedItems" type="BIZSOLO" webbpaID="1647680404084">
+  <Package xmlns="http://www.wfmc.org/2004/XPDL2.0alpha" Id="1" Name="">
+    <PackageHeader>
+      <XPDLVersion>2.0</XPDLVersion>
+      <Vendor>Savvion</Vendor>
+      <Created>1647680998106</Created>
+    </PackageHeader>
+    <Pools>
+      <Pool BoundaryVisible="true" Id="TechDeskSuspendedItems" Process="TechDeskSuspendedItems">
+        <Lanes/>
+      </Pool>
+    </Pools>
+  </Package>
+  <Description/>
+  <Application name="TechDeskSuspendedItems"/>
+  <Category level="0"/>
+  <Category level="1"/>
+  <Group/>
+  <Manager/>
+  <EstimatedDuration/>
+  <TimeCreated>1647680998106</TimeCreated>
+  <Author>Rajat</Author>
+  <Version/>
+  <Attributes>
+    <Attribute name="ProcessType" required="true">
+      <Label>Process Type</Label>
+      <Description>Type of the process</Description>
+      <Value>PresentationProcess</Value>
+    </Attribute>
+    <Attribute name="Objective" required="false">
+      <Label>Objective</Label>
+      <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Goal" required="false">
+      <Label>Goal</Label>
+      <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="OrganizationalUnit" required="false">
+      <Label>Organizational Unit</Label>
+      <Description>The organizational unit that owns this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Influencers" required="false">
+      <Label>Influencers</Label>
+      <Description>People who have influenced development of this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Risks" required="false">
+      <Label>Risks</Label>
+      <Description>Risks associated with this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Rewards" required="false">
+      <Label>Rewards</Label>
+      <Description>Potential rewards on investment for this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Executable" required="false">
+      <Label>Executable</Label>
+      <Description>Can the Process  Ever be made executable?</Description>
+      <Value>Yes</Value>
+    </Attribute>
+  </Attributes>
+  <AtomicWS height="36" id="" name="Start" webbpaID="1647680404085" width="36" worktime="false" x="72" y="192">
+    <AtomicType>START</AtomicType>
+    <PerformingApp>Start.jsp</PerformingApp>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+  </AtomicWS>
+  <AtomicWS height="60" id="" name="ViewSuspendedItems" webbpaID="1647680404086" width="108" worktime="false" x="312" y="180">
+    <Label>ViewSuspendedItems</Label>
+    <AtomicType>ACTIVITY</AtomicType>
+    <PerformingApp type="custom_bizsolo">ViewSuspendedItems.jsp</PerformingApp>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Option name="Instructions" visible="true"/>
+    <Option name="Priority" visible="false"/>
+    <Option name="StartDate" visible="false"/>
+    <Option name="DueDate" visible="false"/>
+    <Option name="Reassign" visible="true"/>
+  </AtomicWS>
+  <AtomicWS height="36" id="" name="End 1" webbpaID="1647680404087" width="36" worktime="false" x="660" y="192">
+    <AtomicType>END</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+  </AtomicWS>
+  <ExternalWS generate="true" height="60" id="" name="GetSuspendedWS" webbpaID="1647680404088" width="108" x="156" y="180">
+    <Label>GetSuspendedWS</Label>
+    <Performer generate="true">com.ap.techdesk.suspendedinstances.getSuspendedWS</Performer>
+    <PerformBy>commit</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Priority>MEDIUM</Priority>
+    <Datainput>Count@Count</Datainput>
+    <Datainput>processTemplateID@processTemplateID</Datainput>
+    <Datainput>suspendedItems@suspendedItems</Datainput>
+    <Datainput>suspendedItemsCount@suspendedItemsCount</Datainput>
+    <Datainput>WSName@WSName</Datainput>
+    <Dataoutput>Count@Count</Dataoutput>
+    <Dataoutput>processTemplateID@processTemplateID</Dataoutput>
+    <Dataoutput>suspendedItems@suspendedItems</Dataoutput>
+    <Dataoutput>suspendedItemsCount@suspendedItemsCount</Dataoutput>
+    <Dataoutput>WSName@WSName</Dataoutput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <ExternalWS generate="true" height="60" id="" name="ResumeSuspendedWS" webbpaID="1647680404090" width="108" x="492" y="180">
+    <Label>ResumeSuspendedWS</Label>
+    <Performer generate="true">com.ap.techdesk.suspendedinstances.resumeSuspendedWS</Performer>
+    <PerformBy>commit</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Priority>MEDIUM</Priority>
+    <Datainput>processTemplateID@processTemplateID</Datainput>
+    <Dataoutput>processTemplateID@processTemplateID</Dataoutput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <Link Name="Connection 4" default="true" webbpaID="1647680404091">
+    <Source cp="1">ResumeSuspendedWS</Source>
+    <Point x="600.0" y="210.0"/>
+    <Point x="660.0" y="210.0"/>
+    <Target cp="3">End 1</Target>
+  </Link>
+  <Link Name="Connection 3" default="true" webbpaID="1647680404092">
+    <Source cp="1">ViewSuspendedItems</Source>
+    <Point x="420.0" y="210.0"/>
+    <Point x="492.0" y="210.0"/>
+    <Target cp="3">ResumeSuspendedWS</Target>
+  </Link>
+  <Link Name="Connection 2" default="true" webbpaID="1647680404093">
+    <Source cp="1">GetSuspendedWS</Source>
+    <Point x="264.0" y="210.0"/>
+    <Point x="312.0" y="210.0"/>
+    <Target cp="3">ViewSuspendedItems</Target>
+  </Link>
+  <Link Name="Connection 1" default="true" webbpaID="1647680404094">
+    <Source cp="1">Start</Source>
+    <Point x="108.0" y="210.0"/>
+    <Point x="156.0" y="210.0"/>
+    <Target cp="3">GetSuspendedWS</Target>
+  </Link>
+  <Dataslot Name="suspendedItems" category="User" name="suspendedItems" type="MAP" webbpaID="1522211627860">
+    <DataType>MAP</DataType>
+    <Entries valueType="java.lang.String"/>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="text"/>
+    <Storage type="java.util.LinkedHashMap"/>
+  </Dataslot>
+  <Dataslot Name="Count" category="User" name="Count" type="NUMBER" webbpaID="1522211627873">
+    <DataType>LONG</DataType>
+    <DataValue>0</DataValue>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="field"/>
+    <Storage type="LONG"/>
+  </Dataslot>
+  <Dataslot Name="processTemplateID" category="User" name="processTemplateID" type="NUMBER" webbpaID="1522211627858">
+    <DataType>LONG</DataType>
+    <DataValue>6308</DataValue>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="field"/>
+    <Storage type="LONG"/>
+  </Dataslot>
+  <Dataslot Name="suspendedItemsCount" category="User" name="suspendedItemsCount" type="NUMBER" webbpaID="1522211627866">
+    <DataType>LONG</DataType>
+    <DataValue>0</DataValue>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="field"/>
+    <Storage type="LONG"/>
+  </Dataslot>
+  <Dataslot Name="WSName" category="User" name="WSName" type="STRING" webbpaID="1522211627874">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" length="20" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Performers>
+    <Performer class="com.ap.techdesk.suspendedinstances.getSuspendedWS" generate="true" id="GetTechDeskSuspendedItems" method="commit" type="adapter" webbpaID="1647680404089"/>
+    <Performer class="com.ap.techdesk.suspendedinstances.resumeSuspendedWS" generate="true" id="ResumeSuspendedWS" method="commit" type="adapter" webbpaID="1647680404095"/>
+  </Performers>
+  <TabularViewWorkstepOrder/>
+  <History>
+    <Deployed as="TechDeskSuspendedItems" by="rgicl" on="1647684961560" to="http://10.62.180.35:18793/sbm/deployment">Sat Mar 19 15:46:01 IST 2022</Deployed>
+    <Deployed as="TechDeskSuspendedItems" by="rgicl" on="1647684917216" to="http://10.62.180.35:18793/sbm/deployment">Sat Mar 19 15:45:17 IST 2022</Deployed>
+    <Deployed as="TechDeskSuspendedItems" by="rgicl" on="1647684635550" to="http://10.62.180.35:18793/sbm/deployment">Sat Mar 19 15:40:35 IST 2022</Deployed>
+    <Deployed as="TechDeskSuspendedItems" by="rgicl" on="1647684530926" to="http://10.62.180.35:18793/sbm/deployment">Sat Mar 19 15:38:50 IST 2022</Deployed>
+    <Deployed as="TechDeskSuspendedItems" by="rgicl" on="1647684494043" to="http://10.62.180.35:18793/sbm/deployment">Sat Mar 19 15:38:14 IST 2022</Deployed>
+    <Deployed as="TechDeskSuspendedItems" by="rgicl" on="1647684134128" to="http://10.62.180.35:18793/sbm/deployment">Sat Mar 19 15:32:14 IST 2022</Deployed>
+    <Deployed as="TechDeskSuspendedItems" by="rgicl" on="1647683349564" to="http://10.62.180.35:18793/sbm/deployment">Sat Mar 19 15:19:09 IST 2022</Deployed>
+    <Created as="TechDeskSuspendedItems" by="Rajat" on="1647680998108">Sat Mar 19 14:39:58 IST 2022</Created>
+  </History>
+  <Repository/>
+  <Forms/>
+</Process>

@@ -1,0 +1,25 @@
+<table width="100%" border="0" cellpadding="0" cellspacing="0" border="0" class = "LogoBg">
+    <tr>
+        <td>
+            <a href="http://www.aurea.com" class="logoImage"></a>
+        </td>
+        <td align="right">
+            <table width="300" border="0" style="padding-right:10px;" cellpadding="0" align="right" cellspacing="0" border="0">
+                <tr>
+                    <td align="right" valign="bottom" class="cmdLinks" nowrap>
+                        <a href="javascript:goToSupportInfo()" class="supportIcon"><sbm:message key="support" /></a>&nbsp;|&nbsp;
+                        <a href="javascript:goToAbout()" class="aboutIcon"><sbm:message key="about" /></a>&nbsp;|&nbsp;
+                        <a href="javascript:goToLogout()" class="logoutIcon"><sbm:message key="logout" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <div class="cmdLinks">
+                            <span class="welcomeTitle"><sbm:message key="Welcome" /></span>&nbsp;<%=bizManage.getFirstName()%></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

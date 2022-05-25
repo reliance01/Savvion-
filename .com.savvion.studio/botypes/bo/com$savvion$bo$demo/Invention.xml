@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_06" class="java.beans.XMLDecoder"> 
+ <object class="com.savvion.sbm.bo.bean.BusinessObjectTypeBean"> 
+  <void property="attributes"> 
+   <void method="put"> 
+    <string>inventionName</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>inventionName</string> 
+     </void> 
+     <void property="name"> 
+      <string>inventionName</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>inventionId</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>inventionId</string> 
+     </void> 
+     <void property="name"> 
+      <string>inventionId</string> 
+     </void> 
+     <void property="size"> 
+      <long>32</long> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>java.lang.String</string> 
+     </void> 
+     <void property="typeName"> 
+      <string>java.lang.String</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>inventors</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="collection"> 
+      <boolean>true</boolean> 
+     </void> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>inventors</string> 
+     </void> 
+     <void property="name"> 
+      <string>inventors</string> 
+     </void> 
+     <void property="typeCategory"> 
+      <string>demo</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>com.savvion.bo.demo.Inventor</string> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="put"> 
+    <string>patents</string> 
+    <object class="com.savvion.sbm.bo.bean.BusinessObjectAttributeBean"> 
+     <void property="collection"> 
+      <boolean>true</boolean> 
+     </void> 
+     <void property="defaultValue"> 
+      <string></string> 
+     </void> 
+     <void property="description"> 
+      <string></string> 
+     </void> 
+     <void property="label"> 
+      <string>patents</string> 
+     </void> 
+     <void property="name"> 
+      <string>patents</string> 
+     </void> 
+     <void property="typeCategory"> 
+      <string>demo</string> 
+     </void> 
+     <void property="typeClassName"> 
+      <string>com.savvion.bo.demo.Patent</string> 
+     </void> 
+    </object> 
+   </void> 
+  </void> 
+  <void property="categoryName"> 
+   <string>demo</string> 
+  </void> 
+  <void property="className"> 
+   <string>com.savvion.bo.demo.Invention</string> 
+  </void> 
+  <void property="createdDate"> 
+   <long>1247014290539</long> 
+  </void> 
+  <void property="creator"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="dataSourceRef"> 
+   <string></string> 
+  </void> 
+  <void property="description"> 
+   <string></string> 
+  </void> 
+  <void property="lastModifiedBy"> 
+   <string>ebms</string> 
+  </void> 
+  <void property="lastModifiedDate"> 
+   <long>1247263761537</long> 
+  </void> 
+  <void property="name"> 
+   <string>Invention</string> 
+  </void> 
+ </object> 
+</java> 

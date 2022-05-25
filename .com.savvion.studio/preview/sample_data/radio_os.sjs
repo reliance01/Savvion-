@@ -1,0 +1,1 @@
+[{"selected":true,"value":"mac","label":"Mac OS X"},{"selected":false,"value":"win7","label":"Windows 7"},{"selected":false,"value":"winXP","label":"Windows XP"},{"selected":false,"value":"ubuntu","label":"Ubuntu"},{"selected":false,"value":"android","label":"Android"},{"selected":false,"value":"webos","label":"WebOS"},{"sdeWidgetKey":"Radio"}]

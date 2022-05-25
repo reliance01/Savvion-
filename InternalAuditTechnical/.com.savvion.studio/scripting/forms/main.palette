@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+
+  <string id="ALL" value="BUTTON,CHECK_BOX,COMBO_BOX,CUSTOM,DATETIME,DOCUMENT,IMAGE,LINK,LIST,NONE,OBJECT,RADIO_BUTTON,TEXT_AREA,TEXT_FIELD,XML,DIVIDER,TREE,GRID,SLIDER"/>
+  <string id="NUMBER_WIDGETS" value="CHECK_BOX,COMBO_BOX,LIST,RADIO_BUTTON,TEXT_AREA,TEXT_FIELD,SLIDER"/>
+  <string id="STRING_WIDGETS" value="CHECK_BOX,COMBO_BOX,LIST,RADIO_BUTTON,TEXT_AREA,TEXT_FIELD,SLIDER"/>
+  <string id="VALUE_WIDGETS" value="CHECK_BOX,COMBO_BOX,LIST,RADIO_BUTTON,TEXT_AREA,TEXT_FIELD,SLIDER"/>
+  <string id="ACTIVATED_WIDGETS" value="BUTTON,CHECK_BOX,COMBO_BOX,CUSTOM,DATETIME,DOCUMENT,IMAGE,LINK,LIST,NONE,OBJECT,RADIO_BUTTON,TEXT_AREA,TEXT_FIELD,XML,TREE,GRID,SLIDER"/>
+
+  <category label="$Scripting.category.expressions" path="expressions" icon="fldr_obj.gif"/>
+  <category label="$Scripting.category.conditions" path="boolean" icon="fldr_obj.gif"/>
+  
+  <!-- Define tree order -->
+  <category path="expressions/data_operations"/>
+  <category path="expressions/effects"/>
+  <category path="expressions/messages"/>
+  <category path="expressions/control_structures"/>
+  <category path="expressions/other"/>
+  <category path="boolean/comparisons"/>
+  <category path="boolean/validations"/>
+  <category path="boolean/other"/>
+  
+</palette>

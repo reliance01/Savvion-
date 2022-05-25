@@ -1,0 +1,16 @@
+{
+    'name': 'Outlook',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/outlook.png',
+    'description': 'Microsoft Outlook widget.',
+    'category': 'Outlook',
+    'args': [
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }
+}

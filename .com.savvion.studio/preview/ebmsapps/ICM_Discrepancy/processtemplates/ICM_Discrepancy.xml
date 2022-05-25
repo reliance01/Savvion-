@@ -1,0 +1,2089 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Process SYSTEM "../../common/processtemplates/processTemplate.dtd">
+<Process name="ICM_Discrepancy" type="BIZLOGIC">
+  <Label>ICM_Discrepancy</Label>
+  <Description/>
+  <Application name="ICM_Discrepancy"/>
+  <Category level="0"/>
+  <Category level="1"/>
+  <Group/>
+  <Manager>rgicl</Manager>
+  <EstimatedDuration>1d</EstimatedDuration>
+  <TimeCreated>1316064611359</TimeCreated>
+  <Author>ParshuramR</Author>
+  <Version/>
+  <Attributes>
+    <Attribute name="ProcessType" required="true">
+      <Label>Process Type</Label>
+      <Description>Type of the process</Description>
+      <Value>BusinessProcess</Value>
+    </Attribute>
+    <Attribute name="Objective" required="false">
+      <Label>Objective</Label>
+      <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Goal" required="false">
+      <Label>Goal</Label>
+      <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="OrganizationalUnit" required="false">
+      <Label>Organizational Unit</Label>
+      <Description>The organizational unit that owns this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Influencers" required="false">
+      <Label>Influencers</Label>
+      <Description>People who have influenced development of this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Risks" required="false">
+      <Label>Risks</Label>
+      <Description>Risks associated with this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Rewards" required="false">
+      <Label>Rewards</Label>
+      <Description>Potential rewards on investment for this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Executable" required="false">
+      <Label>Executable</Label>
+      <Description>Can the Process  Ever be made executable?</Description>
+      <Value>Yes</Value>
+    </Attribute>
+  </Attributes>
+  <Alerts>
+    <Alert name="Default">
+      <AlertSeverity>High</AlertSeverity>
+      <AlertMessage>This is the default alert.</AlertMessage>
+      <AlertDescription/>
+      <AlertCondition type="java:expression"/>
+      <AlertDelivery type="sbm">
+        <AlertRecipient type="USER">${@CREATOR}</AlertRecipient>
+      </AlertDelivery>
+    </Alert>
+  </Alerts>
+  <AtomicWS height="36" name="Start ICM Discrepancy Case" width="36" worktime="false" x="84" y="72">
+    <Label>Start ICM Discrepancy Case</Label>
+    <AtomicType>START</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <Dataoutput>DiscrepancyCategory</Dataoutput>
+    <Dataoutput>DiscrepancySubCategory</Dataoutput>
+    <Dataoutput>PreviousPolicyNumber</Dataoutput>
+    <Dataoutput>Proposal_CN_Number</Dataoutput>
+    <Dataoutput>AgentCode</Dataoutput>
+    <Dataoutput>AgentName</Dataoutput>
+    <Dataoutput>BASCode</Dataoutput>
+    <Dataoutput>BASName</Dataoutput>
+    <Dataoutput>BranchCode</Dataoutput>
+    <Dataoutput>BranchName</Dataoutput>
+    <Dataoutput>BusinessType</Dataoutput>
+    <Dataoutput>DocumentType</Dataoutput>
+    <Dataoutput>InspectionID</Dataoutput>
+    <Dataoutput>DiscrepancyRemarks</Dataoutput>
+    <Dataoutput>DiscrepancySubCode</Dataoutput>
+    <Dataoutput>InspectionDate</Dataoutput>
+    <Dataoutput>InspectionStatus</Dataoutput>
+    <Dataoutput>IsClaimOnPreviousPolicy</Dataoutput>
+    <Dataoutput>IsClaimOnProposal</Dataoutput>
+    <Dataoutput>ProductCode</Dataoutput>
+    <Dataoutput>ProductName</Dataoutput>
+    <Dataoutput>ProductType</Dataoutput>
+    <Dataoutput>ProposalInwardDate</Dataoutput>
+    <Dataoutput>ProposalIssueDate</Dataoutput>
+    <Dataoutput>ProposerName</Dataoutput>
+    <Dataoutput>ClsName</Dataoutput>
+    <Dataoutput>RiskEndDate</Dataoutput>
+    <Dataoutput>RiskStartDate</Dataoutput>
+    <Dataoutput>SMCode</Dataoutput>
+    <Format editable="true" input="DiscrepancyCategory" label="DiscrepancyCategory:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancyCategory:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="DiscrepancySubCategory" label="DiscrepancySubCategory:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancySubCategory:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="PreviousPolicyNumber" label="PreviousPolicyNumber:" password="false" required="false" size="20" type="text">
+      <Label>PreviousPolicyNumber:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="Proposal_CN_Number" label="Proposal_CN_Number:" password="false" required="false" size="20" type="text">
+      <Label>Proposal_CN_Number:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="AgentCode" label="AgentCode:" password="false" required="false" size="20" type="text">
+      <Label>AgentCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="AgentName" label="AgentName:" password="false" required="false" size="20" type="text">
+      <Label>AgentName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="BASCode" label="BASCode:" password="false" required="false" size="20" type="text">
+      <Label>BASCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="BASName" label="BASName:" password="false" required="false" size="20" type="text">
+      <Label>BASName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="BranchCode" label="BranchCode:" password="false" required="false" size="20" type="text">
+      <Label>BranchCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="BranchName" label="BranchName:" password="false" required="false" size="20" type="text">
+      <Label>BranchName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="BusinessType" label="BusinessType:" password="false" required="false" size="20" type="text">
+      <Label>BusinessType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="DocumentType" label="DocumentType:" password="false" required="false" size="20" type="text">
+      <Label>DocumentType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="InspectionID" label="InspectionID:" password="false" required="false" size="20" type="text">
+      <Label>InspectionID:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="false" input="DiscrepancyRemarks" label="DiscrepancyRemarks:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancyRemarks:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="DiscrepancySubCode" label="DiscrepancySubCode:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancySubCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="InspectionDate" label="InspectionDate:" password="false" required="false" size="20" type="text">
+      <Label>InspectionDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="InspectionStatus" label="InspectionStatus:" password="false" required="false" size="20" type="text">
+      <Label>InspectionStatus:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="IsClaimOnPreviousPolicy" label="IsClaimOnPreviousPolicy:" password="false" required="false" size="20" type="text">
+      <Label>IsClaimOnPreviousPolicy:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="IsClaimOnProposal" label="IsClaimOnProposal:" password="false" required="false" size="20" type="text">
+      <Label>IsClaimOnProposal:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ProductCode" label="ProductCode:" password="false" required="false" size="20" type="text">
+      <Label>ProductCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ProductName" label="ProductName:" password="false" required="false" size="20" type="text">
+      <Label>ProductName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ProductType" label="ProductType:" password="false" required="false" size="20" type="text">
+      <Label>ProductType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ProposalInwardDate" label="ProposalInwardDate:" password="false" required="false" size="20" type="text">
+      <Label>ProposalInwardDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ProposalIssueDate" label="ProposalIssueDate:" password="false" required="false" size="20" type="text">
+      <Label>ProposalIssueDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ProposerName" label="ProposerName:" password="false" required="false" size="20" type="text">
+      <Label>ProposerName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="ClsName" label="ClsName:" password="false" required="false" size="20" type="text">
+      <Label>ClsName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="RiskEndDate" label="RiskEndDate:" password="false" required="false" size="20" type="text">
+      <Label>RiskEndDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="RiskStartDate" label="RiskStartDate:" password="false" required="false" size="20" type="text">
+      <Label>RiskStartDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Format editable="true" input="SMCode" label="SMCode:" password="false" required="false" size="20" type="text">
+      <Label>SMCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Option name="Instructions" visible="true"/>
+    <Option name="Priority" visible="true"/>
+    <Option name="StartDate" visible="false"/>
+    <Option name="DueDate" visible="false"/>
+    <Option name="Reassign" visible="true"/>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="ICM Discrepancy Approval" width="108" worktime="false" x="192" y="168">
+    <Label>ICM Discrepancy Approval</Label>
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@Approver</Performer>
+    <PerformingApp type="JSP">ICMDiscrepancyApproval.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <PreFunction type="javascript:function">/* type your javascript function body here */
+
+var proposalid = jst.getDataSlotValue("Proposal_CN_Number");
+
+
+
+var sb = new java.lang.StringBuffer();
+
+sb.append("&lt;html&gt;&lt;style type=\"text/css\" &gt;&lt;!--.mailbody {font-family: Calibri, Helvetica,sans-serif;font-size:14px}--&gt;&lt;!--.tabletitle {width:200px;font-weight:bold;color:#000080;}--&gt;&lt;!--.tablecell {width:200px;}--&gt;&lt;!--.tablecls {width:800px; cellpadding:15px}--&gt;&lt;/style&gt;&lt;body class=\"mailbody\"&gt;&lt;br/&gt;");
+
+sb.append("Dear Approver, ");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Proposal " + proposalid + " is pending for late login approval in Savvion, kindly taking necessary action");
+
+sb.append("&lt;/table&gt;");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Request you to do the needful. Click &lt;b&gt;&lt;a href=\"http://10.65.5.80/sbm/bpmportal/login.jsp\" target=\"_blank\"&gt;here&lt;/a&gt; &lt;/b&gt;on this link to login into the system");				
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Thank you,");
+
+sb.append("&lt;br/&gt;Reliance Application Support Team");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ************* THIS IS SYSTEM GENERATED MAIL. PLEASE DO NOT REPLY. **************&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;");
+
+sb.append("&lt;br/&gt;&lt;/body&gt;&lt;/html&gt;");
+
+
+
+var userMailID = jst.getDataSlot("Approver");
+
+var mailFrom = "rgicl.applnsupport@reliancegeneral.co.in";
+
+var hm = new java.util.HashMap();
+
+hm.put("TO", userMailID);
+
+hm.put("FROM", mailFrom);
+
+hm.put("SUBJECT", "Proposal " + proposalid + " is pending for late login approval in Savvion");
+
+hm.put("BODY", sb);
+
+hm.put("WORKSTEP_NAME", jst.getWorkstepName());
+
+hm.put("WORKITEM_NAME", jst.getWorkstepName());
+
+hm.put("PTID",jst.getProcessInstanceID());
+
+hm.put("PIID",jst.getProcessInstanceID());
+
+var ems = jst.loadClass("com.icm.EmailSender");
+
+var obj = ems.newInstance();
+
+obj.send(hm);</PreFunction>
+    <PostFunction type="javascript:function">var blsession = blserver.connect("rgicl", "rgicl");
+
+var piId = jst.getProcessInstanceID();
+
+var wsName = jst.getWorkstepName();
+
+var wsi = blserver.getWorkStepInstance(blsession, piId, wsName);
+
+var lst = wsi.getCompletedWorkItemPerformer();
+
+if(lst != null &amp;&amp; lst.size() &gt; 0)
+
+{
+
+    jst.putDataSlot("Approver", lst.get(lst.size()-1));
+
+}</PostFunction>
+    <Datainput>RH_Remark</Datainput>
+    <Datainput>RH_Status</Datainput>
+    <Datainput>DiscrepancyRemarks</Datainput>
+    <Datainput>ProductType</Datainput>
+    <Datainput>InspectionDate</Datainput>
+    <Datainput>InspectionStatus</Datainput>
+    <Datainput>InspectionID</Datainput>
+    <Datainput>proposalAmount</Datainput>
+    <Datainput>BusinessType</Datainput>
+    <Datainput>IsClaimOnProposal</Datainput>
+    <Datainput>IsClaimOnPreviousPolicy</Datainput>
+    <Datainput>SMName</Datainput>
+    <Datainput>SMCode</Datainput>
+    <Datainput>RiskStartDate</Datainput>
+    <Datainput>RiskEndDate</Datainput>
+    <Datainput>ProposerName</Datainput>
+    <Datainput>Proposal_CN_Number</Datainput>
+    <Datainput>ProposalIssueDate</Datainput>
+    <Datainput>ProposalInwardDate</Datainput>
+    <Datainput>ProductName</Datainput>
+    <Datainput>ProductCode</Datainput>
+    <Datainput>PreviousPolicyNumber</Datainput>
+    <Datainput>InspectionStatus</Datainput>
+    <Datainput>InspectionID</Datainput>
+    <Datainput>InspectionDate</Datainput>
+    <Datainput>DocumentType</Datainput>
+    <Datainput>DiscrepancySubCode</Datainput>
+    <Datainput>DiscrepancySubCategory</Datainput>
+    <Datainput>DiscrepancyCategory</Datainput>
+    <Datainput>BranchName</Datainput>
+    <Datainput>BranchCode</Datainput>
+    <Datainput>BASName</Datainput>
+    <Datainput>BASCode</Datainput>
+    <Datainput>AgentName</Datainput>
+    <Datainput>AgentCode</Datainput>
+    <Dataoutput>RH_Remark</Dataoutput>
+    <Dataoutput>RH_Status</Dataoutput>
+    <Dataoutput>DiscrepancyRemarks</Dataoutput>
+    <Dataoutput>ProductType</Dataoutput>
+    <Dataoutput>InspectionDate</Dataoutput>
+    <Dataoutput>InspectionStatus</Dataoutput>
+    <Dataoutput>InspectionID</Dataoutput>
+    <Dataoutput>proposalAmount</Dataoutput>
+    <Dataoutput>BusinessType</Dataoutput>
+    <Dataoutput>IsClaimOnProposal</Dataoutput>
+    <Dataoutput>IsClaimOnPreviousPolicy</Dataoutput>
+    <Format editable="true" input="RH_Remark" label="RH_ Remark:" password="false" required="false" size="20" type="text">
+      <Label>RH_ Remark:</Label>
+    </Format>
+    <Format editable="true" input="RH_Status" label="RH_ Status" password="false" required="false" size="20" type="text">
+      <Label>RH_ Status</Label>
+    </Format>
+    <Format editable="true" input="DiscrepancyRemarks" label="Discrepancy Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Remarks:</Label>
+    </Format>
+    <Format editable="true" input="ProductType" label="Product Type:" password="false" required="false" size="20" type="text">
+      <Label>Product Type:</Label>
+    </Format>
+    <Format editable="true" input="InspectionDate" label="Inspection Date:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Date:</Label>
+    </Format>
+    <Format editable="true" input="InspectionStatus" label="Inspection Status:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Status:</Label>
+    </Format>
+    <Format editable="true" input="InspectionID" label="Inspection ID:" password="false" required="false" size="20" type="text">
+      <Label>Inspection ID:</Label>
+    </Format>
+    <Format editable="true" input="proposalAmount" label="Proposal Amount:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Amount:</Label>
+    </Format>
+    <Format editable="true" input="BusinessType" label="Business Type:" password="false" required="false" size="20" type="text">
+      <Label>Business Type:</Label>
+    </Format>
+    <Format editable="true" input="IsClaimOnProposal" label="Is Claim On Proposal:" password="false" required="false" size="20" type="text">
+      <Label>Is Claim On Proposal:</Label>
+    </Format>
+    <Format editable="true" input="IsClaimOnPreviousPolicy" label="Is Claim On Previous Policy:" password="false" required="false" size="20" type="text">
+      <Label>Is Claim On Previous Policy:</Label>
+    </Format>
+    <Format editable="false" input="SMName" label="SMName:" password="false" required="false" size="20" type="text">
+      <Label>SMName:</Label>
+    </Format>
+    <Format editable="false" input="SMCode" label="SMCode:" password="false" required="false" size="20" type="text">
+      <Label>SMCode:</Label>
+    </Format>
+    <Format editable="false" input="RiskStartDate" label="Risk Start Date:" password="false" required="false" size="20" type="text">
+      <Label>Risk Start Date:</Label>
+    </Format>
+    <Format editable="false" input="RiskEndDate" label="Risk End Date:" password="false" required="false" size="20" type="text">
+      <Label>Risk End Date:</Label>
+    </Format>
+    <Format editable="false" input="ProposerName" label="Proposer Name:" password="false" required="false" size="20" type="text">
+      <Label>Proposer Name:</Label>
+    </Format>
+    <Format editable="false" input="Proposal_CN_Number" label="Proposal_ CN_ Number:" password="false" required="false" size="20" type="text">
+      <Label>Proposal_ CN_ Number:</Label>
+    </Format>
+    <Format editable="false" input="ProposalIssueDate" label="Proposal Issue Date:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Issue Date:</Label>
+    </Format>
+    <Format editable="false" input="ProposalInwardDate" label="Proposal Inward Date:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Inward Date:</Label>
+    </Format>
+    <Format editable="false" input="ProductName" label="Product Name:" password="false" required="false" size="20" type="text">
+      <Label>Product Name:</Label>
+    </Format>
+    <Format editable="false" input="ProductCode" label="Product Code:" password="false" required="false" size="20" type="text">
+      <Label>Product Code:</Label>
+    </Format>
+    <Format editable="false" input="PreviousPolicyNumber" label="Previous Policy Number:" password="false" required="false" size="20" type="text">
+      <Label>Previous Policy Number:</Label>
+    </Format>
+    <Format editable="false" input="InspectionStatus" label="Inspection Status:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Status:</Label>
+    </Format>
+    <Format editable="false" input="InspectionID" label="Inspection ID:" password="false" required="false" size="20" type="text">
+      <Label>Inspection ID:</Label>
+    </Format>
+    <Format editable="false" input="InspectionDate" label="Inspection Date:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Date:</Label>
+    </Format>
+    <Format editable="false" input="DocumentType" label="Document Type:" password="false" required="false" size="20" type="text">
+      <Label>Document Type:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancySubCode" label="Discrepancy Sub Code:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Sub Code:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancySubCategory" label="Discrepancy Sub Category:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Sub Category:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancyCategory" label="Discrepancy Category:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Category:</Label>
+    </Format>
+    <Format editable="false" input="BranchName" label="Branch Name:" password="false" required="false" size="20" type="text">
+      <Label>Branch Name:</Label>
+    </Format>
+    <Format editable="false" input="BranchCode" label="Branch Code:" password="false" required="false" size="20" type="text">
+      <Label>Branch Code:</Label>
+    </Format>
+    <Format editable="false" input="BASName" label="BASName:" password="false" required="false" size="20" type="text">
+      <Label>BASName:</Label>
+    </Format>
+    <Format editable="false" input="BASCode" label="BASCode:" password="false" required="false" size="20" type="text">
+      <Label>BASCode:</Label>
+    </Format>
+    <Format editable="false" input="AgentName" label="Agent Name:" password="false" required="false" size="20" type="text">
+      <Label>Agent Name:</Label>
+    </Format>
+    <Format editable="false" input="AgentCode" label="Agent Code:" password="false" required="false" size="20" type="text">
+      <Label>Agent Code:</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="Tax Refund Approval" width="108" worktime="false" x="516" y="168">
+    <Label>Tax Refund Approval</Label>
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@TR_Approver</Performer>
+    <PerformBy>ANY</PerformBy>
+    <PerformingApp type="JSP">TaxRefundApproval.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <Datainput>TR_Approver_Remarks</Datainput>
+    <Datainput>TR_Verifier_Remarks</Datainput>
+    <Datainput>TR_Approver_Action</Datainput>
+    <Datainput>TR_Verifier_Action</Datainput>
+    <Datainput>DiscrepancyRemarks</Datainput>
+    <Datainput>ProductType</Datainput>
+    <Datainput>InspectionDate</Datainput>
+    <Datainput>InspectionStatus</Datainput>
+    <Datainput>InspectionID</Datainput>
+    <Datainput>proposalAmount</Datainput>
+    <Datainput>BusinessType</Datainput>
+    <Datainput>IsClaimOnProposal</Datainput>
+    <Datainput>IsClaimOnPreviousPolicy</Datainput>
+    <Datainput>SMName</Datainput>
+    <Datainput>SMCode</Datainput>
+    <Datainput>RiskStartDate</Datainput>
+    <Datainput>RiskEndDate</Datainput>
+    <Datainput>ProposerName</Datainput>
+    <Datainput>Proposal_CN_Number</Datainput>
+    <Datainput>ProposalIssueDate</Datainput>
+    <Datainput>ProposalInwardDate</Datainput>
+    <Datainput>ProductName</Datainput>
+    <Datainput>ProductCode</Datainput>
+    <Datainput>PreviousPolicyNumber</Datainput>
+    <Datainput>InspectionStatus</Datainput>
+    <Datainput>InspectionID</Datainput>
+    <Datainput>InspectionDate</Datainput>
+    <Datainput>DocumentType</Datainput>
+    <Datainput>DiscrepancySubCode</Datainput>
+    <Datainput>DiscrepancySubCategory</Datainput>
+    <Datainput>DiscrepancyCategory</Datainput>
+    <Datainput>BranchName</Datainput>
+    <Datainput>BranchCode</Datainput>
+    <Datainput>BASName</Datainput>
+    <Datainput>BASCode</Datainput>
+    <Datainput>AgentName</Datainput>
+    <Datainput>AgentCode</Datainput>
+    <Dataoutput>TR_Approver_Remarks</Dataoutput>
+    <Dataoutput>TR_Verifier_Remarks</Dataoutput>
+    <Dataoutput>TR_Approver_Action</Dataoutput>
+    <Dataoutput>TR_Verifier_Action</Dataoutput>
+    <Dataoutput>DiscrepancyRemarks</Dataoutput>
+    <Dataoutput>ProductType</Dataoutput>
+    <Dataoutput>InspectionDate</Dataoutput>
+    <Dataoutput>InspectionStatus</Dataoutput>
+    <Dataoutput>InspectionID</Dataoutput>
+    <Dataoutput>proposalAmount</Dataoutput>
+    <Dataoutput>BusinessType</Dataoutput>
+    <Dataoutput>IsClaimOnProposal</Dataoutput>
+    <Dataoutput>IsClaimOnPreviousPolicy</Dataoutput>
+    <Format editable="true" input="TR_Approver_Remarks" label="TR_ Approver_ Remarks" password="false" required="false" size="20" type="text">
+      <Label>TR_ Approver_ Remarks</Label>
+    </Format>
+    <Format editable="true" input="TR_Verifier_Remarks" label="TR_ Verifier_ Remarks" password="false" required="false" size="20" type="text">
+      <Label>TR_ Verifier_ Remarks</Label>
+    </Format>
+    <Format editable="true" input="TR_Approver_Action" label="TR_ Approver_ Action" password="false" required="false" size="20" type="text">
+      <Label>TR_ Approver_ Action</Label>
+    </Format>
+    <Format editable="true" input="TR_Verifier_Action" label="TR_ Verifier_ Action" password="false" required="false" size="20" type="text">
+      <Label>TR_ Verifier_ Action</Label>
+    </Format>
+    <Format editable="true" input="DiscrepancyRemarks" label="Discrepancy Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Remarks:</Label>
+    </Format>
+    <Format editable="true" input="ProductType" label="Product Type:" password="false" required="false" size="20" type="text">
+      <Label>Product Type:</Label>
+    </Format>
+    <Format editable="true" input="InspectionDate" label="Inspection Date:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Date:</Label>
+    </Format>
+    <Format editable="true" input="InspectionStatus" label="Inspection Status:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Status:</Label>
+    </Format>
+    <Format editable="true" input="InspectionID" label="Inspection ID:" password="false" required="false" size="20" type="text">
+      <Label>Inspection ID:</Label>
+    </Format>
+    <Format editable="true" input="proposalAmount" label="Proposal Amount:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Amount:</Label>
+    </Format>
+    <Format editable="true" input="BusinessType" label="Business Type:" password="false" required="false" size="20" type="text">
+      <Label>Business Type:</Label>
+    </Format>
+    <Format editable="true" input="IsClaimOnProposal" label="Is Claim On Proposal:" password="false" required="false" size="20" type="text">
+      <Label>Is Claim On Proposal:</Label>
+    </Format>
+    <Format editable="true" input="IsClaimOnPreviousPolicy" label="Is Claim On Previous Policy:" password="false" required="false" size="20" type="text">
+      <Label>Is Claim On Previous Policy:</Label>
+    </Format>
+    <Format editable="false" input="SMName" label="SMName:" password="false" required="false" size="20" type="text">
+      <Label>SMName:</Label>
+    </Format>
+    <Format editable="false" input="SMCode" label="SMCode:" password="false" required="false" size="20" type="text">
+      <Label>SMCode:</Label>
+    </Format>
+    <Format editable="false" input="RiskStartDate" label="Risk Start Date:" password="false" required="false" size="20" type="text">
+      <Label>Risk Start Date:</Label>
+    </Format>
+    <Format editable="false" input="RiskEndDate" label="Risk End Date:" password="false" required="false" size="20" type="text">
+      <Label>Risk End Date:</Label>
+    </Format>
+    <Format editable="false" input="ProposerName" label="Proposer Name:" password="false" required="false" size="20" type="text">
+      <Label>Proposer Name:</Label>
+    </Format>
+    <Format editable="false" input="Proposal_CN_Number" label="Proposal_ CN_ Number:" password="false" required="false" size="20" type="text">
+      <Label>Proposal_ CN_ Number:</Label>
+    </Format>
+    <Format editable="false" input="ProposalIssueDate" label="Proposal Issue Date:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Issue Date:</Label>
+    </Format>
+    <Format editable="false" input="ProposalInwardDate" label="Proposal Inward Date:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Inward Date:</Label>
+    </Format>
+    <Format editable="false" input="ProductName" label="Product Name:" password="false" required="false" size="20" type="text">
+      <Label>Product Name:</Label>
+    </Format>
+    <Format editable="false" input="ProductCode" label="Product Code:" password="false" required="false" size="20" type="text">
+      <Label>Product Code:</Label>
+    </Format>
+    <Format editable="false" input="PreviousPolicyNumber" label="Previous Policy Number:" password="false" required="false" size="20" type="text">
+      <Label>Previous Policy Number:</Label>
+    </Format>
+    <Format editable="false" input="InspectionStatus" label="Inspection Status:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Status:</Label>
+    </Format>
+    <Format editable="false" input="InspectionID" label="Inspection ID:" password="false" required="false" size="20" type="text">
+      <Label>Inspection ID:</Label>
+    </Format>
+    <Format editable="false" input="InspectionDate" label="Inspection Date:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Date:</Label>
+    </Format>
+    <Format editable="false" input="DocumentType" label="Document Type:" password="false" required="false" size="20" type="text">
+      <Label>Document Type:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancySubCode" label="Discrepancy Sub Code:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Sub Code:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancySubCategory" label="Discrepancy Sub Category:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Sub Category:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancyCategory" label="Discrepancy Category:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Category:</Label>
+    </Format>
+    <Format editable="false" input="BranchName" label="Branch Name:" password="false" required="false" size="20" type="text">
+      <Label>Branch Name:</Label>
+    </Format>
+    <Format editable="false" input="BranchCode" label="Branch Code:" password="false" required="false" size="20" type="text">
+      <Label>Branch Code:</Label>
+    </Format>
+    <Format editable="false" input="BASName" label="BASName:" password="false" required="false" size="20" type="text">
+      <Label>BASName:</Label>
+    </Format>
+    <Format editable="false" input="BASCode" label="BASCode:" password="false" required="false" size="20" type="text">
+      <Label>BASCode:</Label>
+    </Format>
+    <Format editable="false" input="AgentName" label="Agent Name:" password="false" required="false" size="20" type="text">
+      <Label>Agent Name:</Label>
+    </Format>
+    <Format editable="false" input="AgentCode" label="Agent Code:" password="false" required="false" size="20" type="text">
+      <Label>Agent Code:</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="60" name="Tax Refund Verifier" width="108" worktime="false" x="516" y="60">
+    <Label>Tax Refund Verifier</Label>
+    <AtomicType>ACTIVITY</AtomicType>
+    <Performer>@TR_Verifier</Performer>
+    <PerformingApp type="JSP">TaxRefundVerifier.jsp</PerformingApp>
+    <Collaboration>
+      <CollabFunction enabled="true" type="Reassign"/>
+    </Collaboration>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <PreFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+/* type your javascript function body here */
+
+/*var proposalid = jst.getDataSlotValue("Proposal_CN_Number");
+
+
+
+var sb = new java.lang.StringBuffer();
+
+sb.append("&lt;html&gt;&lt;style type=\"text/css\" &gt;&lt;!--.mailbody {font-family: Calibri, Helvetica,sans-serif;font-size:14px}--&gt;&lt;!--.tabletitle {width:200px;font-weight:bold;color:#000080;}--&gt;&lt;!--.tablecell {width:200px;}--&gt;&lt;!--.tablecls {width:800px; cellpadding:15px}--&gt;&lt;/style&gt;&lt;body class=\"mailbody\"&gt;&lt;br/&gt;");
+
+sb.append("Dear Approver, ");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Proposal " + proposalid + " is pending for late login approval in Savvion, kindly taking necessary action");
+
+sb.append("&lt;/table&gt;");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Request you to do the needful. Click &lt;b&gt;&lt;a href=\"http://10.65.5.80/sbm/bpmportal/login.jsp\" target=\"_blank\"&gt;here&lt;/a&gt; &lt;/b&gt;on this link to login into the system");				
+
+sb.append("&lt;br/&gt;&lt;br/&gt;Thank you,");
+
+sb.append("&lt;br/&gt;Reliance Application Support Team");
+
+sb.append("&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ************* THIS IS SYSTEM GENERATED MAIL. PLEASE DO NOT REPLY. **************&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;");
+
+sb.append("&lt;br/&gt;&lt;/body&gt;&lt;/html&gt;");
+
+
+
+var userMailID = jst.getDataSlot("TR_Verifier");
+
+var mailFrom = "rgicl.applnsupport@reliancegeneral.co.in";
+
+var hm = new java.util.HashMap();
+
+hm.put("TO", userMailID);
+
+hm.put("FROM", mailFrom);
+
+hm.put("SUBJECT", "Proposal " + proposalid + " is pending for late login approval in Savvion");
+
+hm.put("BODY", sb);
+
+hm.put("WORKSTEP_NAME", jst.getWorkstepName());
+
+hm.put("WORKITEM_NAME", jst.getWorkstepName());
+
+hm.put("PTID",jst.getProcessInstanceID());
+
+hm.put("PIID",jst.getProcessInstanceID());
+
+var ems = jst.loadClass("com.icm.EmailSender");
+
+var obj = ems.newInstance();
+
+obj.send(hm);
+
+*/;
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PreFunction>
+    <PostFunction type="java:function">com.savvion.sbm.bizlogic.util.Session session = null;
+com.savvion.common.gel.GELTools gel = new com.savvion.common.gel.GELTools();
+Object tmp = null;
+java.util.List dsList = gel.toList(new String[]{});
+gel.setDataslots(jst.getDataSlotRealValue(dsList));
+gel.setDataslotMetadata(jst.getDataSlotMetadata(dsList));
+
+
+
+jst.setDataSlotValues(gel.getModifiedDataslots());</PostFunction>
+    <Datainput>TR_Verifier_Remarks</Datainput>
+    <Datainput>TR_Verifier_Action</Datainput>
+    <Datainput>DiscrepancyRemarks</Datainput>
+    <Datainput>ProductType</Datainput>
+    <Datainput>InspectionDate</Datainput>
+    <Datainput>InspectionStatus</Datainput>
+    <Datainput>InspectionID</Datainput>
+    <Datainput>proposalAmount</Datainput>
+    <Datainput>BusinessType</Datainput>
+    <Datainput>IsClaimOnProposal</Datainput>
+    <Datainput>IsClaimOnPreviousPolicy</Datainput>
+    <Datainput>SMName</Datainput>
+    <Datainput>SMCode</Datainput>
+    <Datainput>RiskStartDate</Datainput>
+    <Datainput>RiskEndDate</Datainput>
+    <Datainput>ProposerName</Datainput>
+    <Datainput>Proposal_CN_Number</Datainput>
+    <Datainput>ProposalIssueDate</Datainput>
+    <Datainput>ProposalInwardDate</Datainput>
+    <Datainput>ProductName</Datainput>
+    <Datainput>ProductCode</Datainput>
+    <Datainput>PreviousPolicyNumber</Datainput>
+    <Datainput>InspectionStatus</Datainput>
+    <Datainput>InspectionID</Datainput>
+    <Datainput>InspectionDate</Datainput>
+    <Datainput>DocumentType</Datainput>
+    <Datainput>DiscrepancySubCode</Datainput>
+    <Datainput>DiscrepancySubCategory</Datainput>
+    <Datainput>DiscrepancyCategory</Datainput>
+    <Datainput>BranchName</Datainput>
+    <Datainput>BranchCode</Datainput>
+    <Datainput>BASName</Datainput>
+    <Datainput>BASCode</Datainput>
+    <Datainput>AgentName</Datainput>
+    <Datainput>AgentCode</Datainput>
+    <Dataoutput>TR_Verifier_Remarks</Dataoutput>
+    <Dataoutput>TR_Verifier_Action</Dataoutput>
+    <Dataoutput>DiscrepancyRemarks</Dataoutput>
+    <Dataoutput>ProductType</Dataoutput>
+    <Dataoutput>InspectionDate</Dataoutput>
+    <Dataoutput>InspectionStatus</Dataoutput>
+    <Dataoutput>InspectionID</Dataoutput>
+    <Dataoutput>proposalAmount</Dataoutput>
+    <Dataoutput>BusinessType</Dataoutput>
+    <Dataoutput>IsClaimOnProposal</Dataoutput>
+    <Dataoutput>IsClaimOnPreviousPolicy</Dataoutput>
+    <Format editable="true" input="TR_Verifier_Remarks" label="TR_ Verifier_ Remarks" password="false" required="false" size="20" type="text">
+      <Label>TR_ Verifier_ Remarks</Label>
+    </Format>
+    <Format editable="true" input="TR_Verifier_Action" label="TR_ Verifier_ Action" password="false" required="false" size="20" type="text">
+      <Label>TR_ Verifier_ Action</Label>
+    </Format>
+    <Format editable="true" input="DiscrepancyRemarks" label="Discrepancy Remarks:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Remarks:</Label>
+    </Format>
+    <Format editable="true" input="ProductType" label="Product Type:" password="false" required="false" size="20" type="text">
+      <Label>Product Type:</Label>
+    </Format>
+    <Format editable="true" input="InspectionDate" label="Inspection Date:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Date:</Label>
+    </Format>
+    <Format editable="true" input="InspectionStatus" label="Inspection Status:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Status:</Label>
+    </Format>
+    <Format editable="true" input="InspectionID" label="Inspection ID:" password="false" required="false" size="20" type="text">
+      <Label>Inspection ID:</Label>
+    </Format>
+    <Format editable="true" input="proposalAmount" label="Proposal Amount:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Amount:</Label>
+    </Format>
+    <Format editable="true" input="BusinessType" label="Business Type:" password="false" required="false" size="20" type="text">
+      <Label>Business Type:</Label>
+    </Format>
+    <Format editable="true" input="IsClaimOnProposal" label="Is Claim On Proposal:" password="false" required="false" size="20" type="text">
+      <Label>Is Claim On Proposal:</Label>
+    </Format>
+    <Format editable="true" input="IsClaimOnPreviousPolicy" label="Is Claim On Previous Policy:" password="false" required="false" size="20" type="text">
+      <Label>Is Claim On Previous Policy:</Label>
+    </Format>
+    <Format editable="false" input="SMName" label="SMName:" password="false" required="false" size="20" type="text">
+      <Label>SMName:</Label>
+    </Format>
+    <Format editable="false" input="SMCode" label="SMCode:" password="false" required="false" size="20" type="text">
+      <Label>SMCode:</Label>
+    </Format>
+    <Format editable="false" input="RiskStartDate" label="Risk Start Date:" password="false" required="false" size="20" type="text">
+      <Label>Risk Start Date:</Label>
+    </Format>
+    <Format editable="false" input="RiskEndDate" label="Risk End Date:" password="false" required="false" size="20" type="text">
+      <Label>Risk End Date:</Label>
+    </Format>
+    <Format editable="false" input="ProposerName" label="Proposer Name:" password="false" required="false" size="20" type="text">
+      <Label>Proposer Name:</Label>
+    </Format>
+    <Format editable="false" input="Proposal_CN_Number" label="Proposal_ CN_ Number:" password="false" required="false" size="20" type="text">
+      <Label>Proposal_ CN_ Number:</Label>
+    </Format>
+    <Format editable="false" input="ProposalIssueDate" label="Proposal Issue Date:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Issue Date:</Label>
+    </Format>
+    <Format editable="false" input="ProposalInwardDate" label="Proposal Inward Date:" password="false" required="false" size="20" type="text">
+      <Label>Proposal Inward Date:</Label>
+    </Format>
+    <Format editable="false" input="ProductName" label="Product Name:" password="false" required="false" size="20" type="text">
+      <Label>Product Name:</Label>
+    </Format>
+    <Format editable="false" input="ProductCode" label="Product Code:" password="false" required="false" size="20" type="text">
+      <Label>Product Code:</Label>
+    </Format>
+    <Format editable="false" input="PreviousPolicyNumber" label="Previous Policy Number:" password="false" required="false" size="20" type="text">
+      <Label>Previous Policy Number:</Label>
+    </Format>
+    <Format editable="false" input="InspectionStatus" label="Inspection Status:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Status:</Label>
+    </Format>
+    <Format editable="false" input="InspectionID" label="Inspection ID:" password="false" required="false" size="20" type="text">
+      <Label>Inspection ID:</Label>
+    </Format>
+    <Format editable="false" input="InspectionDate" label="Inspection Date:" password="false" required="false" size="20" type="text">
+      <Label>Inspection Date:</Label>
+    </Format>
+    <Format editable="false" input="DocumentType" label="Document Type:" password="false" required="false" size="20" type="text">
+      <Label>Document Type:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancySubCode" label="Discrepancy Sub Code:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Sub Code:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancySubCategory" label="Discrepancy Sub Category:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Sub Category:</Label>
+    </Format>
+    <Format editable="false" input="DiscrepancyCategory" label="Discrepancy Category:" password="false" required="false" size="20" type="text">
+      <Label>Discrepancy Category:</Label>
+    </Format>
+    <Format editable="false" input="BranchName" label="Branch Name:" password="false" required="false" size="20" type="text">
+      <Label>Branch Name:</Label>
+    </Format>
+    <Format editable="false" input="BranchCode" label="Branch Code:" password="false" required="false" size="20" type="text">
+      <Label>Branch Code:</Label>
+    </Format>
+    <Format editable="false" input="BASName" label="BASName:" password="false" required="false" size="20" type="text">
+      <Label>BASName:</Label>
+    </Format>
+    <Format editable="false" input="BASCode" label="BASCode:" password="false" required="false" size="20" type="text">
+      <Label>BASCode:</Label>
+    </Format>
+    <Format editable="false" input="AgentName" label="Agent Name:" password="false" required="false" size="20" type="text">
+      <Label>Agent Name:</Label>
+    </Format>
+    <Format editable="false" input="AgentCode" label="Agent Code:" password="false" required="false" size="20" type="text">
+      <Label>Agent Code:</Label>
+    </Format>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <AtomicWS height="36" name="End 1" width="36" worktime="false" x="552" y="456">
+    <AtomicType>END</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+  </AtomicWS>
+  <ExternalWS generate="true" height="60" name="TR_Approver_Verifier_Adaptor" width="108" x="372" y="60">
+    <Performer generate="true">com.icm.ApproverVerifierAdaptor</Performer>
+    <PerformBy>commit</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <Datainput>BranchCode@setBranchCode</Datainput>
+    <Datainput>SMCode@setSMCode</Datainput>
+    <Datainput>TR_Verifier@setTR_Verifier</Datainput>
+    <Dataoutput>BranchCode@getBranchCode</Dataoutput>
+    <Dataoutput>SMCode@getSMCode</Dataoutput>
+    <Dataoutput>TR_Verifier@getTR_Verifier</Dataoutput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)">
+      <Duration value="7200">2h</Duration>
+    </Simulation>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <ExternalWS generate="false" height="60" name="Update_ICM_Data" width="108" x="516" y="360">
+    <Performer generate="false">app.icm.UpdateProposalDetails</Performer>
+    <PerformBy>execute</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Priority>MEDIUM</Priority>
+    <PostFunction type="javascript:function">var RH_STATUS = jst.getDataSlotValue("RH_Status");
+
+var rh_Remarks = jst.getDataSlotValue("RH_Remark");
+
+var proposalId = jst.getDataSlotValue("Proposal_CN_Number");
+
+var subCat = jst.getDataSlotValue("DiscrepancySubCode");
+
+var approver = jst.getDataSlotValue("Approver");
+
+
+
+//These 6 variables were added for Tax Refund process
+
+var tr_verifier= jst.getDataSlotValue("TR_Verifier");
+
+var tr_verifier_remarks = jst.getDataSlotValue("TR_Verifier_Remarks");
+
+var tr_verifier_action = jst.getDataSlotValue("TR_Verifier_Action");
+
+var tr_approver = jst.getDataSlotValue("TR_Approver");
+
+var tr_approver_remarks = jst.getDataSlotValue("TR_Approver_Remarks");
+
+var tr_approver_action = jst.getDataSlotValue("TR_Approver_Action");
+
+
+
+//This IF-ELSE condition was added by Sunil Jangir &amp; Surabhi Kadam on 29th Jan 2020, as part of TAX REFUND FLOW
+
+
+
+if(subCat.equals("188")){
+
+   var cls = jst.loadClass("app.icm.UpdateProposalDetails");
+
+   var obj = cls.newInstance();
+
+   obj.updateDataInICM(proposalId, subCat, approver, RH_STATUS, rh_Remarks);
+
+} else {
+
+	if(tr_verifier_action.equals("Rejected")){
+
+	   var cls = jst.loadClass("app.icm.UpdateProposalDetails");
+
+	   var obj = cls.newInstance();
+
+	   obj.updateDataInICM(proposalId, subCat, tr_verifier, tr_verifier_action, tr_verifier_remarks);
+
+	} else {  
+
+	   var cls = jst.loadClass("app.icm.UpdateProposalDetails");
+
+	   var obj = cls.newInstance();
+
+	   obj.updateDataInICM(proposalId, subCat, tr_approver, tr_approver_action, tr_approver_remarks);
+
+	}
+
+}
+
+
+
+//Existing codes commented and placed with new IF-ELSE condition, By Sunil Jangir &amp; Surabhi Kadam on 29th Jan 2020
+
+/*
+
+var cls = jst.loadClass("app.icm.UpdateProposalDetails");
+
+var obj = cls.newInstance();
+
+obj.updateDataInICM(proposalId, subCat, approver, RH_STATUS, rh_Remarks);
+
+ */</PostFunction>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Simulation distribution="ct" scenario="(default)"/>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <ConnectorWS height="60" name="Decision 1" width="60" x="216" y="60">
+    <ConnectorType>DECISIONSPLIT</ConnectorType>
+  </ConnectorWS>
+  <ConnectorWS height="60" name="Decision 2" width="60" x="540" y="264">
+    <ConnectorType>DECISIONSPLIT</ConnectorType>
+  </ConnectorWS>
+  <Link Name="Connection 14" default="true">
+    <Label>Connection 14</Label>
+    <Source cp="1">TR_Approver_Verifier_Adaptor</Source>
+    <Point x="480.0" y="90.0"/>
+    <Point x="516.0" y="90.0"/>
+    <Target cp="3">Tax Refund Verifier</Target>
+  </Link>
+  <Link Name="Connection 16" default="true">
+    <Label>Connection 16</Label>
+    <Source cp="2">Update_ICM_Data</Source>
+    <Point x="570.0" y="420.0"/>
+    <Point x="570.0" y="456.0"/>
+    <Target cp="0">End 1</Target>
+  </Link>
+  <Link Name="Rejected" default="false" x="10" y="5">
+    <Label>Rejected</Label>
+    <Source cp="1">Tax Refund Verifier</Source>
+    <Point x="624.0" y="90.0"/>
+    <Point x="681.0" y="90.0"/>
+    <Point x="681.0" y="294.0"/>
+    <Point x="600.0" y="294.0"/>
+    <Target cp="1">Decision 2</Target>
+    <Condition type="java">TR_Verifier_Action.equals("Rejected")<ConditionXMLEncoded>PGNvbmRpdGlvbj4KICA8Z2V0ZmllbGQ+CiR7ZmllbGR9CiAgPC9nZXRmaWVsZD4KICA8ZXhwcmVz&#13;
+c2lvbnM+CiAgICA8Y29uZmlndXJhdGlvbj4KICAgICAgPGNhdGVnb3J5PjwvY2F0ZWdvcnk+CiAg&#13;
+ICAgIDxleHByZXNzaW9uIHR5cGU9ImJhc2ljIj4KICAgICAgICA8bmFtZT48L25hbWU+CiAgICAg&#13;
+ICAgPGRlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb24+CiAgICAgICAgPG1vZGU+QklaTE9HSUM8L21v&#13;
+ZGU+CiAgICAgICAgPHBhcmFtZXRlcnM+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9ImZpcnN0&#13;
+T3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4ke1RSX1Zl&#13;
+cmlmaWVyX0FjdGlvbn08L3BhcmFtZXRlcj4KICAgICAgICAgIDxwYXJhbWV0ZXIgbmFtZT0ib3Bl&#13;
+cmF0b3JOYW1lIiB0eXBlPSJTVFJJTkciIGVkaXRhYmxlPSJmYWxzZSIgZmlsdGVyPSIiPlN0cmlu&#13;
+Z0VxdWFsczwvcGFyYW1ldGVyPgogICAgICAgICAgPHBhcmFtZXRlciBuYW1lPSJzZWNvbmRPcGVy&#13;
+YW5kIiB0eXBlPSJTVFJJTkciIGVkaXRhYmxlPSJmYWxzZSIgZmlsdGVyPSIiPiZxdW90O1JlamVj&#13;
+dGVkJnF1b3Q7PC9wYXJhbWV0ZXI+CiAgICAgICAgPC9wYXJhbWV0ZXJzPgogICAgICAgIDxwcmVz&#13;
+ZW50YXRpb24+CgogICAgICAgIDwvcHJlc2VudGF0aW9uPgogICAgICAgIDxjb2RlPgpUUl9WZXJp&#13;
+Zmllcl9BY3Rpb24uZXF1YWxzKCZxdW90O1JlamVjdGVkJnF1b3Q7KQogICAgICAgIDwvY29kZT4K&#13;
+ICAgICAgICA8am9pbk5leHQ+QU5EPC9qb2luTmV4dD4KICAgICAgPC9leHByZXNzaW9uPgogICAg&#13;
+PC9jb25maWd1cmF0aW9uPgogIDwvZXhwcmVzc2lvbnM+CjwvY29uZGl0aW9uPgo=</ConditionXMLEncoded>
+    </Condition>
+  </Link>
+  <Link Name="Connection 8" default="true">
+    <Label>Connection 8</Label>
+    <Source cp="1">Start ICM Discrepancy Case</Source>
+    <Point x="120.0" y="90.0"/>
+    <Point x="216.0" y="90.0"/>
+    <Target cp="3">Decision 1</Target>
+  </Link>
+  <Link Name="Connection 3" default="true">
+    <Label>Connection 3</Label>
+    <Source cp="2">ICM Discrepancy Approval</Source>
+    <Point x="246.0" y="228.0"/>
+    <Point x="246.0" y="294.0"/>
+    <Point x="540.0" y="294.0"/>
+    <Target cp="3">Decision 2</Target>
+  </Link>
+  <Link Name="Connection 9" default="true">
+    <Label>Connection 9</Label>
+    <Source cp="2">Decision 2</Source>
+    <Point x="570.0" y="324.0"/>
+    <Point x="570.0" y="360.0"/>
+    <Target cp="0">Update_ICM_Data</Target>
+  </Link>
+  <Link Name="ICM Discrepancy" default="false">
+    <Label>ICM Discrepancy</Label>
+    <Source cp="2">Decision 1</Source>
+    <Point x="246.0" y="120.0"/>
+    <Point x="246.0" y="168.0"/>
+    <Target cp="0">ICM Discrepancy Approval</Target>
+    <Condition type="java">DiscrepancySubCode.equals("188")<ConditionXMLEncoded>PGNvbmRpdGlvbj4KICA8Z2V0ZmllbGQ+CiR7ZmllbGR9CiAgPC9nZXRmaWVsZD4KICA8ZXhwcmVz&#13;
+c2lvbnM+CiAgICA8Y29uZmlndXJhdGlvbj4KICAgICAgPGNhdGVnb3J5PjwvY2F0ZWdvcnk+CiAg&#13;
+ICAgIDxleHByZXNzaW9uIHR5cGU9ImJhc2ljIj4KICAgICAgICA8bmFtZT48L25hbWU+CiAgICAg&#13;
+ICAgPGRlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb24+CiAgICAgICAgPG1vZGU+QklaTE9HSUM8L21v&#13;
+ZGU+CiAgICAgICAgPHBhcmFtZXRlcnM+CiAgICAgICAgICA8cGFyYW1ldGVyIG5hbWU9ImZpcnN0&#13;
+T3BlcmFuZCIgdHlwZT0iU1RSSU5HIiBlZGl0YWJsZT0iZmFsc2UiIGZpbHRlcj0iIj4ke0Rpc2Ny&#13;
+ZXBhbmN5U3ViQ29kZX08L3BhcmFtZXRlcj4KICAgICAgICAgIDxwYXJhbWV0ZXIgbmFtZT0ib3Bl&#13;
+cmF0b3JOYW1lIiB0eXBlPSJTVFJJTkciIGVkaXRhYmxlPSJmYWxzZSIgZmlsdGVyPSIiPlN0cmlu&#13;
+Z0VxdWFsczwvcGFyYW1ldGVyPgogICAgICAgICAgPHBhcmFtZXRlciBuYW1lPSJzZWNvbmRPcGVy&#13;
+YW5kIiB0eXBlPSJTVFJJTkciIGVkaXRhYmxlPSJmYWxzZSIgZmlsdGVyPSIiPiZxdW90OzE4OCZx&#13;
+dW90OzwvcGFyYW1ldGVyPgogICAgICAgIDwvcGFyYW1ldGVycz4KICAgICAgICA8cHJlc2VudGF0&#13;
+aW9uPgoKICAgICAgICA8L3ByZXNlbnRhdGlvbj4KICAgICAgICA8Y29kZT4KRGlzY3JlcGFuY3lT&#13;
+dWJDb2RlLmVxdWFscygmcXVvdDsxODgmcXVvdDspCiAgICAgICAgPC9jb2RlPgogICAgICAgIDxq&#13;
+b2luTmV4dD5BTkQ8L2pvaW5OZXh0PgogICAgICA8L2V4cHJlc3Npb24+CiAgICA8L2NvbmZpZ3Vy&#13;
+YXRpb24+CiAgPC9leHByZXNzaW9ucz4KPC9jb25kaXRpb24+Cg==</ConditionXMLEncoded>
+    </Condition>
+  </Link>
+  <Link Name="ICM Tax Refund Approval" default="true" x="-26" y="-21">
+    <Label>ICM Tax Refund Approval</Label>
+    <Source cp="1">Decision 1</Source>
+    <Point x="276.0" y="90.0"/>
+    <Point x="372.0" y="90.0"/>
+    <Target cp="3">TR_Approver_Verifier_Adaptor</Target>
+  </Link>
+  <Link Name="Forward to Approver 2" default="true" x="-58" y="-4">
+    <Label>Forward to Approver 2</Label>
+    <Source cp="2">Tax Refund Verifier</Source>
+    <Point x="570.0" y="120.0"/>
+    <Point x="570.0" y="168.0"/>
+    <Target cp="0">Tax Refund Approval</Target>
+  </Link>
+  <Link Name="Connection 10" default="true">
+    <Label>Connection 10</Label>
+    <Source cp="2">Tax Refund Approval</Source>
+    <Point x="570.0" y="228.0"/>
+    <Point x="570.0" y="264.0"/>
+    <Target cp="0">Decision 2</Target>
+  </Link>
+  <Dataslot Name="DiscrepancyRemarks" category="User" name="DiscrepancyRemarks" type="STRING">
+    <Label>DiscrepancyRemarks:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>2000</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="false" label="DiscrepancyRemarks:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancyRemarks:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="2000" type="VARCHAR"/>
+  </Dataslot>
+  <Dataslot Name="ClsName" category="User" name="ClsName" type="STRING">
+    <Label>ClsName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ClsName:" password="false" required="false" size="20" type="text">
+      <Label>ClsName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProductType" category="User" name="ProductType" type="STRING">
+    <Label>ProductType:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ProductType:" password="false" required="false" size="20" type="text">
+      <Label>ProductType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="proposalAmount" category="User" name="proposalAmount" type="STRING">
+    <Label>proposalAmount:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="proposalAmount:" password="false" required="false" size="20" type="text">
+      <Label>proposalAmount:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Approver" category="User" name="Approver" type="STRING">
+    <Label>Approver:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="Approver:" password="false" required="false" size="20" type="text">
+      <Label>Approver:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RH_Status" category="User" name="RH_Status" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <Choices>Select|Approved|Rejected</Choices>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" required="false" type="combo">
+      <Choice value="Select">
+        <Label>Select</Label>
+      </Choice>
+      <Choice value="Approved">
+        <Label>Approved</Label>
+      </Choice>
+      <Choice value="Rejected">
+        <Label>Rejected</Label>
+      </Choice>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RH_Remark" category="User" name="RH_Remark" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RiskStartDate" category="User" name="RiskStartDate" type="STRING">
+    <Label>RiskStartDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RiskStartDate:" password="false" required="false" size="20" type="text">
+      <Label>RiskStartDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="RiskEndDate" category="User" name="RiskEndDate" type="STRING">
+    <Label>RiskEndDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="RiskEndDate:" password="false" required="false" size="20" type="text">
+      <Label>RiskEndDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProposerName" category="User" name="ProposerName" type="STRING">
+    <Label>ProposerName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ProposerName:" password="false" required="false" size="20" type="text">
+      <Label>ProposerName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProposalInwardDate" category="User" name="ProposalInwardDate" type="STRING">
+    <Label>ProposalInwardDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ProposalInwardDate:" password="false" required="false" size="20" type="text">
+      <Label>ProposalInwardDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProposalIssueDate" category="User" name="ProposalIssueDate" type="STRING">
+    <Label>ProposalIssueDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="ProposalIssueDate:" password="false" required="false" size="20" type="text">
+      <Label>ProposalIssueDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="Proposal_CN_Number" category="User" name="Proposal_CN_Number" type="STRING">
+    <Label>Proposal_CN_Number:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access index="1" type="BIZ_SITE_COLUMN" value="true"/>
+    <Format editable="true" label="Proposal_CN_Number:" password="false" required="false" size="20" type="text">
+      <Label>Proposal_CN_Number:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProductName" category="User" name="ProductName" type="STRING">
+    <Label>ProductName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access index="2" type="BIZ_SITE_COLUMN" value="true"/>
+    <Format editable="true" label="ProductName:" password="false" required="false" size="20" type="text">
+      <Label>ProductName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="ProductCode" category="User" name="ProductCode" type="STRING">
+    <Label>ProductCode:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access index="3" type="BIZ_SITE_COLUMN" value="true"/>
+    <Format editable="true" label="ProductCode:" password="false" required="false" size="20" type="text">
+      <Label>ProductCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="PreviousPolicyNumber" category="User" name="PreviousPolicyNumber" type="STRING">
+    <Label>PreviousPolicyNumber:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="PreviousPolicyNumber:" password="false" required="false" size="20" type="text">
+      <Label>PreviousPolicyNumber:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="IsClaimOnProposal" category="User" name="IsClaimOnProposal" type="STRING">
+    <Label>IsClaimOnProposal:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="IsClaimOnProposal:" password="false" required="false" size="20" type="text">
+      <Label>IsClaimOnProposal:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="IsClaimOnPreviousPolicy" category="User" name="IsClaimOnPreviousPolicy" type="STRING">
+    <Label>IsClaimOnPreviousPolicy:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="IsClaimOnPreviousPolicy:" password="false" required="false" size="20" type="text">
+      <Label>IsClaimOnPreviousPolicy:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InspectionStatus" category="User" name="InspectionStatus" type="STRING">
+    <Label>InspectionStatus:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InspectionStatus:" password="false" required="false" size="20" type="text">
+      <Label>InspectionStatus:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InspectionID" category="User" name="InspectionID" type="STRING">
+    <Label>InspectionID:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InspectionID:" password="false" required="false" size="20" type="text">
+      <Label>InspectionID:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="InspectionDate" category="User" name="InspectionDate" type="STRING">
+    <Label>InspectionDate:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="InspectionDate:" password="false" required="false" size="20" type="text">
+      <Label>InspectionDate:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="DiscrepancySubCode" category="User" name="DiscrepancySubCode" type="STRING">
+    <Label>DiscrepancySubCode:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="DiscrepancySubCode:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancySubCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="DiscrepancySubCategory" category="User" name="DiscrepancySubCategory" type="STRING">
+    <Label>DiscrepancySubCategory:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="DiscrepancySubCategory:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancySubCategory:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="DiscrepancyCategory" category="User" name="DiscrepancyCategory" type="STRING">
+    <Label>DiscrepancyCategory:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="DiscrepancyCategory:" password="false" required="false" size="20" type="text">
+      <Label>DiscrepancyCategory:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="DocumentType" category="User" name="DocumentType" type="STRING">
+    <Label>DocumentType:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="DocumentType:" password="false" required="false" size="20" type="text">
+      <Label>DocumentType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="BusinessType" category="User" name="BusinessType" type="STRING">
+    <Label>BusinessType:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="BusinessType:" password="false" required="false" size="20" type="text">
+      <Label>BusinessType:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="SMName" category="User" name="SMName" type="STRING">
+    <Label>SMName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="SMName:" password="false" required="false" size="20" type="text">
+      <Label>SMName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="SMCode" category="User" name="SMCode" type="STRING">
+    <Label>SMCode:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="SMCode:" password="false" required="false" size="20" type="text">
+      <Label>SMCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="BranchName" category="User" name="BranchName" type="STRING">
+    <Label>BranchName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access index="4" type="BIZ_SITE_COLUMN" value="true"/>
+    <Format editable="true" label="BranchName:" password="false" required="false" size="20" type="text">
+      <Label>BranchName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="BranchCode" category="User" name="BranchCode" type="STRING">
+    <Label>BranchCode:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access index="5" type="BIZ_SITE_COLUMN" value="true"/>
+    <Format editable="true" label="BranchCode:" password="false" required="false" size="20" type="text">
+      <Label>BranchCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="BASName" category="User" name="BASName" type="STRING">
+    <Label>BASName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="BASName:" password="false" required="false" size="20" type="text">
+      <Label>BASName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="BASCode" category="User" name="BASCode" type="STRING">
+    <Label>BASCode:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="BASCode:" password="false" required="false" size="20" type="text">
+      <Label>BASCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="AgentName" category="User" name="AgentName" type="STRING">
+    <Label>AgentName:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="AgentName:" password="false" required="false" size="20" type="text">
+      <Label>AgentName:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="AgentCode" category="User" name="AgentCode" type="STRING">
+    <Label>AgentCode:</Label>
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="AgentCode:" password="false" required="false" size="20" type="text">
+      <Label>AgentCode:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="isUpdatedInICM" category="User" name="isUpdatedInICM" type="BOOLEAN">
+    <Label>isUpdatedInICM:</Label>
+    <DataType>BOOLEAN</DataType>
+    <DataValue>false</DataValue>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="isUpdatedInICM:" type="boolean">
+      <Label>isUpdatedInICM:</Label>
+      <Validation>
+        <ValidationType/>
+      </Validation>
+    </Format>
+  </Dataslot>
+  <Dataslot Name="TR_Verifier" category="User" name="TR_Verifier" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="TR_Verifier_Action" category="User" name="TR_Verifier_Action" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="TR_Verifier_Remarks" category="User" name="TR_Verifier_Remarks" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="TR_Approver" category="User" name="TR_Approver" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue>TR_APPROVER</DataValue>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="TR_Approver_Action" category="User" name="TR_Approver_Action" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <Dataslot Name="TR_Approver_Remarks" category="User" name="TR_Approver_Remarks" type="STRING">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <DataSize>256</DataSize>
+    <IsPublic>true</IsPublic>
+    <MultiLine>false</MultiLine>
+    <BizManageAccessFlag>true</BizManageAccessFlag>
+    <Access type="PUBLIC" value="true"/>
+    <Access type="GLOBAL" value="false"/>
+    <Access type="BIZ_MANAGE_ACCESS" value="true"/>
+    <Access type="BIZ_SITE_COLUMN" value="false"/>
+    <Format editable="true" label="" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="CHAR"/>
+  </Dataslot>
+  <History>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1626146733240" to="http://10.62.182.42:18793/sbm/deployment">Tue Jul 13 08:55:33 IST 2021</Deployed>
+    <Deployed as="ICM_Discrepancy" by="bpmadmin" on="1622706709320" to="http://rgisavuat:19793/sbm/deployment">Thu Jun 03 13:21:49 IST 2021</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1589466735822" to="http://10.65.15.167:18793/sbm/deployment">Thu May 14 20:02:15 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1589466218688" to="http://10.65.15.167:18793/sbm/deployment">Thu May 14 19:53:38 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1589463699189" to="http://10.65.15.167:18793/sbm/deployment">Thu May 14 19:11:39 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1580980754153" to="http://10.65.15.167:18793/sbm/deployment">Thu Feb 06 14:49:14 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1580724459255" to="http://10.65.15.167:18793/sbm/deployment">Mon Feb 03 15:37:39 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1580723898514" to="http://10.65.15.167:18793/sbm/deployment">Mon Feb 03 15:28:18 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1580723667235" to="http://10.65.15.167:18793/sbm/deployment">Mon Feb 03 15:24:27 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1580723376815" to="http://10.65.15.167:18793/sbm/deployment">Mon Feb 03 15:19:36 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1580302565668" to="http://10.65.15.167:18793/sbm/deployment">Wed Jan 29 18:26:05 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1579086454030" to="http://10.65.15.167:18793/sbm/deployment">Wed Jan 15 16:37:34 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1579084208520" to="http://10.65.15.167:18793/sbm/deployment">Wed Jan 15 16:00:08 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1579000779856" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 14 16:49:39 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1578998605716" to="http://10.65.15.167:18793/sbm/deployment">Tue Jan 14 16:13:25 IST 2020</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1471431779993" to="http://10.65.5.81:18793/sbm/deployment">Wed Aug 17 16:32:59 IST 2016</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1471431757186" to="http://10.65.5.80:18793/sbm/deployment">Wed Aug 17 16:32:37 IST 2016</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1379067718452" to="http://10.65.15.160:8080/sbm/deployment">Fri Sep 13 15:51:58 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1379067654074" to="http://10.65.15.160:8080/sbm/deployment">Fri Sep 13 15:50:54 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1379067550183" to="http://10.65.15.160:8080/sbm/deployment">Fri Sep 13 15:49:10 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1379067367000" to="http://10.65.15.160:8080/sbm/deployment">Fri Sep 13 15:46:07 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1373964454533" to="http://10.65.15.160:8080/sbm/deployment">Tue Jul 16 14:17:34 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1373959656958" to="http://10.65.15.160:8080/sbm/deployment">Tue Jul 16 12:57:36 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1373959622009" to="http://10.65.15.160:8080/sbm/deployment">Tue Jul 16 12:57:02 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1373954492494" to="http://10.65.15.160:8080/sbm/deployment">Tue Jul 16 11:31:32 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1332498678538" to="http://10.65.15.108:8080/sbm/deployment">Fri Mar 23 16:01:18 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1330418984328" to="http://10.65.5.121:18793/sbm/deployment">Tue Feb 28 14:19:44 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1329471860267" to="http://10.65.5.121:18793/sbm/deployment">Fri Feb 17 15:14:20 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1329126310771" to="http://10.65.5.121:18793/sbm/deployment">Mon Feb 13 15:15:10 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1328597055925" to="http://10.65.5.121:18793/sbm/deployment">Tue Feb 07 12:14:15 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1324375489827" to="http://10.65.15.108:8080/sbm/deployment">Tue Dec 20 15:34:49 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323339524617" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 15:48:44 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323339387055" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 15:46:27 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323339200197" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 15:43:20 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323338659262" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 15:34:19 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323337647283" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 15:17:27 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323335751812" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 14:45:51 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323335658901" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 14:44:18 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323334129139" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 14:18:49 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323329585584" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 13:03:05 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323328418726" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 12:43:38 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323326364383" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 12:09:24 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323326251607" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 12:07:31 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323324470131" to="http://10.65.15.108:8080/sbm/deployment">Thu Dec 08 11:37:50 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322836940289" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 20:12:20 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322836849205" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 20:10:49 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322836667130" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 20:07:47 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322835655211" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 19:50:55 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322835476071" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 19:47:56 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322835244748" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 19:44:04 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322834125610" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 19:25:25 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322833046016" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 19:07:26 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322645455679" to="http://10.65.15.108:8080/sbm/deployment">Wed Nov 30 15:00:55 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322644487522" to="http://10.65.15.108:8080/sbm/deployment">Wed Nov 30 14:44:47 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322644392369" to="http://10.65.15.108:8080/sbm/deployment">Wed Nov 30 14:43:12 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322644297357" to="http://10.65.15.108:8080/sbm/deployment">Wed Nov 30 14:41:37 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322643432465" to="http://10.65.15.108:8080/sbm/deployment">Wed Nov 30 14:27:12 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321866565808" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 21 14:39:25 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321866348923" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 21 14:35:48 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321861347260" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 21 13:12:27 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321860765041" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 21 13:02:45 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321859327846" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 21 12:38:47 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321859149867" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 21 12:35:49 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321859015964" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 21 12:33:35 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321624026732" to="http://10.65.15.108:8080/sbm/deployment">Fri Nov 18 19:17:06 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1320928715623" to="http://10.65.15.108:8080/sbm/deployment">Thu Nov 10 18:08:35 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1317199570651" to="http://10.65.15.108:8080/sbm/deployment">Wed Sep 28 14:16:10 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1316068298090" to="http://10.65.15.108:8080/sbm/deployment">Thu Sep 15 12:01:38 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1316066971681" to="http://10.65.15.108:8080/sbm/deployment">Thu Sep 15 11:39:31 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1316066796081" to="http://10.65.15.108:8080/sbm/deployment">Thu Sep 15 11:36:36 IST 2011</Deployed>
+    <Created as="ICM_Discrepancy" by="ParshuramR" on="1316064611359">Thu Sep 15 11:00:11 IST 2011</Created>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318491198566" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 13:03:18 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318491662344" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 13:11:02 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318491802101" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 13:13:22 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318491953377" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 13:15:53 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318492149382" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 13:19:09 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318496302995" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:28:22 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497079823" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:41:19 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497184024" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:43:04 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497267600" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:44:27 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497349130" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:45:49 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497562528" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:49:22 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497624807" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:50:24 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497757738" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:52:37 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1318497795331" to="http://10.65.15.108:8080/sbm/deployment">Thu Oct 13 14:53:15 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321263811462" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:13:31 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321264259113" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:20:59 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321264675123" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:27:55 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321264845168" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:30:45 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321265303678" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:38:23 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321265794437" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:46:34 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321265853218" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:47:33 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321266477569" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 15:57:57 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321266696144" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 16:01:36 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1321266822049" to="http://10.65.15.108:8080/sbm/deployment">Mon Nov 14 16:03:42 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322546944221" to="http://10.65.15.108:8080/sbm/deployment">Tue Nov 29 11:39:04 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322817861438" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 14:54:21 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1322819100045" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 02 15:15:00 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323063798076" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 11:13:18 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323064714985" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 11:28:34 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323065273513" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 11:37:53 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323066486878" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 11:58:06 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323066635437" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 12:00:35 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323066754347" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 12:02:34 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323066806773" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 12:03:26 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323067079921" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 12:07:59 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323078268063" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 15:14:28 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323078374580" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 15:16:14 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323078528719" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 15:18:48 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323081020220" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 16:00:20 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323081360383" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 16:06:00 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1323083911526" to="http://10.65.15.108:8080/sbm/deployment">Mon Dec 05 16:48:31 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1323435485028" to="http://10.65.15.108:8080/sbm/deployment">Fri Dec 09 18:28:05 IST 2011</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1329226409807" to="http://10.65.15.108:8080/sbm/deployment">Tue Feb 14 19:03:29 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1329226872026" to="http://10.65.5.121:18793/sbm/deployment">Tue Feb 14 19:11:12 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1330341290475" to="http://10.65.5.121:18793/sbm/deployment">Mon Feb 27 16:44:50 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="parshu" on="1330592930004" to="http://10.65.5.121:18793/sbm/deployment">Thu Mar 01 14:38:50 IST 2012</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1376906687525" to="http://10.65.15.160:8080/sbm/deployment">Mon Aug 19 15:34:47 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386235274089" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 14:51:14 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386235775570" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 14:59:35 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386235995285" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 15:03:15 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386236506457" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 15:11:46 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386236706125" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 15:15:06 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386236900557" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 15:18:20 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386236995949" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 15:19:55 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386238043323" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 15:37:23 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386238111199" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 15:38:31 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1386239417037" to="http://10.65.15.160:8080/sbm/deployment">Thu Dec 05 16:00:17 IST 2013</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1468708273275" to="http://10.65.5.81:18793/sbm/deployment">Sun Jul 17 04:01:13 IST 2016</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1468708296036" to="http://10.65.5.80:18793/sbm/deployment">Sun Jul 17 04:01:36 IST 2016</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1477379617979" to="http://10.65.5.80:18793/sbm/deployment">Tue Oct 25 12:43:37 IST 2016</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1477379640129" to="http://10.65.5.81:18793/sbm/deployment">Tue Oct 25 12:44:00 IST 2016</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1505906926948" to="http://10.65.5.80:18793/sbm/deployment">Wed Sep 20 16:58:46 IST 2017</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1505906949089" to="http://10.65.5.81:18793/sbm/deployment">Wed Sep 20 16:59:09 IST 2017</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1628686211217" to="http://10.62.182.42:18793/sbm/deployment">Wed Aug 11 18:20:11 IST 2021</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1628686446379" to="http://10.62.182.42:18793/sbm/deployment">Wed Aug 11 18:24:06 IST 2021</Deployed>
+    <Deployed as="ICM_Discrepancy" by="rgicl" on="1628760656294" to="http://10.62.182.42:18793/sbm/deployment">Thu Aug 12 15:00:56 IST 2021</Deployed>
+  </History>
+  <Repository/>
+</Process>

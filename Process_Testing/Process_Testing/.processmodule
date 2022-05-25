@@ -1,0 +1,13 @@
+#Wed Nov 17 14:37:30 IST 2021
+publishing.type=Copy_Files_Only
+application.name=Process_Testing
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=Process_Testing
+module.id=6f488677-3431-41fb-8a7c-3c05f1461081
+module.version=8
+application.mainappfile=Process_Testing/processtemplates/Process_Testing.spt
+module.name=Process_Testing
+application.root=Process_Testing

@@ -1,0 +1,33 @@
+<%@ page import="com.savvion.sbm.bizmanage.pagegenerator.ServletTools" %>
+<%
+boolean debug = false;
+boolean login = false;
+String loginValue = request.getParameter("login");
+if (loginValue != null){
+	login = loginValue.equals("true");
+}
+String base = "../";
+if (login){
+	base = "";
+}
+
+base = base+ServletTools.getBaseLocation(request);
+
+String theme = bizManage.getTheme();
+%>
+<link rel="stylesheet" href="<%= base %>javascript/ext/resources/css/ext-all.css" type="text/css" />
+
+<% if (theme.equals("theme01")) { %>
+<link rel="stylesheet" href="<%= base %>javascript/ext/resources/css/xtheme-default.css" type="text/css" />
+<% } else if (theme.equals("theme02")) { %>
+<link rel="stylesheet" href="<%= base %>javascript/ext/resources/css/xtheme-gray.css" type="text/css" />
+<% } %>
+
+<link rel="stylesheet" href="<%= base %>css/<%= bizManage.getTheme() %>/bm-all.css" type="text/css" />
+<link rel="stylesheet" href="<%= base %>css/<%= bizManage.getTheme() %>/bm-xml.css" type="text/css" />
+<link rel="stylesheet" href="<%= base %>css/<%= bizManage.getTheme() %>/silk.css" type="text/css" />
+<link rel="stylesheet" href="<%= base %>javascript/ux/superboxselect/superboxselect.css" type="text/css" />
+<link rel="shortcut icon" href="<%= base %>css/favicon.ico" type="image/x-icon">
+<link rel="icon" href="<%= base %>css/favicon.png"  type="image/png"/>
+
+

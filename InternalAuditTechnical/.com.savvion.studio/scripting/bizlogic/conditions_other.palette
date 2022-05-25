@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.other_conditions" path="conditions/other" icon="fldr_obj.gif"/>
+
+    <item label="$Scripting.item.complex_condition" path="conditions/other" icon="template.gif">
+    <operationJoin allowedContent="BOOLEAN" content="BOOLEAN" col="0" colspan="1" label="$Scripting.label._condition" prompt="$Scripting.label.drop_conditions_here" row="0" rowspan="1" collapsible="true" description="$Scripting.item.complex_condition">
+      <operation>
+        <grid>
+          <template>${choice}</template>
+          <widgets>
+            <choiceWidget id="choice" col="0" colspan="1" row="0" rowspan="1" type="CONSTANT" fill="false" searchable="false">
+              <selection presentation="$Scripting.operation.any" type="constant"> || </selection>
+              <choice presentation="$Scripting.operation.any" type="constant"> || </choice>
+              <choice presentation="$Scripting.operation.all" type="constant"> &amp;&amp; </choice>
+            </choiceWidget>
+            <label col="1" colspan="1" row="0" rowspan="1" fill="true">$Scripting.label.of_the_following_conditions_are_true</label>
+          </widgets>
+        </grid>
+      </operation>
+    </operationJoin>
+  </item>
+
+  <item label="$Scripting.item.custom_condition_one_line" path="conditions/other" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.custom_condition_one_line">
+      <template>${script}</template>
+      <widgets>
+        <entryWidget col="0" colspan="1" id="script" presentation="FIELD" row="0" rowspan="1" validation="NONE" tools="bl_autocomplete">
+        </entryWidget>
+      </widgets>
+    </grid>
+  </item>
+
+  <item label="$Scripting.item.custom_condition_multiline" path="conditions/other" icon="template.gif">
+    <grid content="BOOLEAN" collapsible="true" description="$Scripting.item.custom_condition_multiline">
+      <template>${script}</template>
+      <widgets>
+        <entryWidget col="0" colspan="1" id="script" presentation="AREA" row="0" rowspan="1" validation="NONE" tools="bl_autocomplete">
+        </entryWidget>
+      </widgets>
+    </grid>
+  </item>  
+
+</palette>

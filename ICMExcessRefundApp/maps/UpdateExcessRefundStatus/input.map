@@ -1,0 +1,315 @@
+<map version="1.3">
+  <param name="IN.strApprovedBy.3_0" type="java.lang.String" value="@Approver"/>
+  <param name="IN.strExcessRefundTranID.0_0" type="java.lang.String" value="@TransactionId"/>
+  <param name="WSCONFIG" type="java.lang.String">
+<java class="java.beans.XMLDecoder" version="1.7.0_55">
+ <object class="com.savvion.sbm.adapters.webservice.WSConfig">
+  <void property="callInfo">
+   <object class="com.savvion.sbm.adapters.webservice.WSCallInfo">
+    <void property="encodingType">
+     <string>LITERAL</string>
+    </void>
+   </object>
+  </void>
+  <void property="operationInfo">
+   <object class="com.savvion.sbm.adapters.webservice.OperationInfo">
+    <void property="QName">
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+      <void property="localPart">
+       <string>ResolveExcessRefundServiceSavvion</string>
+      </void>
+      <void property="namesSpace">
+       <string>http://tempuri.org/</string>
+      </void>
+     </object>
+    </void>
+    <void property="inputParam">
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>strExcessRefundTranID</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>strExcessRefundTranID</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>strExcessRefundTranID</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>strExcessRefundTranID.0_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>strRefundStatus</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>strRefundStatus</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>strRefundStatus</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>strRefundStatus.1_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>strRemark</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>strRemark</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>strRemark</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>strRemark.2_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>strApprovedBy</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>strApprovedBy</string>
+       </void>
+       <void property="mode">
+        <int>1</int>
+       </void>
+       <void property="name">
+        <string>strApprovedBy</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>strApprovedBy.3_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="isAllPrimitive">
+     <boolean>true</boolean>
+    </void>
+    <void property="isWrapped">
+     <boolean>true</boolean>
+    </void>
+    <void property="returnParam">
+     <void method="add">
+      <object class="com.savvion.sbm.adapters.webservice.Param">
+       <void property="QName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>ResolveExcessRefundServiceSavvionResult</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://tempuri.org/</string>
+         </void>
+        </object>
+       </void>
+       <void property="javaClassName">
+        <string>java.lang.String</string>
+       </void>
+       <void property="label">
+        <string>ResolveExcessRefundServiceSavvionResult</string>
+       </void>
+       <void property="mode">
+        <int>2</int>
+       </void>
+       <void property="name">
+        <string>ResolveExcessRefundServiceSavvionResult</string>
+       </void>
+       <void property="uniqueIdentifier">
+        <string>ResolveExcessRefundServiceSavvionResult.4_0</string>
+       </void>
+       <void property="xmlQName">
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+         <void property="localPart">
+          <string>string</string>
+         </void>
+         <void property="namesSpace">
+          <string>http://www.w3.org/2001/XMLSchema</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="style">
+     <string>document</string>
+    </void>
+    <void property="use">
+     <string>literal</string>
+    </void>
+   </object>
+  </void>
+  <void property="otherSecConfigFile">
+   <string/>
+  </void>
+  <void property="password">
+   <string/>
+  </void>
+  <void property="portInfo">
+   <object class="com.savvion.sbm.adapters.webservice.PortInfo">
+    <void property="QName">
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+      <void property="localPart">
+       <string>BasicHttpBinding_IExcessRefund</string>
+      </void>
+      <void property="namesSpace">
+       <string>http://tempuri.org/</string>
+      </void>
+     </object>
+    </void>
+    <void property="description">
+     <string>BasicHttpBinding_IExcessRefund</string>
+    </void>
+   </object>
+  </void>
+  <void property="runtimeSecurityType">
+   <int>0</int>
+  </void>
+  <void property="samlTokenConfigFile">
+   <string/>
+  </void>
+  <void property="serviceInfo">
+   <object class="com.savvion.sbm.adapters.webservice.ServiceInfo">
+    <void property="QName">
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName">
+      <void property="localPart">
+       <string>ExcessRefund</string>
+      </void>
+      <void property="namesSpace">
+       <string>http://tempuri.org/</string>
+      </void>
+     </object>
+    </void>
+    <void property="description">
+     <string>ExcessRefund</string>
+    </void>
+   </object>
+  </void>
+  <void property="soapActionURI">
+   <string>http://tempuri.org/IExcessRefund/ResolveExcessRefundServiceSavvion</string>
+  </void>
+  <void property="targetEndpointAddress">
+   <string>http://icm3app2.reliancecapital.com:91/ExcessRefund.svc</string>
+  </void>
+  <void property="targetNameSpace">
+   <string>http://tempuri.org/</string>
+  </void>
+  <void property="userName">
+   <string/>
+  </void>
+  <void property="userNameTokenConfigFile">
+   <string/>
+  </void>
+  <void property="wsdlPassword">
+   <string/>
+  </void>
+  <void property="wsdlUrl">
+   <string>http://10.65.8.119:91/ExcessRefund.svc?wsdl</string>
+  </void>
+  <void property="wsdlUserName">
+   <string/>
+  </void>
+ </object>
+</java>
+  </param>  <param name="IN.strRemark.2_0" type="java.lang.String" value="@Remarks"/>
+  <param name="SESSION_TOKEN_SUPPORT" type="java.lang.String" value="false"/>
+  <param name="IN.strRefundStatus.1_0" type="java.lang.String" value="@ApproverStatus"/>
+  <param name="TARGET_EPA" type="java.lang.String" value=""/>
+</map>

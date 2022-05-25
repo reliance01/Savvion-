@@ -1,0 +1,57 @@
+{
+    'name': 'Button',
+	'label': 'Bouton',
+    'type': 'yahoo',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-button.jpg',
+    'description': 'Un objet graphique bouton g\u00e9n\u00e9rique.',
+    'category': 'Button',
+    'args': [
+    {'type': {
+         'type':'STRING', 
+         'defaultValue': 'bouton', 
+         'description': 'type de bouton',
+         'values': [
+         {'name': 'bouton', 'value': 'button', 'description': 'Bouton de commande', 'disableArgs':['checked', 'href']},
+         {'name': 'complet', 'value': 'complete','description': 'Navigue vers l\'url sp\u00e9cifi\u00e9e quand cliqu\u00e9', 'disableArgs':['checked', 'href']},
+         {'name': 'annuler', 'value': 'cancel','description': 'Annule la forme parent quand cliqu\u00e9.', 'disableArgs':['checked', 'href']},
+         {'name': 'r\u00e9initialiser', 'value': 'reset','description': 'R\u00e9initialise la forme parent quand cliqu\u00e9', 'disableArgs':['checked', 'href']},
+         {'name': 'enregistrer', 'value': 'save','description': 'Enregistre la forme parent quand cliqu\u00e9', 'disableArgs':['checked', 'href']},
+         {'name': 'r\u00e9affecter', 'value': 'reassign','description': 'R\u00e9affecte la forme parent quand cliqu\u00e9', 'disableArgs':['checked', 'href']}
+         ]
+     }},
+     {'label':{'type':'STRING', 'defaultValue': 'Cliquer ici', 'description': '\u00e9tiquette du bouton'}},
+     {'checked':{'type':'BOOLEAN', 'defaultValue': false, 'description': 'statut de la case \u00e0 cocher', 'editable':false, 'values': [{'name':'vrai', 'value':'true'},{'name':'faux', 'value':'false'}]}},
+     {'href':{'type':'STRING', 'defaultValue': 'http://ajax.dev.java.net', 'description': 'URL des boutons lien', 'editable':false}},
+     {'duallist':{'type':'BOOLEAN','defaultValue': false, 'description': 'si le bouton fait parti d\'une liste duale', 'values': [{'name':'vrai', 'value':'true'},{'name':'faux', 'value':'false'}]}},
+     {'sourcelist':{'type':'STRING','defaultValue': '', 'description': 'nom de l\'objet graphique source'}},
+     {'targetlist':{'type':'STRING','defaultValue': '', 'description': 'nom de l\'objet graphique cible'}}    
+     ],
+     'value': {
+         'required':'false',
+         'type': 'OBJECT',
+         'defaultValue':{
+         }
+     },    
+     'config' : {
+         'type': {
+             'id' : 'yahoo.button',
+             'libs': [ 
+             '../resources/libs/yahoo/v2.4.0/yahoo-dom-event/yahoo-dom-event.js',
+             '../resources/libs/yahoo/v2.4.0/element/element-beta-min.js',
+             '../resources/libs/yahoo/v2.4.0/container/container_core-min.js',
+             '../resources/libs/yahoo/v2.4.0/button/button-min.js'],
+             'styles': [
+             '../resources/libs/yahoo/v2.4.0/button/assets/skins/sam/button.css'],
+        'resources': [
+                '../resources/libs/yahoo/v2.4.0/assets',
+                '../resources/libs/yahoo/v2.4.0/button/assets']     
+         }
+     },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/yahoo/button/onClick','/yahoo/button/onChange'],
+       'description':'Les deux publient selon leur nom de sujet quand le bouton est cliqu\u00e9 ou chang\u00e9. onChange est seulement envoy\u00e9 des boutons case \u00e0 cocher. Les deux publient un objet avec id et valeur. La valeur de onClick est {}. La valeur de onChange est {oldValue,newValue}.'
+    }
+}

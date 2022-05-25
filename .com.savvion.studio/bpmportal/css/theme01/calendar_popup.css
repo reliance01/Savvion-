@@ -1,0 +1,197 @@
+/* Classes for Calendar Pop-up */
+A.CalDayLnk {
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none
+}
+
+A.CalDayLnk:hover {
+	text-decoration: underline;
+	color: #006699
+}
+
+A.CalDayLnk:visited { }
+
+A.CalDayLnkSlct {
+	font-size: 8pt;
+	color: #990000;
+	text-decoration: none;
+	font-weight: bold
+}
+
+A.CalDayLnkSlct:hover {
+	text-decoration: underline;
+	color: #FF3300
+}
+
+A.CalDayLnkSlct:visited { }
+
+A.CalMnthLnk {
+	font-size: 8pt;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center
+}
+
+A.CalMnthLnk:visited { }
+
+A.CalMnthLnkSlct {
+	font-size: 8pt;
+	color: #FFFFEC;
+	text-decoration: none;
+	text-align: center
+}
+
+A.CalMnthLnkSlct:visited { }
+
+.CalDay {
+	font-size: 8pt;
+	text-align: right;
+	border-color: #FFFFFF #DFDFDF #DFDFDF #EFEFEF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background: #FFFFFF
+}
+
+.CalTimeLabel {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF
+}
+
+.CalDaySlct {
+	font-size: 8pt;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	background: #FDFFDF
+}
+
+.CalMnthBg {
+	text-align: center;
+	width: 22px;
+	font: bold 8pt Arial, Helvetica, sans-serif;
+	background: #B5C4EE
+}
+
+.CalMnthBgSlct {
+	text-align: center;
+	font: bold 8pt Arial, Helvetica, sans-serif;
+	background: #8CA0E2
+}
+
+.CalTblLightBg {
+	background: #6B7DCE
+}
+
+.CalWeek {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #52619C;
+	text-align: center;
+	border-top: 1px solid #F7F7FF;
+	border-right: 0px solid #F7F7FF;
+	border-bottom: 0px solid #F7F7FF;
+	border-left: 1px solid #F7F7FF;
+	background: #CED7E7
+}
+
+.CalYear {
+	color: #FFFFFF;
+	font: bold 12pt Arial, Helvetica, sans-serif
+}
+
+A.CalDayLnkcurrentDate {
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold
+}
+
+A.CalDayLnkcurrentDate:hover {
+	text-decoration: underline;
+	color: #000000
+}
+
+A.CalDayLnkcurrentDate:visited { }
+
+.CalInptMainBtn {
+	font-size: 8pt;
+	color: #000066;
+	border-top: 1px solid #9FA7C6;
+	border-right: 1px solid #717CAA;
+	border-bottom: 1px solid #717CAA;
+	border-left: 1px solid #9FA7C6;
+	background: #FFFFFF
+}
+
+.CalInptMainBtnHover {
+	font-size: 8pt;
+	color: #000066;
+	border: 1px solid #828EC5;
+	background: #F7F7FF
+}
+
+.CalMainBtnBg {
+	text-align: center;
+	font: 8pt Arial, Helvetica, sans-serif;
+	background: #CED7E7
+}
+
+.CalDayCurrentDate {
+	font-size: 8pt;
+	text-align: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FDFFDF;
+	border-bottom-color: #FDFFDF;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	font-weight: bold;
+	color: #996633;
+	background: #FDFFDF
+}
+
+.CalYearCombo {
+	font-size: 8pt;
+	border: 1px solid #6B7DCE;
+	background: #F7F7FF
+}
+
+A.CalMnthLnk:hover, A.CalMnthLnkSlct:hover {
+	font-size: 8pt;
+	text-decoration: underline;
+	color: #FFFFFF
+}
+
+.CalDateBgGrp, .CalYearBg {
+	text-align: center;
+	font: bold 8pt Arial, Helvetica, sans-serif;
+	background: #9CAEE7
+}
+
+.CalInptTxtHhMm, .CalInptSelectAmPm {
+	font-size: 8pt;
+	color: #000066;
+	border: 1px solid #6B7DCE;
+	background: #F7F7FF
+}

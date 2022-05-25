@@ -1,0 +1,659 @@
+.ApBody {
+	font: normal 11px Arial,tahoma,verdana,helvetica;
+	margin: 0px;
+	background: #ffffff
+}
+.ApSegDataLabel,.ApSegGenLabel {
+	font-size: 11px;
+	color: #333333;
+	border: 1px solid #BCD2DA;
+	font: bold 11px arial,tahoma,helvetica,sans-serif;
+	padding: 4px;
+	width: 20%;
+	background: #FFFFFF;
+	text-align: right
+}
+.ApSegDataVal,.ApSegGenData {
+	font: normal 11px arial,tahoma,verdana,helvetica;
+	color: #333333;
+	text-align: left;
+	padding: 3px;
+	border: 1px solid #BCD2DA;
+	background: #FFFFFF
+}
+.ApRequired {
+	font: normal 11px arial,tahoma,verdana,helvetica;
+	color: #FF0000
+}
+.ApSegTblInBg{
+	border-top: 0 none;
+	background: #FFFFFF; /*#BCD2DA;*/
+	position: relative;
+	background: #CBD1DD
+}
+.ApSegTitle {
+	color: #15428B;
+	font: bold 11px tahoma,arial,verdana,sans-serif;
+	padding: 3px 3px 2px 5px;
+	border: 1px solid #99BBE8;
+	line-height: 15px;
+	text-align: left;
+	border-collapse:collapse;
+	background: url(../../javascript/ext/resources/images/default/panel/white-top-bottom.gif) repeat-x 0 -1px
+}
+.ApSegLineBg { height: 2px; background: #003366 }
+.ApSegTblBgPad {
+	border: 1px #999999 solid;
+	background: #EEEEEE;
+	padding: 4px
+}
+.ApSegDivPad {
+	color: #000000;
+	overflow: auto;
+	border: 1px solid;
+	border-color: #006699 #000064 #000064 #006699;
+	position: absolute;
+	background: #E2E2E2 url(images/seg_div_pad.gif) repeat-x fixed;
+	padding: 8px
+}
+.ApSegDataTbl { border-collapse: collapse }
+.ApSegValCntr {
+	font-size: 11px;
+	color: #000000;
+	text-align: center;
+	border: 1px solid #FFFFFF;
+	background: #FFFFFF
+}
+.ApSegValLft {
+	font-size: 11px;
+	color: #000000;
+	text-align: left;
+	border: 1px solid #FFFFFF;
+	background: #FFFFFF
+}
+.ApSegValRt {
+	color: #000000;
+	text-align: right;
+	border: 1px solid #FFFFFF;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+.ApSegFieldCntr {
+	font-size: 11px;
+	color: #000000;
+	text-align: center;
+	border: 1px solid #FFFFFF;
+	border-right: 1px solid #8091A9;
+	background: #FFFFFF
+}
+.ApSegFieldLft {
+	font-size: 11px;
+	color: #000000;
+	text-align: left;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #8091A9;
+	background: #FFFFFF
+}
+.ApSegFieldRt {
+	font-size: 11px;
+	color: #000000;
+	text-align: right;
+	border: 1px solid #FFFFFF;
+	border-right: 1px solid #8091A9;
+	background: #FFFFFF
+}
+.ApSegValCntrAlt {
+	color: #000000;
+	text-align: center;
+	border: 1px solid #EEF0F2;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #EEF0F2
+}
+.ApSegValLftAlt {
+	color: #000000;
+	text-align: left;
+	border: 1px solid #EEF0F2;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #EEF0F2
+}
+.ApSegValRtAlt {
+	color: #000000;
+	text-align: right;
+	border: 1px solid #EEF0F2;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #EEF0F2
+}
+.ApSegFieldCntrAlt {
+	color: #000000;
+	text-align: center;
+	border: 1px solid #EEF0F2;
+	border-right: 1px solid #8091A9;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #EEF0F2
+}
+.ApSegFieldLftAlt {
+	color: #000000;
+	text-align: left;
+	border: 1px solid #EEF0F2;
+	border-right: 1px solid #8091A9;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #EEF0F2
+}
+.ApSegFieldRtAlt {
+	color: #000000;
+	text-align: right;
+	border: 1px solid #F8F8F8;
+	border-top: 0px solid #F8F8F8;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #F8F8F8
+}
+.ApSmlTxt { font-size: 11px; color: #000000 }
+.ApTbl{
+	border: 1px solid #99BBE8;
+	border-top: 0 none;
+	background: #FFFFFF;
+	border-collapse: true
+}
+.ApButtonBar{ padding: 4px }
+.ApButtonDarkBg {
+	border-top: 1px solid #C9E0FF;
+	font-weight: bold;
+	background: #76A5D1; /*#82ade2;*/
+	color: #FFFFFF;
+	padding: 4px 10px 4px 10px
+}
+.ApBtnSpace { padding-right: 4px; padding-left: 4px; color: #CCCCCC }
+.ApScrnButton, .ApScrnButtonHover {
+	font: normal 11px tahoma,verdana,helvetica;
+	padding-left: 3px;
+	padding-right: 3px;
+	vertical-align: middle;
+	cursor: hand;
+	color: #15428B;
+	border: 1px solid #15428B
+}
+.ApScrnButton {
+	background: url(images/scrn_button.gif) repeat-x 0px 0px
+}
+.ApScrnButtonHover {
+	background: url(images/scrn_button_hvr.gif) repeat-x 0px -3px
+}
+A.ApSegTblLnk { font-size: 11px; color: #000099; text-decoration: none }
+A.ApSegTblLnk:hover { font-size: 11px; text-decoration: underline }
+A.ApSegTblLnk:visited { }
+.ApSegTblBgDark { border: 1px solid #8091A9; background: #8091A9 }
+.ApSegTableCellPad { }
+.ApSegColHdrTitle {
+	font-size: 11px;
+	font-weight: bold;
+	color: #000066;
+	border-width: 0px;
+	background: #FFFFFF
+}
+.ApSegColHdrSrNo {
+	width: 1%;
+	font-size: 11px;
+	color: #000000;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #8091A9;
+	border-bottom-color: #8091A9;
+	border-left-color: #FFFFFF;
+	font-weight: bold;
+	background: #F5F8F9 url(images/seg_col_hdr.gif)
+}
+.ApSegColHdr {
+	font-size: 11px;
+	color: #000000;
+	text-align: center;
+	border: 1px solid #FFFFFF;
+	border-right-color: #8091A9;
+	border-bottom-color: #8091A9;
+	font-weight: bold;
+	background: #F5F8F9 url(images/seg_col_hdr.gif)
+}
+.ApSegInBtn, .ApSegInBtnHover {
+	font: normal 11px tahoma,verdana,helvetica;
+	padding-left: 3px;
+	padding-right: 3px;
+	vertical-align: middle;
+	cursor: hand;
+	color: #15428B;
+	border: 1px solid #15428B
+}
+.ApSegInBtn {
+	background: url(images/scrn_button.gif) repeat-x 0px 0px
+}
+.ApSegInBtnHover {
+	background: url(images/scrn_button_hvr.gif) repeat-x 0px -3px
+}
+A.ApCalDayLnk { font-size: 11px; color: #000000; text-decoration: none }
+A.ApCalDayLnk:hover { text-decoration: underline; color: #006699 }
+A.ApCalDayLnk:visited { }
+A.ApCalDayLnkSlct {
+	font-size: 11px;
+	color: #990000;
+	text-decoration: none;
+	font-weight: bold
+}
+A.ApCalDayLnkSlct:hover { text-decoration: underline; color: #FF3300 }
+A.ApCalDayLnkSlct:visited { }
+A.ApCalMnthLnk {
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center
+}
+A.ApCalMnthLnk:hover {
+	font-size: 11px;
+	text-decoration: underline;
+	color: #FFFFFF
+}
+A.ApCalMnthLnk:visited { }
+A.ApCalMnthLnkSlct {
+	font-size: 11px;
+	color: #FFFFEC;
+	text-decoration: none;
+	text-align: center
+}
+A.ApCalMnthLnkSlct:hover {
+	font-size: 11px;
+	text-decoration: underline;
+	color: #FFFFFF
+}
+A.ApCalMnthLnkSlct:visited { }
+A.ApCalYearLnk {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font: bold 12pt Arial, Helvetica, sans-serif
+}
+A.ApCalYearLnk:hover { font-size: 12pt; text-decoration: none }
+A.ApCalYearLnk:visited { }
+.ApCalDateBgGrp {
+	text-align: center;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	background: #9CAEE7
+}
+.ApCalDay {
+	text-align: right;
+	border-color: #FFFFFF #DFDFDF #DFDFDF #EFEFEF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+.ApCalTimeLabel {
+	color: #FFFFFF;
+	font: bold 11px Arial, Helvetica, sans-serif
+}
+.ApCalDaySlct {
+	text-align: right;
+	border: 0px;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FDFFDF
+}
+.ApCalMnthBg {
+	text-align: center;
+	width: 22px;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	background: #B5C4EE
+}
+.ApCalMnthBgSlct {
+	text-align: center;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	background: #8CA0E2
+}
+.ApCalTbl { font: 8px Arial, Helvetica, sans-serif }
+.ApCalTblBg { background: #004566 }
+.ApCalTblLightBg { background: #6B7DCE }
+.ApCalWeek {
+	color: #52619C;
+	text-align: center;
+	border: 1px solid #F7F7FF;
+	border-right: 0px solid #F7F7FF;
+	border-bottom: 0px solid #F7F7FF;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	background: #CED7E7
+}
+.ApCalYear {
+	color: #FFFFFF;
+	font: bold 12pt Arial, Helvetica, sans-serif
+}
+.ApCalYearBg {
+	text-align: center;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	background: #9CAEE7
+}
+.ApCalYearCombo {
+	border: 1px solid #6B7DCE;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #F7F7FF
+}
+.ApCalInptTxtHhMm {
+	color: #000066;
+	border: 1px solid #6B7DCE;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #F7F7FF
+}
+.ApCalInptSelectAmPm {
+	color: #000066;
+	border: 1px solid #6B7DCE;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #F7F7FF
+}
+.ApCalDaySlct {
+	text-align: right;
+	border: 0px;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FDFFDF url(images/cal_day_slct.gif)
+}
+.ApCalInptMainBtn {
+	color: #000066;
+	border-top: 1px solid #9FA7C6;
+	border-right: 1px solid #717CAA;
+	border-bottom: 1px solid #717CAA;
+	border-left: 1px solid #9FA7C6;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+.ApCalInptMainBtnHover {
+	color: #000066;
+	border: 1px solid #828EC5;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #F7F7FF
+}
+.ApCalMainBtnBg {
+	text-align: center;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #CED7E7
+}
+.ApCalDayCurrentDate {
+	text-align: right;
+	color: #996633;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	background: #FDFFDF
+}
+A.ApCalDayLnkcurrentDate {
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold
+}
+A.ApCalDayLnkcurrentDate:hover { text-decoration: underline; color: #000000 }
+A.ApCalDayLnkcurrentDate:visited { }
+.ApInfoTbl { white-space: nowrap }
+.ApInfo { color: #00287D; font-size: 8pt }
+.ApInptTxt {
+	font: normal 11px arial,helvetica,sans-serif;
+	background: url(../../javascript/ext/resources/images/default/form/text-bg.gif) #FFFFFF repeat-x 0 0;
+	height: 18px;
+	vertical-align: middle;
+	color: #333333;
+	padding: 2px 3px 0px 3px;
+	border: 1px solid #B5B8C8
+}
+.ApInptTxtArea {
+	font: normal 11px arial,helvetica,sans-serif;
+	padding: 1px 3px;
+	border: 1px solid #B5B8C8;
+	line-height: 16px;
+	color: #333333;
+	background: url(../../javascript/ext/resources/images/default/form/text-bg.gif) #FFFFFF repeat-x 0 0
+}
+.ApInptSelect {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #B5B8C8;
+	font: normal 11px tahoma,arial,helvetica,sans-serif;
+	border-collapse: collapse;
+	vertical-align: middle;
+	color: #333333;
+	background: url(../../javascript/ext/resources/images/default/form/text-bg.gif) #FFFFFF repeat-x 0 0
+}
+.ApInptRadio {
+	/*border: 1px solid #BCC7CF;*/
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+.ApInptChkBox {
+	/*border: 1px solid #BCC7CF;*/
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+.ApTab {
+	text-align: center;
+	vertical-align: middle;
+	color: #000000;
+	padding: 0px 2px 1px 1px;
+	cursor: hand;
+	border: 1px solid #3A4876;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #CCCCCC
+}
+.ApTabSlct {
+	text-align: center;
+	vertical-align: middle;
+	cursor: hand;
+	padding: 0px 2px 1px 1px;
+	border: 1px solid #3A4876;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #FFFFFF
+}
+.ApTabEmptySpace {
+	border: 0px solid #3A4876;
+	border-bottom: 1px solid #3A4876;
+	background: #FFFFFF
+}
+.ApTabBody {
+	padding: 0px;
+	border: 1px solid #3A4876;
+	vertical-align: top;
+	background: #FFFFFF
+}
+.ApTabDivShow { display: block }
+.ApTabDivHide { display: none }
+.ApTabLnk {
+	color: #000033;
+	text-decoration: none;
+	font: 11px Arial, Helvetica, sans-serif
+}
+.ApTabLnk:active { text-decoration: none; color: #003399 }
+.ApTabLnk:hover { color: #0033CC }
+.ApTabLnk:visited { }
+DIV.vBoxClass{
+	color: #990000;
+	border: 1px solid #cc0000;
+	margin: 5px 5px 0px 5px;
+	line-height: 18px;
+	padding: 5px 5px 5px 15px;
+	font: 11px;
+	background: #ffffe5
+}
+.errHilite{ color: #FF0033; background: #F5F8F9 }
+/*tab section styles*/
+.SbmTabSection { padding: 4px }
+.SbmTabSection .SbmTab { z-index: 6; position: relative; text-align: left }
+.SbmTabSection .SbmTab table{ border-collapse: collapse }
+.SbmTabSection .SbmTab table tr td,
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab { white-space: nowrap }
+.SbmTabSection .SbmTab table tr td.SbmBlankTab { border-bottom: #949A9C 1px solid }
+.SbmTabSection .SbmTab table tr td  a{
+	height: 21px;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	background: url(images/sbm_tab_td_left.gif) no-repeat left 1px;
+	text-align: center;
+	padding: 0px 0px 0px 8px;
+	font-weight: bold;
+	display: block;
+	vertical-align: 
+}
+.SbmTabSection .SbmTab table tr td  a span{
+	height: 21px;
+	background: url(images/sbm_tab_td_right.gif) no-repeat right 0px;
+	padding: 0px 8px 0px 0px;
+	white-space: nowrap;
+	display: block
+}
+.SbmTabSection .SbmTab table tr td a:hover{
+	text-decoration: none;
+	display: block;
+	background: url(images/sbm_tab_td_left_hover.gif) no-repeat left 1px
+}
+.SbmTabSection .SbmTab table tr td a:hover span{
+	text-decoration: none;
+	display: block;
+	background: url(images/sbm_tab_td_right_hover.gif) no-repeat right 0px
+}
+.SbmTabSection .SbmTab table tr td  a span b{
+	padding: 5px 0 0 0;
+	display: block;
+	font-weight: normal
+}
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a,
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a:hover{
+	background: url(images/sbm_tab_td_left_selected.gif) no-repeat left 1px;
+	color: #000000;
+	display: block
+}
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab a span,
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab a:hover span{
+	background: url(images/sbm_tab_td_right_selected.gif) no-repeat right 1px;
+	color: #000000;
+	display: block
+}
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a:hover, .SbmTab table tr td.SbmSelectedTab  a:hover span{ text-decoration: none; display: block }
+.SbmTabSection .SbmTab table tr td.SbmSelectedTab  a span b{
+	padding: 4px 0 0 0;
+	display: block;
+	font-weight: normal
+}
+.SbmTabSection .SbmTabContentDiv{
+	border: 1px #949A9C solid;
+	border-top: none;
+	display: block;
+	position: relative;
+	z-index: 2;
+	padding: 7px;
+	background: #FFFFFF;
+	_height: 1px
+}
+/*end tab section styles*/
+/*Added New CSS styles to globally fix some html elements*/
+body, table, tr, td, caption, div, span, p, input, label, p, fieldset, fieldset legend, input, textarea { font: 11px Arial, Helvetica, sans-serif }
+label { font-weight: bold }
+textarea, select{
+	padding: 2px;
+	border: 1px solid #B5B8C8;
+	margin: 2px 0 2px 0
+}
+input{ margin: 2px 0 2px 0 }
+select { padding: 1px }
+a{ color: #003399; text-decoration: none }
+a:hover{ color: #003399; text-decoration: underline }
+fieldset { padding: 8px; margin: 8px 0 8px 0 }
+fieldset legend{ padding: 4px  0 4px 0 }
+/* end Added New CSS styles to globally fix some html elements*/
+
+/* This css is used to set ext tab panel width to auto */
+.auto-width-tab-strip ul.x-tab-strip {
+        width: auto;
+}
+
+/* This css is used to set ext gridss panel width to auto */
+.x-grid3-header-offset {
+        width: auto;
+}
+
+/* CSS for textfield widget */
+.textfield {
+  color: black;
+  margin: 2pt;
+  border:1px solid #999999;  
+} 
+ 
+.textfield:hover {    border:1px solid #596486;z-index:101} 
+.textfield:focus {    border:1px solid #48526a}
+
+/* CSS for textarea widget */
+.textarea {
+    color: #333; 
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:93%; 
+    margin-top:3px; 
+    padding-left:2px; 
+    vertical-align:top; 
+    border:1px solid #999999;
+}
+
+.textarea:hover {    border:1px solid #596486;z-index:101} 
+.textarea:focus {    border:1px solid #48526a} 
+ 
+/* CSS for radio widget */
+.radio_label {
+        color: black;
+        font-size:8pt;
+}
+.radio {
+margin: 2pt;
+}
+
+/* CSS for checkbox widget */
+.checkbox_label {
+        color: black;
+        font-size:8pt;
+		margin-top: .5em;
+		margin-bottom: 1em;
+        padding: .5em;
+		
+		
+}
+.checkbox {
+padding : .5em;
+}
+
+/* CSS for radio widget */
+.radio_label {
+        color: black;
+        font-size:8pt;
+}
+.radio {
+margin: 2pt;
+}
+
+/* CSS for combobox widget */
+.combobox {
+    color: #333; 
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:93%; 
+    margin-top:3px; 
+    padding-left:2px; 
+    vertical-align:top; 
+    border:1px solid #999999;
+}
+
+.combobox:hover {    border:1px solid #596486;z-index:101}
+.combobox:focus {    border:1px solid #48526a} 
+
+/* CSS for list widget */
+.list {
+    height:100px;
+    width:100px;
+    color: #333; 
+    background-color:#efefef;
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:93%; 
+    margin-top:3px; 
+    padding-left:2px; 
+    vertical-align:top; 
+    border:1px solid #999999;
+}
+
+.list:hover {    border:1px solid #596486;z-index:101}
+.list:focus {    border:1px solid #48526a} 
+

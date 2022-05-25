@@ -1,0 +1,13 @@
+#Sat Jul 16 12:05:01 IST 2016
+publishing.type=Copy_Files_Only
+application.name=ICMExcessRefundApp
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=ICMExcessRefundApp
+module.id=616ecbf8-f6b5-4363-8cb2-2e5fc0a896f5
+module.version=8
+application.mainappfile=processtemplates/ICMExcessRefundApp.spt
+module.name=ICMExcessRefundApp
+application.root=ICMExcessRefundApp

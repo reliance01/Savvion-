@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Schedules>
+  <WeeklySchedule daysOff="7,1" defaultWorkHours="28800:14400;46800:14400" name="&lt;default&gt;"/>
+</Schedules>

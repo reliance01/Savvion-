@@ -1,0 +1,86 @@
+/*latout*/
+
+.x-resizable-over {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	opacity: 0.8;
+}
+.x-accordion-hd {
+}
+.x-accordion-hd:hover {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	opacity: 0.7;
+}
+/*tabs*/
+.x-tab-bar {
+	position: absolute;
+}
+.homeIcon, .mgmtIcon, .adminIcon {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+	opacity: 0.6;
+}
+.x-tab-default-top button, .x-tab-default-top .x-tab-inner {
+	height: 16px;
+	line-height: 16px;
+}
+.x-tab-top-active .homeIcon, .x-tab-top-active .mgmtIcon, .x-tab-top-active .adminIcon {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1.0;
+}
+/*grid*/
+
+/*loading bar*/
+
+.x-mask-msg div {
+	border-width: 2px;
+}
+/*datepicker*/
+.x-monthpicker-body a:hover {
+	text-decoration: none !important;
+}
+.x-datepicker-prevday a.x-datepicker-date * {
+	color: #9f9f9f !important;
+}
+.calendar tfoot .ttip {
+	background: #d7effb url(../../resources/themes/images/default/grid/row-over.gif) repeat-x 0 top !important;
+	color: #2c628b !important
+}
+.x-column-header {
+}
+.calendar tfoot .ttip {
+	background: #d7effb url(../../resources/themes/images/default/grid/row-over.gif) repeat-x 0 top !important;
+	color: #2c628b !important
+}
+.x-form-item-label, .x-form-item {
+	font-size: 11px;
+}
+.x-grid-row-selected .x-grid-cell-special {
+	border-right: 1px solid #a3bae9 !important;
+}
+.x-grid-row .x-grid-cell-special {
+	border-right: 1px solid #c5c5c5 !important
+}
+/* Styles used by Ext.ux.form.ItemSelector */
+.x-form-multiselect-body .x-boundlist .x-mask {
+	background: none;
+}
+.x-form-itemselector-body .x-form-item {
+	margin: 0;
+}
+.x-form-itemselector-top {
+	background-image: url(../../resources/themes/images/default/itemselector/top2.gif);
+}
+.x-form-itemselector-up {
+	background-image: url(../../resources/themes/images/default/itemselector/up2.gif);
+}
+.x-form-itemselector-add {
+	background-image: url(../../resources/themes/images/default/itemselector/right2.gif);
+}
+.x-form-itemselector-remove {
+	background-image: url(../../resources/themes/images/default/itemselector/left2.gif);
+}
+.x-form-itemselector-down {
+	background-image: url(../../resources/themes/images/default/itemselector/down2.gif);
+}
+.x-form-itemselector-bottom {
+	background-image: url(../../resources/themes/images/default/itemselector/bottom2.gif);
+}

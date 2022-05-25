@@ -1,0 +1,1231 @@
+<configform synchronous="true" version="1.3">
+    <block title="Inputs" label="wsadapter:Config.label.inputs" hidden="false">
+        <param name="SESSION_TOKEN_SUPPORT" access="HIDDEN" label="SESSION_TOKEN_SUPPORT" type="java.lang.String" value="false"/>
+        <param name="WSCONFIG" access="HIDDEN" label="WSCONFIG" type="java.lang.String">
+<java version="1.6.0_05" class="java.beans.XMLDecoder"> 
+ <object class="com.savvion.sbm.adapters.webservice.WSConfig"> 
+  <void property="callInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.WSCallInfo"/> 
+  </void> 
+  <void property="operationInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.OperationInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>START_ICM_DISCREPANCY_CASE</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://DefaultNamespace</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="inputParam"> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>AgentCode</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>AgentCode</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>AgentCode</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>AgentCode.0_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>AgentName</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>AgentName</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>AgentName</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>AgentName.1_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>BASCode</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>BASCode</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>BASCode</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>BASCode.2_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>BranchName</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>BranchName</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>BranchName</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>BranchName.3_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>BusinessType</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>BusinessType</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>BusinessType</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>BusinessType.4_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>DiscrepancyCode</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>DiscrepancyCode</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>DiscrepancyCode</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>DiscrepancyCode.5_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>InspectionDate</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>InspectionDate</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>InspectionDate</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>InspectionDate.6_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>InspectionID</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>InspectionID</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>InspectionID</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>InspectionID.7_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>InspectionStatus</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>InspectionStatus</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>InspectionStatus</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>InspectionStatus.8_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>IsClaim</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.Boolean</string> 
+       </void> 
+       <void property="label"> 
+        <string>IsClaim</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>IsClaim</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>IsClaim.9_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>boolean</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>PreviousPolicyNumber</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>PreviousPolicyNumber</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>PreviousPolicyNumber</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>PreviousPolicyNumber.10_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>ProductCode</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>ProductCode</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>ProductCode</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>ProductCode.11_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>Proposal_CN_Number</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>Proposal_CN_Number</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>Proposal_CN_Number</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>Proposal_CN_Number.12_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>ProposalDate</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>ProposalDate</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>ProposalDate</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>ProposalDate.13_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>ProposalInwardDate</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>ProposalInwardDate</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>ProposalInwardDate</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>ProposalInwardDate.14_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>ProposerName</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>ProposerName</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>ProposerName</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>ProposerName.15_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>RiskEndDate</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>RiskEndDate</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>RiskEndDate</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>RiskEndDate.16_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>RiskStartDate</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>RiskStartDate</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>RiskStartDate</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>RiskStartDate.17_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>BASName</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>BASName</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>BASName</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>BASName.18_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>BranchCode</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>BranchCode</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>BranchCode</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>BranchCode.19_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>ProductName</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>ProductName</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>ProductName</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>ProductName.20_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>username</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>username</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>username</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>username.21_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>password</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>password</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>password</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>password.22_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>piName</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>piName</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>piName</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>piName.23_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>priority</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>priority</string> 
+       </void> 
+       <void property="mode"> 
+        <int>1</int> 
+       </void> 
+       <void property="name"> 
+        <string>priority</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>priority.24_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="isAllPrimitive"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="returnParam"> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>START_ICM_DISCREPANCY_CASEReturn</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string></string> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>START_ICM_DISCREPANCY_CASEReturn</string> 
+       </void> 
+       <void property="mode"> 
+        <int>2</int> 
+       </void> 
+       <void property="name"> 
+        <string>START_ICM_DISCREPANCY_CASEReturn</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>START_ICM_DISCREPANCY_CASEReturn.25_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://www.w3.org/2001/XMLSchema</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="use"> 
+     <string>encoded</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="otherSecConfigFile"> 
+   <string></string> 
+  </void> 
+  <void property="password"> 
+   <string></string> 
+  </void> 
+  <void property="portInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.PortInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>ICM_Discrepancy</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://10.65.15.108:8080/sbm/ICM_Discrepancy.jws</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>ICM_Discrepancy</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="runtimeSecurityType"> 
+   <int>0</int> 
+  </void> 
+  <void property="samlTokenConfigFile"> 
+   <string></string> 
+  </void> 
+  <void property="serviceInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.ServiceInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>ICM_DiscrepancyService</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://10.65.15.108:8080/sbm/ICM_Discrepancy.jws</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>ICM_DiscrepancyService</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="soapActionURI"> 
+   <string></string> 
+  </void> 
+  <void property="targetEndpointAddress"> 
+   <string>http://10.65.15.108:8080/sbm/ICM_Discrepancy.jws</string> 
+  </void> 
+  <void property="targetNameSpace"> 
+   <string>http://10.65.15.108:8080/sbm/ICM_Discrepancy.jws</string> 
+  </void> 
+  <void property="userName"> 
+   <string></string> 
+  </void> 
+  <void property="userNameTokenConfigFile"> 
+   <string></string> 
+  </void> 
+  <void property="wsdlPassword"> 
+   <string></string> 
+  </void> 
+  <void property="wsdlUrl"> 
+   <string>http://10.65.15.108:8080/sbm/ICM_Discrepancy.jws?wsdl</string> 
+  </void> 
+  <void property="wsdlUserName"> 
+   <string></string> 
+  </void> 
+ </object> 
+</java> 
+</param>
+        <param name="IN.AgentCode.0_0" access="I" label="AgentCode" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.AgentName.1_0" access="I" label="AgentName" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.BASCode.2_0" access="I" label="BASCode" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.BranchName.3_0" access="I" label="BranchName" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.BusinessType.4_0" access="I" label="BusinessType" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.DiscrepancyCode.5_0" access="I" label="DiscrepancyCode" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.InspectionDate.6_0" access="I" label="InspectionDate" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.InspectionID.7_0" access="I" label="InspectionID" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.InspectionStatus.8_0" access="I" label="InspectionStatus" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.IsClaim.9_0" access="I" label="IsClaim" type="java.lang.Boolean" value="" mandatory="true"/>
+        <param name="IN.PreviousPolicyNumber.10_0" access="I" label="PreviousPolicyNumber" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.ProductCode.11_0" access="I" label="ProductCode" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.Proposal_CN_Number.12_0" access="I" label="Proposal_CN_Number" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.ProposalDate.13_0" access="I" label="ProposalDate" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.ProposalInwardDate.14_0" access="I" label="ProposalInwardDate" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.ProposerName.15_0" access="I" label="ProposerName" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.RiskEndDate.16_0" access="I" label="RiskEndDate" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.RiskStartDate.17_0" access="I" label="RiskStartDate" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.BASName.18_0" access="I" label="BASName" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.BranchCode.19_0" access="I" label="BranchCode" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.ProductName.20_0" access="I" label="ProductName" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.username.21_0" access="I" label="username" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.password.22_0" access="I" label="password" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.piName.23_0" access="I" label="piName" type="java.lang.String" value="" mandatory="true"/>
+        <param name="IN.priority.24_0" access="I" label="priority" type="java.lang.String" value="" mandatory="true"/>
+    </block>
+    <block title="Outputs" label="wsadapter:Config.label.outputs" hidden="false">
+        <param name="OUT.START_ICM_DISCREPANCY_CASEReturn.25_0" access="O" label="START_ICM_DISCREPANCY_CASEReturn" type="java.lang.String" value="" mandatory="true"/>
+    </block>
+    <block title="Advanced" label="wsadapter:Config.label.advanced" hidden="false">
+        <param name="TARGET_EPA" access="I" label="wsadapter:Config.label.targetEndpointAddress" type="java.lang.String" value=""/>
+    </block>
+</configform>

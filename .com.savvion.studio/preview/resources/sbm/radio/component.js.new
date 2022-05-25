@@ -1,0 +1,91 @@
+jmaki.namespace("jmaki.widgets.sbm.radio");
+
+jmaki.widgets.sbm.radio.Widget = function(wargs) {
+    // The jMaki framework must have created widget JavaScript object.
+    var uuid = wargs.uuid;
+    var topic = "/sbm/radio/";
+    var value = eval("[{label: 'Option 1', value: 'opt1', selected: true}]");
+    var _name = uuid + "_UNBOUND";
+    if (wargs.publish) topic = wargs.publish;
+    if (wargs.value) value = wargs.value;
+    jmaki.log("Value is +++" + value);
+    if (wargs.args && wargs.args.name)
+       _name = wargs.args.name;
+    init(value); // render radio
+
+    function init(_v)
+    {
+    if (typeof _v != 'object')
+     _v = eval(_v);
+    var widgetContent = ""; 
+    for (var i=0; i < _v.length; i++) {
+            var _val = _v[i].value;
+            var _label = _v[i].label;
+            if (_v[i].selected &&  _v[i].selected == true) 
+                   var _selected = "CHECKED";             
+            else
+                   var _selected = "";                
+            widgetContent = widgetContent + "<p><input type= 'radio' id = '" + uuid + "' name = '" + _name + "'" + _selected + " alt ='" + _label + "' value='" + _val + "' onClick= \"jmaki.attributes.get('" + uuid + "').onClick()\" onBlur= \"jmaki.attributes.get('" + uuid + "').onBlur()\" onFocus= \"jmaki.attributes.get('" + uuid + "').onFocus()\" />" + "<label for='" + uuid +"' class='ApInputChkBoxLabel'>" + _label + "</label></p>";
+    }
+    // set widget presentation in the div defined in the widget template file
+    var mydiv = document.getElementById(uuid+"_div");
+    var errors = "<span class='radioRequiredMsg'>Please make a selection.</span>";
+    mydiv.innerHTML =  widgetContent+errors;
+    }
+
+    this.setValue = function(_v) {
+    init(_v);
+    }
+
+    this.getValue = function() {
+    var elements = document.getElementsByTagName("input");
+    var output = "[";
+
+    for(i=0;i<elements.length;i++)
+    {
+    if(elements[i].id == uuid)
+      {
+      output = output+" {label:'"+elements[i].alt+"', value:'"+elements[i].value+"'";
+      if(elements[i].checked == true)
+        output = output +  ", selected: true},";
+      else
+        output = output +  "},";
+      }
+    }
+    output = output + "]";
+    output = output.replace(",]","]");
+    return output;
+    }
+
+    this.getValues = function() {
+    var elements = document.getElementsByTagName("input");
+    var output = "[values: {";
+
+    for(i=0;i<elements.length;i++)
+    {
+    if(elements[i].id == uuid)
+      {
+      if(elements[i].checked == true)
+        {
+        output = output + elements[i].value + ","; 
+        }
+
+      }
+    }
+    output = output + "}";
+    output = output.replace(",}","}");
+    output = output + "]";
+    return output;
+    }
+
+    this.addOptions = function(_opts) {
+    sbm.util.addOptions(uuid, _opts, 'name', 'label');
+    } 
+
+// Published events
+    this.onClick = function() { jmaki.publish(topic + "onClick", {widgetId: wargs.uuid, value: this.getValues()}); }
+    this.onFocus = function() { jmaki.publish(topic + "onFocus", {widgetId: wargs.uuid, value: this.getValues()}); }
+    this.onBlur = function() { jmaki.publish(topic + "onBlur", {widgetId: wargs.uuid, value: this.getValues()}); }
+  
+var spryradio1 = new Spry.Widget.ValidationRadio(uuid+"_div");
+}

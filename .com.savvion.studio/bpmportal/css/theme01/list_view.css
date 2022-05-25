@@ -1,0 +1,269 @@
+/* Classes for list view screens */
+
+.ColHdr, .ColHdrSrNo, .ChkBoxSlctAll {
+	font: normal 11px arial,tahoma,helvetica,sans-serif;
+	font-weight: bold;
+	line-height: 15px;
+	vertical-align: middle;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #D0D0D0;
+	color: #000000;
+	text-align: center;
+	padding: 4px 5px 4px 5px;
+	background: url(../../javascript/ext/resources/images/default/grid/grid3-hrow.gif) #F9F9F9 repeat-x 0 bottom;
+	cursor: default;
+	zoom: 1 /*background-image: url(images/col_hdr.gif);*/
+}
+
+.ColHdrSrNo, .ChkBoxSlctAll { width: 1% }
+
+.ColHdrSort {
+	font: normal 11px arial,tahoma,helvetica,sans-serif;
+	font-weight: bold;
+	line-height: 15px;
+	vertical-align: middle;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #D0D0D0;
+	color: #000000;
+	text-align: center;
+	background: url(../../javascript/ext/resources/images/default/grid/grid3-hrow-over.gif) #EBF3FD repeat-x left bottom;
+	padding: 4px 5px 4px 5px
+}
+
+ 
+A.ColHdrLnk {
+	font-size: 11px; /*color: #1C417C;/*#003399;*/
+	font-weight: bold;
+	text-decoration: none
+}
+
+A.ColHdrLnk:hover {
+	text-decoration: underline
+}
+
+A.ColHdrLnk:visited { }
+
+.ChkBoxNone {
+	border-style: none
+}
+
+.ChkBox {
+	color: #000000;
+	font-size: 11px;
+	text-align: center;
+	border: 1px solid #FFFFFF;
+	border-right-color: #E6E6E6;
+	padding: 2px;
+	background: #FFFFFF
+}
+
+.ChkBoxLft {
+	color: #000000;
+	font-size: 11px;
+	text-align: center;
+	border: 1px solid #FFFFFF;
+	border-right-color: #E6E6E6;
+	padding: 2px
+}
+
+.ChkBoxAlt {
+	text-align: center;
+	border: 1px solid #EEF0F2;
+	border-right-color: #E6E6E6;
+	font: 11px;
+	background: #EEF0F2
+}
+
+.ChkBoxSlct {
+	color: #000000;
+	font-size: 8pt;
+	text-align: center;
+	border: 1px solid #CFD9E6;
+	border-right-color: #E6E6E6;
+	background: #CFD9E6
+}
+
+A.TblLnk {
+	font-size: 8pt;
+	color: #000099;
+	text-decoration: none
+}
+
+A.TblLnk:hover {
+	font-size: 8pt;
+	text-decoration: underline
+}
+
+A.TblLnk:visited { }
+
+.FilterTblEmboss {
+	border: 1px solid #A9BFD3;
+	background: #F7F7F3;
+}
+
+.ListDivPad {
+	visibility: visible;
+	color: #000000;
+	overflow: auto;
+	layer-background-color: #FFFFFF; /*#E2E2E2;*/
+	border: 1px solid #6F86A1;
+	width: 100%;
+	position: absolute;
+	padding: 8px
+}
+
+.ListLineBg { height: 2px }
+
+/* Use this for number column in a table*/
+.ValCntrSpecialCol {
+	color: #333333;
+	font: normal 11px arial,tahoma,helvetica,sans-serif;
+	text-align: center;
+	border-width: 1px;
+	border: 1px solid #FFFFFF;
+	border-right-color: #A9BFD3;
+	padding: 2px;
+	background: transparent url(../../javascript/ext/resources/images/default/grid/grid3-special-col-bg.gif) repeat-y right
+}
+
+.ValCntr, .ValCntrAlt, .ValCntrSlct, .ValCntrAltSlct, .ValLft, .ValLftAlt, .ValLftSlct, .ValLftAltSlct, .ValRt, .ValRtAlt, .ValRtSlct, .ValRtAltSlct {
+	font: normal 11px arial,tahoma,helvetica,sans-serif;
+	color: #000000;
+	text-align: center;
+	padding: 3px 5px 3px 5px;
+	border: 1px solid #FFFFFF;
+	border-right: 1px solid #E6E6E6;
+	background: #FFFFFF
+}
+
+.ValCntr { }
+
+.ValCntrSlct, .ValCntrAltSlct {
+	border: 1px solid #CFD9E6;
+	border-right: 1px solid #E6E6E6;
+	background: #CFD9E6
+}
+
+.ValLft {
+	text-align: left
+}
+
+.ValLftAlt {
+	text-align: left;
+	border: 1px solid #EEF0F2;
+	border-right-color: #E6E6E6;
+	background: #EEF0F2
+}
+
+.ValLftSlct {
+	text-align: left;
+	border: 1px solid #CFD9E6;
+	border-right-color: #E6E6E6;
+	background: #CFD9E6
+}
+
+.ValLftAltSlct {
+	text-align: left;
+	border: 1px solid #CFD9E6;
+	border-right-color: #E6E6E6;
+	background: #99CCFF
+}
+
+.ValRt {
+	text-align: right
+}
+
+
+.ValCntrAlt, .ValRtAlt {
+	border: 1px solid #EEF0F2;
+	border-right-color: #E6E6E6;
+	background: #EEF0F2
+}
+
+.ValRtSlct, .ValRtAltSlct {
+	text-align: right;
+	border: 1px solid #CFD9E6;
+	border-right-color: #E6E6E6;
+	background: #CFD9E6
+}
+
+.ListTableCellPad { }
+
+.MainTable { }
+
+.SegTableCellPad { }
+
+.SepBarTbl { }
+
+.FilterBarTbl { 	padding:4px;}
+
+.TblBgDark {
+	border: 1px solid #A9BFD3;
+	background: #A9BFD3
+}
+
+.ListTblHdng {
+	width: 100%;
+	white-space: nowrap;
+	color: #000066;
+	padding: 4px 5px 4px 5px;
+	border: 1px solid #A9BFD3;
+	border-bottom-width: 0px;
+	font-size: 11px;
+	background: #E4E9EC
+}
+
+#SbmRow {
+	background: #FFFFFF
+}
+
+#SbmRow TD{
+	font-size: 8pt;
+	border-left: #FFFFFF 1px solid;
+}
+
+#SbmRowAlt {
+	background: #EEF0F2
+}
+
+ 
+#SbmRowAlt TD{
+	border: #EEF0F2 1px solid;
+	border-right: #A9BFD3 1px solid;
+	font-size: 8pt;
+	background: #EEF0F2
+}
+
+#SbmRowSlct {
+	background: #CFD9E6
+}
+
+#SbmRowSlct TD{
+	border:1px solid #CFD9E6;
+	border-right: #A9BFD3 1px solid;
+	font-size: 11px;
+	color: #000000;
+	background: #CFD9E6
+}
+
+DIV.vBoxClass{
+	color: #FF0033;
+	border: 1px solid #000099;
+	margin-left: 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font: 11px;
+	background: #F5F8F9;
+	padding: 5px 5px 5px 20px
+}
+
+.errHilite{
+	color: #FF0033;
+	background: #F5F8F9
+}
+
+.ListTblBgPad {
+	border: 1px #999999 solid;
+	background: #FFFFFF; /*#D4D4D4;*/
+	/*padding: 4px*/
+}

@@ -1,0 +1,55 @@
+{
+    'name': 'Slider',
+	'label': 'Curseur',
+    'type': 'yahoo',
+    'version': '1.0',
+    'jmakiVersion' : '1.0',
+    'image': 'images/yahoo-slider.jpg',
+    'description': 'Un objet graphique case de d\u00e9filement qui permet \u00e0 l\'utilisateur d\'ajuster les valeurs d\'une plage sur un axe horizontal ou vertical.',
+    'category': 'Slider',
+    'args': [
+            {'topic':{'label':'sujet', 'type':'STRING', 'defaultValue': '/yahoo/slider', 'description': 'The topic published to'}},
+            {'sliderType':{'label':'type de case de d\u00e9filement', 'type':'STRING', 'defaultValue': 'H', 'values': [
+              {'name' : 'horizontal', 'value' : 'H', 'description' : 'case de d\u00e9filement horizontale.'},
+              {'name' : 'vertical', 'value' : 'V', 'description' : 'case de d\u00e9filement verticale.'}
+             ],
+            'description': 'L\'orientation de la case de d\u00e9filement.'}},
+	    {'animate':{'label':'animer', 'type':'BOOLEAN', 'defaultValue': 'true', 'description': 'drapeau d\'animation', 'values': [{'name':'vrai', 'value':'true'},{'name':'faux', 'value':'false'}]}},
+	    {'scaleFactor':{'label':'facteur d\'\u00e9chelle', 'type':'NUMBER', 'defaultValue': 0.5, 'description': 'facteur d\'\u00e9chelle personnalis\u00e9 pour convertir le d\u00e9calage de pixels en valeur r\u00e9elle.'}},
+	    {'tickSize':{'label':'taille de la graduation', 'type':'NUMBER', 'defaultValue': 25, 'description': 'Taille de la graduation.'}},
+	    {'sliderLeft':{'label':'case de d\u00e9filement \u00e0 gauche', 'type':'NUMBER', 'defaultValue': 0, 'description': 'Le nombre de pixels que l\'\u00e9l\u00e9ment peut d\u00e9placer \u00e0 gauche.'}},
+	    {'sliderRight':{'label':'case de d\u00e9filement \u00e0 droite', 'type':'NUMBER', 'defaultValue': 100, 'description': 'Le nombre de pixels que l\'\u00e9l\u00e9ment peut d\u00e9placer \u00e0 droite.'}},
+	    {'initialValue':{'label':'valeur initiale', 'type':'NUMBER', 'defaultValue': 50, 'description': 'Le nombre de pixels depuis le point de d\u00e9part'}}
+    ],
+    'value': {
+         'required':'true',
+         'type': 'NUMBER',
+         'defaultValue':50    	
+    },
+    'config' : {
+    	'type': {
+		'id' : 'yahoo.slider',
+	        'libs': [
+			'../resources/libs/yahoo/v2.4.0/yahoo-dom-event/yahoo-dom-event.js',
+			'../resources/libs/yahoo/v2.4.0/animation/animation-min.js',
+			'../resources/libs/yahoo/v2.4.0/dragdrop/dragdrop-min.js',
+			'../resources/libs/yahoo/v2.4.0/slider/slider-min.js',
+                        '../resources/libs/yahoo/v2.4.0/element/element-beta-min.js',
+                        '../resources/libs/yahoo/v2.4.0/container/container_core-min.js',
+                        '../resources/libs/yahoo/v2.4.0/button/button-min.js'
+			 ],
+                 'styles': [
+                     '../resources/libs/yahoo/v2.4.0/fonts/fonts-min.css',
+                     '../resources/libs/yahoo/v2.4.0/button/assets/skins/sam/button.css'],
+                'resources': [
+                    '../resources/libs/yahoo/v2.4.0/assets',
+                    '../resources/libs/yahoo/v2.4.0/button/assets']        
+	    }
+     },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/yahoo/slider/onChange'],
+       'description':'onChange publie sous le topicName quand la case de d\u00e9filement est modifi\u00e9e. Il publie un objet avec id et valeur. La valeur correspond \u00e0 la valeur de la case de d\u00e9filement.'
+    }
+     
+}

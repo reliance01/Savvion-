@@ -1,0 +1,16 @@
+.list {
+    overflow:auto;
+    width:150px;
+	/*height:100px*/
+ 	color: #333; 
+    /*background-color:#efefef;    */
+    font-size:93%; 
+    vertical-align:top; 
+    /*border:1px solid #999999;*/
+}
+
+/*.list:hover {    border:1px solid #596486;z-index:101}
+.list:focus {    border:1px solid #48526a} */
+.list select {
+  width:150px; 
+}:

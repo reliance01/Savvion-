@@ -1,0 +1,255 @@
+/*latout*/
+.x-layout-split-left, .x-layout-split-bottom, .x-layout-split-right, .x-layout-split-top {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	opacity: 0.7;
+}
+.x-layout-split-left:hover, .x-layout-split-bottom:hover, .x-layout-split-right:hover, .x-layout-split-top:hover {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+	opacity: 0.9;
+}
+.x-splitter-vertical {
+	cursor: e-resize;
+	cursor: col-resize;
+	font-size: 1px;
+}
+.x-splitter-horizontal {
+	cursor: e-resize;
+	cursor: row-resize;
+	font-size: 1px;
+}
+.x-splitter-collapsed {
+	cursor: default;
+}
+.x-splitter-active {
+	background-color: #db6800
+}
+/*
+.x-panel-body-default { background-color:#000000 !important }/* temprary fix for accordian x-panel-body  x-panel-body-default x-panel-body-default x-box-layout-ct*/
+
+/*
+.x-accordion-hd { background:  url(../../resources/themes/images/access/panel/light-hd.gif) repeat-x 0 bottom !important; }
+.x-accordion-hd:hover { background: url(../../resources/themes/images/access/panel/light-hd-hover.gif) repeat-x 0 bottom !important; }
+iframe#htmleditor-iframeEl body { color:#FFF !important }
+*/
+.x-resizable-pinned .x-resizable-handle {
+	background-color: #69809f
+}
+.x-resizable-over {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+	opacity: 0.9;
+}
+/*tabs*/
+.x-tab-bar {
+	position: absolute;
+}
+.homeIcon, .mgmtIcon, .adminIcon {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	opacity: 0.7;
+}
+.x-tab-top-active .homeIcon, .x-tab-top-active .mgmtIcon, .x-tab-top-active .adminIcon {
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1.0;
+}
+/*
+.x-form-trigger {
+	border-bottom:1px solid #414141 !important;
+	border-right:1px solid #414141 !important;
+}
+*/
+
+/*grid*/
+/*.x-grid-row .x-grid-cell-special {background:red !important}
+.x-grid-row .x-grid-cell-first { background:#0F0 !important}
+*/
+
+.x-grid-row .x-grid-cell-special {
+	background: #363f48 !important;
+	border-right: 1px solid #101010
+}
+.x-grid-row-over .x-grid-cell-special {
+	background: #144566;
+	background-image: url(../../resources/themes/images/access/grid/grid3-special-col-bg-over.gif);
+	background-position: right;
+	background-repeat: repeat-y;
+}
+.x-grid-row-selected .x-grid-cell-special {
+	background: #9a5c34;
+	background-image: url(../../resources/themes/images/access/grid/grid3-special-col-sel-bg.gif);
+	background-position: right;
+	background-repeat: repeat-y;
+}
+.x-grid-row-selected a.TblLnk, .x-grid-row-selected a {
+	color: #00008e
+}
+/*
+.x-column-header-sort-ASC, .x-column-header-sort-DESC {
+	background-image:url(../../resources/themes/images/access/grid/grid3-hrow-over-select.gif) repeat-x 0 bottom !important;
+	background: #999 url(../../resources/themes/images/access/grid/grid3-hrow-over-select.gif) repeat-x 0 bottom !important;
+	color:#FFF;
+	font-weight:bold;
+}
+*/
+.x-grid-row-over .x-grid-cell, .x-grid-row-over .x-grid-rowwrap-div, .x-boundlist-item-over {
+	background: #7E552F !important;
+}
+.x-grid-row-selected .x-grid-cell {
+	background : #E48627 !important;
+}
+.x-column-header-trigger {
+	background-color: #c3daf9;
+}
+.x-grid-row-selected .x-grid-cell-special {
+	border-right: 1px solid #7a4b1c !important;
+}
+.x-grid-row .x-grid-cell-special {
+	border-right: 1px solid #101010 !important
+}
+.x-grid-row-over .x-grid-row .x-grid-cell-special {
+}
+/* buttons */
+.x-btn-default-small-disabled {
+	border-color: #999;
+}
+.x-tab button {
+	color: #ebebeb;
+}
+/*loading bar*/
+.x-masked .x-mask-msg {
+	background: #2C628B url(../../resources/themes/images/access/box/tb-blue.gif) repeat-x 0 bottom !important;
+}
+.x-mask-msg div {
+	border-width: 2px;
+}
+/*datepicker*/
+.x-datepicker-date * {
+	color: #FFF !important
+}
+.x-monthpicker-yearnav-prev, .x-monthpicker-yearnav-next {
+	background-color: #414141
+}
+.x-datepicker-prevday a.x-datepicker-date * {
+	color: #9f9f9f !important;
+}
+.x-body .x-btn {
+}
+/*.x-window-default {background:#0a0a0a url(../../resources/themes/images/access/window/window-default-bg.gif) repeat-x 0 bottom !important;}*/	
+
+.calendar tfoot .ttip {
+	background: #7e552f url(../../resources/themes/images/access/grid/row-over.gif) repeat-x 0 top !important;
+}
+.x-form-file-wrap .x-form-file-input {
+	position: absolute;
+	top: -4px;
+	right: -2px;
+	height: 30px;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	font-size: 100px;
+}
+#filterContainer .x-table-layout-cell {
+	vertical-align: top
+}
+
+/*firefox fix*/
+@-moz-document url-prefix() {
+.x-form-item {
+display: table
+}
+}
+/*ie8 fix*/
+.x-strict .x-ie8 .x-grid-header-row {
+	position: relative !important
+}
+/*active tab fix*/
+.x-tab-default-top {
+	-webkit-box-shadow: #616f8c 0 1px 0 0 inset, #616f8c -1px 0 0 0 inset, #616f8c 1px 0 0 0 inset;
+	-moz-box-shadow: #616f8c 0 1px 0 0 inset, #616f8c -1px 0 0 0 inset, #616f8c 1px 0 0 0 inset;
+	box-shadow: #616f8c 0 1px 0 0 inset, #616f8c -1px 0 0 0 inset, #616f8c 1px 0 0 0 inset !important;
+	border-bottom: 1px solid #99bce8!important;
+	background-color: #616f8c !important;
+	background: #616f8c !important;
+	background-image: none !important;
+}
+.x-tab-top-active {
+	background-image: none !important;
+	background: #ed9200 !important;
+	background-color: #ed9200 !important;
+}
+.x-tab-active {
+	z-index: 3;
+	border-color: #74400e !important;
+	-webkit-box-shadow: #ed9200 0 1px 0 0 inset, #ed9200 -1px 0 0 0 inset, #ed9200 1px 0 0 0 inset;
+	-moz-box-shadow: #ed9200 0 1px 0 0 inset, #ed9200 -1px 0 0 0 inset, #ed9200 1px 0 0 0 inset;
+	box-shadow: #ed9200 0 1px 0 0 inset, #ed9200 -1px 0 0 0 inset, #ed9200 1px 0 0 0 inset !important;
+	border-bottom: 1px solid #ed9200!important;
+}
+.x-tab-default-top-active {
+	border-bottom-color: #ed9200!important;
+}
+.x-tab-default-top {
+	border-bottom: 1px solid #ed9200!important;
+}
+.x-tab-bar-strip-default, .x-tab-bar-strip-default-plain {
+	z-index: 9999!important;
+	border-color: #ed9200 !important
+}
+/*IE 8 top menu fix*/
+.x-nlg .x-btn-default-toolbar-small-menu-active, .x-nlg .x-btn-default-toolbar-small-pressed {
+	background-repeat: repeat-x;
+	background-image: url('../../resources/themes/images/access/btn/btn-default-toolbar-small-pressed-bg.gif')
+}
+.x-nbr .x-btn-default-toolbar-small-menu-active .x-frame-mc, .x-nbr .x-btn-default-toolbar-small-pressed .x-frame-mc {
+	background-color: #bccfe5;
+	background-image: url('../../resources/themes/images/access/btn/btn-default-toolbar-small-pressed-bg.gif')
+}
+.x-nlg .x-btn-default-toolbar-small-over, .x-nbr .x-btn-default-toolbar-small-over .x-frame-mc {
+	background-repeat: repeat-x !important;
+	background-image: url('../../resources/themes/images/access/btn/btn-default-toolbar-small-over-bg.gif')!important;
+	border-color: #ed9200 !important
+}
+.x-boundlist-item {
+	font-size: 14px !important
+}
+.x-grid-row-selected a {
+	color: #00008e !important;
+	text-decoration: underline !important;
+}
+/* Styles used by Ext.ux.form.ItemSelector */
+.x-form-multiselect-body .x-boundlist .x-mask {
+	background: none;
+}
+.x-form-itemselector-body .x-form-item {
+	margin: 0;
+}
+.x-form-itemselector-top {
+	background-image: url(../../resources/themes/images/access/itemselector/top2.gif);
+}
+.x-form-itemselector-up {
+	background-image: url(../../resources/themes/images/access/itemselector/up2.gif);
+}
+.x-form-itemselector-add {
+	background-image: url(../../resources/themes/images/access/itemselector/right2.gif);
+}
+.x-form-itemselector-remove {
+	background-image: url(../../resources/themes/images/access/itemselector/left2.gif);
+}
+.x-form-itemselector-down {
+	background-image: url(../../resources/themes/images/access/itemselector/down2.gif);
+}
+.x-form-itemselector-bottom {
+	background-image: url(../../resources/themes/images/access/itemselector/bottom2.gif);
+}
+.x-mask-msg div {
+	background-image: url(../../resources/themes/images/access/grid/loading.gif);
+	background-repeat: no-repeat;
+	padding: 5px 10px 5px 25px !important;
+	background-position: 5px center !important;
+}
+.FusionCharts, object {
+	background: #000;
+	color: #FFF;
+}
+.x-btn-arrow {
+	background-image: url(../../resources/themes/images/access/button/arrow.gif) !important;
+	display: block  !important;
+}

@@ -1,0 +1,11 @@
+#Wed Jun 04 17:24:36 PDT 2008
+adapter-class=com.savvion.sbm.adapters.bizrules.runtime.BizRulesAdapter
+map-configurator=com.savvion.sbm.adapters.framework.GroupMapConfigurator
+adapter-configurator=com.savvion.sbm.adapters.bizrules.BizRulesAdapterConfigurator
+AdapterName=GenericBizRulesAdapter
+log-level=10
+runtime-mapper=com.savvion.sbm.adapters.framework.GroupMapper
+AdapterCategory=BizRulesAdapters
+icon=bizrules.png
+adaplet=false
+inline-enabled=true

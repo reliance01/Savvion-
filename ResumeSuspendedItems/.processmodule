@@ -1,0 +1,13 @@
+#Tue Oct 05 03:49:42 IST 2021
+publishing.type=Copy_Files_Only
+application.name=ResumeSuspendedItems_process
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=ResumeSuspendedItems_process
+module.id=5207e54f-ed20-4781-a424-0c076c09b29b
+module.version=8
+application.mainappfile=processtemplates/ResumeSuspendedItems_process.spt
+module.name=ResumeSuspendedItems_process
+application.root=ResumeSuspendedItems_process

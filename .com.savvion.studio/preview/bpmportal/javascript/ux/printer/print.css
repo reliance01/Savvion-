@@ -1,0 +1,62 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}img,body,html{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:center;}h1,h2,h3,h4,h5,h6{font-size:100%;}q:before,q:after{content:'';}
+
+table {
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: 4px 3px 4px 5px;
+  font-weight:bold;
+  font-size: 11px;
+  border: 1px solid #d0d0d0;
+  border-left-color: #eee;
+  background-color: #ededed;
+}
+
+table td {
+  padding: 4px 3px 4px 5px;
+  border-style: none solid solid;
+  border-width: 1px;
+  border-color: #ededed;
+}
+.gridHeader {		
+	align:center;
+    text-align:center;	
+	font-weight: bold;
+    font-size:150%;
+}
+
+.subHeader {
+	font-weight: bold;
+    font-size:120%;
+}
+
+.gridFooter {
+    background-color: #ededed;
+    font-weight:bold;
+}
+
+.leftAlign {
+	align:left;
+    text-align:left;    
+}
+.rightAlign {
+	align:right;
+    text-align:right;    
+}
+
+.print-link {
+    padding: 0 0 0 18px;
+    margin: 0 5px;
+    background: url(printer.png) no-repeat bottom left !important;
+}
+
+.close-link {
+    padding: 0 0 0 18px;
+    margin: 0 5px;
+    background: url(cross.png) no-repeat bottom left !important;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+
+  <category label="$Scripting.category.jstools_api" path="jst" icon="fldr_obj.gif"/>
+
+</palette>

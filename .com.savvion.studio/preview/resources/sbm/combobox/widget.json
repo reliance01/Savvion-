@@ -1,0 +1,37 @@
+{
+    'name': 'Combobox',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/combobox.jpg',
+    'description': 'Savvion Combobox widget.',
+    'category': 'Combobox',
+    'args': [
+		{'size':{'type':'NUMBER', 'defaultValue': '20'}},
+		{'readonly':{'type':'BOOLEAN', 'defaultValue': 'false'}},
+		{'disabled':{'type':'BOOLEAN', 'defaultValue': 'false'}},
+            {'cascade':{'type':'BOOLEAN', 'defaultValue': 'false'}},	
+            {'level':{'type':'NUMBER', 'defaultValue': '0'}}	
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    },    
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/sbm/combobox/onChange',
+					'/sbm/combobox/onFocus',
+					'/sbm/combobox/onBlur']
+    },
+   'validation': [
+        {'type':'none',
+          'options':[],
+          'selected':'true'
+        },
+        {'type':'default', 
+          'options':['validateOn', 'isRequired', 'invalidValue']
+        }
+    ]
+
+}

@@ -1,0 +1,246 @@
+/* Classes for Input Tags (Buttons, Text Boxes, Radio Buttons, Check Boxes etc.) */
+.InptTxt {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	border-color: #BCC7CF #45617E #243242 #96A7B4; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	background-color: #FFFFFF
+}
+.InptTxtDis {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border-color: #BCC7CF #45617E #243242 #96A7B4;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-color: #DADADA;
+	color: #999999;
+}
+.InptTxtArea {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	BORDER-RIGHT: #CCCCCC 1px solid; 
+	BORDER-TOP: #666666 1px solid; 
+	BORDER-LEFT: #333333 1px solid; 
+	BORDER-BOTTOM: #999999 1px solid; 
+	SCROLLBAR-FACE-COLOR: #CCCCCC; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; 
+	SCROLLBAR-SHADOW-COLOR: #003366; 
+	SCROLLBAR-3DLIGHT-COLOR: #CCCCCC; 
+	SCROLLBAR-ARROW-COLOR: #666666; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000; 
+	SCROLLBAR-BASE-COLOR: #666666; 
+	scrollbar-track-color: #CCCCCC;; 
+	background-color: #FFFFFF
+}
+.InptTxtAreaDis {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	BORDER-RIGHT: #CCCCCC 1px solid; 
+	BORDER-TOP: #666666 1px solid; 
+	BORDER-LEFT: #333333 1px solid; 
+	BORDER-BOTTOM: #999999 1px solid; 
+	SCROLLBAR-FACE-COLOR: #CCCCCC; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; 
+	SCROLLBAR-SHADOW-COLOR: #003366; 
+	SCROLLBAR-3DLIGHT-COLOR: #CCCCCC; 
+	SCROLLBAR-ARROW-COLOR: #666666; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000; 
+	SCROLLBAR-BASE-COLOR: #666666; 
+	scrollbar-track-color: #CCCCCC;; 
+	background-color: #DADADA
+}
+.InptSelect {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	border-color: #CCCCCC #666666 #000000 #999999; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	background-color: #FFFFFF
+}
+.InptSelectDis {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border-color: #CCCCCC #666666 #000000 #999999;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-color: #DADADA;
+	color: #999999;
+}
+.InptRadio { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	border-color: #BCC7CF #45617E #243242 #96A7B4; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	background-color: #FFFFFF
+}
+.InptChkBox {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border-color: #BCC7CF #45617E #243242 #96A7B4;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-color: #FFFFFF;
+}
+.SmlTxtGrp {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	color: #003399
+}
+.InptTxtGrp { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	border-color: #BCC7CF #45617E #243242 #96A7B4; 
+	background-color: #FFFFFF ; 
+	color: #003399; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+.InptTxtGrpDis { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	border-color: #BCC7CF #45617E #243242 #96A7B4; 
+	background-color: #efefef; 
+	color: #999999; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+.SmlTxtShortNote { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	color: #763107; 
+	background-color: #FFFFFF
+}
+.InptTxtRt {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	border-color: #BCC7CF #45617E #243242 #96A7B4; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	background-color: #FFFFFF ;
+	text-align: right
+}
+.InptSelectGrp { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	border-color: #BCC7CF #45617E #243242 #96A7B4; 
+	background-color: #FFFFFF ; 
+	color: #003399; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px 
+}
+.SmlTxtGrpScrnBtn { 
+	font-size: 8pt; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: normal; 
+	color: #003399
+}
+.OthrButtonTblTtl {
+	font-size: 10pt;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.ScrnButton {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #9597C4;
+	cursor: hand;
+	color: #FFFFFF;
+	border: 1px solid #003B97;
+	font-weight: bold;
+}
+.ScrnButtonHover  {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #7375AD;
+	cursor: hand;
+	color: #FFFFFF;
+	border: 1px solid #003B97;
+	font-weight: bold;
+}
+.ScrnButtonDis {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #DBDBED;
+	color: #FBFBFF;
+	font-weight: bold;
+	border: 1px solid #BDBDC1;
+}
+.OthrButton {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	cursor: hand;
+	color: #7375AD;
+	border-top: 1px solid #7375AD;
+	border-right: 2px solid #7375AD;
+	border-bottom: 2px solid #7375AD;
+	border-left: 1px solid #7375AD;
+}
+.OthrButtonHover {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	cursor: hand;
+	color: #9597C4;
+	border-top: 1px solid #9597C4;
+	border-right: 2px solid #9597C4;
+	border-bottom: 2px solid #9597C4;
+	border-left: 1px solid #9597C4;
+}
+.OthrButtonDis {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	color: #B6DCC3;
+	border-top: 1px solid #C7E9D5;
+	border-right: 2px solid #C7E9D5;
+	border-bottom: 2px solid #C7E9D5;
+	border-left: 1px solid #C7E9D5;
+}
+.BtnSpace {  
+	padding-right: 4px; 
+	padding-left: 4px; 
+	color: #CCCCCC
+}
+.ButtonDarkBg {
+	background-color: #F9F9FF;
+	border: 1px solid #686A8F;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	font-weight: bold;
+	color: #FFFFFF;
+}

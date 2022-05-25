@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.custom" path="other/custom" icon="fldr_obj.gif"/>
+
+  <item label="$Scripting.item.custom_script_one_line" path="other/custom" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.custom_script_one_line">
+      <template>
+${script};
+      </template>
+      <widgets>
+        <entryWidget id="script" presentation="FIELD" tools="bs_autocomplete"/>
+      </widgets>
+    </grid>
+  </item>  
+
+  <item label="$Scripting.item.custom_script_multiline" path="other/custom" icon="template.gif">
+    <grid content="EXPRESSION" collapsible="true" description="$Scripting.item.custom_script_multiline">
+      <template>
+${script};
+      </template>
+      <widgets>
+        <entryWidget id="script" presentation="AREA" tools="bs_autocomplete"/>
+      </widgets>
+    </grid>
+  </item>  
+
+</palette>

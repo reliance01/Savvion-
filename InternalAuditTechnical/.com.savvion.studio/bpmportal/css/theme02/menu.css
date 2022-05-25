@@ -1,0 +1,672 @@
+/* Styles for Menu (common/include_menu_static.jspf, include_banner.jsp) */
+.SbmBigLogoBg { 
+	background-color: #828284; 
+	text-align: center
+}
+.SmlSep {  
+	font-size: 8pt; 
+	color: #D8D8D9
+}
+.LogoBg{  
+	background-color: #828284
+}
+.LogoUpLine {
+	font-size: 8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #777678;
+}
+.MainMenuLogoBg { 
+	background-color: #828284;
+}
+A.TopLnk {
+	font-size: 8pt;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+A.TopLnk:hover {  
+	font-size: 8pt; 
+	color: #E6E6FF
+}
+A.TopLnk:visited { 
+}
+A.MainMenuLnkSlct {
+	font-size: 8pt;
+	color: #000033;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+A.MainMenuLnkSlct:active {  
+	text-decoration: none; 
+	color: #003399
+}
+A.MainMenuLnkSlct:hover {  
+	color: #0033CC
+}
+A.MainMenuLnkSlct:visited { 
+}
+A.MainMenuLnk {
+	font-size: 8pt;
+	color: #000033;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+A.MainMenuLnk:active {  
+	text-decoration: none; 
+	color: #003399
+}
+A.MainMenuLnk:hover {  
+	color: #0033CC
+}
+A.MainMenuLnk:visited { 
+}
+.IntegrationMainMenuLnk {
+	font-size: 8pt;
+	color: #999999;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	disebled;
+}
+.MainMenu {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	padding-top: 0px;
+	padding-right: 2px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	cursor: hand;
+	cursor: pointer;
+	border: 0px solid #3A4876;
+}
+.MainMenuTd {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	padding-top: 0px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	cursor: hand;
+	cursor: pointer;
+	border: 0px solid #3A4876;
+	line-height: 15px;
+	height: 15px;
+}
+.MainMenuSlct {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 8pt;
+	vertical-align: middle;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0px 2px 1px 1px;
+	border: 0px solid #3A4876;
+}
+.MainMenuSlctTd {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 8pt;
+	vertical-align: middle;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0px 2px 2px 6px;
+	border: 0px solid #3A4876;
+	line-height: 15px;
+	height: 15px;
+}
+.MainMenuHover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #C7D6F8;
+	text-align: center;
+	padding-top: 2px;
+	padding-right: 6px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	font-size: 8pt;
+	vertical-align: middle;
+	height: 20px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #3A4876;
+	border-right: 1px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 1px solid #3A4876;
+}
+.SubMenuBgRtBlnk {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #B5B5B6;
+	text-align: center;
+	padding-top: 1px;
+	padding-right: 2px;
+	padding-bottom: 1px;
+	padding-left: 2px;
+	color: #000000;
+	border-top: 1px solid #003366;
+	border-right: 0px solid #003366;
+	border-bottom: 0px solid #003366;
+	border-left: 0px solid #003366;
+
+}
+.SubMenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	padding-top: 1px;
+	padding-right: 6px;
+	padding-bottom: 1px;
+	padding-left: 6px;
+	background-color: #E6E6FF;
+	text-align: center;
+	height: 22px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #C6C5FF;
+	border-bottom: 1px solid #C6C5FF;
+	border-left: 1px solid #FFFFFF;
+}
+.SubMenuBg { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	background-color: #FFFFFF; 
+	text-align: center; 
+	border: #333366 solid; 
+	border-width: 1px 1px 0px
+}
+.SubMenuHover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	padding-top: 2px;
+	padding-right: 6px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	background-color: #D7D7FF;
+	text-align: center;
+	height: 22px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	cursor: hand;
+	cursor: pointer;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #B5B3FF;
+	border-bottom-color: #B5B3FF;
+	border-left-color: #FFFFFF;
+}
+.SubMnTbl {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	width: 100%;
+	border: 0px solid;
+}
+A.SubMenuLnk {
+	font-size: 8pt;
+	color: #000066;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+A.SubMenuLnk:active {  
+	text-decoration: none; 
+	color: #003399
+}
+A.SubMenuLnk:hover {  
+	text-decoration: none; 
+	color: #0033CC
+}
+A.SubMenuLnk:visited { 
+}
+.SubMenuSlct {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	padding-top: 2px;
+	padding-right: 6px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	background-color: #FBFBFF;
+	text-align: center;
+	height: 22px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	cursor: hand;
+	cursor: pointer;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #B5B3FF;
+	border-bottom-color: #B5B3FF;
+	border-left-color: #FFFFFF;
+}
+.SubMnTbl1 {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	width: 100%;
+	border: 1px solid #FFFFFF;
+}
+.SubMenuNonClick {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	padding-top: 1px;
+	padding-right: 6px;
+	padding-bottom: 1px;
+	padding-left: 6px;
+	background-color: #E6E6FF;
+	text-align: center;
+	height: 22px;
+	cursor: default;
+	cursor: default;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #C6C5FF;
+	border-bottom: 1px solid #C6C5FF;
+	border-left: 1px solid #FFFFFF;
+}
+.SubMenuHoverNonClick {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	padding-top: 2px;
+	padding-right: 6px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	background-color: #D7D7FF;
+	text-align: center;
+	height: 22px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	cursor: default;
+	cursor: default;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #B5B3FF;
+	border-bottom-color: #B5B3FF;
+	border-left-color: #FFFFFF;
+}
+.SubMenuLnkNonClick {
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	cursor: default;
+}
+.SubMenuSlctNonClick {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	padding-top: 2px;
+	padding-right: 6px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	background-color: #FBFBFF;
+	text-align: center;
+	height: 22px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	cursor: default;
+	cursor: default;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #B5B3FF;
+	border-bottom-color: #B5B3FF;
+	border-left-color: #FFFFFF;
+}
+.SubMenuSlctHoverNonClick {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	padding-top: 2px;
+	padding-right: 6px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	background-color: #D7D7FF;
+	text-align: center;
+	height: 22px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	cursor: default;
+	cursor: default;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #B5B3FF;
+	border-bottom-color: #B5B3FF;
+	border-left-color: #FFFFFF;
+}
+.SubMnBrdrBg {
+	background-color: #005984;
+	width: 100%;
+	border-top: 1px solid #006699;
+	border-right: 2px solid #006699;
+	border-bottom: 2px solid #006699;
+	border-left: 1px solid #006699;
+}
+.MnBrdrBg {
+	background-color: #005984;
+	width: 100%;
+	border-top: 1px solid #006699;
+	border-right: 2px solid #006699;
+	border-bottom: 2px solid #006699;
+	border-left: 1px solid #006699;
+}
+.CascMenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FFFFFF;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	width: 100%;
+	color: #003366;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #D8D9EC;
+	border-left: 1px solid #FFFFFF;
+}
+.CascMenuHover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #F2F2FF;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	width: 100%;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #C4BEEC;
+	border-left: 1px solid #FFFFFF;
+}
+A.CascMenuLnk {  
+	font-size: 8pt; 
+	color: #000033; 
+	text-decoration: none; 
+	font-family: Verdana, Arial, Helvetica, sans-serif
+}
+A.CascMenuLnk:active {  
+	color: #000000
+}
+A.CascMenuLnk:hover {  
+	color: #0066CC; 
+	text-decoration: none
+}
+A.CascMenuLnk:visited { 
+}
+.CascMenuTxt {  
+	font-size: 8pt; 
+	color: #333333; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	text-align: left
+}
+.CascMenuLnkNonclick {
+	font-size: 8pt;
+	color: #000033;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	cursor: default;
+}
+.CascMenuNonClick {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FFFFFF;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	width: 100%;
+	color: #003366;
+	cursor: default;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #D9E3F6;
+	border-left: 1px solid #FFFFFF;
+}
+.CascMenuHoverNonClick {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #F0F4FC;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	width: 100%;
+	cursor: default;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #D9E3F6;
+	border-left: 1px solid #FFFFFF;
+}
+.CascSubMenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #F2F2FF;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	width: 100%;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #C4BEEC;
+	border-left: 1px solid #FFFFFF;
+}
+.CascSubMenuHover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #FFFFFF;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	width: 100%;
+	color: #003366;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #BAB3E7;
+	border-left: 1px solid #FFFFFF;
+
+}
+A.CascSubMenuLnk {  
+	font-size: 8pt; 
+	color: #0066CC; 
+	text-decoration: none; 
+	font-family: Verdana, Arial, Helvetica, sans-serif
+}
+A.CascSubMenuLnk:active {  
+	color: #000000;
+}
+A.CascSubMenuLnk:hover {  
+	color: #000033; 
+	text-decoration: none
+}
+.MainMenuSlctRndcrnrLftTp {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border: 0px solid #3A4876;
+}
+.MainMenuSlctRndcrnrRtTp {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border: 0px solid #3A4876;
+}
+.MainMenuSlctLft {
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 0px solid #3A4876;
+	border-right: 0px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 1px solid #3A4876;
+}
+.MainMenuSlctRt {
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 0px solid #3A4876;
+	border-right: 1px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 0px solid #3A4876;
+}
+.MainMenuSlctTp {
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #3A4876;
+	border-right: 0px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 0px solid #3A4876;
+}
+.MainMenuRndcrnrLftTp {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border: 0px solid #3A4876;
+}
+.MainMenuRndcrnrRtTp {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border: 0px solid #3A4876;
+}
+.MainMenuLft {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 0px solid #3A4876;
+	border-right: 0px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 1px solid #3A4876;
+}
+.MainMenuRt {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 0px solid #3A4876;
+	border-right: 1px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 0px solid #3A4876;
+}
+.MainMenuTp {
+	background-color: #DEDFDE;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	cursor: hand;
+	cursor: pointer;
+	border-top: 1px solid #3A4876;
+	border-right: 0px solid #3A4876;
+	border-bottom: 0px solid #3A4876;
+	border-left: 0px solid #3A4876;
+}

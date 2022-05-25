@@ -1,0 +1,9 @@
+.jmaki-Ext-menu {
+   width: 100%;
+   background: #DDECFE url(../resources/styles/images/aero/grid/grid-hrow.gif) repeat-x;
+   border-bottom:1px solid #99bbe8;
+   color:#15428b;
+   font:bold 10px tahoma,arial,verdana,sans-serif;
+   display:block;
+   padding:0px;    
+}

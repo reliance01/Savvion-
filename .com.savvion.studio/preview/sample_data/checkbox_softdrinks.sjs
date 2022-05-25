@@ -1,0 +1,1 @@
+[{"selected":true,"value":"coke","label":"Coke"},{"selected":false,"value":"pepsi","label":"Pepsi"},{"selected":false,"value":"sprite","label":"Sprite"},{"selected":true,"value":"md","label":"Mountain Dew"},{"selected":false,"value":"jolt","label":"Jolt Cola"},{"sdeWidgetKey":"Checkbox"}]

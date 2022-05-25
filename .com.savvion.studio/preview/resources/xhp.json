@@ -1,0 +1,16 @@
+{"xhp": {
+    "version": "1.1",    
+    "services": [
+        {"id": "cl",
+         "url":"http://sfbay.craigslist.org/sby/rfs/index.rss",
+         "xslStyleSheet": "rss.xsl"
+        },    
+        {"id": "yahoogeocoder",
+         "url":"http://api.local.yahoo.com/MapsService/V1/geocode",
+         "apikey" : "appid=jmaki-key",
+         "xslStyleSheet": "yahoo-geocoder.xsl",
+         "defaultURLParams": "location=santa+clara,+ca"
+        }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    'name': 'Youtube',
+    'type': 'sbm',
+    'version': '1.0', 
+    'jmakiVersion' : '1.0',
+    'image': 'images/youtube.png',
+    'description': 'YouTube.',
+    'category': 'Entertainment',
+    'args': [
+    	],
+    'value': {
+         'required':'false',
+         'type': 'STRING',
+         'defaultValue':''
+    }
+}

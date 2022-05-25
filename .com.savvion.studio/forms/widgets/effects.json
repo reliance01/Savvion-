@@ -1,0 +1,39 @@
+{
+	'type' : 
+		{'label':'%widget.effects.type', 'defaultValue':'none', 
+			'values':[{'label':'%widget.effects.type.none', 'value':'none', 'argList':'none'}, 
+				{'label':'%widget.effects.type.fade', 'value':'fade', 'argList':'number1'},
+				{'label':'%widget.effects.type.slide', 'value':'slide', 'argList':'number'},
+				{'label':'%widget.effects.type.blind', 'value':'blind', 'argList':'number'},
+				{'label':'%widget.effects.type.grow', 'value':'grow', 'argList':'number'},
+				{'label':'%widget.effects.type.shake', 'value':'shake', 'argList':'number'},
+        		{'label':'%widget.effects.type.highlight', 'value':'highlight', 'argList':'color'}
+			]
+		},
+	'argList' : [
+		{'name':'none',
+			'values':[]
+		},
+		{'name':'number',
+			'values': [
+		 		{'duration':{'label':'%widget.effects.arg.duration', 'type':'NUMBER', 'defaultValue': '2000', 'description':'A number in milliseconds'}},
+	 			{'from':{'label':'%widget.effects.arg.from', 'type':'NUMBER', 'defaultValue': '0', 'description':'A value in pixels or percentages'}},
+	 			{'to':{'label':'%widget.effects.arg.to', 'type':'NUMBER', 'defaultValue': '100', 'description':'A value in pixels or percentages'}}				
+			]			
+		},
+		{'name':'number1',
+			'values': [
+		 		{'duration':{'label':'%widget.effects.arg.duration', 'type':'NUMBER', 'defaultValue': '2000', 'description':'A number in milliseconds'}},
+	 			{'from':{'label':'%widget.effects.arg.from', 'type':'NUMBER', 'defaultValue': '0', 'max':'100', 'min':'0', 'description':'A value in percentages'}},
+	 			{'to':{'label':'%widget.effects.arg.to', 'type':'NUMBER', 'defaultValue': '100', 'max':'100', 'min':'0', 'description':'A value in percentages'}}				
+			]			
+		},
+		{'name':'color',
+			'values':[
+	 			{'duration':{'label':'%widget.effects.arg.duration', 'type':'NUMBER', 'defaultValue': '2000', 'description':'A number in milliseconds'}},
+	 			{'from':{'label':'%widget.effects.arg.from', 'type':'COLOR', 'defaultValue': 'FFFFFF', 'description':'A color value in hexadecimal'}},
+		 		{'to':{'label':'%widget.effects.arg.to', 'type':'COLOR', 'defaultValue': '0000FF', 'description':'A color value in hexadecimal'}}				
+			]
+		}
+	]
+}

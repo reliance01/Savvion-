@@ -1,0 +1,19 @@
+BODY {
+	layer-background-color: #FFFFFF;  /* Netscape specific */
+	background-color: #FFFFFF;
+	color: #000077;
+}
+
+.title {
+	layer-background-color:	#669966;	
+	background-color:	#669966;
+	font-size:		2em;
+	text-align:		center;
+	margin-right:		30%;
+}
+
+
+/****** BizSite Sample Application CSS files ******/
+TD.Title {text-align: center; vertical-align: bottom; color: #000000; background-color: #CCCCFF; font-size: small; font-weight:bold;}
+TD.Label {text-align: left; color: #000000; background-color: #EFEFEF; font-size: x-small; font-weight:normal;}
+TD.Data {text-align: left; color: #000000; background-color: #FFFFFF;  font-size: x-small; font-weight:normal;}

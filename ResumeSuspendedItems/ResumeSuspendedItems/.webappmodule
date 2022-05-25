@@ -1,0 +1,10 @@
+#Wed Mar 28 11:25:52 IST 2018
+application.name=ResumeSuspendedItems
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.webapp
+application.mainprocessname=ResumeSuspendedItems
+module.id=3e3ebb2b-3293-404d-a4a5-8088864fb445
+module.version=8
+application.mainappfile=ResumeSuspendedItems/WEB-INF/template/ResumeSuspendedItems.swt
+module.name=ResumeSuspendedItems
+application.root=ResumeSuspendedItems

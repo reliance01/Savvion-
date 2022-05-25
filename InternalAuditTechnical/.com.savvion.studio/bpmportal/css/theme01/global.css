@@ -1,0 +1,10 @@
+/* Global CSS Classes (Applicable for All Application Pages) */
+body {
+	background-color:#f7fbff;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+pre {  
+	font-family: Tahoma,Arial, Helvetica, sans-serif;
+	line-height: 22px
+}

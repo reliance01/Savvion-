@@ -1,0 +1,9 @@
+adapter-configurator=com.savvion.sbm.adapters.sap.SAPAdapterConfiguratorDialog
+map-configurator=com.savvion.sbm.adapters.framework.GroupMapConfigurator
+runtime-mapper=com.savvion.sbm.adapters.framework.GroupMapper
+AdapterCategory=SAPAdapters
+AdapterName=GenericSAPAdapter
+adapter-class=com.savvion.sbm.adapters.sap.SAPAdapter
+log-level=10
+icon=saplogo.png
+adaplet=false

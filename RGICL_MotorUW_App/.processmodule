@@ -1,0 +1,13 @@
+#Sat Jul 16 12:11:41 IST 2016
+publishing.type=Copy_Files_Only
+application.name=RGICL_MotorUW_App
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=RGICL_MotorUW_App
+module.id=d9e45cff-40d8-4b8f-b857-1ba41307877f
+module.version=8
+application.mainappfile=processtemplates/RGICL_MotorUW_App.spt
+module.name=RGICL_MotorUW_App
+application.root=RGICL_MotorUW_App

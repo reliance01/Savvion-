@@ -1,0 +1,13 @@
+#Tue Oct 25 13:14:10 IST 2016
+publishing.type=Copy_Files_Only
+application.name=AgentRetentionProcess
+inherit.acl=true
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.bpm
+publish.webservice=false
+application.mainprocessname=AgentRetentionProcess
+module.id=c9915fbc-3fcf-40e2-9bfd-e9cc8bca8297
+module.version=8
+application.mainappfile=AgentRetentionProcess/processtemplates/AgentRetentionProcess.spt
+module.name=AgentRetentionProcess
+application.root=AgentRetentionProcess

@@ -1,0 +1,146 @@
+<map version="1.3">
+  <param name="WSCONFIG" type="java.lang.String">
+<java class="java.beans.XMLDecoder" version="1.6.0_05"> 
+ <object class="com.savvion.sbm.adapters.webservice.WSConfig"> 
+  <void property="callInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.WSCallInfo"/> 
+  </void> 
+  <void property="operationInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.OperationInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>getVersion</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://axis.apache.org</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="isAllPrimitive"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="returnParam"> 
+     <void method="add"> 
+      <object class="com.savvion.sbm.adapters.webservice.Param"> 
+       <void property="QName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>getVersionReturn</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string/> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="isOmittable"> 
+        <boolean>false</boolean> 
+       </void> 
+       <void property="javaClassName"> 
+        <string>java.lang.String</string> 
+       </void> 
+       <void property="label"> 
+        <string>getVersionReturn</string> 
+       </void> 
+       <void property="mode"> 
+        <int>2</int> 
+       </void> 
+       <void property="name"> 
+        <string>getVersionReturn</string> 
+       </void> 
+       <void property="uniqueIdentifier"> 
+        <string>getVersionReturn.0_0</string> 
+       </void> 
+       <void property="xmlQName"> 
+        <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+         <void property="localPart"> 
+          <string>string</string> 
+         </void> 
+         <void property="namesSpace"> 
+          <string>http://schemas.xmlsoap.org/soap/encoding/</string> 
+         </void> 
+        </object> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="use"> 
+     <string>encoded</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="otherSecConfigFile"> 
+   <string/> 
+  </void> 
+  <void property="password"> 
+   <string/> 
+  </void> 
+  <void property="portInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.PortInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>Version</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://bpm.reliancegeneral.co.in:18793/sbm/services/Version</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>Version</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="runtimeSecurityType"> 
+   <int>0</int> 
+  </void> 
+  <void property="samlTokenConfigFile"> 
+   <string/> 
+  </void> 
+  <void property="serviceInfo"> 
+   <object class="com.savvion.sbm.adapters.webservice.ServiceInfo"> 
+    <void property="QName"> 
+     <object class="com.savvion.sbm.adapters.webservice.QualifiedName"> 
+      <void property="localPart"> 
+       <string>VersionService</string> 
+      </void> 
+      <void property="namesSpace"> 
+       <string>http://bpm.reliancegeneral.co.in:18793/sbm/services/Version</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>VersionService</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="soapActionURI"> 
+   <string/> 
+  </void> 
+  <void property="targetEndpointAddress"> 
+   <string>http://bpm.reliancegeneral.co.in:18793/sbm/services/Version</string> 
+  </void> 
+  <void property="targetNameSpace"> 
+   <string>http://bpm.reliancegeneral.co.in:18793/sbm/services/Version</string> 
+  </void> 
+  <void property="userName"> 
+   <string/> 
+  </void> 
+  <void property="userNameTokenConfigFile"> 
+   <string/> 
+  </void> 
+  <void property="wsdlPassword"> 
+   <string/> 
+  </void> 
+  <void property="wsdlUrl"> 
+   <string>http://bpm.reliancegeneral.co.in:18793/sbm/services/Version?wsdl</string> 
+  </void> 
+  <void property="wsdlUserName"> 
+   <string/> 
+  </void> 
+ </object> 
+</java>
+  </param>  <param name="SESSION_TOKEN_SUPPORT" type="java.lang.String" value="false"/>
+  <param name="TARGET_EPA" type="java.lang.String" value=""/>
+</map>

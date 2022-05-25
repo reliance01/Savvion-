@@ -1,0 +1,26 @@
+/*
+ * GridFilters Styles
+ */
+
+.ux-filtered-column {
+	font-weight: bold;
+}
+.ux-gridfilter-text-icon {
+	background-image: url(images/find.png) !important;
+}
+.ux-gridfilter-delte-filter-icon {
+	background: url(images/bm-icons-sprites1.png) no-repeat scroll -84px -2px !important;
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+.ux-gridfilter-header .x-column-header-inner, .ux-filtered-column .x-column-header-inner {
+	background-color: transparent;
+	background-image: url("images/filter-icon.png") !important;
+	background-position: 5% 40%;
+	background-repeat: no-repeat !important;
+	background-size: auto auto;
+}
+.ux-filtered-column .x-column-header-inner {
+	background-image: url("images/filtered-icon.png") !important;
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+<tlib-version>1.0</tlib-version>
+<jsp-version>1.1</jsp-version>
+<short-name>bpmportal</short-name>
+<description>BPM Portal Tags</description>
+<tag>
+  <name>TrimSubprocess</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.TrimSubprocessNameTag</tag-class>
+  <body-content>empty</body-content>
+  <description>Remove all of the parent process information from the process instance name.</description>
+  <attribute>
+     <name>piName</name>
+     <required>true</required>
+     <rtexprvalue>true</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>setLocale</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.SetLocale</tag-class>
+  <body-content>empty</body-content>
+  <description>Workaround for the broken jstl setLocale.</description>
+  <attribute>
+    <name>value</name>
+  <required>true</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>setBundle</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.SetBundle</tag-class>
+  <body-content>empty</body-content>
+  <description>Workaround for the broken jstl setBundle.</description>
+  <attribute>
+    <name>basename</name>
+  <required>true</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>scope</name>
+  <required>false</required>
+  <rtexprvalue>false</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>message</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.Message</tag-class>
+  <body-content>empty</body-content>
+  <description>Workaround for the broken jstl message.</description>
+  <attribute>
+    <name>key</name>
+  <required>true</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>params</name>
+  <required>false</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>paramsDelimiter</name>
+  <required>false</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>language</name>
+  <required>false</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>country</name>
+  <required>false</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>escapeLine</name>
+  <required>false</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>escape</name>
+  <required>false</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>escapeStyle</name>
+  <required>false</required>
+  <rtexprvalue>true</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>dataSources</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.datasources.DataSourcesTag</tag-class>
+  <body-content>JSP</body-content>
+  <info>This is a Datasources tag.</info>
+  <attribute>
+    <name>appName</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>appType</name>
+    <required>false</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>dataSource</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.datasources.DataSourceTag</tag-class>
+  <body-content>JSP</body-content>
+  <info>This is a Datasource tag.</info>
+  <attribute>
+    <name>name</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>type</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>dataAttribute</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.datasources.DataAttributeTag</tag-class>
+  <body-content>JSP</body-content>
+  <info>This is a Data Attribute tag.</info>
+  <attribute>
+    <name>name</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>dataField</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.datasources.DataFieldTag</tag-class>
+  <body-content>JSP</body-content>
+  <info>This is a Datafield tag.</info>
+  <attribute>
+    <name>name</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>type</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>dataControl</name>
+  <tag-class>com.savvion.sbm.bpmportal.tag.datasources.DataControlTag</tag-class>
+  <body-content>JSP</body-content>
+  <info>This is a Datacontrol tag.</info>
+  <attribute>
+    <name>type</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>editable</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>controlId</name>
+    <required>true</required>
+    <rtexprvalue>false</rtexprvalue>
+  </attribute>
+</tag>
+<tag>
+  <name>xsrf</name>
+  <tag-class>com.savvion.sbm.websecurity.xsrf.tags.XSRFTag</tag-class>
+  <body-content>empty</body-content>
+  <description>Generates XSRF token information.</description>
+</tag>
+</taglib>

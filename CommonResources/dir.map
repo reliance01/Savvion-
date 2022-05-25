@@ -1,0 +1,30 @@
+###########################################
+# Mapping file
+# __ebmsapps_archive maps to $SBM/ebmsapps
+# __webapps_archive maps to $SBM/BizSolo
+# __sbm_archive maps to $SBM
+# __sbmweb_archive maps to web app directory (for pramati it is �pramati�/public_html/sbm)
+# use EXCLUDED_DIR to remove mapping of folder in project to server. E.g. privFolder=EXCLUDED_DIR
+
+.settings=EXCLUDED_DIR
+WebContent=EXCLUDED_DIR
+
+# EJB Container
+Business\ Objects=__ebmsapps_archive/common/bo/classes
+External\ Business\ Objects=__ebmsapps_archive/common/bo/classes
+Adapters=__ebmsapps_archive/common/lib
+AdaptersBin=__ebmsapps_archive/common/lib
+lib=__ebmsapps_archive/common/lib
+ 
+# WEB Container
+Business\ Objects=__sbmweb_archive/WEB-INF/classes
+External\ Business\ Objects=__sbmweb_archive/WEB-INF/classes
+Adapters=__sbmweb_archive/WEB-INF/lib
+AdaptersBin=__ebmsapps_archive/common/lib
+lib=__sbmweb_archive/WEB-INF/lib
+ 
+# Web Resources
+css=__sbmweb_archive/ebmsapps/common/css
+images=__sbmweb_archive/ebmsapps/common/images
+javascript=__sbmweb_archive/ebmsapps/common/javascript
+bpmportal=__sbmweb_archive/bpmportal

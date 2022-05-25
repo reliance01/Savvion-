@@ -1,0 +1,398 @@
+span
+{
+   display : block;
+}
+
+.menu
+{
+  display : inline;
+  height : 250px;
+  width : 200px;
+  overflow : auto;
+  margin : 10px;
+  padding : 10px;
+ -- border : 1px #2c80d2 solid;
+ -- border-right : 5px #2c80d2 solid;
+}
+
+.rgistrCall
+{
+  display : inline;
+  --height : 400px;
+  --width : 500px;
+  padding : 10px;
+  border : 1px #2c80d2 solid;
+  border-right : 1px #2c80d2 solid;
+}
+
+table#container_tab
+{
+  border : 1px groove #223399;
+  border-collapse: collapse;
+}
+
+table#container_tab td
+{
+  padding : 10px;
+}
+
+table#rgistrCall_tab
+{
+  border:1px solid #223399;
+  border-collapse : collapse;
+}
+
+table#rgistrCall_tab td
+{
+  padding : 2px;
+  font-family : Arial, Tahoma,Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size : 11px;
+  font-color : #00549d;
+  padding-left : 5px;
+  text-align : left;
+  color:#223399;
+  background-color : #e8edff;
+  border : 1px solid white;
+}
+
+.button
+{
+  border : 1px solid #223399;
+  background-color : #b9c9fe;
+  font-familiy : Arial, Tahoma,Verdana, Helvetica, sans-serif;
+  color : #002170;
+  font-size : 11px;
+  font-weight : bold;
+  margin : 2px;
+  cursor:pointer;
+}
+
+.inp
+{
+  border : 1px solid #223399;
+  background-color : #ffffff;
+  font-family : Arial, Tahoma,Verdana, Helvetica, sans-serif;
+  height : 18px;
+  color : #333333;
+  font-size : 11px;
+  font-weight : normal;
+  margin : 1px 5px 1px 5px;
+}
+
+.tabHeadRow
+{
+  height:20px;
+  color:#5e428B;
+  background-color:#D5E2F2;
+  font-family:Courier;
+}
+
+.tabHeadTd
+{
+  font-weight:bold;
+  text-align:center;
+  border:1px solid white;
+  --font-size:1px;
+  font-weight:bold;
+}
+
+.tabTD
+{
+  height:15px;
+  color:#6678bb;
+  background-color:#e8edff;
+}
+
+.histryTd
+{
+   text-align:center;
+   border:1px solid white;
+}
+
+.active 
+{
+ background-color:orange;
+}
+
+.shwRMK
+{
+ --width:200px;
+ height:40px;
+ overflow-y:auto;
+ font-family:Courier;
+ font-size:10px;
+}
+
+
+.web_dialog
+{
+   display: none;
+   position: fixed;
+   width: 380px;
+   height: 200px;
+   --top: 50%;
+   --left: 50%;
+   overflow:auto;
+   --margin-left: 210px;
+   --margin-top: -200px;
+   background-color: #ffffff;
+   border: 2px solid #336699;
+   padding: 0px;
+   z-index: 102;
+   font-family: Verdana;
+   font-size: 10pt;
+}
+.web_dialog_title
+{
+   border-bottom: solid 2px #336699;
+   background-color: #b9c9fe;
+   padding: 4px;
+   color: White;
+   font-weight:bold;
+}
+.web_dialog_title a
+{
+   color: White;
+   text-decoration: none;
+}
+.align_right
+{
+   text-align: right;
+}
+
+table
+{
+  border-collapse:collapse;
+}
+
+select, option 
+{
+    width: 200px; 
+    font-family:Courier;
+    font-size: 11px;
+}
+
+textarea
+{
+    font-family:Courier;
+    height:40px;
+}      
+
+.master
+{
+  height : 450px;
+  background : url('../images/04_free_subtle_textures_blueprint_texture.jpg');
+}
+
+.liHover
+{
+  background-color:#343d44;
+  --color:white;
+}
+
+.liImg
+{
+  width:40px;
+  height:40px;
+  padding-top:15px;
+}
+
+.registerDiv
+{
+  margin:10px 0px 0px 361px;
+  text-align:center;
+--  width:510px;
+  --height:300px;
+  line-height:20px;
+  --background:url('../images/background.jpg');
+  --border:1px solid black;
+  border:1px solid yellow;
+}
+
+#registerTab td
+{
+  width:200px;
+  padding-left:10px;
+  color:whitesmoke;
+  font-weight : bold;
+  font-size:11px;
+  font-family:Courier;
+}
+
+#registerTab td select
+{
+  color:black;
+  font-size:11px;
+  font-family:Courier;
+}
+
+#registerTab td textarea
+{
+  color:black;
+  font-size:11px;
+  font-family:Courier;
+}
+
+#dataHistory td
+{
+  width:273px;
+  text-align:center;
+  color:white;
+  font-weight : normal;
+  font-family:Courier;
+  border:1px solid #6F6F7C;
+}
+
+.mandetory
+{
+  color:red;
+}
+
+.pagination
+{
+  width : 20px;
+  height : 20px;
+  background-color:white;
+}
+
+.paginationActive
+{
+  width : 20px;
+  height : 20px;
+  background-color:yellow;
+}
+
+.paginationDiv
+{
+  overflow-x : auto;
+  height : 20px;
+  width : 200px;
+  float:right;
+  margin:10 px 20px 0px 0px;
+}
+
+.header
+{
+    width:100%;
+    height:30px;
+    font:bold 12px;
+    --font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    font-family:Courier;
+    color:white;
+    --background-color:#fc6703;
+    background-color : #003366;
+    padding-top:10px;
+    text-transform : uppercase;
+    text-align:center; 
+}
+
+
+.fieldName
+ {
+    --background-color:#6F6F7C;
+    --color:white;
+    --height:30px;
+    --font-weight:bold;
+    --font-family: Geneva,Tahoma,Verdana,sans-serif; 
+    --font-family:Courier;
+    --padding-left:30px;
+    --width : 320px;
+    --font-size:10px;
+    --padding-top:10px;
+    text-transform : uppercase;
+    
+background-color: #D8BFD8;
+height: 30px;
+--line-height: 25px;
+text-align: center;
+      
+ }
+
+.fieldValue
+ {
+    --background-color:whitesmoke;
+    --font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family:Courier;
+    color:black;
+    padding-left:30px;
+    overflow:auto;
+    --padding-top:5px;
+   -- width:320px;
+   -- height:30px; 
+   width:300px;
+ }
+
+.fieldNameBig
+ {
+     background-color:#D8BFD8;
+     --color:white;
+     height:50px;
+     font-weight:bold;
+     text-align: center;
+     --font-family: Geneva,Tahoma,Verdana,sans-serif; 
+     font-family:Courier;
+    -- padding-left:30px;
+   --  width : 320px;
+   --  font-size:10px;
+   --  padding-top:10px;
+     text-transform : uppercase;  
+     
+ }
+
+.fieldValueBig
+ {
+     -- background-color:#f5f8f9;
+      --font-family: Verdana, Arial, Helvetica, sans-serif;
+      color:black;
+      padding-left:30px;
+      overflow:auto;
+    --  padding-top:5px;
+    --  width:320px;
+      font-family:Courier;
+      height:50px; 
+      width:300px; 
+ }
+
+#data td,th
+{
+    border : 1px solid #6F6F7C;
+    border-collapse:collapse;
+}
+
+.footerDiv
+{
+  height : 500px;
+  overflow:auto;
+  margin-top:50px;
+  border:1px dashed black;
+}
+
+.submit
+{
+    cursor:pointer;
+    margin : 10px 50px 5px 0px;
+    display:inline;
+}
+
+.cancel
+{
+    cursor:pointer;
+    display:inline;
+}
+
+.ApSegDataVal
+{
+font: normal 11px arial, tahoma, verdana, helvetica;
+background-color: #aeb6be;
+text-align: left;
+padding: 0px;
+border: 1px solid #ededed;
+height: 40px;
+width: background-color: #F8F8FF;
+height: 30px;
+font-weight: bold;
+font-family: Courier;
+--text-transform: uppercase;
+line-height:25px;
+}

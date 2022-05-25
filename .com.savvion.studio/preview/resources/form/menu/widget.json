@@ -1,0 +1,17 @@
+ {
+    'name': 'Menu',
+    'type': 'ext',
+    'version': '.9.6.3',
+    'jmakiVersion': '.9.6.3',    
+    'image': 'images/ext-menu.jpg',
+    'description': 'A menu widget.',
+    'category': 'Menu',
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'resources' : [
+                '../resources/styles/images'
+               ]
+        }
+    }
+  }

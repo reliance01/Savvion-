@@ -1,0 +1,116 @@
+application std
+module class_lib
+
+type JObject = ~java.lang.Object;
+
+interface Object {
+}
+
+interface Object_cls {
+     __init: Object->void
+}
+
+val Object = 
+    letrec
+	fun __init(obj: Object): void {
+	}
+    in  Object_cls{__init: __init}
+    end;
+
+type ClassInfo = cell{
+     class_name: string,
+     db_class_name: string
+     };
+
+val class_info_table = new persistent array<ClassInfo>[]("class_info_table");
+
+//
+// is_class_defined, remove_class_info, add_class_info is invoked from RuleEngine directly
+// so be careful for changing them!
+//
+
+fun get_all_classname(): list<string> {
+    val lst = list{};
+    val sz = class_info_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = class_info_table[i];
+	// println("-- "+info.class_name);
+	lst.add(info.class_name);
+    }
+    return lst;
+}
+
+fun is_class_defined(class_name: string): boolean {
+    val sz = class_info_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = class_info_table[i];
+	if (info.class_name = class_name) {
+	   return true;
+	}
+    }
+    return false;
+}
+
+fun remove_class_info(class_name: string): boolean {
+    val sz = class_info_table.size();
+    for (var i = 0; i < sz; i++) {
+	val info = class_info_table[i];
+	if (info.class_name = class_name) {
+	   class_info_table.remove(i);
+	   return true;
+	}
+    }
+    return false;
+}
+
+fun add_class_info(class_name: string, db_class_name: string): void {
+    class_info_table.add(ClassInfo{class_name: class_name, db_class_name: db_class_name});
+}
+
+type JavaProxyArgType = object{
+      JOBJ: JObject
+};
+
+val default_group_id = -3;
+val default_root_group_id = -4;
+
+class JavaProxy extends Object {
+      public var _jobj: JObject;
+      public fun JavaProxy(o: JavaProxyArgType): void {
+	     this._jobj := o.JOBJ;
+      }
+      protected fun modified(): void {
+	     this._jobj := _jobj;
+      }
+      public fun read_jobj(): JObject {
+	     return _jobj;
+      }
+      public fun write_jobj(): JObject {
+	     modified();
+	     return _jobj;
+      }
+      public fun get_oid(): string { 
+	     return this.__getOid(); 
+      }
+      public fun get_group_id(): int { 
+	     return default_group_id; 
+      }
+      public fun get_root_group_id(): int { 
+	     return default_root_group_id; 
+      }
+      public fun _save(): JavaProxyArgType {
+	     return JavaProxyArgType{
+		  JOBJ: _jobj
+	     };
+      }
+}
+
+initialize {
+}
+
+reinitialize {
+}
+
+finalize {
+    discard(class_info_table); // may be dangerous..  TBI..
+}

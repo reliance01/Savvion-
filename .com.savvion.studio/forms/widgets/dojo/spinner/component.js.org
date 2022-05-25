@@ -1,0 +1,49 @@
+/* Copyright 2007 You may not modify, use, reproduce, or distribute this software except in compliance with the terms of the License at:
+ http://developer.sun.com/berkeley_license.html
+ $Id: component.js,v 1.0 2007/04/15 19:39:59 gmurray71 Exp $
+*/
+djd43.require("djd43.widget.*");
+djd43.require("djd43.widget.Spinner");
+
+// define the namespaces
+jmaki.namespace("jmaki.widgets.dojo.spinner");
+
+jmaki.widgets.dojo.spinner.Widget = function(wargs) {
+
+    var _widget = this;
+    var value = 0;
+    var publish = "/dojo/spinner";
+    var subscribe = ["/dojo/spinner", "/spinner"];
+    var container;
+    var uuid = wargs.uuid;
+ 
+    if (wargs.value) value = wargs.value;
+   
+    init(value);
+
+function init(_v)
+   {           
+    var mydiv = document.getElementById(uuid);
+		var name = "IntegerTextbox";
+		var props = {
+			name: "population",
+			value: "1,500,000",
+			trim: "true",
+			required: "true",
+			signed: "false",
+			separator: ",",
+			invalidMessage: "Invalid population.  Be sure to use commas."
+		};	
+    djd43.widget.createWidget(name, props, mydiv);
+    // djd43.widget.createWidget("Spinner",{inputWidgetId:uuid},mydiv);
+   }
+
+this.setValue = function(_v) {
+    init(_v);
+    }
+
+this.getValue = function(_v) {
+   return sbm.util.getValue(uuid);
+   }
+
+}

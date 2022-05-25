@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Process name="ResumeSuspendedItems" type="BIZSOLO" webbpaID="1522211627845">
+  <Package xmlns="http://www.wfmc.org/2004/XPDL2.0alpha" Id="1" Name="">
+    <PackageHeader>
+      <XPDLVersion>2.0</XPDLVersion>
+      <Vendor>Savvion</Vendor>
+      <Created>1522216552142</Created>
+    </PackageHeader>
+    <Pools>
+      <Pool BoundaryVisible="true" Id="ResumeSuspendedItems" Process="ResumeSuspendedItems">
+        <Lanes/>
+      </Pool>
+    </Pools>
+  </Package>
+  <Description/>
+  <Application name="ResumeSuspendedItems"/>
+  <Category level="0"/>
+  <Category level="1"/>
+  <Group/>
+  <Manager/>
+  <EstimatedDuration/>
+  <TimeCreated>1522216552142</TimeCreated>
+  <Author>deepakdaneva</Author>
+  <Version/>
+  <Attributes>
+    <Attribute name="ProcessType" required="true">
+      <Label>Process Type</Label>
+      <Description>Type of the process</Description>
+      <Value>PresentationProcess</Value>
+    </Attribute>
+    <Attribute name="Objective" required="false">
+      <Label>Objective</Label>
+      <Description>Objective for developing this process model. E.g. Objective is to automate order processing</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Goal" required="false">
+      <Label>Goal</Label>
+      <Description>The goal of this process model. E.g. Goal is to reduce order processing cost by 10%</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="OrganizationalUnit" required="false">
+      <Label>Organizational Unit</Label>
+      <Description>The organizational unit that owns this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Influencers" required="false">
+      <Label>Influencers</Label>
+      <Description>People who have influenced development of this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Risks" required="false">
+      <Label>Risks</Label>
+      <Description>Risks associated with this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Rewards" required="false">
+      <Label>Rewards</Label>
+      <Description>Potential rewards on investment for this process model</Description>
+      <Value/>
+    </Attribute>
+    <Attribute name="Executable" required="false">
+      <Label>Executable</Label>
+      <Description>Can the Process  Ever be made executable?</Description>
+      <Value>Yes</Value>
+    </Attribute>
+  </Attributes>
+  <AtomicWS height="36" id="" name="Start" webbpaID="1522211627846" width="36" worktime="false" x="36" y="60">
+    <AtomicType>START</AtomicType>
+    <PerformingApp>Start.jsp</PerformingApp>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+  </AtomicWS>
+  <AtomicWS height="60" id="" name="ResumeSuspendedItems" webbpaID="1522211627848" width="108" worktime="false" x="300" y="48">
+    <Label>Resume Suspended Items</Label>
+    <Description>Add these below line to support the IE &#13;
+&#13;
+&#13;
+&lt;!-- Internet Explorer Compatibility --&gt;&#13;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=11" /&gt;&#13;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;</Description>
+    <AtomicType>ACTIVITY</AtomicType>
+    <PerformingApp type="custom_bizsolo">ResumeSuspendedItems.jsp</PerformingApp>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <EmailSupport>FALSE</EmailSupport>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <Option name="Instructions" visible="false"/>
+    <Option name="Priority" visible="false"/>
+    <Option name="StartDate" visible="false"/>
+    <Option name="DueDate" visible="false"/>
+    <Option name="Reassign" visible="true"/>
+  </AtomicWS>
+  <AtomicWS height="36" id="" name="End" webbpaID="1522211627850" width="36" worktime="false" x="648" y="60">
+    <AtomicType>END</AtomicType>
+    <Priority>MEDIUM</Priority>
+    <RollbackPoint>FALSE</RollbackPoint>
+  </AtomicWS>
+  <ExternalWS generate="true" height="60" id="" name="Get All Suspended Items" webbpaID="1522211627847" width="108" x="144" y="48">
+    <Performer generate="true">com.rgi.savvion.techdesk.GetAllSuspendedItems</Performer>
+    <PerformBy>commit</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <Datainput>processTemplateID@processTemplateID</Datainput>
+    <Datainput>suspendedItems@suspendedItems</Datainput>
+    <Datainput>suspendedItemsCount@suspendedItemsCount</Datainput>
+    <Datainput>Count@Count</Datainput>
+    <Datainput>WSName@WSName</Datainput>
+    <Dataoutput>processTemplateID@processTemplateID</Dataoutput>
+    <Dataoutput>suspendedItems@suspendedItems</Dataoutput>
+    <Dataoutput>suspendedItemsCount@suspendedItemsCount</Dataoutput>
+    <Dataoutput>Count@Count</Dataoutput>
+    <Dataoutput>WSName@WSName</Dataoutput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <ExternalWS generate="true" height="60" id="" name="Resume All Suspended Items" webbpaID="1522211627849" width="108" x="468" y="48">
+    <Performer generate="true">com.rgi.savvion.techdesk.ResumeAllSuspendedItems</Performer>
+    <PerformBy>commit</PerformBy>
+    <ClosedConnection>TRUE</ClosedConnection>
+    <Duration value="7200">2h</Duration>
+    <Priority>MEDIUM</Priority>
+    <Datainput>processTemplateID@processTemplateID</Datainput>
+    <Dataoutput>processTemplateID@processTemplateID</Dataoutput>
+    <RollbackPoint>FALSE</RollbackPoint>
+    <InlineExecution>FALSE</InlineExecution>
+    <AdapterType>process</AdapterType>
+  </ExternalWS>
+  <Link Name="End" default="true" webbpaID="1522211627851">
+    <Source cp="1">Resume All Suspended Items</Source>
+    <Point x="576.0" y="78.0"/>
+    <Point x="648.0" y="78.0"/>
+    <Target cp="3">End</Target>
+  </Link>
+  <Link Name="Resume All" default="true" webbpaID="1522211627852">
+    <Source cp="1">ResumeSuspendedItems</Source>
+    <Point x="408.0" y="78.0"/>
+    <Point x="468.0" y="78.0"/>
+    <Target cp="3">Resume All Suspended Items</Target>
+  </Link>
+  <Link Name="Show The Details" default="true" webbpaID="1522211627853">
+    <Source cp="1">Get All Suspended Items</Source>
+    <Point x="252.0" y="78.0"/>
+    <Point x="300.0" y="78.0"/>
+    <Target cp="3">ResumeSuspendedItems</Target>
+  </Link>
+  <Link Name="Get All Details" default="true" webbpaID="1522211627854">
+    <Source cp="1">Start</Source>
+    <Point x="72.0" y="78.0"/>
+    <Point x="144.0" y="78.0"/>
+    <Target cp="3">Get All Suspended Items</Target>
+  </Link>
+  <Dataslot Name="processTemplateID" category="User" name="processTemplateID" type="NUMBER" webbpaID="1522211627858">
+    <DataType>LONG</DataType>
+    <DataValue>6308</DataValue>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="field"/>
+    <Storage type="LONG"/>
+  </Dataslot>
+  <Dataslot Name="suspendedItems" category="User" name="suspendedItems" type="MAP" webbpaID="1522211627860">
+    <DataType>MAP</DataType>
+    <Entries valueType="java.lang.String"/>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="text"/>
+    <Storage type="java.util.LinkedHashMap"/>
+  </Dataslot>
+  <Dataslot Name="suspendedItemsCount" category="User" name="suspendedItemsCount" type="NUMBER" webbpaID="1522211627866">
+    <DataType>LONG</DataType>
+    <DataValue>0</DataValue>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="field"/>
+    <Storage type="LONG"/>
+  </Dataslot>
+  <Dataslot Name="Count" category="User" name="Count" type="NUMBER" webbpaID="1522211627873">
+    <DataType>LONG</DataType>
+    <DataValue>0</DataValue>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" required="false" type="field"/>
+    <Storage type="LONG"/>
+  </Dataslot>
+  <Dataslot Name="WSName" category="User" name="WSName" type="STRING" webbpaID="1522211627874">
+    <DataType>STRING</DataType>
+    <DataValue/>
+    <MultiLine>false</MultiLine>
+    <Format editable="true" label="" length="20" password="false" required="false" size="20" type="text"/>
+    <Storage size="256" type="VARCHAR2"/>
+  </Dataslot>
+  <Performers>
+    <Performer class="com.rgi.savvion.techdesk.ResumeAllSuspendedItems" generate="true" id="ResumeAllSuspendedItems" method="commit" type="adapter" webbpaID="1522211627857"/>
+    <Performer class="com.rgi.savvion.techdesk.GetAllSuspendedItems" generate="true" id="GetAllSuspendedItems" method="commit" type="adapter" webbpaID="1522211627862"/>
+  </Performers>
+  <TabularViewWorkstepOrder/>
+  <History>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523361498874" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:28:18 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523361498874" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:28:18 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523359241955" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 16:50:41 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523359241955" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 16:50:41 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522389196275" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 11:23:16 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522389196275" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 11:23:16 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522389041549" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 11:20:41 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522389041549" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 11:20:41 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522326460751" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 17:57:40 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522326460750" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 17:57:40 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241943078" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:29:03 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241943078" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:29:03 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241787002" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:26:27 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241787002" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:26:27 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241687226" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:24:47 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241687226" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:24:47 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241563254" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:22:43 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241563254" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:22:43 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241411936" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:20:11 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241411936" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:20:11 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241349683" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:19:09 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241349683" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:19:09 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241073351" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:14:33 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522241073351" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:14:33 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240897509" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:11:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240897509" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:11:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240763882" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:09:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240763882" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:09:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240678687" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:07:58 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240678687" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:07:58 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240597424" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:06:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240597424" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 18:06:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240092657" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 17:58:12 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522240092657" to="http://10.65.5.80/sbm/deployment">Wed Mar 28 17:58:12 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522228040300" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 14:37:20 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522227767871" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 14:32:47 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522227651216" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 14:30:51 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522227587361" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 14:29:47 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522227526926" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 14:28:46 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522227424375" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 14:27:04 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522223393640" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 13:19:53 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522223003629" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 13:13:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522222889473" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 13:11:29 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522222838520" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 13:10:38 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522222753415" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 13:09:13 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522222429930" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 13:03:49 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522221985321" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 12:56:25 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522221840587" to="http://10.65.5.158:18793/sbm/deployment">Wed Mar 28 12:54:00 IST 2018</Deployed>
+    <Created as="ResumeSuspendedItems" by="deepakdaneva" on="1522216552144">Wed Mar 28 11:25:52 IST 2018</Created>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522299389972" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:26:29 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522299389972" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:26:29 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522299682905" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:31:22 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522299682905" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:31:22 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522300267448" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:41:07 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522300267448" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:41:07 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522300397951" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:43:17 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522300397951" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:43:17 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522300852914" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:50:52 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522300852914" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 10:50:52 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522301581450" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:03:01 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522301581450" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:03:01 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522301662326" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:04:22 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522301662326" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:04:22 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522301903177" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:08:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522301903177" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:08:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302174272" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:12:54 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302174272" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:12:54 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302517978" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:18:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302517978" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:18:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302566204" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:19:26 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302566204" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:19:26 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302772046" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:22:52 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522302772046" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:22:52 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522303101829" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:28:21 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522303101829" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:28:21 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522304165291" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:46:05 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522304165291" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:46:05 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522304389664" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:49:49 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522304389664" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 11:49:49 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305519450" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:08:39 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305519450" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:08:39 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305588915" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:09:48 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305588915" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:09:48 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305628645" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:10:28 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305628645" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:10:28 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305683892" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:11:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522305683892" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:11:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522306490659" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:24:50 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522306490659" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:24:50 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522306665235" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:27:45 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522306665235" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:27:45 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307027317" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:33:47 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307027317" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:33:47 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307204771" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:36:44 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307204771" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:36:44 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307313181" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:38:33 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307313181" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:38:33 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307492041" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:41:32 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307492041" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:41:32 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307661109" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:44:21 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307661109" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:44:21 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307776769" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:46:16 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522307776769" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 12:46:16 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522308623303" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 13:00:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522308623303" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 13:00:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522314370745" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 14:36:10 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522314370745" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 14:36:10 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522314512498" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 14:38:32 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522314512498" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 14:38:32 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522314996489" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 14:46:36 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522314996489" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 14:46:36 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327029829" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:07:09 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327029829" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:07:09 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327103494" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:08:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327103495" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:08:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327178317" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:09:38 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327178317" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:09:38 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327331300" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:12:11 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327331300" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:12:11 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327554523" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:15:54 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327554523" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:15:54 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327658201" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:17:38 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522327658201" to="http://10.65.5.80/sbm/deployment">Thu Mar 29 18:17:38 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522393296533" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 12:31:36 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522393296533" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 12:31:36 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522393519871" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 12:35:19 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522393519871" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 12:35:19 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522393597827" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 12:36:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522393597827" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 12:36:37 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522396113785" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 13:18:33 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1522396113785" to="http://10.65.5.80/sbm/deployment">Fri Mar 30 13:18:33 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523361725874" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:32:05 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523361725874" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:32:05 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523362103673" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:38:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523362103673" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:38:23 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523362633873" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:47:13 IST 2018</Deployed>
+    <Deployed as="ResumeSuspendedItems" by="rgicl" on="1523362633873" to="http://10.65.5.80/sbm/deployment">Tue Apr 10 17:47:13 IST 2018</Deployed>
+  </History>
+  <Repository/>
+  <Forms/>
+</Process>

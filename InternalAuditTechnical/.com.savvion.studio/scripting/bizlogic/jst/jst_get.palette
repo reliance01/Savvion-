@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="$Scripting.category.get_methods" path="jst/get" icon="fldr_obj.gif"/>
+
+  <item label="calculateActivityDueDate()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: calculateActivityDueDate()">
+      <widgets>
+        <label>JSTools: calculateActivityDueDate()</label>
+      </widgets>
+      <template>jst.calculateActivityDueDate()</template>
+    </grid>
+  </item>
+
+  <item label="getDueDate()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getDueDate()">
+      <widgets>
+        <label>JSTools: getDueDate()</label>
+      </widgets>
+      <template>jst.getDueDate()</template>
+    </grid>
+  </item>
+
+  <item label="getInstruction()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getInstruction()">
+      <widgets>
+        <label>JSTools: getInstruction()</label>
+      </widgets>
+      <template>jst.getInstruction()</template>
+    </grid>
+  </item>
+
+  <item label="getName()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getName()">
+      <widgets>
+        <label>JSTools: getName()</label>
+      </widgets>
+      <template>jst.getName()</template>
+    </grid>
+  </item>
+
+  <item label="getOverDueCount()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getOverDueCount()">
+      <widgets>
+        <label>JSTools: getOverDueCount()</label>
+      </widgets>
+      <template>jst.getOverDueCount()</template>
+    </grid>
+  </item>
+
+  <item label="getPerformer()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getPerformer()">
+      <widgets>
+        <label>JSTools: getPerformer()</label>
+      </widgets>
+      <template>jst.getPerformer()</template>
+    </grid>
+  </item>
+
+  <item label="getPriority()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getPriority()">
+      <widgets>
+        <label>JSTools: getPriority()</label>
+      </widgets>
+      <template>jst.getPriority()</template>
+    </grid>
+  </item>
+
+  <item label="getProcessInstanceID()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getProcessInstanceID()">
+      <widgets>
+        <label>JSTools: getProcessInstanceID()</label>
+      </widgets>
+      <template>jst.getProcessInstanceID()</template>
+    </grid>
+  </item>
+
+  <item label="getProcessInstanceName()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getProcessInstanceName()">
+      <widgets>
+        <label>JSTools: getProcessInstanceName()</label>
+      </widgets>
+      <template>jst.getProcessInstanceName()</template>
+    </grid>
+  </item>
+
+  <item label="getProcessTemplateName()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getProcessTemplateName()">
+      <widgets>
+        <label>JSTools: getProcessTemplateName()</label>
+      </widgets>
+      <template>jst.getProcessTemplateName()</template>
+    </grid>
+  </item>
+
+  <item label="getSBMHome()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getSBMHome()">
+      <widgets>
+        <label>JSTools: getSBMHome()</label>
+      </widgets>
+      <template>jst.getSBMHome()</template>
+    </grid>
+  </item>
+
+  <item label="getStartTime()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getStartTime()">
+      <widgets>
+        <label>JSTools: getStartTime()</label>
+      </widgets>
+      <template>jst.getStartTime()</template>
+    </grid>
+  </item>
+
+  <item label="getSubscribedMessageCount(msgName)" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getSubscribedMessageCount()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: getSubscribedMessageCount()</label>
+        <label row="1" col="0">$Scripting.label.message_name</label>
+        <list row="1" col="1" id="message" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid id="session" content="VALUE_EXPRESSION" description="Context Variable">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.getSubscribedMessageCount(${message})</template>
+    </grid>
+  </item>
+
+  <item label="getSubscribedMessageNames()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getSubscribedMessageNames()">
+      <widgets>
+        <label>JSTools: getSubscribedMessageNames()</label>
+      </widgets>
+      <template>jst.getSubscribedMessageNames()</template>
+    </grid>
+  </item>
+
+  <item label="getWorkstepName()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getWorkstepName()">
+      <widgets>
+        <label>JSTools: getWorkstepName()</label>
+      </widgets>
+      <template>jst.getWorkstepName()</template>
+    </grid>
+  </item>
+
+  <item label="getXPathValue(dataslot, xpath)" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: getSubscribedMessageCount()">
+      <widgets>
+        <label row="0" col="0" colspan="2">JSTools: getXPathValue()</label>
+        <label row="1" col="0">$Scripting.label.dataslot_</label>
+        <choiceWidget row="1" col="1" id="dataslot" type="DATASLOT" fill="false" filter="XML">
+          <selection type="DATASLOT"/>
+        </choiceWidget>
+        <label row="2" col="0">$Scripting.label.xpath</label>
+        <list row="2" col="1" id="xpath" allowedContent="VALUE_EXPRESSION, MUTABLE_VALUE_EXPRESSION" max="1" prompt="$Scripting.label.drop_value_expression_here">
+          <grid id="session" content="VALUE_EXPRESSION" description="$Scripting.description.constant_expression">
+            <widgets>
+              <label col="0">$Scripting.label._constant_</label>
+              <entryWidget col="1" id="value">
+                <reference type="CONSTANT" encoding="SBM_STRING_CONSTANT"></reference>
+              </entryWidget>
+            </widgets>
+            <template>"${value}"</template>
+          </grid>
+        </list>
+      </widgets>
+      <template>jst.getXPathValue("${dataslot}", ${xpath})</template>
+    </grid>
+  </item>
+
+  <item label="isOverDueEnabled()" path="jst/get" icon="template.gif">
+    <grid content="VALUE_EXPRESSION" description="JSTools: isOverDueEnabled()">
+      <widgets>
+        <label>JSTools: isOverDueEnabled()</label>
+      </widgets>
+      <template>jst.isOverDueEnabled()</template>
+    </grid>
+  </item>
+
+</palette>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette version="1.0">
+  <category label="Conditions" path="rules/conditions" icon="fldr_obj.gif"/>
+
+  <item label="Check Status" path="rules/conditions" icon="template.gif">
+    <grid content="CONDITION" collapsible="true" description="Check Status">
+      <widgets>
+        <choiceWidget col="0" row="0" type="CONSTANT" searchable="true">
+            <selection presentation="# Completed" type="constant">numCompleted</selection>
+            <choice presentation="# Completed" type="constant">numCompleted</choice>
+            <choice presentation="# Activated" type="constant">numActivated</choice>
+            <choice presentation="# Suspended" type="constant">numSuspended</choice>
+            <choice presentation="# Inactive" type="constant">numInactive</choice>
+        </choiceWidget>
+        <choiceWidget col="1" row="0" type="CONSTANT" searchable="true">
+            <selection presentation="is less than" type="constant">lt</selection>
+            <choice presentation="is less than" type="constant">lt</choice>
+            <choice presentation="is more than" type="constant">gt</choice>
+            <choice presentation="is less than or equal to" type="constant">le</choice>
+            <choice presentation="is more than or equal to" type="constant">ge</choice>
+            <choice presentation="is not" type="constant">ne</choice>
+            <choice presentation="is" type="constant">eq</choice>
+        </choiceWidget>
+        <entryWidget col="2" row="0" id="value" presentation="FIELD" validation="INTEGER">
+            <reference type="CONSTANT">1</reference>
+        </entryWidget>
+      </widgets>
+      <template>
+      </template>
+    </grid>
+  </item>
+
+  <item label="Check Completion Time" path="rules/conditions" icon="template.gif">
+    <grid content="CONDITION" collapsible="true" description="Check Completion Time">
+      <widgets>
+        <choiceWidget col="0" row="0" type="CONSTANT" searchable="true">
+            <selection presentation="AVG Completion Time" type="constant">avg</selection>
+            <choice presentation="AVG Completion Time" type="constant">avg</choice>
+            <choice presentation="MIN Completion Time" type="constant">min</choice>
+            <choice presentation="MAX Completion Time" type="constant">max</choice>
+            <choice presentation="SUM of Completion Times" type="constant">sum</choice>
+        </choiceWidget>
+        <choiceWidget col="1" row="0" type="CONSTANT" searchable="true">
+            <selection presentation="is less than" type="constant">lt</selection>
+            <choice presentation="is less than" type="constant">lt</choice>
+            <choice presentation="is more than" type="constant">gt</choice>
+            <choice presentation="is less than or equal to" type="constant">le</choice>
+            <choice presentation="is more than or equal to" type="constant">ge</choice>
+            <choice presentation="is not" type="constant">ne</choice>
+            <choice presentation="is" type="constant">eq</choice>
+        </choiceWidget>
+        <interval col="2" row="0" id="value">
+        </interval>
+      </widgets>
+      <template>
+      </template>
+    </grid>
+  </item>
+
+  <item label="Check Data Values" path="rules/conditions" icon="template.gif">
+    <grid content="CONDITION" collapsible="true" description="Check Data Values">
+      <widgets>
+        <choiceWidget col="0" row="0" type="CONSTANT" searchable="true">
+            <selection presentation="Total Sum of" type="constant">sum</selection>
+            <choice presentation="Total Sum of" type="constant">sum</choice>
+            <choice presentation="Average of" type="constant">avg</choice>
+            <choice presentation="Minimum of" type="constant">min</choice>
+            <choice presentation="Maximum of" type="constant">max</choice>
+        </choiceWidget>
+        <choiceWidget col="1" row="0" type="DATASLOT" searchable="true">
+        </choiceWidget>
+        <choiceWidget col="2" row="0" type="CONSTANT" searchable="true">
+            <selection presentation="is less than" type="constant">lt</selection>
+            <choice presentation="is less than" type="constant">lt</choice>
+            <choice presentation="is more than" type="constant">gt</choice>
+            <choice presentation="is less than or equal to" type="constant">le</choice>
+            <choice presentation="is more than or equal to" type="constant">ge</choice>
+            <choice presentation="is not" type="constant">ne</choice>
+            <choice presentation="is" type="constant">eq</choice>
+        </choiceWidget>
+        <entryWidget col="3" row="0" id="value" presentation="FIELD" validation="INTEGER">
+            <reference type="CONSTANT">1</reference>
+        </entryWidget>
+      </widgets>
+      <template>
+      </template>
+    </grid>
+  </item>
+
+</palette>

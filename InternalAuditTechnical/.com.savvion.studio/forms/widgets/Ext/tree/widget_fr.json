@@ -1,0 +1,38 @@
+{
+    'name': 'Tree',
+	'label': 'Arbre',
+    'type': 'Ext',
+    'version': '2.1',
+    'jmakiVersion': '1.8.0',
+    'image': 'images/ext-tree.jpg',
+    'description': 'Cet objet graphique est un arbre dynamique qui se configure facilement.',
+    'modelURL' : 'http://wiki.java.net/bin/view/Projects/jMakiTreeModel',
+    'category': 'Tree',
+    'args': [],
+    'value': {'required':'true',
+    'type': 'OBJECT',
+    'defaultValue':{ 
+        'root':{'title': 'Default Ext Tree Root Node',
+        'expanded': true,
+        'children': [
+        {'title':'Ext Node 1.1', 'onclick': {'url':'foo'}},
+        {'title':'Ext Node 1.2', 'children': [{'title':'Node 3.1'}]}
+        ] 
+        }
+    }
+    },
+    'config' : {
+        'type' :
+           { 'id' : 'extjs', 
+             'resources' : [
+                '../resources/libs/ext/resources'
+               ]
+        }
+    },
+    'topicInfo': {
+       'type': 'publish',
+       'topicName': ['/Ext/tree/onClick','/Ext/tree/onCollapse','/Ext/tree/onExpand'],
+       'description':'Tous publient selon leur nom de sujet quand un n\u0153ud de l\'arbre est cliqu\u00e9, r\u00e9duit ou \u00e9tendu. Tous publient un objet avec id et valeur. La valeur est {label}.'
+    }    
+    
+  }

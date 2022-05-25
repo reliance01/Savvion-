@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChannelDescriptor xs:noNamespaceSchemaLocation="ChannelDescriptor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+    <Channel type="JMS" name="BizLogicChannel">
+        <Description>Default channel used by BizLogic</Description>
+        <Destination type="QUEUE">jms/SBMMessageQueue</Destination>
+        <Server local="true"/>
+    </Channel>
+</ChannelDescriptor>
